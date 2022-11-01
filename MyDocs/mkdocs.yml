@@ -1,8 +1,9 @@
 site_name: My Docs
 theme:
   name: material
-  
-site_url: https://example.com/
+
+
+site_url: https://runtimevic.github.io/MkDocs_Documentacion/
 nav:
     - Home: index.md
     - Article: article.md
