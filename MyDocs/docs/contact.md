@@ -1,2 +1,2 @@
 
-mi **contacto:**[Victor Duran]()
+mi **contacto:**[Victor Duran](blabla)
