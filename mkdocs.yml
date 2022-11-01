@@ -1,0 +1,14 @@
+site_name: My Docs
+theme:
+  name: material
+
+
+site_url: https://runtimevic.github.io/MkDocs_Documentacion/
+nav:
+    - Home: index.md
+    - Article: article.md
+    - contacto: contact.md
+    - page1: page1.md
+    - page2: page2.md
+    - page3: page3.md
+    - page4: page4.md
