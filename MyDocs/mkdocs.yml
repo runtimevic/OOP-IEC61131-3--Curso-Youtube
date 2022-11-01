@@ -7,3 +7,4 @@ site_url: https://runtimevic.github.io/MkDocs_Documentacion/
 nav:
     - Home: index.md
     - Article: article.md
+    - contacto: contact.md
