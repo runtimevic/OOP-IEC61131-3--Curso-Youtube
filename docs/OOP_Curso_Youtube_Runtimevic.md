@@ -2,7 +2,7 @@
 :book: Curso Programación Orientada a Objetos Youtube -- OOP :
 </font></span>
 
-![Texto alternativo](./imagenes/oop.png)
+![OOP_Titulo](./imagenes/oop.png)
 <span style="color:green"><font size="3">
 by Runtimevic -- Víctor Durán Muñoz.
 </font></span>
@@ -113,7 +113,7 @@ Vamos a ver 2 tipos de relaciones:
 . SOLID: (5 principios)
 </font></span>
 
-![Texto alternativo](./imagenes/SOLID.png)
+![SOLID](./imagenes/SOLID.png)
 - Propuesta por **Robert C.Martin** en el 2000.
 - Son **recomendaciones** para escribir un código **sostenible,mantenible,escalable y robusto**.
 - Beneficios:  

@@ -1,7 +1,8 @@
 site_name: My Docs
 theme:
   name: material
-
+  palette:
+    scheme: slate  
 
 site_url: https://runtimevic.github.io/MkDocs_Documentacion/
 nav:
@@ -13,3 +14,8 @@ nav:
     - page3: page3.md
     - page4: page4.md
     - OOP: OOP_Curso_Youtube_Runtimevic.md
+
+markdown_extensions:
+  - attr_list
+
+    
