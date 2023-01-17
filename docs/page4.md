@@ -2,7 +2,7 @@
 
 ![ClaseyObjetos](./imagenes/OOP-Class-and-Object.jpg)
 
-![ClaseyObjetos1](./imagenes/OOP-Class-and-Object.jpg)
+
 
 
 
