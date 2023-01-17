@@ -2,7 +2,7 @@ site_name: My Docs
 theme:
   name: material
   palette:
-    scheme: slate
+    scheme: preference
   icon:
     admonition:
       note: octicons/tag-16
