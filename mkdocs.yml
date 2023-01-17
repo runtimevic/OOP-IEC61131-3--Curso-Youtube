@@ -15,9 +15,21 @@ nav:
     - page4: page4.md
     - OOP: OOP_Curso_Youtube_Runtimevic.md
 
+extra:
+  version:
+    provider: mike    
+
 markdown_extensions:
   - attr_list
   - pymdownx.emoji:
       emoji_index: !!python/name:materialx.emoji.twemoji
       emoji_generator: !!python/name:materialx.emoji.to_svg
-    
+  - pymdownx.critic
+  - pymdownx.caret
+  - pymdownx.keys
+  - pymdownx.mark
+  - pymdownx.tilde   
+  - tables
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences    
