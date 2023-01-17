@@ -60,6 +60,7 @@ Ejemplo: (telefono móvil-smartphone)
     
 <p align="center"><img src="./imagenes/OOP-Class-and-Object.jpg" alt="drawing" width="200"/>
 
+![OOP_Titulo](./imagenes/OOP-Class-and-Object.jpg)
 ***
 <span style="color:grey"><font size="4">
 . Principios OOP: (4 pilares)
