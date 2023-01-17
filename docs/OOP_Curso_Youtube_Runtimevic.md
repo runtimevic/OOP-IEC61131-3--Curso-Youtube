@@ -1,5 +1,5 @@
 <span style="color:green"><font size="5">
-:book: Curso Programación Orientada a Objetos Youtube -- OOP :
+📖 Curso Programación Orientada a Objetos Youtube -- OOP :
 </font></span>
 
 ![OOP_Titulo](./imagenes/oop.png)
@@ -138,7 +138,7 @@ Vamos a ver 2 tipos de relaciones:
 
 
 🕮
-📖
+
 👩‍🏫
 👨‍🏫
 
