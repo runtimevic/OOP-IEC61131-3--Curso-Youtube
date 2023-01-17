@@ -6,12 +6,14 @@
 <span style="color:green"><font size="3">
 by Runtimevic -- Víctor Durán Muñoz.
 </font></span>
+
+
 =
 <p align="center"><span style="color:grey"><font size="5">
 . ¿ Qué es OOP?
 </font></span>
 
-- Es un paradigma que hace uso de los objetos para la construcción de los software.
+- Es un paradigma que hace uso de los objetos para la construcción de los software. 
 
     . ¿ Qué es un paradigma?
     - Tiene diferentes interpretaciones, puede ser un **modelo**, **ejemplo** o **patrón.**
@@ -133,6 +135,8 @@ Vamos a ver 2 tipos de relaciones:
 
 
 <div style="text-align: right"><img src="./imagenes/OOP.jfif" width="100" /></div>
+
+:book:
 
 
 
