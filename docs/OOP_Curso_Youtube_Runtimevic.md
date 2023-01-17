@@ -130,14 +130,14 @@ Vamos a ver 2 tipos de relaciones:
 - <span style="color:yellow">Principio de Inversión de Dependencia:</span> Clases de **alto nivel** no deben depender de las clases **bajo nivel**.
 ***
 
-![Texto alternativo](./imagenes/OO_Logo.jpg)
+![OOP_Logo](./imagenes/OO_Logo.jpg)
 
 
 
 <div style="text-align: right"><img src="./imagenes/OOP.jfif" width="100" /></div>
 
-:book:
 
+🕮
 
 
 ![Placeholder](https://dummyimage.com/600x400/eee/aaa){: align=left }
