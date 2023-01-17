@@ -138,6 +138,9 @@ Vamos a ver 2 tipos de relaciones:
 
 
 🕮
+📖
+👩‍🏫
+👨‍🏫
 
 
 ![Placeholder](https://dummyimage.com/600x400/eee/aaa){: align=left }
