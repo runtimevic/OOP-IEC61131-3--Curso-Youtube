@@ -7,12 +7,9 @@
 by Runtimevic -- Víctor Durán Muñoz.
 </font></span>
 ***
-
 <span style="color:grey"><font size="5">
 ¿ Qué es OOP?
 </font></span>
-
-
 
 - Es un paradigma que hace uso de los objetos para la construcción de los software. 
 
