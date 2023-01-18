@@ -140,7 +140,7 @@ Vamos a ver 2 tipos de relaciones:
 <div style="text-align: right"><img src="./imagenes/OOP.jfif" width="100" /></div>
 
 
-🕮
+
 
 👩‍🏫
 👨‍🏫

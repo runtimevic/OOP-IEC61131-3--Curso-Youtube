@@ -7,9 +7,11 @@
 by Runtimevic -- Víctor Durán Muñoz.
 </font></span>
 ***
+
 <span style="color:grey"><font size="5">
-. ¿ Qué es OOP?
+¿ Qué es OOP?
 </font></span>
+
 
 
 - Es un paradigma que hace uso de los objetos para la construcción de los software. 
@@ -28,7 +30,8 @@ by Runtimevic -- Víctor Durán Muñoz.
 - Detalla sus **comportamientos (metodos)**
 
 ```text
-Ejemplo: (telefono móvil-smartphone)
+📱 Ejemplo: (telefono móvil-smartphone)
+
 . ¿Qué atributos reconocemos? (Propiedades)
     - color.
     - marca.
@@ -36,6 +39,8 @@ Ejemplo: (telefono móvil-smartphone)
     - Realizar llamadas.
     - Navegar por internet. 
 ```
+
+**`Bold Code`**
 
 
 <p align="center"><span style="color:grey"><font size="5">
