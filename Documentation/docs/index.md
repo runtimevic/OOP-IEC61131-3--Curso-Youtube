@@ -7,7 +7,7 @@
 by Runtimevic -- Víctor Durán Muñoz.
 </font></span>
 ***
-<span style="color:grey"><font size="5">
+<span style="color:grey"><font size="4">
 ¿ Qué es OOP?
 </font></span>
 
@@ -37,6 +37,5 @@ by Runtimevic -- Víctor Durán Muñoz.
     - Navegar por internet. 
 ```
 
-**`Bold Code`**
 
 
