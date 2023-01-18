@@ -7,7 +7,7 @@
 by Runtimevic -- Víctor Durán Muñoz.
 </font></span>
 ***
-<p align="center"><span style="color:grey"><font size="5">
+<span style="color:grey"><font size="5">
 . ¿ Qué es OOP?
 </font></span>
 
@@ -36,6 +36,8 @@ Ejemplo: (telefono móvil-smartphone)
     - Realizar llamadas.
     - Navegar por internet. 
 ```
-<span style="color:grey"><font size="5">
+
+
+<p align="center"><span style="color:grey"><font size="5">
 . ¿ Qué es OOP?
 </font></span>
