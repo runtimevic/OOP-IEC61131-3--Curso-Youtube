@@ -11,6 +11,31 @@ by Runtimevic -- Víctor Durán Muñoz.
 . ¿ Qué es OOP?
 </font></span>
 
+
+- Es un paradigma que hace uso de los objetos para la construcción de los software. 
+
+    . ¿ Qué es un paradigma?
+    - Tiene diferentes interpretaciones, puede ser un **modelo**, **ejemplo** o **patrón.**
+    - Es una **forma** o un **estilo** de programar.
+- se busca plasmar la realidad hacia el código.
+
+<span style="color:grey"><font size="4">
+. ¿Cómo pensar en Objetos?
+</font></span>
+
+- Enfocarse en **algo de la realidad.**
+- Detalla sus **atributos, (propiedades)**
+- Detalla sus **comportamientos (metodos)**
+
+```text
+Ejemplo: (telefono móvil-smartphone)
+. ¿Qué atributos reconocemos? (Propiedades)
+    - color.
+    - marca.
+. ¿Qué se puede hacer? (Metodos)
+    - Realizar llamadas.
+    - Navegar por internet. 
+```
 <span style="color:grey"><font size="5">
 . ¿ Qué es OOP?
 </font></span>
