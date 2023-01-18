@@ -40,6 +40,3 @@ by Runtimevic -- Víctor Durán Muñoz.
 **`Bold Code`**
 
 
-<p align="center"><span style="color:grey"><font size="5">
-. ¿ Qué es OOP?
-</font></span>
