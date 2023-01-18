@@ -65,10 +65,10 @@ Ejemplo: (telefono móvil-smartphone)
 <span style="color:grey"><font size="4">
 . Principios OOP: (4 pilares)
 </font></span>
-- <span style="color:yellow">Abstracción</span> -- La forma de **plasmar algo hacia el código** para enfocarse en su uso. No enfocarnos tanto en que hay por detras del codigo si no en el uso de este.
-- <span style="color:yellow">Encapsulamiento</span> -- No toda la información de nuestro objeto es **relevante y/o accesible** para el usuario.
-- <span style="color:yellow">Herencia</span> -- Es la cualidad de **heredar caracteristicas** de otra clase. (EXTENDS)
-- <span style="color:yellow">Polimorfismo</span> -- Las **múltiples formas** que puede obtener un objeto si comparte la misma **clase o interfaz**. (IMPLEMENTS) 
+- <span style="color:orange">Abstracción</span> -- La forma de **plasmar algo hacia el código** para enfocarse en su uso. No enfocarnos tanto en que hay por detras del codigo si no en el uso de este.
+- <span style="color:orange">Encapsulamiento</span> -- No toda la información de nuestro objeto es **relevante y/o accesible** para el usuario.
+- <span style="color:orange">Herencia</span> -- Es la cualidad de **heredar caracteristicas** de otra clase. (EXTENDS)
+- <span style="color:orange">Polimorfismo</span> -- Las **múltiples formas** que puede obtener un objeto si comparte la misma **clase o interfaz**. (IMPLEMENTS) 
 
 <p align="left"><img width="350" src="./imagenes/OOP_basic_principles.jpeg" alt="drawing"/>
 </p>
@@ -92,10 +92,10 @@ Ejemplo: (telefono móvil-smartphone)
 
 ***
 .modificadores de acceso: 
-- <span style="color:yellow">public:</span> son accesibles luego de instanciar la clase.
-- <span style="color:yellow">private:</span> son accesibles dentro de la clase.
-- <span style="color:yellow">protected:</span> son accesibles a través de la herencia.
-- <span style="color:yellow">internal:</span>
+- <span style="color:orange">public:</span> son accesibles luego de instanciar la clase.
+- <span style="color:orange">private:</span> son accesibles dentro de la clase.
+- <span style="color:orange">protected:</span> son accesibles a través de la herencia.
+- <span style="color:orange">internal:</span>
 ***
 .Propiedades: Getters & Setters
 
@@ -106,9 +106,9 @@ para modificar directamente nuestras propiedades lo que se busca es que se haga 
 Vamos a ver 2 tipos de relaciones:
 
 - Asociación.
-    - <span style="color:yellow">De uno a uno:</span> Una clase mantiene una **asociación de a uno** con otra clase.
-    - <span style="color:yellow">De uno a muchos:</span> Una clase mantiene una asociación con otra clase **a través de una colección**.
-    - <span style="color:yellow">De muchos a muchos:</span> La **asociación se da en ambos lados** a través de una colección.
+    - <span style="color:orange">De uno a uno:</span> Una clase mantiene una **asociación de a uno** con otra clase.
+    - <span style="color:orange">De uno a muchos:</span> Una clase mantiene una asociación con otra clase **a través de una colección**.
+    - <span style="color:orange">De muchos a muchos:</span> La **asociación se da en ambos lados** a través de una colección.
 - Colaboración.
     - La colaboración se da **a través de una referencia de una clase** con el fin de **lograr un cometido**. 
 
@@ -126,11 +126,11 @@ Vamos a ver 2 tipos de relaciones:
     - Bajo **Acoplamiento**. Evitar que una clase dependa fuertemente de otra clase.
 
 
-- <span style="color:yellow">Principio de Responsabilidad Única:</span> Una clase debe tener **una razón** para existir mas no para cambiar.
-- <span style="color:yellow">Principio de Abierto/Cerrado:</span> Las piezas del software deben estar **abiertas para la extensión** pero **cerradas para la modificación**.
-- <span style="color:yellow">Principio de Sustitución de Liskov:</span> Las **clases subtipos** deberían ser reemplazables por sus **clases padres**.
-- <span style="color:yellow">Principio de Segregación de Interfaz:</span> Varias **interfaces** funcionan **mejor que una sola**.
-- <span style="color:yellow">Principio de Inversión de Dependencia:</span> Clases de **alto nivel** no deben depender de las clases **bajo nivel**.
+- <span style="color:orange">Principio de Responsabilidad Única:</span> Una clase debe tener **una razón** para existir mas no para cambiar.
+- <span style="color:orange">Principio de Abierto/Cerrado:</span> Las piezas del software deben estar **abiertas para la extensión** pero **cerradas para la modificación**.
+- <span style="color:orange">Principio de Sustitución de Liskov:</span> Las **clases subtipos** deberían ser reemplazables por sus **clases padres**.
+- <span style="color:orange">Principio de Segregación de Interfaz:</span> Varias **interfaces** funcionan **mejor que una sola**.
+- <span style="color:orange">Principio de Inversión de Dependencia:</span> Clases de **alto nivel** no deben depender de las clases **bajo nivel**.
 ***
 
 ![OOP_Logo](./imagenes/OO_Logo.jpg)
