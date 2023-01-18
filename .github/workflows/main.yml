@@ -3,6 +3,11 @@ on:
   push:
     branches:
       - master
+
+defaults:
+  run:
+    working-directory: Documentation
+    
 jobs:
   deploy:
     runs-on: ubuntu-latest
