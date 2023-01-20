@@ -1,6 +1,7 @@
 site_name: Programación Orientada a Objetos OOP IEC61131-3 Curso Youtube by Runtimevic
 theme:
   name: material
+  logo: imagenes/icono_OOP.jpg
   palette:
      # Palette toggle for light mode
     - scheme: default
@@ -13,8 +14,8 @@ theme:
       toggle:
         icon: material/brightness-4
         name: Switch to light mode
-  features:
-    - navigation.tabs        
+#  features:
+#    - navigation.tabs        
         
   icon:
     admonition:
