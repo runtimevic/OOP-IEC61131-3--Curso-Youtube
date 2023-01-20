@@ -1,6 +1,6 @@
 
 <span style="color:grey"><font size="4">
-. Principios OOP: (4 pilares)
+Principios OOP: (4 pilares)
 </font></span>
 - <span style="color:orange">Abstracción</span> -- La forma de **plasmar algo hacia el código** para enfocarse en su uso. No enfocarnos tanto en que hay por detras del codigo si no en el uso de este.
 - <span style="color:orange">Encapsulamiento</span> -- No toda la información de nuestro objeto es **relevante y/o accesible** para el usuario.
