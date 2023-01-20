@@ -1,7 +1,8 @@
 site_name: Programación Orientada a Objetos OOP IEC61131-3 Curso Youtube by Runtimevic
 theme:
   name: material
-  logo: imagenes/OOP_Logo2.png
+#  logo: imagenes/OOP_Logo2.png
+  logo: imagenes/oop_logg.webp
   palette:
      # Palette toggle for light mode
     - scheme: default
@@ -39,6 +40,7 @@ nav:
     - Tipos de paradigmas: tipos de paradigmas.md
     - Clases y Objetos: clases y objetos.md
     - Principios OOP: principios OOP.md
+    - Relaciones: relaciones.md
     - SOLID: SOLID.md
     - page3: page3.md
     - page4: page4.md
