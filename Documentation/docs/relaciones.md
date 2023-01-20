@@ -1,5 +1,7 @@
 ¿Como conseguir el Polimorfismo?
 
+El polimorfismo se puede obtener gracias a las Interfaces y/o las Clases Abstractas.
+
 .Interface: (INTERFACE)
 - Son un **contrato que obliga** a una clase a **implementar** las **propiedades** y/o **métodos** definidos.
 - Son una plantilla (sin lógica).
@@ -12,7 +14,7 @@
     | Clases abstractas | Interfaces | 
     | :--- | :--- |     
     | 1.- Limitadas a una sola implementación.   | 1. No tiene limitación de implementación.     | 
-    | 2.- Pueden definir comportamiento base.     | 2. Expone prpiedades y métodos abstractos (sin lógica).     | 
+    | 2.- Pueden definir comportamiento base.     | 2. Expone propiedades y métodos abstractos (sin lógica).     | 
 
 ***
 .modificadores de acceso: 
