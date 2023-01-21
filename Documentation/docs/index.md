@@ -27,7 +27,7 @@ by Runtimevic -- Víctor Durán Muñoz.
 - Detalla sus **comportamientos (metodos)**
 
 ```text
-📱 Ejemplo: (telefono móvil-smartphone)
+📱 Ejemplo: (Objeto: telefono móvil-smartphone)
 
 . ¿Qué atributos reconocemos? (Propiedades)
     - color.
@@ -35,6 +35,18 @@ by Runtimevic -- Víctor Durán Muñoz.
 . ¿Qué se puede hacer? (Metodos)
     - Realizar llamadas.
     - Navegar por internet. 
+```
+
+```text
+🚗 Ejemplo: (Objeto: coche)
+
+. ¿Qué atributos reconocemos? (Propiedades)
+    - color.
+    - marca.
+. ¿Qué se puede hacer? (Metodos)
+    - conducir.
+    - frenar. 
+    - acelerar.
 ```
 
 
