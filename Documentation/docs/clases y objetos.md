@@ -6,3 +6,7 @@
 - Un Objeto es la **instancia de una Clase**.
 
 ![ClaseyObjetos1](./imagenes/OOP-Class-and-Object.jpg)
+
+```text
+En este Ejemplo Nos encontramos la Clase Coche y hemos instanciado esta Clase para tener los Objetos de Coches Mercedes, BmW y Audi...
+```
