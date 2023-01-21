@@ -12,3 +12,15 @@ En este Ejemplo Nos encontramos la Clase Coche,
 y hemos instanciado esta Clase para tener los Objetos de Coches 
 Mercedes, Bmw y Audi...
 ```
+```iecst
+FUNCTION_BLOCK Coche
+VAR_INPUT
+END_VAR
+VAR_OUTPUT
+END_VAR
+VAR
+	_Marca : STRING;
+	_Color : STRING;
+	accion : STRING;
+END_VAR
+```
