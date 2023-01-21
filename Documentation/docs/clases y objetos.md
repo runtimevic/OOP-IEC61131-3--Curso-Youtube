@@ -8,5 +8,7 @@
 ![ClaseyObjetos1](./imagenes/OOP-Class-and-Object.jpg)
 
 ```text
-En este Ejemplo Nos encontramos la Clase Coche y hemos instanciado esta Clase para tener los Objetos de Coches Mercedes, BmW y Audi...
+En este Ejemplo Nos encontramos la Clase Coche,
+y hemos instanciado esta Clase para tener los Objetos de Coches 
+Mercedes, Bmw y Audi...
 ```
