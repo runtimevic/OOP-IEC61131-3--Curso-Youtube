@@ -82,4 +82,6 @@ nav:
        - Principio de Segregación de Interfaz: solid/Principio de Segregación de Interfaz.md
        - Principio de Inversión de Dependencia: solid/Principio de Inversión de Dependencia.md
     - UML: UML.md
+    - Patrones de Diseño:
+       - Patrones de Diseño : Patrones de Diseño/_Patrones de Diseño.md 
     - Links: links.md 

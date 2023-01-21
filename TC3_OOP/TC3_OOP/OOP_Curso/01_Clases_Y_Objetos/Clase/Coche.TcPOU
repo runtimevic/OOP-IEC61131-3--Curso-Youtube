@@ -7,6 +7,9 @@ END_VAR
 VAR_OUTPUT
 END_VAR
 VAR
+	_Marca : STRING;
+	_Color : STRING;
+	accion : STRING;
 END_VAR
 ]]></Declaration>
     <Implementation>
@@ -14,68 +17,59 @@ END_VAR
     </Implementation>
     <Folder Name="Metodos" Id="{e93741ea-181a-4006-8f66-9dfbb29cf23b}" />
     <Folder Name="Propiedades" Id="{a3aa27d7-8148-4244-88cb-ee03d1f6c74c}" />
-    <Method Name="acelerar" Id="{df6cf032-d981-4328-a5c3-ffc2361c2bc9}" FolderPath="Metodos\">
-      <Declaration><![CDATA[METHOD PUBLIC acelerar
-VAR_INPUT
-END_VAR
+    <Method Name="Acelerar" Id="{df6cf032-d981-4328-a5c3-ffc2361c2bc9}" FolderPath="Metodos\">
+      <Declaration><![CDATA[METHOD PUBLIC Acelerar
+
 ]]></Declaration>
       <Implementation>
-        <ST><![CDATA[]]></ST>
+        <ST><![CDATA[accion := 'acelerar';]]></ST>
       </Implementation>
     </Method>
     <Property Name="Color" Id="{aa2c479c-72b5-4532-9433-83f1084fe047}" FolderPath="Propiedades\">
       <Declaration><![CDATA[PROPERTY PUBLIC Color : STRING]]></Declaration>
       <Get Name="Get" Id="{43ad63d7-5b92-45bd-8b4e-2c01e4811dfb}">
-        <Declaration><![CDATA[VAR
-END_VAR
+        <Declaration><![CDATA[
 ]]></Declaration>
         <Implementation>
-          <ST><![CDATA[]]></ST>
+          <ST><![CDATA[Color := _Color;]]></ST>
         </Implementation>
       </Get>
       <Set Name="Set" Id="{2ed5c4f3-57ec-4058-adc5-6c141ced88d5}">
-        <Declaration><![CDATA[VAR
-END_VAR
+        <Declaration><![CDATA[
 ]]></Declaration>
         <Implementation>
-          <ST><![CDATA[]]></ST>
+          <ST><![CDATA[_Color := Color;]]></ST>
         </Implementation>
       </Set>
     </Property>
     <Method Name="Conducir" Id="{5067b8ca-bfa3-44a9-8fb6-c937f24afb9f}" FolderPath="Metodos\">
       <Declaration><![CDATA[METHOD PUBLIC Conducir
-VAR_INPUT
-END_VAR
+
 ]]></Declaration>
       <Implementation>
-        <ST><![CDATA[]]></ST>
+        <ST><![CDATA[accion := 'conducir';]]></ST>
       </Implementation>
     </Method>
     <Method Name="Frenar" Id="{c4768733-2c2f-4f12-8d0a-d6df21d35961}" FolderPath="Metodos\">
       <Declaration><![CDATA[METHOD PUBLIC Frenar
-VAR_INPUT
-END_VAR
+
 ]]></Declaration>
       <Implementation>
-        <ST><![CDATA[]]></ST>
+        <ST><![CDATA[accion := 'frenar';]]></ST>
       </Implementation>
     </Method>
     <Property Name="Marca" Id="{0f522775-9d24-483d-a844-018bfeb11cb7}" FolderPath="Propiedades\">
       <Declaration><![CDATA[PROPERTY PUBLIC Marca : STRING]]></Declaration>
       <Get Name="Get" Id="{0f63c98c-c8c3-4246-8e7a-9eb79d0d3e90}">
-        <Declaration><![CDATA[VAR
-END_VAR
-]]></Declaration>
+        <Declaration><![CDATA[]]></Declaration>
         <Implementation>
-          <ST><![CDATA[]]></ST>
+          <ST><![CDATA[Marca := _Marca;]]></ST>
         </Implementation>
       </Get>
-      <Set Name="Set" Id="{f2607f15-9fd9-456b-91ad-6207a47b947f}">
-        <Declaration><![CDATA[VAR
-END_VAR
-]]></Declaration>
+      <Set Name="Set" Id="{cc521b98-57fd-4b78-902f-6015af7cbf49}">
+        <Declaration><![CDATA[]]></Declaration>
         <Implementation>
-          <ST><![CDATA[]]></ST>
+          <ST><![CDATA[_Marca := Marca;]]></ST>
         </Implementation>
       </Set>
     </Property>

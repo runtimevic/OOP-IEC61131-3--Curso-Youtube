@@ -1,0 +1,323 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<project xmlns="http://www.plcopen.org/xml/tc6_0200">
+  <fileHeader companyName="Beckhoff Automation GmbH" productName="TwinCAT PLC Control" productVersion="3.5.13.21" creationDateTime="2023-01-21T20:30:57.9553772" />
+  <contentHeader name="OOP_Curso" modificationDateTime="2023-01-21T20:30:57.9553772">
+    <coordinateInfo>
+      <fbd>
+        <scaling x="1" y="1" />
+      </fbd>
+      <ld>
+        <scaling x="1" y="1" />
+      </ld>
+      <sfc>
+        <scaling x="1" y="1" />
+      </sfc>
+    </coordinateInfo>
+    <addData>
+      <data name="http://www.3s-software.com/plcopenxml/projectinformation" handleUnknown="implementation">
+        <ProjectInformation />
+      </data>
+    </addData>
+  </contentHeader>
+  <types>
+    <dataTypes />
+    <pous>
+      <pou name="Coche" pouType="functionBlock">
+        <interface>
+          <localVars>
+            <variable name="_Marca">
+              <type>
+                <string />
+              </type>
+            </variable>
+            <variable name="_Color">
+              <type>
+                <string />
+              </type>
+            </variable>
+            <variable name="accion">
+              <type>
+                <string />
+              </type>
+            </variable>
+          </localVars>
+        </interface>
+        <body>
+          <ST>
+            <xhtml xmlns="http://www.w3.org/1999/xhtml" />
+          </ST>
+        </body>
+        <addData>
+          <data name="http://www.3s-software.com/plcopenxml/method" handleUnknown="implementation">
+            <Method name="Acelerar" ObjectId="df6cf032-d981-4328-a5c3-ffc2361c2bc9">
+              <interface />
+              <body>
+                <ST>
+                  <xhtml xmlns="http://www.w3.org/1999/xhtml">accion := 'acelerar';</xhtml>
+                </ST>
+              </body>
+              <InterfaceAsPlainText>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">METHOD PUBLIC Acelerar
+
+</xhtml>
+              </InterfaceAsPlainText>
+              <addData />
+            </Method>
+          </data>
+          <data name="http://www.3s-software.com/plcopenxml/method" handleUnknown="implementation">
+            <Method name="Conducir" ObjectId="5067b8ca-bfa3-44a9-8fb6-c937f24afb9f">
+              <interface />
+              <body>
+                <ST>
+                  <xhtml xmlns="http://www.w3.org/1999/xhtml">accion := 'conducir';</xhtml>
+                </ST>
+              </body>
+              <InterfaceAsPlainText>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">METHOD PUBLIC Conducir
+
+</xhtml>
+              </InterfaceAsPlainText>
+              <addData />
+            </Method>
+          </data>
+          <data name="http://www.3s-software.com/plcopenxml/method" handleUnknown="implementation">
+            <Method name="Frenar" ObjectId="c4768733-2c2f-4f12-8d0a-d6df21d35961">
+              <interface />
+              <body>
+                <ST>
+                  <xhtml xmlns="http://www.w3.org/1999/xhtml">accion := 'frenar';</xhtml>
+                </ST>
+              </body>
+              <InterfaceAsPlainText>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">METHOD PUBLIC Frenar
+
+</xhtml>
+              </InterfaceAsPlainText>
+              <addData />
+            </Method>
+          </data>
+          <data name="http://www.3s-software.com/plcopenxml/property" handleUnknown="implementation">
+            <Property name="Color" ObjectId="aa2c479c-72b5-4532-9433-83f1084fe047">
+              <interface>
+                <returnType>
+                  <string />
+                </returnType>
+              </interface>
+              <GetAccessor>
+                <interface />
+                <body>
+                  <ST>
+                    <xhtml xmlns="http://www.w3.org/1999/xhtml">Color := _Color;</xhtml>
+                  </ST>
+                </body>
+                <InterfaceAsPlainText>
+                  <xhtml xmlns="http://www.w3.org/1999/xhtml">
+</xhtml>
+                </InterfaceAsPlainText>
+                <addData />
+              </GetAccessor>
+              <SetAccessor>
+                <interface />
+                <body>
+                  <ST>
+                    <xhtml xmlns="http://www.w3.org/1999/xhtml">_Color := Color;</xhtml>
+                  </ST>
+                </body>
+                <InterfaceAsPlainText>
+                  <xhtml xmlns="http://www.w3.org/1999/xhtml">
+</xhtml>
+                </InterfaceAsPlainText>
+                <addData />
+              </SetAccessor>
+              <InterfaceAsPlainText>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">PROPERTY PUBLIC Color : STRING</xhtml>
+              </InterfaceAsPlainText>
+              <addData />
+            </Property>
+          </data>
+          <data name="http://www.3s-software.com/plcopenxml/property" handleUnknown="implementation">
+            <Property name="Marca" ObjectId="0f522775-9d24-483d-a844-018bfeb11cb7">
+              <interface>
+                <returnType>
+                  <string />
+                </returnType>
+              </interface>
+              <GetAccessor>
+                <interface />
+                <body>
+                  <ST>
+                    <xhtml xmlns="http://www.w3.org/1999/xhtml">Marca := _Marca;</xhtml>
+                  </ST>
+                </body>
+                <InterfaceAsPlainText>
+                  <xhtml xmlns="http://www.w3.org/1999/xhtml" />
+                </InterfaceAsPlainText>
+                <addData />
+              </GetAccessor>
+              <SetAccessor>
+                <interface />
+                <body>
+                  <ST>
+                    <xhtml xmlns="http://www.w3.org/1999/xhtml">_Marca := Marca;</xhtml>
+                  </ST>
+                </body>
+                <InterfaceAsPlainText>
+                  <xhtml xmlns="http://www.w3.org/1999/xhtml" />
+                </InterfaceAsPlainText>
+                <addData />
+              </SetAccessor>
+              <InterfaceAsPlainText>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">PROPERTY PUBLIC Marca : STRING</xhtml>
+              </InterfaceAsPlainText>
+              <addData />
+            </Property>
+          </data>
+          <data name="http://www.3s-software.com/plcopenxml/interfaceasplaintext" handleUnknown="implementation">
+            <InterfaceAsPlainText>
+              <xhtml xmlns="http://www.w3.org/1999/xhtml">FUNCTION_BLOCK Coche
+VAR_INPUT
+END_VAR
+VAR_OUTPUT
+END_VAR
+VAR
+	_Marca : STRING;
+	_Color : STRING;
+	accion : STRING;
+END_VAR
+</xhtml>
+            </InterfaceAsPlainText>
+          </data>
+          <data name="http://www.3s-software.com/plcopenxml/objectid" handleUnknown="discard">
+            <ObjectId>d772e4a1-e405-4c42-bf3e-790247ec68f4</ObjectId>
+          </data>
+        </addData>
+      </pou>
+      <pou name="_01_Clase_y_Objetos" pouType="program">
+        <interface>
+          <localVars>
+            <variable name="Mercedes">
+              <type>
+                <derived name="Coche" />
+              </type>
+              <documentation>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml"> tenemos la Clase Coche y la instanciamos y obtenemos los Objetos: Mercedes, Bmw y Audi.</xhtml>
+              </documentation>
+            </variable>
+            <variable name="Bmw">
+              <type>
+                <derived name="Coche" />
+              </type>
+            </variable>
+            <variable name="Audi">
+              <type>
+                <derived name="Coche" />
+              </type>
+            </variable>
+            <variable name="Color">
+              <type>
+                <string />
+              </type>
+            </variable>
+            <variable name="Marca">
+              <type>
+                <string />
+              </type>
+            </variable>
+            <variable name="Acelerar">
+              <type>
+                <BOOL />
+              </type>
+            </variable>
+            <variable name="Conducir">
+              <type>
+                <BOOL />
+              </type>
+            </variable>
+            <variable name="Frenar">
+              <type>
+                <BOOL />
+              </type>
+            </variable>
+          </localVars>
+        </interface>
+        <body>
+          <ST>
+            <xhtml xmlns="http://www.w3.org/1999/xhtml">//Objeto Mercedes
+//llamadas a sus métodos.
+IF Acelerar THEN
+	Mercedes.Acelerar();
+	Acelerar := FALSE;
+END_IF
+
+IF Conducir THEN
+	Mercedes.Conducir();
+	Conducir := FALSE;
+END_IF
+
+IF Frenar THEN
+	Mercedes.Frenar();
+	Frenar := FALSE;
+END_IF
+
+//llamadas a sus propiedades.
+Mercedes.Marca := 'Mercedes';
+Mercedes.Color := 'Negro';
+Color := Mercedes.Color;
+</xhtml>
+          </ST>
+        </body>
+        <addData>
+          <data name="http://www.3s-software.com/plcopenxml/interfaceasplaintext" handleUnknown="implementation">
+            <InterfaceAsPlainText>
+              <xhtml xmlns="http://www.w3.org/1999/xhtml">PROGRAM _01_Clase_y_Objetos
+VAR
+	// tenemos la Clase Coche y la instanciamos y obtenemos los Objetos: Mercedes, Bmw y Audi.
+	Mercedes : Coche;
+	Bmw : Coche;
+	Audi: Coche;
+	
+	Color : STRING;
+	Marca : STRING;
+	
+	Acelerar : BOOL;
+	Conducir:  BOOL;
+	Frenar  : BOOL;
+	
+	
+END_VAR
+</xhtml>
+            </InterfaceAsPlainText>
+          </data>
+          <data name="http://www.3s-software.com/plcopenxml/objectid" handleUnknown="discard">
+            <ObjectId>fede16c2-5df8-4637-9693-ef33a68705f9</ObjectId>
+          </data>
+        </addData>
+      </pou>
+    </pous>
+  </types>
+  <instances>
+    <configurations />
+  </instances>
+  <addData>
+    <data name="http://www.3s-software.com/plcopenxml/projectstructure" handleUnknown="discard">
+      <ProjectStructure>
+        <Folder Name="01_Clases_Y_Objetos">
+          <Folder Name="Clase">
+            <Object Name="Coche" ObjectId="d772e4a1-e405-4c42-bf3e-790247ec68f4">
+              <Folder Name="Metodos">
+                <Object Name="Acelerar" ObjectId="df6cf032-d981-4328-a5c3-ffc2361c2bc9" />
+                <Object Name="Conducir" ObjectId="5067b8ca-bfa3-44a9-8fb6-c937f24afb9f" />
+                <Object Name="Frenar" ObjectId="c4768733-2c2f-4f12-8d0a-d6df21d35961" />
+              </Folder>
+              <Folder Name="Propiedades">
+                <Object Name="Color" ObjectId="aa2c479c-72b5-4532-9433-83f1084fe047" />
+                <Object Name="Marca" ObjectId="0f522775-9d24-483d-a844-018bfeb11cb7" />
+              </Folder>
+            </Object>
+          </Folder>
+          <Object Name="_01_Clase_y_Objetos" ObjectId="fede16c2-5df8-4637-9693-ef33a68705f9" />
+        </Folder>
+      </ProjectStructure>
+    </data>
+  </addData>
+</project>
