@@ -76,4 +76,9 @@ markdown_extensions:
   - admonition
   - pymdownx.details
   - pymdownx.superfences
-  - admonition   
+  - admonition
+
+  - pymdownx.highlight:
+      linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
