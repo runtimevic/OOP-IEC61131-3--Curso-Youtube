@@ -5,6 +5,25 @@
 			<Settings MaxCpus="8" NonWinCpus="2">
 				<Cpu CpuId="6"/>
 			</Settings>
+			<Tasks>
+				<Task Id="3" Priority="20" CycleTime="100000" AmsPort="350" AdtTasks="true">
+					<Name>PlcTask</Name>
+				</Task>
+			</Tasks>
 		</System>
+		<Plc>
+			<Project GUID="{2531DD2C-0D71-4B67-93CC-AEDC6C1E1736}" Name="OOP_Curso" PrjFilePath="OOP_Curso\OOP_Curso.plcproj" TmcFilePath="OOP_Curso\OOP_Curso.tmc" ReloadTmc="true" AmsPort="851" FileArchiveSettings="#x000e" SymbolicMapping="true">
+				<Instance Id="#x08502000" TcSmClass="TComPlcObjDef" KeepUnrestoredLinks="2">
+					<Name>OOP_Curso Instance</Name>
+					<CLSID ClassFactory="TcPlc30">{08500001-0000-0000-F000-000000000064}</CLSID>
+					<Contexts>
+						<Context>
+							<Id>1</Id>
+							<Name>Default</Name>
+						</Context>
+					</Contexts>
+				</Instance>
+			</Project>
+		</Plc>
 	</Project>
 </TcSmProject>

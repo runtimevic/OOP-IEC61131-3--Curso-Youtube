@@ -1,0 +1,83 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.12">
+  <POU Name="Coche" Id="{d772e4a1-e405-4c42-bf3e-790247ec68f4}" SpecialFunc="None">
+    <Declaration><![CDATA[FUNCTION_BLOCK Coche
+VAR_INPUT
+END_VAR
+VAR_OUTPUT
+END_VAR
+VAR
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[]]></ST>
+    </Implementation>
+    <Folder Name="Metodos" Id="{e93741ea-181a-4006-8f66-9dfbb29cf23b}" />
+    <Folder Name="Propiedades" Id="{a3aa27d7-8148-4244-88cb-ee03d1f6c74c}" />
+    <Method Name="acelerar" Id="{df6cf032-d981-4328-a5c3-ffc2361c2bc9}" FolderPath="Metodos\">
+      <Declaration><![CDATA[METHOD PUBLIC acelerar
+VAR_INPUT
+END_VAR
+]]></Declaration>
+      <Implementation>
+        <ST><![CDATA[]]></ST>
+      </Implementation>
+    </Method>
+    <Property Name="Color" Id="{aa2c479c-72b5-4532-9433-83f1084fe047}" FolderPath="Propiedades\">
+      <Declaration><![CDATA[PROPERTY PUBLIC Color : STRING]]></Declaration>
+      <Get Name="Get" Id="{43ad63d7-5b92-45bd-8b4e-2c01e4811dfb}">
+        <Declaration><![CDATA[VAR
+END_VAR
+]]></Declaration>
+        <Implementation>
+          <ST><![CDATA[]]></ST>
+        </Implementation>
+      </Get>
+      <Set Name="Set" Id="{2ed5c4f3-57ec-4058-adc5-6c141ced88d5}">
+        <Declaration><![CDATA[VAR
+END_VAR
+]]></Declaration>
+        <Implementation>
+          <ST><![CDATA[]]></ST>
+        </Implementation>
+      </Set>
+    </Property>
+    <Method Name="Conducir" Id="{5067b8ca-bfa3-44a9-8fb6-c937f24afb9f}" FolderPath="Metodos\">
+      <Declaration><![CDATA[METHOD PUBLIC Conducir
+VAR_INPUT
+END_VAR
+]]></Declaration>
+      <Implementation>
+        <ST><![CDATA[]]></ST>
+      </Implementation>
+    </Method>
+    <Method Name="Frenar" Id="{c4768733-2c2f-4f12-8d0a-d6df21d35961}" FolderPath="Metodos\">
+      <Declaration><![CDATA[METHOD PUBLIC Frenar
+VAR_INPUT
+END_VAR
+]]></Declaration>
+      <Implementation>
+        <ST><![CDATA[]]></ST>
+      </Implementation>
+    </Method>
+    <Property Name="Marca" Id="{0f522775-9d24-483d-a844-018bfeb11cb7}" FolderPath="Propiedades\">
+      <Declaration><![CDATA[PROPERTY PUBLIC Marca : STRING]]></Declaration>
+      <Get Name="Get" Id="{0f63c98c-c8c3-4246-8e7a-9eb79d0d3e90}">
+        <Declaration><![CDATA[VAR
+END_VAR
+]]></Declaration>
+        <Implementation>
+          <ST><![CDATA[]]></ST>
+        </Implementation>
+      </Get>
+      <Set Name="Set" Id="{f2607f15-9fd9-456b-91ad-6207a47b947f}">
+        <Declaration><![CDATA[VAR
+END_VAR
+]]></Declaration>
+        <Implementation>
+          <ST><![CDATA[]]></ST>
+        </Implementation>
+      </Set>
+    </Property>
+  </POU>
+</TcPlcObject>

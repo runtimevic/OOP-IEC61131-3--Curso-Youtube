@@ -81,4 +81,5 @@ nav:
        - Principio de Sustitución de Liskov: solid/Principio de Sustitución de Liskov.md
        - Principio de Segregación de Interfaz: solid/Principio de Segregación de Interfaz.md
        - Principio de Inversión de Dependencia: solid/Principio de Inversión de Dependencia.md
+    - UML: UML.md
     - Links: links.md 

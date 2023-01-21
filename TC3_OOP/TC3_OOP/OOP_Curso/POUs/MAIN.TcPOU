@@ -1,11 +1,14 @@
-<?xml version="1.0" encoding="utf-8"?>
-<TcPlcObject Version="1.1.0.1">
-  <POU Name="MAIN" Id="{791988f4-6222-4a77-9850-9cca8d50763e}">
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.12">
+  <POU Name="MAIN" Id="{791988f4-6222-4a77-9850-9cca8d50763e}" SpecialFunc="None">
     <Declaration><![CDATA[PROGRAM MAIN
 VAR
+	Mercedes : coche;
+	Bmw : coche;
+	Audi: coche;
+	
 END_VAR
-]]>
-    </Declaration>
+]]></Declaration>
     <Implementation>
       <ST><![CDATA[]]></ST>
     </Implementation>
