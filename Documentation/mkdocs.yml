@@ -46,30 +46,13 @@ nav:
        - Herencia: principios/herencia.md
        - Polimorfismo: principios/polimorfismo.md
     - Relaciones: relaciones.md
-    - SOLID: SOLID.md
-
-    - Home: index.md
-    - Getting Started:
-            - Introduction:     GettingStarted/Introduction.md
-            - First Steps:      GettingStarted/GettingStarted.md
-            - Quick Tips:       GettingStarted/QuickTips.md
-    - Code Reference:
-        - Overview:             CodeReference/Objectives.md
-        - Objects:
-            - Mover:                CodeReference/Mover.md
-            - Mover List:           CodeReference/MoverList.md
-            - Position Trigger:     CodeReference/PositionTrigger.md
-            - Speed Trigger:        CodeReference/SpeedTrigger.md
-            - Station:              CodeReference/Station.md
-            - Zone:                 CodeReference/Zone.md
-        - Diagnostics:
-            - Basics:           CodeReference/Diagnostics.md
-            - ErrorMovers:      CodeReference/ErrorMovers.md
-            - Event Logger:     CodeReference/EventLogger.md
-            - Utility Library:  CodeReference/UtilityLibrary.md
-    - Examples:
-        - Station to Station:   Examples/StationRouting.md
-  
+    - SOLID: 
+       - SOLID: solid/SOLID.md
+       - Principio de Responsabilidad Única: solid/Principio de Responsabilidad Única.md
+       - Principio de Abierto/Cerrado: solid/Principio de Abierto_Cerrado.md
+       - Principio de Sustitución de Liskov: solid/Principio de Sustitución de Liskov.md
+       - Principio de Segregación de Interfaz: solid/Principio de Segregación de Interfaz.md
+       - Principio de Inversión de Dependencia: solid/Principio de Inversión de Dependencia.md
 
 extra:
   social:

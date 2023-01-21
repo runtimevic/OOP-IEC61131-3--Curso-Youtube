@@ -1,4 +1,4 @@
-![SOLID](./imagenes/SOLID.png)
+![SOLID](./imagenes/solid/SOLID.png)
 - Propuesta por **Robert C.Martin** en el 2000.
 - Son **recomendaciones** para escribir un código **sostenible,mantenible,escalable y robusto**.
 - Beneficios:  

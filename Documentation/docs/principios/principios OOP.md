@@ -10,4 +10,4 @@ Principios OOP: (4 pilares)
 - <span style="color:orange"><font size="4">Polimorfismo</font></span> -- Las **múltiples formas** que puede obtener un objeto si comparte la misma **clase o interfaz**. (IMPLEMENTS) 
 
 
-![OOP_Principios](./imagenes/OOP_basic_principles.jpeg)
+![OOP_Principios](./imagenes/principios/OOP_basic_principles.jpeg)
