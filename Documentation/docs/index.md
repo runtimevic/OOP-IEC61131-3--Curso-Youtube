@@ -11,9 +11,10 @@ by Runtimevic -- Víctor Durán Muñoz.
 ¿ Qué es OOP?
 </font></span>
 
-- Es un paradigma que hace uso de los objetos para la construcción de los software. 
+- Es un paradigma que hace uso de los objetos para la construcción de los software.
 
     . ¿ Qué es un paradigma?
+    
     - Tiene diferentes interpretaciones, puede ser un **modelo**, **ejemplo** o **patrón.**
     - Es una **forma** o un **estilo** de programar.
 - se busca plasmar la realidad hacia el código.
