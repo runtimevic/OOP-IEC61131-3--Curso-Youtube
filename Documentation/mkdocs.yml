@@ -67,7 +67,10 @@ nav:
     - Requisitos: requisitos.md
     - Introduccion: index.md
     - Tipos de paradigmas: tipos de paradigmas.md
-    - Clases y Objetos: clases y objetos.md
+    - Clases y Objetos:
+       - Clases y Objetos: Clases y Objetos/clases y objetos.md
+       - Metodo: Clases y Objetos/metodo.md
+       - Propiedad: Clases y Objetos/propiedad.md
     - Principios OOP: 
        - 4 Pilares: principios/_principios OOP.md
        - Abstracción: principios/abstraccion.md
