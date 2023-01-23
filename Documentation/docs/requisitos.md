@@ -1,6 +1,8 @@
-### Requisitos:
+<span style="color:green"><font size="5">
+👨‍🎓 Requisitos 👩‍🎓 :
+</font></span>
 
-![requisitos](../imagenes/requisitos.jpeg)
+![requisitos](../imagenes/requisitos.png)
 
 Los requisitos necesarios para seguir este curso serían tener instalados los siguientes softwares:
 - Beckhoff TwinCAT 3 XAE 3 ó el IDE de Codesys.
