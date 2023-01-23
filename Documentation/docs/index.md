@@ -30,7 +30,7 @@ by Runtimevic -- Víctor Durán Muñoz.
 ```text
 📱 Ejemplo: (Telefono móvil-smartphone)
 
-. ¿Qué atributos reconocemos? (Propiedades)
+. ¿Qué atributos (Propiedades) reconocemos? 
     - color.
     - marca.
 . ¿Qué se puede hacer? (Metodos)
@@ -41,7 +41,7 @@ by Runtimevic -- Víctor Durán Muñoz.
 ```text
 🚗 Ejemplo: (Coche)
 
-. ¿Qué atributos reconocemos? (Propiedades)
+. ¿Qué atributos (Propiedades) reconocemos? 
     - color.
     - marca.
 . ¿Qué se puede hacer? (Metodos)
