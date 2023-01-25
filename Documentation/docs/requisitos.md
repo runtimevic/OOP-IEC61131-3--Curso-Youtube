@@ -16,7 +16,7 @@ Los requisitos necesarios para seguir este curso serían tener instalados los si
 - Sería bueno tener algo de conocimientos previos de teoria de OOP, aunque sean en otros lenguajes de programación ya que seran extrapolables para el enfoque de este curso de OOP IEC61131-3 para PLCs.
 
 ### Pasos para empezar:
-- Clonar el repositorio de GitHub:
+- Clonar el repositorio de 🔗[GitHub:](https://github.com/runtimevic/OOP-IEC61131-3--Curso-Youtube.git)
         
     $ git clone https://github.com/runtimevic/OOP-IEC61131-3--Curso-Youtube.git
 
