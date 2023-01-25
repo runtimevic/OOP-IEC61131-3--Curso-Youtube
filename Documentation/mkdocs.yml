@@ -73,6 +73,7 @@ nav:
        - Propiedad: Clases y Objetos/propiedad.md
        - Interface: Clases y Objetos/interface.md
     - Tipos de variables y variables especiales: Variable types and special variables.md
+    - Modificadores de acceso: modificadores de acceso.md
     - Principios OOP: 
        - 4 Pilares: principios/_principios OOP.md
        - Abstracción: principios/abstraccion.md

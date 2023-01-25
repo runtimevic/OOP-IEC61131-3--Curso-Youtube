@@ -19,6 +19,11 @@ variable interna) de la POU, puede devolver un valor basado en una determinada c
 variables;
 - Ser accedido por evento en lugar de ser verificado en cada ciclo de ejecución.
 
+***
+.Propiedades: Getters & Setters
+
+para modificar directamente nuestras propiedades lo que se busca es que se haga a través de los metodos Getters y Setters, el cual varía la escritura según el lenguaje pero el concepto es el mismo.
+***
 
 🔗[Documentación de Codesys del Objeto propiedad](https://help.codesys.com/api-content/2/codesys/3.5.12.0/en/_cds_obj_property/#b08bdbd0d86c0a8640e00400511-id-5dbd3039bdbd0d85c0a8640e003d7982)
 
