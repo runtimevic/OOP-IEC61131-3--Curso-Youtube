@@ -13,8 +13,8 @@ faster than a walk” for a human being, but it means “execute” for computer
 Classes or function blocks that share no similarities may implement the same interface. In this 
 case, the implementation of the methods in each class can be totally different. This opens up 
 lots of powerful programming approaches:
-• POUs can call an interface to execute a method or access a property, not knowing which 
+- POUs can call an interface to execute a method or access a property, not knowing which 
 class or FB it is dealing with or how it is going to execute the operation. The interface 
 then points to a class or function block that implements the interface and the operation 
 is executed;
-• Programmers can create easily customizable switch cases using polymorphism.
+- Programmers can create easily customizable switch cases using polymorphism.
