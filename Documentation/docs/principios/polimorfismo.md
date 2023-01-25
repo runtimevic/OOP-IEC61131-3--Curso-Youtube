@@ -16,3 +16,7 @@ different issues. Selecting the proper tool, a Swiss Army Knife can be used to e
 perform a certain set of valuable tasks. In the dual way, a simple adder block that adapts itself 
 to cope with, for instance, int, float, string, and time data types is an example of a polymorphic 
 programming resource.
+
+- https://www.plccoder.com/polymorphism/
+
+- https://www.plccoder.com/abstract/

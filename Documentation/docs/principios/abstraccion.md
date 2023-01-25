@@ -8,3 +8,5 @@ Even though that process can be complex and important, there is no need for the 
 how it is implemented. The important information that isn’t required is hidden from the user, 
 reducing code complexity, enhancing data hiding and reusability, thus making function 
 blocks easier to implement and modify.
+
+- https://www.plccoder.com/abstract/
