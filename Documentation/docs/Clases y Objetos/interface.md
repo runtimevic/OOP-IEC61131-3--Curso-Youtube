@@ -13,8 +13,16 @@ más rápido que un paseo” para un ser humano, pero significa “ejecutar” p
 Las clases o bloques de funciones que no comparten similitudes pueden implementar la misma interfaz. En este
 caso, la implementación de los métodos en cada clase puede ser totalmente diferente. esto abre
 muchos enfoques de programación poderosos:
+
 - Las POU pueden llamar a una interfaz para ejecutar un método o acceder a una propiedad, sin saber cuál
 clase o FB con el que se trata o cómo va a ejecutar la operación. 
 La interfaz luego apunta a una clase o bloque de función que implementa la interfaz y la operación
 es ejecutado;
 - Los programadores pueden crear cajas de interruptores fácilmente personalizables usando polimorfismo.
+
+🔗[Codesys Comando 'Implementar interfaces'](https://help.codesys.com/api-content/2/codesys/3.5.12.0/en/_cds_cmd_implement_interfaces/)
+🔗[Codesys Objeto Interface](https://help.codesys.com/api-content/2/codesys/3.5.13.0/en/_cds_obj_interface/)
+🔗[Codesys Implementando Interfaces](https://help.codesys.com/api-content/2/codesys/3.5.12.0/en/_cds_implementing_interface/)
+
+🔗[Beckhoff Objeto Interface](https://infosys.beckhoff.com/english.php?content=../content/1033/tc3_plc_intro/4256428299.html&id=)
+🔗[Beckhoff Implementando Interfaces](https://infosys.beckhoff.com/english.php?content=../content/1033/tc3_plc_intro/4262436875.html&id=)
