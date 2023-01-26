@@ -14,7 +14,7 @@ dependiendo de quién los esté ejecutando. Por ejemplo, la palabra "Correr" sig
 más rápido que un paseo” para un ser humano, pero significa “ejecutar” para las computadoras.
 
 Las clases o bloques de funciones que no comparten similitudes pueden implementar la misma interfaz. En este
-caso, la implementación de los métodos en cada clase puede ser totalmente diferente. esto abre
+caso, la implementación de los métodos en cada clase puede ser totalmente diferente. Esto abre
 muchos enfoques de programación poderosos:
 
 - Las POU pueden llamar a una interfaz para ejecutar un método o acceder a una propiedad, sin saber cuál
