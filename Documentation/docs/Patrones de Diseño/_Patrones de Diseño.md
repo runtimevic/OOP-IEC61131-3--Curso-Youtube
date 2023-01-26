@@ -17,16 +17,19 @@ general en un contexto particular”.
 
 Clasificación según su propósito: 
 Los patrones de diseño se clasificaron originalmente en tres grupos: 
-● Creacionales. 
-● Estructurales. 
-● De comportamiento. 
+
+- Creacionales. 
+- Estructurales. 
+- De comportamiento. 
 
 Clasificación según su ámbito:
-•	De clase: Basados en la herencia de clases. 
-•	De objeto: Basados en la utilización dinámica de objetos. 
+
+-	De clase: Basados en la herencia de clases. 
+-	De objeto: Basados en la utilización dinámica de objetos. 
 
 
 Patrones creacionales:
+
 - Builder
 - Singleton 
 - Dependency Injection 
@@ -35,6 +38,7 @@ Patrones creacionales:
 - Factory Method 
 
 Patrones estructurales:
+
 - Adapter
 - Data Access Object (DAO)  
 - Query Object 
@@ -42,6 +46,7 @@ Patrones estructurales:
 - Bridge 
 
 Patrones de comportamiento:
+
 - Command
 - Chain of Responsibility 
 - Strategy
