@@ -23,6 +23,7 @@ La interfaz luego apunta a una clase o bloque de función que implementa la inte
 es ejecutado;
 - Los programadores pueden crear cajas de interruptores fácilmente personalizables usando polimorfismo.
 
+
 🔗[Codesys Comando 'Implementar interfaces'](https://help.codesys.com/api-content/2/codesys/3.5.12.0/en/_cds_cmd_implement_interfaces/)
 
 🔗[Codesys Objeto Interface](https://help.codesys.com/api-content/2/codesys/3.5.13.0/en/_cds_obj_interface/)
