@@ -2,6 +2,7 @@ site_name: Programación Orientada a Objetos OOP IEC61131-3 Curso Youtube by Run
 theme:
   name: material
 #  logo: imagenes/OOP_Logo2.png
+  custom_dir: docs/overrides
   logo: imagenes/oop_logg.webp
   palette:
      # Palette toggle for light mode
