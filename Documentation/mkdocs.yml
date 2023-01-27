@@ -40,7 +40,8 @@ extra:
     - icon: fontawesome/brands/linkedin
       link: https://www.linkedin.com/in/v%C3%ADctor-dur%C3%A1n-mu%C3%B1oz-2879a913/
   version:
-    provider: mike    
+    provider: mike
+    default: stable
 
 markdown_extensions:
   - attr_list
