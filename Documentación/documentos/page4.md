@@ -35,3 +35,12 @@ class Test
 ![Image title](https://dummyimage.com/600x400/eee/aaa){ align=left }
 
 ![Image title](https://dummyimage.com/600x400/eee/aaa){ align=right }
+
+
+```mermaid
+  graph TD;
+      A-->B;
+      A-->C;
+      B-->D;
+      C-->D;
+```
