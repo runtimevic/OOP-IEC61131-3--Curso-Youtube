@@ -2,8 +2,7 @@
 
  Programación Orientada a Objetos IEC61131-3 Curso Youtube Runtimevic
 
-![OOP_left](./Assets/OOP.jfif)
-![OOP_right](./Assets/oop.png)
+![OOP](./Assets/oop.png)
 
 ### :link: [Documentación OOP IC61131-3 PLC:](https://runtimevic.github.io/OOP-IEC61131-3--Curso-Youtube/)
  
