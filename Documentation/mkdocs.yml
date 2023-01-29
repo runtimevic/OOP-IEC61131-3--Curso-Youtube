@@ -65,6 +65,10 @@ markdown_extensions:
   - pymdownx.inlinehilite
   - pymdownx.snippets
 
+plugins:
+    - search
+    - mermaid2
+    
 nav:
     - Requisitos: requisitos.md
     - Introduccion: index.md
