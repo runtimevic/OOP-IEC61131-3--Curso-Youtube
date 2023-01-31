@@ -49,7 +49,14 @@ extra:
     - icon: fontawesome/brands/linkedin
       link: https://www.linkedin.com/in/v%C3%ADctor-dur%C3%A1n-mu%C3%B1oz-2879a913/
   version:
-    provider: mike 
+    provider: mike
+  alternate:
+    - name: English
+      link: /en/
+      lang: en
+    - name: Español
+      link: /es/
+      lang: es    
 
 markdown_extensions:
   - attr_list
