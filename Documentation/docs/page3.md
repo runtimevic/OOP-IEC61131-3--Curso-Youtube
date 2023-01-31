@@ -12,7 +12,7 @@ este es mi **contacto:** [Victor](htpssblalaal)
 
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et euismod
     nulla. Curabitur feugiat, tortor non consequat finibus, justo purus auctor
-    massa, nec semper lorem quam in massa.
+    massa, nec semper lorem quam in massa....
 
 ``` mermaid
 diagrama de clase
