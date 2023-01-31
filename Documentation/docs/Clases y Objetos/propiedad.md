@@ -29,4 +29,4 @@ para modificar directamente nuestras propiedades lo que se busca es que se haga 
 
 🔗[Documentación de Beckhoff del Objeto propiedad](https://infosys.beckhoff.com/english.php?content=../content/1033/tc3_plc_intro/2530307467.html&id=)
 
-- https://twincontrols.com/community/twincat-troubleshooting/utilizing-properties/#post-76
+- 🔗 https://twincontrols.com/community/twincat-troubleshooting/utilizing-properties/#post-76
