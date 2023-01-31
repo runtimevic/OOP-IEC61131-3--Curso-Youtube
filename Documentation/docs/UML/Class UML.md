@@ -1,7 +1,9 @@
 ### Class UML
 
 ### UML:
-- https://www.lucidchart.com/pages/es/tutorial-de-diagrama-de-clases-uml 
+- https://www.lucidchart.com/pages/es/tutorial-de-diagrama-de-clases-uml
+
+- https://www.edrawsoft.com/es/article/uml-class-diagram-explained.html
 
 - https://blog.visual-paradigm.com/es/what-are-the-six-types-of-relationships-in-uml-class-diagrams/
 
