@@ -13,6 +13,7 @@
 The variable type defines how and where you can use the variable. The variable type is defined during the variable declaration.
 
 Further Information:
+
 - Local Variables - VAR
 - Input Variables - VAR_INPUT
 - Output Variables - VAR_OUTPUT
