@@ -23,6 +23,9 @@ The variable type defines how and where you can use the variable. The variable t
 - External Variables - VAR_EXTERNAL
 - Instance Variables - VAR_INST
 Remanent Variables - PERSISTENT, RETAIN
+
 SUPER
+
 THIS
+
 Variable types - attribute keywords
