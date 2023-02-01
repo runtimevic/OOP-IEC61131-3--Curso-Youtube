@@ -22,6 +22,7 @@ The variable type defines how and where you can use the variable. The variable t
 - Static Variables - VAR_STAT
 - External Variables - VAR_EXTERNAL
 - Instance Variables - VAR_INST
+
 Remanent Variables - PERSISTENT, RETAIN
 
 SUPER
