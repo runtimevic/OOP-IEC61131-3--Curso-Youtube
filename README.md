@@ -7,7 +7,7 @@
 ### :link: [Documentación OOP IC61131-3 PLC:](https://runtimevic.github.io/OOP-IEC61131-3--Curso-Youtube/)
  
 ***
-### Videos Youtube:
+### Lista de Videos de Youtube:
 - :link: [001-OOP IEC61131-3 PLC](https://www.youtube.com/watch?v=a7eNCefcjGM)
 - :link: [002-OOP IEC61131-3 PLC](https://youtu.be/3IudQIj1noo)
 
