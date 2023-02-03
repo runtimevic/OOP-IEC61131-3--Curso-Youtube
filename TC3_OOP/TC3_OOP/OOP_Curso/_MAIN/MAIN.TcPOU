@@ -6,7 +6,7 @@ VAR
 END_VAR
 ]]></Declaration>
     <Implementation>
-      <ST><![CDATA[_01_Clase_y_Objetos();]]></ST>
+      <ST><![CDATA[_02_Clase_y_Objetos();]]></ST>
     </Implementation>
   </POU>
 </TcPlcObject>
