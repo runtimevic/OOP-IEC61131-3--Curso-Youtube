@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.12">
-  <POU Name="_01_Clase_y_Objetos" Id="{fede16c2-5df8-4637-9693-ef33a68705f9}" SpecialFunc="None">
-    <Declaration><![CDATA[PROGRAM _01_Clase_y_Objetos
+  <POU Name="_02_Clase_y_Objetos" Id="{fede16c2-5df8-4637-9693-ef33a68705f9}" SpecialFunc="None">
+    <Declaration><![CDATA[PROGRAM _02_Clase_y_Objetos
 VAR
 	// tenemos la Clase Coche y la instanciamos y obtenemos los Objetos: Mercedes, Bmw y Audi.
 	Mercedes : Coche;
