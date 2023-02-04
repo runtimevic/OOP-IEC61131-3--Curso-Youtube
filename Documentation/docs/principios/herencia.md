@@ -1,4 +1,4 @@
-### hererencia
+### herencia
 
 Inheritance allows the user to create classes based on other classes. The inherited classes can 
 use the base class’s functionalities as well as some additional functionalities that the user may 
