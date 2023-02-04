@@ -26,6 +26,7 @@ Los datos están en forma de campos y el código está en forma de procedimiento
 ## Ventajas de la Programación OOP:
 - rutinas y datos se combinan en un objeto -> Encapsulación.
 - métodos/Propiedades -> interfaces definidas para llamadas y acceso a datos.
+***
 
 ![ventajasprogramacionoop](../imagenes/programacionoop.png)
 
