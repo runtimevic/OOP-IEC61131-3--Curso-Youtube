@@ -31,7 +31,7 @@ Por lo tanto, una declaración de propiedad tiene la siguiente estructura:
 
 ```typescript
 PROPERTY <Access specifier> <Name> : <Datatype>
-````
+```
 En el Objeto Propiedad es obligatorio que retorne un valor...
 ***
 🔗[Documentación de Codesys del Objeto propiedad](https://help.codesys.com/api-content/2/codesys/3.5.12.0/en/_cds_obj_property/#b08bdbd0d86c0a8640e00400511-id-5dbd3039bdbd0d85c0a8640e003d7982)
