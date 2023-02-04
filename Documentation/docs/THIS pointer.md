@@ -7,3 +7,5 @@ Una declaración de asignación dentro del método establece el valor de la vari
 Si queremos que el método establezca el valor de la variable local en el bloque de funciones, necesitamos usar el puntero THIS para acceder a él.
 
 Al igual que con el puntero SUPER, el puntero THIS también debe estar siempre en mayúsculas.
+
+- [THIS puntero Infosys Beckhoff](https://infosys.beckhoff.com/content/1033/tc3_plc_intro/2528843147.html?id=1252534934601716110)

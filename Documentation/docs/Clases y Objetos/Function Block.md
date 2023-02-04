@@ -1,8 +1,8 @@
-- Declaracion de un Function Block:
+### Declaracion de un Function Block:
 ```iecst
 FUNCTION_BLOCK <access specifier> <function block> | EXTENDS <function block> | IMPLEMENTS <comma-separated list of interfaces>
 ```
-### Bloque de Funciones:
+### Implementación Bloque de Funciones:
 - Representa la Clase.
 - Intercambio de datos por variables entrada, salida, entrada/salida.
 - Encapsulación de datos por Variables locales, Propiedades.
