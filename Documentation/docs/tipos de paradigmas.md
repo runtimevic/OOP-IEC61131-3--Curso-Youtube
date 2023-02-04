@@ -24,3 +24,5 @@ basado en el concepto de "objetos", que pueden contener datos y código.
 Los datos están en forma de campos y el código está en forma de procedimientos.
 ```
 
+![programacion_OOP](../imagenes/programacion_OOP.png)
+
