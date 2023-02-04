@@ -24,13 +24,15 @@ variables;
 
 para modificar directamente nuestras propiedades lo que se busca es que se haga a través de los metodos Getters y Setters, el cual varía la escritura según el lenguaje pero el concepto es el mismo.
 ***
-Especificadores de acceso
+### Especificadores de acceso:
 Al igual que con los métodos, las propiedades también pueden tomar los siguientes especificadores de acceso: PÚBLICO , PRIVADO , PROTEGIDO , INTERNO y FINAL . Cuando no se define ningún especificador de acceso, la propiedad es PUBLIC . Además, también se puede especificar un especificador de acceso para cada setter y getter. Esto tiene prioridad sobre el propio especificador de acceso de la propiedad.
 
 Por lo tanto, una declaración de propiedad tiene la siguiente estructura:
+
 ```typescript
 PROPERTY <Access specifier> <Name> : <Datatype>
 ````
+En el Objeto Propiedad es obligatorio que retorne un valor...
 ***
 🔗[Documentación de Codesys del Objeto propiedad](https://help.codesys.com/api-content/2/codesys/3.5.12.0/en/_cds_obj_property/#b08bdbd0d86c0a8640e00400511-id-5dbd3039bdbd0d85c0a8640e003d7982)
 
