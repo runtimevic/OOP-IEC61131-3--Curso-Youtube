@@ -9,6 +9,13 @@
 - Estructurada -- (La solución a un problema sigue **una secuencia de inico a fin**).
 - Funcional -- (Divide el problema en diversas soluciones que serán ejecutadas por las **funciones declaradas**).
 La programación procedimental o programación por procedimientos es un paradigma de la programación. Muchas veces es aplicable tanto en lenguajes de programación de bajo nivel como en lenguajes de alto nivel. En el caso de que esta técnica se aplique en lenguajes de alto nivel, recibirá el nombre de programación funcional.
+
+    - se llaman rutinas separadas desde el programa principal
+    - datos en su mayoría globales -> sin protección.
+    - los procedimientos por lo general no pueden ser independientes -> mala reutilización del código.
+
+![programacion_procedimental](../imagenes/programacion procedimental.png)
+
 - <span style="color:orange"><font size="4"> Orientada a objetos </font></span> -- Construye soluciones **basadas en objetos**.
 ```text
 wikipedia:

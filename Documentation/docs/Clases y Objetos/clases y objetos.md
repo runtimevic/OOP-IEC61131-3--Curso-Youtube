@@ -85,9 +85,5 @@ Mercedes.Marca := 'Mercedes';
 Mercedes.Color := 'Negro';
 Color := Mercedes.Color;
 ```
-- Declaracion de un Function Block:
-```iecst
-FUNCTION_BLOCK <access specifier> <function block> | EXTENDS <function block> | IMPLEMENTS <comma-separated list of interfaces>
-```
 
 - 🔗 [methods-properties-and-inheritance (stefanhenneken)](https://stefanhenneken.net/2017/04/23/iec-61131-3-methods-properties-and-inheritance/)
