@@ -23,6 +23,9 @@ La programación orientada a objetos es un paradigma de programación
 basado en el concepto de "objetos", que pueden contener datos y código.
 Los datos están en forma de campos y el código está en forma de procedimientos.
 ```
+## Ventajas de la Programación OOP:
+- rutinas y datos se combinan en un objeto -> Encapsulación
+- métodos/Propiedades -> interfaces definidas para llamadas y acceso a datos
 
 ![programacion_OOP](../imagenes/programacion_OOP.png)
 
