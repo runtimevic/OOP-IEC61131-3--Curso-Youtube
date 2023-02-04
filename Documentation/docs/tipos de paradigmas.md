@@ -14,7 +14,7 @@ La programación procedimental o programación por procedimientos es un paradigm
     - datos en su mayoría globales -> sin protección.
     - los procedimientos por lo general no pueden ser independientes -> mala reutilización del código.
 
-![programacion_procedimental](../imagenes/programacion procedimental.png)
+![programacion_procedimental](../imagenes/programacion_procedimental.png)
 
 - <span style="color:orange"><font size="4"> Orientada a objetos </font></span> -- Construye soluciones **basadas en objetos**.
 ```text
