@@ -92,7 +92,8 @@ nav:
     - Tipos de paradigmas: tipos de paradigmas.md
     - Clases y Objetos:
        - Clases y Objetos: Clases y Objetos/clases y objetos.md
-       - Bloque de Funciones: Clases y Objetos/Function Block.md
+       - Bloque de Funciones: 
+          - Bloques de Funciones: Clases y Objetos/Function Block.md
           - Constructor y Destructor: Clases y Objetos/Constructor y Destructor.md
        - Metodo: Clases y Objetos/metodo.md
        - Propiedad: Clases y Objetos/propiedad.md
