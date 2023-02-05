@@ -2,14 +2,11 @@
 <TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.12">
   <POU Name="Coche" Id="{d772e4a1-e405-4c42-bf3e-790247ec68f4}" SpecialFunc="None">
     <Declaration><![CDATA[FUNCTION_BLOCK Coche
-VAR_INPUT
-	bInput : BOOL;  
+VAR_INPUT 
 END_VAR
 VAR_OUTPUT
-	bOutput : BOOL;  
 END_VAR
 VAR_IN_OUT
-	bInOut : BOOL; 
 END_VAR
 VAR
 	_Marca : STRING;
@@ -53,36 +50,6 @@ END_VAR
 ]]></Declaration>
       <Implementation>
         <ST><![CDATA[accion := 'conducir';]]></ST>
-      </Implementation>
-    </Method>
-    <Method Name="FB_exit" Id="{4b73c657-00a2-4a89-8bc9-b4fdc56581d5}">
-      <Declaration><![CDATA[METHOD FB_exit : BOOL
-VAR_INPUT
-	bInCopyCode : BOOL; // if TRUE, the exit method is called for exiting an instance that is copied afterwards (online change).
-END_VAR
-]]></Declaration>
-      <Implementation>
-        <ST><![CDATA[]]></ST>
-      </Implementation>
-    </Method>
-    <Method Name="FB_init" Id="{c4bee104-f570-4607-8c81-7b4224c89f69}">
-      <Declaration><![CDATA[METHOD FB_init : BOOL
-VAR_INPUT
-	bInitRetains : BOOL; // if TRUE, the retain variables are initialized (warm start / cold start)
-	bInCopyCode : BOOL;  // if TRUE, the instance afterwards gets moved into the copy code (online change)
-END_VAR
-]]></Declaration>
-      <Implementation>
-        <ST><![CDATA[]]></ST>
-      </Implementation>
-    </Method>
-    <Method Name="FB_reinit" Id="{e0fe2ff0-fc39-45a4-9a81-bc5bc0d7881b}">
-      <Declaration><![CDATA[METHOD FB_reinit : BOOL
-VAR_INPUT
-END_VAR
-]]></Declaration>
-      <Implementation>
-        <ST><![CDATA[]]></ST>
       </Implementation>
     </Method>
     <Method Name="Frenar" Id="{c4768733-2c2f-4f12-8d0a-d6df21d35961}" FolderPath="Metodos\">
