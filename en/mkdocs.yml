@@ -94,7 +94,7 @@ markdown_extensions:
           format: !!python/name:pymdownx.superfences.fence_code_format
 
 nav:
-    - Requisitos: requisitos.md
+    - Requeriments: requeriments.md
     - Introduccion: index.md
     - Tipos de paradigmas: tipos de paradigmas.md
     - Clases y Objetos:
