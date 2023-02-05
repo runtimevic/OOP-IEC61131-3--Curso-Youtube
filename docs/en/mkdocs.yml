@@ -1,10 +1,12 @@
 site_name: Programación Orientada a Objetos OOP IEC61131-3 Curso Youtube by Runtimevic
-site_url: https://runtimevic.github.io/OOP-IEC61131-3--Curso-Youtube/en/
+docs_dir: '../../docs/en'
+site_url: https://runtimevic.github.io/OOP-IEC61131-3--Curso-Youtube/
 site_author: runtimevic
+site_description: Curso OOP IEC 61131-3 PLC
 
 # Repository
 repo_name: runtimevic/OOP-IEC61131-3--Curso-Youtube
-repo_url: https://github.com/runtimevic/OOP-IEC61131-3--Curso-Youtube/en/
+repo_url: https://github.com/runtimevic/OOP-IEC61131-3--Curso-Youtube
 edit_uri: ""
 
 theme:
@@ -45,6 +47,11 @@ theme:
       example: octicons/beaker-16
       quote: octicons/quote-16    
 
+# Plugins
+plugins:
+  - search:
+      lang: en
+
 # Customization
 extra:
   social:
@@ -54,10 +61,10 @@ extra:
     provider: mike
   alternate:
     - name: English
-      link: /Documentation/docs/en/
+      link: /OOP-IEC61131-3--Curso-Youtube/en/
       lang: en
     - name: Español
-      link: /Documentation/docs/es/
+      link: /OOP-IEC61131-3--Curso-Youtube/es/
       lang: es    
 
 markdown_extensions:

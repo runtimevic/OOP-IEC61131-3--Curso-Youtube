@@ -1,5 +1,7 @@
 # site MkDocs
 site
+.DS_Store
+generated
 
 # gitignore template for TwinCAT3
 # website: https://www.beckhoff.com/twincat3/
