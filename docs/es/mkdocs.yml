@@ -12,7 +12,7 @@ edit_uri: ""
 theme:
   name: material
 #  logo: imagenes/OOP_Logo2.png
-  custom_dir: es/overrides
+  custom_dir: overrides
   logo: imagenes/oop_logg.webp
   palette:
      # Palette toggle for light mode
