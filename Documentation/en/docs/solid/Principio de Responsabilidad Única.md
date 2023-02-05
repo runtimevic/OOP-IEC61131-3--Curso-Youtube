@@ -1,0 +1,1 @@
+### Principio de Responsabilidad Única
