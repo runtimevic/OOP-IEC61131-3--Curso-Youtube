@@ -1,1 +1,0 @@
-### Principio de Abierto/Cerrado

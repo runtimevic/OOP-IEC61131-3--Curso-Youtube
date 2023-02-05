@@ -26,7 +26,7 @@ theme:
         name: Switch to light mode
 #  features:
 #    - navigation.tabs        
-  language: es
+  language: en
   features:
     - navigation.footer
         
@@ -54,10 +54,10 @@ extra:
     provider: mike
   alternate:
     - name: English
-      link: https://runtimevic.github.io/OOP-IEC61131-3--Curso-Youtube/en/
+      link: /Documentation/docs/en/
       lang: en
     - name: Español
-      link: https://runtimevic.github.io/OOP-IEC61131-3--Curso-Youtube/es/
+      link: /Documentation/docs/es/
       lang: es    
 
 markdown_extensions:
