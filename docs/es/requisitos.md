@@ -1,5 +1,5 @@
 <span style="color:green"><font size="5">
-👨‍🎓 Requirements 👩‍🎓 :
+👨‍🎓 Requisitos 👩‍🎓 :
 </font></span>
 
 ![requisitos](../imagenes/requisitos.png)
