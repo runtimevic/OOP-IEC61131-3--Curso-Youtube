@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.12">
+  <POU Name="_03_Clase_y_Objetos" Id="{8f1f0619-12e2-4781-849a-d221f94f64f0}" SpecialFunc="None">
+    <Declaration><![CDATA[PROGRAM _03_Clase_y_Objetos
+VAR
+	// tenemos la Clase Coche y la instanciamos y obtenemos los Objetos: Mercedes, Bmw y Audi.
+	Mercedes : Coche_3(Marca:= 'Mercedes', Color := 'Azul');
+	
+	Color : STRING;
+	Marca : STRING;
+	
+	Acelerar : BOOL;
+	Conducir:  BOOL;
+	Frenar  : BOOL;
+	
+	CambiarColor : BOOL;
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[//Objeto Mercedes
+//llamadas a sus métodos.
+IF Acelerar THEN
+	Mercedes.Acelerar();
+	Acelerar := FALSE;
+END_IF
+
+IF Conducir THEN
+	Mercedes.Conducir();
+	Conducir := FALSE;
+END_IF
+
+IF Frenar THEN
+	Mercedes.Frenar();
+	Frenar := FALSE;
+END_IF
+
+//llamadas a sus propiedades.
+//Mercedes.Marca := 'Mercedes';
+IF CambiarColor THEN
+	Mercedes.Color := 'Negro';
+	CambiarColor := FALSE;
+END_IF
+
+Color := Mercedes.Color;
+]]></ST>
+    </Implementation>
+  </POU>
+</TcPlcObject>

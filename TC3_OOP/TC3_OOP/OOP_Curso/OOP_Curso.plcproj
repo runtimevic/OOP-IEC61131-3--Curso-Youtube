@@ -23,6 +23,12 @@
     <Compile Include="02_Clases_Y_Objetos\_02_Clase_y_Objetos.TcPOU">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="03_Clases_Y_Objetos\Clase\Coche_3.TcPOU">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="03_Clases_Y_Objetos\_03_Clase_y_Objetos.TcPOU">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="PlcTask.TcTTO">
       <SubType>Code</SubType>
     </Compile>
@@ -33,6 +39,8 @@
   <ItemGroup>
     <Folder Include="02_Clases_Y_Objetos" />
     <Folder Include="02_Clases_Y_Objetos\Clase" />
+    <Folder Include="03_Clases_Y_Objetos" />
+    <Folder Include="03_Clases_Y_Objetos\Clase" />
     <Folder Include="_MAIN" />
   </ItemGroup>
   <ItemGroup>

@@ -6,7 +6,11 @@ VAR
 END_VAR
 ]]></Declaration>
     <Implementation>
-      <ST><![CDATA[_02_Clase_y_Objetos();]]></ST>
+      <ST><![CDATA[// Video de Youtube 02:
+_02_Clase_y_Objetos();
+
+// Video de Youtube 03:
+_03_Clase_y_Objetos();]]></ST>
     </Implementation>
   </POU>
 </TcPlcObject>

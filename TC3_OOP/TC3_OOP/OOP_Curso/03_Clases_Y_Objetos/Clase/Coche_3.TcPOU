@@ -1,0 +1,115 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.12">
+  <POU Name="Coche_3" Id="{25c92783-688d-4b8c-a723-a2a22f541792}" SpecialFunc="None">
+    <Declaration><![CDATA[FUNCTION_BLOCK Coche_3
+VAR_INPUT
+	bInput : BOOL;
+END_VAR
+VAR_OUTPUT
+	bOutput : BOOL;
+END_VAR
+VAR_IN_OUT
+	bInOut : BOOL;
+END_VAR
+VAR
+	_Marca : STRING;
+	_Color : STRING;
+	accion : STRING;
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[]]></ST>
+    </Implementation>
+    <Folder Name="Metodos" Id="{05b063f2-80c3-435d-a41c-20ae4967f374}" />
+    <Folder Name="Propiedades" Id="{bd5ad6ac-efda-4c4d-83cf-58567a70edf4}" />
+    <Method Name="Acelerar" Id="{d50b6ce5-4502-48fb-b8e9-79825cc29f42}" FolderPath="Metodos\">
+      <Declaration><![CDATA[METHOD PUBLIC Acelerar
+
+]]></Declaration>
+      <Implementation>
+        <ST><![CDATA[accion := 'acelerar';]]></ST>
+      </Implementation>
+    </Method>
+    <Property Name="Color" Id="{f53e3e38-7ff2-4f3e-9a96-f18fa7d58102}" FolderPath="Propiedades\">
+      <Declaration><![CDATA[PROPERTY PUBLIC Color : STRING]]></Declaration>
+      <Get Name="Get" Id="{2a252ec3-2edf-4a12-895f-a10aa9c5dfa3}">
+        <Declaration><![CDATA[
+]]></Declaration>
+        <Implementation>
+          <ST><![CDATA[Color := _Color;]]></ST>
+        </Implementation>
+      </Get>
+      <Set Name="Set" Id="{8c536d39-3c48-47bc-ac43-a4eff6617f82}">
+        <Declaration><![CDATA[
+]]></Declaration>
+        <Implementation>
+          <ST><![CDATA[_Color := Color;]]></ST>
+        </Implementation>
+      </Set>
+    </Property>
+    <Method Name="Conducir" Id="{7c3e8b84-1f3f-4494-b702-e1c5370a6629}" FolderPath="Metodos\">
+      <Declaration><![CDATA[METHOD PUBLIC Conducir
+
+]]></Declaration>
+      <Implementation>
+        <ST><![CDATA[accion := 'conducir';]]></ST>
+      </Implementation>
+    </Method>
+    <Method Name="FB_exit" Id="{6490d278-8621-4173-af9c-14b67706649e}">
+      <Declaration><![CDATA[METHOD FB_exit : BOOL
+VAR_INPUT
+	bInCopyCode : BOOL; // if TRUE, the exit method is called for exiting an instance that is copied afterwards (online change).
+END_VAR
+]]></Declaration>
+      <Implementation>
+        <ST><![CDATA[]]></ST>
+      </Implementation>
+    </Method>
+    <Method Name="FB_init" Id="{39f97f4a-7d19-4f83-b324-bfbec33614f9}">
+      <Declaration><![CDATA[METHOD FB_init : BOOL
+VAR_INPUT
+	bInitRetains : BOOL; // if TRUE, the retain variables are initialized (warm start / cold start)
+	bInCopyCode : BOOL;  // if TRUE, the instance afterwards gets moved into the copy code (online change)
+	Marca        : STRING;
+	Color        : STRING;
+END_VAR
+]]></Declaration>
+      <Implementation>
+        <ST><![CDATA[THIS^._Marca := Marca;
+THIS^._Color := Color;]]></ST>
+      </Implementation>
+    </Method>
+    <Method Name="FB_reinit" Id="{a4fc8694-a09c-4cc7-8d2e-506b3bb4d240}">
+      <Declaration><![CDATA[METHOD FB_reinit : BOOL
+VAR_INPUT
+END_VAR
+]]></Declaration>
+      <Implementation>
+        <ST><![CDATA[]]></ST>
+      </Implementation>
+    </Method>
+    <Method Name="Frenar" Id="{b24e4f57-a824-4993-9e9b-562246a7d51e}" FolderPath="Metodos\">
+      <Declaration><![CDATA[METHOD PUBLIC Frenar
+
+]]></Declaration>
+      <Implementation>
+        <ST><![CDATA[accion := 'frenar';]]></ST>
+      </Implementation>
+    </Method>
+    <Property Name="Marca" Id="{586031fa-5fbc-4d7d-8a67-e7e2fb992316}" FolderPath="Propiedades\">
+      <Declaration><![CDATA[PROPERTY PUBLIC Marca : STRING]]></Declaration>
+      <Get Name="Get" Id="{b088c9b1-e779-4e30-844b-91e06b1bda74}">
+        <Declaration><![CDATA[]]></Declaration>
+        <Implementation>
+          <ST><![CDATA[Marca := _Marca;]]></ST>
+        </Implementation>
+      </Get>
+      <Set Name="Set" Id="{e0288f34-b82a-4c79-9fb1-1ed42c6c49cc}">
+        <Declaration><![CDATA[]]></Declaration>
+        <Implementation>
+          <ST><![CDATA[_Marca := Marca;]]></ST>
+        </Implementation>
+      </Set>
+    </Property>
+  </POU>
+</TcPlcObject>

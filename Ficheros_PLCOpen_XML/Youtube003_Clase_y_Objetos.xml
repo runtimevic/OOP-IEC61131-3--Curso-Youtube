@@ -1,0 +1,475 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<project xmlns="http://www.plcopen.org/xml/tc6_0200">
+  <fileHeader companyName="Beckhoff Automation GmbH" productName="TwinCAT PLC Control" productVersion="3.5.13.21" creationDateTime="2023-02-07T16:35:16.3639657" />
+  <contentHeader name="OOP_Curso" modificationDateTime="2023-02-07T16:35:16.3717731">
+    <coordinateInfo>
+      <fbd>
+        <scaling x="1" y="1" />
+      </fbd>
+      <ld>
+        <scaling x="1" y="1" />
+      </ld>
+      <sfc>
+        <scaling x="1" y="1" />
+      </sfc>
+    </coordinateInfo>
+    <addData>
+      <data name="http://www.3s-software.com/plcopenxml/projectinformation" handleUnknown="implementation">
+        <ProjectInformation />
+      </data>
+    </addData>
+  </contentHeader>
+  <types>
+    <dataTypes />
+    <pous>
+      <pou name="Coche_3" pouType="functionBlock">
+        <interface>
+          <inputVars>
+            <variable name="bInput">
+              <type>
+                <BOOL />
+              </type>
+            </variable>
+          </inputVars>
+          <outputVars>
+            <variable name="bOutput">
+              <type>
+                <BOOL />
+              </type>
+            </variable>
+          </outputVars>
+          <inOutVars>
+            <variable name="bInOut">
+              <type>
+                <BOOL />
+              </type>
+            </variable>
+          </inOutVars>
+          <localVars>
+            <variable name="_Marca">
+              <type>
+                <string />
+              </type>
+            </variable>
+            <variable name="_Color">
+              <type>
+                <string />
+              </type>
+            </variable>
+            <variable name="accion">
+              <type>
+                <string />
+              </type>
+            </variable>
+          </localVars>
+        </interface>
+        <body>
+          <ST>
+            <xhtml xmlns="http://www.w3.org/1999/xhtml" />
+          </ST>
+        </body>
+        <addData>
+          <data name="http://www.3s-software.com/plcopenxml/method" handleUnknown="implementation">
+            <Method name="Acelerar" ObjectId="d50b6ce5-4502-48fb-b8e9-79825cc29f42">
+              <interface />
+              <body>
+                <ST>
+                  <xhtml xmlns="http://www.w3.org/1999/xhtml">accion := 'acelerar';</xhtml>
+                </ST>
+              </body>
+              <InterfaceAsPlainText>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">METHOD PUBLIC Acelerar
+
+</xhtml>
+              </InterfaceAsPlainText>
+              <addData />
+            </Method>
+          </data>
+          <data name="http://www.3s-software.com/plcopenxml/method" handleUnknown="implementation">
+            <Method name="Conducir" ObjectId="7c3e8b84-1f3f-4494-b702-e1c5370a6629">
+              <interface />
+              <body>
+                <ST>
+                  <xhtml xmlns="http://www.w3.org/1999/xhtml">accion := 'conducir';</xhtml>
+                </ST>
+              </body>
+              <InterfaceAsPlainText>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">METHOD PUBLIC Conducir
+
+</xhtml>
+              </InterfaceAsPlainText>
+              <addData />
+            </Method>
+          </data>
+          <data name="http://www.3s-software.com/plcopenxml/method" handleUnknown="implementation">
+            <Method name="Frenar" ObjectId="b24e4f57-a824-4993-9e9b-562246a7d51e">
+              <interface />
+              <body>
+                <ST>
+                  <xhtml xmlns="http://www.w3.org/1999/xhtml">accion := 'frenar';</xhtml>
+                </ST>
+              </body>
+              <InterfaceAsPlainText>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">METHOD PUBLIC Frenar
+
+</xhtml>
+              </InterfaceAsPlainText>
+              <addData />
+            </Method>
+          </data>
+          <data name="http://www.3s-software.com/plcopenxml/method" handleUnknown="implementation">
+            <Method name="FB_init" ObjectId="39f97f4a-7d19-4f83-b324-bfbec33614f9">
+              <interface>
+                <returnType>
+                  <BOOL />
+                </returnType>
+                <inputVars>
+                  <variable name="bInitRetains">
+                    <type>
+                      <BOOL />
+                    </type>
+                    <documentation>
+                      <xhtml xmlns="http://www.w3.org/1999/xhtml"> if TRUE, the retain variables are initialized (warm start / cold start)</xhtml>
+                    </documentation>
+                  </variable>
+                  <variable name="bInCopyCode">
+                    <type>
+                      <BOOL />
+                    </type>
+                    <documentation>
+                      <xhtml xmlns="http://www.w3.org/1999/xhtml"> if TRUE, the instance afterwards gets moved into the copy code (online change)</xhtml>
+                    </documentation>
+                  </variable>
+                  <variable name="Marca">
+                    <type>
+                      <string />
+                    </type>
+                  </variable>
+                  <variable name="Color">
+                    <type>
+                      <string />
+                    </type>
+                  </variable>
+                </inputVars>
+              </interface>
+              <body>
+                <ST>
+                  <xhtml xmlns="http://www.w3.org/1999/xhtml">THIS^._Marca := Marca;
+THIS^._Color := Color;</xhtml>
+                </ST>
+              </body>
+              <InterfaceAsPlainText>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">METHOD FB_init : BOOL
+VAR_INPUT
+	bInitRetains : BOOL; // if TRUE, the retain variables are initialized (warm start / cold start)
+	bInCopyCode : BOOL;  // if TRUE, the instance afterwards gets moved into the copy code (online change)
+	Marca        : STRING;
+	Color        : STRING;
+END_VAR
+</xhtml>
+              </InterfaceAsPlainText>
+              <addData />
+            </Method>
+          </data>
+          <data name="http://www.3s-software.com/plcopenxml/method" handleUnknown="implementation">
+            <Method name="FB_reinit" ObjectId="a4fc8694-a09c-4cc7-8d2e-506b3bb4d240">
+              <interface>
+                <returnType>
+                  <BOOL />
+                </returnType>
+              </interface>
+              <body>
+                <ST>
+                  <xhtml xmlns="http://www.w3.org/1999/xhtml" />
+                </ST>
+              </body>
+              <InterfaceAsPlainText>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">METHOD FB_reinit : BOOL
+VAR_INPUT
+END_VAR
+</xhtml>
+              </InterfaceAsPlainText>
+              <addData />
+            </Method>
+          </data>
+          <data name="http://www.3s-software.com/plcopenxml/method" handleUnknown="implementation">
+            <Method name="FB_exit" ObjectId="6490d278-8621-4173-af9c-14b67706649e">
+              <interface>
+                <returnType>
+                  <BOOL />
+                </returnType>
+                <inputVars>
+                  <variable name="bInCopyCode">
+                    <type>
+                      <BOOL />
+                    </type>
+                    <documentation>
+                      <xhtml xmlns="http://www.w3.org/1999/xhtml"> if TRUE, the exit method is called for exiting an instance that is copied afterwards (online change).</xhtml>
+                    </documentation>
+                  </variable>
+                </inputVars>
+              </interface>
+              <body>
+                <ST>
+                  <xhtml xmlns="http://www.w3.org/1999/xhtml" />
+                </ST>
+              </body>
+              <InterfaceAsPlainText>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">METHOD FB_exit : BOOL
+VAR_INPUT
+	bInCopyCode : BOOL; // if TRUE, the exit method is called for exiting an instance that is copied afterwards (online change).
+END_VAR
+</xhtml>
+              </InterfaceAsPlainText>
+              <addData />
+            </Method>
+          </data>
+          <data name="http://www.3s-software.com/plcopenxml/property" handleUnknown="implementation">
+            <Property name="Color" ObjectId="f53e3e38-7ff2-4f3e-9a96-f18fa7d58102">
+              <interface>
+                <returnType>
+                  <string />
+                </returnType>
+              </interface>
+              <GetAccessor>
+                <interface />
+                <body>
+                  <ST>
+                    <xhtml xmlns="http://www.w3.org/1999/xhtml">Color := _Color;</xhtml>
+                  </ST>
+                </body>
+                <InterfaceAsPlainText>
+                  <xhtml xmlns="http://www.w3.org/1999/xhtml">
+</xhtml>
+                </InterfaceAsPlainText>
+                <addData />
+              </GetAccessor>
+              <SetAccessor>
+                <interface />
+                <body>
+                  <ST>
+                    <xhtml xmlns="http://www.w3.org/1999/xhtml">_Color := Color;</xhtml>
+                  </ST>
+                </body>
+                <InterfaceAsPlainText>
+                  <xhtml xmlns="http://www.w3.org/1999/xhtml">
+</xhtml>
+                </InterfaceAsPlainText>
+                <addData />
+              </SetAccessor>
+              <InterfaceAsPlainText>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">PROPERTY PUBLIC Color : STRING</xhtml>
+              </InterfaceAsPlainText>
+              <addData />
+            </Property>
+          </data>
+          <data name="http://www.3s-software.com/plcopenxml/property" handleUnknown="implementation">
+            <Property name="Marca" ObjectId="586031fa-5fbc-4d7d-8a67-e7e2fb992316">
+              <interface>
+                <returnType>
+                  <string />
+                </returnType>
+              </interface>
+              <GetAccessor>
+                <interface />
+                <body>
+                  <ST>
+                    <xhtml xmlns="http://www.w3.org/1999/xhtml">Marca := _Marca;</xhtml>
+                  </ST>
+                </body>
+                <InterfaceAsPlainText>
+                  <xhtml xmlns="http://www.w3.org/1999/xhtml" />
+                </InterfaceAsPlainText>
+                <addData />
+              </GetAccessor>
+              <SetAccessor>
+                <interface />
+                <body>
+                  <ST>
+                    <xhtml xmlns="http://www.w3.org/1999/xhtml">_Marca := Marca;</xhtml>
+                  </ST>
+                </body>
+                <InterfaceAsPlainText>
+                  <xhtml xmlns="http://www.w3.org/1999/xhtml" />
+                </InterfaceAsPlainText>
+                <addData />
+              </SetAccessor>
+              <InterfaceAsPlainText>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">PROPERTY PUBLIC Marca : STRING</xhtml>
+              </InterfaceAsPlainText>
+              <addData />
+            </Property>
+          </data>
+          <data name="http://www.3s-software.com/plcopenxml/interfaceasplaintext" handleUnknown="implementation">
+            <InterfaceAsPlainText>
+              <xhtml xmlns="http://www.w3.org/1999/xhtml">FUNCTION_BLOCK Coche_3
+VAR_INPUT
+	bInput : BOOL;
+END_VAR
+VAR_OUTPUT
+	bOutput : BOOL;
+END_VAR
+VAR_IN_OUT
+	bInOut : BOOL;
+END_VAR
+VAR
+	_Marca : STRING;
+	_Color : STRING;
+	accion : STRING;
+END_VAR
+</xhtml>
+            </InterfaceAsPlainText>
+          </data>
+          <data name="http://www.3s-software.com/plcopenxml/objectid" handleUnknown="discard">
+            <ObjectId>25c92783-688d-4b8c-a723-a2a22f541792</ObjectId>
+          </data>
+        </addData>
+      </pou>
+      <pou name="_03_Clase_y_Objetos" pouType="program">
+        <interface>
+          <localVars>
+            <variable name="Mercedes">
+              <type>
+                <derived name="Coche_3" />
+              </type>
+              <addData>
+                <data name="http://www.3s-software.com/plcopenxml/inputassignments" handleUnknown="implementation">
+                  <InputAssignments>
+                    <InputAssignment>
+                      <Name>Marca</Name>
+                      <Value>'Mercedes'</Value>
+                    </InputAssignment>
+                    <InputAssignment>
+                      <Name>Color</Name>
+                      <Value>'Azul'</Value>
+                    </InputAssignment>
+                  </InputAssignments>
+                </data>
+                <data name="http://www.3s-software.com/plcopenxml/attributes" handleUnknown="implementation">
+                  <Attributes>
+                    <Attribute Name="old_input_assignments" Value="" />
+                  </Attributes>
+                </data>
+              </addData>
+              <documentation>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml"> tenemos la Clase Coche y la instanciamos y obtenemos los Objetos: Mercedes, Bmw y Audi.</xhtml>
+              </documentation>
+            </variable>
+            <variable name="Color">
+              <type>
+                <string />
+              </type>
+            </variable>
+            <variable name="Marca">
+              <type>
+                <string />
+              </type>
+            </variable>
+            <variable name="Acelerar">
+              <type>
+                <BOOL />
+              </type>
+            </variable>
+            <variable name="Conducir">
+              <type>
+                <BOOL />
+              </type>
+            </variable>
+            <variable name="Frenar">
+              <type>
+                <BOOL />
+              </type>
+            </variable>
+            <variable name="CambiarColor">
+              <type>
+                <BOOL />
+              </type>
+            </variable>
+          </localVars>
+        </interface>
+        <body>
+          <ST>
+            <xhtml xmlns="http://www.w3.org/1999/xhtml">//Objeto Mercedes
+//llamadas a sus métodos.
+IF Acelerar THEN
+	Mercedes.Acelerar();
+	Acelerar := FALSE;
+END_IF
+
+IF Conducir THEN
+	Mercedes.Conducir();
+	Conducir := FALSE;
+END_IF
+
+IF Frenar THEN
+	Mercedes.Frenar();
+	Frenar := FALSE;
+END_IF
+
+//llamadas a sus propiedades.
+//Mercedes.Marca := 'Mercedes';
+IF CambiarColor THEN
+	Mercedes.Color := 'Negro';
+	CambiarColor := FALSE;
+END_IF
+
+Color := Mercedes.Color;
+</xhtml>
+          </ST>
+        </body>
+        <addData>
+          <data name="http://www.3s-software.com/plcopenxml/interfaceasplaintext" handleUnknown="implementation">
+            <InterfaceAsPlainText>
+              <xhtml xmlns="http://www.w3.org/1999/xhtml">PROGRAM _03_Clase_y_Objetos
+VAR
+	// tenemos la Clase Coche y la instanciamos y obtenemos los Objetos: Mercedes, Bmw y Audi.
+	Mercedes : Coche_3(Marca:= 'Mercedes', Color := 'Azul');
+	
+	Color : STRING;
+	Marca : STRING;
+	
+	Acelerar : BOOL;
+	Conducir:  BOOL;
+	Frenar  : BOOL;
+	
+	CambiarColor : BOOL;
+END_VAR
+</xhtml>
+            </InterfaceAsPlainText>
+          </data>
+          <data name="http://www.3s-software.com/plcopenxml/objectid" handleUnknown="discard">
+            <ObjectId>8f1f0619-12e2-4781-849a-d221f94f64f0</ObjectId>
+          </data>
+        </addData>
+      </pou>
+    </pous>
+  </types>
+  <instances>
+    <configurations />
+  </instances>
+  <addData>
+    <data name="http://www.3s-software.com/plcopenxml/projectstructure" handleUnknown="discard">
+      <ProjectStructure>
+        <Folder Name="03_Clases_Y_Objetos">
+          <Folder Name="Clase">
+            <Object Name="Coche_3" ObjectId="25c92783-688d-4b8c-a723-a2a22f541792">
+              <Folder Name="Metodos">
+                <Object Name="Acelerar" ObjectId="d50b6ce5-4502-48fb-b8e9-79825cc29f42" />
+                <Object Name="Conducir" ObjectId="7c3e8b84-1f3f-4494-b702-e1c5370a6629" />
+                <Object Name="Frenar" ObjectId="b24e4f57-a824-4993-9e9b-562246a7d51e" />
+              </Folder>
+              <Folder Name="Propiedades">
+                <Object Name="Color" ObjectId="f53e3e38-7ff2-4f3e-9a96-f18fa7d58102" />
+                <Object Name="Marca" ObjectId="586031fa-5fbc-4d7d-8a67-e7e2fb992316" />
+              </Folder>
+              <Object Name="FB_init" ObjectId="39f97f4a-7d19-4f83-b324-bfbec33614f9" />
+              <Object Name="FB_reinit" ObjectId="a4fc8694-a09c-4cc7-8d2e-506b3bb4d240" />
+              <Object Name="FB_exit" ObjectId="6490d278-8621-4173-af9c-14b67706649e" />
+            </Object>
+          </Folder>
+          <Object Name="_03_Clase_y_Objetos" ObjectId="8f1f0619-12e2-4781-849a-d221f94f64f0" />
+        </Folder>
+      </ProjectStructure>
+    </data>
+  </addData>
+</project>
