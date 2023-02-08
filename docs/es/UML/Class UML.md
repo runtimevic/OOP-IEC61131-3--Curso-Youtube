@@ -12,3 +12,5 @@
 - [plantuml.com/class-diagram](https://plantuml.com/es/class-diagram)
 
 - [www.planttext.com](https://www.planttext.com/)
+
+- [UML Infosys Beckhoff](https://infosys.beckhoff.com/english.php?content=../content/1033/tf1910_tc3_uml/1510519307.html&id=)
