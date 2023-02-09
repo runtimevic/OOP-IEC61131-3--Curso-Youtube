@@ -63,6 +63,8 @@ extra:
   social:
     - icon: fontawesome/brands/linkedin
       link: https://www.linkedin.com/in/v%C3%ADctor-dur%C3%A1n-mu%C3%B1oz-2879a913/
+    - icon: fontawesome/brands/github
+      link: https://runtimevic.github.io/OOP-IEC61131-3--Curso-Youtube/es/      
   version:
     provider: mike
   alternate:
