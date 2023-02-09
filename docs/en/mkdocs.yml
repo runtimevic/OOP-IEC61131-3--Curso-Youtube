@@ -65,7 +65,8 @@ extra:
       lang: en
     - name: Español
       link: /OOP-IEC61131-3--Curso-Youtube/es/
-      lang: es    
+      lang: es
+  disqus: 'OOP IEC-61131-3 PLC'        
 
 markdown_extensions:
   - attr_list
@@ -92,6 +93,7 @@ markdown_extensions:
         - name: mermaid
           class: mermaid
           format: !!python/name:pymdownx.superfences.fence_code_format
+  - meta           
 
 nav:
     - Requeriments: requeriments.md
