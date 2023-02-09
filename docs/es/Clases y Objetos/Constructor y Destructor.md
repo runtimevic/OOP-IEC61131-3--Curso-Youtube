@@ -13,7 +13,7 @@ Este método se llama después de la operación de copia y debe establecer valor
 ### FB_Exit:
 Si es necesario, debe implementar FB_exit explícitamente. Si este método está presente, se llama automáticamente (implícitamente) antes de que el controlador elimine el código de la instancia del bloque de funciones (por ejemplo, incluso si TwinCAT cambia del modo Ejecutar al modo de configuración).
 ***
-![constructor_destuctor](.../imagenes/constructor&destructor.png)
+![constructor_destuctor](../imagenes/constructor&destructor.png)
 ***
 - 🔗 [Métodos FB_init, FB_reinit and FB_exit, Infosys Beckhoff](https://infosys.beckhoff.com/content/1033/tc3_plc_intro/5044757003.html?id=6463352332511266504)
 
