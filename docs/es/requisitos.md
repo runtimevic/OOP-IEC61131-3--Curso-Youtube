@@ -1,8 +1,7 @@
 ---
-disqus: 'OOP IEC-61131-3 PLC'
+comments: true
 ---
 
-...
 <span style="color:green"><font size="5">
 👨‍🎓 Requisitos 👩‍🎓 :
 </font></span>
