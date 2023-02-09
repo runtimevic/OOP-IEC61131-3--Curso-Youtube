@@ -19,7 +19,10 @@ jobs:
       - name: Install 📦️
         run: pip install mkdocs-material
 
-      - name: pdf 📦️
+      - name: pdf1 📦️
+        run: pip install mkdocs-with-pdf
+
+      - name: pdf2 📦️
         run: pip install mkdocs-pdf-export-plugin
 
       - name: Build 🔧
