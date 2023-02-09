@@ -5,9 +5,8 @@
   <a href="{{ '../' ~ base_url }}">
     <strong>Click here to go to latest.</strong>
   </a>
-{% endblock %}
 
-{% if page.meta.comments %}
+  {% if page.meta.comments %}
   <h2 id="__comments">{{ lang.t("meta.comments") }}</h2>
   <!-- Insert generated snippet here -->
     <script 
@@ -56,4 +55,7 @@
     })
   </script>
 {% endif %}
+
+
+{% endblock %}
 
