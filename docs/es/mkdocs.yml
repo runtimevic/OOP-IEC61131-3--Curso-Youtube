@@ -51,6 +51,7 @@ theme:
 plugins:
   - search:
       lang: es
+  - meta         
 
 # Customization
 extra:
@@ -92,8 +93,7 @@ markdown_extensions:
       custom_fences:
         - name: mermaid
           class: mermaid
-          format: !!python/name:pymdownx.superfences.fence_code_format
-  - meta          
+          format: !!python/name:pymdownx.superfences.fence_code_format       
 
 nav:
     - Requisitos: requisitos.md
