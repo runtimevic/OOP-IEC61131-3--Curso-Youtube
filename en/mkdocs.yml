@@ -67,7 +67,7 @@ extra:
     - name: Español
       link: /OOP-IEC61131-3--Curso-Youtube/es/
       lang: es
-  disqus: 'OOP IEC-61131-3 PLC'        
+  #disqus: 'OOP IEC-61131-3 PLC'        
 
 markdown_extensions:
   - attr_list
