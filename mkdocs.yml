@@ -95,40 +95,40 @@ markdown_extensions:
 
 nav:
     - Requeriments: requeriments.md
-    - Introduccion: index.md
-    - Tipos de paradigmas: tipos de paradigmas.md
-    - Clases y Objetos:
-       - Clases y Objetos: Clases y Objetos/clases y objetos.md
-       - Bloque de Funciones: 
-          - Bloques de Funciones: Clases y Objetos/Function Block.md
-          - Constructor y Destructor: Clases y Objetos/Constructor y Destructor.md
-       - Metodo: Clases y Objetos/metodo.md
-       - Propiedad: Clases y Objetos/propiedad.md
-       - Herencia: Clases y Objetos/herencia.md
+    - Introduction: index.md
+    - Types of paradigms: tipos de paradigmas.md
+    - Classes and Objects:
+       - Classes and Objects: Clases y Objetos/clases y objetos.md
+       - Function Block: 
+          - Function Block: Clases y Objetos/Function Block.md
+          - Constructor and Destructor: Clases y Objetos/Constructor y Destructor.md
+       - Method: Clases y Objetos/metodo.md
+       - Property: Clases y Objetos/propiedad.md
+       - Inheritance: Clases y Objetos/herencia.md
        - Interface: Clases y Objetos/interface.md  
-    - Tipos de variables y variables especiales: Variable types and special variables.md
-    - Modificadores de acceso: modificadores de acceso.md
-    - SUPER puntero: SUPER pointer.md
-    - THIS puntero: THIS pointer.md
-    - Tipos de Datos: Tipos de datos.md
-    - Principios OOP: 
-       - 4 Pilares: principios/_principios OOP.md
-       - Abstracción: principios/abstraccion.md
-       - Encapsulamiento: principios/encapsulamiento.md
-       - Herencia: principios/herencia.md
-       - Polimorfismo: principios/polimorfismo.md
-    - Relaciones: relaciones.md
+    - Variable types and special variables: Variable types and special variables.md
+    - Access modifiers: modificadores de acceso.md
+    - SUPER pointer: SUPER pointer.md
+    - THIS pointer: THIS pointer.md
+    - Types of data: Tipos de datos.md
+    - OOP Principles: 
+       - 4 Pillars: principios/_principios OOP.md
+       - Abstraction: principios/abstraccion.md
+       - Encapsulation: principios/encapsulamiento.md
+       - Inheritance: principios/herencia.md
+       - Polymorphism: principios/polimorfismo.md
+    - Relations: relaciones.md
     - SOLID: 
        - SOLID: solid/_SOLID.md
-       - Principio de Responsabilidad Única: solid/Principio de Responsabilidad Única.md
-       - Principio de Abierto/Cerrado: solid/Principio de Abierto_Cerrado.md
-       - Principio de Sustitución de Liskov: solid/Principio de Sustitución de Liskov.md
-       - Principio de Segregación de Interfaz: solid/Principio de Segregación de Interfaz.md
-       - Principio de Inversión de Dependencia: solid/Principio de Inversión de Dependencia.md
+       - Sole Responsibility Principle: solid/Principio de Responsabilidad Única.md
+       - Open/Closed Principle: solid/Principio de Abierto_Cerrado.md
+       - Liskov Substitution Principle: solid/Principio de Sustitución de Liskov.md
+       - Interface Segregation Principle: solid/Principio de Segregación de Interfaz.md
+       - Dependency Inversion Principle: solid/Principio de Inversión de Dependencia.md
     - UML: 
        - UML: UML/UML.md
        - Class UML: UML/Class UML.md
        - StateChart UML: UML/Statechart UML.md
-    - Patrones de Diseño:
-       - Patrones de Diseño : Patrones de Diseño/_Patrones de Diseño.md 
+    - Design patterns:
+       - Design patterns: Patrones de Diseño/_Patrones de Diseño.md 
     - Links: links.md 
