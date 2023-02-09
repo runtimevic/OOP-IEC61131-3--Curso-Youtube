@@ -1,5 +1,5 @@
 ---
-disqus: 'oop-iec-61131-3-plc'
+disqus: 'OOP IEC-61131-3 PLC'
 ---
 
 ...
