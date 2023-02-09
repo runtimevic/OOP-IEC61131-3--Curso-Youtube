@@ -17,7 +17,10 @@ jobs:
           python-version: 3.x
 
       - name: Install 📦️
-        run: pip install mkdocs-material 
+        run: pip install mkdocs-material
+
+      - name: pdf 📦️
+        run: pip install mkdocs-with-pdf
 
       - name: Build 🔧
         run: bash ./scripts/build-docs.sh
