@@ -64,7 +64,9 @@ extra:
     - icon: fontawesome/brands/linkedin
       link: https://www.linkedin.com/in/v%C3%ADctor-dur%C3%A1n-mu%C3%B1oz-2879a913/
     - icon: fontawesome/brands/github
-      link: https://runtimevic.github.io/OOP-IEC61131-3--Curso-Youtube/es/      
+      link: https://github.com/runtimevic/OOP-IEC61131-3--Curso-Youtube
+    - icon: fontawesome/solid/paper-plane
+      link: mailto:victorduranm@hotmail.com         
   version:
     provider: mike
   alternate:
