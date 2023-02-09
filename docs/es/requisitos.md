@@ -1,3 +1,8 @@
+---
+disqus: 'oop-iec-61131-3-plc'
+---
+
+...
 <span style="color:green"><font size="5">
 👨‍🎓 Requisitos 👩‍🎓 :
 </font></span>
