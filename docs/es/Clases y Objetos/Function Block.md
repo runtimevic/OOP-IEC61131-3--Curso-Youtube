@@ -51,9 +51,8 @@ FUNCTION_BLOCK PUBLIC ABSTRACT FB_Foo
 - Si en la declaración de un FUNCTION_BLOCK añadimos la palabra IMPLEMENTS seguido del nombre de la interfaz o interfaces separadas por comas.
 - Si en el FB se implementa una interfaz es obligatorio en el FB crear la programación de los metodos y propiedades de la interfaz implementada.
 ***
-
-```javascript
 - Ejemplos de declaración de FUNCTION_BLOCK:
+```javascript
 FUNCTION_BLOCK INTERNAL ABSTRACT FB
 FUNCTION_BLOCK INTERNAL FINAL FB
 FUNCTION_BLOCK PUBLIC FINAL FB

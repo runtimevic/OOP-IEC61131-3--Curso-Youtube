@@ -1,4 +1,4 @@
-### propiedades
+### <span style="color:grey">Propiedades:</span>
 
 ***
 Las propiedades son las principales variables de una clase. Se pueden utilizar como una alternativa a la clase regular o
@@ -31,21 +31,24 @@ PROPERTY <Access specifier> <Name> : <Datatype>
 ```
 En el Objeto Propiedad es obligatorio que retorne un valor...
 ***
-### Especificadores de acceso:
+### <span style="color:grey">Especificadores de acceso:</span>
 Al igual que con los métodos, las propiedades también pueden tomar los siguientes especificadores de acceso: **PUBLIC , PRIVATE , PROTECTED , INTERNAL y FINAL** . Cuando no se define ningún especificador de acceso, la propiedad es **PUBLIC** . Además, también se puede especificar un especificador de acceso para cada setter y getter. Esto tiene prioridad sobre el propio especificador de acceso de la propiedad.
-
-
 
 Las propiedades son reconocibles por las siguientes características:
 
 Especificador de acceso:
 
-- PÚBLICO: Corresponde a la especificación de modificador sin acceso.
-- PRIVADO: el acceso a la propiedad está limitado solo al bloque de funciones.
-- PROTEGIDO: El acceso a la propiedad está limitado al programa o al bloque de función y sus derivados.
-- INTERNO: El acceso a la propiedad está limitado al espacio de nombres, es decir, a la biblioteca.
-- FINAL: No se permite sobrescribir la propiedad en un derivado del bloque de funciones. Esto significa que la propiedad no se puede sobrescribir ni extender en una subclase posiblemente existente.
-Las propiedades pueden ser abstractas, lo que significa que una propiedad no tiene una implementación inicial y que la implementación real se proporciona en el bloque de funciones derivado.
+- <span style="color:orange">PUBLIC:</span> 
+    - Corresponde a la especificación de modificador sin acceso.
+- <span style="color:orange">PRIVATE:</span> 
+    - El acceso a la propiedad está limitado solo al bloque de funciones.
+- <span style="color:orange">PROTECTED:</span>
+    - El acceso a la propiedad está limitado al programa o al bloque de función y sus derivados.
+- <span style="color:orange">INTERNAL:</span>
+    - El acceso a la propiedad está limitado al espacio de nombres, es decir, a la biblioteca.
+- <span style="color:orange">FINAL:</span> 
+    - No se permite sobrescribir la propiedad en un derivado del bloque de funciones. Esto significa que la propiedad no se puede sobrescribir ni extender en una subclase posiblemente existente.
+    - Las propiedades pueden ser abstractas, lo que significa que una propiedad no tiene una implementación inicial y que la implementación real se proporciona en el bloque de funciones derivado.
 
 Los pragmas son muy útiles para monitorear propiedades en modo en línea. Para esto, escríbalos en la parte superior de las declaraciones de propiedades (atributo 'monitoreo'):
 
@@ -54,11 +57,11 @@ Los pragmas son muy útiles para monitorear propiedades en modo en línea. Para 
 {attribute 'monitoring' := 'call'}:  Cada vez que se muestra el valor, TwinCAT llama al código del descriptor de acceso Get. Cualquier efecto secundario, provocado por ese código, puede aparecer en el seguimiento.
 
 ***
-🔗[Documentación de Codesys del Objeto propiedad](https://help.codesys.com/api-content/2/codesys/3.5.12.0/en/_cds_obj_property/#b08bdbd0d86c0a8640e00400511-id-5dbd3039bdbd0d85c0a8640e003d7982)
+- 🔗 [Documentación de Codesys del Objeto propiedad](https://help.codesys.com/api-content/2/codesys/3.5.12.0/en/_cds_obj_property/#b08bdbd0d86c0a8640e00400511-id-5dbd3039bdbd0d85c0a8640e003d7982)
 
-🔗[Documentación de Beckhoff del Objeto propiedad](https://infosys.beckhoff.com/english.php?content=../content/1033/tc3_plc_intro/2530307467.html&id=)
+- 🔗 [Documentación de Beckhoff del Objeto propiedad](https://infosys.beckhoff.com/english.php?content=../content/1033/tc3_plc_intro/2530307467.html&id=)
 
-- 🔗 https://twincontrols.com/community/twincat-troubleshooting/utilizing-properties/#post-76
+- 🔗 [utilizing-properties,twincontrols.com](https://twincontrols.com/community/twincat-troubleshooting/utilizing-properties/#post-76)
 
-- https://en.grse.de/blog/object-oriented-programming-in-programmable-logic-controllers-plc-whats-really-new/
+- 🔗 [object-oriented-programming-in-programmable-logic-controllers-plc-whats-really-new,en.grse.de](https://en.grse.de/blog/object-oriented-programming-in-programmable-logic-controllers-plc-whats-really-new/)
 
