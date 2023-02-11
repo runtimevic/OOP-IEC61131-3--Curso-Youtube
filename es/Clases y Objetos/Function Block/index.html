@@ -1173,6 +1173,15 @@ bloques de funciones abstractas
 </ul>
 </li>
 </ul>
+<hr />
+<p><span style="color:orange"> EXTENDS:</span> 
+- Si en la declaración de un FUNCTION_BLOCK añadimos la palabra EXTENDS seguida del nombre del FB del cual queremos heredar, significa que heredamos todos sus metodos y propiedades.(principio de Herencia)
+- Un FB solo puede heredar de una Clase FB.</p>
+<hr />
+<p><span style="color:orange"> IMPLEMENTS:</span> 
+- Si en la declaración de un FUNCTION_BLOCK añadimos la palabra IMPLEMENTS seguido del nombre de la interfaz o interfaces separadas por comas.
+- Si en el FB se implementa una interfaz es obligatorio en el FB crear la programación de los metodos y propiedades de la interfaz implementada.</p>
+<hr />
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
@@ -1187,15 +1196,6 @@ bloques de funciones abstractas
 <span class="nx">FUNCTION_BLOCK</span><span class="w"> </span><span class="nx">PUBLIC</span><span class="w"> </span><span class="nx">ABSTRACT</span><span class="w"> </span><span class="nx">FB</span>
 <span class="nx">FUNCTION_BLOCK</span><span class="w"> </span><span class="nx">FB</span><span class="w"> </span><span class="nx">EXTENDS</span><span class="w"> </span><span class="nx">FB1</span><span class="w"> </span><span class="nx">IMPLEMENTS</span><span class="w"> </span><span class="nx">Interface1</span><span class="p">,</span><span class="w"> </span><span class="nx">Interface2</span><span class="p">,</span><span class="w"> </span><span class="nx">Interface3</span>
 </code></pre></div></td></tr></table></div>
-<hr />
-<p><span style="color:orange"> EXTENDS:</span> 
-- Si en la declaración de un FUNCTION_BLOCK añadimos la palabra EXTENDS seguida del nombre del FB del cual queremos heredar, significa que heredamos todos sus metodos y propiedades.(principio de Herencia)
-- Un FB solo puede heredar de una Clase FB.</p>
-<hr />
-<p><span style="color:orange"> IMPLEMENTS:</span> 
-- Si en la declaración de un FUNCTION_BLOCK añadimos la palabra IMPLEMENTS seguido del nombre de la interfaz o interfaces separadas por comas.
-- Si en el FB se implementa una interfaz es obligatorio en el FB crear la programación de los metodos y propiedades de la interfaz implementada.</p>
-<hr />
 <h3 id="tipo-de-variables-que-se-pueden-declarar-en-un-function_block">Tipo de variables que se pueden declarar en un FUNCTION_BLOCK:</h3>
 <p>!!!!!!!!!!! mirar cuales son exactamente las que se pueden declarar en un FB !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!</p>
 <ul>
