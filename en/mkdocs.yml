@@ -118,12 +118,13 @@ nav:
        - Function Block: 
           - Function Block: Clases y Objetos/Function Block.md
           - Constructor and Destructor: Clases y Objetos/Constructor y Destructor.md
+       - Access modifiers: Clases y Objetos/modificadores de acceso.md           
        - Method: Clases y Objetos/metodo.md
        - Property: Clases y Objetos/propiedad.md
        - Inheritance: Clases y Objetos/herencia.md
-       - Interface: Clases y Objetos/interface.md  
+       - Interface: Clases y Objetos/interface.md
+       - Abstract FB vs. Interface: Clases y Objetos/FB abstracto frente a interfaz.md  
     - Variable types and special variables: Variable types and special variables.md
-    - Access modifiers: modificadores de acceso.md
     - SUPER pointer: SUPER pointer.md
     - THIS pointer: THIS pointer.md
     - Types of data: Tipos de datos.md

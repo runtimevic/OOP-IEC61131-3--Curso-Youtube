@@ -118,12 +118,13 @@ nav:
        - Bloque de Funciones: 
           - Bloques de Funciones: Clases y Objetos/Function Block.md
           - Constructor y Destructor: Clases y Objetos/Constructor y Destructor.md
+       - Modificadores de acceso: Clases y Objetos/modificadores de acceso.md           
        - Metodo: Clases y Objetos/metodo.md
        - Propiedad: Clases y Objetos/propiedad.md
        - Herencia: Clases y Objetos/herencia.md
-       - Interface: Clases y Objetos/interface.md  
+       - Interface: Clases y Objetos/interface.md
+       - FB abstracto frente a interfaz: Clases y Objetos/FB abstracto frente a interfaz.md
     - Tipos de variables y variables especiales: Variable types and special variables.md
-    - Modificadores de acceso: modificadores de acceso.md
     - SUPER puntero: SUPER pointer.md
     - THIS puntero: THIS pointer.md
     - Tipos de Datos: Tipos de datos.md
