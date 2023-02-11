@@ -39,3 +39,23 @@ En el Objeto Propiedad es obligatorio que retorne un valor...
 🔗[Documentación de Beckhoff del Objeto propiedad](https://infosys.beckhoff.com/english.php?content=../content/1033/tc3_plc_intro/2530307467.html&id=)
 
 - 🔗 https://twincontrols.com/community/twincat-troubleshooting/utilizing-properties/#post-76
+
+- https://en.grse.de/blog/object-oriented-programming-in-programmable-logic-controllers-plc-whats-really-new/
+
+
+Las propiedades son reconocibles por las siguientes características:
+
+Especificador de acceso
+
+PÚBLICO: Corresponde a la especificación de modificador sin acceso.
+PRIVADO: el acceso a la propiedad está limitado solo al bloque de funciones.
+PROTEGIDO: El acceso a la propiedad está limitado al programa o al bloque de función y sus derivados.
+INTERNO: El acceso a la propiedad está limitado al espacio de nombres, es decir, a la biblioteca.
+FINAL: No se permite sobrescribir la propiedad en un derivado del bloque de funciones. Esto significa que la propiedad no se puede sobrescribir ni extender en una subclase posiblemente existente.
+Las propiedades pueden ser abstractas, lo que significa que una propiedad no tiene una implementación inicial y que la implementación real se proporciona en el bloque de funciones derivado.
+
+Los pragmas son muy útiles para monitorear propiedades en modo en línea. Para esto, escríbalos en la parte superior de las declaraciones de propiedades (atributo 'monitoreo'):
+
+{attribute 'monitoring := 'variable'}:  Al acceder a una propiedad, TwinCAT almacena el valor real en una variable y muestra el valor de esta última. Este valor puede volverse obsoleto si el código ya no accede a la propiedad.
+
+{attribute 'monitoring' := 'call'}:  Cada vez que se muestra el valor, TwinCAT llama al código del descriptor de acceso Get. Cualquier efecto secundario, provocado por ese código, puede aparecer en el seguimiento.

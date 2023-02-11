@@ -10,7 +10,10 @@ END_VAR
 _02_Clase_y_Objetos();
 
 // Video de Youtube 03:
-_03_Clase_y_Objetos();]]></ST>
+_03_Clase_y_Objetos();
+
+// Video de Youtube 04:
+_04_Metodo();]]></ST>
     </Implementation>
   </POU>
 </TcPlcObject>

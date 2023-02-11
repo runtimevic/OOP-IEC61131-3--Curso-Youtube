@@ -8,4 +8,12 @@ Si queremos que el método establezca el valor de la variable local en el bloque
 
 Al igual que con el puntero SUPER, el puntero THIS también debe estar siempre en mayúsculas.
 
+
+
+
 - [THIS puntero Infosys Beckhoff](https://infosys.beckhoff.com/content/1033/tc3_plc_intro/2528843147.html?id=1252534934601716110)
+
+THIS pointer
+The THIS pointer is available to all function blocks and points to the current function block instance. This pointer is required whenever a method contains a local variable which obscures a variable in the function block.
+
+An assignment statement within the method sets the value of the local variable. If we want the method to set the value of the local variable in the function block, we need to use the THIS pointer to access it.
