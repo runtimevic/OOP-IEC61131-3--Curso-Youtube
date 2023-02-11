@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.12">
+  <POU Name="fb_tipos_de_datos" Id="{a7bc4c84-6c3e-44bd-a10c-e1fde9eb23ff}" SpecialFunc="None">
+    <Declaration><![CDATA[FUNCTION_BLOCK PRIVATE fb_tipos_de_datos
+VAR_INPUT
+	binput : BOOL;
+END_VAR
+VAR_INPUT
+	binput2 : BOOL;
+END_VAR
+VAR_OUTPUT
+	output1 : REAL;
+END_VAR
+VAR_IN_OUT
+	in_out1 : LINT;
+END_VAR
+VAR_IN_OUT CONSTANT
+	in_out_constant1 : DINT;
+END_VAR
+VAR
+	var1 : STRING;
+END_VAR
+VAR_TEMP
+	temp1 : ULINT;
+END_VAR
+VAR_STAT
+    nVarStat1 : INT;
+END_VAR
+VAR_EXTERNAL
+    nVarExt1 : INT; // 1st external variable
+END_VAR
+VAR PERSISTENT
+    nVarPers1 : DINT; (* 1. Persistent variable *)
+    bVarPers2 : BOOL; (* 2. Persistent variable *)
+END_VAR
+VAR RETAIN
+    nRem1 : INT;
+END_VAR
+VAR CONSTANT
+	n : INT:= 10;
+END_VAR]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[]]></ST>
+    </Implementation>
+  </POU>
+</TcPlcObject>

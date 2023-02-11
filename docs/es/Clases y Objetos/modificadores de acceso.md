@@ -1,7 +1,7 @@
 ### Modificadores de Acceso: 
 - <span style="color:orange">PUBLIC:</span> 
     - Son accesibles luego de instanciar la clase.
-    - Corresponde a la especificación de modificador sin acceso
+    - Corresponde a la especificación de modificador sin restricción de acceso.
 - <span style="color:orange">PRIVATE:</span> 
     - Son accesibles dentro de la clase.
     - El acceso está restringido al bloque de funciones o al programa, respectivamente.
@@ -9,7 +9,7 @@
     - Son accesibles a través de la herencia.
     - El acceso está restringido al programa o al bloque de función y sus derivados respectivamente.
 - <span style="color:orange">INTERNAL:</span>
-    - El acceso está limitado al espacio de nombres (la biblioteca).
+    - El acceso está limitado al espacio de nombres (la biblioteca).  
 - <span style="color:orange">FINAL:</span>
     - No se permite sobrescribir, en un derivado del bloque de funciones. 
     - Esto significa que no se puede sobrescribir/extender en una subclase posiblemente existente.

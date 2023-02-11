@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.12">
+  <POU Name="_04_Clases_y_Objetos" Id="{0809fefa-bab8-4b56-8e0d-4935fd5424b9}" SpecialFunc="None">
+    <Declaration><![CDATA[PROGRAM _04_Clases_y_Objetos
+VAR
+	fb :fb_tipos_de_datos;
+	binput : BOOL;
+	in_out1 : LINT;
+	in_out_constant1 : DINT := 10;
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[
+fb(
+//	binput:= binput, 
+//	binput2:= , 
+//	output1=> , 
+	in_out1:= in_out1, 
+	in_out_constant1:= in_out_constant1 );]]></ST>
+    </Implementation>
+  </POU>
+</TcPlcObject>

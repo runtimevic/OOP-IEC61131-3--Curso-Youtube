@@ -29,7 +29,14 @@
     <Compile Include="03_Clases_Y_Objetos\_03_Clase_y_Objetos.TcPOU">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="04_Metodo\_04_Metodo.TcPOU">
+    <Compile Include="04_Clases_Y_Objetos\Clase\fb_tipos_de_datos.TcPOU">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="04_Clases_Y_Objetos\GVL4.TcGVL">
+      <SubType>Code</SubType>
+      <LinkAlways>true</LinkAlways>
+    </Compile>
+    <Compile Include="04_Clases_Y_Objetos\_04_Clases_y_Objetos.TcPOU">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="PlcTask.TcTTO">
@@ -44,7 +51,8 @@
     <Folder Include="02_Clases_Y_Objetos\Clase" />
     <Folder Include="03_Clases_Y_Objetos" />
     <Folder Include="03_Clases_Y_Objetos\Clase" />
-    <Folder Include="04_Metodo" />
+    <Folder Include="04_Clases_Y_Objetos" />
+    <Folder Include="04_Clases_Y_Objetos\Clase" />
     <Folder Include="_MAIN" />
   </ItemGroup>
   <ItemGroup>
