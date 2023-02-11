@@ -471,7 +471,7 @@
       
         <li class="md-nav__item">
   <a href="#metodos-fb_init-fb_reinit-y-fb_exit" class="md-nav__link">
-    Métodos 'FB_Init', 'FB_Reinit' y 'FB_Exit'
+    Métodos 'FB_Init', 'FB_Reinit' y 'FB_Exit':
   </a>
   
 </li>
@@ -1070,7 +1070,7 @@
       
         <li class="md-nav__item">
   <a href="#metodos-fb_init-fb_reinit-y-fb_exit" class="md-nav__link">
-    Métodos 'FB_Init', 'FB_Reinit' y 'FB_Exit'
+    Métodos 'FB_Init', 'FB_Reinit' y 'FB_Exit':
   </a>
   
 </li>
@@ -1115,8 +1115,8 @@
 
   <h1>Constructor y Destructor</h1>
 
-<h3 id="metodos-fb_init-fb_reinit-y-fb_exit">Métodos 'FB_Init', 'FB_Reinit' y 'FB_Exit'</h3>
-<h3 id="fb_init">FB_Init:</h3>
+<h3 id="metodos-fb_init-fb_reinit-y-fb_exit"><span style="color:orange">Métodos 'FB_Init', 'FB_Reinit' y 'FB_Exit':</span></h3>
+<h3 id="fb_init"><span style="color:orange">FB_Init:</span></h3>
 <ul>
 <li>Dependiendo de la tarea, puede ser necesario que los bloques de funciones requieran parámetros que solo se usan una vez para las tareas de inicialización. Una forma posible de pasarlos elegantemente es usar el método FB_init().
 Este método se ejecuta implícitamente una vez antes de que se inicie la tarea del PLC y se puede utilizar para realizar tareas de inicialización.</li>
@@ -1124,10 +1124,10 @@ Este método se ejecuta implícitamente una vez antes de que se inicie la tarea 
 <li>Al pasar los parámetros por FB_init(),no se pueden leer desde el exterior ni cambiar en tiempo de ejecución. La única excepción sería la llamada explícita de FB_init() desde la tarea del PLC. Sin embargo, esto debe evitarse principalmente, ya que todas las variables locales de la instancia se reinicializarán en este caso.
 Sin embargo, si aún debe ser posible el acceso, se pueden crear las propiedades apropiadas para los parámetros.</li>
 </ul>
-<h3 id="fb_reinit">FB_Reinit:</h3>
+<h3 id="fb_reinit"><span style="color:orange">FB_Reinit:</span></h3>
 <p>Si es necesario, debe implementar FB_reinit explícitamente. Si este método está presente, se llama automáticamente después de que se haya copiado la instancia del bloque de función correspondiente (llamada implícita). Esto sucede durante un cambio en línea después de cambios en la declaración de bloque de función (cambio de firma) para reinicializar el nuevo bloque de instancia.
 Este método se llama después de la operación de copia y debe establecer valores definidos para las variables de la instancia. Por ejemplo, puede inicializar variables en consecuencia en la nueva ubicación en la memoria o notificar a otras partes de la aplicación sobre la nueva ubicación de variables específicas en la memoria. Diseñe la implementación independientemente del cambio en línea. El método también se puede llamar desde la aplicación en cualquier momento para restablecer una instancia de bloque de funciones a su estado original.</p>
-<h3 id="fb_exit">FB_Exit:</h3>
+<h3 id="fb_exit"><span style="color:orange">FB_Exit:</span></h3>
 <p>Si es necesario, debe implementar FB_exit explícitamente. Si este método está presente, se llama automáticamente (implícitamente) antes de que el controlador elimine el código de la instancia del bloque de funciones (por ejemplo, incluso si TwinCAT cambia del modo Ejecutar al modo de configuración).</p>
 <hr />
 <p><img alt="constructor_destuctor" src="../../imagenes/constructor%26destructor.png" /></p>

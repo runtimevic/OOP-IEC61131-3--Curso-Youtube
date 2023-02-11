@@ -1114,28 +1114,34 @@
 <li>Las variables temporales se declaran localmente entre las palabras clave VAR_TEMP y END_VAR.</li>
 <li>VAR_TEMP declaraciones sólo son posibles en <strong>programas y bloques de funciones.</strong></li>
 <li>TwinCAT reinicializa las variables temporales cada vez que se llama al bloque de funciones.</li>
+<li>La aplicación sólo puede acceder a variables temporales en la parte de implementación de un programa o bloque de funciones.</li>
 </ul>
 </li>
+<li><a href="https://infosys.beckhoff.com/content/1033/tc3_plc_intro/2528787339.html">Static Variables - VAR_STAT</a><ul>
+<li>Esta funcionalidad es una extensión con respecto a la norma IEC 61131-3.</li>
+<li>Las variables estáticas se declaran localmente entre las palabras clave VAR_STAT y END_VAR. TwinCAT inicializa las variables estáticas cuando se llama por primera vez al bloque de funciones respectivo.</li>
+<li>Puede tener acceso a las variables estáticas sólo dentro del espacio de nombres donde se declaran las variables (como es el caso de las variables estáticas en C). Sin embargo, las variables estáticas conservan su valor cuando la aplicación sale del bloque de funciones. Puede utilizar variables estáticas, como contadores para llamadas a funciones, por ejemplo.</li>
+<li>Puede extender variables estáticas con una palabra clave de atributo.</li>
+<li>Las variables estáticas solo existen una vez. Esto también se aplica a las variables estáticas de un bloque de funciones o un método de bloque de funciones, incluso si el bloque de funciones se instancia varias veces.</li>
 </ul>
-<p>La aplicación sólo puede acceder a variables temporales en la parte de implementación de un programa o bloque de funciones.
-- <a href="https://infosys.beckhoff.com/content/1033/tc3_plc_intro/2528787339.html">Static Variables - VAR_STAT</a>
-    - Esta funcionalidad es una extensión con respecto a la norma IEC 61131-3.
-    - Las variables estáticas se declaran localmente entre las palabras clave VAR_STAT y END_VAR. TwinCAT inicializa las variables estáticas cuando se llama por primera vez al bloque de funciones respectivo.
-    - Puede tener acceso a las variables estáticas sólo dentro del espacio de nombres donde se declaran las variables (como es el caso de las variables estáticas en C). Sin embargo, las variables estáticas conservan su valor cuando la aplicación sale del bloque de funciones. Puede utilizar variables estáticas, como contadores para llamadas a funciones, por ejemplo.
-    - Puede extender variables estáticas con una palabra clave de atributo.
-    - Las variables estáticas solo existen una vez. Esto también se aplica a las variables estáticas de un bloque de funciones o un método de bloque de funciones, incluso si el bloque de funciones se instancia varias veces.
-- <a href="https://infosys.beckhoff.com/content/1033/tc3_plc_intro/2528792715.html">External Variables - VAR_EXTERNAL</a>
-    - Las variables externas son variables globales que se "importan" en un bloque de funciones.
-    - Puede declarar las variables entre las palabras clave VAR_EXTERNAL y END_VAR. Si la variable global no existe, se emite un mensaje de error.<br />
-    - En TwinCAT 3 PLC no es necesario que las variables se declaren como externas. La palabra clave existe para mantener la compatibilidad con IEC 61131-3.
-    - Si, no obstante, utiliza variables externas, asegúrese de abordar las variables asignadas (con AT %I o AT %Q) sólo en la lista global de variables. El direccionamiento adicional de las instancias de variables locales daría lugar a duplicaciones en la imagen del proceso.
-    - Estas variables declaradas tambien tiene que estar declarada la misma variable con el mismo nombre en una GVL (Lista de Varaibles Global)
-- <a href="https://infosys.beckhoff.com/content/1033/tc3_plc_intro/2528798091.html">Instance Variables - VAR_INST</a>
-    - TwinCAT crea una variable VAR_INST de un método no en la pila de métodos como las variables VAR, sino en la pila de la instancia del bloque de funciones. Esto significa que la variable VAR_INST se comporta como otras variables de la instancia del bloque de función y no se reinicializa cada vez que se llama al método.
-    - VAR_INST variables solo están permitidas en los métodos de un bloque de funciones, y el acceso a dicha variable solo está disponible dentro del método. Puede supervisar los valores de las variables de instancia en la parte de declaración del método.
-    - Las variables de instancia no se pueden extender con una palabra clave de atributo.
-- <a href="https://infosys.beckhoff.com/content/1033/tc3_plc_intro/2528803467.html">Remanent Variables - PERSISTENT, RETAIN</a>
-Las variables remanentes pueden conservar sus valores más allá del tiempo de ejecución habitual del programa. Las variables remanentes se pueden declarar como variables RETAIN o incluso más estrictamente como variables PERSISTENTES en el proyecto PLC.</p>
+</li>
+<li><a href="https://infosys.beckhoff.com/content/1033/tc3_plc_intro/2528792715.html">External Variables - VAR_EXTERNAL</a><ul>
+<li>Las variables externas son variables globales que se "importan" en un bloque de funciones.</li>
+<li>Puede declarar las variables entre las palabras clave VAR_EXTERNAL y END_VAR. Si la variable global no existe, se emite un mensaje de error.  </li>
+<li>En TwinCAT 3 PLC no es necesario que las variables se declaren como externas. La palabra clave existe para mantener la compatibilidad con IEC 61131-3.</li>
+<li>Si, no obstante, utiliza variables externas, asegúrese de abordar las variables asignadas (con AT %I o AT %Q) sólo en la lista global de variables. El direccionamiento adicional de las instancias de variables locales daría lugar a duplicaciones en la imagen del proceso.</li>
+<li>Estas variables declaradas tambien tiene que estar declarada la misma variable con el mismo nombre en una GVL (Lista de Varaibles Global)</li>
+</ul>
+</li>
+<li><a href="https://infosys.beckhoff.com/content/1033/tc3_plc_intro/2528798091.html">Instance Variables - VAR_INST</a><ul>
+<li>TwinCAT crea una variable VAR_INST de un método no en la pila de métodos como las variables VAR, sino en la pila de la instancia del bloque de funciones. Esto significa que la variable VAR_INST se comporta como otras variables de la instancia del bloque de función y no se reinicializa cada vez que se llama al método.</li>
+<li>VAR_INST variables solo están permitidas en los métodos de un bloque de funciones, y el acceso a dicha variable solo está disponible dentro del método. Puede supervisar los valores de las variables de instancia en la parte de declaración del método.</li>
+<li>Las variables de instancia no se pueden extender con una palabra clave de atributo.</li>
+</ul>
+</li>
+<li><a href="https://infosys.beckhoff.com/content/1033/tc3_plc_intro/2528803467.html">Remanent Variables - PERSISTENT, RETAIN</a>
+Las variables remanentes pueden conservar sus valores más allá del tiempo de ejecución habitual del programa. Las variables remanentes se pueden declarar como variables RETAIN o incluso más estrictamente como variables PERSISTENTES en el proyecto PLC.</li>
+</ul>
 <p>Un requisito previo para la funcionalidad completa de las variables RETAIN es un área de memoria correspondiente en el controlador (NovRam). Las variables persistentes se escriben solo cuando TwinCAT se apaga. Esto requerirá generalmente un UPS correspondiente. Excepción: Las variables persistentes también se pueden escribir con el bloque de función FB_WritePersistentData.</p>
 <p>Si el área de memoria correspondiente no existe, los valores de las variables RETAIN y PERSISTENT se pierden durante un corte de energía.</p>
 <p>Variables remanentes - PERSISTENT, RETAIN 1:  <br />
