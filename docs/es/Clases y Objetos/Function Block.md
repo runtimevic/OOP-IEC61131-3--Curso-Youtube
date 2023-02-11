@@ -1,13 +1,13 @@
-### Declaracion de un Function Block:
+### <span style="color:orange">Declaracion de un Function Block:</span> 
 ```iecst
 FUNCTION_BLOCK <access specifier> <function block> | EXTENDS <function block> | IMPLEMENTS <comma-separated list of interfaces>
 ```
-### Implementación Bloque de Funciones:
+### <span style="color:orange">Implementación Bloque de Funciones:</span> 
 
 ![Function_Block](../imagenes/Function_Block_Coche.png)
 
 
-### Modificadores de acceso Bloque de Funciones:
+### <span style="color:orange">Modificadores de acceso Bloque de Funciones:</span> 
 Podemos tener 2 modificadores de acceso para el Bloque de Funciones:
 
 - <span style="color:orange">PUBLIC:</span> 
@@ -61,8 +61,7 @@ FUNCTION_BLOCK ABSTRACT FB
 FUNCTION_BLOCK PUBLIC ABSTRACT FB
 FUNCTION_BLOCK FB EXTENDS FB1 IMPLEMENTS Interface1, Interface2, Interface3
 ```
-### Tipo de variables que se pueden declarar en un FUNCTION_BLOCK:
-!!!!!!!!!!! mirar cuales son exactamente las que se pueden declarar en un FB !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+### <span style="color:orange">Tipos de variables que se pueden declarar en un FUNCTION_BLOCK:</span> 
 
 - [Local Variables - VAR](https://infosys.beckhoff.com/content/1033/tc3_plc_intro/2528755083.html)
 - [Input Variables - VAR_INPUT](https://infosys.beckhoff.com/content/1033/tc3_plc_intro/2528760459.html)
