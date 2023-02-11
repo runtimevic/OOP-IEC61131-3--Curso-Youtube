@@ -1146,9 +1146,13 @@ No hay restricciones, se puede llamar desde cualquier lugar. <ul>
 </li>
 <li><span style="color:orange">INTERNAL:</span> <ul>
 <li>Solo se puede acceder al FB desde el mismo espacio de nombres. </li>
-<li>Esto permite que el FB este disponible solo dentro de una determinada biblioteca.</li>
+<li>Esto permite que el FB este disponible solo dentro de una determinada biblioteca.
+La configuración predeterminada donde no se define ningún especificador de acceso es PUBLIC .    </li>
 </ul>
 </li>
+</ul>
+<hr />
+<ul>
 <li><span style="color:orange">FINAL:</span><ul>
 <li>(en TwinCAT 3 no sale por defecto para seleccionarlo al crear un FB, pero se puede añadir mas tarde despues de crearlo...) </li>
 <li>El FB no puede servir como un bloque de funciones principal. </li>
@@ -1156,8 +1160,33 @@ No hay restricciones, se puede llamar desde cualquier lugar. <ul>
 <li>FINAL solo está permitido para POU del tipo FUNCTION_BLOCK.</li>
 </ul>
 </li>
+<li><span style="color:orange">ABSTRACT:</span> 
+bloques de funciones abstractas
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nx">FUNCTION_BLOCK</span><span class="w"> </span><span class="nx">PUBLIC</span><span class="w"> </span><span class="nx">ABSTRACT</span><span class="w"> </span><span class="nx">FB_Foo</span>
+</code></pre></div></td></tr></table></div><ul>
+<li>Tan pronto como un método o una propiedad se declaran como abstractos , el bloque de funciones también debe declararse como abstracto .</li>
+<li>No se pueden crear instancias a partir de FB abstractos. Los FB abstractos solo se pueden usar como FB básicos cuando se heredan.</li>
+<li>Todos los métodos abstractos y todas las propiedades abstractas deben sobrescribirse para crear un FB no abstracto. Un método abstracto o una propiedad abstracta se convierte en un método no abstracto o una propiedad no abstracta al sobrescribir.</li>
+<li>Los bloques de funciones abstractas pueden contener además métodos no abstractos y/o propiedades no abstractas.</li>
+<li>Si no se sobrescriben todos los métodos abstractos o todas las propiedades abstractas durante la herencia, el FB heredado solo puede ser un FB abstracto (concretización paso a paso).</li>
+<li>Se permiten punteros o referencias de tipo FB abstracto. Sin embargo, estos pueden referirse a FB no abstractos y, por lo tanto, llamar a sus métodos o propiedades (polimorfismo).   </li>
 </ul>
-<p>La configuración predeterminada donde no se define ningún especificador de acceso es PUBLIC .</p>
+</li>
+</ul>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="o">-</span><span class="w"> </span><span class="nx">Ejemplos</span><span class="w"> </span><span class="nx">de</span><span class="w"> </span><span class="nx">declaracion</span><span class="w"> </span><span class="nx">de</span><span class="w"> </span><span class="nx">FUNCTION_BLOCK</span><span class="o">:</span>
+<span class="nx">FUNCTION_BLOCK</span><span class="w"> </span><span class="nx">INTERNAL</span><span class="w"> </span><span class="nx">ABSTRACT</span><span class="w"> </span><span class="nx">FB</span>
+<span class="nx">FUNCTION_BLOCK</span><span class="w"> </span><span class="nx">INTERNAL</span><span class="w"> </span><span class="nx">FINAL</span><span class="w"> </span><span class="nx">FB</span>
+<span class="nx">FUNCTION_BLOCK</span><span class="w"> </span><span class="nx">PUBLIC</span><span class="w"> </span><span class="nx">FINAL</span><span class="w"> </span><span class="nx">FB</span>
+<span class="nx">FUNCTION_BLOCK</span><span class="w"> </span><span class="nx">ABSTRACT</span><span class="w"> </span><span class="nx">FB</span>
+<span class="nx">FUNCTION_BLOCK</span><span class="w"> </span><span class="nx">PUBLIC</span><span class="w"> </span><span class="nx">ABSTRACT</span><span class="w"> </span><span class="nx">FB</span>
+<span class="nx">FUNCTION_BLOCK</span><span class="w"> </span><span class="nx">FB</span><span class="w"> </span><span class="nx">EXTENDS</span><span class="w"> </span><span class="nx">FB1</span><span class="w"> </span><span class="nx">IMPLEMENTS</span><span class="w"> </span><span class="nx">Interface1</span><span class="p">,</span><span class="w"> </span><span class="nx">Interface2</span><span class="p">,</span><span class="w"> </span><span class="nx">Interface3</span>
+</code></pre></div></td></tr></table></div>
 <hr />
 <p><span style="color:orange"> EXTENDS:</span> 
 - Si en la declaración de un FUNCTION_BLOCK añadimos la palabra EXTENDS seguida del nombre del FB del cual queremos heredar, significa que heredamos todos sus metodos y propiedades.(principio de Herencia)
