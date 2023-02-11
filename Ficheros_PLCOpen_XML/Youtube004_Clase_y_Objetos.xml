@@ -1,0 +1,288 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<project xmlns="http://www.plcopen.org/xml/tc6_0200">
+  <fileHeader companyName="Beckhoff Automation GmbH" productName="TwinCAT PLC Control" productVersion="3.5.13.21" creationDateTime="2023-02-11T19:56:38.4759695" />
+  <contentHeader name="OOP_Curso" modificationDateTime="2023-02-11T19:56:38.480848">
+    <coordinateInfo>
+      <fbd>
+        <scaling x="1" y="1" />
+      </fbd>
+      <ld>
+        <scaling x="1" y="1" />
+      </ld>
+      <sfc>
+        <scaling x="1" y="1" />
+      </sfc>
+    </coordinateInfo>
+    <addData>
+      <data name="http://www.3s-software.com/plcopenxml/projectinformation" handleUnknown="implementation">
+        <ProjectInformation />
+      </data>
+    </addData>
+  </contentHeader>
+  <types>
+    <dataTypes />
+    <pous>
+      <pou name="fb_tipos_de_datos" pouType="functionBlock">
+        <interface>
+          <inputVars>
+            <variable name="binput">
+              <type>
+                <BOOL />
+              </type>
+            </variable>
+            <variable name="binput2">
+              <type>
+                <BOOL />
+              </type>
+            </variable>
+          </inputVars>
+          <outputVars>
+            <variable name="output1">
+              <type>
+                <REAL />
+              </type>
+            </variable>
+          </outputVars>
+          <inOutVars>
+            <variable name="in_out1">
+              <type>
+                <LINT />
+              </type>
+            </variable>
+          </inOutVars>
+          <inOutVars constant="true">
+            <variable name="in_out_constant1">
+              <type>
+                <DINT />
+              </type>
+            </variable>
+          </inOutVars>
+          <localVars>
+            <variable name="var1">
+              <type>
+                <string />
+              </type>
+            </variable>
+          </localVars>
+          <tempVars>
+            <variable name="temp1">
+              <type>
+                <ULINT />
+              </type>
+            </variable>
+          </tempVars>
+          <globalVars>
+            <variable name="nVarStat1">
+              <type>
+                <INT />
+              </type>
+            </variable>
+          </globalVars>
+          <externalVars>
+            <variable name="nVarExt1">
+              <type>
+                <INT />
+              </type>
+              <documentation>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml"> 1st external variable</xhtml>
+              </documentation>
+            </variable>
+          </externalVars>
+          <localVars persistent="true">
+            <variable name="nVarPers1">
+              <type>
+                <DINT />
+              </type>
+              <documentation>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml"> 1. Persistent variable </xhtml>
+              </documentation>
+            </variable>
+            <variable name="bVarPers2">
+              <type>
+                <BOOL />
+              </type>
+              <documentation>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml"> 2. Persistent variable </xhtml>
+              </documentation>
+            </variable>
+          </localVars>
+          <localVars retain="true">
+            <variable name="nRem1">
+              <type>
+                <INT />
+              </type>
+            </variable>
+          </localVars>
+          <localVars constant="true">
+            <variable name="n">
+              <type>
+                <INT />
+              </type>
+              <initialValue>
+                <simpleValue value="10" />
+              </initialValue>
+            </variable>
+          </localVars>
+        </interface>
+        <body>
+          <ST>
+            <xhtml xmlns="http://www.w3.org/1999/xhtml" />
+          </ST>
+        </body>
+        <addData>
+          <data name="http://www.3s-software.com/plcopenxml/interfaceasplaintext" handleUnknown="implementation">
+            <InterfaceAsPlainText>
+              <xhtml xmlns="http://www.w3.org/1999/xhtml">FUNCTION_BLOCK fb_tipos_de_datos
+VAR_INPUT
+	binput : BOOL;
+END_VAR
+VAR_INPUT
+	binput2 : BOOL;
+END_VAR
+VAR_OUTPUT
+	output1 : REAL;
+END_VAR
+VAR_IN_OUT
+	in_out1 : LINT;
+END_VAR
+VAR_IN_OUT CONSTANT
+	in_out_constant1 : DINT;
+END_VAR
+VAR
+	var1 : STRING;
+END_VAR
+VAR_TEMP
+	temp1 : ULINT;
+END_VAR
+VAR_STAT
+    nVarStat1 : INT;
+END_VAR
+VAR_EXTERNAL
+    nVarExt1 : INT; // 1st external variable
+END_VAR
+VAR PERSISTENT
+    nVarPers1 : DINT; (* 1. Persistent variable *)
+    bVarPers2 : BOOL; (* 2. Persistent variable *)
+END_VAR
+VAR RETAIN
+    nRem1 : INT;
+END_VAR
+VAR CONSTANT
+	n : INT:= 10;
+END_VAR</xhtml>
+            </InterfaceAsPlainText>
+          </data>
+          <data name="http://www.3s-software.com/plcopenxml/objectid" handleUnknown="discard">
+            <ObjectId>a7bc4c84-6c3e-44bd-a10c-e1fde9eb23ff</ObjectId>
+          </data>
+        </addData>
+      </pou>
+      <pou name="_04_Clases_y_Objetos" pouType="program">
+        <interface>
+          <localVars>
+            <variable name="fb">
+              <type>
+                <derived name="fb_tipos_de_datos" />
+              </type>
+            </variable>
+            <variable name="binput">
+              <type>
+                <BOOL />
+              </type>
+            </variable>
+            <variable name="in_out1">
+              <type>
+                <LINT />
+              </type>
+            </variable>
+            <variable name="in_out_constant1">
+              <type>
+                <DINT />
+              </type>
+              <initialValue>
+                <simpleValue value="10" />
+              </initialValue>
+            </variable>
+          </localVars>
+        </interface>
+        <body>
+          <ST>
+            <xhtml xmlns="http://www.w3.org/1999/xhtml">
+fb(
+//	binput:= binput, 
+//	binput2:= , 
+//	output1=&gt; , 
+	in_out1:= in_out1, 
+	in_out_constant1:= in_out_constant1 );</xhtml>
+          </ST>
+        </body>
+        <addData>
+          <data name="http://www.3s-software.com/plcopenxml/interfaceasplaintext" handleUnknown="implementation">
+            <InterfaceAsPlainText>
+              <xhtml xmlns="http://www.w3.org/1999/xhtml">PROGRAM _04_Clases_y_Objetos
+VAR
+	fb :fb_tipos_de_datos;
+	binput : BOOL;
+	in_out1 : LINT;
+	in_out_constant1 : DINT := 10;
+END_VAR
+</xhtml>
+            </InterfaceAsPlainText>
+          </data>
+          <data name="http://www.3s-software.com/plcopenxml/objectid" handleUnknown="discard">
+            <ObjectId>0809fefa-bab8-4b56-8e0d-4935fd5424b9</ObjectId>
+          </data>
+        </addData>
+      </pou>
+    </pous>
+  </types>
+  <instances>
+    <configurations />
+  </instances>
+  <addData>
+    <data name="http://www.3s-software.com/plcopenxml/globalvars" handleUnknown="implementation">
+      <globalVars name="GVL4">
+        <variable name="nVarExt1">
+          <type>
+            <INT />
+          </type>
+          <documentation>
+            <xhtml xmlns="http://www.w3.org/1999/xhtml"> 1st external variable</xhtml>
+          </documentation>
+        </variable>
+        <addData>
+          <data name="http://www.3s-software.com/plcopenxml/buildproperties" handleUnknown="implementation">
+            <BuildProperties>
+              <LinkAlways>true</LinkAlways>
+            </BuildProperties>
+          </data>
+          <data name="http://www.3s-software.com/plcopenxml/interfaceasplaintext" handleUnknown="implementation">
+            <InterfaceAsPlainText>
+              <xhtml xmlns="http://www.w3.org/1999/xhtml">//{attribute 'qualified_only'}
+VAR_GLOBAL
+	 nVarExt1 : INT; // 1st external variable
+END_VAR</xhtml>
+            </InterfaceAsPlainText>
+          </data>
+          <data name="http://www.3s-software.com/plcopenxml/objectid" handleUnknown="discard">
+            <ObjectId>7e2010cb-b08f-47d2-b369-1802d173bd3f</ObjectId>
+          </data>
+        </addData>
+        <documentation>
+          <xhtml xmlns="http://www.w3.org/1999/xhtml">{attribute 'qualified_only'}</xhtml>
+        </documentation>
+      </globalVars>
+    </data>
+    <data name="http://www.3s-software.com/plcopenxml/projectstructure" handleUnknown="discard">
+      <ProjectStructure>
+        <Folder Name="04_Clases_Y_Objetos">
+          <Object Name="_04_Clases_y_Objetos" ObjectId="0809fefa-bab8-4b56-8e0d-4935fd5424b9" />
+          <Object Name="GVL4" ObjectId="7e2010cb-b08f-47d2-b369-1802d173bd3f" />
+          <Folder Name="Clase">
+            <Object Name="fb_tipos_de_datos" ObjectId="a7bc4c84-6c3e-44bd-a10c-e1fde9eb23ff" />
+          </Folder>
+        </Folder>
+      </ProjectStructure>
+    </data>
+  </addData>
+</project>
