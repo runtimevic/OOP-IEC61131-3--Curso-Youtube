@@ -9,4 +9,7 @@ how it is implemented. The important information that isn’t required is hidden
 reducing code complexity, enhancing data hiding and reusability, thus making function 
 blocks easier to implement and modify.
 
-- https://www.plccoder.com/abstract/
+- 🔗 [ABSTRACT,www.plccoder.com](https://www.plccoder.com/abstract/)
+
+- 🔗 [ABSTRACION Concepto, Infosys Beckhoff](https://infosys.beckhoff.com/content/1033/tc3_plc_intro/6413748235.html?id=2638086927809860687)
+

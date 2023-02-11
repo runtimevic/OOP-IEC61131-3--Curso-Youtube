@@ -10,3 +10,6 @@ classified as phones. Should they be classified as objects? No, as they also def
 and behaviors of a group of objects. A smartphone works just like a regular phone, but it is also 
 able to take pictures, navigate the internet, and do many other things. So, old landline phone
 and smartphone are child classes that extend the parent phone class.
+***
+Superclase: la clase cuyas características se heredan se conoce como superclase (o una clase base o una clase principal). 
+Subclase: la clase que hereda la otra clase se conoce como subclase (o una clase derivada, clase extendida o clase hija).
