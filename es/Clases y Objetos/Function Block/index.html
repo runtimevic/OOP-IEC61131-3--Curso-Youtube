@@ -519,20 +519,6 @@
   
   
     <li class="md-nav__item">
-      <a href="../modificadores%20de%20acceso/" class="md-nav__link">
-        Modificadores de acceso
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../metodo/" class="md-nav__link">
         Metodo
       </a>
@@ -1137,17 +1123,20 @@
 <h3 id="modificadores-de-acceso-bloque-de-funciones">Modificadores de acceso Bloque de Funciones:</h3>
 <p>Podemos tener 2 modificadores de acceso para el Bloque de Funciones:</p>
 <ul>
-<li><span style="color:orange">PUBLIC:</span> 
-No hay restricciones, se puede llamar desde cualquier lugar. <ul>
+<li><span style="color:orange">PUBLIC:</span> <ul>
+<li>No hay restricciones, se puede llamar desde cualquier lugar. </li>
 <li>Si no ponemos nada al declarar el FB es lo mismo que PUBLIC.</li>
 <li>Cualquiera puede llamar o crear una instancia del FB.</li>
 <li>Se puede usar para la herencia al ser public. </li>
+<li>Son accesibles luego de instanciar la clase.</li>
+<li>Corresponde a la especificación de modificador sin restricción de acceso.</li>
 </ul>
 </li>
 <li><span style="color:orange">INTERNAL:</span> <ul>
 <li>Solo se puede acceder al FB desde el mismo espacio de nombres. </li>
 <li>Esto permite que el FB este disponible solo dentro de una determinada biblioteca.
-La configuración predeterminada donde no se define ningún especificador de acceso es PUBLIC .    </li>
+La configuración predeterminada donde no se define ningún especificador de acceso es PUBLIC .</li>
+<li>El acceso está limitado al espacio de nombres (la biblioteca).</li>
 </ul>
 </li>
 </ul>
@@ -1158,6 +1147,8 @@ La configuración predeterminada donde no se define ningún especificador de acc
 <li>El FB no puede servir como un bloque de funciones principal. </li>
 <li>Los métodos y las propiedades de esta POU no se pueden heredar. </li>
 <li>FINAL solo está permitido para POU del tipo FUNCTION_BLOCK.</li>
+<li>No se permite sobrescribir, en un derivado del bloque de funciones. </li>
+<li>Esto significa que no se puede sobrescribir/extender en una subclase posiblemente existente.    </li>
 </ul>
 </li>
 <li><span style="color:orange">ABSTRACT:</span> 
@@ -1202,20 +1193,32 @@ bloques de funciones abstractas
 <li><a href="https://infosys.beckhoff.com/content/1033/tc3_plc_intro/2528755083.html">Local Variables - VAR</a></li>
 <li><a href="https://infosys.beckhoff.com/content/1033/tc3_plc_intro/2528760459.html">Input Variables - VAR_INPUT</a></li>
 <li><a href="https://infosys.beckhoff.com/content/1033/tc3_plc_intro/2528765835.html">Output Variables - VAR_OUTPUT</a></li>
-<li><a href="https://infosys.beckhoff.com/content/1033/tc3_plc_intro/2528771211.html">Input/Output Variables - VAR_IN_OUT, VAR_IN_OUT CONSTANT</a></li>
-<li><a href="https://infosys.beckhoff.com/content/1033/tc3_plc_intro/2528776587.html">Global Variables - VAR_GLOBAL</a></li>
-<li><a href="https://infosys.beckhoff.com/content/1033/tc3_plc_intro/2528781963.html">Temporary Variable - VAR_TEMP</a></li>
+<li>
+<p><a href="https://infosys.beckhoff.com/content/1033/tc3_plc_intro/2528771211.html">Input/Output Variables - VAR_IN_OUT, VAR_IN_OUT CONSTANT</a></p>
+</li>
+<li>
+<p><a href="https://infosys.beckhoff.com/content/1033/tc3_plc_intro/2528781963.html">Temporary Variable - VAR_TEMP</a></p>
+</li>
 <li><a href="https://infosys.beckhoff.com/content/1033/tc3_plc_intro/2528787339.html">Static Variables - VAR_STAT</a></li>
-<li><a href="https://infosys.beckhoff.com/content/1033/tc3_plc_intro/2528792715.html">External Variables - VAR_EXTERNAL</a></li>
-<li><a href="https://infosys.beckhoff.com/content/1033/tc3_plc_intro/2528798091.html">Instance Variables - VAR_INST</a></li>
-<li><a href="https://infosys.beckhoff.com/content/1033/tc3_plc_intro/2528803467.html">Remanent Variables - PERSISTENT, RETAIN</a></li>
+<li>
+<p><a href="https://infosys.beckhoff.com/content/1033/tc3_plc_intro/2528792715.html">External Variables - VAR_EXTERNAL</a></p>
+</li>
+<li>
+<p><a href="https://infosys.beckhoff.com/content/1033/tc3_plc_intro/2528803467.html">Remanent Variables - PERSISTENT, RETAIN</a></p>
+</li>
 <li><a href="https://infosys.beckhoff.com/content/1033/tc3_plc_intro/2528837771.html">SUPER</a></li>
 <li><a href="https://infosys.beckhoff.com/content/1033/tc3_plc_intro/2528843147.html">THIS</a></li>
-<li><a href="https://infosys.beckhoff.com/content/1033/tc3_plc_intro/2528848523.html">Variable types - attribute keywords</a><ul>
+<li>
+<p><a href="https://infosys.beckhoff.com/content/1033/tc3_plc_intro/2528848523.html">Variable types - attribute keywords</a></p>
+<ul>
 <li><a href="https://infosys.beckhoff.com/content/1033/tc3_plc_intro/2528803467.html">RETAIN: for remanent variables of type RETAIN</a></li>
 <li><a href="https://infosys.beckhoff.com/content/1033/tc3_plc_intro/2528803467.html">PERSISTENT: for remanent variables of type PERSISTENT</a></li>
 <li><a href="https://infosys.beckhoff.com/content/1033/tc3_plc_intro/2529284235.html#2529371275">CONSTANT: for constants</a></li>
 </ul>
+</li>
+<li>
+<p>Todos estos tipos de variables que se pueden declarar dentro del FB se pueden repetir los mismos tipos de variables dentro del FB,
+esto podria valer para diferenciar variables del mismo tipo en la zona de declaración, sería meramente indicativo...</p>
 </li>
 </ul>
 

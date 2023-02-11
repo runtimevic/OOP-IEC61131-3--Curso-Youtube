@@ -15,7 +15,7 @@
         <link rel="canonical" href="https://runtimevic.github.io/OOP-IEC61131-3--Curso-Youtube/es/Clases%20y%20Objetos/metodo/">
       
       
-        <link rel="prev" href="../modificadores%20de%20acceso/">
+        <link rel="prev" href="../Constructor%20y%20Destructor/">
       
       
         <link rel="next" href="../propiedad/">
@@ -448,20 +448,6 @@
           
         </ul>
       </nav>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../modificadores%20de%20acceso/" class="md-nav__link">
-        Modificadores de acceso
-      </a>
     </li>
   
 
@@ -1131,24 +1117,31 @@ No es obligatorio que un Método deba devolver un valor...</p>
 <h3 id="especificadores-de-acceso-para-los-metodos">Especificadores de acceso para los Metodos:</h3>
 <p>La declaración del método puede incluir un especificador de acceso opcional. Esto restringe el acceso al método.</p>
 <ul>
-<li><span style="color:orange">PÚBLICO:</span> <ul>
+<li><span style="color:orange">PUBLIC:</span> <ul>
 <li>Cualquiera puede llamar al método, no hay restricciones.</li>
 </ul>
 </li>
-<li><span style="color:orange">PRIVADO:</span> <ul>
+<li><span style="color:orange">PRIVATE:</span> <ul>
 <li>El método está disponible solo dentro de la POU. No se puede llamar desde fuera de la POU.</li>
+<li>Son accesibles dentro de la clase.</li>
+<li>El acceso está restringido al bloque de funciones o al programa, respectivamente.</li>
 </ul>
 </li>
-<li><span style="color:orange">PROTEGIDO:</span> <ul>
+<li><span style="color:orange">PROTECTED:</span> <ul>
 <li>Solo su propia POU o las POU derivadas de ella pueden acceder al método. La derivación se analiza a continuación.</li>
+<li>Son accesibles a través de la herencia.</li>
+<li>El acceso está restringido al programa o al bloque de función y sus derivados respectivamente.</li>
 </ul>
 </li>
-<li><span style="color:orange">INTERNO:</span> <ul>
+<li><span style="color:orange">INTERNAL:</span> <ul>
 <li>Solo se puede acceder al método desde el mismo espacio de nombres. Esto permite que los métodos estén disponibles solo dentro de una determinada biblioteca, por ejemplo.</li>
+<li>El acceso está limitado al espacio de nombres (la biblioteca).</li>
 </ul>
 </li>
 <li><span style="color:orange">FINAL:</span> <ul>
 <li>El método no puede ser sobrescrito por otro método. La sobrescritura de métodos se describe a continuación.</li>
+<li>No se permite sobrescribir, en un derivado del bloque de funciones. </li>
+<li>Esto significa que no se puede sobrescribir/extender en una subclase posiblemente existente.</li>
 </ul>
 </li>
 </ul>
@@ -1226,7 +1219,7 @@ No es obligatorio que un Método deba devolver un valor...</p>
       <nav class="md-footer__inner md-grid" aria-label="Pie" >
         
           
-          <a href="../modificadores%20de%20acceso/" class="md-footer__link md-footer__link--prev" aria-label="Anterior: Modificadores de acceso" rel="prev">
+          <a href="../Constructor%20y%20Destructor/" class="md-footer__link md-footer__link--prev" aria-label="Anterior: Constructor y Destructor" rel="prev">
             <div class="md-footer__button md-icon">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
             </div>
@@ -1235,7 +1228,7 @@ No es obligatorio que un Método deba devolver un valor...</p>
                 <span class="md-footer__direction">
                   Anterior
                 </span>
-                Modificadores de acceso
+                Constructor y Destructor
               </div>
             </div>
           </a>
