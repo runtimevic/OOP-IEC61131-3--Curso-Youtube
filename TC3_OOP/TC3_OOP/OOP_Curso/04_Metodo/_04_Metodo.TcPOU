@@ -1,12 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.12">
-  <POU Name="FB" Id="{570d6aa9-2f59-4dc1-8b37-85e86c9336c8}" SpecialFunc="None">
-    <Declaration><![CDATA[FUNCTION_BLOCK FINAL FB
-VAR_INPUT
-END_VAR
-VAR_OUTPUT
-END_VAR
+  <POU Name="_04_Metodo" Id="{0809fefa-bab8-4b56-8e0d-4935fd5424b9}" SpecialFunc="None">
+    <Declaration><![CDATA[PROGRAM _04_Metodo
 VAR
+	
 END_VAR
 ]]></Declaration>
     <Implementation>
