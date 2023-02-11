@@ -22,3 +22,5 @@ No hay restricciones, se puede llamar desde cualquier lugar.
     - El FB no puede servir como un bloque de funciones principal. 
     - Los métodos y las propiedades de esta POU no se pueden heredar. 
     - FINAL solo está permitido para POU del tipo FUNCTION_BLOCK.
+
+La configuración predeterminada donde no se define ningún especificador de acceso es PUBLIC .

@@ -25,23 +25,29 @@ mantenerse entre ciclos de ejecución, entonces la variable debe almacenarse en 
 algún otro lugar que retendrá los valores de un ciclo al otro (como la variable global
 lista).
 ***
-### Especificadores de acceso para los Metodos:
-La declaración del método puede incluir un especificador de acceso opcional. Esto restringe el acceso al método.
-
-- PÚBLICO	- Cualquiera puede llamar al método, no hay restricciones.
-- PRIVADO	- El método está disponible solo dentro de la POU. No se puede llamar desde fuera de la POU.
-- PROTEGIDO- Solo su propia POU o las POU derivadas de ella pueden acceder al método. La derivación se analiza a continuación.
-- INTERNO- Solo se puede acceder al método desde el mismo espacio de nombres. Esto permite que los métodos estén disponibles solo dentro de una determinada biblioteca, por ejemplo.
-- FINAL -El método no puede ser sobrescrito por otro método. La sobrescritura de métodos se describe a continuación.
-
-La configuración predeterminada donde no se define ningún especificador de acceso es PUBLIC .
-***
 Por lo tanto, una declaración de Método tiene la siguiente estructura:
 ```typescript
 METHOD <Access specifier> <Name> : <Datatype return value>
 ```
 No es obligatorio que un Método deba devolver un valor...
 ***
+### Especificadores de acceso para los Metodos:
+La declaración del método puede incluir un especificador de acceso opcional. Esto restringe el acceso al método.
+
+- <span style="color:orange">PÚBLICO:</span> 
+	- Cualquiera puede llamar al método, no hay restricciones.
+- <span style="color:orange">PRIVADO:</span> 
+	- El método está disponible solo dentro de la POU. No se puede llamar desde fuera de la POU.
+- <span style="color:orange">PROTEGIDO:</span> 
+    - Solo su propia POU o las POU derivadas de ella pueden acceder al método. La derivación se analiza a continuación.
+- <span style="color:orange">INTERNO:</span> 
+    - Solo se puede acceder al método desde el mismo espacio de nombres. Esto permite que los métodos estén disponibles solo dentro de una determinada biblioteca, por ejemplo.
+- <span style="color:orange">FINAL:</span> 
+    - El método no puede ser sobrescrito por otro método. La sobrescritura de métodos se describe a continuación.
+
+La configuración predeterminada donde no se define ningún especificador de acceso es PUBLIC .
+***
+
 🔗[Documentación Codesys del Objeto método](https://help.codesys.com/api-content/2/codesys/3.5.14.0/en/_cds_obj_method/#e4507ebe4233ac0c0a8640e00a37b12-id-3375759d0dd23b38c0a864630d4cd159)
 
 🔗[Documentación de Beckhoff del Objeto método](https://infosys.beckhoff.com/english.php?content=../content/1033/tc3_plc_intro/2530307467.html&id=)
