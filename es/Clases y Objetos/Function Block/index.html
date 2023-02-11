@@ -1121,19 +1121,27 @@
 <h3 id="implementacion-bloque-de-funciones">Implementación Bloque de Funciones:</h3>
 <p><img alt="Function_Block" src="../../imagenes/Function_Block_Coche.png" /></p>
 <h3 id="modificadores-de-acceso-bloque-de-funciones">Modificadores de acceso Bloque de Funciones:</h3>
-<p>Podemos tener 2 modificadores de acceso para el Bloque de Funciones:
-- PUBLIC: 
-No hay restricciones, se puede llamar desde cualquier lugar. 
-Si no ponemos nada al declarar el FB es lo mismo que PUBLIC.
-Cualquiera puede llamar o crear una instancia del FB.
-Se puede usar para la herencia al ser public. 
-- INTERNAL: 
-Solo se puede acceder al FB desde el mismo espacio de nombres. 
-Esto permite que el FB este disponible solo dentro de una determinada biblioteca.
-- FINAL:(en TwinCAT 3 no sale por defecto para seleccionarlo al crear un FB, pero se puede añadir mas tarde despues de crearlo...)
-El FB no puede servir como un bloque de funciones principal. 
-Los métodos y las propiedades de esta POU no se pueden heredar. 
-FINAL solo está permitido para POU del tipo FUNCTION_BLOCK.</p>
+<p>Podemos tener 2 modificadores de acceso para el Bloque de Funciones:</p>
+<ul>
+<li><span style="color:orange">PUBLIC:</span> 
+No hay restricciones, se puede llamar desde cualquier lugar. <ul>
+<li>Si no ponemos nada al declarar el FB es lo mismo que PUBLIC.</li>
+<li>Cualquiera puede llamar o crear una instancia del FB.</li>
+<li>Se puede usar para la herencia al ser public. </li>
+</ul>
+</li>
+<li><span style="color:orange">INTERNAL:</span> <ul>
+<li>Solo se puede acceder al FB desde el mismo espacio de nombres. </li>
+<li>Esto permite que el FB este disponible solo dentro de una determinada biblioteca.</li>
+</ul>
+</li>
+<li><span style="color:orange">FINAL:(en TwinCAT 3 no sale por defecto para seleccionarlo al crear un FB, pero se puede añadir mas tarde despues de crearlo...)</span> <ul>
+<li>El FB no puede servir como un bloque de funciones principal. </li>
+<li>Los métodos y las propiedades de esta POU no se pueden heredar. </li>
+<li>FINAL solo está permitido para POU del tipo FUNCTION_BLOCK.</li>
+</ul>
+</li>
+</ul>
 
 
 
