@@ -1123,21 +1123,36 @@ mantenerse entre ciclos de ejecución, entonces la variable debe almacenarse en 
 algún otro lugar que retendrá los valores de un ciclo al otro (como la variable global
 lista).</p>
 <hr />
-<h3 id="especificadores-de-acceso-para-los-metodos">Especificadores de acceso para los Metodos:</h3>
-<p>La declaración del método puede incluir un especificador de acceso opcional. Esto restringe el acceso al método.</p>
-<ul>
-<li>PÚBLICO   - Cualquiera puede llamar al método, no hay restricciones.</li>
-<li>PRIVADO   - El método está disponible solo dentro de la POU. No se puede llamar desde fuera de la POU.</li>
-<li>PROTEGIDO- Solo su propia POU o las POU derivadas de ella pueden acceder al método. La derivación se analiza a continuación.</li>
-<li>INTERNO- Solo se puede acceder al método desde el mismo espacio de nombres. Esto permite que los métodos estén disponibles solo dentro de una determinada biblioteca, por ejemplo.</li>
-<li>FINAL -El método no puede ser sobrescrito por otro método. La sobrescritura de métodos se describe a continuación.</li>
-</ul>
-<p>La configuración predeterminada donde no se define ningún especificador de acceso es PUBLIC .</p>
-<hr />
 <p>Por lo tanto, una declaración de Método tiene la siguiente estructura:
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nx">METHOD</span><span class="w"> </span><span class="o">&lt;</span><span class="nx">Access</span><span class="w"> </span><span class="nx">specifier</span><span class="o">&gt;</span><span class="w"> </span><span class="o">&lt;</span><span class="nx">Name</span><span class="o">&gt;</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="o">&lt;</span><span class="nx">Datatype</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="nx">value</span><span class="o">&gt;</span>
 </code></pre></div></td></tr></table></div>
 No es obligatorio que un Método deba devolver un valor...</p>
+<hr />
+<h3 id="especificadores-de-acceso-para-los-metodos">Especificadores de acceso para los Metodos:</h3>
+<p>La declaración del método puede incluir un especificador de acceso opcional. Esto restringe el acceso al método.</p>
+<ul>
+<li><span style="color:orange">PÚBLICO:</span> <ul>
+<li>Cualquiera puede llamar al método, no hay restricciones.</li>
+</ul>
+</li>
+<li><span style="color:orange">PRIVADO:</span> <ul>
+<li>El método está disponible solo dentro de la POU. No se puede llamar desde fuera de la POU.</li>
+</ul>
+</li>
+<li><span style="color:orange">PROTEGIDO:</span> <ul>
+<li>Solo su propia POU o las POU derivadas de ella pueden acceder al método. La derivación se analiza a continuación.</li>
+</ul>
+</li>
+<li><span style="color:orange">INTERNO:</span> <ul>
+<li>Solo se puede acceder al método desde el mismo espacio de nombres. Esto permite que los métodos estén disponibles solo dentro de una determinada biblioteca, por ejemplo.</li>
+</ul>
+</li>
+<li><span style="color:orange">FINAL:</span> <ul>
+<li>El método no puede ser sobrescrito por otro método. La sobrescritura de métodos se describe a continuación.</li>
+</ul>
+</li>
+</ul>
+<p>La configuración predeterminada donde no se define ningún especificador de acceso es PUBLIC .</p>
 <hr />
 <p>🔗<a href="https://help.codesys.com/api-content/2/codesys/3.5.14.0/en/_cds_obj_method/#e4507ebe4233ac0c0a8640e00a37b12-id-3375759d0dd23b38c0a864630d4cd159">Documentación Codesys del Objeto método</a></p>
 <p>🔗<a href="https://infosys.beckhoff.com/english.php?content=../content/1033/tc3_plc_intro/2530307467.html&amp;id=">Documentación de Beckhoff del Objeto método</a></p>
