@@ -15,8 +15,7 @@ The variable type defines how and where you can use the variable. The variable t
     - Las variables temporales se declaran localmente entre las palabras clave VAR_TEMP y END_VAR.
     - VAR_TEMP declaraciones sólo son posibles en **programas y bloques de funciones.**
     - TwinCAT reinicializa las variables temporales cada vez que se llama al bloque de funciones.
-
-La aplicación sólo puede acceder a variables temporales en la parte de implementación de un programa o bloque de funciones.
+    - La aplicación sólo puede acceder a variables temporales en la parte de implementación de un programa o bloque de funciones.
 - [Static Variables - VAR_STAT](https://infosys.beckhoff.com/content/1033/tc3_plc_intro/2528787339.html)
     - Esta funcionalidad es una extensión con respecto a la norma IEC 61131-3.
     - Las variables estáticas se declaran localmente entre las palabras clave VAR_STAT y END_VAR. TwinCAT inicializa las variables estáticas cuando se llama por primera vez al bloque de funciones respectivo.

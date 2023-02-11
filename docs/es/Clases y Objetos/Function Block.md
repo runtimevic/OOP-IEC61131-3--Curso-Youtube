@@ -53,7 +53,7 @@ FUNCTION_BLOCK PUBLIC ABSTRACT FB_Foo
 ***
 
 ```javascript
-- Ejemplos de declaracion de FUNCTION_BLOCK:
+- Ejemplos de declaración de FUNCTION_BLOCK:
 FUNCTION_BLOCK INTERNAL ABSTRACT FB
 FUNCTION_BLOCK INTERNAL FINAL FB
 FUNCTION_BLOCK PUBLIC FINAL FB
@@ -82,5 +82,4 @@ FUNCTION_BLOCK FB EXTENDS FB1 IMPLEMENTS Interface1, Interface2, Interface3
 
 - Todos estos tipos de variables que se pueden declarar dentro del FB se pueden repetir los mismos tipos de variables dentro del FB,
 esto podria valer para diferenciar variables del mismo tipo en la zona de declaración, sería meramente indicativo...
-
 
