@@ -504,7 +504,7 @@
       
         <li class="md-nav__item">
   <a href="#propiedades" class="md-nav__link">
-    propiedades
+    Propiedades:
   </a>
   
 </li>
@@ -1054,7 +1054,7 @@
       
         <li class="md-nav__item">
   <a href="#propiedades" class="md-nav__link">
-    propiedades
+    Propiedades:
   </a>
   
 </li>
@@ -1085,7 +1085,7 @@
 
   <h1>Propiedad</h1>
 
-<h3 id="propiedades">propiedades</h3>
+<h3 id="propiedades"><span style="color:grey">Propiedades:</span></h3>
 <hr />
 <p>Las propiedades son las principales variables de una clase. Se pueden utilizar como una alternativa a la clase regular o
 E/S del bloque de funciones.
@@ -1114,30 +1114,49 @@ variables;</li>
 </code></pre></div></td></tr></table></div>
 En el Objeto Propiedad es obligatorio que retorne un valor...</p>
 <hr />
-<h3 id="especificadores-de-acceso">Especificadores de acceso:</h3>
+<h3 id="especificadores-de-acceso"><span style="color:grey">Especificadores de acceso:</span></h3>
 <p>Al igual que con los métodos, las propiedades también pueden tomar los siguientes especificadores de acceso: <strong>PUBLIC , PRIVATE , PROTECTED , INTERNAL y FINAL</strong> . Cuando no se define ningún especificador de acceso, la propiedad es <strong>PUBLIC</strong> . Además, también se puede especificar un especificador de acceso para cada setter y getter. Esto tiene prioridad sobre el propio especificador de acceso de la propiedad.</p>
 <p>Las propiedades son reconocibles por las siguientes características:</p>
 <p>Especificador de acceso:</p>
 <ul>
-<li>PÚBLICO: Corresponde a la especificación de modificador sin acceso.</li>
-<li>PRIVADO: el acceso a la propiedad está limitado solo al bloque de funciones.</li>
-<li>PROTEGIDO: El acceso a la propiedad está limitado al programa o al bloque de función y sus derivados.</li>
-<li>INTERNO: El acceso a la propiedad está limitado al espacio de nombres, es decir, a la biblioteca.</li>
-<li>FINAL: No se permite sobrescribir la propiedad en un derivado del bloque de funciones. Esto significa que la propiedad no se puede sobrescribir ni extender en una subclase posiblemente existente.
-Las propiedades pueden ser abstractas, lo que significa que una propiedad no tiene una implementación inicial y que la implementación real se proporciona en el bloque de funciones derivado.</li>
+<li><span style="color:orange">PUBLIC:</span> <ul>
+<li>Corresponde a la especificación de modificador sin acceso.</li>
+</ul>
+</li>
+<li><span style="color:orange">PRIVATE:</span> <ul>
+<li>El acceso a la propiedad está limitado solo al bloque de funciones.</li>
+</ul>
+</li>
+<li><span style="color:orange">PROTECTED:</span><ul>
+<li>El acceso a la propiedad está limitado al programa o al bloque de función y sus derivados.</li>
+</ul>
+</li>
+<li><span style="color:orange">INTERNAL:</span><ul>
+<li>El acceso a la propiedad está limitado al espacio de nombres, es decir, a la biblioteca.</li>
+</ul>
+</li>
+<li><span style="color:orange">FINAL:</span> <ul>
+<li>No se permite sobrescribir la propiedad en un derivado del bloque de funciones. Esto significa que la propiedad no se puede sobrescribir ni extender en una subclase posiblemente existente.</li>
+<li>Las propiedades pueden ser abstractas, lo que significa que una propiedad no tiene una implementación inicial y que la implementación real se proporciona en el bloque de funciones derivado.</li>
+</ul>
+</li>
 </ul>
 <p>Los pragmas son muy útiles para monitorear propiedades en modo en línea. Para esto, escríbalos en la parte superior de las declaraciones de propiedades (atributo 'monitoreo'):</p>
 <p>{attribute 'monitoring := 'variable'}:  Al acceder a una propiedad, TwinCAT almacena el valor real en una variable y muestra el valor de esta última. Este valor puede volverse obsoleto si el código ya no accede a la propiedad.</p>
 <p>{attribute 'monitoring' := 'call'}:  Cada vez que se muestra el valor, TwinCAT llama al código del descriptor de acceso Get. Cualquier efecto secundario, provocado por ese código, puede aparecer en el seguimiento.</p>
 <hr />
-<p>🔗<a href="https://help.codesys.com/api-content/2/codesys/3.5.12.0/en/_cds_obj_property/#b08bdbd0d86c0a8640e00400511-id-5dbd3039bdbd0d85c0a8640e003d7982">Documentación de Codesys del Objeto propiedad</a></p>
-<p>🔗<a href="https://infosys.beckhoff.com/english.php?content=../content/1033/tc3_plc_intro/2530307467.html&amp;id=">Documentación de Beckhoff del Objeto propiedad</a></p>
 <ul>
 <li>
-<p>🔗 https://twincontrols.com/community/twincat-troubleshooting/utilizing-properties/#post-76</p>
+<p>🔗 <a href="https://help.codesys.com/api-content/2/codesys/3.5.12.0/en/_cds_obj_property/#b08bdbd0d86c0a8640e00400511-id-5dbd3039bdbd0d85c0a8640e003d7982">Documentación de Codesys del Objeto propiedad</a></p>
 </li>
 <li>
-<p>https://en.grse.de/blog/object-oriented-programming-in-programmable-logic-controllers-plc-whats-really-new/</p>
+<p>🔗 <a href="https://infosys.beckhoff.com/english.php?content=../content/1033/tc3_plc_intro/2530307467.html&amp;id=">Documentación de Beckhoff del Objeto propiedad</a></p>
+</li>
+<li>
+<p>🔗 <a href="https://twincontrols.com/community/twincat-troubleshooting/utilizing-properties/#post-76">utilizing-properties,twincontrols.com</a></p>
+</li>
+<li>
+<p>🔗 <a href="https://en.grse.de/blog/object-oriented-programming-in-programmable-logic-controllers-plc-whats-really-new/">object-oriented-programming-in-programmable-logic-controllers-plc-whats-really-new,en.grse.de</a></p>
 </li>
 </ul>
 
