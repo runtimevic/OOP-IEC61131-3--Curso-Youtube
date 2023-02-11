@@ -1,4 +1,4 @@
-### <span style="color:orange">Métodos 'FB_Init', 'FB_Reinit' y 'FB_Exit':</span>
+### <span style="color:grey">Métodos 'FB_Init', 'FB_Reinit' y 'FB_Exit':</span>
 
 ### <span style="color:orange">FB_Init:</span>
 - Dependiendo de la tarea, puede ser necesario que los bloques de funciones requieran parámetros que solo se usan una vez para las tareas de inicialización. Una forma posible de pasarlos elegantemente es usar el método FB_init().

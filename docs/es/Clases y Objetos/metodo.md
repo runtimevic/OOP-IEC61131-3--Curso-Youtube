@@ -1,4 +1,4 @@
-### metodos
+### ### <span style="color:grey">Metodos:</span>
 
 Los métodos dividen la clase o el bloque de funciones en funciones más pequeñas que se pueden ejecutar en
 llamada. Solo trabajarán con los datos que necesitan e ignorarán cualquier dato redundante que
@@ -31,7 +31,7 @@ METHOD <Access specifier> <Name> : <Datatype return value>
 ```
 No es obligatorio que un Método deba devolver un valor...
 ***
-### Especificadores de acceso para los Metodos:
+### <span style="color:grey">Especificadores de acceso para los Metodos:</span>
 La declaración del método puede incluir un especificador de acceso opcional. Esto restringe el acceso al método.
 
 - <span style="color:orange">PUBLIC:</span> 
