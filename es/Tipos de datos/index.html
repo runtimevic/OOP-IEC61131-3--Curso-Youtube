@@ -611,6 +611,13 @@
       
         <li class="md-nav__item">
   <a href="#tipos-de-datos" class="md-nav__link">
+    Tipos de Datos:
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tipos-de-datos_1" class="md-nav__link">
     tipos de datos:
   </a>
   
@@ -619,6 +626,34 @@
         <li class="md-nav__item">
   <a href="#las-ventajas-de-las-estructuras-de-datos" class="md-nav__link">
     Las ventajas de las estructuras de datos.
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#standard-data-types" class="md-nav__link">
+    Standard data types
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#extensions-of-the-iec-61131-3-standard" class="md-nav__link">
+    Extensions of the IEC 61131-3 standard
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#user-defined-data-types" class="md-nav__link">
+    User-defined data types
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#further-information" class="md-nav__link">
+    Further Information
   </a>
   
 </li>
@@ -1052,6 +1087,13 @@
       
         <li class="md-nav__item">
   <a href="#tipos-de-datos" class="md-nav__link">
+    Tipos de Datos:
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tipos-de-datos_1" class="md-nav__link">
     tipos de datos:
   </a>
   
@@ -1060,6 +1102,34 @@
         <li class="md-nav__item">
   <a href="#las-ventajas-de-las-estructuras-de-datos" class="md-nav__link">
     Las ventajas de las estructuras de datos.
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#standard-data-types" class="md-nav__link">
+    Standard data types
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#extensions-of-the-iec-61131-3-standard" class="md-nav__link">
+    Extensions of the IEC 61131-3 standard
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#user-defined-data-types" class="md-nav__link">
+    User-defined data types
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#further-information" class="md-nav__link">
+    Further Information
   </a>
   
 </li>
@@ -1083,7 +1153,8 @@
 
   <h1>Tipos de Datos</h1>
 
-<h3 id="tipos-de-datos">tipos de datos:</h3>
+<h3 id="tipos-de-datos"><span style="color:grey"><a href="https://infosys.beckhoff.com/content/1033/tc3_plc_intro/2529388939.html?id=3451082169760117126">Tipos de Datos:</a></span></h3>
+<h3 id="tipos-de-datos_1">tipos de datos:</h3>
 <h3 id="las-ventajas-de-las-estructuras-de-datos">Las ventajas de las estructuras de datos.</h3>
 <ul>
 <li>La principal aportación de las estructuras de datos y los tipos de datos 
@@ -1102,6 +1173,70 @@ creados por el usuario es la claridad y el orden del código resultante.</li>
 Los UDT (User Data Type) son tipos de datos que el usuario crea a su medida, 
 según las necesidades de cada proyecto.</p>
 </li>
+</ul>
+<hr />
+<p>When programming in TwinCAT, you can use different data types or instances of function blocks. You assign a data type to each identifier. The data type determines how much memory space is allocated and how these values are interpreted.</p>
+<p>The following groups of data types are available:</p>
+<h3 id="standard-data-types">Standard data types</h3>
+<p>TwinCAT supports all data types described in the IEC 61131-3 standard.</p>
+<ul>
+<li>BOOL</li>
+<li>Integer Data Types</li>
+<li>REAL / LREAL</li>
+<li>STRING</li>
+<li>WSTRING</li>
+<li>Time, date and time data types</li>
+<li>LTIME</li>
+</ul>
+<h3 id="extensions-of-the-iec-61131-3-standard">Extensions of the IEC 61131-3 standard</h3>
+<ul>
+<li>BIT</li>
+<li>ANY and ANY_<type></li>
+<li>Special data types XINT, UXINT, XWORD and PVOID</li>
+<li>REFERENCE</li>
+<li>UNION</li>
+<li>POINTER</li>
+<li>Data type __SYSTEM.ExceptionCode</li>
+</ul>
+<h3 id="user-defined-data-types">User-defined data types</h3>
+<p>Note the recommendations for naming objects.</p>
+<ul>
+<li>POINTER</li>
+<li>REFERENCE</li>
+<li>ARRAY</li>
+<li>
+<p>Subrange Types
+User-defined data types that you create as DUT object in the TwinCAT PLC project tree:</p>
+</li>
+<li>
+<p>Structure</p>
+</li>
+<li>Enumerations</li>
+<li>Alias</li>
+<li>UNION</li>
+</ul>
+<h3 id="further-information">Further Information</h3>
+<ul>
+<li>BOOL</li>
+<li>Integer Data Types</li>
+<li>Subrange Types</li>
+<li>BIT</li>
+<li>REAL / LREAL</li>
+<li>STRING</li>
+<li>WSTRING</li>
+<li>Time, date and time data types</li>
+<li>ANY and ANY_<type></li>
+<li>Special data types XINT, UXINT, XWORD and PVOID</li>
+<li>POINTER</li>
+<li>Data type __SYSTEM.ExceptionCode</li>
+<li>Interface pointer / INTERFACE</li>
+<li>REFERENCE
+https://infosys.beckhoff.com/english.php?content=../content/1033/tc3_plc_intro/2529458827.html&amp;id=</li>
+<li>ARRAY</li>
+<li>Structure</li>
+<li>Enumerations</li>
+<li>Alias</li>
+<li>UNION</li>
 </ul>
 
 
