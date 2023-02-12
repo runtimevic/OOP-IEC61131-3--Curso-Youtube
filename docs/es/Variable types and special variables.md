@@ -49,11 +49,9 @@ Las variables remanentes pueden conservar sus valores más allá del tiempo de e
 Un requisito previo para la funcionalidad completa de las variables RETAIN es un área de memoria correspondiente en el controlador (NovRam). Las variables persistentes se escriben solo cuando TwinCAT se apaga. Esto requerirá generalmente un UPS correspondiente. Excepción: Las variables persistentes también se pueden escribir con el bloque de función FB_WritePersistentData.
 
 Si el área de memoria correspondiente no existe, los valores de las variables RETAIN y PERSISTENT se pierden durante un corte de energía.
-
-Variables remanentes - PERSISTENT, RETAIN 1:	
+	
 La declaración AT no debe utilizarse en combinación con VAR RETAIN o VAR PERSISTENT.
-
-Variables persistentes
+### Variables persistentes
 Puede declarar variables persistentes agregando la palabra clave PERSISTENT después de la palabra clave para el tipo de variable (VAR, VAR_GLOBAL, etc.) en la parte de declaración de los objetos de programación.
 
 Las variables PERSISTENTES conservan su valor después de una terminación no controlada, un Reset cold o una nueva descarga del proyecto PLC.
@@ -62,32 +60,11 @@ En otras palabras, TwinCAT solo reinicializa las variables PERSISTENTES durante 
 
 Un ejemplo de aplicación para variables persistentes es un contador de horas de funcionamiento, que debe continuar contando después de un corte de energía y cuando el proyecto PLC se descarga nuevamente.
 
-Tabla de información general que muestra el comportamiento de las variables PERSISTENTES
-Después del comando en línea
-
-VAR PERSISTENTE
-
-Restablecer frío
-
-Los valores se conservan
-
-Restablecer origen
-
-Los valores se reinicializan
-
-Descargar
-
-Los valores se conservan
-
-Cambio en línea
-
-Los valores se conservan
-
 Evite usar el tipo de datos POINTER TO en listas de variables persistentes, ya que los valores de dirección pueden cambiar cuando el proyecto PLC se descargue nuevamente. TwinCAT emite las advertencias correspondientes del compilador.
 Declarar una variable local como PERSISTENTE en una función no tiene ningún efecto. La persistencia de datos no se puede utilizar de esta manera.
 El comportamiento durante un restablecimiento en frío puede verse influenciado por el pragma 'TcInitOnReset'
 ***
-Variables RETAIN
+### Variables RETAIN
 Puede declarar variables RETAIN agregando la palabra clave RETAIN después de la palabra clave para el tipo de variable (VAR, VAR_GLOBAL, etc.) en la parte de declaración de los objetos de programación.
 
 Las variables declaradas como RETAIN dependen del sistema de destino, pero normalmente se administran en un área de memoria separada que debe protegerse contra fallas de energía. El llamado controlador Retain asegura que las variables RETAIN se escriban al final de un ciclo PLC y solo en el área correspondiente de la NovRam. El manejo del controlador de retención se describe en el capítulo "Conservar datos" de la documentación de C/C++.
@@ -97,22 +74,20 @@ TwinCAT reinicializa las variables RETAIN en un origen de restablecimiento.
 
 Una posible aplicación es un contador de piezas en una planta de producción, que debe seguir contando después de un corte de energía.
 
-Tabla general que muestra el comportamiento de las variables RETAIN
-Después del comando en línea
+Si declara una variable local como RETAIN en un programa o bloque de funciones, TwinCAT almacena esta variable específica en el área de retención (como una variable RETEAIN global).
+Si declara una variable local en una función como RETAIN, esto no tiene efecto. TwinCAT no almacena la variable en el área de retención.
 
-RETENCIÓN DE VAR
+### Cuadro general completo
+El grado de retención de las variables RETAIN se incluye automáticamente en el de las variables PERSISTENT.
 
-Restablecer frío
+| **Después del comando en línea**  | **VAR**  | **VAR RETAIN** | **VAR PERSISTENT** |
+|:------------- |:----------------| :-------------| :-------------|
+| Restablecer frío         | Los valores se reinicializan | Los valores se mantienen       | Los valores se mantienen     |
+| Restablecer origen       | Los valores se reinicializan | Los valores se reinicializan   | Los valores se reinicializan |
+| Descargar                | Los valores se reinicializan | Los valores se mantienen       | Los valores se mantienen     |
+| Cambio en línea          | Los valores se mantienen     | Los valores se mantienen       | Los valores se mantienen     |
 
-Los valores se conservan
-
-Restablecer origen
-
-Los valores se reinicializan
-
-Descargar
-
-Los valores se conservan
+***
 - [SUPER](https://infosys.beckhoff.com/content/1033/tc3_plc_intro/2528837771.html)
 - [THIS](https://infosys.beckhoff.com/content/1033/tc3_plc_intro/2528843147.html)
 - [Variable types - attribute keywords](https://infosys.beckhoff.com/content/1033/tc3_plc_intro/2528848523.html)
