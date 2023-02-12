@@ -121,7 +121,11 @@ nav:
           - Function Block Declaration variables: Clases y Objetos/Function Block Declaracion de variables.md
           - Constructor and Destructor: Clases y Objetos/Constructor y Destructor.md
 #       - Access modifiers: Clases y Objetos/modificadores de acceso.md           
-       - Method: Clases y Objetos/metodo.md
+       - Method:
+          - Method: Clases y Objetos/metodo.md
+          - Method access modifiers: Clases y Objetos/Metodo Modificadores de acceso.md
+          - Method Declaration of variables: Clases y Objetos/Metodo Declaracion de variables.md
+          - Method return variable types: Clases y Objetos/Metodo Tipos de variables de retorno.md      
        - Property: Clases y Objetos/propiedad.md
        - Inheritance: Clases y Objetos/herencia.md
        - Interface: Clases y Objetos/interface.md
