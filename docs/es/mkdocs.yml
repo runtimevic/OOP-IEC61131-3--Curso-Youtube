@@ -54,7 +54,7 @@ plugins:
   - with-pdf:
       copyright: Copyright &copy; 2023 Víctor Durán.
       cover_subtitle: Programación Orientada a Objetos OOP IEC61131-3 PLC Curso Youtube by Runtimevic.
-      output_path: ../document.pdf
+      output_path: ../document-es.pdf
   - pdf-export:
       combined: true             
 
@@ -68,7 +68,7 @@ extra:
     - icon: fontawesome/solid/paper-plane
       link: mailto:victorduranm@hotmail.com
     - icon: fontawesome/regular/file-pdf
-      link: https://github.com/runtimevic/OOP-IEC61131-3--Curso-Youtube/blob/gh-pages/document.pdf
+      link: https://github.com/runtimevic/OOP-IEC61131-3--Curso-Youtube/blob/gh-pages/document-es.pdf
     - icon: fontawesome/brands/youtube
       link: https://youtube.com/playlist?list=PLEfi_hUmmSjFpfdJ6yw3B9yj7dWHYkHmQ       
   version:
