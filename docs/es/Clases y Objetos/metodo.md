@@ -1,6 +1,6 @@
 ### <span style="color:grey">Metodos:</span>
 
-Los métodos dividen la clase o el bloque de funciones en funciones más pequeñas que se pueden ejecutar en
+Los Métodos dividen la clase o el bloque de funciones en funciones más pequeñas que se pueden ejecutar en
 llamada. Solo trabajarán con los datos que necesitan e ignorarán cualquier dato redundante que
 puede existir en un determinado bloque de funciones.
 
@@ -54,7 +54,39 @@ La declaración del método puede incluir un especificador de acceso opcional. E
 
 La configuración predeterminada donde no se define ningún especificador de acceso es PUBLIC .
 ***
+- Ejemplos de declaración de METHODS:
+```javascript
+METHOD Method1 : BOOL
+VAR_INPUT
+    nIn1  : INT;
+    bIn2  : BOOL;
+END_VAR
+VAR_OUTPUT
+    fOut1 : REAL;
+    sOut2 : STRING;
+END_VAR
+```
+***
+!!!!!!!!!!!!! HAY QUE MIRAR QUE VARIABLES SE PUEDEN DECLARAR EN EL METODO !!!!!!!!!!!!!!!
 
+- [Local Variables - VAR](https://infosys.beckhoff.com/content/1033/tc3_plc_intro/2528755083.html)
+- [Input Variables - VAR_INPUT](https://infosys.beckhoff.com/content/1033/tc3_plc_intro/2528760459.html)
+- [Output Variables - VAR_OUTPUT](https://infosys.beckhoff.com/content/1033/tc3_plc_intro/2528765835.html)
+- [Input/Output Variables - VAR_IN_OUT, VAR_IN_OUT CONSTANT](https://infosys.beckhoff.com/content/1033/tc3_plc_intro/2528771211.html)
+
+- [Temporary Variable - VAR_TEMP](https://infosys.beckhoff.com/content/1033/tc3_plc_intro/2528781963.html)
+- [Static Variables - VAR_STAT](https://infosys.beckhoff.com/content/1033/tc3_plc_intro/2528787339.html)
+- [External Variables - VAR_EXTERNAL](https://infosys.beckhoff.com/content/1033/tc3_plc_intro/2528792715.html)
+- [Instance Variables - VAR_INST](https://infosys.beckhoff.com/content/1033/tc3_plc_intro/2528798091.html)
+- [Remanent Variables - PERSISTENT, RETAIN](https://infosys.beckhoff.com/content/1033/tc3_plc_intro/2528803467.html)
+- [SUPER](https://infosys.beckhoff.com/content/1033/tc3_plc_intro/2528837771.html)
+- [THIS](https://infosys.beckhoff.com/content/1033/tc3_plc_intro/2528843147.html)
+- [Variable types - attribute keywords](https://infosys.beckhoff.com/content/1033/tc3_plc_intro/2528848523.html)
+    - [RETAIN: for remanent variables of type RETAIN](https://infosys.beckhoff.com/content/1033/tc3_plc_intro/2528803467.html)
+    - [PERSISTENT: for remanent variables of type PERSISTENT](https://infosys.beckhoff.com/content/1033/tc3_plc_intro/2528803467.html)
+    - [CONSTANT: for constants](https://infosys.beckhoff.com/content/1033/tc3_plc_intro/2529284235.html#2529371275)
+
+***
 - 🔗 [Documentación Codesys del Objeto método](https://help.codesys.com/api-content/2/codesys/3.5.14.0/en/_cds_obj_method/#e4507ebe4233ac0c0a8640e00a37b12-id-3375759d0dd23b38c0a864630d4cd159)
 
 - 🔗 [Documentación de Beckhoff del Objeto método](https://infosys.beckhoff.com/english.php?content=../content/1033/tc3_plc_intro/2530307467.html&id=)
