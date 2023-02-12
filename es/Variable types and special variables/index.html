@@ -579,6 +579,27 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#variables-persistentes" class="md-nav__link">
+    Variables persistentes
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#variables-retain" class="md-nav__link">
+    Variables RETAIN
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cuadro-general-completo" class="md-nav__link">
+    Cuadro general completo
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#_1" class="md-nav__link">
     
   </a>
@@ -1072,6 +1093,27 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#variables-persistentes" class="md-nav__link">
+    Variables persistentes
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#variables-retain" class="md-nav__link">
+    Variables RETAIN
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cuadro-general-completo" class="md-nav__link">
+    Cuadro general completo
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#_1" class="md-nav__link">
     
   </a>
@@ -1161,50 +1203,74 @@ Las variables remanentes pueden conservar sus valores más allá del tiempo de e
 </ul>
 <p>Un requisito previo para la funcionalidad completa de las variables RETAIN es un área de memoria correspondiente en el controlador (NovRam). Las variables persistentes se escriben solo cuando TwinCAT se apaga. Esto requerirá generalmente un UPS correspondiente. Excepción: Las variables persistentes también se pueden escribir con el bloque de función FB_WritePersistentData.</p>
 <p>Si el área de memoria correspondiente no existe, los valores de las variables RETAIN y PERSISTENT se pierden durante un corte de energía.</p>
-<p>Variables remanentes - PERSISTENT, RETAIN 1:  <br />
-La declaración AT no debe utilizarse en combinación con VAR RETAIN o VAR PERSISTENT.</p>
-<p>Variables persistentes
-Puede declarar variables persistentes agregando la palabra clave PERSISTENT después de la palabra clave para el tipo de variable (VAR, VAR_GLOBAL, etc.) en la parte de declaración de los objetos de programación.</p>
+<p>La declaración AT no debe utilizarse en combinación con VAR RETAIN o VAR PERSISTENT.</p>
+<h3 id="variables-persistentes">Variables persistentes</h3>
+<p>Puede declarar variables persistentes agregando la palabra clave PERSISTENT después de la palabra clave para el tipo de variable (VAR, VAR_GLOBAL, etc.) en la parte de declaración de los objetos de programación.</p>
 <p>Las variables PERSISTENTES conservan su valor después de una terminación no controlada, un Reset cold o una nueva descarga del proyecto PLC.
 Cuando el programa se reinicia, el sistema continúa funcionando con los valores almacenados. En este caso, TwinCAT reinicializa las variables "normales" con sus valores iniciales especificados explícitamente o con las inicializaciones predeterminadas.
 En otras palabras, TwinCAT solo reinicializa las variables PERSISTENTES durante un origen de Restablecer.</p>
 <p>Un ejemplo de aplicación para variables persistentes es un contador de horas de funcionamiento, que debe continuar contando después de un corte de energía y cuando el proyecto PLC se descarga nuevamente.</p>
-<p>Tabla de información general que muestra el comportamiento de las variables PERSISTENTES
-Después del comando en línea</p>
-<p>VAR PERSISTENTE</p>
-<p>Restablecer frío</p>
-<p>Los valores se conservan</p>
-<p>Restablecer origen</p>
-<p>Los valores se reinicializan</p>
-<p>Descargar</p>
-<p>Los valores se conservan</p>
-<p>Cambio en línea</p>
-<p>Los valores se conservan</p>
 <p>Evite usar el tipo de datos POINTER TO en listas de variables persistentes, ya que los valores de dirección pueden cambiar cuando el proyecto PLC se descargue nuevamente. TwinCAT emite las advertencias correspondientes del compilador.
 Declarar una variable local como PERSISTENTE en una función no tiene ningún efecto. La persistencia de datos no se puede utilizar de esta manera.
 El comportamiento durante un restablecimiento en frío puede verse influenciado por el pragma 'TcInitOnReset'</p>
 <hr />
-<p>Variables RETAIN
-Puede declarar variables RETAIN agregando la palabra clave RETAIN después de la palabra clave para el tipo de variable (VAR, VAR_GLOBAL, etc.) en la parte de declaración de los objetos de programación.</p>
+<h3 id="variables-retain">Variables RETAIN</h3>
+<p>Puede declarar variables RETAIN agregando la palabra clave RETAIN después de la palabra clave para el tipo de variable (VAR, VAR_GLOBAL, etc.) en la parte de declaración de los objetos de programación.</p>
 <p>Las variables declaradas como RETAIN dependen del sistema de destino, pero normalmente se administran en un área de memoria separada que debe protegerse contra fallas de energía. El llamado controlador Retain asegura que las variables RETAIN se escriban al final de un ciclo PLC y solo en el área correspondiente de la NovRam. El manejo del controlador de retención se describe en el capítulo "Conservar datos" de la documentación de C/C++.</p>
 <p>Las variables RETAIN conservan su valor después de una terminación incontrolada (corte de energía). Cuando el programa se reinicia, el sistema continúa funcionando con los valores almacenados. En este caso, TwinCAT reinicializa las variables "normales" con sus valores iniciales especificados explícitamente o con las inicializaciones predeterminadas.
 TwinCAT reinicializa las variables RETAIN en un origen de restablecimiento.</p>
 <p>Una posible aplicación es un contador de piezas en una planta de producción, que debe seguir contando después de un corte de energía.</p>
-<p>Tabla general que muestra el comportamiento de las variables RETAIN
-Después del comando en línea</p>
-<p>RETENCIÓN DE VAR</p>
-<p>Restablecer frío</p>
-<p>Los valores se conservan</p>
-<p>Restablecer origen</p>
-<p>Los valores se reinicializan</p>
-<p>Descargar</p>
-<p>Los valores se conservan
-- <a href="https://infosys.beckhoff.com/content/1033/tc3_plc_intro/2528837771.html">SUPER</a>
-- <a href="https://infosys.beckhoff.com/content/1033/tc3_plc_intro/2528843147.html">THIS</a>
-- <a href="https://infosys.beckhoff.com/content/1033/tc3_plc_intro/2528848523.html">Variable types - attribute keywords</a>
-    - <a href="https://infosys.beckhoff.com/content/1033/tc3_plc_intro/2528803467.html">RETAIN: for remanent variables of type RETAIN</a>
-    - <a href="https://infosys.beckhoff.com/content/1033/tc3_plc_intro/2528803467.html">PERSISTENT: for remanent variables of type PERSISTENT</a>
-    - <a href="https://infosys.beckhoff.com/content/1033/tc3_plc_intro/2529284235.html#2529371275">CONSTANT: for constants</a></p>
+<p>Si declara una variable local como RETAIN en un programa o bloque de funciones, TwinCAT almacena esta variable específica en el área de retención (como una variable RETEAIN global).
+Si declara una variable local en una función como RETAIN, esto no tiene efecto. TwinCAT no almacena la variable en el área de retención.</p>
+<h3 id="cuadro-general-completo">Cuadro general completo</h3>
+<p>El grado de retención de las variables RETAIN se incluye automáticamente en el de las variables PERSISTENT.</p>
+<table>
+<thead>
+<tr>
+<th align="left"><strong>Después del comando en línea</strong></th>
+<th align="left"><strong>VAR</strong></th>
+<th align="left"><strong>VAR RETAIN</strong></th>
+<th align="left"><strong>VAR PERSISTENT</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">Restablecer frío</td>
+<td align="left">Los valores se reinicializan</td>
+<td align="left">Los valores se mantienen</td>
+<td align="left">Los valores se mantienen</td>
+</tr>
+<tr>
+<td align="left">Restablecer origen</td>
+<td align="left">Los valores se reinicializan</td>
+<td align="left">Los valores se reinicializan</td>
+<td align="left">Los valores se reinicializan</td>
+</tr>
+<tr>
+<td align="left">Descargar</td>
+<td align="left">Los valores se reinicializan</td>
+<td align="left">Los valores se mantienen</td>
+<td align="left">Los valores se mantienen</td>
+</tr>
+<tr>
+<td align="left">Cambio en línea</td>
+<td align="left">Los valores se mantienen</td>
+<td align="left">Los valores se mantienen</td>
+<td align="left">Los valores se mantienen</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<ul>
+<li><a href="https://infosys.beckhoff.com/content/1033/tc3_plc_intro/2528837771.html">SUPER</a></li>
+<li><a href="https://infosys.beckhoff.com/content/1033/tc3_plc_intro/2528843147.html">THIS</a></li>
+<li><a href="https://infosys.beckhoff.com/content/1033/tc3_plc_intro/2528848523.html">Variable types - attribute keywords</a><ul>
+<li><a href="https://infosys.beckhoff.com/content/1033/tc3_plc_intro/2528803467.html">RETAIN: for remanent variables of type RETAIN</a></li>
+<li><a href="https://infosys.beckhoff.com/content/1033/tc3_plc_intro/2528803467.html">PERSISTENT: for remanent variables of type PERSISTENT</a></li>
+<li><a href="https://infosys.beckhoff.com/content/1033/tc3_plc_intro/2529284235.html#2529371275">CONSTANT: for constants</a></li>
+</ul>
+</li>
+</ul>
 <hr />
 <h3 id="_1"></h3>
 <ul>
