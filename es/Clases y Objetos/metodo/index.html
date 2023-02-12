@@ -438,6 +438,34 @@
   
   
     <li class="md-nav__item">
+      <a href="../Function%20Block%20Modificadores%20de%20acceso/" class="md-nav__link">
+        Bloque de Funcion Modificadores de acceso
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Function%20Block%20Declaracion%20de%20variables/" class="md-nav__link">
+        Bloque de Funcion Declaracion de variables
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../Constructor%20y%20Destructor/" class="md-nav__link">
         Constructor y Destructor
       </a>
@@ -1086,7 +1114,7 @@
   <h1>Metodo</h1>
 
 <h3 id="metodos"><span style="color:grey">Metodos:</span></h3>
-<p>Los métodos dividen la clase o el bloque de funciones en funciones más pequeñas que se pueden ejecutar en
+<p>Los Métodos dividen la clase o el bloque de funciones en funciones más pequeñas que se pueden ejecutar en
 llamada. Solo trabajarán con los datos que necesitan e ignorarán cualquier dato redundante que
 puede existir en un determinado bloque de funciones.</p>
 <p>Los métodos pueden acceder y manipular las variables internas de la clase principal, pero también pueden usar
@@ -1146,6 +1174,53 @@ No es obligatorio que un Método deba devolver un valor...</p>
 </li>
 </ul>
 <p>La configuración predeterminada donde no se define ningún especificador de acceso es PUBLIC .</p>
+<hr />
+<ul>
+<li>Ejemplos de declaración de METHODS:
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span>
+<span class="normal">9</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nx">METHOD</span><span class="w"> </span><span class="nx">Method1</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="nx">BOOL</span>
+<span class="nx">VAR_INPUT</span>
+<span class="w">    </span><span class="nx">nIn1</span><span class="w">  </span><span class="o">:</span><span class="w"> </span><span class="nx">INT</span><span class="p">;</span>
+<span class="w">    </span><span class="nx">bIn2</span><span class="w">  </span><span class="o">:</span><span class="w"> </span><span class="nx">BOOL</span><span class="p">;</span>
+<span class="nx">END_VAR</span>
+<span class="nx">VAR_OUTPUT</span>
+<span class="w">    </span><span class="nx">fOut1</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="nx">REAL</span><span class="p">;</span>
+<span class="w">    </span><span class="nx">sOut2</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="nx">STRING</span><span class="p">;</span>
+<span class="nx">END_VAR</span>
+</code></pre></div></td></tr></table></div></li>
+</ul>
+<hr />
+<p>!!!!!!!!!!!!! HAY QUE MIRAR QUE VARIABLES SE PUEDEN DECLARAR EN EL METODO !!!!!!!!!!!!!!!</p>
+<ul>
+<li><a href="https://infosys.beckhoff.com/content/1033/tc3_plc_intro/2528755083.html">Local Variables - VAR</a></li>
+<li><a href="https://infosys.beckhoff.com/content/1033/tc3_plc_intro/2528760459.html">Input Variables - VAR_INPUT</a></li>
+<li><a href="https://infosys.beckhoff.com/content/1033/tc3_plc_intro/2528765835.html">Output Variables - VAR_OUTPUT</a></li>
+<li>
+<p><a href="https://infosys.beckhoff.com/content/1033/tc3_plc_intro/2528771211.html">Input/Output Variables - VAR_IN_OUT, VAR_IN_OUT CONSTANT</a></p>
+</li>
+<li>
+<p><a href="https://infosys.beckhoff.com/content/1033/tc3_plc_intro/2528781963.html">Temporary Variable - VAR_TEMP</a></p>
+</li>
+<li><a href="https://infosys.beckhoff.com/content/1033/tc3_plc_intro/2528787339.html">Static Variables - VAR_STAT</a></li>
+<li><a href="https://infosys.beckhoff.com/content/1033/tc3_plc_intro/2528792715.html">External Variables - VAR_EXTERNAL</a></li>
+<li><a href="https://infosys.beckhoff.com/content/1033/tc3_plc_intro/2528798091.html">Instance Variables - VAR_INST</a></li>
+<li><a href="https://infosys.beckhoff.com/content/1033/tc3_plc_intro/2528803467.html">Remanent Variables - PERSISTENT, RETAIN</a></li>
+<li><a href="https://infosys.beckhoff.com/content/1033/tc3_plc_intro/2528837771.html">SUPER</a></li>
+<li><a href="https://infosys.beckhoff.com/content/1033/tc3_plc_intro/2528843147.html">THIS</a></li>
+<li><a href="https://infosys.beckhoff.com/content/1033/tc3_plc_intro/2528848523.html">Variable types - attribute keywords</a><ul>
+<li><a href="https://infosys.beckhoff.com/content/1033/tc3_plc_intro/2528803467.html">RETAIN: for remanent variables of type RETAIN</a></li>
+<li><a href="https://infosys.beckhoff.com/content/1033/tc3_plc_intro/2528803467.html">PERSISTENT: for remanent variables of type PERSISTENT</a></li>
+<li><a href="https://infosys.beckhoff.com/content/1033/tc3_plc_intro/2529284235.html#2529371275">CONSTANT: for constants</a></li>
+</ul>
+</li>
+</ul>
 <hr />
 <ul>
 <li>

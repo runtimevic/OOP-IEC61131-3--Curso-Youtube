@@ -117,6 +117,8 @@ nav:
        - Classes and Objects: Clases y Objetos/clases y objetos.md
        - Function Block: 
           - Function Block: Clases y Objetos/Function Block.md
+          - Function Block Access Modifiers:  Clases y Objetos/Function Block Modificadores de acceso.md
+          - Function Block Declaration variables: Clases y Objetos/Function Block Declaracion de variables.md
           - Constructor and Destructor: Clases y Objetos/Constructor y Destructor.md
 #       - Access modifiers: Clases y Objetos/modificadores de acceso.md           
        - Method: Clases y Objetos/metodo.md
