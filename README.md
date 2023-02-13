@@ -4,9 +4,11 @@
 
 ![OOP](./Assets/OOP_3DD.png)
 
-### :link: [Documentación OOP IC61131-3 PLC Español:](https://runtimevic.github.io/OOP-IEC61131-3--Curso-Youtube/es)
-### :link: [Documentation OOP IC61131-3 PLC English:](https://runtimevic.github.io/OOP-IEC61131-3--Curso-Youtube/en)
-### 📃 [Documentacion en PDF](https://github.com/runtimevic/OOP-IEC61131-3--Curso-Youtube/blob/gh-pages/document.pdf) 
+### :link: [SSG Documentación OOP IC61131-3 PLC Español:](https://runtimevic.github.io/OOP-IEC61131-3--Curso-Youtube/es)
+### :link: [SSG Documentation OOP IC61131-3 PLC English:](https://runtimevic.github.io/OOP-IEC61131-3--Curso-Youtube/en)
+### 📃 [Documentacion en PDF Español](https://github.com/runtimevic/OOP-IEC61131-3--Curso-Youtube/blob/gh-pages/document-es.pdf)
+### 📃 [Documentation en PDF English](https://github.com/runtimevic/OOP-IEC61131-3--Curso-Youtube/blob/gh-pages/document-en.pdf)
+
 ***
 ### Lista de Videos de Youtube:
 - :link: [Lista Completa de Videos Curso:](https://youtube.com/playlist?list=PLEfi_hUmmSjFpfdJ6yw3B9yj7dWHYkHmQ)
