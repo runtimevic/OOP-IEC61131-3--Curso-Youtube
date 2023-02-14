@@ -53,6 +53,7 @@
     <Folder Include="03_Clases_Y_Objetos\Clase" />
     <Folder Include="04_Clases_Y_Objetos" />
     <Folder Include="04_Clases_Y_Objetos\Clase" />
+    <Folder Include="05_Metodo" />
     <Folder Include="_MAIN" />
   </ItemGroup>
   <ItemGroup>

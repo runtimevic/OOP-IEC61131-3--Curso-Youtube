@@ -1,7 +1,5 @@
 
-### <span style="color:grey">[Tipos de Datos:](https://infosys.beckhoff.com/content/1033/tc3_plc_intro/2529388939.html?id=3451082169760117126)</span>
-
-### tipos de datos:
+### <span style="color:grey">🔗 [Tipos de Datos:](https://infosys.beckhoff.com/content/1033/tc3_plc_intro/2529388939.html?id=3451082169760117126)</span>
 
 ### Las ventajas de las estructuras de datos.
 - La principal aportación de las estructuras de datos y los tipos de datos 
