@@ -1,4 +1,4 @@
-### <span style="color:grey">Metodos:</span>
+### <span style="color:grey">METHOD:</span>
 
 Los Métodos dividen la clase o el bloque de funciones en funciones más pequeñas que se pueden ejecutar en
 llamada. Solo trabajarán con los datos que necesitan e ignorarán cualquier dato redundante que
@@ -30,9 +30,7 @@ METHOD <Access specifier> <Name> : <Datatype return value>
 ```
 No es obligatorio que un Método deba devolver un valor...
 ***
-
-***
-- Ejemplos de declaración de METHODS:
+### <span style="color:grey">Ejemplo de declaración de METHOD:</span>
 ```javascript
 METHOD Method1 : BOOL
 VAR_INPUT

@@ -78,3 +78,12 @@ END_VAR
 stGet      := fbSample.MyProp;
 nSingleGet := stGet.nVar;
 ```
+***
+### <span style="color:grey">Retorno por INTERFACE:</span>
+Ejemplo de declaración de un método que nos devuelve una variable del tipo INTERFACE.
+```javascript
+METHOD Method1 : interface1
+```
+
+!!!! mirar si puede retornar un FB !!!!
+!!!! enumerar todos los tipos de variables que se pueden devolver en un metodo!!!
