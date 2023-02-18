@@ -49,6 +49,8 @@ by Runtimevic -- Víctor Durán Muñoz.
     - frenar. 
     - acelerar.
 ```
+***
+### <span style="color:grey">Links:</span>
 
 🔗 [Codesys admite OOP](https://help.codesys.com/api-content/2/codesys/3.5.14.0/en/_cds_f_object_oriented_programming/#cd69b36a931eb47c0a8640e01dc4fc9-id-8938ae329606a7abc0a8640e00eabd77)
 

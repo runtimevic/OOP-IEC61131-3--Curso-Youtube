@@ -85,5 +85,6 @@ Mercedes.Marca := 'Mercedes';
 Mercedes.Color := 'Negro';
 Color := Mercedes.Color;
 ```
+### <span style="color:grey">Links:</span>
 
 - 🔗 [methods-properties-and-inheritance (stefanhenneken)](https://stefanhenneken.net/2017/04/23/iec-61131-3-methods-properties-and-inheritance/)

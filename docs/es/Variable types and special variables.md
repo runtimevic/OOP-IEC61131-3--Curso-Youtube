@@ -96,7 +96,7 @@ El grado de retención de las variables RETAIN se incluye automáticamente en el
     - [CONSTANT: for constants](https://infosys.beckhoff.com/content/1033/tc3_plc_intro/2529284235.html#2529371275)
 
 ***
-### 
+### ### <span style="color:grey">Links:</span>
 - 🔗 [Local Variables - VAR, infosys.beckhoff.com/](https://infosys.beckhoff.com/english.php?content=../content/1033/tc3_plc_intro/2528755083.html&id=)
 
 - 🔗 [Instance Variables - VAR_INST, infosys.beckhoff.com/](https://infosys.beckhoff.com/english.php?content=../content/1033/tc3_plc_intro/2528798091.html&id=)
