@@ -1,7 +1,5 @@
-### SUPER puntero:
-cada bloque de funciones que se deriva de otro bloque de funciones tiene acceso a un puntero llamado SUPER . 
-Esto se puede usar para acceder a elementos (métodos, propiedades, variables locales, etc.) desde el bloque de funciones principal.
+![help](../imagenes/ayuda.png)
 
-En lugar de copiar el código del bloque de funciones principal al nuevo método, el puntero SUPER se puede usar para llamar al método desde el bloque de funciones  . Esto elimina la necesidad de copiar el código.
+![help](../imagenes/help.jfif)
 
-- [SUPER puntero Infosys Beckhoff](https://infosys.beckhoff.com/content/1033/tc3_plc_intro/2528837771.html?id=5132996865500332085)
+![help](../imagenes/helpme.jfif)

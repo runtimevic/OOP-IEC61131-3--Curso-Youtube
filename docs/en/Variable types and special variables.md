@@ -121,3 +121,8 @@ Los valores se conservan
 - 🔗 [www.plccoder.com/var_temp-var_stat-and-var_const](https://www.plccoder.com/var_temp-var_stat-and-var_const/)
 
 - 🔗 [Tipos de variables y variables especiales](https://infosys.beckhoff.com/content/1033/tc3_plc_intro/2528749707.html?id=3782076432056683724)
+![help](../imagenes/ayuda.png)
+
+![help](../imagenes/help.jfif)
+
+![help](../imagenes/helpme.jfif)
