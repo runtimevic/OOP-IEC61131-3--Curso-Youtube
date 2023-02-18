@@ -117,11 +117,6 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
-        
-        <a href="#metodos" class="md-skip">
-          Skip to content
-        </a>
-      
     </div>
     <div data-md-component="announce">
       
@@ -523,45 +518,9 @@
       
       
       
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          Method
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
       <a href="./" class="md-nav__link md-nav__link--active">
         Method
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#metodos" class="md-nav__link">
-    metodos
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#especificadores-de-acceso-para-los-metodos" class="md-nav__link">
-    Especificadores de acceso para los Metodos:
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
       
     </li>
   
@@ -1167,28 +1126,6 @@
   
   
   
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#metodos" class="md-nav__link">
-    metodos
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#especificadores-de-acceso-para-los-metodos" class="md-nav__link">
-    Especificadores de acceso para los Metodos:
-  </a>
-  
-</li>
-      
-    </ul>
-  
 </nav>
                   </div>
                 </div>
@@ -1204,50 +1141,9 @@
 
 
 
-  <h1>Method</h1>
-
-<h3 id="metodos">metodos</h3>
-<p>Los métodos dividen la clase o el bloque de funciones en funciones más pequeñas que se pueden ejecutar en
-llamada. Solo trabajarán con los datos que necesitan e ignorarán cualquier dato redundante que
-puede existir en un determinado bloque de funciones.</p>
-<p>Los métodos pueden acceder y manipular las variables internas de la clase principal, pero también pueden usar
-variables propias a las que la clase principal no puede acceder (a menos que sean de salida)
-variable).
-Además, los métodos son una forma mucho más eficiente de ejecutar un programa porque, al dividir una
-función en varios métodos, el usuario evita ejecutar todo el POU cada vez,
-ejecutar solo pequeñas porciones de código siempre que sea necesario llamarlas. Esto es un
-muy buena manera de evitar errores y corrupción de datos.
-Los métodos también tienen un nombre, lo que significa que estas porciones de código se pueden identificar por su
-propósitos en lugar de las variables que manipulan, mejorando así la lectura de código y
-solución de problemas.</p>
-<p>La abstracción juega un papel importante aquí, si los programadores desean implementar el código, 
-solo necesitan llamar al método. La solución de problemas también se convierte en
-más simple: entonces el programador no necesita buscar cada instancia del código,
-solo necesitan verificar el método correspondiente.
-A diferencia de la clase base, los métodos usan la memoria temporal del controlador: los datos son volátiles, ya que
-las variables solo mantendrán sus valores mientras se ejecuta el método. Si se suponen valores que deben
-mantenerse entre ciclos de ejecución, entonces la variable debe almacenarse en la clase base o en
-algún otro lugar que retendrá los valores de un ciclo al otro (como la variable global
-lista).</p>
-<hr />
-<h3 id="especificadores-de-acceso-para-los-metodos">Especificadores de acceso para los Metodos:</h3>
-<p>La declaración del método puede incluir un especificador de acceso opcional. Esto restringe el acceso al método.</p>
-<ul>
-<li>PÚBLICO   - Cualquiera puede llamar al método, no hay restricciones.</li>
-<li>PRIVADO   - El método está disponible solo dentro de la POU. No se puede llamar desde fuera de la POU.</li>
-<li>PROTEGIDO- Solo su propia POU o las POU derivadas de ella pueden acceder al método. La derivación se analiza a continuación.</li>
-<li>INTERNO- Solo se puede acceder al método desde el mismo espacio de nombres. Esto permite que los métodos estén disponibles solo dentro de una determinada biblioteca, por ejemplo.</li>
-<li>FINAL -El método no puede ser sobrescrito por otro método. La sobrescritura de métodos se describe a continuación.</li>
-</ul>
-<p>La configuración predeterminada donde no se define ningún especificador de acceso es PUBLIC .</p>
-<hr />
-<p>Por lo tanto, una declaración de Método tiene la siguiente estructura:
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nx">METHOD</span><span class="w"> </span><span class="o">&lt;</span><span class="nx">Access</span><span class="w"> </span><span class="nx">specifier</span><span class="o">&gt;</span><span class="w"> </span><span class="o">&lt;</span><span class="nx">Name</span><span class="o">&gt;</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="o">&lt;</span><span class="nx">Datatype</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="nx">value</span><span class="o">&gt;</span>
-</code></pre></div></td></tr></table></div>
-No es obligatorio que un Método deba devolver un valor...</p>
-<hr />
-<p>🔗<a href="https://help.codesys.com/api-content/2/codesys/3.5.14.0/en/_cds_obj_method/#e4507ebe4233ac0c0a8640e00a37b12-id-3375759d0dd23b38c0a864630d4cd159">Documentación Codesys del Objeto método</a></p>
-<p>🔗<a href="https://infosys.beckhoff.com/english.php?content=../content/1033/tc3_plc_intro/2530307467.html&amp;id=">Documentación de Beckhoff del Objeto método</a></p>
+<p><img alt="help" src="../../imagenes/ayuda.png" /></p>
+<p><img alt="help" src="../../imagenes/help.jfif" /></p>
+<p><img alt="help" src="../../imagenes/helpme.jfif" /></p>
 
 
 
