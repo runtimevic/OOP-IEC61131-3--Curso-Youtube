@@ -15,3 +15,4 @@
     - :link: [001 - OOP IEC 61131-3 PLC -- Introducción a la pagina de documentación SSG, repositorio...](https://www.youtube.com/watch?v=a7eNCefcjGM)
     - :link: [002 - OOP IEC 61131-3 PLC -- Clase y Objeto](https://youtu.be/3IudQIj1noo)
     - :link: [003 - OOP IEC 61131-3 PLC -- Clase y Objeto](https://youtu.be/lchxx28wwXM)
+    - :link: [004 - OOP IEC 61131-3 PLC -- Clase y Objeto](https://youtu.be/jGtGV9icvO0)
