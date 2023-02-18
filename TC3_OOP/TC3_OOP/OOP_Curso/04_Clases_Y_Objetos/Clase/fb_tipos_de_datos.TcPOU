@@ -25,6 +25,7 @@ VAR_TEMP
 END_VAR
 VAR_STAT
     nVarStat1 : INT;
+	aarray  : ARRAY[1..n] OF INT;
 END_VAR
 VAR_EXTERNAL
     nVarExt1 : INT; // 1st external variable

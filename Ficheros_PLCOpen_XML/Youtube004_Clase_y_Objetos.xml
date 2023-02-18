@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <project xmlns="http://www.plcopen.org/xml/tc6_0200">
-  <fileHeader companyName="Beckhoff Automation GmbH" productName="TwinCAT PLC Control" productVersion="3.5.13.21" creationDateTime="2023-02-11T19:56:38.4759695" />
-  <contentHeader name="OOP_Curso" modificationDateTime="2023-02-11T19:56:38.480848">
+  <fileHeader companyName="Beckhoff Automation GmbH" productName="TwinCAT PLC Control" productVersion="3.5.13.21" creationDateTime="2023-02-18T10:18:40.1871113" />
+  <contentHeader name="OOP_Curso" modificationDateTime="2023-02-18T10:18:40.1949627">
     <coordinateInfo>
       <fbd>
         <scaling x="1" y="1" />
@@ -75,6 +75,16 @@
             <variable name="nVarStat1">
               <type>
                 <INT />
+              </type>
+            </variable>
+            <variable name="aarray">
+              <type>
+                <array>
+                  <dimension lower="1" upper="n" />
+                  <baseType>
+                    <INT />
+                  </baseType>
+                </array>
               </type>
             </variable>
           </globalVars>
@@ -156,6 +166,7 @@ VAR_TEMP
 END_VAR
 VAR_STAT
     nVarStat1 : INT;
+	aarray  : ARRAY[1..n] OF INT;
 END_VAR
 VAR_EXTERNAL
     nVarExt1 : INT; // 1st external variable
@@ -276,11 +287,11 @@ END_VAR</xhtml>
     <data name="http://www.3s-software.com/plcopenxml/projectstructure" handleUnknown="discard">
       <ProjectStructure>
         <Folder Name="04_Clases_Y_Objetos">
-          <Object Name="_04_Clases_y_Objetos" ObjectId="0809fefa-bab8-4b56-8e0d-4935fd5424b9" />
-          <Object Name="GVL4" ObjectId="7e2010cb-b08f-47d2-b369-1802d173bd3f" />
           <Folder Name="Clase">
             <Object Name="fb_tipos_de_datos" ObjectId="a7bc4c84-6c3e-44bd-a10c-e1fde9eb23ff" />
           </Folder>
+          <Object Name="GVL4" ObjectId="7e2010cb-b08f-47d2-b369-1802d173bd3f" />
+          <Object Name="_04_Clases_y_Objetos" ObjectId="0809fefa-bab8-4b56-8e0d-4935fd5424b9" />
         </Folder>
       </ProjectStructure>
     </data>
