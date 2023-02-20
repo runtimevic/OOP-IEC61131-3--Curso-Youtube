@@ -608,6 +608,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#retorno-por-function_block" class="md-nav__link">
+    Retorno por FUNCTION_BLOCK:
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1099,23 +1106,38 @@
   
   
   
+    <li class="md-nav__item">
+      <a href="../../Tipos%20de%20Dise%C3%B1o%20para%20programacion%20de%20PLC/" class="md-nav__link">
+        Tipos de Diseño para programacion de PLC
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
     
     <li class="md-nav__item md-nav__item--nested">
       
       
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_15" >
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_16" >
       
       
       
-        <label class="md-nav__link" for="__nav_15" id="__nav_15_label" tabindex="0">
+        <label class="md-nav__link" for="__nav_16" id="__nav_16_label" tabindex="0">
           Patrones de Diseño
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_15_label" aria-expanded="false">
-        <label class="md-nav__title" for="__nav_15">
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_16_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_16">
           <span class="md-nav__icon md-icon"></span>
           Patrones de Diseño
         </label>
@@ -1201,6 +1223,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#retorno-por-function_block" class="md-nav__link">
+    Retorno por FUNCTION_BLOCK:
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1221,8 +1250,20 @@
 
 <h3 id="tipos-de-variables-de-retorno"><span style="color:grey">Tipos de variables de retorno:</span></h3>
 <ul>
-<li>No es obligatorio en el metodo retornar un tipo de variable.</li>
+<li>No es obligatorio en el metodo retornar un tipo de variable.<ul>
+<li>Ejemplos de declaración de Métodos que nos devuelve una variable de diferentes tipos:
+    <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nx">METHOD</span><span class="w"> </span><span class="nx">Method1</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="nx">BOOL</span>
+<span class="nx">METHOD</span><span class="w"> </span><span class="nx">Method1</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="nx">INT</span>
+<span class="nx">METHOD</span><span class="w"> </span><span class="nx">Method1</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="nx">REAL</span>
+<span class="nx">METHOD</span><span class="w"> </span><span class="nx">Method1</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="nx">STRING</span>
+</code></pre></div></td></tr></table></div></li>
 </ul>
+</li>
+</ul>
+<hr />
 <h3 id="retorno-por-struct"><span style="color:grey">Retorno por STRUCT:</span></h3>
 <p>Acceso a un único elemento de un tipo de retorno estructurado durante la llamada a método/función/propiedad
 La siguiente implementación se puede utilizar para tener acceso directamente a un elemento individual del tipo de datos estructurado que devuelve el método/función/propiedad cuando se llama a un método, función o propiedad. Un tipo de datos estructurado es, por ejemplo, una estructura o un bloque de funciones.</p>
@@ -1327,8 +1368,11 @@ Si el tipo de retorno solo se declarara como "ST_Sample", la estructura devuelta
 <p>Ejemplo de declaración de un método que nos devuelve una variable del tipo INTERFACE.
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nx">METHOD</span><span class="w"> </span><span class="nx">Method1</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="nx">interface1</span>
 </code></pre></div></td></tr></table></div></p>
-<p>!!!! mirar si puede retornar un FB !!!!
-!!!! enumerar todos los tipos de variables que se pueden devolver en un metodo!!!</p>
+<hr />
+<h3 id="retorno-por-function_block"><span style="color:grey">Retorno por FUNCTION_BLOCK:</span></h3>
+<p>Ejemplo de declaración de un método que nos devuelve una variable del tipo FUNCTION_bLOCK.
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nx">METHOD</span><span class="w"> </span><span class="nx">Method1</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="nx">FB1</span>
+</code></pre></div></td></tr></table></div></p>
 
 
 
