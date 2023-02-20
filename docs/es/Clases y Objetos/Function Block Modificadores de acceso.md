@@ -13,7 +13,8 @@ Podemos tener 2 modificadores de acceso para el Bloque de Funciones:
     - Esto permite que el FB este disponible solo dentro de una determinada biblioteca.
 La configuración predeterminada donde no se define ningún especificador de acceso es PUBLIC .
     - El acceso está limitado al espacio de nombres (la biblioteca).
-***    
+***
+Podemos tener otros 2 modificadores de acceso para el Bloque de Funciones:
 - <span style="color:orange">FINAL:</span>
     - (en TwinCAT 3 no sale por defecto para seleccionarlo al crear un FB, pero se puede añadir mas tarde despues de crearlo...) 
     - El FB no puede servir como un bloque de funciones principal. 

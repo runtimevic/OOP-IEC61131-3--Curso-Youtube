@@ -7,9 +7,7 @@
 by Runtimevic -- Víctor Durán Muñoz.
 </font></span>
 ***
-<span style="color:grey"><font size="4">
-¿ Qué es OOP?
-</font></span>
+### <span style="color:grey">¿ Qué es OOP?</span>
 
 - Es un paradigma que hace uso de los objetos para la construcción de los software.
 
@@ -19,9 +17,7 @@ by Runtimevic -- Víctor Durán Muñoz.
     - Es una **forma** o un **estilo** de programar.
 - se busca plasmar la realidad hacia el código.
 
-<span style="color:grey"><font size="4">
-. ¿Cómo pensar en Objetos?
-</font></span>
+### <span style="color:grey">¿Cómo pensar en Objetos?</span>
 
 - Enfocarse en **algo de la realidad.**
 - Detalla sus **atributos, (propiedades)**

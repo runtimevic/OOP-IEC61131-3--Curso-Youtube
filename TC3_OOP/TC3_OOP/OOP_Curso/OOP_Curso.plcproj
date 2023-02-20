@@ -39,6 +39,21 @@
     <Compile Include="04_Clases_Y_Objetos\_04_Clases_y_Objetos.TcPOU">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="05_Metodo\fbreturn5.TcPOU">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="05_Metodo\FB_ejemplo_Method.TcPOU">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="05_Metodo\interface3.TcIO">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="05_Metodo\ST_sample2.TcDUT">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="05_Metodo\_05_Metodo.TcPOU">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="PlcTask.TcTTO">
       <SubType>Code</SubType>
     </Compile>

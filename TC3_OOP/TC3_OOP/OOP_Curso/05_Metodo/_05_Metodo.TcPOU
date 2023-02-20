@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.12">
+  <POU Name="_05_Metodo" Id="{c9f609ef-b8a1-494e-92e3-9ce67b3f7c84}" SpecialFunc="None">
+    <Declaration><![CDATA[PROGRAM _05_Metodo
+VAR
+	fbejemplo_metodo : FB_ejemplo_Method;
+	
+	bPonerAUnobBoolfb : BOOL;
+	bPonerACerobBoolfb: BOOL;
+	
+	bBool : BOOL;
+	statusbBool : BOOL;
+	bPonerAUnobBool : BOOL;
+	bPonerACerobBool: BOOL;
+	
+	nSingleGet  : INT;
+    stGet       : ST_Sample2;    
+    bSet        : BOOL;
+    stSet       : ST_Sample2;
+	
+	counter : INT;
+	outvarcounter: INT;
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[//fbejemplo_metodo();
+
+IF 	bPonerAUnobBoolfb THEN
+	bPonerAUnobBoolfb := FALSE;
+	fbejemplo_metodo.metodo1_a_Uno_bBool();	
+END_IF
+
+
+IF 	bPonerACerobBoolfb THEN
+	bPonerACerobBoolfb := FALSE;
+	fbejemplo_metodo.metodo1_a_cero_bBool();
+END_IF
+
+
+IF 	bPonerAUnobBool THEN
+	bPonerAUnobBool := FALSE;
+	statusbBool := fbejemplo_metodo.metodo1_a_Uno_InOut(bBool);
+END_IF
+
+IF 	bPonerACerobBool THEN
+	bPonerACerobBool := FALSE;
+	statusbBool := fbejemplo_metodo.metodo1_a_Cero_InOut(bBool);
+END_IF
+
+// ejemplo para declarar variables lo mas cerca posible del metodo: declaración dentro del metodo de variable con VAR_INST :
+counter := fbejemplo_metodo.Metodo4_VarInst(outvarcounter=>outvarcounter);
+
+
+//// Get - single member and complete structure possible
+////nSingleGet := fbejemplo_metodo.metodo2_struct.metodo2_struct();
+//stGet      REF= fbejemplo_metodo.metodo2_struct.metodo2_struct();
+ 
+//// Set - only complete structure possible 
+//IF bSet THEN
+//    fbejemplo_metodo.metodo2_struct REF= stSet;
+//    bSet            := FALSE;
+//END_IF ]]></ST>
+    </Implementation>
+  </POU>
+</TcPlcObject>

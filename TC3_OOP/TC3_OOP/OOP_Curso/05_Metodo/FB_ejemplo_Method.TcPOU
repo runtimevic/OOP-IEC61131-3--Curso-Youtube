@@ -1,0 +1,112 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.12">
+  <POU Name="FB_ejemplo_Method" Id="{bf742efc-6283-4256-8c15-fe1e5052c0b1}" SpecialFunc="None">
+    <Declaration><![CDATA[FUNCTION_BLOCK FB_ejemplo_Method
+VAR_INPUT
+END_VAR
+VAR_OUTPUT
+END_VAR
+VAR
+	bBool : BOOL;
+	ststruct : ST_sample2;
+	fb5 : fbreturn5;
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[]]></ST>
+    </Implementation>
+    <Method Name="metodo1_a_Cero_bBool" Id="{8e330d49-1f63-4334-814e-68871791412a}">
+      <Declaration><![CDATA[METHOD metodo1_a_Cero_bBool
+
+]]></Declaration>
+      <Implementation>
+        <ST><![CDATA[THIS^.bBool := false;]]></ST>
+      </Implementation>
+    </Method>
+    <Method Name="metodo1_a_Cero_InOut" Id="{ca391e3d-beb1-4763-9e11-9b19da417c6f}">
+      <Declaration><![CDATA[METHOD metodo1_a_Cero_InOut : bool
+VAR_IN_OUT
+	bBool : BOOL;
+END_VAR
+]]></Declaration>
+      <Implementation>
+        <ST><![CDATA[// Método que pone a 0 la variable definida en in_Out
+bBool := FALSE;
+// return value bBOOL
+metodo1_a_Cero_InOut := FALSE;]]></ST>
+      </Implementation>
+    </Method>
+    <Method Name="metodo1_a_Uno_bBool" Id="{a0dd2c9e-b6be-44bf-82f5-91ed7c375ad6}">
+      <Declaration><![CDATA[METHOD metodo1_a_Uno_bBool 
+
+]]></Declaration>
+      <Implementation>
+        <ST><![CDATA[THIS^.bBool := true;]]></ST>
+      </Implementation>
+    </Method>
+    <Method Name="metodo1_a_Uno_InOut" Id="{a76f9dae-a442-4326-8bff-bcdcbcef124c}">
+      <Declaration><![CDATA[METHOD metodo1_a_Uno_InOut : BOOL
+VAR_IN_OUT
+	bBool : BOOL;
+END_VAR
+]]></Declaration>
+      <Implementation>
+        <ST><![CDATA[// Método que pone a 1 la variable definida en in_Out
+bBool := TRUE;
+// return value bBOOL
+metodo1_a_Uno_InOut := TRUE;]]></ST>
+      </Implementation>
+    </Method>
+    <Method Name="metodo2_struct" Id="{72fb7591-8743-4488-8a14-c4c09928a599}">
+      <Declaration><![CDATA[METHOD PUBLIC metodo2_struct : REFERENCE TO ST_sample2
+VAR_INPUT
+END_VAR
+]]></Declaration>
+      <Implementation>
+        <ST><![CDATA[metodo2_struct := ststruct;]]></ST>
+      </Implementation>
+    </Method>
+    <Method Name="metodo3_interface" Id="{709f3c2b-aebf-4e82-82e6-70b51bb45770}">
+      <Declaration><![CDATA[METHOD PRIVATE metodo3_interface : interface3
+VAR_INPUT
+END_VAR
+]]></Declaration>
+      <Implementation>
+        <ST><![CDATA[
+
+]]></ST>
+      </Implementation>
+    </Method>
+    <Method Name="Metodo4_VarInst" Id="{3461a640-013c-4a20-bed4-dff49f316726}">
+      <Declaration><![CDATA[METHOD Metodo4_VarInst : INT
+VAR_OUTPUT
+	outvarcounter : INT;
+END_VAR
+VAR
+	varcounter : INT;
+END_VAR
+VAR_INST
+	counter : INT;
+END_VAR
+]]></Declaration>
+      <Implementation>
+        <ST><![CDATA[counter := counter + 1;
+Metodo4_VarInst := counter;
+
+varcounter := varcounter + 1; 
+outvarcounter := varcounter; 
+
+]]></ST>
+      </Implementation>
+    </Method>
+    <Method Name="metodo5_returnfb" Id="{bf88f70d-1d25-4abb-b32e-abebdb5103db}">
+      <Declaration><![CDATA[METHOD metodo5_returnfb : fbreturn5
+VAR_INPUT
+END_VAR
+]]></Declaration>
+      <Implementation>
+        <ST><![CDATA[metodo5_returnfb := fb5;]]></ST>
+      </Implementation>
+    </Method>
+  </POU>
+</TcPlcObject>

@@ -1,6 +1,13 @@
 ### <span style="color:grey">Tipos de variables de retorno:</span>
 - No es obligatorio en el metodo retornar un tipo de variable.
-
+    - Ejemplos de declaración de Métodos que nos devuelve una variable de diferentes tipos:
+        ```javascript
+        METHOD Method1 : BOOL
+        METHOD Method1 : INT
+        METHOD Method1 : REAL
+        METHOD Method1 : STRING
+        ```
+***
 ### <span style="color:grey">Retorno por STRUCT:</span>
 Acceso a un único elemento de un tipo de retorno estructurado durante la llamada a método/función/propiedad
 La siguiente implementación se puede utilizar para tener acceso directamente a un elemento individual del tipo de datos estructurado que devuelve el método/función/propiedad cuando se llama a un método, función o propiedad. Un tipo de datos estructurado es, por ejemplo, una estructura o un bloque de funciones.
@@ -84,6 +91,11 @@ Ejemplo de declaración de un método que nos devuelve una variable del tipo INT
 ```javascript
 METHOD Method1 : interface1
 ```
+***
+### <span style="color:grey">Retorno por FUNCTION_BLOCK:</span>
+Ejemplo de declaración de un método que nos devuelve una variable del tipo FUNCTION_bLOCK.
+```javascript
+METHOD Method1 : FB1
+```
 
-!!!! mirar si puede retornar un FB !!!!
-!!!! enumerar todos los tipos de variables que se pueden devolver en un metodo!!!
+

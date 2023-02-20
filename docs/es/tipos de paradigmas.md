@@ -1,8 +1,6 @@
 
 
-<span style="color:grey"><font size="4">
-. Tipos de paradigmas:
-</font></span>
+### <span style="color:grey">Tipos de paradigmas:</span>
 
 - Imperativa -- (**Instrucciones a seguir** para dar solución a un problema).
 - Declarativa -- (Se **enfoca en el problema** a solucionar).
