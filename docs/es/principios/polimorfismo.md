@@ -17,9 +17,7 @@ perform a certain set of valuable tasks. In the dual way, a simple adder block t
 to cope with, for instance, int, float, string, and time data types is an example of a polymorphic 
 programming resource.
 
-- https://www.plccoder.com/polymorphism/
-
-- https://www.plccoder.com/abstract/
+***
 
 ¿Como conseguir el Polimorfismo?
 
@@ -37,4 +35,10 @@ El polimorfismo se puede obtener gracias a las Interfaces y/o las Clases Abstrac
     | Clases abstractas | Interfaces | 
     | :--- | :--- |     
     | 1.- Limitadas a una sola implementación.   | 1. No tiene limitación de implementación.     | 
-    | 2.- Pueden definir comportamiento base.     | 2. Expone propiedades y métodos abstractos (sin lógica).     | 
+    | 2.- Pueden definir comportamiento base.     | 2. Expone propiedades y métodos abstractos (sin lógica).     |
+***    
+### <span style="color:grey">Links:</span>
+
+- 🔗 [polymorphism, www.plccoder.com](https://www.plccoder.com/polymorphism/)
+
+- 🔗 [abstract, www.plccoder.com](https://www.plccoder.com/abstract/)
