@@ -1,6 +1,6 @@
 ### <span style="color:grey">METHOD:</span>
 
-Los Métodos dividen la clase o el bloque de funciones en funciones más pequeñas que se pueden ejecutar en
+Los Métodos dividen la clase (bloque de funciones) en funciones más pequeñas que se pueden ejecutar en
 llamada. Solo trabajarán con los datos que necesitan e ignorarán cualquier dato redundante que
 puede existir en un determinado bloque de funciones.
 

@@ -23,8 +23,7 @@ VAR
 END_VAR
 ]]></Declaration>
     <Implementation>
-      <ST><![CDATA[
-IF 	bPonerAUnobBoolfb THEN
+      <ST><![CDATA[IF 	bPonerAUnobBoolfb THEN
 	bPonerAUnobBoolfb := FALSE;
 	fbejemplo_metodo.metodo1_a_Uno_bBool();	
 END_IF
