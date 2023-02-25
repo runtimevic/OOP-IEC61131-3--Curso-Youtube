@@ -21,7 +21,7 @@
         <link rel="next" href="../propiedad/">
       
       <link rel="icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.0.13">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.0.14">
     
     
       
@@ -29,7 +29,7 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.ffa9267a.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.113286f1.min.css">
       
         
         <link rel="stylesheet" href="../../assets/stylesheets/palette.a0c5b2b5.min.css">
@@ -597,6 +597,13 @@
         <li class="md-nav__item">
   <a href="#retorno-por-struct" class="md-nav__link">
     Retorno por STRUCT:
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ejemplo" class="md-nav__link">
+    Ejemplo:
   </a>
   
 </li>
@@ -1217,6 +1224,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#ejemplo" class="md-nav__link">
+    Ejemplo:
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#retorno-por-interface" class="md-nav__link">
     Retorno por INTERFACE:
   </a>
@@ -1267,10 +1281,10 @@
 <h3 id="retorno-por-struct"><span style="color:grey">Retorno por STRUCT:</span></h3>
 <p>Acceso a un único elemento de un tipo de retorno estructurado durante la llamada a método/función/propiedad
 La siguiente implementación se puede utilizar para tener acceso directamente a un elemento individual del tipo de datos estructurado que devuelve el método/función/propiedad cuando se llama a un método, función o propiedad. Un tipo de datos estructurado es, por ejemplo, una estructura o un bloque de funciones.</p>
-<p>El tipo devuelto del método/función/propiedad se define como "REFERENCIA A <tipo estructurado>" (en lugar de simplemente "<tipo estructurado>").
-Tenga en cuenta que con este tipo de retorno, si, por ejemplo, se va a devolver una instancia local FB del tipo de datos estructurados, se debe usar el operador de referencia REF= en lugar del operador de asignación "normal" :=.
-Las declaraciones y el ejemplo de esta sección se refieren a la llamada de una propiedad. Sin embargo, son igualmente transferibles a otras llamadas que ofrecen valores devueltos (por ejemplo, métodos o funciones).</p>
-<p>Muestra:</p>
+<p>El tipo devuelto del método/función/propiedad se define como "REFERENCE TO <structured type>"  (en lugar de simplemente  "<structured type>").
+Tenga en cuenta que con este tipo de retorno, si, por ejemplo, se va a devolver una instancia local FB del tipo de datos estructurados, se debe usar el operador de referencia <strong>REF=</strong> en lugar del operador de asignación "normal" <strong>:=</strong>.</p>
+<p>Las declaraciones y el ejemplo de esta sección se refieren a la llamada de una propiedad. Sin embargo, son igualmente transferibles a otras llamadas que ofrecen valores devueltos (por ejemplo, métodos o funciones).</p>
+<h3 id="ejemplo">Ejemplo:</h3>
 <p>Declaración de la estructura ST_Sample (tipo de datos estructurado):
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
@@ -1337,7 +1351,7 @@ Llamando a los métodos Get y Set en el programa principal MAIN:
 <span class="w">    </span><span class="nx">bSet</span><span class="w">            </span><span class="o">:=</span><span class="w"> </span><span class="nx">FALSE</span><span class="p">;</span>
 <span class="nx">END_IF</span>
 </code></pre></div></td></tr></table></div></p>
-<p>Mediante la declaración del tipo devuelto de la propiedad MyProp como "REFERENCE TO ST_Sample" y mediante el uso del operador de referencia REF= en el método Get de esta propiedad, se puede acceder a un único elemento del tipo de datos estructurados devuelto directamente al llamar a la propiedad.
+<p>Mediante la declaración del tipo devuelto de la propiedad MyProp como <strong>"REFERENCE TO ST_Sample"</strong> y mediante el uso del operador de referencia <strong>REF=</strong> en el método Get de esta propiedad, se puede acceder a un único elemento del tipo de datos estructurados devuelto directamente al llamar a la propiedad.
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
@@ -1365,12 +1379,12 @@ Si el tipo de retorno solo se declarara como "ST_Sample", la estructura devuelta
 </code></pre></div></td></tr></table></div></p>
 <hr />
 <h3 id="retorno-por-interface"><span style="color:grey">Retorno por INTERFACE:</span></h3>
-<p>Ejemplo de declaración de un método que nos devuelve una variable del tipo INTERFACE.
+<p>Ejemplo de declaración de un método que nos devuelve una variable del tipo <strong>INTERFACE</strong>.
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nx">METHOD</span><span class="w"> </span><span class="nx">Method1</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="nx">interface1</span>
 </code></pre></div></td></tr></table></div></p>
 <hr />
 <h3 id="retorno-por-function_block"><span style="color:grey">Retorno por FUNCTION_BLOCK:</span></h3>
-<p>Ejemplo de declaración de un método que nos devuelve una variable del tipo FUNCTION_bLOCK.
+<p>Ejemplo de declaración de un método que nos devuelve una variable del tipo <strong>FUNCTION_BLOCK</strong>.
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nx">METHOD</span><span class="w"> </span><span class="nx">Method1</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="nx">FB1</span>
 </code></pre></div></td></tr></table></div></p>
 
