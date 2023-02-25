@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <project xmlns="http://www.plcopen.org/xml/tc6_0200">
-  <fileHeader companyName="Beckhoff Automation GmbH" productName="TwinCAT PLC Control" productVersion="3.5.13.21" creationDateTime="2023-02-25T12:54:01.5537044" />
-  <contentHeader name="OOP_Curso" modificationDateTime="2023-02-25T12:54:01.5537044">
+  <fileHeader companyName="Beckhoff Automation GmbH" productName="TwinCAT PLC Control" productVersion="3.5.13.21" creationDateTime="2023-02-25T13:09:43.5352725" />
+  <contentHeader name="OOP_Curso" modificationDateTime="2023-02-25T13:09:43.5352725">
     <coordinateInfo>
       <fbd>
         <scaling x="1" y="1" />
@@ -145,8 +145,7 @@ END_TYPE
         </interface>
         <body>
           <ST>
-            <xhtml xmlns="http://www.w3.org/1999/xhtml">
-IF 	bPonerAUnobBoolfb THEN
+            <xhtml xmlns="http://www.w3.org/1999/xhtml">IF 	bPonerAUnobBoolfb THEN
 	bPonerAUnobBoolfb := FALSE;
 	fbejemplo_metodo.metodo1_a_Uno_bBool();	
 END_IF
