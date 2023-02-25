@@ -1279,13 +1279,20 @@
 </ul>
 <hr />
 <h3 id="retorno-por-struct"><span style="color:grey">Retorno por STRUCT:</span></h3>
-<p>Acceso a un único elemento de un tipo de retorno estructurado durante la llamada a método/función/propiedad
-La siguiente implementación se puede utilizar para tener acceso directamente a un elemento individual del tipo de datos estructurado que devuelve el método/función/propiedad cuando se llama a un método, función o propiedad. Un tipo de datos estructurado es, por ejemplo, una estructura o un bloque de funciones.</p>
-<p>El tipo devuelto del método/función/propiedad se define como "REFERENCE TO <structured type>"  (en lugar de simplemente  "<structured type>").
+<p>Acceso a un único elemento de un tipo de retorno estructurado durante la llamada a método/función/propiedad.</p>
+<p>La siguiente implementación se puede utilizar para tener acceso directamente a un elemento individual del tipo de datos estructurado que devuelve el método/función/propiedad cuando se llama a un método, función o propiedad. </p>
+<p>Un tipo de datos estructurado es, por ejemplo, una estructura o un bloque de funciones.</p>
+<p>El tipo devuelto del método/función/propiedad se define como:
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nx">REFERENCE</span><span class="w"> </span><span class="nx">TO</span><span class="w"> </span><span class="o">&lt;</span><span class="nx">structured</span><span class="w"> </span><span class="nx">type</span><span class="o">&gt;</span>
+<span class="c1">//en lugar de simplemente  </span>
+<span class="o">&lt;</span><span class="nx">structured</span><span class="w"> </span><span class="nx">type</span><span class="o">&gt;</span>
+</code></pre></div></td></tr></table></div>
 Tenga en cuenta que con este tipo de retorno, si, por ejemplo, se va a devolver una instancia local FB del tipo de datos estructurados, se debe usar el operador de referencia <strong>REF=</strong> en lugar del operador de asignación "normal" <strong>:=</strong>.</p>
 <p>Las declaraciones y el ejemplo de esta sección se refieren a la llamada de una propiedad. Sin embargo, son igualmente transferibles a otras llamadas que ofrecen valores devueltos (por ejemplo, métodos o funciones).</p>
 <h3 id="ejemplo">Ejemplo:</h3>
-<p>Declaración de la estructura ST_Sample (tipo de datos estructurado):
+<p>Declaración de la estructura <strong>ST_Sample</strong> (STRUCTURE):
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
@@ -1298,7 +1305,7 @@ Tenga en cuenta que con este tipo de retorno, si, por ejemplo, se va a devolver 
 <span class="nx">END_STRUCT</span>
 <span class="nx">END_TYPE</span>
 </code></pre></div></td></tr></table></div>
-Declaración del bloque de funciones FB_Sample:
+Declaración del bloque de funciones <strong>FB_Sample</strong>:
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
@@ -1307,16 +1314,16 @@ Declaración del bloque de funciones FB_Sample:
 <span class="w">    </span><span class="nx">stLocal</span><span class="w">     </span><span class="o">:</span><span class="w"> </span><span class="nx">ST_Sample</span><span class="p">;</span>
 <span class="nx">END_VAR</span>
 </code></pre></div></td></tr></table></div>
-Declaración de la propiedad FB_Sample.MyProp con el tipo de devolución "REFERENCIA A ST_Sample":
+Declaración de la propiedad FB_Sample.MyProp con el tipo de devolución <strong>"REFERENCE TO ST_Sample"</strong>:
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nx">PROPERTY</span><span class="w"> </span><span class="nx">MyProp</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="nx">REFERENCE</span><span class="w"> </span><span class="nx">TO</span><span class="w"> </span><span class="nx">ST_Sample</span>
 </code></pre></div></td></tr></table></div>
-Implementación del método Get de la propiedad FB_Sample.MyProp:
+Implementación del método Get de la propiedad <strong>FB_Sample.MyProp</strong>:
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nx">MyProp</span><span class="w"> </span><span class="nx">REF</span><span class="o">=</span><span class="w"> </span><span class="nx">stLocal</span><span class="p">;</span>
 </code></pre></div></td></tr></table></div>
-Implementación del método Set de la propiedad FB_Sample.MyProp:
+Implementación del método Set de la propiedad <strong>FB_Sample.MyProp</strong>:
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nx">stLocal</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">MyProp</span><span class="p">;</span>
 </code></pre></div></td></tr></table></div>
-Llamando a los métodos Get y Set en el programa principal MAIN:
+Llamando a los métodos Get y Set en el programa principal <strong>MAIN</strong>:
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
