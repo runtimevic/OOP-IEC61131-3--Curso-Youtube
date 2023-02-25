@@ -1215,7 +1215,7 @@
 <p>🔗 <a href="https://infosys.beckhoff.com/content/1033/tc3_plc_intro/2528771211.html">Input/Output Variables - VAR_IN_OUT, VAR_IN_OUT CONSTANT</a></p>
 </li>
 <li>
-<p>🔗 <a href="https://infosys.beckhoff.com/content/1033/tc3_plc_intro/2528781963.html">Temporary Variable - VAR_TEMP</a></p>
+<p>🔗 <a href="https://infosys.beckhoff.com/content/1033/tc3_plc_intro/2528781963.html"><del>Temporary Variable - VAR_TEMP</del></a></p>
 </li>
 <li>🔗 <a href="https://infosys.beckhoff.com/content/1033/tc3_plc_intro/2528787339.html">Static Variables - VAR_STAT</a></li>
 <li>🔗 <a href="https://infosys.beckhoff.com/content/1033/tc3_plc_intro/2528792715.html">External Variables - VAR_EXTERNAL</a></li>
@@ -1224,12 +1224,101 @@
 <li>🔗 <a href="https://infosys.beckhoff.com/content/1033/tc3_plc_intro/2528837771.html">SUPER</a></li>
 <li>🔗 <a href="https://infosys.beckhoff.com/content/1033/tc3_plc_intro/2528843147.html">THIS</a></li>
 <li>🔗 <a href="https://infosys.beckhoff.com/content/1033/tc3_plc_intro/2528848523.html">Variable types - attribute keywords</a><ul>
-<li><a href="https://infosys.beckhoff.com/content/1033/tc3_plc_intro/2528803467.html">RETAIN: for remanent variables of type RETAIN</a></li>
-<li><a href="https://infosys.beckhoff.com/content/1033/tc3_plc_intro/2528803467.html">PERSISTENT: for remanent variables of type PERSISTENT</a></li>
+<li><a href="https://infosys.beckhoff.com/content/1033/tc3_plc_intro/2528803467.html"><del>RETAIN: for remanent variables of type RETAIN</del></a></li>
+<li><a href="https://infosys.beckhoff.com/content/1033/tc3_plc_intro/2528803467.html"><del>PERSISTENT: for remanent variables of type PERSISTENT</del></a></li>
 <li><a href="https://infosys.beckhoff.com/content/1033/tc3_plc_intro/2529284235.html#2529371275">CONSTANT: for constants</a></li>
 </ul>
 </li>
 </ul>
+<p>-Ejemplo de declaración de variables en un <strong>METHOD</strong>:
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span>
+<span class="normal">25</span>
+<span class="normal">26</span>
+<span class="normal">27</span>
+<span class="normal">28</span>
+<span class="normal">29</span>
+<span class="normal">30</span>
+<span class="normal">31</span>
+<span class="normal">32</span>
+<span class="normal">33</span>
+<span class="normal">34</span>
+<span class="normal">35</span>
+<span class="normal">36</span>
+<span class="normal">37</span>
+<span class="normal">38</span>
+<span class="normal">39</span>
+<span class="normal">40</span>
+<span class="normal">41</span>
+<span class="normal">42</span>
+<span class="normal">43</span>
+<span class="normal">44</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nx">METHOD</span><span class="w"> </span><span class="nx">metodo0_Declaracion_variables</span>
+<span class="nx">VAR_INPUT</span>
+<span class="w">    </span><span class="nx">binput</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="nx">BOOL</span><span class="p">;</span>
+<span class="nx">END_VAR</span>
+<span class="nx">VAR_INPUT</span>
+<span class="w">    </span><span class="nx">binput2</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="nx">BOOL</span><span class="p">;</span>
+<span class="nx">END_VAR</span>
+<span class="nx">VAR_OUTPUT</span>
+<span class="w">    </span><span class="nx">output1</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="nx">REAL</span><span class="p">;</span>
+<span class="nx">END_VAR</span>
+<span class="nx">VAR_IN_OUT</span>
+<span class="w">    </span><span class="nx">in_out1</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="nx">LINT</span><span class="p">;</span>
+<span class="nx">END_VAR</span>
+<span class="nx">VAR_IN_OUT</span><span class="w"> </span><span class="nx">CONSTANT</span>
+<span class="w">    </span><span class="nx">in_out_constant1</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="nx">DINT</span><span class="p">;</span>
+<span class="nx">END_VAR</span>
+<span class="nx">VAR</span>
+<span class="w">    </span><span class="nx">var1</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="nx">STRING</span><span class="p">;</span>
+<span class="nx">END_VAR</span>
+<span class="c1">//!!! no se pueden declarar variables TEMPORALES dentro de la zona de declaración de variables del método!!!</span>
+<span class="c1">//VAR_TEMP</span>
+<span class="c1">//  temp1 : ULINT;</span>
+<span class="c1">//END_VAR</span>
+<span class="nx">VAR_INST</span>
+<span class="w">    </span><span class="nx">counter</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="nx">INT</span><span class="p">;</span>
+<span class="nx">END_VAR</span>
+<span class="nx">VAR_STAT</span>
+<span class="w">    </span><span class="nx">nVarStat1</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="nx">INT</span><span class="p">;</span>
+<span class="w">    </span><span class="nx">aarray</span><span class="w">  </span><span class="o">:</span><span class="w"> </span><span class="nx">ARRAY</span><span class="p">[</span><span class="mf">1.</span><span class="p">.</span><span class="nx">n</span><span class="p">]</span><span class="w"> </span><span class="nx">OF</span><span class="w"> </span><span class="nx">INT</span><span class="p">;</span>
+<span class="nx">END_VAR</span>
+<span class="nx">VAR_EXTERNAL</span>
+<span class="w">    </span><span class="nx">nVarExt1</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="nx">INT</span><span class="p">;</span><span class="w"> </span><span class="c1">// 1st external variable</span>
+<span class="nx">END_VAR</span>
+<span class="c1">//!!! no se pueden declarar variables PERSISTENT ni RETAIN dentro de la zona de declaración de variables del método!!!</span>
+<span class="c1">//VAR PERSISTENT</span>
+<span class="c1">//    nVarPers1 : DINT; (* 1. Persistent variable *)</span>
+<span class="c1">//    bVarPers2 : BOOL; (* 2. Persistent variable *)</span>
+<span class="c1">//END_VAR</span>
+<span class="c1">//VAR RETAIN</span>
+<span class="c1">//    nRem1 : INT;</span>
+<span class="c1">//END_VAR</span>
+<span class="nx">VAR</span><span class="w"> </span><span class="nx">CONSTANT</span>
+<span class="w">    </span><span class="nx">n</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="nx">INT</span><span class="o">:=</span><span class="w"> </span><span class="mf">10</span><span class="p">;</span>
+<span class="nx">END_VAR</span>
+</code></pre></div></td></tr></table></div></p>
 
 
 
