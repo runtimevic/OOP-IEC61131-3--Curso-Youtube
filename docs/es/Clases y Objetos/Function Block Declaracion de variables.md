@@ -8,7 +8,7 @@
 - 🔗 [Temporary Variable - VAR_TEMP](https://infosys.beckhoff.com/content/1033/tc3_plc_intro/2528781963.html)
 - 🔗 [Static Variables - VAR_STAT](https://infosys.beckhoff.com/content/1033/tc3_plc_intro/2528787339.html)
 - 🔗 [External Variables - VAR_EXTERNAL](https://infosys.beckhoff.com/content/1033/tc3_plc_intro/2528792715.html)
-
+- 🔗 [~~Instance Variables - VAR_INST~~](https://infosys.beckhoff.com/content/1033/tc3_plc_intro/2528798091.html)
 - 🔗 [Remanent Variables - PERSISTENT, RETAIN](https://infosys.beckhoff.com/content/1033/tc3_plc_intro/2528803467.html)
 - 🔗 [SUPER](https://infosys.beckhoff.com/content/1033/tc3_plc_intro/2528837771.html)
 - 🔗 [THIS](https://infosys.beckhoff.com/content/1033/tc3_plc_intro/2528843147.html)

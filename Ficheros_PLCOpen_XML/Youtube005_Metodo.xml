@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <project xmlns="http://www.plcopen.org/xml/tc6_0200">
-  <fileHeader companyName="Beckhoff Automation GmbH" productName="TwinCAT PLC Control" productVersion="3.5.13.21" creationDateTime="2023-02-25T12:10:10.0640033" />
-  <contentHeader name="OOP_Curso" modificationDateTime="2023-02-25T12:10:10.0679063">
+  <fileHeader companyName="Beckhoff Automation GmbH" productName="TwinCAT PLC Control" productVersion="3.5.13.21" creationDateTime="2023-02-25T12:54:01.5537044" />
+  <contentHeader name="OOP_Curso" modificationDateTime="2023-02-25T12:54:01.5537044">
     <coordinateInfo>
       <fbd>
         <scaling x="1" y="1" />
@@ -462,6 +462,142 @@ END_VAR
               <addData />
             </Method>
           </data>
+          <data name="http://www.3s-software.com/plcopenxml/method" handleUnknown="implementation">
+            <Method name="metodo0_Declaracion_variables" ObjectId="6070dad7-8a01-486b-8578-1b3b81c5ee25">
+              <interface>
+                <inputVars>
+                  <variable name="binput">
+                    <type>
+                      <BOOL />
+                    </type>
+                  </variable>
+                  <variable name="binput2">
+                    <type>
+                      <BOOL />
+                    </type>
+                  </variable>
+                </inputVars>
+                <outputVars>
+                  <variable name="output1">
+                    <type>
+                      <REAL />
+                    </type>
+                  </variable>
+                </outputVars>
+                <inOutVars>
+                  <variable name="in_out1">
+                    <type>
+                      <LINT />
+                    </type>
+                  </variable>
+                </inOutVars>
+                <inOutVars constant="true">
+                  <variable name="in_out_constant1">
+                    <type>
+                      <DINT />
+                    </type>
+                  </variable>
+                </inOutVars>
+                <localVars>
+                  <variable name="var1">
+                    <type>
+                      <string />
+                    </type>
+                  </variable>
+                </localVars>
+                <globalVars>
+                  <variable name="nVarStat1">
+                    <type>
+                      <INT />
+                    </type>
+                  </variable>
+                  <variable name="aarray">
+                    <type>
+                      <array>
+                        <dimension lower="1" upper="n" />
+                        <baseType>
+                          <INT />
+                        </baseType>
+                      </array>
+                    </type>
+                  </variable>
+                </globalVars>
+                <externalVars>
+                  <variable name="nVarExt1">
+                    <type>
+                      <INT />
+                    </type>
+                    <documentation>
+                      <xhtml xmlns="http://www.w3.org/1999/xhtml"> 1st external variable</xhtml>
+                    </documentation>
+                  </variable>
+                </externalVars>
+                <localVars constant="true">
+                  <variable name="n">
+                    <type>
+                      <INT />
+                    </type>
+                    <initialValue>
+                      <simpleValue value="10" />
+                    </initialValue>
+                  </variable>
+                </localVars>
+              </interface>
+              <body>
+                <ST>
+                  <xhtml xmlns="http://www.w3.org/1999/xhtml" />
+                </ST>
+              </body>
+              <InterfaceAsPlainText>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">METHOD metodo0_Declaracion_variables
+VAR_INPUT
+	binput : BOOL;
+END_VAR
+VAR_INPUT
+	binput2 : BOOL;
+END_VAR
+VAR_OUTPUT
+	output1 : REAL;
+END_VAR
+VAR_IN_OUT
+	in_out1 : LINT;
+END_VAR
+VAR_IN_OUT CONSTANT
+	in_out_constant1 : DINT;
+END_VAR
+VAR
+	var1 : STRING;
+END_VAR
+//!!! no se pueden declarar variables TEMPORALES dentro de la zona de declaración de variables del método!!!
+//VAR_TEMP
+//	temp1 : ULINT;
+//END_VAR
+VAR_INST
+	counter : INT;
+END_VAR
+VAR_STAT
+    nVarStat1 : INT;
+	aarray  : ARRAY[1..n] OF INT;
+END_VAR
+VAR_EXTERNAL
+    nVarExt1 : INT; // 1st external variable
+END_VAR
+//!!! no se pueden declarar variables PERSISTENT ni RETAIN dentro de la zona de declaración de variables del método!!!
+//VAR PERSISTENT
+//    nVarPers1 : DINT; (* 1. Persistent variable *)
+//    bVarPers2 : BOOL; (* 2. Persistent variable *)
+//END_VAR
+//VAR RETAIN
+//    nRem1 : INT;
+//END_VAR
+VAR CONSTANT
+	n : INT:= 10;
+END_VAR
+</xhtml>
+              </InterfaceAsPlainText>
+              <addData />
+            </Method>
+          </data>
           <data name="http://www.3s-software.com/plcopenxml/interfaceasplaintext" handleUnknown="implementation">
             <InterfaceAsPlainText>
               <xhtml xmlns="http://www.w3.org/1999/xhtml">FUNCTION_BLOCK FB_ejemplo_Method
@@ -574,6 +710,7 @@ END_VAR
             <Object Name="metodo3_interface" ObjectId="709f3c2b-aebf-4e82-82e6-70b51bb45770" />
             <Object Name="Metodo4_VarInst" ObjectId="3461a640-013c-4a20-bed4-dff49f316726" />
             <Object Name="metodo5_returnfb" ObjectId="bf88f70d-1d25-4abb-b32e-abebdb5103db" />
+            <Object Name="metodo0_Declaracion_variables" ObjectId="6070dad7-8a01-486b-8578-1b3b81c5ee25" />
           </Object>
           <Object Name="interface3" ObjectId="605f177d-96c4-4a3f-87fc-212bc8e919d8">
             <Object Name="itf_metodo" ObjectId="ba7026e5-04c8-451b-87ee-1522cd16d8f3" />
