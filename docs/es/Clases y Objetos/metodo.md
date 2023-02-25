@@ -25,8 +25,8 @@ solo necesitan verificar el método correspondiente.
 A diferencia de la clase base, los métodos usan la memoria temporal del controlador: los datos son volátiles, ya que
 las variables solo mantendrán sus valores mientras se ejecuta el método. Si se suponen valores que deben
 mantenerse entre ciclos de ejecución, entonces la variable debe almacenarse en la clase base o en
-algún otro lugar que retendrá los valores de un ciclo al otro (como la variable global
-lista), o también se puede utilizar la variable VAR_INST.
+algún otro lugar que retendrá los valores de un ciclo al otro (como la 
+lista de variables globales -- GVL), o también se puede utilizar la variable de tipo VAR_INST.
 ***
 Por lo tanto, una declaración de Método tiene la siguiente estructura:
 ```typescript
