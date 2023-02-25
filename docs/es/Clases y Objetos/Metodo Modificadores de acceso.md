@@ -8,7 +8,7 @@ La declaración del método puede incluir un especificador de acceso opcional. E
     - Son accesibles dentro de la clase.
     - El acceso está restringido al bloque de funciones o al programa, respectivamente.
 - <span style="color:orange">PROTECTED:</span> 
-    - Solo su propia POU o las POU derivadas de ella pueden acceder al método. La derivación se analiza a continuación.
+    - Solo su propia POU o las POU derivadas (herencia) de ella pueden acceder al método. La derivación se analiza a continuación.
     - Son accesibles a través de la herencia.
     - El acceso está restringido al programa o al bloque de función y sus derivados respectivamente.
 - <span style="color:orange">INTERNAL:</span> 

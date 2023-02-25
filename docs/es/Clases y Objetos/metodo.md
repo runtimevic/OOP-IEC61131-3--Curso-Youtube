@@ -5,7 +5,7 @@ llamada. Solo trabajarán con los datos que necesitan e ignorarán cualquier dat
 puede existir en un determinado bloque de funciones.
 
 Los métodos pueden acceder y manipular las variables internas de la clase principal, pero también pueden usar
-variables propias a las que la clase principal no puede acceder (a menos que sean de salida)
+variables propias a las que la clase principal no puede acceder (a menos que sean de salida la
 variable).
 Además, los métodos son una forma mucho más eficiente de ejecutar un programa porque, al dividir una
 función en varios métodos, el usuario evita ejecutar todo el POU cada vez,
@@ -22,7 +22,7 @@ A diferencia de la clase base, los métodos usan la memoria temporal del control
 las variables solo mantendrán sus valores mientras se ejecuta el método. Si se suponen valores que deben
 mantenerse entre ciclos de ejecución, entonces la variable debe almacenarse en la clase base o en
 algún otro lugar que retendrá los valores de un ciclo al otro (como la variable global
-lista).
+lista), o también se puede utilizar la variable VAR_INST.
 ***
 Por lo tanto, una declaración de Método tiene la siguiente estructura:
 ```typescript
@@ -49,4 +49,3 @@ END_VAR
 
 - 🔗 [Documentación de Beckhoff del Objeto método](https://infosys.beckhoff.com/english.php?content=../content/1033/tc3_plc_intro/2530307467.html&id=)
 
-!!! nota: FALTA VEER VIDEO EN YOUTUBE SOUP3 POR SI PUEDO APORTAR ALGO mas SOBRE EL METODO !!!!

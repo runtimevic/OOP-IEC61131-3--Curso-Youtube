@@ -12,11 +12,12 @@
 Acceso a un único elemento de un tipo de retorno estructurado durante la llamada a método/función/propiedad
 La siguiente implementación se puede utilizar para tener acceso directamente a un elemento individual del tipo de datos estructurado que devuelve el método/función/propiedad cuando se llama a un método, función o propiedad. Un tipo de datos estructurado es, por ejemplo, una estructura o un bloque de funciones.
 
-El tipo devuelto del método/función/propiedad se define como "REFERENCIA A <tipo estructurado>" (en lugar de simplemente "<tipo estructurado>").
-Tenga en cuenta que con este tipo de retorno, si, por ejemplo, se va a devolver una instancia local FB del tipo de datos estructurados, se debe usar el operador de referencia REF= en lugar del operador de asignación "normal" :=.
+El tipo devuelto del método/función/propiedad se define como "REFERENCE TO <structured type>"  (en lugar de simplemente  "<structured type>").
+Tenga en cuenta que con este tipo de retorno, si, por ejemplo, se va a devolver una instancia local FB del tipo de datos estructurados, se debe usar el operador de referencia **REF=** en lugar del operador de asignación "normal" **:=**.
+
 Las declaraciones y el ejemplo de esta sección se refieren a la llamada de una propiedad. Sin embargo, son igualmente transferibles a otras llamadas que ofrecen valores devueltos (por ejemplo, métodos o funciones).
 
-Muestra:
+### Ejemplo:
 
 Declaración de la estructura ST_Sample (tipo de datos estructurado):
 ```javascript
@@ -67,7 +68,7 @@ IF bSet THEN
 END_IF
 ```
 
-Mediante la declaración del tipo devuelto de la propiedad MyProp como "REFERENCE TO ST_Sample" y mediante el uso del operador de referencia REF= en el método Get de esta propiedad, se puede acceder a un único elemento del tipo de datos estructurados devuelto directamente al llamar a la propiedad.
+Mediante la declaración del tipo devuelto de la propiedad MyProp como **"REFERENCE TO ST_Sample"** y mediante el uso del operador de referencia **REF=** en el método Get de esta propiedad, se puede acceder a un único elemento del tipo de datos estructurados devuelto directamente al llamar a la propiedad.
 ```javascript
 VAR
     fbSample    : FB_Sample;
@@ -87,13 +88,13 @@ nSingleGet := stGet.nVar;
 ```
 ***
 ### <span style="color:grey">Retorno por INTERFACE:</span>
-Ejemplo de declaración de un método que nos devuelve una variable del tipo INTERFACE.
+Ejemplo de declaración de un método que nos devuelve una variable del tipo **INTERFACE**.
 ```javascript
 METHOD Method1 : interface1
 ```
 ***
 ### <span style="color:grey">Retorno por FUNCTION_BLOCK:</span>
-Ejemplo de declaración de un método que nos devuelve una variable del tipo FUNCTION_bLOCK.
+Ejemplo de declaración de un método que nos devuelve una variable del tipo **FUNCTION_BLOCK**.
 ```javascript
 METHOD Method1 : FB1
 ```

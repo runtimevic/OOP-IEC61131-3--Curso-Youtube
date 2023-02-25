@@ -60,10 +60,15 @@ metodo1_a_Uno_InOut := TRUE;]]></ST>
     <Method Name="metodo2_struct" Id="{72fb7591-8743-4488-8a14-c4c09928a599}">
       <Declaration><![CDATA[METHOD PUBLIC metodo2_struct : REFERENCE TO ST_sample2
 VAR_INPUT
+	st_struct : ST_sample2;
 END_VAR
 ]]></Declaration>
       <Implementation>
-        <ST><![CDATA[metodo2_struct := ststruct;]]></ST>
+        <ST><![CDATA[
+
+THIS^.ststruct := st_struct;
+
+metodo2_struct REF= THIS^.ststruct;]]></ST>
       </Implementation>
     </Method>
     <Method Name="metodo3_interface" Id="{709f3c2b-aebf-4e82-82e6-70b51bb45770}">

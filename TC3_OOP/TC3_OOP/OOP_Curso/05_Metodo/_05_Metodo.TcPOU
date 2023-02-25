@@ -23,8 +23,7 @@ VAR
 END_VAR
 ]]></Declaration>
     <Implementation>
-      <ST><![CDATA[//fbejemplo_metodo();
-
+      <ST><![CDATA[
 IF 	bPonerAUnobBoolfb THEN
 	bPonerAUnobBoolfb := FALSE;
 	fbejemplo_metodo.metodo1_a_Uno_bBool();	
@@ -50,16 +49,12 @@ END_IF
 // ejemplo para declarar variables lo mas cerca posible del metodo: declaración dentro del metodo de variable con VAR_INST :
 counter := fbejemplo_metodo.Metodo4_VarInst(outvarcounter=>outvarcounter);
 
-
-//// Get - single member and complete structure possible
-////nSingleGet := fbejemplo_metodo.metodo2_struct.metodo2_struct();
-//stGet      REF= fbejemplo_metodo.metodo2_struct.metodo2_struct();
- 
-//// Set - only complete structure possible 
-//IF bSet THEN
-//    fbejemplo_metodo.metodo2_struct REF= stSet;
-//    bSet            := FALSE;
-//END_IF ]]></ST>
+// Set and Get
+IF bSet THEN  
+	nSingleGet := fbejemplo_metodo.metodo2_struct(stSet).nVar;
+	stGet      := fbejemplo_metodo.metodo2_struct(stSet);
+	bSet            := FALSE;
+END_IF  ]]></ST>
     </Implementation>
   </POU>
 </TcPlcObject>

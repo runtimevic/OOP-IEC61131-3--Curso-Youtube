@@ -1,4 +1,13 @@
+## Declaracion de una Variable:
 
+La declaración de variables en CODESYS ó TwinCAT incluirá:
+- Un nombre de variable
+- Dos puntos
+- Un tipo de dato
+- Un valor inicial opcional
+- Un punto y coma
+- Un comentario opcional
+***
 ### <span style="color:grey">🔗 [Tipos de Datos:](https://infosys.beckhoff.com/content/1033/tc3_plc_intro/2529388939.html?id=3451082169760117126)</span>
 
 ### Las ventajas de las estructuras de datos.
