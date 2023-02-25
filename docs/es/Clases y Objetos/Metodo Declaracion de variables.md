@@ -17,7 +17,7 @@
     - [~~PERSISTENT: for remanent variables of type PERSISTENT~~](https://infosys.beckhoff.com/content/1033/tc3_plc_intro/2528803467.html)
     - [CONSTANT: for constants](https://infosys.beckhoff.com/content/1033/tc3_plc_intro/2529284235.html#2529371275)
 
--Ejemplo de declaración de variables en un **METHOD**:
+- Ejemplo de declaración de variables en un **METHOD**:
 ```javascript
 METHOD metodo0_Declaracion_variables
 VAR_INPUT

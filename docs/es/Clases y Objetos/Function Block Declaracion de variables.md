@@ -20,7 +20,7 @@
 - Todos estos tipos de variables que se pueden declarar dentro del FB se pueden repetir los mismos tipos de variables dentro del FB,
 esto podria valer para diferenciar variables del mismo tipo en la zona de declaración, sería meramente indicativo...
 
--Ejemplo de declaración de variables en un FUNCTION_BLOCK:
+- Ejemplo de declaración de variables en un **FUNCTION_BLOCK**:
 ```javascript
 FUNCTION_BLOCK fb_tipos_de_datos
 VAR_INPUT
