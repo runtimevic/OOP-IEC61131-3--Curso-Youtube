@@ -56,3 +56,6 @@ Patrones de comportamiento:
 - State 
 - Visitor 
 - Iterator 
+
+### <span style="color:grey">Links de Patrones de Diseño:</span>
+- [IEC 61131-3: SOLID – The Interface Segregation Principle](https://stefanhenneken.net/2023/02/25/iec-61131-3-solid-the-interface-segregation-principle/#more-2505)

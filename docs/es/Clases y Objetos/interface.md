@@ -36,3 +36,5 @@ es ejecutado;
 - 🔗 [Beckhoff Implementando Interfaces](https://infosys.beckhoff.com/english.php?content=../content/1033/tc3_plc_intro/4262436875.html&id=)
 
 - 🔗 [Extender Interfaces, Infosys Beckhoff](https://infosys.beckhoff.com/content/1033/tc3_plc_intro/2527343499.html?id=365591094627259992)
+
+- 🔗 [TC09.Beckhoff TwinCAT3 Function Block-Part4 Interface.JP](https://www.youtube.com/watch?v=SAGchtGi3-o)

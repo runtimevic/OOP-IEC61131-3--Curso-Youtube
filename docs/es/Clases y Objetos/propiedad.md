@@ -57,6 +57,8 @@ Los pragmas son muy útiles para monitorear propiedades en modo en línea. Para 
 {attribute 'monitoring' := 'call'}:  Cada vez que se muestra el valor, TwinCAT llama al código del descriptor de acceso Get. Cualquier efecto secundario, provocado por ese código, puede aparecer en el seguimiento.
 
 ***
+### <span style="color:grey">Links:</span>
+
 - 🔗 [Documentación de Codesys del Objeto propiedad](https://help.codesys.com/api-content/2/codesys/3.5.12.0/en/_cds_obj_property/#b08bdbd0d86c0a8640e00400511-id-5dbd3039bdbd0d85c0a8640e003d7982)
 
 - 🔗 [Documentación de Beckhoff del Objeto propiedad](https://infosys.beckhoff.com/english.php?content=../content/1033/tc3_plc_intro/2530307467.html&id=)
@@ -65,3 +67,4 @@ Los pragmas son muy útiles para monitorear propiedades en modo en línea. Para 
 
 - 🔗 [object-oriented-programming-in-programmable-logic-controllers-plc-whats-really-new,en.grse.de](https://en.grse.de/blog/object-oriented-programming-in-programmable-logic-controllers-plc-whats-really-new/)
 
+- 🔗 [TC07.Beckhoff TwinCAT3 Function Block-Part2 Property.JP- DUT](https://www.youtube.com/watch?v=zbnb8K15YdI)

@@ -1,0 +1,1 @@
+TwinCAT with Head First Design Patterns Ch.1 - IntroStrategy Pattern.docx

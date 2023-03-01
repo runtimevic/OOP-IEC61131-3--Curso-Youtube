@@ -30,18 +30,7 @@ El nuevo FUNCTION_BLOCK FB_NewEngine , que se deriva de FB_Engine , puede conten
 
 Sin embargo, también debemos asegurarnos de que el parámetro nGear del método Start() se pase a esta propiedad. Debido a que el bloque de funciones principal FB_Engine no tiene acceso a esta nueva propiedad, se debe crear un nuevo método con exactamente los mismos parámetros en FB_NewEngine . Copiamos el código existente al nuevo método y agregamos nuevo código para que el parámetro nGear se pase a la propiedad Gear .
 
-1
-2
-3
-4
-5
-6
-7
-8
-9
-10
-11
-12
+```javascript
 METHOD PUBLIC Start
 VAR_INPUT
   nGear : INT := 2;
@@ -54,6 +43,7 @@ ELSE
   velocityInternal := MaxVelocity;
 END_IF
 Gear := nGear; // new
+```
 La línea 12 copia el parámetro nGear a la propiedad Gear .
 
 Cuando un método o propiedad que ya está presente en el bloque de funciones principal se redefine dentro del bloque de funciones secundario, esto se denomina sobrescritura. El bloque de funciones FB_NewEngine sobrescribe el método Start() .
@@ -71,3 +61,8 @@ Mientras que
 1
 fbNewEngine.Stop();
 llama al método Stop() desde FB_Engine . El método Stop() ha sido heredado por FB_NewEngine de FB_Engine .
+
+***
+### <span style="color:grey">Links:</span>
+
+- 🔗 [Simple Codesys OOP - Inheritance](https://www.youtube.com/watch?v=ehwCe9C4gWQ)

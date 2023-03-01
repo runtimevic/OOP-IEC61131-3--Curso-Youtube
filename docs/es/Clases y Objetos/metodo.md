@@ -53,3 +53,5 @@ END_VAR
 
 - 🔗 [Documentación de Beckhoff del Objeto método](https://infosys.beckhoff.com/english.php?content=../content/1033/tc3_plc_intro/2530307467.html&id=)
 
+- 🔗 [TC08.Beckhoff TwinCAT3 Function Block-Part3 Method.JP](https://www.youtube.com/watch?v=csr11XOva_w)
+
