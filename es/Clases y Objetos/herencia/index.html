@@ -21,7 +21,7 @@
         <link rel="next" href="../interface/">
       
       <link rel="icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.0.14">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.0.15">
     
     
       
@@ -625,6 +625,19 @@
     Herencia:
   </a>
   
+    <nav class="md-nav" aria-label="Herencia:">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#links" class="md-nav__link">
+    Links:
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
     </ul>
@@ -644,6 +657,20 @@
     <li class="md-nav__item">
       <a href="../interface/" class="md-nav__link">
         Interface
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../pointer%20and%20reference/" class="md-nav__link">
+        puntero y referencia
       </a>
     </li>
   
@@ -1134,6 +1161,20 @@
 
             
           
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Patrones%20de%20Dise%C3%B1o/Strategy%20pattern/" class="md-nav__link">
+        Patron de Estrategia
+      </a>
+    </li>
+  
+
+            
+          
         </ul>
       </nav>
     </li>
@@ -1184,6 +1225,19 @@
     Herencia:
   </a>
   
+    <nav class="md-nav" aria-label="Herencia:">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#links" class="md-nav__link">
+    Links:
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
     </ul>
@@ -1225,29 +1279,30 @@ FUNCTION_BLOCK <Access specifier> <Name> EXTENDS <Name basis function block>
 Métodos de sobrescritura
 El nuevo FUNCTION_BLOCK FB_NewEngine , que se deriva de FB_Engine , puede contener propiedades y métodos adicionales. Por ejemplo, podemos agregar la propiedad Gear . Esta propiedad se puede utilizar para consultar y cambiar la marcha actual. Es necesario configurar getters y setters para esta propiedad.</p>
 <p>Sin embargo, también debemos asegurarnos de que el parámetro nGear del método Start() se pase a esta propiedad. Debido a que el bloque de funciones principal FB_Engine no tiene acceso a esta nueva propiedad, se debe crear un nuevo método con exactamente los mismos parámetros en FB_NewEngine . Copiamos el código existente al nuevo método y agregamos nuevo código para que el parámetro nGear se pase a la propiedad Gear .</p>
-<p>1
-2
-3
-4
-5
-6
-7
-8
-9
-10
-11
-12
-METHOD PUBLIC Start
-VAR_INPUT
-  nGear : INT := 2;
-  fVelocity : LREAL := 8.0;
-END_VAR </p>
-<p>IF (fVelocity &lt; MaxVelocity) THEN
-  velocityInternal := fVelocity;
-ELSE
-  velocityInternal := MaxVelocity;
-END_IF
-Gear := nGear; // new
+<p><div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nx">METHOD</span><span class="w"> </span><span class="nx">PUBLIC</span><span class="w"> </span><span class="nx">Start</span>
+<span class="nx">VAR_INPUT</span>
+<span class="w">  </span><span class="nx">nGear</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="nx">INT</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="mf">2</span><span class="p">;</span>
+<span class="w">  </span><span class="nx">fVelocity</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="nx">LREAL</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="mf">8.0</span><span class="p">;</span>
+<span class="nx">END_VAR</span><span class="w"> </span>
+
+<span class="nx">IF</span><span class="w"> </span><span class="p">(</span><span class="nx">fVelocity</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="nx">MaxVelocity</span><span class="p">)</span><span class="w"> </span><span class="nx">THEN</span>
+<span class="w">  </span><span class="nx">velocityInternal</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">fVelocity</span><span class="p">;</span>
+<span class="nx">ELSE</span>
+<span class="w">  </span><span class="nx">velocityInternal</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">MaxVelocity</span><span class="p">;</span>
+<span class="nx">END_IF</span>
+<span class="nx">Gear</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">nGear</span><span class="p">;</span><span class="w"> </span><span class="c1">// new</span>
+</code></pre></div></td></tr></table></div>
 La línea 12 copia el parámetro nGear a la propiedad Gear .</p>
 <p>Cuando un método o propiedad que ya está presente en el bloque de funciones principal se redefine dentro del bloque de funciones secundario, esto se denomina sobrescritura. El bloque de funciones FB_NewEngine sobrescribe el método Start() .</p>
 <p>Por lo tanto, FB_NewEngine tiene la nueva propiedad Gear y sobrescribe el método Start() .</p>
@@ -1259,6 +1314,11 @@ llama al método Start() en FB_NewEngine , ya que este método ha sido redefinid
 <p>1
 fbNewEngine.Stop();
 llama al método Stop() desde FB_Engine . El método Stop() ha sido heredado por FB_NewEngine de FB_Engine .</p>
+<hr />
+<h3 id="links"><span style="color:grey">Links:</span></h3>
+<ul>
+<li>🔗 <a href="https://www.youtube.com/watch?v=ehwCe9C4gWQ">Simple Codesys OOP - Inheritance</a></li>
+</ul>
 
 
 

@@ -129,6 +129,7 @@ nav:
        - Property: Clases y Objetos/propiedad.md
        - Inheritance: Clases y Objetos/herencia.md
        - Interface: Clases y Objetos/interface.md
+       - pointer and reference: Clases y Objetos/pointer and reference.md
        - Abstract FB vs. Interface: Clases y Objetos/FB abstracto frente a interfaz.md
     - Access Modifiers Table: Tabla de Modificadores de acceso.md    
     - Variable types and special variables: Variable types and special variables.md
@@ -156,5 +157,6 @@ nav:
        - StateChart UML: UML/Statechart UML.md
     - Types of Design for PLC programming: Tipos de Diseño para programacion de PLC.md
     - Design patterns:
-       - Design patterns: Patrones de Diseño/_Patrones de Diseño.md 
+       - Design patterns: Patrones de Diseño/_Patrones de Diseño.md
+       - Strategy Pattern: Patrones de Diseño/Strategy pattern.md
     - Links: links.md 
