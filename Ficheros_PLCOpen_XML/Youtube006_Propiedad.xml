@@ -1,0 +1,452 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<project xmlns="http://www.plcopen.org/xml/tc6_0200">
+  <fileHeader companyName="Beckhoff Automation GmbH" productName="TwinCAT PLC Control" productVersion="3.5.13.21" creationDateTime="2023-03-05T21:09:17.8155442" />
+  <contentHeader name="OOP_Curso" modificationDateTime="2023-03-05T21:09:17.8155442">
+    <coordinateInfo>
+      <fbd>
+        <scaling x="1" y="1" />
+      </fbd>
+      <ld>
+        <scaling x="1" y="1" />
+      </ld>
+      <sfc>
+        <scaling x="1" y="1" />
+      </sfc>
+    </coordinateInfo>
+    <addData>
+      <data name="http://www.3s-software.com/plcopenxml/projectinformation" handleUnknown="implementation">
+        <ProjectInformation />
+      </data>
+    </addData>
+  </contentHeader>
+  <types>
+    <dataTypes>
+      <dataType name="ST_Property">
+        <baseType>
+          <struct>
+            <variable name="b1">
+              <type>
+                <BOOL />
+              </type>
+            </variable>
+            <variable name="b2">
+              <type>
+                <BOOL />
+              </type>
+            </variable>
+            <variable name="b3">
+              <type>
+                <BOOL />
+              </type>
+            </variable>
+            <variable name="r1">
+              <type>
+                <REAL />
+              </type>
+            </variable>
+            <variable name="r2">
+              <type>
+                <REAL />
+              </type>
+            </variable>
+            <variable name="r3">
+              <type>
+                <REAL />
+              </type>
+            </variable>
+          </struct>
+        </baseType>
+        <addData>
+          <data name="http://www.3s-software.com/plcopenxml/interfaceasplaintext" handleUnknown="implementation">
+            <InterfaceAsPlainText>
+              <xhtml xmlns="http://www.w3.org/1999/xhtml">TYPE ST_Property :
+STRUCT
+	b1,b2,b3 : BOOL;
+	r1,r2,r3 : REAL;
+	
+END_STRUCT
+END_TYPE
+</xhtml>
+            </InterfaceAsPlainText>
+          </data>
+          <data name="http://www.3s-software.com/plcopenxml/objectid" handleUnknown="discard">
+            <ObjectId>71d69592-d6db-4e35-a4a5-5e821f70c327</ObjectId>
+          </data>
+        </addData>
+      </dataType>
+    </dataTypes>
+    <pous>
+      <pou name="_06_Propiedad" pouType="program">
+        <interface>
+          <localVars>
+            <variable name="myFBProperty">
+              <type>
+                <derived name="FB_Ejemplo_Propiedad" />
+              </type>
+            </variable>
+            <variable name="bSet1">
+              <type>
+                <BOOL />
+              </type>
+            </variable>
+            <variable name="bSet2">
+              <type>
+                <BOOL />
+              </type>
+            </variable>
+            <variable name="IntData">
+              <type>
+                <INT />
+              </type>
+            </variable>
+            <variable name="BoolData">
+              <type>
+                <BOOL />
+              </type>
+            </variable>
+            <variable name="GetSTData">
+              <type>
+                <derived name="ST_Property" />
+              </type>
+            </variable>
+            <variable name="SetSTData">
+              <type>
+                <derived name="ST_Property" />
+              </type>
+            </variable>
+            <variable name="ioData">
+              <type>
+                <INT />
+              </type>
+            </variable>
+            <variable name="counter">
+              <type>
+                <INT />
+              </type>
+            </variable>
+          </localVars>
+        </interface>
+        <body>
+          <ST>
+            <xhtml xmlns="http://www.w3.org/1999/xhtml">IF bSet1 THEN
+	bSet1:= FALSE;
+	myFBProperty.ValueBool := TRUE;
+	myFBProperty.ValueInt := 123;
+	SetSTData.b1 := TRUE;
+	SetSTData.b2 := FALSE;
+	SetSTData.b3 := FALSE;
+	SetSTData.r1 := 1.0;
+	SetSTData.r2 := 2.0;
+	SetSTData.r3 := 3.0;
+
+END_IF
+
+IF bSet2 THEN
+	bSet2:= FALSE;
+	myFBProperty.ValueBool := FALSE;
+	myFBProperty.ValueInt := 456;
+	SetSTData.b1 := FALSE;
+	SetSTData.b2 := TRUE;
+	SetSTData.b3 := TRUE;
+	SetSTData.r1 := 11.0;
+	SetSTData.r2 := 22.0;
+	SetSTData.r3 := 33.0;
+END_IF
+
+
+IntData := 	myFBProperty.ValueInt;
+BoolData := myFBProperty.ValueBool;
+
+//STRUCT
+GetSTData.b1 := myFBProperty.ValueST.b1;
+GetSTData.r1 := myFBProperty.ValueST.r1;
+
+myFBProperty.ValueST := SetSTData;
+
+//IN_OUT;
+IF counter &lt; 0 OR counter &gt; 9999 THEN
+	counter := 1;
+ELSE
+	counter := counter + 1;
+END_IF
+
+//myFBProperty(myIN_OUT:=counter);
+//myFBProperty.Value_INT_OUT := 120;
+ioData := myFBProperty.Value_INT_OUT;
+myFBProperty(myIN_OUT:=counter);</xhtml>
+          </ST>
+        </body>
+        <addData>
+          <data name="http://www.3s-software.com/plcopenxml/interfaceasplaintext" handleUnknown="implementation">
+            <InterfaceAsPlainText>
+              <xhtml xmlns="http://www.w3.org/1999/xhtml">PROGRAM _06_Propiedad
+VAR
+	myFBProperty : FB_Ejemplo_Propiedad;
+	
+	bSet1, bSet2 : BOOL;
+	
+	IntData : INT;
+	BoolData : BOOL;
+	GetSTData : ST_Property;
+	SetSTData : ST_Property;
+	ioData    : INT;
+	counter   : INT;
+END_VAR
+</xhtml>
+            </InterfaceAsPlainText>
+          </data>
+          <data name="http://www.3s-software.com/plcopenxml/objectid" handleUnknown="discard">
+            <ObjectId>34826bd6-b5c7-46d8-8e99-80b4b5a79d3b</ObjectId>
+          </data>
+        </addData>
+      </pou>
+      <pou name="FB_ejemplo_Propiedad" pouType="functionBlock">
+        <interface>
+          <inOutVars>
+            <variable name="myIN_OUT">
+              <type>
+                <INT />
+              </type>
+            </variable>
+          </inOutVars>
+          <localVars>
+            <variable name="myBool">
+              <type>
+                <BOOL />
+              </type>
+            </variable>
+            <variable name="myInt">
+              <type>
+                <INT />
+              </type>
+            </variable>
+            <variable name="myST">
+              <type>
+                <derived name="ST_Property" />
+              </type>
+            </variable>
+          </localVars>
+        </interface>
+        <body>
+          <ST>
+            <xhtml xmlns="http://www.w3.org/1999/xhtml" />
+          </ST>
+        </body>
+        <addData>
+          <data name="http://www.3s-software.com/plcopenxml/property" handleUnknown="implementation">
+            <Property name="ValueBool" ObjectId="e79b1ae8-d8e8-4277-9ceb-b086c5c3097a">
+              <interface>
+                <returnType>
+                  <BOOL />
+                </returnType>
+              </interface>
+              <SetAccessor>
+                <interface />
+                <body>
+                  <ST>
+                    <xhtml xmlns="http://www.w3.org/1999/xhtml"> myBool := ValueBool;</xhtml>
+                  </ST>
+                </body>
+                <InterfaceAsPlainText>
+                  <xhtml xmlns="http://www.w3.org/1999/xhtml">VAR
+END_VAR
+</xhtml>
+                </InterfaceAsPlainText>
+                <addData />
+              </SetAccessor>
+              <GetAccessor>
+                <interface />
+                <body>
+                  <ST>
+                    <xhtml xmlns="http://www.w3.org/1999/xhtml">ValueBool := myBool;</xhtml>
+                  </ST>
+                </body>
+                <InterfaceAsPlainText>
+                  <xhtml xmlns="http://www.w3.org/1999/xhtml">VAR
+END_VAR
+</xhtml>
+                </InterfaceAsPlainText>
+                <addData />
+              </GetAccessor>
+              <InterfaceAsPlainText>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">PROPERTY ValueBool : BOOL</xhtml>
+              </InterfaceAsPlainText>
+              <addData />
+            </Property>
+          </data>
+          <data name="http://www.3s-software.com/plcopenxml/property" handleUnknown="implementation">
+            <Property name="ValueInt" ObjectId="133670a7-09af-415f-957f-31103a022050">
+              <interface>
+                <returnType>
+                  <INT />
+                </returnType>
+              </interface>
+              <SetAccessor>
+                <interface />
+                <body>
+                  <ST>
+                    <xhtml xmlns="http://www.w3.org/1999/xhtml"> myint := ValueInt;</xhtml>
+                  </ST>
+                </body>
+                <InterfaceAsPlainText>
+                  <xhtml xmlns="http://www.w3.org/1999/xhtml">VAR
+END_VAR
+</xhtml>
+                </InterfaceAsPlainText>
+                <addData />
+              </SetAccessor>
+              <GetAccessor>
+                <interface />
+                <body>
+                  <ST>
+                    <xhtml xmlns="http://www.w3.org/1999/xhtml">ValueInt := myint;</xhtml>
+                  </ST>
+                </body>
+                <InterfaceAsPlainText>
+                  <xhtml xmlns="http://www.w3.org/1999/xhtml">VAR
+END_VAR
+</xhtml>
+                </InterfaceAsPlainText>
+                <addData />
+              </GetAccessor>
+              <InterfaceAsPlainText>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">PROPERTY ValueInt : INT</xhtml>
+              </InterfaceAsPlainText>
+              <addData />
+            </Property>
+          </data>
+          <data name="http://www.3s-software.com/plcopenxml/property" handleUnknown="implementation">
+            <Property name="ValueST" ObjectId="363a33a0-bfc3-42f4-861a-12e4c4928f01">
+              <interface>
+                <returnType>
+                  <derived name="REFERENCE TO ST_Property" />
+                </returnType>
+              </interface>
+              <SetAccessor>
+                <interface />
+                <body>
+                  <ST>
+                    <xhtml xmlns="http://www.w3.org/1999/xhtml">IF NOT __ISVALIDREF(myIN_OUT) THEN
+	RETURN;
+END_IF
+
+myST := ValueST;</xhtml>
+                  </ST>
+                </body>
+                <InterfaceAsPlainText>
+                  <xhtml xmlns="http://www.w3.org/1999/xhtml">VAR
+END_VAR
+</xhtml>
+                </InterfaceAsPlainText>
+                <addData />
+              </SetAccessor>
+              <GetAccessor>
+                <interface />
+                <body>
+                  <ST>
+                    <xhtml xmlns="http://www.w3.org/1999/xhtml">ValueST REF= myST;</xhtml>
+                  </ST>
+                </body>
+                <InterfaceAsPlainText>
+                  <xhtml xmlns="http://www.w3.org/1999/xhtml">VAR
+END_VAR
+</xhtml>
+                </InterfaceAsPlainText>
+                <addData />
+              </GetAccessor>
+              <InterfaceAsPlainText>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">PROPERTY ValueST : reference to ST_Property</xhtml>
+              </InterfaceAsPlainText>
+              <addData />
+            </Property>
+          </data>
+          <data name="http://www.3s-software.com/plcopenxml/property" handleUnknown="implementation">
+            <Property name="Value_INT_OUT" ObjectId="74661cd1-1310-4f4c-b576-728ac27ce460">
+              <interface>
+                <returnType>
+                  <INT />
+                </returnType>
+              </interface>
+              <SetAccessor>
+                <interface />
+                <body>
+                  <ST>
+                    <xhtml xmlns="http://www.w3.org/1999/xhtml">myIN_OUT := Value_INT_OUT;</xhtml>
+                  </ST>
+                </body>
+                <InterfaceAsPlainText>
+                  <xhtml xmlns="http://www.w3.org/1999/xhtml">VAR
+END_VAR
+</xhtml>
+                </InterfaceAsPlainText>
+                <addData />
+              </SetAccessor>
+              <GetAccessor>
+                <interface />
+                <body>
+                  <ST>
+                    <xhtml xmlns="http://www.w3.org/1999/xhtml">IF NOT __ISVALIDREF(myIN_OUT) THEN
+	RETURN;
+END_IF
+
+Value_INT_OUT := myIN_OUT;</xhtml>
+                  </ST>
+                </body>
+                <InterfaceAsPlainText>
+                  <xhtml xmlns="http://www.w3.org/1999/xhtml">VAR
+END_VAR
+</xhtml>
+                </InterfaceAsPlainText>
+                <addData />
+              </GetAccessor>
+              <InterfaceAsPlainText>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">PROPERTY Value_INT_OUT : INT</xhtml>
+              </InterfaceAsPlainText>
+              <addData />
+            </Property>
+          </data>
+          <data name="http://www.3s-software.com/plcopenxml/interfaceasplaintext" handleUnknown="implementation">
+            <InterfaceAsPlainText>
+              <xhtml xmlns="http://www.w3.org/1999/xhtml">FUNCTION_BLOCK FB_ejemplo_Propiedad
+VAR_INPUT
+END_VAR
+VAR_OUTPUT
+END_VAR
+VAR_IN_OUT
+	myIN_OUT : INT;
+END_VAR
+VAR
+	myBool : BOOL;
+	myInt : INT;
+	myST  : ST_Property;
+END_VAR
+</xhtml>
+            </InterfaceAsPlainText>
+          </data>
+          <data name="http://www.3s-software.com/plcopenxml/objectid" handleUnknown="discard">
+            <ObjectId>53403d56-6301-4aee-9142-b3bd61d2b285</ObjectId>
+          </data>
+        </addData>
+      </pou>
+    </pous>
+  </types>
+  <instances>
+    <configurations />
+  </instances>
+  <addData>
+    <data name="http://www.3s-software.com/plcopenxml/projectstructure" handleUnknown="discard">
+      <ProjectStructure>
+        <Folder Name="06_Propiedad">
+          <Object Name="_06_Propiedad" ObjectId="34826bd6-b5c7-46d8-8e99-80b4b5a79d3b" />
+          <Object Name="FB_ejemplo_Propiedad" ObjectId="53403d56-6301-4aee-9142-b3bd61d2b285">
+            <Object Name="ValueBool" ObjectId="e79b1ae8-d8e8-4277-9ceb-b086c5c3097a" />
+            <Object Name="ValueInt" ObjectId="133670a7-09af-415f-957f-31103a022050" />
+            <Object Name="ValueST" ObjectId="363a33a0-bfc3-42f4-861a-12e4c4928f01" />
+            <Object Name="Value_INT_OUT" ObjectId="74661cd1-1310-4f4c-b576-728ac27ce460" />
+          </Object>
+          <Object Name="ST_Property" ObjectId="71d69592-d6db-4e35-a4a5-5e821f70c327" />
+        </Folder>
+      </ProjectStructure>
+    </data>
+  </addData>
+</project>

@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.12">
+  <POU Name="_06_Propiedad" Id="{34826bd6-b5c7-46d8-8e99-80b4b5a79d3b}" SpecialFunc="None">
+    <Declaration><![CDATA[PROGRAM _06_Propiedad
+VAR
+	myFBProperty : FB_Ejemplo_Propiedad;
+	
+	bSet1, bSet2 : BOOL;
+	
+	IntData : INT;
+	BoolData : BOOL;
+	GetSTData : ST_Property;
+	SetSTData : ST_Property;
+	ioData    : INT;
+	counter   : INT;
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[IF bSet1 THEN
+	bSet1:= FALSE;
+	myFBProperty.ValueBool := TRUE;
+	myFBProperty.ValueInt := 123;
+	SetSTData.b1 := TRUE;
+	SetSTData.b2 := FALSE;
+	SetSTData.b3 := FALSE;
+	SetSTData.r1 := 1.0;
+	SetSTData.r2 := 2.0;
+	SetSTData.r3 := 3.0;
+
+END_IF
+
+IF bSet2 THEN
+	bSet2:= FALSE;
+	myFBProperty.ValueBool := FALSE;
+	myFBProperty.ValueInt := 456;
+	SetSTData.b1 := FALSE;
+	SetSTData.b2 := TRUE;
+	SetSTData.b3 := TRUE;
+	SetSTData.r1 := 11.0;
+	SetSTData.r2 := 22.0;
+	SetSTData.r3 := 33.0;
+END_IF
+
+
+IntData := 	myFBProperty.ValueInt;
+BoolData := myFBProperty.ValueBool;
+
+//STRUCT
+GetSTData.b1 := myFBProperty.ValueST.b1;
+GetSTData.r1 := myFBProperty.ValueST.r1;
+
+myFBProperty.ValueST := SetSTData;
+
+//IN_OUT;
+IF counter < 0 OR counter > 9999 THEN
+	counter := 1;
+ELSE
+	counter := counter + 1;
+END_IF
+
+//myFBProperty(myIN_OUT:=counter);
+//myFBProperty.Value_INT_OUT := 120;
+ioData := myFBProperty.Value_INT_OUT;
+myFBProperty(myIN_OUT:=counter);]]></ST>
+    </Implementation>
+  </POU>
+</TcPlcObject>

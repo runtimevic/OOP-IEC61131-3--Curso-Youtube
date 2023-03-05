@@ -1,0 +1,106 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.12">
+  <POU Name="FB_ejemplo_Propiedad" Id="{53403d56-6301-4aee-9142-b3bd61d2b285}" SpecialFunc="None">
+    <Declaration><![CDATA[FUNCTION_BLOCK FB_ejemplo_Propiedad
+VAR_INPUT
+END_VAR
+VAR_OUTPUT
+END_VAR
+VAR_IN_OUT
+	myIN_OUT : INT;
+END_VAR
+VAR
+	myBool : BOOL;
+	myInt : INT;
+	myST  : ST_Property;
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[]]></ST>
+    </Implementation>
+    <Property Name="Value_INT_OUT" Id="{74661cd1-1310-4f4c-b576-728ac27ce460}">
+      <Declaration><![CDATA[PROPERTY Value_INT_OUT : INT]]></Declaration>
+      <Get Name="Get" Id="{0b4ba3a1-227e-48ae-ba4b-b1dee639a238}">
+        <Declaration><![CDATA[VAR
+END_VAR
+]]></Declaration>
+        <Implementation>
+          <ST><![CDATA[IF NOT __ISVALIDREF(myIN_OUT) THEN
+	RETURN;
+END_IF
+
+Value_INT_OUT := myIN_OUT;]]></ST>
+        </Implementation>
+      </Get>
+      <Set Name="Set" Id="{0a819901-1711-49d1-99ba-703d67b1f949}">
+        <Declaration><![CDATA[VAR
+END_VAR
+]]></Declaration>
+        <Implementation>
+          <ST><![CDATA[myIN_OUT := Value_INT_OUT;]]></ST>
+        </Implementation>
+      </Set>
+    </Property>
+    <Property Name="ValueBool" Id="{e79b1ae8-d8e8-4277-9ceb-b086c5c3097a}">
+      <Declaration><![CDATA[PROPERTY ValueBool : BOOL]]></Declaration>
+      <Get Name="Get" Id="{717513e8-d69b-48df-8f15-0ae7c6ffedc5}">
+        <Declaration><![CDATA[VAR
+END_VAR
+]]></Declaration>
+        <Implementation>
+          <ST><![CDATA[ValueBool := myBool;]]></ST>
+        </Implementation>
+      </Get>
+      <Set Name="Set" Id="{80c164f1-a865-4312-8c5f-9be5079c21f9}">
+        <Declaration><![CDATA[VAR
+END_VAR
+]]></Declaration>
+        <Implementation>
+          <ST><![CDATA[ myBool := ValueBool;]]></ST>
+        </Implementation>
+      </Set>
+    </Property>
+    <Property Name="ValueInt" Id="{133670a7-09af-415f-957f-31103a022050}">
+      <Declaration><![CDATA[PROPERTY ValueInt : INT]]></Declaration>
+      <Get Name="Get" Id="{99e3d0a0-07d5-4640-874f-35fdef4875fa}">
+        <Declaration><![CDATA[VAR
+END_VAR
+]]></Declaration>
+        <Implementation>
+          <ST><![CDATA[ValueInt := myint;]]></ST>
+        </Implementation>
+      </Get>
+      <Set Name="Set" Id="{2aa76308-b9d0-4df7-abc3-5933a1c4c6ee}">
+        <Declaration><![CDATA[VAR
+END_VAR
+]]></Declaration>
+        <Implementation>
+          <ST><![CDATA[ myint := ValueInt;]]></ST>
+        </Implementation>
+      </Set>
+    </Property>
+    <Property Name="ValueST" Id="{363a33a0-bfc3-42f4-861a-12e4c4928f01}">
+      <Declaration><![CDATA[PROPERTY ValueST : reference to ST_Property]]></Declaration>
+      <Get Name="Get" Id="{881eebdf-89d5-4979-a45d-62e550b19232}">
+        <Declaration><![CDATA[VAR
+END_VAR
+]]></Declaration>
+        <Implementation>
+          <ST><![CDATA[ValueST REF= myST;]]></ST>
+        </Implementation>
+      </Get>
+      <Set Name="Set" Id="{2fe34d5e-d91e-450b-9a12-99f8521f55c9}">
+        <Declaration><![CDATA[VAR
+END_VAR
+]]></Declaration>
+        <Implementation>
+          <ST><![CDATA[IF NOT __ISVALIDREF(myIN_OUT) THEN
+	RETURN;
+END_IF
+
+myST := ValueST;]]></ST>
+        </Implementation>
+      </Set>
+    </Property>
+  </POU>
+</TcPlcObject>

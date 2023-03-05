@@ -54,6 +54,15 @@
     <Compile Include="05_Metodo\_05_Metodo.TcPOU">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="06_Propiedad\FB_ejemplo_Propiedad.TcPOU">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="06_Propiedad\ST_Property.TcDUT">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="06_Propiedad\_06_Propiedad.TcPOU">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="PlcTask.TcTTO">
       <SubType>Code</SubType>
     </Compile>
@@ -69,6 +78,7 @@
     <Folder Include="04_Clases_Y_Objetos" />
     <Folder Include="04_Clases_Y_Objetos\Clase" />
     <Folder Include="05_Metodo" />
+    <Folder Include="06_Propiedad" />
     <Folder Include="_MAIN" />
   </ItemGroup>
   <ItemGroup>
