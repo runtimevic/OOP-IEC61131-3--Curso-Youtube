@@ -20,7 +20,7 @@ variables;
 - Ser accedido por evento en lugar de ser verificado en cada ciclo de ejecución.
 
 ***
-.Propiedades: Getters & Setters
+### Propiedades: Getters & Setters:
 
 para modificar directamente nuestras propiedades lo que se busca es que se haga a través de los metodos Getters y Setters, el cual varía la escritura según el lenguaje pero el concepto es el mismo.
 ***
@@ -29,7 +29,7 @@ Por lo tanto, una declaración de propiedad tiene la siguiente estructura:
 ```typescript
 PROPERTY <Access specifier> <Name> : <Datatype>
 ```
-En el Objeto Propiedad es obligatorio que retorne un valor...
+En el Objeto Propiedad es obligatorio que retorne un valor.
 ***
 ### <span style="color:grey">Especificadores de acceso:</span>
 Al igual que con los métodos, las propiedades también pueden tomar los siguientes especificadores de acceso: **PUBLIC , PRIVATE , PROTECTED , INTERNAL y FINAL** . Cuando no se define ningún especificador de acceso, la propiedad es **PUBLIC** . Además, también se puede especificar un especificador de acceso para cada setter y getter. Esto tiene prioridad sobre el propio especificador de acceso de la propiedad.
@@ -50,14 +50,14 @@ Especificador de acceso:
     - No se permite sobrescribir la propiedad en un derivado del bloque de funciones. Esto significa que la propiedad no se puede sobrescribir ni extender en una subclase posiblemente existente.
     - Las propiedades pueden ser abstractas, lo que significa que una propiedad no tiene una implementación inicial y que la implementación real se proporciona en el bloque de funciones derivado.
 
-Los pragmas son muy útiles para monitorear propiedades en modo en línea. Para esto, escríbalos en la parte superior de las declaraciones de propiedades (atributo 'monitoreo'):
+Los pragmas son muy útiles para monitorear propiedades en modo en línea. Para esto, escríbalos en la parte superior de las declaraciones de propiedades (attribute 'monitoring'):
 
-{attribute 'monitoring := 'variable'}:  Al acceder a una propiedad, TwinCAT almacena el valor real en una variable y muestra el valor de esta última. Este valor puede volverse obsoleto si el código ya no accede a la propiedad.
+**{attribute 'monitoring := 'variable'}**:  Al acceder a una propiedad, TwinCAT almacena el valor real en una variable y muestra el valor de esta última. Este valor puede volverse obsoleto si el código ya no accede a la propiedad.
 
-{attribute 'monitoring' := 'call'}:  Cada vez que se muestra el valor, TwinCAT llama al código del descriptor de acceso Get. Cualquier efecto secundario, provocado por ese código, puede aparecer en el seguimiento.
+**{attribute 'monitoring' := 'call'}**:  Cada vez que se muestra el valor, TwinCAT llama al código del descriptor de acceso Get. Cualquier efecto secundario, provocado por ese código, puede aparecer en el seguimiento.
 
 ***
-### <span style="color:grey">Links:</span>
+### <span style="color:grey">Links del Objeto Propiedad:</span>
 
 - 🔗 [Documentación de Codesys del Objeto propiedad](https://help.codesys.com/api-content/2/codesys/3.5.12.0/en/_cds_obj_property/#b08bdbd0d86c0a8640e00400511-id-5dbd3039bdbd0d85c0a8640e003d7982)
 

@@ -47,7 +47,7 @@ VAR_OUTPUT
 END_VAR
 ```
 ***
-### <span style="color:grey">Links de Metodos:</span>
+### <span style="color:grey">Links del Objeto Metodo:</span>
 
 - 🔗 [Documentación Codesys del Objeto método](https://help.codesys.com/api-content/2/codesys/3.5.14.0/en/_cds_obj_method/#e4507ebe4233ac0c0a8640e00a37b12-id-3375759d0dd23b38c0a864630d4cd159)
 
