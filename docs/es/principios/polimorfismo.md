@@ -37,7 +37,7 @@ El polimorfismo se puede obtener gracias a las Interfaces y/o las Clases Abstrac
     | 1.- Limitadas a una sola implementación.   | 1. No tiene limitación de implementación.     | 
     | 2.- Pueden definir comportamiento base.     | 2. Expone propiedades y métodos abstractos (sin lógica).     |
 ***    
-### <span style="color:grey">Links:</span>
+### <span style="color:grey">Links Polimorfismo:</span>
 
 - 🔗 [polymorphism, www.plccoder.com](https://www.plccoder.com/polymorphism/)
 
