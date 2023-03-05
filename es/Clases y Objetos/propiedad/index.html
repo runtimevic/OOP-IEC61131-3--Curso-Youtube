@@ -21,7 +21,7 @@
         <link rel="next" href="../herencia/">
       
       <link rel="icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.0.15">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.1.1">
     
     
       
@@ -29,7 +29,7 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.113286f1.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.402914a4.min.css">
       
         
         <link rel="stylesheet" href="../../assets/stylesheets/palette.a0c5b2b5.min.css">
@@ -134,7 +134,9 @@
     
       
 
-<header class="md-header" data-md-component="header">
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Cabecera">
     <a href="../.." title="Programación Orientada a Objetos OOP IEC61131-3 Curso Youtube by Runtimevic" class="md-header__button md-logo" aria-label="Programación Orientada a Objetos OOP IEC61131-3 Curso Youtube by Runtimevic" data-md-component="logo">
       
@@ -614,6 +616,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#propiedades-getters-setters" class="md-nav__link">
+    Propiedades: Getters &amp; Setters:
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#especificadores-de-acceso" class="md-nav__link">
     Especificadores de acceso:
   </a>
@@ -621,8 +630,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#links" class="md-nav__link">
-    Links:
+  <a href="#links-del-objeto-propiedad" class="md-nav__link">
+    Links del Objeto Propiedad:
   </a>
   
 </li>
@@ -1229,6 +1238,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#propiedades-getters-setters" class="md-nav__link">
+    Propiedades: Getters &amp; Setters:
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#especificadores-de-acceso" class="md-nav__link">
     Especificadores de acceso:
   </a>
@@ -1236,8 +1252,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#links" class="md-nav__link">
-    Links:
+  <a href="#links-del-objeto-propiedad" class="md-nav__link">
+    Links del Objeto Propiedad:
   </a>
   
 </li>
@@ -1281,13 +1297,13 @@ variables;</li>
 <li>Ser accedido por evento en lugar de ser verificado en cada ciclo de ejecución.</li>
 </ul>
 <hr />
-<p>.Propiedades: Getters &amp; Setters</p>
+<h3 id="propiedades-getters-setters">Propiedades: Getters &amp; Setters:</h3>
 <p>para modificar directamente nuestras propiedades lo que se busca es que se haga a través de los metodos Getters y Setters, el cual varía la escritura según el lenguaje pero el concepto es el mismo.</p>
 <hr />
 <p>Por lo tanto, una declaración de propiedad tiene la siguiente estructura:</p>
 <p><div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nx">PROPERTY</span><span class="w"> </span><span class="o">&lt;</span><span class="nx">Access</span><span class="w"> </span><span class="nx">specifier</span><span class="o">&gt;</span><span class="w"> </span><span class="o">&lt;</span><span class="nx">Name</span><span class="o">&gt;</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="o">&lt;</span><span class="nx">Datatype</span><span class="o">&gt;</span>
 </code></pre></div></td></tr></table></div>
-En el Objeto Propiedad es obligatorio que retorne un valor...</p>
+En el Objeto Propiedad es obligatorio que retorne un valor.</p>
 <hr />
 <h3 id="especificadores-de-acceso"><span style="color:grey">Especificadores de acceso:</span></h3>
 <p>Al igual que con los métodos, las propiedades también pueden tomar los siguientes especificadores de acceso: <strong>PUBLIC , PRIVATE , PROTECTED , INTERNAL y FINAL</strong> . Cuando no se define ningún especificador de acceso, la propiedad es <strong>PUBLIC</strong> . Además, también se puede especificar un especificador de acceso para cada setter y getter. Esto tiene prioridad sobre el propio especificador de acceso de la propiedad.</p>
@@ -1316,11 +1332,11 @@ En el Objeto Propiedad es obligatorio que retorne un valor...</p>
 </ul>
 </li>
 </ul>
-<p>Los pragmas son muy útiles para monitorear propiedades en modo en línea. Para esto, escríbalos en la parte superior de las declaraciones de propiedades (atributo 'monitoreo'):</p>
-<p>{attribute 'monitoring := 'variable'}:  Al acceder a una propiedad, TwinCAT almacena el valor real en una variable y muestra el valor de esta última. Este valor puede volverse obsoleto si el código ya no accede a la propiedad.</p>
-<p>{attribute 'monitoring' := 'call'}:  Cada vez que se muestra el valor, TwinCAT llama al código del descriptor de acceso Get. Cualquier efecto secundario, provocado por ese código, puede aparecer en el seguimiento.</p>
+<p>Los pragmas son muy útiles para monitorear propiedades en modo en línea. Para esto, escríbalos en la parte superior de las declaraciones de propiedades (attribute 'monitoring'):</p>
+<p><strong>{attribute 'monitoring := 'variable'}</strong>:  Al acceder a una propiedad, TwinCAT almacena el valor real en una variable y muestra el valor de esta última. Este valor puede volverse obsoleto si el código ya no accede a la propiedad.</p>
+<p><strong>{attribute 'monitoring' := 'call'}</strong>:  Cada vez que se muestra el valor, TwinCAT llama al código del descriptor de acceso Get. Cualquier efecto secundario, provocado por ese código, puede aparecer en el seguimiento.</p>
 <hr />
-<h3 id="links"><span style="color:grey">Links:</span></h3>
+<h3 id="links-del-objeto-propiedad"><span style="color:grey">Links del Objeto Propiedad:</span></h3>
 <ul>
 <li>
 <p>🔗 <a href="https://help.codesys.com/api-content/2/codesys/3.5.12.0/en/_cds_obj_property/#b08bdbd0d86c0a8640e00400511-id-5dbd3039bdbd0d85c0a8640e003d7982">Documentación de Codesys del Objeto propiedad</a></p>
@@ -1521,7 +1537,7 @@ En el Objeto Propiedad es obligatorio que retorne un valor...</p>
     <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.footer"], "search": "../../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}, "version": {"provider": "mike"}}</script>
     
     
-      <script src="../../assets/javascripts/bundle.2a6f1dda.min.js"></script>
+      <script src="../../assets/javascripts/bundle.b78d2936.min.js"></script>
       
     
   </body>
