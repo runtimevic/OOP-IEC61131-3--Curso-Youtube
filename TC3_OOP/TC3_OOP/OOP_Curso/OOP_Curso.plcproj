@@ -63,6 +63,21 @@
     <Compile Include="06_Propiedad\_06_Propiedad.TcPOU">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="07_Herencia\FB_Hijo.TcPOU">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="07_Herencia\FB_Padre.TcPOU">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="07_Herencia\Motor.TcPOU">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="07_Herencia\Pump.TcPOU">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="07_Herencia\_07_Herencia.TcPOU">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="PlcTask.TcTTO">
       <SubType>Code</SubType>
     </Compile>
@@ -79,6 +94,7 @@
     <Folder Include="04_Clases_Y_Objetos\Clase" />
     <Folder Include="05_Metodo" />
     <Folder Include="06_Propiedad" />
+    <Folder Include="07_Herencia" />
     <Folder Include="_MAIN" />
   </ItemGroup>
   <ItemGroup>

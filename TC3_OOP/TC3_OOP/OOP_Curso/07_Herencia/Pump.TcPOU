@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.12">
+  <POU Name="Pump" Id="{86477610-007c-4c65-b262-d72fd6793daa}" SpecialFunc="None">
+    <Declaration><![CDATA[FUNCTION_BLOCK Pump EXTENDS Motor
+VAR_INPUT
+END_VAR
+VAR_OUTPUT
+END_VAR
+VAR
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[iPapaTime(in:=xOn, pt:=T#1S);
+UpdateAngle();]]></ST>
+    </Implementation>
+    <Method Name="UpdateAngle" Id="{debe4aeb-b848-49f8-82a3-2e88c667bf22}">
+      <Declaration><![CDATA[METHOD UpdateAngle : BOOL
+VAR_INPUT
+END_VAR
+]]></Declaration>
+      <Implementation>
+        <ST><![CDATA[IF ipapatime.q THEN
+	//iangle:= iangle+ispeed;
+	iangle:= iangle+ispeed*100;
+//	IF iangle>360 THEN
+//		iangle:=0;
+//	END_IF
+	ipapatime.IN:= FALSE;
+ELSE
+	ipapatime.IN:= TRUE;
+END_IF]]></ST>
+      </Implementation>
+    </Method>
+  </POU>
+</TcPlcObject>

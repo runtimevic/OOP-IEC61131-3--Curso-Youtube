@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.12">
+  <POU Name="FB_Hijo" Id="{6da2124f-b0d9-4aab-8349-c55f49aaee16}" SpecialFunc="None">
+    <Declaration><![CDATA[FUNCTION_BLOCK FB_Hijo EXTENDS FB_Padre
+VAR_INPUT
+	iIn2:int;
+END_VAR
+VAR_OUTPUT
+END_VAR
+VAR
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[]]></ST>
+    </Implementation>
+    <Method Name="mMinus" Id="{392b875b-6247-4240-b383-b9d681cbef48}">
+      <Declaration><![CDATA[METHOD mMinus : INT
+VAR_INPUT
+	minus:INT;
+END_VAR
+]]></Declaration>
+      <Implementation>
+        <ST><![CDATA[mMinus := iIn1 - minus;]]></ST>
+      </Implementation>
+    </Method>
+    <Method Name="mMultiply" Id="{c0cac5f4-ac9b-4744-8a26-90a08d49a4d4}">
+      <Declaration><![CDATA[METHOD mMultiply : INT
+VAR_INPUT
+END_VAR
+]]></Declaration>
+      <Implementation>
+        <ST><![CDATA[//Hemos Sobreescrito el metodo del Padre. (superclase).
+
+mMultiply:= THIS^.iIn1 * iIn2;
+
+]]></ST>
+      </Implementation>
+    </Method>
+    <Method Name="mSuperMultiply" Id="{17df23c8-9126-4208-95dd-6dbccaba4cc3}">
+      <Declaration><![CDATA[METHOD mSuperMultiply : INT
+VAR_INPUT
+END_VAR
+]]></Declaration>
+      <Implementation>
+        <ST><![CDATA[//Accedomos al metodo del padre con SUPER^.
+
+mSuperMultiply := 10 * SUPER^.mMultiply();
+
+
+
+]]></ST>
+      </Implementation>
+    </Method>
+  </POU>
+</TcPlcObject>

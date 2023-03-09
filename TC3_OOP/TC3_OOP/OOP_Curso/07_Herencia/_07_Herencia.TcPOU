@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.12">
+  <POU Name="_07_Herencia" Id="{deacbb1a-3f2b-46c5-a910-adf0f4a4cfee}" SpecialFunc="None">
+    <Declaration><![CDATA[PROGRAM _07_Herencia
+VAR
+	Padre: FB_Padre;
+	Hijo : FB_Hijo;
+	mot : Motor;
+	pump: Pump;
+	
+	a:INT:=10;
+	b:INT:=20;
+	c,d,e,f,g,h,i:INT;
+	
+	vel:INT:=1;
+	bOn : BOOL;
+	bStatusxOnMotor : BOOL;
+	bStatusxOnPump : BOOL;
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[Padre(iIn1:=a);
+padre.iPadreVar;
+c:= padre.mDouble();
+d:= padre.mMultiply();
+
+//Se Heradan todos los Métodos y Atributos(Propiedades), también Hereda la SubClase (Hijo) las variables de la SuperClase (Padre).
+hijo(iIn1:=a, iIn2:=b);
+//el valor de la variable en el Hijo y en el Padre no son iguales, ya que lo que esta sucediendo dentro del area principal del Padre no se ejecuta en el Hijo...
+//esto es debido a que el codigo del area principal no se herada del Padre al Hijo...
+hijo.iPadreVar; 
+e:= hijo.mDouble();
+//se puede sobreescribir un metodo del Padre en el Hijo..., la Herencia posibilita la sobreescritura de los Metodos...
+f:= hijo.mMultiply();
+g:= hijo.mMinus(minus:=17);
+h:= hijo.mSuperMultiply();
+
+//Motor SuperClase
+mot(iSpeed:= vel);
+mot.iAngle;
+IF bOn THEN
+	mot.TurnON();
+ELSE
+	mot.TurnOff();
+END_IF
+
+bStatusxOnMotor:= mot.StatusxOn;
+
+//Bomba SubClase de Motor
+pump(iSpeed:= vel);
+pump.iAngle;
+IF bOn THEN
+	pump.TurnON();
+ELSE
+	pump.TurnOff();
+END_IF
+
+bStatusxOnPump:= pump.StatusxOn;
+
+
+
+]]></ST>
+    </Implementation>
+  </POU>
+</TcPlcObject>

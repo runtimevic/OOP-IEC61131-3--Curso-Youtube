@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.12">
+  <POU Name="FB_Padre" Id="{ecf2020a-e670-4726-94fd-5dd6aa5625c9}" SpecialFunc="None">
+    <Declaration><![CDATA[FUNCTION_BLOCK FB_Padre
+VAR_INPUT
+	iIn1: INT;
+END_VAR
+VAR_OUTPUT
+	iOut:INT;
+END_VAR
+VAR
+	iPadreVar:INT:= 42;
+	iPadreTime: TON:=(in:=TRUE, pt:=T#1S);
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[iPadreTime();
+IF iPadreTime.Q THEN
+	iPadreVar:= iPadreVar+iIn1;
+	iPadreTime.IN:= FALSE;
+ELSE
+	iPadreTime.IN:= TRUE;
+END_IF]]></ST>
+    </Implementation>
+    <Method Name="mDouble" Id="{53201b91-db1b-4074-8b5b-8c8db9c45fac}">
+      <Declaration><![CDATA[METHOD mDouble : INT
+VAR_INPUT
+END_VAR
+]]></Declaration>
+      <Implementation>
+        <ST><![CDATA[mDouble:= iIn1+iIn1;]]></ST>
+      </Implementation>
+    </Method>
+    <Method Name="mMultiply" Id="{d2037aa6-9713-47c3-bc70-d3de0938d24d}">
+      <Declaration><![CDATA[METHOD mMultiply : INT
+VAR_INPUT
+END_VAR
+]]></Declaration>
+      <Implementation>
+        <ST><![CDATA[mMultiply := iIn1*5;]]></ST>
+      </Implementation>
+    </Method>
+  </POU>
+</TcPlcObject>

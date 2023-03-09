@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.12">
+  <POU Name="Motor" Id="{947faefd-56f4-469b-ac0a-35010d8c6e91}" SpecialFunc="None">
+    <Declaration><![CDATA[FUNCTION_BLOCK Motor
+VAR_INPUT
+	iSpeed :INT;
+END_VAR
+VAR_OUTPUT
+	iOut:INT;
+END_VAR
+VAR
+	iAngle:INT:=42;
+	xOn: BOOL;
+	iPapaTime: TON:=(in:=TRUE,pt:=t#1s);
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[iPapaTime(in:=xOn, pt:=T#1S);
+UpdateAngle();]]></ST>
+    </Implementation>
+    <Property Name="StatusxOn" Id="{16095f9b-2d91-4aab-ae02-c94b5cfc2d36}">
+      <Declaration><![CDATA[PROPERTY StatusxOn : BOOL]]></Declaration>
+      <Get Name="Get" Id="{6f749bb7-7c0a-4a7c-981d-6d760ee17342}">
+        <Declaration><![CDATA[VAR
+END_VAR
+]]></Declaration>
+        <Implementation>
+          <ST><![CDATA[StatusxOn:= xOn;]]></ST>
+        </Implementation>
+      </Get>
+    </Property>
+    <Method Name="TurnOff" Id="{8a0f8b08-49d3-4f78-99c6-41588dda2a5a}">
+      <Declaration><![CDATA[METHOD TurnOff : BOOL
+VAR_INPUT
+END_VAR
+]]></Declaration>
+      <Implementation>
+        <ST><![CDATA[xOn:= false;]]></ST>
+      </Implementation>
+    </Method>
+    <Method Name="TurnON" Id="{20d7638b-e077-4697-92fc-e73c7baa36e5}">
+      <Declaration><![CDATA[METHOD TurnON : BOOL
+VAR_INPUT
+END_VAR
+]]></Declaration>
+      <Implementation>
+        <ST><![CDATA[xOn:= true;]]></ST>
+      </Implementation>
+    </Method>
+    <Method Name="UpdateAngle" Id="{51238dfe-432a-41f1-9b6c-e3f940c166b2}">
+      <Declaration><![CDATA[METHOD UpdateAngle : BOOL
+VAR_INPUT
+END_VAR
+]]></Declaration>
+      <Implementation>
+        <ST><![CDATA[IF ipapatime.q THEN
+	iangle:= iangle+ispeed;
+	IF iangle>360 THEN
+		iangle:=0;
+	END_IF
+	ipapatime.IN:= FALSE;
+ELSE
+	ipapatime.IN:= TRUE;
+END_IF]]></ST>
+      </Implementation>
+    </Method>
+  </POU>
+</TcPlcObject>
