@@ -13,7 +13,13 @@
 - <span style="color:orange">Principio de Inversión de Dependencia:</span> Clases de **alto nivel** no deben depender de las clases **bajo nivel**.
 ***
 
-Esto concluye mi serie sobre los principios SOLID. Además de los principios SOLID, existen otros principios como Keep It Simple, Stupid (KISS), Don't Repeat Yourself (DRY), Law Of Demeter (LOD) o You Ain't Gonna Need It (YAGNI). Todos estos principios tienen el objetivo común de mejorar la mantenibilidad y la reutilización del software.
+Además de los principios SOLID, existen otros principios como:
+- Keep It Simple, Stupid (KISS).
+- Don't Repeat Yourself (DRY).
+- Law Of Demeter (LOD).
+- You Ain't Gonna Need It (YAGNI).
+
+Todos estos principios tienen el objetivo común de mejorar la mantenibilidad y la reutilización del software.
 ### <span style="color:grey">Links:</span>
 - 🔗 [Cómo explicar conceptos de programación orientada a objetos a un niño de 6 años](https://www.freecodecamp.org/news/object-oriented-programming-concepts-21bb035f7260/#:~:text=The%20four%20principles%20of%20object,abstraction%2C%20inheritance%2C%20and%20polymorphism.)
 
