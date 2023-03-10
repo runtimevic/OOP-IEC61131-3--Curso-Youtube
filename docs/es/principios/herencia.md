@@ -13,3 +13,6 @@ and smartphone are child classes that extend the parent phone class.
 ***
 Superclase: la clase cuyas características se heredan se conoce como superclase (o una clase base o una clase principal). 
 Subclase: la clase que hereda la otra clase se conoce como subclase (o una clase derivada, clase extendida o clase hija).
+
+
+- 🔗 [stefanhenneken.net,iec-61131-3-methods-properties-and-inheritance](https://stefanhenneken.net/2017/04/23/

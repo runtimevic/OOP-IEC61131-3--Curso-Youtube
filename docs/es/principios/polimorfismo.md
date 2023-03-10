@@ -42,3 +42,5 @@ El polimorfismo se puede obtener gracias a las Interfaces y/o las Clases Abstrac
 - 🔗 [polymorphism, www.plccoder.com](https://www.plccoder.com/polymorphism/)
 
 - 🔗 [abstract, www.plccoder.com](https://www.plccoder.com/abstract/)
+
+- 🔗 [stefanhenneken.net,iec-61131-3-methods-properties-and-inheritance](https://stefanhenneken.net/2017/04/23/
