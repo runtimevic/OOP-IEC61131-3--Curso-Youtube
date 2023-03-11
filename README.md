@@ -18,4 +18,5 @@
     - :link: [002 - OOP IEC 61131-3 PLC -- Clase y Objeto](https://youtu.be/3IudQIj1noo)
     - :link: [003 - OOP IEC 61131-3 PLC -- Clase y Objeto](https://youtu.be/lchxx28wwXM)
     - :link: [004 - OOP IEC 61131-3 PLC -- Clase y Objeto](https://youtu.be/jGtGV9icvO0)
-    - :link: [005 - OOP IEC 61131-3 PLC -- Metodo](https://youtu.be/fa0tUTICVF0)
+    - :link: [005 - OOP IEC 61131-3 PLC -- Objeto Metodo](https://youtu.be/fa0tUTICVF0)
+    - :link: [006 - OOP IEC 61131-3 PLC -- Objeto Propiedad](https://youtu.be/Ci7FExNF7vQ)
