@@ -13,11 +13,23 @@ VAR
 	myBool : BOOL;
 	myInt : INT;
 	myST  : ST_Property;
+	myValueMultiply: INT;
 END_VAR
 ]]></Declaration>
     <Implementation>
       <ST><![CDATA[]]></ST>
     </Implementation>
+    <Method Name="Multiply" Id="{396e33dd-3321-4c8b-b1aa-f1e4953886a1}">
+      <Declaration><![CDATA[METHOD Multiply
+VAR_INPUT
+	iValueMultiply1 : INT;
+	iValueMultiply2 : INT;
+END_VAR
+]]></Declaration>
+      <Implementation>
+        <ST><![CDATA[myValueMultiply := iValueMultiply1 * iValueMultiply2;]]></ST>
+      </Implementation>
+    </Method>
     <Property Name="Value_INT_OUT" Id="{74661cd1-1310-4f4c-b576-728ac27ce460}">
       <Declaration><![CDATA[PROPERTY Value_INT_OUT : INT]]></Declaration>
       <Get Name="Get" Id="{0b4ba3a1-227e-48ae-ba4b-b1dee639a238}">
@@ -79,6 +91,17 @@ END_VAR
         </Implementation>
       </Set>
     </Property>
+    <Property Name="ValueMultiply" Id="{5000728b-a861-413e-a799-a627df696a76}">
+      <Declaration><![CDATA[PROPERTY ValueMultiply : INT]]></Declaration>
+      <Get Name="Get" Id="{ad6efd4e-d84b-498b-8635-746438631c6e}">
+        <Declaration><![CDATA[VAR
+END_VAR
+]]></Declaration>
+        <Implementation>
+          <ST><![CDATA[ValueMultiply := myValueMultiply;]]></ST>
+        </Implementation>
+      </Get>
+    </Property>
     <Property Name="ValueST" Id="{363a33a0-bfc3-42f4-861a-12e4c4928f01}">
       <Declaration><![CDATA[PROPERTY ValueST : reference to ST_Property]]></Declaration>
       <Get Name="Get" Id="{881eebdf-89d5-4979-a45d-62e550b19232}">
@@ -94,7 +117,7 @@ END_VAR
 END_VAR
 ]]></Declaration>
         <Implementation>
-          <ST><![CDATA[IF NOT __ISVALIDREF(myIN_OUT) THEN
+          <ST><![CDATA[IF NOT __ISVALIDREF(ValueST) THEN
 	RETURN;
 END_IF
 

@@ -4,8 +4,7 @@
     <Declaration><![CDATA[TYPE ST_Property :
 STRUCT
 	b1,b2,b3 : BOOL;
-	r1,r2,r3 : REAL;
-	
+	r1,r2,r3 : REAL;	
 END_STRUCT
 END_TYPE
 ]]></Declaration>

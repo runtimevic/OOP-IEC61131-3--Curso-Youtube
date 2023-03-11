@@ -7,12 +7,14 @@ VAR
 	
 	bSet1, bSet2 : BOOL;
 	
-	IntData : INT;
-	BoolData : BOOL;
-	GetSTData : ST_Property;
-	SetSTData : ST_Property;
-	ioData    : INT;
-	counter   : INT;
+	IntData 	: INT;
+	BoolData 	: BOOL;
+	GetSTData 	: ST_Property;
+	SetSTData 	: ST_Property;
+	ioData    	: INT;
+	counter   	: INT;
+	
+	myValueMultiply : INT;
 END_VAR
 ]]></Declaration>
     <Implementation>
@@ -41,7 +43,6 @@ IF bSet2 THEN
 	SetSTData.r3 := 33.0;
 END_IF
 
-
 IntData := 	myFBProperty.ValueInt;
 BoolData := myFBProperty.ValueBool;
 
@@ -61,7 +62,10 @@ END_IF
 //myFBProperty(myIN_OUT:=counter);
 //myFBProperty.Value_INT_OUT := 120;
 ioData := myFBProperty.Value_INT_OUT;
-myFBProperty(myIN_OUT:=counter);]]></ST>
+myFBProperty(myIN_OUT:=counter);
+
+myFBProperty.Multiply(2,3);
+myValueMultiply := myFBProperty.ValueMultiply;]]></ST>
     </Implementation>
   </POU>
 </TcPlcObject>

@@ -13,7 +13,7 @@
 		</System>
 		<Plc>
 			<Project GUID="{2531DD2C-0D71-4B67-93CC-AEDC6C1E1736}" Name="OOP_Curso" PrjFilePath="OOP_Curso\OOP_Curso.plcproj" TmcFilePath="OOP_Curso\OOP_Curso.tmc" ReloadTmc="true" AmsPort="851" FileArchiveSettings="#x000e" SymbolicMapping="true">
-				<Instance Id="#x08502000" TcSmClass="TComPlcObjDef" KeepUnrestoredLinks="2" TmcPath="OOP_Curso\OOP_Curso.tmc" TmcHash="{9170DC2C-F834-FA1C-D335-05AB01FB94E7}">
+				<Instance Id="#x08502000" TcSmClass="TComPlcObjDef" KeepUnrestoredLinks="2" TmcPath="OOP_Curso\OOP_Curso.tmc" TmcHash="{FAE7E4B2-3F57-2457-F265-1F2B1B15E10E}">
 					<Name>OOP_Curso Instance</Name>
 					<CLSID ClassFactory="TcPlc30">{08500001-0000-0000-F000-000000000064}</CLSID>
 					<Vars VarGrpType="8" AreaNo="4">
