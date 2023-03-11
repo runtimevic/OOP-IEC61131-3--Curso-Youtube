@@ -84,4 +84,8 @@ https://infosys.beckhoff.com/english.php?content=../content/1033/tc3_plc_intro/2
 - Alias
 - UNION
 
+***
+### <span style="color:grey">Links Tipos de Datos:</span>
+- [12. TwinCAT 3: Standard data types](https://www.youtube.com/watch?v=qh2cC6eOhKw)
+
 
