@@ -639,7 +639,7 @@
         
           <li class="md-nav__item">
   <a href="#metodos-de-sobrescritura" class="md-nav__link">
-    Métodos de sobrescritura:
+    Métodos de Sobrescritura:
   </a>
   
 </li>
@@ -1253,7 +1253,7 @@
         
           <li class="md-nav__item">
   <a href="#metodos-de-sobrescritura" class="md-nav__link">
-    Métodos de sobrescritura:
+    Métodos de Sobrescritura:
   </a>
   
 </li>
@@ -1297,21 +1297,25 @@ El nuevo bloque de funciones derivado ( FB_NewEngine ) posee todas las propiedad
 <p>El bloque de funciones secundario también hereda todas las variables <strong>Locales</strong>, <strong>VAR_INPUT</strong> , <strong>VAR_OUTPUT</strong> y <strong>VAR_IN_OUT</strong> del bloque de funciones principal. Este comportamiento no se puede modificar mediante especificadores de acceso.</p>
 <p>Si los métodos o las propiedades del bloque de funciones principal se han declarado como PROTECTED, el bloque de funciones secundario ( FB_NewEngine ) podrá acceder a ellos, pero no desde fuera de FB_NewEngine .</p>
 <p>La herencia se aplica solo a las POU de tipo FUNCTION_BLOCK.</p>
-<h3 id="especificadores-de-acceso">Especificadores de acceso:</h3>
+<h3 id="especificadores-de-acceso"><span style="color:grey">Especificadores de acceso:</span></h3>
 <p>Las declaraciones FUNCTION_BLOCK , FUNCTION o PROGRAM pueden incluir un especificador de acceso. Esto restringe el acceso y, en su caso, la capacidad de heredar.</p>
 <ul>
-<li>PUBLIC</li>
+<li><span style="color:green">PUBLIC:</span></li>
 </ul>
-<p>Cualquiera puede llamar o crear una instancia de la POU. Además, si la POU es un FUNCTION_BLOCK , se puede usar para la herencia. No se aplican restricciones.
-- INTERN</p>
-<p>La POU solo se puede utilizar dentro de su propio espacio de nombres. Esto permite que las POU estén disponibles solo dentro de una determinada biblioteca, por ejemplo.
-- FINAL</p>
+<p>Cualquiera puede llamar o crear una instancia de la POU. Además, si la POU es un FUNCTION_BLOCK , se puede usar para la herencia. No se aplican restricciones.</p>
+<ul>
+<li><span style="color:green">INTERN:</span></li>
+</ul>
+<p>La POU solo se puede utilizar dentro de su propio espacio de nombres. Esto permite que las POU estén disponibles solo dentro de una determinada biblioteca, por ejemplo.</p>
+<ul>
+<li><span style="color:green">FINAL:</span></li>
+</ul>
 <p>El FUNCTION_BLOCK no puede servir como un bloque de funciones principal. Los métodos y las propiedades de esta POU no se pueden heredar. FINAL solo está permitido para POU del tipo FUNCTION_BLOCK .</p>
 <p>La configuración predeterminada donde no se define ningún especificador de acceso es PUBLIC. Los especificadores de acceso PRIVATE y PROTECTED no están permitidos en las declaraciones de POU.</p>
 <p>Si planea utilizar la herencia, la declaración del bloque de funciones tendrá la siguiente estructura:</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nx">FUNCTION_BLOCK</span><span class="w"> </span><span class="o">&lt;</span><span class="nx">Access</span><span class="w"> </span><span class="nx">specifier</span><span class="o">&gt;</span><span class="w"> </span><span class="o">&lt;</span><span class="nx">Name</span><span class="o">&gt;</span><span class="w"> </span><span class="nx">EXTENDS</span><span class="w"> </span><span class="o">&lt;</span><span class="nx">Name</span><span class="w"> </span><span class="nx">basic</span><span class="w"> </span><span class="kd">function</span><span class="w"> </span><span class="nx">block</span><span class="o">&gt;</span>
 </code></pre></div></td></tr></table></div>
-<h3 id="metodos-de-sobrescritura">Métodos de sobrescritura:</h3>
+<h3 id="metodos-de-sobrescritura"><span style="color:grey">Métodos de Sobrescritura:</span></h3>
 <p>El nuevo FUNCTION_BLOCK FB_NewEngine , que se deriva de FB_Engine , puede contener propiedades y métodos adicionales. Por ejemplo, podemos agregar la propiedad Gear . Esta propiedad se puede utilizar para consultar y cambiar la marcha actual. Es necesario configurar getters y setters para esta propiedad.</p>
 <p>Sin embargo, también debemos asegurarnos de que el parámetro nGear del método Start() se pase a esta propiedad. Debido a que el bloque de funciones principal FB_Engine no tiene acceso a esta nueva propiedad, se debe crear un nuevo método con exactamente los mismos parámetros en FB_NewEngine . Copiamos el código existente al nuevo método y agregamos nuevo código para que el parámetro nGear se pase a la propiedad Gear .</p>
 <p><div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
