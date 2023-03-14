@@ -60,7 +60,7 @@ Cuando un método o propiedad que ya está presente en el bloque de funciones pr
 
 Por lo tanto, FB_NewEngine tiene la nueva propiedad Gear y sobrescribe el método Start() .
 
-![Herencia](../imagenes/herencia.jpg)
+![Herencia](../imagenes/herencia.png)
 
 ```javascript
 fbNewEngine.Start(1, 7.5);
