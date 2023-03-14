@@ -14,16 +14,18 @@ Si los métodos o las propiedades del bloque de funciones principal se han decla
 
 La herencia se aplica solo a las POU de tipo FUNCTION_BLOCK.
 
-### Especificadores de acceso:
+### <span style="color:grey">Especificadores de acceso:</span>
 Las declaraciones FUNCTION_BLOCK , FUNCTION o PROGRAM pueden incluir un especificador de acceso. Esto restringe el acceso y, en su caso, la capacidad de heredar.
 
-- PUBLIC
+- <span style="color:green">PUBLIC:</span>
 
 Cualquiera puede llamar o crear una instancia de la POU. Además, si la POU es un FUNCTION_BLOCK , se puede usar para la herencia. No se aplican restricciones.
-- INTERN
+
+- <span style="color:green">INTERN:</span>
 
 La POU solo se puede utilizar dentro de su propio espacio de nombres. Esto permite que las POU estén disponibles solo dentro de una determinada biblioteca, por ejemplo.
-- FINAL
+
+- <span style="color:green">FINAL:</span>
 
 El FUNCTION_BLOCK no puede servir como un bloque de funciones principal. Los métodos y las propiedades de esta POU no se pueden heredar. FINAL solo está permitido para POU del tipo FUNCTION_BLOCK .
 
@@ -34,8 +36,7 @@ Si planea utilizar la herencia, la declaración del bloque de funciones tendrá 
 ```javascript
 FUNCTION_BLOCK <Access specifier> <Name> EXTENDS <Name basic function block>
 ```
-### Métodos de sobrescritura:
-
+### <span style="color:grey">Métodos de Sobrescritura:</span>
 El nuevo FUNCTION_BLOCK FB_NewEngine , que se deriva de FB_Engine , puede contener propiedades y métodos adicionales. Por ejemplo, podemos agregar la propiedad Gear . Esta propiedad se puede utilizar para consultar y cambiar la marcha actual. Es necesario configurar getters y setters para esta propiedad.
 
 Sin embargo, también debemos asegurarnos de que el parámetro nGear del método Start() se pase a esta propiedad. Debido a que el bloque de funciones principal FB_Engine no tiene acceso a esta nueva propiedad, se debe crear un nuevo método con exactamente los mismos parámetros en FB_NewEngine . Copiamos el código existente al nuevo método y agregamos nuevo código para que el parámetro nGear se pase a la propiedad Gear .
