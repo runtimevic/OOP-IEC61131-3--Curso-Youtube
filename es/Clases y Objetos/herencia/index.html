@@ -632,7 +632,7 @@
         
           <li class="md-nav__item">
   <a href="#especificadores-de-acceso" class="md-nav__link">
-    Especificadores de acceso
+    Especificadores de acceso:
   </a>
   
 </li>
@@ -1246,7 +1246,7 @@
         
           <li class="md-nav__item">
   <a href="#especificadores-de-acceso" class="md-nav__link">
-    Especificadores de acceso
+    Especificadores de acceso:
   </a>
   
 </li>
@@ -1290,26 +1290,26 @@
 
 <h2 id="herencia">Herencia:</h2>
 <p>Los bloques de funciones son un medio excelente para mantener las secciones del programa separadas entre sí. Esto mejora la estructura del software y simplifica significativamente la reutilización. Anteriormente, ampliar la funcionalidad de un bloque de funciones existente siempre era una tarea delicada. Esto significó modificar el código o programar un nuevo bloque de funciones alrededor del bloque existente (es decir, el bloque de funciones existente se incrustó efectivamente dentro de un nuevo bloque de funciones). En el último caso, fue necesario crear todas las variables de entrada nuevamente y asignarlas a las variables de entrada para el bloque de funciones existente. Lo mismo se requería, en sentido contrario, para las variables de salida.</p>
-<p>TwinCAT 3 introduce el concepto de herencia. La herencia es uno de los principios fundamentales de la programación orientada a objetos. La herencia implica derivar un nuevo bloque de funciones a partir de un bloque de funciones existente. A continuación, se puede ampliar el nuevo bloque. En la medida permitida por los especificadores de acceso del bloque de funciones principal, el nuevo bloque de funciones hereda todas las propiedades y métodos del bloque de funciones principal. Cada bloque de funciones puede tener cualquier número de bloques de funciones secundarios, pero solo un bloque de funciones principal. La derivación de un bloque de funciones se produce en la nueva declaración del bloque de funciones. El nombre del nuevo bloque de funciones va seguido de la palabra clave EXTENDS seguida del nombre del bloque de funciones principal. Por ejemplo:</p>
+<p>TwinCAT 3 y Codesys (IEC61131-3) introduce el concepto de herencia. La herencia es uno de los principios fundamentales de la programación orientada a objetos. La herencia implica derivar un nuevo bloque de funciones a partir de un bloque de funciones existente. A continuación, se puede ampliar el nuevo bloque. En la medida permitida por los especificadores de acceso del bloque de funciones principal, el nuevo bloque de funciones hereda todas las propiedades y métodos del bloque de funciones principal. Cada bloque de funciones puede tener cualquier número de bloques de funciones secundarios, pero solo un bloque de funciones principal. La derivación de un bloque de funciones se produce en la nueva declaración del bloque de funciones. El nombre del nuevo bloque de funciones va seguido de la palabra clave EXTENDS seguida del nombre del bloque de funciones principal. Por ejemplo:</p>
 <p><div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nx">FUNCTION_BLOCK</span><span class="w"> </span><span class="nx">PUBLIC</span><span class="w"> </span><span class="nx">FB_NewEngine</span><span class="w"> </span><span class="nx">EXTENDS</span><span class="w"> </span><span class="nx">FB_Engine</span>
 </code></pre></div></td></tr></table></div>
 El nuevo bloque de funciones derivado ( FB_NewEngine ) posee todas las propiedades y métodos de su padre ( FB_Engine ). Sin embargo, los métodos y las propiedades solo se heredan cuando el especificador de acceso lo permite.</p>
-<p>El bloque de funciones secundario también hereda todas las variables locales, VAR_INPUT , VAR_OUTPUT y VAR_IN_OUT del bloque de funciones principal. Este comportamiento no se puede modificar mediante especificadores de acceso.</p>
+<p>El bloque de funciones secundario también hereda todas las variables <strong>Locales</strong>, <strong>VAR_INPUT</strong> , <strong>VAR_OUTPUT</strong> y <strong>VAR_IN_OUT</strong> del bloque de funciones principal. Este comportamiento no se puede modificar mediante especificadores de acceso.</p>
 <p>Si los métodos o las propiedades del bloque de funciones principal se han declarado como PROTECTED, el bloque de funciones secundario ( FB_NewEngine ) podrá acceder a ellos, pero no desde fuera de FB_NewEngine .</p>
-<p>La herencia se aplica solo a las POU de tipo FUNCTION_BLOCK .</p>
-<h3 id="especificadores-de-acceso">Especificadores de acceso</h3>
+<p>La herencia se aplica solo a las POU de tipo FUNCTION_BLOCK.</p>
+<h3 id="especificadores-de-acceso">Especificadores de acceso:</h3>
 <p>Las declaraciones FUNCTION_BLOCK , FUNCTION o PROGRAM pueden incluir un especificador de acceso. Esto restringe el acceso y, en su caso, la capacidad de heredar.</p>
 <ul>
-<li>PUBLIC
-Cualquiera puede llamar o crear una instancia de la POU. Además, si la POU es un FUNCTION_BLOCK , se puede usar para la herencia. No se aplican restricciones.</li>
-<li>INTERN
-La POU solo se puede utilizar dentro de su propio espacio de nombres. Esto permite que las POU estén disponibles solo dentro de una determinada biblioteca, por ejemplo.</li>
-<li>FINAL
-El FUNCTION_BLOCK no puede servir como un bloque de funciones principal. Los métodos y las propiedades de esta POU no se pueden heredar. FINAL solo está permitido para POU del tipo FUNCTION_BLOCK .</li>
+<li>PUBLIC</li>
 </ul>
-<p>La configuración predeterminada donde no se define ningún especificador de acceso es PUBLIC . Los especificadores de acceso PRIVATE y PROTECTED no están permitidos en las declaraciones de POU.</p>
+<p>Cualquiera puede llamar o crear una instancia de la POU. Además, si la POU es un FUNCTION_BLOCK , se puede usar para la herencia. No se aplican restricciones.
+- INTERN</p>
+<p>La POU solo se puede utilizar dentro de su propio espacio de nombres. Esto permite que las POU estén disponibles solo dentro de una determinada biblioteca, por ejemplo.
+- FINAL</p>
+<p>El FUNCTION_BLOCK no puede servir como un bloque de funciones principal. Los métodos y las propiedades de esta POU no se pueden heredar. FINAL solo está permitido para POU del tipo FUNCTION_BLOCK .</p>
+<p>La configuración predeterminada donde no se define ningún especificador de acceso es PUBLIC. Los especificadores de acceso PRIVATE y PROTECTED no están permitidos en las declaraciones de POU.</p>
 <p>Si planea utilizar la herencia, la declaración del bloque de funciones tendrá la siguiente estructura:</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nx">FUNCTION_BLOCK</span><span class="w"> </span><span class="o">&lt;</span><span class="nx">Access</span><span class="w"> </span><span class="nx">specifier</span><span class="o">&gt;</span><span class="w"> </span><span class="o">&lt;</span><span class="nx">Name</span><span class="o">&gt;</span><span class="w"> </span><span class="nx">EXTENDS</span><span class="w"> </span><span class="o">&lt;</span><span class="nx">Name</span><span class="w"> </span><span class="nx">basis</span><span class="w"> </span><span class="kd">function</span><span class="w"> </span><span class="nx">block</span><span class="o">&gt;</span>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nx">FUNCTION_BLOCK</span><span class="w"> </span><span class="o">&lt;</span><span class="nx">Access</span><span class="w"> </span><span class="nx">specifier</span><span class="o">&gt;</span><span class="w"> </span><span class="o">&lt;</span><span class="nx">Name</span><span class="o">&gt;</span><span class="w"> </span><span class="nx">EXTENDS</span><span class="w"> </span><span class="o">&lt;</span><span class="nx">Name</span><span class="w"> </span><span class="nx">basic</span><span class="w"> </span><span class="kd">function</span><span class="w"> </span><span class="nx">block</span><span class="o">&gt;</span>
 </code></pre></div></td></tr></table></div>
 <h3 id="metodos-de-sobrescritura">Métodos de sobrescritura:</h3>
 <p>El nuevo FUNCTION_BLOCK FB_NewEngine , que se deriva de FB_Engine , puede contener propiedades y métodos adicionales. Por ejemplo, podemos agregar la propiedad Gear . Esta propiedad se puede utilizar para consultar y cambiar la marcha actual. Es necesario configurar getters y setters para esta propiedad.</p>
@@ -1338,16 +1338,16 @@ El FUNCTION_BLOCK no puede servir como un bloque de funciones principal. Los mé
 <span class="nx">END_IF</span>
 <span class="nx">Gear</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">nGear</span><span class="p">;</span><span class="w"> </span><span class="c1">// new</span>
 </code></pre></div></td></tr></table></div>
-La línea 12 copia el parámetro nGear a la propiedad Gear .</p>
+La línea 12 copia el parámetro nGear a la propiedad Gear.</p>
 <p>Cuando un método o propiedad que ya está presente en el bloque de funciones principal se redefine dentro del bloque de funciones secundario, esto se denomina sobrescritura. El bloque de funciones FB_NewEngine sobrescribe el método Start() .</p>
 <p>Por lo tanto, FB_NewEngine tiene la nueva propiedad Gear y sobrescribe el método Start() .</p>
-<p>imagen05</p>
-<p>1
-fbNewEngine.Start(1, 7.5);
-llama al método Start() en FB_NewEngine , ya que este método ha sido redefinido (sobrescrito) en FB_NewEngine .</p>
-<p>Mientras que</p>
-<p>1
-fbNewEngine.Stop();
+<p><img alt="Herencia" src="../imagenes/herencia.jpg" /></p>
+<p><div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nx">fbNewEngine</span><span class="p">.</span><span class="nx">Start</span><span class="p">(</span><span class="mf">1</span><span class="p">,</span><span class="w"> </span><span class="mf">7.5</span><span class="p">);</span>
+</code></pre></div></td></tr></table></div>
+llama al método Start() en FB_NewEngine, ya que este método ha sido redefinido (sobrescrito) en FB_NewEngine .</p>
+<p>Mientras que:</p>
+<p><div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nx">fbNewEngine</span><span class="p">.</span><span class="nx">Stop</span><span class="p">();</span>
+</code></pre></div></td></tr></table></div>
 llama al método Stop() desde FB_Engine . El método Stop() ha sido heredado por FB_NewEngine de FB_Engine .</p>
 <hr />
 <h3 id="links"><span style="color:grey">Links:</span></h3>
