@@ -56,7 +56,7 @@ plugins:
       cover_subtitle: Programación Orientada a Objetos OOP IEC61131-3 PLC Curso Youtube by Runtimevic.
       output_path: ../document-es.pdf
   - pdf-export:
-      combined: true             
+      combined: true              
 
 # Customization
 extra:
@@ -80,6 +80,8 @@ extra:
     - name: Español
       link: /OOP-IEC61131-3--Curso-Youtube/es/
       lang: es
+  status:
+    new: Recently added       
   #disqus: 'OOP IEC-61131-3 PLC'
 
 markdown_extensions:
