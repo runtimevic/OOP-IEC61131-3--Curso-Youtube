@@ -1,10 +1,10 @@
 ---
-icon: material/emoticon-happy 
+title: Lorem ipsum dolor sit amet
+description: Nullam urna elit, malesuada eget finibus ut, ac tortor.
+icon: material/emoticon-happy
+status: new
+subtitle: Nullam urna elit, malesuada eget finibus ut, ac tortor
 ---
-
-# Document title
-...
-
 
 ### Links
 
