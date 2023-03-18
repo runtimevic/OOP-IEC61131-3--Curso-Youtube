@@ -1,4 +1,4 @@
-### SUPER^ puntero:
+### <span style="color:grey">SUPER^ puntero:</span>
 cada bloque de funciones que se deriva de otro bloque de funciones tiene acceso a un puntero llamado SUPER^. 
 Esto se puede usar para acceder a elementos (métodos, propiedades, variables locales, etc.) desde el bloque de funciones principal.
 

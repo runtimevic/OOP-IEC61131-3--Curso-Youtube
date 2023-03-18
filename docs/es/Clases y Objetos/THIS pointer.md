@@ -1,4 +1,4 @@
-### THIS^ puntero:
+### <span style="color:grey">THIS^ puntero:</span>
 
 El puntero **THIS^** está disponible para todos los bloques de funciones y apunta a la instancia de bloque de funciones actual. 
 Este puntero es necesario siempre que un método contenga una variable local que oculte una variable en el bloque de funciones.
