@@ -86,6 +86,8 @@ https://infosys.beckhoff.com/english.php?content=../content/1033/tc3_plc_intro/2
 
 ***
 ### <span style="color:grey">Links Tipos de Datos:</span>
-- [12. TwinCAT 3: Standard data types](https://www.youtube.com/watch?v=qh2cC6eOhKw)
+- 🔗 [12. TwinCAT 3: Standard data types](https://www.youtube.com/watch?v=qh2cC6eOhKw)
+
+- 🔗 [help.codesys.com, Tipos de datos](https://help.codesys.com/api-content/2/codesys/3.5.14.0/en/_cds_struct_reference_datatypes/#c2bdb4ccec0a8640e0157fbed-id-b8c8a0ca2bdb4ccdc0a8640e00e8ce32)
 
 

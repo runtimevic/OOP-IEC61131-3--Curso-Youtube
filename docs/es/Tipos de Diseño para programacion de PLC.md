@@ -13,17 +13,17 @@ Units: (Ejemplo de Unidades):
 -FBGenericUnit
 
 !!! puntos que se pueden incluir en el curso!!!
-Basic of Structured Text programming Language
-Modular Design
-Classes
-Methods
-Properties
-Inheritance
-Polymorphism
-Access Specifiers
-Pointers and References
-Interfaces and Abstractions
-Advanced State Pattern
-Wrappers and Features
-Layered Design
-Final Project covering a real-world problem to be solved using OOP
+- Basic of Structured Text programming Language
+- Modular Design
+- Classes
+- Methods
+- Properties
+- Inheritance
+- Polymorphism
+- Access Specifiers
+- Pointers and References
+- Interfaces and Abstractions
+- Advanced State Pattern
+- Wrappers and Features
+- Layered Design
+- Final Project covering a real-world problem to be solved using OOP
