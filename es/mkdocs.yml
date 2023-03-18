@@ -128,13 +128,13 @@ nav:
           - Metodo tipos de variables de retorno: Clases y Objetos/Metodo Tipos de variables de retorno.md
        - Objeto Propiedad: Clases y Objetos/propiedad.md
        - Herencia: Clases y Objetos/herencia.md
+       - THIS puntero: Clases y Objetos/THIS pointer.md
+       - SUPER puntero: Clases y Objetos/SUPER pointer.md
        - Interface: Clases y Objetos/interface.md
        - puntero y referencia: Clases y Objetos/pointer and reference.md
        - FB abstracto frente a interfaz: Clases y Objetos/FB abstracto frente a interfaz.md
     - Tabla de Modificadores de acceso: Tabla de Modificadores de acceso.md
     - Tipos de variables y variables especiales: Variable types and special variables.md
-    - SUPER puntero: SUPER pointer.md
-    - THIS puntero: THIS pointer.md
     - Tipos de Datos: Tipos de datos.md
     - Interfaz fluida: Interfaz fluida.md
     - Principios OOP: 
