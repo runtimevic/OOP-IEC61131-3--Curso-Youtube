@@ -79,12 +79,10 @@ extra:
       lang: en
     - name: Español
       link: /OOP-IEC61131-3--Curso-Youtube/es/
-      lang: es       
-  #disqus: 'OOP IEC-61131-3 PLC'
+      lang: es
 
 markdown_extensions:
   - meta:
-      meta_file: '**/.meta.yml' 
   - attr_list
   - md_in_html  
   - pymdownx.emoji:
