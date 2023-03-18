@@ -109,7 +109,8 @@ markdown_extensions:
         - name: mermaid
           class: mermaid
           format: !!python/name:pymdownx.superfences.fence_code_format       
-  - meta    
+  - meta
+  - typeset   
   
 nav:
     - Requisitos: requisitos.md
