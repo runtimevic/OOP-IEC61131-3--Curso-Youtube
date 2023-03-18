@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <project xmlns="http://www.plcopen.org/xml/tc6_0200">
-  <fileHeader companyName="Beckhoff Automation GmbH" productName="TwinCAT PLC Control" productVersion="3.5.13.21" creationDateTime="2023-03-09T14:32:55.812619" />
-  <contentHeader name="OOP_Curso" modificationDateTime="2023-03-09T14:32:55.8194516">
+  <fileHeader companyName="Beckhoff Automation GmbH" productName="TwinCAT PLC Control" productVersion="3.5.13.21" creationDateTime="2023-03-18T11:24:11.1041748" />
+  <contentHeader name="OOP_Curso" modificationDateTime="2023-03-18T11:24:11.1090589">
     <coordinateInfo>
       <fbd>
         <scaling x="1" y="1" />
@@ -279,7 +279,7 @@ END_VAR
               </interface>
               <body>
                 <ST>
-                  <xhtml xmlns="http://www.w3.org/1999/xhtml">//Accedomos al metodo del padre con SUPER^.
+                  <xhtml xmlns="http://www.w3.org/1999/xhtml">//Accedemos al metodo del padre con SUPER^.
 
 mSuperMultiply := 10 * SUPER^.mMultiply();
 

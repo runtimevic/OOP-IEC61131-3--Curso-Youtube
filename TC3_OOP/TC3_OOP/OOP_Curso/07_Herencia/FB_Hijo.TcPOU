@@ -42,7 +42,7 @@ VAR_INPUT
 END_VAR
 ]]></Declaration>
       <Implementation>
-        <ST><![CDATA[//Accedomos al metodo del padre con SUPER^.
+        <ST><![CDATA[//Accedemos al metodo del padre con SUPER^.
 
 mSuperMultiply := 10 * SUPER^.mMultiply();
 
