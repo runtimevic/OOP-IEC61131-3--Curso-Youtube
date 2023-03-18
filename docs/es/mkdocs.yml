@@ -83,7 +83,8 @@ extra:
   #disqus: 'OOP IEC-61131-3 PLC'
 
 markdown_extensions:
-  - meta
+  - meta:
+      meta_file: '**/.meta.yml' 
   - attr_list
   - md_in_html  
   - pymdownx.emoji:
