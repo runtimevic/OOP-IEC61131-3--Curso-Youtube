@@ -83,6 +83,7 @@ extra:
   #disqus: 'OOP IEC-61131-3 PLC'
 
 markdown_extensions:
+  - meta
   - attr_list
   - md_in_html  
   - pymdownx.emoji:
@@ -107,7 +108,6 @@ markdown_extensions:
         - name: mermaid
           class: mermaid
           format: !!python/name:pymdownx.superfences.fence_code_format       
-  - meta 
   
 nav:
     - Requisitos: requisitos.md
