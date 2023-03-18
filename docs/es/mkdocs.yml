@@ -79,9 +79,7 @@ extra:
       lang: en
     - name: Español
       link: /OOP-IEC61131-3--Curso-Youtube/es/
-      lang: es
-  status:
-    new: Recently added       
+      lang: es       
   #disqus: 'OOP IEC-61131-3 PLC'
 
 markdown_extensions:
