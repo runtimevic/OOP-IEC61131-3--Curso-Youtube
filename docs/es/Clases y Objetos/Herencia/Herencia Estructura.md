@@ -8,6 +8,7 @@ Crear una estructura que extienda otra estructura:
 TYPE ST_Sub EXTENDS ST_Base1, ST_Base2 :
 STRUCT
 ```
+
 - No se permite la herencia múltiple.
 
 - La herencia múltiple no está permitida para las estructuras. No es posible que una estructura se extienda más que otra estructura.
