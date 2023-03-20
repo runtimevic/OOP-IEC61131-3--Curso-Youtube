@@ -126,7 +126,10 @@ nav:
           - Metodo Declaracion de variables: Clases y Objetos/Metodo Declaracion de variables.md
           - Metodo tipos de variables de retorno: Clases y Objetos/Metodo Tipos de variables de retorno.md
        - Objeto Propiedad: Clases y Objetos/propiedad.md
-       - Herencia: Clases y Objetos/herencia.md
+       - Herencia:
+          - Herencia Bloque de Funcion: Clases y Objetos/Herencia/Herencia Bloque de Funcion.md
+          - Herencia Estructura: Clases y Objetos/Herencia/Herencia Estructura.md
+          - Herencia Interface: Clases y Objetos/Herencia/Herencia Interface.md
        - THIS puntero: Clases y Objetos/THIS pointer.md
        - SUPER puntero: Clases y Objetos/SUPER pointer.md
        - Interface: Clases y Objetos/interface.md

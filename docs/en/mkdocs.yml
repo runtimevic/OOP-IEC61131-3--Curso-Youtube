@@ -127,7 +127,10 @@ nav:
           - Method Declaration of variables: Clases y Objetos/Metodo Declaracion de variables.md
           - Method return variable types: Clases y Objetos/Metodo Tipos de variables de retorno.md      
        - Object Property: Clases y Objetos/propiedad.md
-       - Inheritance: Clases y Objetos/herencia.md
+       - Inheritance:
+          - Inheritance Function Block: Clases y Objetos/Inheritance/Inheritance Function Block.md
+          - Inheritance Structure: Clases y Objetos/Inheritance/Inheritance Structure.md
+          - Inheritance Interface: Clases y Objetos/Inheritance/Inheritance Interface.md
        - THIS pointer: Clases y Objetos/THIS pointer.md
        - SUPER pointer: Clases y Objetos/SUPER pointer.md    
        - Interface: Clases y Objetos/interface.md
