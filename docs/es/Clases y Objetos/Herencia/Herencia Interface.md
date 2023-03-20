@@ -15,3 +15,5 @@ INTERFACE I_Sub EXTENDS I_Base1, I_Base2
 ### <span style="color:grey">Links:</span>
 
 - 🔗 [infosys.beckhoff.com, Extends Interface](https://infosys.beckhoff.com/content/1033/tc3_plc_intro/2527343499.html?id=365591094627259992)
+
+- 🔗 [help.codesys.com, Extends Interface](https://help.codesys.com/api-content/2/codesys/3.5.13.0/en/_cds_extending_interface/)

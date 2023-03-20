@@ -28,3 +28,5 @@ Units: (Ejemplo de Unidades):
 - Wrappers and Features
 - Layered Design
 - Final Project covering a real-world problem to be solved using OOP
+
+- [Texto estructurado (ST), Texto estructurado extendido (ExST)](https://content.helpme-codesys.com/en/CODESYS%20Development%20System/_cds_f_programming_language_st.html)
