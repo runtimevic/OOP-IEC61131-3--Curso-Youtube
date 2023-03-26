@@ -2,7 +2,7 @@
 
 Al igual que los bloques de funciones, las estructuras se pueden ampliar. La estructura obtiene entonces las variables de la estructura básica además de sus propias variables.
 
-Crear una estructura que extienda otra estructura:
+Crear una estructura que extienda a otra Estructura:
 ```javascript
 TYPE ST_Base1 :
 STRUCT
@@ -23,7 +23,7 @@ END_TYPE
 ```javascript
 TYPE ST_Sub2 EXTENDS ST_Sub1 :
 STRUCT
-	bBool2: BOOL;
+	bBool2: BOOL; // No se podria llamar la variable bBool2 porque la tenemos declarada en la estructura ST_Base1
 END_STRUCT
 END_TYPE
 ```
@@ -48,6 +48,8 @@ stestructura2.ttime;
 stestructura2.tton(in:= TRUE, pt:=T#1S);
 stestructura2.bBool2;
 ```
+
+- De esta forma de extender una Estructura por Herencia no se pueden repetir el mismo nombre de variable declarada con las estructuras extendidas.
 
 - Tambien sin usar EXTENDS para la Estructura podriamos realizarlo de la siguiente forma:
 
@@ -76,7 +78,9 @@ stestructura11.sstring;
 stestructura11.sStruct.bBool; //el resultado es que queda mas anidado
 ```
 
-- No se permite la herencia múltiple de esta forma:
+- De esta forma si que se pueden declarar el mismo nombre de la variable en diferentes Estructuras, ya que al estar anidadas no existe el problema anterior.
+
+- No se permite la herencia múltiple de la siguiente forma:
 
 ```javascript
 TYPE ST_Sub EXTENDS ST_Base1,ST_Base2 :
