@@ -78,6 +78,42 @@
     <Compile Include="07_Herencia\_07_Herencia.TcPOU">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="08_Herencia_Estructura_y_Interface\Herencia_Estructura\ST_1.TcDUT">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="08_Herencia_Estructura_y_Interface\Herencia_Estructura\ST_2.TcDUT">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="08_Herencia_Estructura_y_Interface\Herencia_Estructura\ST_Base1.TcDUT">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="08_Herencia_Estructura_y_Interface\Herencia_Estructura\ST_Sub1.TcDUT">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="08_Herencia_Estructura_y_Interface\Herencia_Estructura\ST_Sub2.TcDUT">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="08_Herencia_Estructura_y_Interface\Herencia_Interface\FB_Sub1.TcPOU">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="08_Herencia_Estructura_y_Interface\Herencia_Interface\FB_Sub2.TcPOU">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="08_Herencia_Estructura_y_Interface\Herencia_Interface\I_Base1.TcIO">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="08_Herencia_Estructura_y_Interface\Herencia_Interface\I_Base2.TcIO">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="08_Herencia_Estructura_y_Interface\Herencia_Interface\I_Sub1.TcIO">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="08_Herencia_Estructura_y_Interface\Herencia_Interface\I_Sub2.TcIO">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="08_Herencia_Estructura_y_Interface\_08_Herencia_Estructura_y_Interface.TcPOU">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="PlcTask.TcTTO">
       <SubType>Code</SubType>
     </Compile>
@@ -95,6 +131,9 @@
     <Folder Include="05_Metodo" />
     <Folder Include="06_Propiedad" />
     <Folder Include="07_Herencia" />
+    <Folder Include="08_Herencia_Estructura_y_Interface" />
+    <Folder Include="08_Herencia_Estructura_y_Interface\Herencia_Estructura" />
+    <Folder Include="08_Herencia_Estructura_y_Interface\Herencia_Interface" />
     <Folder Include="_MAIN" />
   </ItemGroup>
   <ItemGroup>

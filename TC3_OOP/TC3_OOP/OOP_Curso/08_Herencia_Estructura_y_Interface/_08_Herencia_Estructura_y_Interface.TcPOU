@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.12">
+  <POU Name="_08_Herencia_Estructura_y_Interface" Id="{355193d1-1e94-45c9-9d78-a4302fa870a1}" SpecialFunc="None">
+    <Declaration><![CDATA[PROGRAM _08_Herencia_Estructura_y_Interface
+VAR
+	//Extensión de Estructura:
+	stestructura1  : ST_Sub1;
+	stestructura2  : ST_Sub2;
+	stestructura11 : ST_1;
+	
+	//Extensión de Interface:
+	Sub1 : FB_Sub1;
+	Sub2 : FB_Sub2;
+	bBool : BOOL;
+
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[//Extensión de Estructura:
+stestructura1.bBool1;
+stestructura1.iINT;
+stestructura1.rReal;
+stestructura1.ttime;
+stestructura1.tton(in:= TRUE, pt:=T#1S);
+
+stestructura2.bBool1;
+stestructura2.iINT;
+stestructura2.rReal;
+stestructura2.ttime;
+stestructura2.tton(in:= TRUE, pt:=T#1S);
+stestructura2.bBool2;
+
+
+stestructura11.sstring;
+stestructura11.sStruct.bBool;
+
+//Extensión de Interface:
+Sub1.metodo_base1();
+Sub1.Prop_base1;
+Sub1.Prop_base1 := bBool;
+
+Sub2.metodo_sub2();
+Sub2.Prop_base2;
+Sub1.Prop_base2 := bBool;]]></ST>
+    </Implementation>
+  </POU>
+</TcPlcObject>

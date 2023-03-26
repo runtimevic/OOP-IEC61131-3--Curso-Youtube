@@ -1,0 +1,1046 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<project xmlns="http://www.plcopen.org/xml/tc6_0200">
+  <fileHeader companyName="Beckhoff Automation GmbH" productName="TwinCAT PLC Control" productVersion="3.5.13.21" creationDateTime="2023-03-26T14:13:30.0192771" />
+  <contentHeader name="OOP_Curso" modificationDateTime="2023-03-26T14:13:30.0261078">
+    <coordinateInfo>
+      <fbd>
+        <scaling x="1" y="1" />
+      </fbd>
+      <ld>
+        <scaling x="1" y="1" />
+      </ld>
+      <sfc>
+        <scaling x="1" y="1" />
+      </sfc>
+    </coordinateInfo>
+    <addData>
+      <data name="http://www.3s-software.com/plcopenxml/projectinformation" handleUnknown="implementation">
+        <ProjectInformation />
+      </data>
+    </addData>
+  </contentHeader>
+  <types>
+    <dataTypes>
+      <dataType name="ST_1">
+        <baseType>
+          <struct>
+            <variable name="sStruct">
+              <type>
+                <derived name="ST_2" />
+              </type>
+            </variable>
+            <variable name="sstring">
+              <type>
+                <string length="80" />
+              </type>
+            </variable>
+          </struct>
+        </baseType>
+        <addData>
+          <data name="http://www.3s-software.com/plcopenxml/interfaceasplaintext" handleUnknown="implementation">
+            <InterfaceAsPlainText>
+              <xhtml xmlns="http://www.w3.org/1999/xhtml">TYPE ST_1:
+STRUCT
+	sStruct : ST_2;
+	sstring : STRING(80);
+END_STRUCT
+END_TYPE
+</xhtml>
+            </InterfaceAsPlainText>
+          </data>
+          <data name="http://www.3s-software.com/plcopenxml/objectid" handleUnknown="discard">
+            <ObjectId>9e592088-2333-48a3-955b-1540c5c00897</ObjectId>
+          </data>
+        </addData>
+      </dataType>
+      <dataType name="ST_2">
+        <baseType>
+          <struct>
+            <variable name="bBool">
+              <type>
+                <BOOL />
+              </type>
+            </variable>
+          </struct>
+        </baseType>
+        <addData>
+          <data name="http://www.3s-software.com/plcopenxml/interfaceasplaintext" handleUnknown="implementation">
+            <InterfaceAsPlainText>
+              <xhtml xmlns="http://www.w3.org/1999/xhtml">TYPE ST_2 :
+STRUCT
+	bBool : BOOL;
+END_STRUCT
+END_TYPE
+</xhtml>
+            </InterfaceAsPlainText>
+          </data>
+          <data name="http://www.3s-software.com/plcopenxml/objectid" handleUnknown="discard">
+            <ObjectId>dcd9326c-a5b2-4216-9e9f-b0ce42de8354</ObjectId>
+          </data>
+        </addData>
+      </dataType>
+      <dataType name="ST_Base1">
+        <baseType>
+          <struct>
+            <variable name="bBool1">
+              <type>
+                <BOOL />
+              </type>
+            </variable>
+            <variable name="iINT">
+              <type>
+                <INT />
+              </type>
+            </variable>
+            <variable name="rReal">
+              <type>
+                <REAL />
+              </type>
+            </variable>
+          </struct>
+        </baseType>
+        <addData>
+          <data name="http://www.3s-software.com/plcopenxml/interfaceasplaintext" handleUnknown="implementation">
+            <InterfaceAsPlainText>
+              <xhtml xmlns="http://www.w3.org/1999/xhtml">TYPE ST_Base1 :
+STRUCT
+	bBool1: BOOL;
+	iINT : INT;
+	rReal : REAL;	
+END_STRUCT
+END_TYPE
+</xhtml>
+            </InterfaceAsPlainText>
+          </data>
+          <data name="http://www.3s-software.com/plcopenxml/objectid" handleUnknown="discard">
+            <ObjectId>86154a65-07e8-4335-9a44-34fb769c10c3</ObjectId>
+          </data>
+        </addData>
+      </dataType>
+      <dataType name="ST_Sub1">
+        <baseType>
+          <struct>
+            <variable name="ttime">
+              <type>
+                <TIME />
+              </type>
+            </variable>
+            <variable name="tton">
+              <type>
+                <derived name="TON" />
+              </type>
+            </variable>
+          </struct>
+        </baseType>
+        <addData>
+          <data name="http://www.3s-software.com/plcopenxml/datatypeinheritance" handleUnknown="implementation">
+            <Inheritance>
+              <Extends>ST_Base1</Extends>
+            </Inheritance>
+          </data>
+          <data name="http://www.3s-software.com/plcopenxml/interfaceasplaintext" handleUnknown="implementation">
+            <InterfaceAsPlainText>
+              <xhtml xmlns="http://www.w3.org/1999/xhtml">TYPE ST_Sub1 EXTENDS ST_Base1:
+STRUCT
+	ttime :TIME;
+	tton  : TON;
+END_STRUCT
+END_TYPE</xhtml>
+            </InterfaceAsPlainText>
+          </data>
+          <data name="http://www.3s-software.com/plcopenxml/objectid" handleUnknown="discard">
+            <ObjectId>287843c4-9e72-4ec0-9b8a-345ce83b6b58</ObjectId>
+          </data>
+        </addData>
+      </dataType>
+      <dataType name="ST_Sub2">
+        <baseType>
+          <struct>
+            <variable name="bBool2">
+              <type>
+                <BOOL />
+              </type>
+            </variable>
+          </struct>
+        </baseType>
+        <addData>
+          <data name="http://www.3s-software.com/plcopenxml/datatypeinheritance" handleUnknown="implementation">
+            <Inheritance>
+              <Extends>ST_Sub1</Extends>
+            </Inheritance>
+          </data>
+          <data name="http://www.3s-software.com/plcopenxml/interfaceasplaintext" handleUnknown="implementation">
+            <InterfaceAsPlainText>
+              <xhtml xmlns="http://www.w3.org/1999/xhtml">TYPE ST_Sub2 EXTENDS ST_Sub1 :
+STRUCT
+	bBool2: BOOL;
+END_STRUCT
+END_TYPE
+</xhtml>
+            </InterfaceAsPlainText>
+          </data>
+          <data name="http://www.3s-software.com/plcopenxml/objectid" handleUnknown="discard">
+            <ObjectId>e2740623-2fc7-441f-8e97-600fc2d98d7b</ObjectId>
+          </data>
+        </addData>
+      </dataType>
+    </dataTypes>
+    <pous>
+      <pou name="FB_Sub1" pouType="functionBlock">
+        <interface>
+          <addData>
+            <data name="http://www.3s-software.com/plcopenxml/pouinheritance" handleUnknown="implementation">
+              <Inheritance>
+                <Implements>I_Sub1</Implements>
+              </Inheritance>
+            </data>
+          </addData>
+        </interface>
+        <body>
+          <ST>
+            <xhtml xmlns="http://www.w3.org/1999/xhtml" />
+          </ST>
+        </body>
+        <addData>
+          <data name="http://www.3s-software.com/plcopenxml/method" handleUnknown="implementation">
+            <Method name="metodo_base1" ObjectId="b113a7e6-76fd-4a40-b478-56cb170ef036">
+              <interface>
+                <returnType>
+                  <BOOL />
+                </returnType>
+              </interface>
+              <body>
+                <ST>
+                  <xhtml xmlns="http://www.w3.org/1999/xhtml" />
+                </ST>
+              </body>
+              <InterfaceAsPlainText>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">{warning 'Agregar implementación de método'}
+METHOD metodo_base1 : BOOL
+</xhtml>
+              </InterfaceAsPlainText>
+              <addData />
+            </Method>
+          </data>
+          <data name="http://www.3s-software.com/plcopenxml/method" handleUnknown="implementation">
+            <Method name="metodo_base2" ObjectId="e45040e5-6ade-48a2-b580-855b0bea4ea4">
+              <interface>
+                <returnType>
+                  <BOOL />
+                </returnType>
+              </interface>
+              <body>
+                <ST>
+                  <xhtml xmlns="http://www.w3.org/1999/xhtml" />
+                </ST>
+              </body>
+              <InterfaceAsPlainText>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">{warning 'Agregar implementación de método'}
+METHOD metodo_base2 : BOOL
+</xhtml>
+              </InterfaceAsPlainText>
+              <addData />
+            </Method>
+          </data>
+          <data name="http://www.3s-software.com/plcopenxml/method" handleUnknown="implementation">
+            <Method name="metodo_sub1" ObjectId="5dba1e94-8479-447b-8005-8409e037903e">
+              <interface>
+                <returnType>
+                  <BOOL />
+                </returnType>
+              </interface>
+              <body>
+                <ST>
+                  <xhtml xmlns="http://www.w3.org/1999/xhtml" />
+                </ST>
+              </body>
+              <InterfaceAsPlainText>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">{warning 'Agregar implementación de método'}
+METHOD metodo_sub1 : BOOL
+</xhtml>
+              </InterfaceAsPlainText>
+              <addData />
+            </Method>
+          </data>
+          <data name="http://www.3s-software.com/plcopenxml/property" handleUnknown="implementation">
+            <Property name="Prop_base1" ObjectId="496ff109-b6c2-4b69-a8f9-7fc556fdf205">
+              <interface>
+                <returnType>
+                  <BOOL />
+                </returnType>
+              </interface>
+              <GetAccessor>
+                <interface />
+                <body>
+                  <ST>
+                    <xhtml xmlns="http://www.w3.org/1999/xhtml" />
+                  </ST>
+                </body>
+                <InterfaceAsPlainText>
+                  <xhtml xmlns="http://www.w3.org/1999/xhtml">VAR
+END_VAR
+</xhtml>
+                </InterfaceAsPlainText>
+                <addData />
+              </GetAccessor>
+              <SetAccessor>
+                <interface />
+                <body>
+                  <ST>
+                    <xhtml xmlns="http://www.w3.org/1999/xhtml" />
+                  </ST>
+                </body>
+                <InterfaceAsPlainText>
+                  <xhtml xmlns="http://www.w3.org/1999/xhtml">VAR
+END_VAR
+</xhtml>
+                </InterfaceAsPlainText>
+                <addData />
+              </SetAccessor>
+              <InterfaceAsPlainText>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">{warning 'Agregar implementación de propiedad'}
+PROPERTY Prop_base1 : BOOL
+</xhtml>
+              </InterfaceAsPlainText>
+              <addData />
+            </Property>
+          </data>
+          <data name="http://www.3s-software.com/plcopenxml/property" handleUnknown="implementation">
+            <Property name="Prop_base2" ObjectId="8a0e57a7-53a4-4895-81e5-62b67b00d3d3">
+              <interface>
+                <returnType>
+                  <BOOL />
+                </returnType>
+              </interface>
+              <GetAccessor>
+                <interface />
+                <body>
+                  <ST>
+                    <xhtml xmlns="http://www.w3.org/1999/xhtml" />
+                  </ST>
+                </body>
+                <InterfaceAsPlainText>
+                  <xhtml xmlns="http://www.w3.org/1999/xhtml">VAR
+END_VAR
+</xhtml>
+                </InterfaceAsPlainText>
+                <addData />
+              </GetAccessor>
+              <SetAccessor>
+                <interface />
+                <body>
+                  <ST>
+                    <xhtml xmlns="http://www.w3.org/1999/xhtml" />
+                  </ST>
+                </body>
+                <InterfaceAsPlainText>
+                  <xhtml xmlns="http://www.w3.org/1999/xhtml">VAR
+END_VAR
+</xhtml>
+                </InterfaceAsPlainText>
+                <addData />
+              </SetAccessor>
+              <InterfaceAsPlainText>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">{warning 'Agregar implementación de propiedad'}
+PROPERTY Prop_base2 : BOOL
+</xhtml>
+              </InterfaceAsPlainText>
+              <addData />
+            </Property>
+          </data>
+          <data name="http://www.3s-software.com/plcopenxml/property" handleUnknown="implementation">
+            <Property name="Prop_sub1" ObjectId="adde8640-1e64-4d54-b784-42e65ed94ce2">
+              <interface>
+                <returnType>
+                  <BOOL />
+                </returnType>
+              </interface>
+              <GetAccessor>
+                <interface />
+                <body>
+                  <ST>
+                    <xhtml xmlns="http://www.w3.org/1999/xhtml" />
+                  </ST>
+                </body>
+                <InterfaceAsPlainText>
+                  <xhtml xmlns="http://www.w3.org/1999/xhtml">VAR
+END_VAR
+</xhtml>
+                </InterfaceAsPlainText>
+                <addData />
+              </GetAccessor>
+              <SetAccessor>
+                <interface />
+                <body>
+                  <ST>
+                    <xhtml xmlns="http://www.w3.org/1999/xhtml" />
+                  </ST>
+                </body>
+                <InterfaceAsPlainText>
+                  <xhtml xmlns="http://www.w3.org/1999/xhtml">VAR
+END_VAR
+</xhtml>
+                </InterfaceAsPlainText>
+                <addData />
+              </SetAccessor>
+              <InterfaceAsPlainText>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">{warning 'Agregar implementación de propiedad'}
+PROPERTY Prop_sub1 : BOOL
+</xhtml>
+              </InterfaceAsPlainText>
+              <addData />
+            </Property>
+          </data>
+          <data name="http://www.3s-software.com/plcopenxml/interfaceasplaintext" handleUnknown="implementation">
+            <InterfaceAsPlainText>
+              <xhtml xmlns="http://www.w3.org/1999/xhtml">FUNCTION_BLOCK FB_Sub1 IMPLEMENTS I_Sub1
+VAR_INPUT
+END_VAR
+VAR_OUTPUT
+END_VAR
+VAR
+END_VAR
+</xhtml>
+            </InterfaceAsPlainText>
+          </data>
+          <data name="http://www.3s-software.com/plcopenxml/objectid" handleUnknown="discard">
+            <ObjectId>42168c9e-7df7-4a2f-ace5-f429a736f068</ObjectId>
+          </data>
+        </addData>
+      </pou>
+      <pou name="FB_Sub2" pouType="functionBlock">
+        <interface>
+          <addData>
+            <data name="http://www.3s-software.com/plcopenxml/pouinheritance" handleUnknown="implementation">
+              <Inheritance>
+                <Implements>I_Sub2</Implements>
+              </Inheritance>
+            </data>
+          </addData>
+        </interface>
+        <body>
+          <ST>
+            <xhtml xmlns="http://www.w3.org/1999/xhtml" />
+          </ST>
+        </body>
+        <addData>
+          <data name="http://www.3s-software.com/plcopenxml/method" handleUnknown="implementation">
+            <Method name="metodo_base1" ObjectId="8ea1a4ee-ff50-438f-b45d-7ab7ec8869c4">
+              <interface>
+                <returnType>
+                  <BOOL />
+                </returnType>
+              </interface>
+              <body>
+                <ST>
+                  <xhtml xmlns="http://www.w3.org/1999/xhtml" />
+                </ST>
+              </body>
+              <InterfaceAsPlainText>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">{warning 'Agregar implementación de método'}
+METHOD metodo_base1 : BOOL
+</xhtml>
+              </InterfaceAsPlainText>
+              <addData />
+            </Method>
+          </data>
+          <data name="http://www.3s-software.com/plcopenxml/method" handleUnknown="implementation">
+            <Method name="metodo_base2" ObjectId="86593a3f-ca76-4a32-a888-70fdd188edd8">
+              <interface>
+                <returnType>
+                  <BOOL />
+                </returnType>
+              </interface>
+              <body>
+                <ST>
+                  <xhtml xmlns="http://www.w3.org/1999/xhtml" />
+                </ST>
+              </body>
+              <InterfaceAsPlainText>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">{warning 'Agregar implementación de método'}
+METHOD metodo_base2 : BOOL
+</xhtml>
+              </InterfaceAsPlainText>
+              <addData />
+            </Method>
+          </data>
+          <data name="http://www.3s-software.com/plcopenxml/method" handleUnknown="implementation">
+            <Method name="metodo_sub1" ObjectId="abae9295-5d8b-4f22-9ba0-e822bd05af73">
+              <interface>
+                <returnType>
+                  <BOOL />
+                </returnType>
+              </interface>
+              <body>
+                <ST>
+                  <xhtml xmlns="http://www.w3.org/1999/xhtml" />
+                </ST>
+              </body>
+              <InterfaceAsPlainText>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">{warning 'Agregar implementación de método'}
+METHOD metodo_sub1 : BOOL
+</xhtml>
+              </InterfaceAsPlainText>
+              <addData />
+            </Method>
+          </data>
+          <data name="http://www.3s-software.com/plcopenxml/method" handleUnknown="implementation">
+            <Method name="metodo_sub2" ObjectId="30fea07b-77f4-4bed-966d-6fe9e3546974">
+              <interface>
+                <returnType>
+                  <BOOL />
+                </returnType>
+              </interface>
+              <body>
+                <ST>
+                  <xhtml xmlns="http://www.w3.org/1999/xhtml" />
+                </ST>
+              </body>
+              <InterfaceAsPlainText>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">{warning 'Agregar implementación de método'}
+METHOD metodo_sub2 : BOOL
+</xhtml>
+              </InterfaceAsPlainText>
+              <addData />
+            </Method>
+          </data>
+          <data name="http://www.3s-software.com/plcopenxml/property" handleUnknown="implementation">
+            <Property name="Prop_base1" ObjectId="adf7437e-614d-48ed-abd5-47fe7af450a1">
+              <interface>
+                <returnType>
+                  <BOOL />
+                </returnType>
+              </interface>
+              <GetAccessor>
+                <interface />
+                <body>
+                  <ST>
+                    <xhtml xmlns="http://www.w3.org/1999/xhtml" />
+                  </ST>
+                </body>
+                <InterfaceAsPlainText>
+                  <xhtml xmlns="http://www.w3.org/1999/xhtml">VAR
+END_VAR
+</xhtml>
+                </InterfaceAsPlainText>
+                <addData />
+              </GetAccessor>
+              <SetAccessor>
+                <interface />
+                <body>
+                  <ST>
+                    <xhtml xmlns="http://www.w3.org/1999/xhtml" />
+                  </ST>
+                </body>
+                <InterfaceAsPlainText>
+                  <xhtml xmlns="http://www.w3.org/1999/xhtml">VAR
+END_VAR
+</xhtml>
+                </InterfaceAsPlainText>
+                <addData />
+              </SetAccessor>
+              <InterfaceAsPlainText>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">{warning 'Agregar implementación de propiedad'}
+PROPERTY Prop_base1 : BOOL
+</xhtml>
+              </InterfaceAsPlainText>
+              <addData />
+            </Property>
+          </data>
+          <data name="http://www.3s-software.com/plcopenxml/property" handleUnknown="implementation">
+            <Property name="Prop_base2" ObjectId="7d131bf3-d374-4fda-9d68-1189b235f5a7">
+              <interface>
+                <returnType>
+                  <BOOL />
+                </returnType>
+              </interface>
+              <GetAccessor>
+                <interface />
+                <body>
+                  <ST>
+                    <xhtml xmlns="http://www.w3.org/1999/xhtml" />
+                  </ST>
+                </body>
+                <InterfaceAsPlainText>
+                  <xhtml xmlns="http://www.w3.org/1999/xhtml">VAR
+END_VAR
+</xhtml>
+                </InterfaceAsPlainText>
+                <addData />
+              </GetAccessor>
+              <SetAccessor>
+                <interface />
+                <body>
+                  <ST>
+                    <xhtml xmlns="http://www.w3.org/1999/xhtml" />
+                  </ST>
+                </body>
+                <InterfaceAsPlainText>
+                  <xhtml xmlns="http://www.w3.org/1999/xhtml">VAR
+END_VAR
+</xhtml>
+                </InterfaceAsPlainText>
+                <addData />
+              </SetAccessor>
+              <InterfaceAsPlainText>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">{warning 'Agregar implementación de propiedad'}
+PROPERTY Prop_base2 : BOOL
+</xhtml>
+              </InterfaceAsPlainText>
+              <addData />
+            </Property>
+          </data>
+          <data name="http://www.3s-software.com/plcopenxml/property" handleUnknown="implementation">
+            <Property name="Prop_sub1" ObjectId="5e68869a-233a-40dd-8163-129b19b5fd28">
+              <interface>
+                <returnType>
+                  <BOOL />
+                </returnType>
+              </interface>
+              <GetAccessor>
+                <interface />
+                <body>
+                  <ST>
+                    <xhtml xmlns="http://www.w3.org/1999/xhtml" />
+                  </ST>
+                </body>
+                <InterfaceAsPlainText>
+                  <xhtml xmlns="http://www.w3.org/1999/xhtml">VAR
+END_VAR
+</xhtml>
+                </InterfaceAsPlainText>
+                <addData />
+              </GetAccessor>
+              <SetAccessor>
+                <interface />
+                <body>
+                  <ST>
+                    <xhtml xmlns="http://www.w3.org/1999/xhtml" />
+                  </ST>
+                </body>
+                <InterfaceAsPlainText>
+                  <xhtml xmlns="http://www.w3.org/1999/xhtml">VAR
+END_VAR
+</xhtml>
+                </InterfaceAsPlainText>
+                <addData />
+              </SetAccessor>
+              <InterfaceAsPlainText>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">{warning 'Agregar implementación de propiedad'}
+PROPERTY Prop_sub1 : BOOL
+</xhtml>
+              </InterfaceAsPlainText>
+              <addData />
+            </Property>
+          </data>
+          <data name="http://www.3s-software.com/plcopenxml/property" handleUnknown="implementation">
+            <Property name="Prop_sub2" ObjectId="d3fc1bbd-0f85-4300-bd2f-042ad6f30b1a">
+              <interface>
+                <returnType>
+                  <BOOL />
+                </returnType>
+              </interface>
+              <GetAccessor>
+                <interface />
+                <body>
+                  <ST>
+                    <xhtml xmlns="http://www.w3.org/1999/xhtml" />
+                  </ST>
+                </body>
+                <InterfaceAsPlainText>
+                  <xhtml xmlns="http://www.w3.org/1999/xhtml">VAR
+END_VAR
+</xhtml>
+                </InterfaceAsPlainText>
+                <addData />
+              </GetAccessor>
+              <SetAccessor>
+                <interface />
+                <body>
+                  <ST>
+                    <xhtml xmlns="http://www.w3.org/1999/xhtml" />
+                  </ST>
+                </body>
+                <InterfaceAsPlainText>
+                  <xhtml xmlns="http://www.w3.org/1999/xhtml">VAR
+END_VAR
+</xhtml>
+                </InterfaceAsPlainText>
+                <addData />
+              </SetAccessor>
+              <InterfaceAsPlainText>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">{warning 'Agregar implementación de propiedad'}
+PROPERTY Prop_sub2 : BOOL
+</xhtml>
+              </InterfaceAsPlainText>
+              <addData />
+            </Property>
+          </data>
+          <data name="http://www.3s-software.com/plcopenxml/interfaceasplaintext" handleUnknown="implementation">
+            <InterfaceAsPlainText>
+              <xhtml xmlns="http://www.w3.org/1999/xhtml">FUNCTION_BLOCK FB_Sub2 IMPLEMENTS I_Sub2
+VAR_INPUT
+END_VAR
+VAR_OUTPUT
+END_VAR
+VAR
+END_VAR
+</xhtml>
+            </InterfaceAsPlainText>
+          </data>
+          <data name="http://www.3s-software.com/plcopenxml/objectid" handleUnknown="discard">
+            <ObjectId>a0c4c647-9eb0-4764-8cd8-cda49c1eef1d</ObjectId>
+          </data>
+        </addData>
+      </pou>
+      <pou name="_08_Herencia_Estructura_y_Interface" pouType="program">
+        <interface>
+          <localVars>
+            <variable name="stestructura1">
+              <type>
+                <derived name="ST_Sub1" />
+              </type>
+              <documentation>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">Extensión de Estructura:</xhtml>
+              </documentation>
+            </variable>
+            <variable name="stestructura2">
+              <type>
+                <derived name="ST_Sub2" />
+              </type>
+            </variable>
+            <variable name="stestructura11">
+              <type>
+                <derived name="ST_1" />
+              </type>
+            </variable>
+            <variable name="Sub1">
+              <type>
+                <derived name="FB_Sub1" />
+              </type>
+              <documentation>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">Extensión de Interface:</xhtml>
+              </documentation>
+            </variable>
+            <variable name="Sub2">
+              <type>
+                <derived name="FB_Sub2" />
+              </type>
+            </variable>
+            <variable name="bBool">
+              <type>
+                <BOOL />
+              </type>
+            </variable>
+          </localVars>
+        </interface>
+        <body>
+          <ST>
+            <xhtml xmlns="http://www.w3.org/1999/xhtml">//Extensión de Estructura:
+stestructura1.bBool1;
+stestructura1.iINT;
+stestructura1.rReal;
+stestructura1.ttime;
+stestructura1.tton(in:= TRUE, pt:=T#1S);
+
+stestructura2.bBool1;
+stestructura2.iINT;
+stestructura2.rReal;
+stestructura2.ttime;
+stestructura2.tton(in:= TRUE, pt:=T#1S);
+stestructura2.bBool2;
+
+
+stestructura11.sstring;
+stestructura11.sStruct.bBool;
+
+//Extensión de Interface:
+Sub1.metodo_base1();
+Sub1.Prop_base1;
+Sub1.Prop_base1 := bBool;
+
+Sub2.metodo_sub2();
+Sub2.Prop_base2;
+Sub1.Prop_base2 := bBool;</xhtml>
+          </ST>
+        </body>
+        <addData>
+          <data name="http://www.3s-software.com/plcopenxml/interfaceasplaintext" handleUnknown="implementation">
+            <InterfaceAsPlainText>
+              <xhtml xmlns="http://www.w3.org/1999/xhtml">PROGRAM _08_Herencia_Estructura_y_Interface
+VAR
+	//Extensión de Estructura:
+	stestructura1  : ST_Sub1;
+	stestructura2  : ST_Sub2;
+	stestructura11 : ST_1;
+	
+	//Extensión de Interface:
+	Sub1 : FB_Sub1;
+	Sub2 : FB_Sub2;
+	bBool : BOOL;
+
+END_VAR
+</xhtml>
+            </InterfaceAsPlainText>
+          </data>
+          <data name="http://www.3s-software.com/plcopenxml/objectid" handleUnknown="discard">
+            <ObjectId>355193d1-1e94-45c9-9d78-a4302fa870a1</ObjectId>
+          </data>
+        </addData>
+      </pou>
+    </pous>
+  </types>
+  <instances>
+    <configurations />
+  </instances>
+  <addData>
+    <data name="http://www.3s-software.com/plcopenxml/interface" handleUnknown="implementation">
+      <Interface name="I_Base1" ObjectId="d7d1a935-1276-4e86-961b-270858c8a22a">
+        <Methods>
+          <Method name="metodo_base1" ObjectId="58b92868-6280-40c8-a31a-2f7df4fe5190">
+            <interface>
+              <returnType>
+                <BOOL />
+              </returnType>
+            </interface>
+            <InterfaceAsPlainText>
+              <xhtml xmlns="http://www.w3.org/1999/xhtml">METHOD metodo_base1 : BOOL
+VAR_INPUT
+END_VAR
+</xhtml>
+            </InterfaceAsPlainText>
+            <addData />
+          </Method>
+        </Methods>
+        <Properties>
+          <Property name="Prop_base1" ObjectId="7a786867-0cb6-48b1-86d6-1a9fdaa7428f">
+            <interface>
+              <returnType>
+                <BOOL />
+              </returnType>
+            </interface>
+            <SetAccessor>
+              <InterfaceAsPlainText>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml" />
+              </InterfaceAsPlainText>
+            </SetAccessor>
+            <GetAccessor>
+              <InterfaceAsPlainText>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml" />
+              </InterfaceAsPlainText>
+            </GetAccessor>
+            <InterfaceAsPlainText>
+              <xhtml xmlns="http://www.w3.org/1999/xhtml">PROPERTY Prop_base1 : bool</xhtml>
+            </InterfaceAsPlainText>
+            <addData />
+          </Property>
+        </Properties>
+        <InterfaceAsPlainText>
+          <xhtml xmlns="http://www.w3.org/1999/xhtml">INTERFACE I_Base1
+</xhtml>
+        </InterfaceAsPlainText>
+        <addData />
+      </Interface>
+    </data>
+    <data name="http://www.3s-software.com/plcopenxml/interface" handleUnknown="implementation">
+      <Interface name="I_Base2" ObjectId="c7e3a9a7-6a5b-4846-910b-88be6f6677a8">
+        <Methods>
+          <Method name="metodo_base2" ObjectId="4a5f1d1b-6cf2-4b7d-9728-e3990e5421d0">
+            <interface>
+              <returnType>
+                <BOOL />
+              </returnType>
+            </interface>
+            <InterfaceAsPlainText>
+              <xhtml xmlns="http://www.w3.org/1999/xhtml">METHOD metodo_base2 : BOOL
+VAR_INPUT
+END_VAR
+</xhtml>
+            </InterfaceAsPlainText>
+            <addData />
+          </Method>
+        </Methods>
+        <Properties>
+          <Property name="Prop_base2" ObjectId="55846aad-f7f7-497b-bc71-e67cdf58e4bc">
+            <interface>
+              <returnType>
+                <BOOL />
+              </returnType>
+            </interface>
+            <SetAccessor>
+              <InterfaceAsPlainText>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml" />
+              </InterfaceAsPlainText>
+            </SetAccessor>
+            <GetAccessor>
+              <InterfaceAsPlainText>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml" />
+              </InterfaceAsPlainText>
+            </GetAccessor>
+            <InterfaceAsPlainText>
+              <xhtml xmlns="http://www.w3.org/1999/xhtml">PROPERTY Prop_base2 : bool</xhtml>
+            </InterfaceAsPlainText>
+            <addData />
+          </Property>
+        </Properties>
+        <InterfaceAsPlainText>
+          <xhtml xmlns="http://www.w3.org/1999/xhtml">INTERFACE I_Base2
+</xhtml>
+        </InterfaceAsPlainText>
+        <addData />
+      </Interface>
+    </data>
+    <data name="http://www.3s-software.com/plcopenxml/interface" handleUnknown="implementation">
+      <Interface name="I_Sub1" ObjectId="58ee03bb-50a1-4917-bfe5-11ac2f249ba1">
+        <Methods>
+          <Method name="metodo_sub1" ObjectId="9a8cabc8-79fc-4c74-b011-d565aaec7835">
+            <interface>
+              <returnType>
+                <BOOL />
+              </returnType>
+            </interface>
+            <InterfaceAsPlainText>
+              <xhtml xmlns="http://www.w3.org/1999/xhtml">METHOD metodo_sub1 : BOOL
+VAR_INPUT
+END_VAR
+</xhtml>
+            </InterfaceAsPlainText>
+            <addData />
+          </Method>
+        </Methods>
+        <Properties>
+          <Property name="Prop_sub1" ObjectId="413ef307-506d-4b95-bc57-74779d837be9">
+            <interface>
+              <returnType>
+                <BOOL />
+              </returnType>
+            </interface>
+            <SetAccessor>
+              <InterfaceAsPlainText>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml" />
+              </InterfaceAsPlainText>
+            </SetAccessor>
+            <GetAccessor>
+              <InterfaceAsPlainText>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml" />
+              </InterfaceAsPlainText>
+            </GetAccessor>
+            <InterfaceAsPlainText>
+              <xhtml xmlns="http://www.w3.org/1999/xhtml">PROPERTY Prop_sub1 : BOOL</xhtml>
+            </InterfaceAsPlainText>
+            <addData />
+          </Property>
+        </Properties>
+        <Inheritance>
+          <Extends>I_Base1</Extends>
+        </Inheritance>
+        <InterfaceAsPlainText>
+          <xhtml xmlns="http://www.w3.org/1999/xhtml">INTERFACE I_Sub1 EXTENDS I_Base1, I_Base2
+</xhtml>
+        </InterfaceAsPlainText>
+        <addData />
+      </Interface>
+    </data>
+    <data name="http://www.3s-software.com/plcopenxml/interface" handleUnknown="implementation">
+      <Interface name="I_Sub2" ObjectId="18e4c894-78a8-48fc-b5f8-db16c933e414">
+        <Methods>
+          <Method name="metodo_sub2" ObjectId="08b920db-d63b-4afc-8867-2321173a3d90">
+            <interface>
+              <returnType>
+                <BOOL />
+              </returnType>
+            </interface>
+            <InterfaceAsPlainText>
+              <xhtml xmlns="http://www.w3.org/1999/xhtml">METHOD metodo_sub2 : BOOL
+VAR_INPUT
+END_VAR
+</xhtml>
+            </InterfaceAsPlainText>
+            <addData />
+          </Method>
+        </Methods>
+        <Properties>
+          <Property name="Prop_sub2" ObjectId="d64f6cf1-c4a5-40b3-abd4-5c38d1e3e115">
+            <interface>
+              <returnType>
+                <BOOL />
+              </returnType>
+            </interface>
+            <SetAccessor>
+              <InterfaceAsPlainText>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml" />
+              </InterfaceAsPlainText>
+            </SetAccessor>
+            <GetAccessor>
+              <InterfaceAsPlainText>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml" />
+              </InterfaceAsPlainText>
+            </GetAccessor>
+            <InterfaceAsPlainText>
+              <xhtml xmlns="http://www.w3.org/1999/xhtml">PROPERTY Prop_sub2 : BOOL</xhtml>
+            </InterfaceAsPlainText>
+            <addData />
+          </Property>
+        </Properties>
+        <Inheritance>
+          <Extends>I_Sub1</Extends>
+        </Inheritance>
+        <InterfaceAsPlainText>
+          <xhtml xmlns="http://www.w3.org/1999/xhtml">INTERFACE I_Sub2 EXTENDS I_Sub1
+</xhtml>
+        </InterfaceAsPlainText>
+        <addData />
+      </Interface>
+    </data>
+    <data name="http://www.3s-software.com/plcopenxml/projectstructure" handleUnknown="discard">
+      <ProjectStructure>
+        <Folder Name="08_Herencia_Estructura_y_Interface">
+          <Folder Name="Herencia_Estructura">
+            <Object Name="ST_Sub1" ObjectId="287843c4-9e72-4ec0-9b8a-345ce83b6b58" />
+            <Object Name="ST_Base1" ObjectId="86154a65-07e8-4335-9a44-34fb769c10c3" />
+            <Object Name="ST_1" ObjectId="9e592088-2333-48a3-955b-1540c5c00897" />
+            <Object Name="ST_2" ObjectId="dcd9326c-a5b2-4216-9e9f-b0ce42de8354" />
+            <Object Name="ST_Sub2" ObjectId="e2740623-2fc7-441f-8e97-600fc2d98d7b" />
+          </Folder>
+          <Folder Name="Herencia_Interface">
+            <Object Name="I_Base1" ObjectId="d7d1a935-1276-4e86-961b-270858c8a22a">
+              <Object Name="metodo_base1" ObjectId="58b92868-6280-40c8-a31a-2f7df4fe5190" />
+              <Object Name="Prop_base1" ObjectId="7a786867-0cb6-48b1-86d6-1a9fdaa7428f" />
+            </Object>
+            <Object Name="I_Base2" ObjectId="c7e3a9a7-6a5b-4846-910b-88be6f6677a8">
+              <Object Name="metodo_base2" ObjectId="4a5f1d1b-6cf2-4b7d-9728-e3990e5421d0" />
+              <Object Name="Prop_base2" ObjectId="55846aad-f7f7-497b-bc71-e67cdf58e4bc" />
+            </Object>
+            <Object Name="I_Sub1" ObjectId="58ee03bb-50a1-4917-bfe5-11ac2f249ba1">
+              <Object Name="metodo_sub1" ObjectId="9a8cabc8-79fc-4c74-b011-d565aaec7835" />
+              <Object Name="Prop_sub1" ObjectId="413ef307-506d-4b95-bc57-74779d837be9" />
+            </Object>
+            <Object Name="I_Sub2" ObjectId="18e4c894-78a8-48fc-b5f8-db16c933e414">
+              <Object Name="metodo_sub2" ObjectId="08b920db-d63b-4afc-8867-2321173a3d90" />
+              <Object Name="Prop_sub2" ObjectId="d64f6cf1-c4a5-40b3-abd4-5c38d1e3e115" />
+            </Object>
+            <Object Name="FB_Sub1" ObjectId="42168c9e-7df7-4a2f-ace5-f429a736f068">
+              <Object Name="Prop_base1" ObjectId="496ff109-b6c2-4b69-a8f9-7fc556fdf205" />
+              <Object Name="metodo_base1" ObjectId="b113a7e6-76fd-4a40-b478-56cb170ef036" />
+              <Object Name="Prop_base2" ObjectId="8a0e57a7-53a4-4895-81e5-62b67b00d3d3" />
+              <Object Name="metodo_base2" ObjectId="e45040e5-6ade-48a2-b580-855b0bea4ea4" />
+              <Object Name="Prop_sub1" ObjectId="adde8640-1e64-4d54-b784-42e65ed94ce2" />
+              <Object Name="metodo_sub1" ObjectId="5dba1e94-8479-447b-8005-8409e037903e" />
+            </Object>
+            <Object Name="FB_Sub2" ObjectId="a0c4c647-9eb0-4764-8cd8-cda49c1eef1d">
+              <Object Name="Prop_base1" ObjectId="adf7437e-614d-48ed-abd5-47fe7af450a1" />
+              <Object Name="metodo_base1" ObjectId="8ea1a4ee-ff50-438f-b45d-7ab7ec8869c4" />
+              <Object Name="Prop_base2" ObjectId="7d131bf3-d374-4fda-9d68-1189b235f5a7" />
+              <Object Name="metodo_base2" ObjectId="86593a3f-ca76-4a32-a888-70fdd188edd8" />
+              <Object Name="Prop_sub1" ObjectId="5e68869a-233a-40dd-8163-129b19b5fd28" />
+              <Object Name="metodo_sub1" ObjectId="abae9295-5d8b-4f22-9ba0-e822bd05af73" />
+              <Object Name="Prop_sub2" ObjectId="d3fc1bbd-0f85-4300-bd2f-042ad6f30b1a" />
+              <Object Name="metodo_sub2" ObjectId="30fea07b-77f4-4bed-966d-6fe9e3546974" />
+            </Object>
+          </Folder>
+          <Object Name="_08_Herencia_Estructura_y_Interface" ObjectId="355193d1-1e94-45c9-9d78-a4302fa870a1" />
+        </Folder>
+      </ProjectStructure>
+    </data>
+  </addData>
+</project>

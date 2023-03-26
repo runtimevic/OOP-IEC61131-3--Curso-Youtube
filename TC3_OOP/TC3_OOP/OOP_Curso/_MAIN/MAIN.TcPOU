@@ -22,7 +22,10 @@ _05_Metodo();
 _06_Propiedad();
 
 // Video de Youtube 07;
-_07_Herencia();]]></ST>
+_07_Herencia();
+
+// Video de Youtube 08;
+_08_Herencia_Estructura_y_Interface();]]></ST>
     </Implementation>
   </POU>
 </TcPlcObject>

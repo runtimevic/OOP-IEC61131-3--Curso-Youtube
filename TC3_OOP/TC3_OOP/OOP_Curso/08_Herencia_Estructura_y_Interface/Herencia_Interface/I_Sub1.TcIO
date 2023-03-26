@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.12">
+  <Itf Name="I_Sub1" Id="{58ee03bb-50a1-4917-bfe5-11ac2f249ba1}">
+    <Declaration><![CDATA[INTERFACE I_Sub1 EXTENDS I_Base1, I_Base2
+]]></Declaration>
+    <Method Name="metodo_sub1" Id="{9a8cabc8-79fc-4c74-b011-d565aaec7835}">
+      <Declaration><![CDATA[METHOD metodo_sub1 : BOOL
+VAR_INPUT
+END_VAR
+]]></Declaration>
+    </Method>
+    <Property Name="Prop_sub1" Id="{413ef307-506d-4b95-bc57-74779d837be9}">
+      <Declaration><![CDATA[PROPERTY Prop_sub1 : BOOL]]></Declaration>
+      <Get Name="Get" Id="{719ab255-11ad-4906-b98f-c4dc432ecb5d}">
+        <Declaration><![CDATA[]]></Declaration>
+      </Get>
+      <Set Name="Set" Id="{ebcf03f1-53f1-40c7-82e4-f924a06e75e1}">
+        <Declaration><![CDATA[]]></Declaration>
+      </Set>
+    </Property>
+  </Itf>
+</TcPlcObject>

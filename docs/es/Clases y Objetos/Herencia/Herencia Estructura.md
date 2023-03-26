@@ -3,15 +3,83 @@
 Al igual que los bloques de funciones, las estructuras se pueden ampliar. La estructura obtiene entonces las variables de la estructura básica además de sus propias variables.
 
 Crear una estructura que extienda otra estructura:
+```javascript
+TYPE ST_Base1 :
+STRUCT
+	bBool1: BOOL;
+	iINT : INT;
+	rReal : REAL;	
+END_STRUCT
+END_TYPE
+```
+```javascript
+TYPE ST_Sub1 EXTENDS ST_Base1:
+STRUCT
+	ttime :TIME;
+	tton  : TON;
+END_STRUCT
+END_TYPE
+```
+```javascript
+TYPE ST_Sub2 EXTENDS ST_Sub1 :
+STRUCT
+	bBool2: BOOL;
+END_STRUCT
+END_TYPE
+```
+```javascript
+PROGRAM MAIN
+VAR
+    stestructura1  : ST_Sub1;
+    stestructura2  : ST_Sub2;
+END_VAR
+
+//Extensión de Estructura:
+stestructura1.bBool1;
+stestructura1.iINT;
+stestructura1.rReal;
+stestructura1.ttime;
+stestructura1.tton(in:= TRUE, pt:=T#1S);
+
+stestructura2.bBool1;
+stestructura2.iINT;
+stestructura2.rReal;
+stestructura2.ttime;
+stestructura2.tton(in:= TRUE, pt:=T#1S);
+stestructura2.bBool2;
+```
+- Tambien sin usar EXTENDS para la Estructura podriamos realizarlo de la siguiente forma:
 
 ```javascript
-TYPE ST_Sub EXTENDS ST_Base1, ST_Base2 :
+TYPE ST_2 :
+STRUCT
+	bBool : BOOL;
+END_STRUCT
+END_TYPE
+```
+```javascript
+TYPE ST_1:
+STRUCT
+	sStruct : ST_2;
+	sstring : STRING(80);
+END_STRUCT
+END_TYPE
+```
+```javascript
+PROGRAM MAIN
+VAR
+	stestructura11 : ST_1;
+END_VAR
+
+stestructura11.sstring;
+stestructura11.sStruct.bBool; //el resultado es que queda mas anidado
+```
+- No se permite la herencia múltiple de esta forma:
+
+```javascript
+TYPE ST_Sub EXTENDS ST_Base1,ST_Base2 :
 STRUCT
 ```
-
-- No se permite la herencia múltiple.
-
-- La herencia múltiple no está permitida para las estructuras. No es posible que una estructura se extienda más que otra estructura.
 ***
 ### <span style="color:grey">Links:</span>
 
