@@ -63,19 +63,19 @@
     <Compile Include="06_Propiedad\_06_Propiedad.TcPOU">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="07_Herencia\FB_Hijo.TcPOU">
+    <Compile Include="07_Herencia_FB\FB_Hijo.TcPOU">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="07_Herencia\FB_Padre.TcPOU">
+    <Compile Include="07_Herencia_FB\FB_Padre.TcPOU">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="07_Herencia\Motor.TcPOU">
+    <Compile Include="07_Herencia_FB\Motor.TcPOU">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="07_Herencia\Pump.TcPOU">
+    <Compile Include="07_Herencia_FB\Pump.TcPOU">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="07_Herencia\_07_Herencia.TcPOU">
+    <Compile Include="07_Herencia_FB\_07_Herencia.TcPOU">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="08_Herencia_Estructura_y_Interface\Herencia_Estructura\ST_1.TcDUT">
@@ -130,7 +130,7 @@
     <Folder Include="04_Clases_Y_Objetos\Clase" />
     <Folder Include="05_Metodo" />
     <Folder Include="06_Propiedad" />
-    <Folder Include="07_Herencia" />
+    <Folder Include="07_Herencia_FB" />
     <Folder Include="08_Herencia_Estructura_y_Interface" />
     <Folder Include="08_Herencia_Estructura_y_Interface\Herencia_Estructura" />
     <Folder Include="08_Herencia_Estructura_y_Interface\Herencia_Interface" />

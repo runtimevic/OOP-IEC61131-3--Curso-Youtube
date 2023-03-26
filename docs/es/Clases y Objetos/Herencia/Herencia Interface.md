@@ -8,7 +8,6 @@ Cree una interface que amplíe otra interface mediante la extensión:
 INTERFACE I_Sub1 EXTENDS I_Base1, I_Base2
 ```
 
-
 - Se permite la herencia múltiple mediante la extensión de interfaces:
 
 ```javascript

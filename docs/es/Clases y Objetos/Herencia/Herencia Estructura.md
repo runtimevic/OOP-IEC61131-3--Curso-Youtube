@@ -48,6 +48,7 @@ stestructura2.ttime;
 stestructura2.tton(in:= TRUE, pt:=T#1S);
 stestructura2.bBool2;
 ```
+
 - Tambien sin usar EXTENDS para la Estructura podriamos realizarlo de la siguiente forma:
 
 ```javascript
@@ -74,6 +75,7 @@ END_VAR
 stestructura11.sstring;
 stestructura11.sStruct.bBool; //el resultado es que queda mas anidado
 ```
+
 - No se permite la herencia múltiple de esta forma:
 
 ```javascript
