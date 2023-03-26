@@ -1324,7 +1324,7 @@
 
 <h2 id="herencia-estructura"><span style="color:grey">Herencia Estructura:</span></h2>
 <p>Al igual que los bloques de funciones, las estructuras se pueden ampliar. La estructura obtiene entonces las variables de la estructura básica además de sus propias variables.</p>
-<p>Crear una estructura que extienda otra estructura:
+<p>Crear una estructura que extienda a otra Estructura:
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
@@ -1357,7 +1357,7 @@
 <span class="normal">4</span>
 <span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nx">TYPE</span><span class="w"> </span><span class="nx">ST_Sub2</span><span class="w"> </span><span class="nx">EXTENDS</span><span class="w"> </span><span class="nx">ST_Sub1</span><span class="w"> </span><span class="o">:</span>
 <span class="nx">STRUCT</span>
-<span class="w">    </span><span class="nx">bBool2</span><span class="o">:</span><span class="w"> </span><span class="nx">BOOL</span><span class="p">;</span>
+<span class="w">    </span><span class="nx">bBool2</span><span class="o">:</span><span class="w"> </span><span class="nx">BOOL</span><span class="p">;</span><span class="w"> </span><span class="c1">// No se podria llamar la variable bBool2 porque la tenemos declarada en la estructura ST_Base1</span>
 <span class="nx">END_STRUCT</span>
 <span class="nx">END_TYPE</span>
 </code></pre></div></td></tr></table></div>
@@ -1400,7 +1400,12 @@
 <span class="nx">stestructura2</span><span class="p">.</span><span class="nx">bBool2</span><span class="p">;</span>
 </code></pre></div></td></tr></table></div></p>
 <ul>
-<li>Tambien sin usar EXTENDS para la Estructura podriamos realizarlo de la siguiente forma:</li>
+<li>
+<p>De esta forma de extender una Estructura por Herencia no se pueden repetir el mismo nombre de variable declarada con las estructuras extendidas.</p>
+</li>
+<li>
+<p>Tambien sin usar EXTENDS para la Estructura podriamos realizarlo de la siguiente forma:</p>
+</li>
 </ul>
 <p><div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
@@ -1439,7 +1444,12 @@
 <span class="nx">stestructura11</span><span class="p">.</span><span class="nx">sStruct</span><span class="p">.</span><span class="nx">bBool</span><span class="p">;</span><span class="w"> </span><span class="c1">//el resultado es que queda mas anidado</span>
 </code></pre></div></td></tr></table></div></p>
 <ul>
-<li>No se permite la herencia múltiple de esta forma:</li>
+<li>
+<p>De esta forma si que se pueden declarar el mismo nombre de la variable en diferentes Estructuras, ya que al estar anidadas no existe el problema anterior.</p>
+</li>
+<li>
+<p>No se permite la herencia múltiple de la siguiente forma:</p>
+</li>
 </ul>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nx">TYPE</span><span class="w"> </span><span class="nx">ST_Sub</span><span class="w"> </span><span class="nx">EXTENDS</span><span class="w"> </span><span class="nx">ST_Base1</span><span class="p">,</span><span class="nx">ST_Base2</span><span class="w"> </span><span class="o">:</span>
