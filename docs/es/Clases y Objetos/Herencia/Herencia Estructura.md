@@ -23,7 +23,7 @@ END_TYPE
 ```javascript
 TYPE ST_Sub2 EXTENDS ST_Sub1 :
 STRUCT
-	bBool2: BOOL; // No se podria llamar la variable bBool2 porque la tenemos declarada en la estructura ST_Base1
+	bBool2: BOOL; // No se podria llamar la variable bBool1 porque la tenemos declarada en la estructura ST_Base1
 END_STRUCT
 END_TYPE
 ```
