@@ -1398,8 +1398,10 @@
 <span class="nx">stestructura2</span><span class="p">.</span><span class="nx">ttime</span><span class="p">;</span>
 <span class="nx">stestructura2</span><span class="p">.</span><span class="nx">tton</span><span class="p">(</span><span class="ow">in</span><span class="o">:=</span><span class="w"> </span><span class="nx">TRUE</span><span class="p">,</span><span class="w"> </span><span class="nx">pt</span><span class="o">:=</span><span class="nx">T</span><span class="err">#</span><span class="mf">1</span><span class="nx">S</span><span class="p">);</span>
 <span class="nx">stestructura2</span><span class="p">.</span><span class="nx">bBool2</span><span class="p">;</span>
-</code></pre></div></td></tr></table></div>
-- Tambien sin usar EXTENDS para la Estructura podriamos realizarlo de la siguiente forma:</p>
+</code></pre></div></td></tr></table></div></p>
+<ul>
+<li>Tambien sin usar EXTENDS para la Estructura podriamos realizarlo de la siguiente forma:</li>
+</ul>
 <p><div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
@@ -1435,8 +1437,10 @@
 
 <span class="nx">stestructura11</span><span class="p">.</span><span class="nx">sstring</span><span class="p">;</span>
 <span class="nx">stestructura11</span><span class="p">.</span><span class="nx">sStruct</span><span class="p">.</span><span class="nx">bBool</span><span class="p">;</span><span class="w"> </span><span class="c1">//el resultado es que queda mas anidado</span>
-</code></pre></div></td></tr></table></div>
-- No se permite la herencia múltiple de esta forma:</p>
+</code></pre></div></td></tr></table></div></p>
+<ul>
+<li>No se permite la herencia múltiple de esta forma:</li>
+</ul>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nx">TYPE</span><span class="w"> </span><span class="nx">ST_Sub</span><span class="w"> </span><span class="nx">EXTENDS</span><span class="w"> </span><span class="nx">ST_Base1</span><span class="p">,</span><span class="nx">ST_Base2</span><span class="w"> </span><span class="o">:</span>
 <span class="nx">STRUCT</span>
