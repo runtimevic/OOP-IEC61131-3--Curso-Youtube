@@ -3,6 +3,71 @@ cada bloque de funciones que se deriva de otro bloque de funciones tiene acceso 
 Esto se puede usar para acceder a elementos (métodos, propiedades, variables locales, etc.) desde el bloque de funciones principal.
 
 En lugar de copiar el código del bloque de funciones principal al nuevo método, el puntero SUPER^ se puede usar para llamar al método desde el bloque de funciones  . Esto elimina la necesidad de copiar el código.
+
+```javascript
+SUPER^();                 // Llamada del cuerpo FB de la clase base.
+SUPER^.METH_DoIt();       // Llamada del método METH_DoIt que se implementa en la clase base.
+```
+### <span style="color:grey">Ejemplo:</span>
+
+- Usando los punteros SUPER y THIS:
+
+Bloque de Función -- FB_Base:
+```javascript
+FUNCTION_BLOCK FB_Base
+VAR_OUTPUT
+    nCnt : INT;
+END_VAR
+```
+Metodo -- FB_Base.METH_DoIt:
+```javascript
+METHOD METH_DoIt : BOOL
+nCnt := -1;
+```
+Metodo -- FB_Base.METH_DoAlso:
+```javascript
+METHOD METH_DoAlso : BOOL
+METH_DoAlso := TRUE;
+```
+Bloque de Función -- FB_1:
+```javascript
+FUNCTION_BLOCK FB_1 EXTENDS FB_Base
+VAR_OUTPUT
+    nBase: INT;
+END_VAR
+THIS^.METH_DoIt();      // Call of the methods of FB_1
+THIS^.METH_DoAlso();
+
+SUPER^.METH_DoIt();     // Call of the methods of FB_Base
+SUPER^.METH_DoAlso();
+nBase := SUPER^.nCnt;
+```
+Metodo -- FB_1.METH_DoIt:
+```javascript
+METHOD METH_DoIt : BOOL
+nCnt := 1111;    
+METH_DoIt := TRUE;
+```
+Metodo -- FB_1.METH_DoAlso:
+```javascript
+METHOD METH_DoAlso : BOOL
+nCnt := 123;    
+METH_DoAlso := FALSE;
+```
+Programa MAIN:
+```javascript
+PROGRAM MAIN
+VAR
+    fbMyBase : FB_Base;
+    fbMyFB_1 : FB_1;
+    nTHIS    : INT;
+    nBase    : INT;
+END_VAR
+fbMyBase();
+nBase := fbmyBase.nCnt;
+fbMyFB_1();
+nTHIS := fbMyFB_1.nCnt;
+```
 ***
 ### <span style="color:grey">Links SUPER^ pointer:</span>
 - 🔗 [SUPER puntero Infosys Beckhoff](https://infosys.beckhoff.com/content/1033/tc3_plc_intro/2528837771.html?id=5132996865500332085)
