@@ -35,10 +35,10 @@ FUNCTION_BLOCK FB_1 EXTENDS FB_Base
 VAR_OUTPUT
     nBase: INT;
 END_VAR
-THIS^.METH_DoIt();      // Call of the methods of FB_1
+THIS^.METH_DoIt();      // llamada al metodo METH_DoIt del FB_1.
 THIS^.METH_DoAlso();
 
-SUPER^.METH_DoIt();     // Call of the methods of FB_Base
+SUPER^.METH_DoIt();     // llamada al metodo METH_DoIt del FB_Base.
 SUPER^.METH_DoAlso();
 nBase := SUPER^.nCnt;
 ```
