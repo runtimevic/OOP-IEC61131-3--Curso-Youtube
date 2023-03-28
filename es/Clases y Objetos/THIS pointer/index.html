@@ -706,6 +706,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#ejemplos" class="md-nav__link">
+    Ejemplos:
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#links-this-pointer" class="md-nav__link">
     Links THIS^ pointer:
   </a>
@@ -1284,6 +1291,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#ejemplos" class="md-nav__link">
+    Ejemplos:
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#links-this-pointer" class="md-nav__link">
     Links THIS^ pointer:
   </a>
@@ -1314,6 +1328,153 @@ Este puntero es necesario siempre que un método contenga una variable local que
 <p>Una declaración de asignación dentro del método establece el valor de la variable local. 
 Si queremos que el método establezca el valor de la variable local en el bloque de funciones, necesitamos usar el puntero THIS^ para acceder a él.</p>
 <p>Al igual que con el puntero SUPER, el puntero THIS también debe estar siempre en mayúsculas.</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nx">THIS</span><span class="o">^</span><span class="p">.</span><span class="nx">METH_DoIt</span><span class="p">();</span>
+</code></pre></div></td></tr></table></div>
+<h3 id="ejemplos"><span style="color:grey">Ejemplos:</span></h3>
+<ul>
+<li>La variable del bloque de funciones nVarB se establece aunque nVarB está oculta.</li>
+</ul>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span>
+<span class="normal">25</span>
+<span class="normal">26</span>
+<span class="normal">27</span>
+<span class="normal">28</span>
+<span class="normal">29</span>
+<span class="normal">30</span>
+<span class="normal">31</span>
+<span class="normal">32</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nx">FUNCTION_BLOCK</span><span class="w"> </span><span class="nx">FB_A</span>
+<span class="nx">VAR_INPUT</span>
+<span class="w">    </span><span class="nx">nVarA</span><span class="o">:</span><span class="w"> </span><span class="nx">INT</span><span class="p">;</span>
+<span class="nx">END_VAR</span>
+
+<span class="nx">nVarA</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="mf">1</span><span class="p">;</span>
+
+<span class="nx">FUNCTION_BLOCK</span><span class="w"> </span><span class="nx">FB_B</span><span class="w"> </span><span class="nx">EXTENDS</span><span class="w"> </span><span class="nx">FB_A</span>
+<span class="nx">VAR_INPUT</span>
+<span class="w">    </span><span class="nx">nVarB</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="nx">INT</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="mf">0</span><span class="p">;</span>
+<span class="nx">END_VAR</span>
+
+<span class="nx">nVarA</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="mf">11</span><span class="p">;</span>
+<span class="nx">nVarB</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="mf">2</span><span class="p">;</span>
+
+<span class="nx">METHOD</span><span class="w"> </span><span class="nx">DoIt</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="nx">BOOL</span>
+<span class="nx">VAR_INPUT</span>
+<span class="nx">END_VAR</span>
+<span class="nx">VAR</span>
+<span class="w">    </span><span class="nx">nVarB</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="nx">INT</span><span class="p">;</span>
+<span class="nx">END_VAR</span>
+
+<span class="nx">nVarB</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="mf">22</span><span class="p">;</span><span class="w"> </span><span class="c1">// Se establece la variable local nVarB.</span>
+<span class="nx">THIS</span><span class="o">^</span><span class="p">.</span><span class="nx">nVarB</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="mf">222</span><span class="p">;</span><span class="w"> </span><span class="c1">// La variable del bloque de funciones nVarB se establece aunque nVarB está oculta.</span>
+
+<span class="nx">PROGRAM</span><span class="w"> </span><span class="nx">MAIN</span>
+<span class="nx">VAR</span>
+<span class="w">   </span><span class="nx">fbMyfbB</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="nx">FB_B</span><span class="p">;</span>
+<span class="nx">END_VAR</span>
+
+<span class="nx">fbMyfbB</span><span class="p">(</span><span class="nx">nVarA</span><span class="o">:=</span><span class="mf">0</span><span class="p">,</span><span class="w"> </span><span class="nx">nVarB</span><span class="o">:=</span><span class="w"> </span><span class="mf">0</span><span class="p">);</span>
+<span class="nx">fbMyfbB</span><span class="p">.</span><span class="nx">DoIt</span><span class="p">();</span>
+</code></pre></div></td></tr></table></div>
+<ul>
+<li>Una llamada de función necesita la referencia a la propia instancia de FB.</li>
+</ul>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span>
+<span class="normal">25</span>
+<span class="normal">26</span>
+<span class="normal">27</span>
+<span class="normal">28</span>
+<span class="normal">29</span>
+<span class="normal">30</span>
+<span class="normal">31</span>
+<span class="normal">32</span>
+<span class="normal">33</span>
+<span class="normal">34</span>
+<span class="normal">35</span>
+<span class="normal">36</span>
+<span class="normal">37</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nx">FUNCTION</span><span class="w"> </span><span class="nx">F_FunA</span><span class="w"> </span>
+<span class="nx">VAR_INPUT</span>
+<span class="w">    </span><span class="nx">fbMyFbA</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="nx">FB_A</span><span class="p">;</span>
+<span class="nx">END_VAR</span>
+<span class="p">...;</span>
+
+<span class="nx">FUNCTION_BLOCK</span><span class="w"> </span><span class="nx">FB_A</span>
+<span class="nx">VAR_INPUT</span>
+<span class="w">    </span><span class="nx">nVarA</span><span class="o">:</span><span class="w"> </span><span class="nx">INT</span><span class="p">;</span>
+<span class="nx">END_VAR</span>
+<span class="p">...;</span>
+
+<span class="nx">FUNCTION_BLOCK</span><span class="w"> </span><span class="nx">FB_B</span><span class="w"> </span><span class="nx">EXTENDS</span><span class="w"> </span><span class="nx">FB_A</span>
+<span class="nx">VAR_INPUT</span>
+<span class="w">    </span><span class="nx">nVarB</span><span class="o">:</span><span class="w"> </span><span class="nx">INT</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="mf">0</span><span class="p">;</span>
+<span class="nx">END_VAR</span>
+
+<span class="nx">nVarA</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="mf">11</span><span class="p">;</span>
+<span class="nx">nVarB</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="mf">2</span><span class="p">;</span>
+
+<span class="nx">METHOD</span><span class="w"> </span><span class="nx">DoIt</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="nx">BOOL</span>
+<span class="nx">VAR_INPUT</span>
+<span class="nx">END_VAR</span>
+<span class="nx">VAR</span>
+<span class="w">    </span><span class="nx">nVarB</span><span class="o">:</span><span class="w"> </span><span class="nx">INT</span><span class="p">;</span>
+<span class="nx">END_VAR</span>
+
+<span class="nx">nVarB</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="mf">22</span><span class="p">;</span><span class="w">  </span><span class="c1">//Se establece la variable local nVarB.</span>
+<span class="nx">F_FunA</span><span class="p">(</span><span class="nx">fbMyFbA</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">THIS</span><span class="o">^</span><span class="p">);</span><span class="w">  </span><span class="c1">//F_FunA es llamado via THIS^.</span>
+
+<span class="nx">PROGRAM</span><span class="w"> </span><span class="nx">MAIN</span>
+<span class="nx">VAR</span>
+<span class="w">    </span><span class="nx">fbMyFbB</span><span class="o">:</span><span class="w"> </span><span class="nx">FB_B</span><span class="p">;</span>
+<span class="nx">END_VAR</span>
+
+<span class="nx">fbMyFbB</span><span class="p">(</span><span class="nx">nVarA</span><span class="o">:=</span><span class="mf">0</span><span class="w"> </span><span class="p">,</span><span class="w"> </span><span class="nx">nVarB</span><span class="o">:=</span><span class="w"> </span><span class="mf">0</span><span class="p">);</span>
+<span class="nx">fbMyFbB</span><span class="p">.</span><span class="nx">DoIt</span><span class="p">();</span>
+</code></pre></div></td></tr></table></div>
 <hr />
 <h3 id="links-this-pointer"><span style="color:grey">Links THIS^ pointer:</span></h3>
 <ul>

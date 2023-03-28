@@ -720,6 +720,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#ejemplo" class="md-nav__link">
+    Ejemplo:
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#links-super-pointer" class="md-nav__link">
     Links SUPER^ pointer:
   </a>
@@ -1284,6 +1291,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#ejemplo" class="md-nav__link">
+    Ejemplo:
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#links-super-pointer" class="md-nav__link">
     Links SUPER^ pointer:
   </a>
@@ -1312,6 +1326,91 @@
 <p>cada bloque de funciones que se deriva de otro bloque de funciones tiene acceso a un puntero llamado SUPER^. 
 Esto se puede usar para acceder a elementos (métodos, propiedades, variables locales, etc.) desde el bloque de funciones principal.</p>
 <p>En lugar de copiar el código del bloque de funciones principal al nuevo método, el puntero SUPER^ se puede usar para llamar al método desde el bloque de funciones  . Esto elimina la necesidad de copiar el código.</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nx">SUPER</span><span class="o">^</span><span class="p">();</span><span class="w">                 </span><span class="c1">// Llamada del cuerpo FB de la clase base.</span>
+<span class="nx">SUPER</span><span class="o">^</span><span class="p">.</span><span class="nx">METH_DoIt</span><span class="p">();</span><span class="w">       </span><span class="c1">// Llamada del método METH_DoIt que se implementa en la clase base.</span>
+</code></pre></div></td></tr></table></div>
+<h3 id="ejemplo"><span style="color:grey">Ejemplo:</span></h3>
+<ul>
+<li>Usando los punteros SUPER y THIS:</li>
+</ul>
+<p>Bloque de Función -- FB_Base:
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nx">FUNCTION_BLOCK</span><span class="w"> </span><span class="nx">FB_Base</span>
+<span class="nx">VAR_OUTPUT</span>
+<span class="w">    </span><span class="nx">nCnt</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="nx">INT</span><span class="p">;</span>
+<span class="nx">END_VAR</span>
+</code></pre></div></td></tr></table></div>
+Metodo -- FB_Base.METH_DoIt:
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nx">METHOD</span><span class="w"> </span><span class="nx">METH_DoIt</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="nx">BOOL</span>
+<span class="nx">nCnt</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="o">-</span><span class="mf">1</span><span class="p">;</span>
+</code></pre></div></td></tr></table></div>
+Metodo -- FB_Base.METH_DoAlso:
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nx">METHOD</span><span class="w"> </span><span class="nx">METH_DoAlso</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="nx">BOOL</span>
+<span class="nx">METH_DoAlso</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">TRUE</span><span class="p">;</span>
+</code></pre></div></td></tr></table></div>
+Bloque de Función -- FB_1:
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nx">FUNCTION_BLOCK</span><span class="w"> </span><span class="nx">FB_1</span><span class="w"> </span><span class="nx">EXTENDS</span><span class="w"> </span><span class="nx">FB_Base</span>
+<span class="nx">VAR_OUTPUT</span>
+<span class="w">    </span><span class="nx">nBase</span><span class="o">:</span><span class="w"> </span><span class="nx">INT</span><span class="p">;</span>
+<span class="nx">END_VAR</span>
+<span class="nx">THIS</span><span class="o">^</span><span class="p">.</span><span class="nx">METH_DoIt</span><span class="p">();</span><span class="w">      </span><span class="c1">// Call of the methods of FB_1</span>
+<span class="nx">THIS</span><span class="o">^</span><span class="p">.</span><span class="nx">METH_DoAlso</span><span class="p">();</span>
+
+<span class="nx">SUPER</span><span class="o">^</span><span class="p">.</span><span class="nx">METH_DoIt</span><span class="p">();</span><span class="w">     </span><span class="c1">// Call of the methods of FB_Base</span>
+<span class="nx">SUPER</span><span class="o">^</span><span class="p">.</span><span class="nx">METH_DoAlso</span><span class="p">();</span>
+<span class="nx">nBase</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">SUPER</span><span class="o">^</span><span class="p">.</span><span class="nx">nCnt</span><span class="p">;</span>
+</code></pre></div></td></tr></table></div>
+Metodo -- FB_1.METH_DoIt:
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nx">METHOD</span><span class="w"> </span><span class="nx">METH_DoIt</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="nx">BOOL</span>
+<span class="nx">nCnt</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="mf">1111</span><span class="p">;</span><span class="w">    </span>
+<span class="nx">METH_DoIt</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">TRUE</span><span class="p">;</span>
+</code></pre></div></td></tr></table></div>
+Metodo -- FB_1.METH_DoAlso:
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nx">METHOD</span><span class="w"> </span><span class="nx">METH_DoAlso</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="nx">BOOL</span>
+<span class="nx">nCnt</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="mf">123</span><span class="p">;</span><span class="w">    </span>
+<span class="nx">METH_DoAlso</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">FALSE</span><span class="p">;</span>
+</code></pre></div></td></tr></table></div>
+Programa MAIN:
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nx">PROGRAM</span><span class="w"> </span><span class="nx">MAIN</span>
+<span class="nx">VAR</span>
+<span class="w">    </span><span class="nx">fbMyBase</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="nx">FB_Base</span><span class="p">;</span>
+<span class="w">    </span><span class="nx">fbMyFB_1</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="nx">FB_1</span><span class="p">;</span>
+<span class="w">    </span><span class="nx">nTHIS</span><span class="w">    </span><span class="o">:</span><span class="w"> </span><span class="nx">INT</span><span class="p">;</span>
+<span class="w">    </span><span class="nx">nBase</span><span class="w">    </span><span class="o">:</span><span class="w"> </span><span class="nx">INT</span><span class="p">;</span>
+<span class="nx">END_VAR</span>
+<span class="nx">fbMyBase</span><span class="p">();</span>
+<span class="nx">nBase</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">fbmyBase</span><span class="p">.</span><span class="nx">nCnt</span><span class="p">;</span>
+<span class="nx">fbMyFB_1</span><span class="p">();</span>
+<span class="nx">nTHIS</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">fbMyFB_1</span><span class="p">.</span><span class="nx">nCnt</span><span class="p">;</span>
+</code></pre></div></td></tr></table></div></p>
 <hr />
 <h3 id="links-super-pointer"><span style="color:grey">Links SUPER^ pointer:</span></h3>
 <ul>
