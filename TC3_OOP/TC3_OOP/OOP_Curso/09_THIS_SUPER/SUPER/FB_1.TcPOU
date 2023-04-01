@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.12">
+  <POU Name="FB_1" Id="{b41fc35c-885c-4e9a-9eb5-1095c3db25bf}" SpecialFunc="None">
+    <Declaration><![CDATA[FUNCTION_BLOCK FB_1 EXTENDS FB_Base
+VAR_OUTPUT
+    nBase: INT;
+END_VAR]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[THIS^.METH_DoIt();      // llamada al metodo METH_DoIt del FB_1.
+THIS^.METH_DoAlso();
+
+SUPER^.METH_DoIt();     // llamada al metodo METH_DoIt del FB_Base.
+SUPER^.METH_DoAlso();
+nBase := SUPER^.nCnt;]]></ST>
+    </Implementation>
+    <Method Name="METH_DoAlso" Id="{a1dcd7f8-4c1f-4421-a28b-df982ca7c50a}">
+      <Declaration><![CDATA[METHOD METH_DoAlso : BOOL
+
+]]></Declaration>
+      <Implementation>
+        <ST><![CDATA[nCnt := 123;    
+METH_DoAlso := FALSE;]]></ST>
+      </Implementation>
+    </Method>
+    <Method Name="METH_DoIt" Id="{74c9375e-9e58-4fe5-9daa-2bc5c4a71e36}">
+      <Declaration><![CDATA[METHOD METH_DoIt : BOOL
+]]></Declaration>
+      <Implementation>
+        <ST><![CDATA[nCnt := 1111;    
+METH_DoIt := TRUE;]]></ST>
+      </Implementation>
+    </Method>
+  </POU>
+</TcPlcObject>

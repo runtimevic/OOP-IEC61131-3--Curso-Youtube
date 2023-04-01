@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.12">
+  <POU Name="FB_B" Id="{e5dcf537-e5e1-4fcf-9687-be68b15b45a9}" SpecialFunc="None">
+    <Declaration><![CDATA[FUNCTION_BLOCK FB_B EXTENDS FB_A
+VAR_INPUT
+    nVarB : INT := 0;
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[nVarA := 11;
+nVarB := 2;]]></ST>
+    </Implementation>
+    <Method Name="DoIt" Id="{ccefd84d-0001-4e09-91bc-d0ad1b59a78f}">
+      <Declaration><![CDATA[METHOD DoIt : BOOL
+VAR_INPUT
+END_VAR
+VAR
+    nVarB : INT;
+END_VAR
+]]></Declaration>
+      <Implementation>
+        <ST><![CDATA[nVarB := 22; // Se establece la variable local nVarB.
+THIS^.nVarB := 222; // La variable del bloque de funciones nVarB se establece aunque nVarB está oculta.
+F_FunA(fbMyFbA := THIS^);  //F_FunA es llamado via THIS^.]]></ST>
+      </Implementation>
+    </Method>
+  </POU>
+</TcPlcObject>

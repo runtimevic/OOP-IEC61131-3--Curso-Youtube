@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.12">
+  <POU Name="FB_Base" Id="{04bdcdb3-c29d-42e9-a8c0-67506a1767dd}" SpecialFunc="None">
+    <Declaration><![CDATA[FUNCTION_BLOCK FB_Base
+VAR_OUTPUT
+    nCnt : INT;
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[]]></ST>
+    </Implementation>
+    <Method Name="METH_DoAlso" Id="{486720d1-1192-44f3-a26e-44a4f7d6874b}">
+      <Declaration><![CDATA[METHOD METH_DoAlso : BOOL
+VAR_INPUT
+END_VAR
+]]></Declaration>
+      <Implementation>
+        <ST><![CDATA[METH_DoAlso := TRUE;]]></ST>
+      </Implementation>
+    </Method>
+    <Method Name="METH_DoIt" Id="{df5c08b4-7e27-4c2d-afc5-50a98e6eee76}">
+      <Declaration><![CDATA[METHOD METH_DoIt : BOOL
+]]></Declaration>
+      <Implementation>
+        <ST><![CDATA[nCnt := -1;]]></ST>
+      </Implementation>
+    </Method>
+  </POU>
+</TcPlcObject>

@@ -53,7 +53,7 @@ fbMyfbB.DoIt();
 - Una llamada de función necesita la referencia a la propia instancia de FB.
 
 ```javascript
-FUNCTION F_FunA 
+FUNCTION F_FunA : INT
 VAR_INPUT
     fbMyFbA : FB_A;
 END_VAR

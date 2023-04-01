@@ -25,7 +25,10 @@ _06_Propiedad();
 _07_Herencia();
 
 // Video de Youtube 08;
-_08_Herencia_Estructura_y_Interface();]]></ST>
+_08_Herencia_Estructura_y_Interface();
+
+// Video de Youtube 09;
+_09_THIS_SUPER();]]></ST>
     </Implementation>
   </POU>
 </TcPlcObject>

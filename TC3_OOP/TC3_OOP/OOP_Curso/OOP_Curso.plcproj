@@ -114,6 +114,24 @@
     <Compile Include="08_Herencia_Estructura_y_Interface\_08_Herencia_Estructura_y_Interface.TcPOU">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="09_THIS_SUPER\SUPER\FB_1.TcPOU">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="09_THIS_SUPER\SUPER\FB_Base.TcPOU">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="09_THIS_SUPER\THIS\FB_A.TcPOU">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="09_THIS_SUPER\THIS\FB_B.TcPOU">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="09_THIS_SUPER\THIS\F_FunA.TcPOU">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="09_THIS_SUPER\_09_THIS_SUPER.TcPOU">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="PlcTask.TcTTO">
       <SubType>Code</SubType>
     </Compile>
@@ -134,6 +152,9 @@
     <Folder Include="08_Herencia_Estructura_y_Interface" />
     <Folder Include="08_Herencia_Estructura_y_Interface\Herencia_Estructura" />
     <Folder Include="08_Herencia_Estructura_y_Interface\Herencia_Interface" />
+    <Folder Include="09_THIS_SUPER" />
+    <Folder Include="09_THIS_SUPER\SUPER" />
+    <Folder Include="09_THIS_SUPER\THIS" />
     <Folder Include="_MAIN" />
   </ItemGroup>
   <ItemGroup>

@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.12">
+  <POU Name="FB_A" Id="{09e457a3-e2f8-4454-833e-cb8ce6430a0c}" SpecialFunc="None">
+    <Declaration><![CDATA[FUNCTION_BLOCK FB_A
+VAR_INPUT
+    nVarA: INT;
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[nVarA := 1;]]></ST>
+    </Implementation>
+  </POU>
+</TcPlcObject>

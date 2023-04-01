@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.12">
+  <POU Name="_09_THIS_SUPER" Id="{82d90b97-ae79-4129-94df-68ac601e411a}" SpecialFunc="None">
+    <Declaration><![CDATA[PROGRAM _09_THIS_SUPER
+VAR
+	// Ejemplo para el puntero THIS^
+	fbMyfbB : FB_B;
+	
+	// Ejemplo para el puntero SUPER^
+    fbMyBase : FB_Base;
+    fbMyFB_1 : FB_1;
+    nTHIS    : INT;
+    nBase    : INT;	
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[// Ejemplo para el puntero THIS^
+fbMyfbB(nVarA:=0, nVarB:= 0);
+fbMyfbB.DoIt();
+
+// Ejemplo para el puntero SUPER^
+fbMyBase();
+nBase := fbmyBase.nCnt;
+fbMyFB_1();
+nTHIS := fbMyFB_1.nCnt;]]></ST>
+    </Implementation>
+  </POU>
+</TcPlcObject>
