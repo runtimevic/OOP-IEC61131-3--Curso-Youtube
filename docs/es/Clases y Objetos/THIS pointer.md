@@ -1,5 +1,8 @@
 ### <span style="color:grey">THIS^ puntero:</span>
 
+El puntero THIS^ se utiliza para referenciar la instancia actual de una clase en un programa orientado a objetos.
+En otras palabras, cuando se crea un objeto de una clase, el puntero THIS^ se utiliza para acceder a los atributos y métodos de ese objeto específico. Por ejemplo, si tenemos una clase llamada "Motor" con un atributo "velocidad" y un método "acelerar", al crear un objeto de la clase Motor, podemos utilizar el puntero THIS^ para hacer referencia a ese objeto y modificar su velocidad o acelerar.
+
 El puntero **THIS^** está disponible para todos los bloques de funciones y apunta a la instancia de bloque de funciones actual. 
 Este puntero es necesario siempre que un método contenga una variable local que oculte una variable en el bloque de funciones.
 

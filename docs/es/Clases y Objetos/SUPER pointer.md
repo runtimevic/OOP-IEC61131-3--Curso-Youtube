@@ -1,4 +1,7 @@
 ### <span style="color:grey">SUPER^ puntero:</span>
+
+En la programación orientada a objetos (OOP) en PLCs, el puntero SUPER^ se utiliza para referirse al objeto o instancia de una clase superior o padre. Supongamos que tienes una clase llamada "Sensor" y otra clase llamada "Sensor_de_Temperatura", que hereda de la primera. La clase "Sensor" es la clase padre o superior y la clase "Sensor_de_Temperatura" es la clase hija o inferior. Si estás programando en la clase "Sensor_de_Temperatura" y necesitas acceder a un método o propiedad de la clase "Sensor", puedes utilizar el puntero SUPER^ para referirte a la instancia de la clase "Sensor" a la que pertenece el objeto actual. Por ejemplo, si quieres acceder al método "obtener_valor()" de la clase "Sensor", puedes hacerlo así: SUPER^.obtener_valor(). Esto indica que quieres llamar al método "obtener_valor()" de la instancia de la clase "Sensor" a la que pertenece el objeto actual.
+
 cada bloque de funciones que se deriva de otro bloque de funciones tiene acceso a un puntero llamado SUPER^. 
 Esto se puede usar para acceder a elementos (métodos, propiedades, variables locales, etc.) desde el bloque de funciones principal.
 
