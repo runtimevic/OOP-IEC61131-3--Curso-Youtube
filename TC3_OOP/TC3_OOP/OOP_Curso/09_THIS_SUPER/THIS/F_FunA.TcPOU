@@ -1,11 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.12">
   <POU Name="F_FunA" Id="{ac29b473-e8de-4576-a169-ecb69ef48b92}" SpecialFunc="None">
-    <Declaration><![CDATA[FUNCTION F_FunA : int
+    <Declaration><![CDATA[FUNCTION F_FunA : INT
 VAR_INPUT
     fbMyFbA : FB_A;
-END_VAR
-]]></Declaration>
+END_VAR]]></Declaration>
     <Implementation>
       <ST><![CDATA[]]></ST>
     </Implementation>
