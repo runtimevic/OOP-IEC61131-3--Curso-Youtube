@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.12">
+  <POU Name="_10_Interface" Id="{8408f008-d8fb-44eb-9227-f651f7edf89a}" SpecialFunc="None">
+    <Declaration><![CDATA[PROGRAM _10_Interface
+VAR
+	//Ejemplo 1 Interface.
+	Sensor 		: FB_Sensor;
+	Calibrar 	: BOOL;
+	Calibrado   : BOOL;
+	Temperatura : REAL;
+	Consigna    : REAL := 23.5;
+	Valor       : INT;
+	
+	//Ejemplo 2 Interface.
+	FB_A : FB_TestA;
+	FB_B : FB_TestB;
+	r32 :REAL;
+	str1, str2: STRING;
+	MyITF     : ITF_MyTest;
+	r1, r2: REAL;
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[// Ejemplo 1 Interface.
+IF Calibrar THEN
+	Sensor.Calibrar();
+ELSE
+	Sensor.Descalibrar();
+END_IF
+
+Calibrado := Sensor.Calibrado;
+Sensor.Consigna := Consigna;
+
+Temperatura := Sensor.Temperatura;
+
+Valor := Sensor.LeerValor();
+
+// Ejemplo 2 Interface.
+r32:= FB_A.METH3();
+
+str1:= myFC(FB_A);
+str2:= myFC(FB_B);
+
+MyITF := FB_A;
+r1 := MyITF.METH3();
+MyITF := FB_B;
+r2 := MyITF.METH3();
+
+
+]]></ST>
+    </Implementation>
+  </POU>
+</TcPlcObject>

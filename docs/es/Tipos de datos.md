@@ -92,4 +92,4 @@ https://infosys.beckhoff.com/english.php?content=../content/1033/tc3_plc_intro/2
 
 - 🔗 [www.infoplc.net, codesys-variables](https://www.infoplc.net/descargas/42-codesys/3418-codesys-variables-globales-persistentes)
 
-
+- 🔗 [TC10.Beckhoff TwinCAT3 DUT構造体.JP](https://www.youtube.com/watch?v=UBmHhbZf12s)

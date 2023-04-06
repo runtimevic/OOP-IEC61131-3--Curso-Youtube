@@ -132,6 +132,27 @@
     <Compile Include="09_THIS_SUPER\_09_THIS_SUPER.TcPOU">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="10_Interface\Interface1\FB_Sensor.TcPOU">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="10_Interface\Interface1\I_Sensor.TcIO">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="10_Interface\Interface2\FB_TestA.TcPOU">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="10_Interface\Interface2\FB_TestB.TcPOU">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="10_Interface\Interface2\ITF_MyTest.TcIO">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="10_Interface\Interface2\myFC.TcPOU">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="10_Interface\_10_Interface.TcPOU">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="PlcTask.TcTTO">
       <SubType>Code</SubType>
     </Compile>
@@ -155,6 +176,9 @@
     <Folder Include="09_THIS_SUPER" />
     <Folder Include="09_THIS_SUPER\SUPER" />
     <Folder Include="09_THIS_SUPER\THIS" />
+    <Folder Include="10_Interface" />
+    <Folder Include="10_Interface\Interface1" />
+    <Folder Include="10_Interface\Interface2" />
     <Folder Include="_MAIN" />
   </ItemGroup>
   <ItemGroup>

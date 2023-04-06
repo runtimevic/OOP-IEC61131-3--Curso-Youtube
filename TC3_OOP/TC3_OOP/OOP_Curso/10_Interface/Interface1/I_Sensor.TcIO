@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.12">
+  <Itf Name="I_Sensor" Id="{7958397f-48a8-454b-a010-e0414fe583b5}">
+    <Declaration><![CDATA[INTERFACE I_Sensor
+]]></Declaration>
+    <Property Name="Calibrado" Id="{8abbaf26-ce96-4b0f-8e8d-9725437ad921}">
+      <Declaration><![CDATA[PROPERTY Calibrado : BOOL]]></Declaration>
+      <Get Name="Get" Id="{1eb2e9ac-1877-4b17-9c46-f99cd39d7ba0}">
+        <Declaration><![CDATA[]]></Declaration>
+      </Get>
+    </Property>
+    <Method Name="Calibrar" Id="{7f96ac36-f28a-4f3e-a22b-092e448c5536}">
+      <Declaration><![CDATA[METHOD Calibrar
+
+]]></Declaration>
+    </Method>
+    <Property Name="Consigna" Id="{821330b5-8774-4b25-9254-6d215d35ad0e}">
+      <Declaration><![CDATA[PROPERTY Consigna : REAL]]></Declaration>
+      <Set Name="Set" Id="{4313bf85-918e-4f5a-9c86-520a431b4978}">
+        <Declaration><![CDATA[]]></Declaration>
+      </Set>
+    </Property>
+    <Method Name="Descalibrar" Id="{8931e251-8ce4-45d1-b61d-04a569c5ea3a}">
+      <Declaration><![CDATA[
+METHOD Descalibrar
+
+]]></Declaration>
+    </Method>
+    <Method Name="LeerValor" Id="{ad9fd777-b86e-4466-948f-7e3fc3051ec9}">
+      <Declaration><![CDATA[METHOD LeerValor : INT
+
+]]></Declaration>
+    </Method>
+    <Property Name="Temperatura" Id="{a2fe7ee0-b9bf-4f16-a423-09fd1413b014}">
+      <Declaration><![CDATA[PROPERTY Temperatura : REAL]]></Declaration>
+      <Get Name="Get" Id="{cf328966-d649-4268-9431-0081cc38ea31}">
+        <Declaration><![CDATA[]]></Declaration>
+      </Get>
+    </Property>
+  </Itf>
+</TcPlcObject>

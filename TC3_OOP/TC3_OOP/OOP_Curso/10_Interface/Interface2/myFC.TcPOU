@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.12">
+  <POU Name="myFC" Id="{659586f2-b418-4108-afc0-bf786f6d3078}" SpecialFunc="None">
+    <Declaration><![CDATA[FUNCTION myFC : STRING
+VAR_INPUT
+	myInterface : ITF_MyTest;
+END_VAR
+VAR
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[myFC := myInterface.METH2();]]></ST>
+    </Implementation>
+  </POU>
+</TcPlcObject>

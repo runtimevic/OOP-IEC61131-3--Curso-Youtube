@@ -1,0 +1,103 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.12">
+  <POU Name="FB_TestB" Id="{882b5e9a-33e2-4768-83aa-8f6371e5a21c}" SpecialFunc="None">
+    <Declaration><![CDATA[FUNCTION_BLOCK FB_TestB IMPLEMENTS ITF_MyTest
+VAR_INPUT
+END_VAR
+VAR_OUTPUT
+END_VAR
+VAR
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[]]></ST>
+    </Implementation>
+    <Method Name="METH1" Id="{ed41c89c-c578-430c-8b2e-b598b1b34220}">
+      <Declaration><![CDATA[{warning 'Agregar implementación de método'}
+METHOD METH1 : BOOL
+]]></Declaration>
+      <Implementation>
+        <ST><![CDATA[]]></ST>
+      </Implementation>
+    </Method>
+    <Method Name="METH2" Id="{a6c0b124-d593-4e40-aeb3-0bd2657d2f5a}">
+      <Declaration><![CDATA[{warning 'Agregar implementación de método'}
+METHOD METH2 : STRING
+]]></Declaration>
+      <Implementation>
+        <ST><![CDATA[METH2 := 'FB_TestB';]]></ST>
+      </Implementation>
+    </Method>
+    <Method Name="METH3" Id="{c18dd97a-15f0-4acc-9f48-576e6c03961b}">
+      <Declaration><![CDATA[{warning 'Agregar implementación de método'}
+METHOD METH3 : REAL
+]]></Declaration>
+      <Implementation>
+        <ST><![CDATA[METH3 := 8.69;]]></ST>
+      </Implementation>
+    </Method>
+    <Property Name="Prop1" Id="{52e2ace9-0c0a-43b2-8255-ec9784494114}">
+      <Declaration><![CDATA[{warning 'Agregar implementación de propiedad'}
+PROPERTY Prop1 : BOOL
+]]></Declaration>
+      <Get Name="Get" Id="{718b9081-e379-458a-816c-266e8869054f}">
+        <Declaration><![CDATA[VAR
+END_VAR
+]]></Declaration>
+        <Implementation>
+          <ST><![CDATA[]]></ST>
+        </Implementation>
+      </Get>
+      <Set Name="Set" Id="{b5c20016-8cff-4f2d-abe6-ad528a891427}">
+        <Declaration><![CDATA[VAR
+END_VAR
+]]></Declaration>
+        <Implementation>
+          <ST><![CDATA[]]></ST>
+        </Implementation>
+      </Set>
+    </Property>
+    <Property Name="Prop2" Id="{25bdf9ff-793c-4219-b73d-f28a55868f0d}">
+      <Declaration><![CDATA[{warning 'Agregar implementación de propiedad'}
+PROPERTY Prop2 : REAL
+]]></Declaration>
+      <Get Name="Get" Id="{8452f15e-cf26-4fa2-a23a-121a1d8ad3f6}">
+        <Declaration><![CDATA[VAR
+END_VAR
+]]></Declaration>
+        <Implementation>
+          <ST><![CDATA[]]></ST>
+        </Implementation>
+      </Get>
+      <Set Name="Set" Id="{4d92c7c1-f73d-4f12-b027-e475a675a9ed}">
+        <Declaration><![CDATA[VAR
+END_VAR
+]]></Declaration>
+        <Implementation>
+          <ST><![CDATA[]]></ST>
+        </Implementation>
+      </Set>
+    </Property>
+    <Property Name="Prop3" Id="{4b306c44-e995-4afa-b371-d3a92156014c}">
+      <Declaration><![CDATA[{warning 'Agregar implementación de propiedad'}
+PROPERTY Prop3 : STRING
+]]></Declaration>
+      <Get Name="Get" Id="{6219a614-caee-4bce-8ca3-e221cb3141e4}">
+        <Declaration><![CDATA[VAR
+END_VAR
+]]></Declaration>
+        <Implementation>
+          <ST><![CDATA[]]></ST>
+        </Implementation>
+      </Get>
+      <Set Name="Set" Id="{2db227c2-47bc-41e8-886c-d63978baec61}">
+        <Declaration><![CDATA[VAR
+END_VAR
+]]></Declaration>
+        <Implementation>
+          <ST><![CDATA[]]></ST>
+        </Implementation>
+      </Set>
+    </Property>
+  </POU>
+</TcPlcObject>

@@ -1,0 +1,80 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.12">
+  <POU Name="FB_Sensor" Id="{053f071d-af09-4910-ba64-dff4b8a61f15}" SpecialFunc="None">
+    <Declaration><![CDATA[FUNCTION_BLOCK FB_Sensor IMPLEMENTS I_Sensor
+VAR_INPUT
+END_VAR
+VAR_OUTPUT
+END_VAR
+VAR
+	_Calibrar 		: BOOL;
+	Valor			: INT;
+	_Temperatura 	: REAL;
+	_Consigna       : REAL;
+
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[]]></ST>
+    </Implementation>
+    <Property Name="Calibrado" Id="{9d63c4dd-53c9-4ddb-b6cb-5a12d007b478}">
+      <Declaration><![CDATA[PROPERTY Calibrado : BOOL]]></Declaration>
+      <Get Name="Get" Id="{59593ab4-c379-4315-80ec-ad3b2aa0747c}">
+        <Declaration><![CDATA[VAR
+END_VAR
+]]></Declaration>
+        <Implementation>
+          <ST><![CDATA[Calibrado := _Calibrar;]]></ST>
+        </Implementation>
+      </Get>
+    </Property>
+    <Method Name="Calibrar" Id="{80ffb7cf-22c3-401e-9cfe-ec22fdb72363}">
+      <Declaration><![CDATA[
+METHOD Calibrar
+]]></Declaration>
+      <Implementation>
+        <ST><![CDATA[THIS^._Calibrar := TRUE;]]></ST>
+      </Implementation>
+    </Method>
+    <Property Name="Consigna" Id="{f56818bf-5b52-486f-b05e-793e3f037a4e}">
+      <Declaration><![CDATA[PROPERTY Consigna : REAL]]></Declaration>
+      <Set Name="Set" Id="{c1bf984f-d2f9-4644-bcd0-79dd31ba8d47}">
+        <Declaration><![CDATA[VAR
+END_VAR
+]]></Declaration>
+        <Implementation>
+          <ST><![CDATA[THIS^._Consigna := Consigna;]]></ST>
+        </Implementation>
+      </Set>
+    </Property>
+    <Method Name="Descalibrar" Id="{e0ba46fa-e6d0-4727-9e3a-1c54143318aa}">
+      <Declaration><![CDATA[METHOD Descalibrar
+
+]]></Declaration>
+      <Implementation>
+        <ST><![CDATA[THIS^._Calibrar := FALSE;]]></ST>
+      </Implementation>
+    </Method>
+    <Method Name="LeerValor" Id="{e4da853c-2a44-4d03-8c4b-078f6523d9e5}">
+      <Declaration><![CDATA[
+METHOD LeerValor : INT
+]]></Declaration>
+      <Implementation>
+        <ST><![CDATA[LeerValor := Valor;]]></ST>
+      </Implementation>
+    </Method>
+    <Property Name="Temperatura" Id="{d77617b0-0e98-4ddc-aa4b-491e7ea2847c}">
+      <Declaration><![CDATA[
+PROPERTY Temperatura : REAL
+]]></Declaration>
+      <Get Name="Get" Id="{9318b208-42bd-4cd7-9273-921fea2b06e5}">
+        <Declaration><![CDATA[VAR
+END_VAR
+]]></Declaration>
+        <Implementation>
+          <ST><![CDATA[Temperatura := THIS^._Temperatura;]]></ST>
+        </Implementation>
+      </Get>
+    </Property>
+  </POU>
+</TcPlcObject>
