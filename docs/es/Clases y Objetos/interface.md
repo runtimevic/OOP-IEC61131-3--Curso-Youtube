@@ -2,7 +2,7 @@
 
 En la programación orientada a objetos (OOP) en PLCs, una interfaz es un tipo de estructura que define un conjunto de métodos y propiedades que una clase debe implementar. En otras palabras, una interfaz define un contrato entre diferentes partes del código para asegurar que se cumplan ciertos requisitos y se mantenga una estructura coherente. En términos prácticos, esto significa que cuando se crea una clase que implementa una interfaz, esa clase debe proporcionar los métodos y propiedades definidos en la interfaz. Esto permite que diferentes clases compartan un conjunto común de métodos y propiedades y se comuniquen entre sí de manera coherente. Por ejemplo, si tienes una interfaz "I_Sensor" con los métodos "LeerValor","Calibrar" y "Descalibrar" y las propiedades "Temperatura" y "Consigna", cualquier clase que implemente esa interfaz debe proporcionar esos tres métodos y las dos propiedades. Esto asegura que cualquier otra parte del código que trabaje con esa clase pueda confiar en que esos métodos y propiedades estarán disponibles.
 
-![Interface](../imagenes/I_Sensor.jpg)
+![Interface](.../imagenes/I_Sensor.jpg)
 
 - Una interfaz es una clase que contiene métodos y propiedades sin implementación. 
 - La interfaz se puede implementar en cualquier clase, pero esa clase debe implementar todos sus métodos.
