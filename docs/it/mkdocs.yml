@@ -1,0 +1,168 @@
+site_name: Object Oriented Programming OOP IEC61131-3 Youtube Course by Runtimevic
+docs_dir: '../../docs/it'
+site_url: https://runtimevic.github.io/OOP-IEC61131-3--Curso-Youtube/
+site_author: runtimevic
+site_description: IEC 61131-3 PLC OOP Course
+
+# Repository
+repo_name: runtimevic/OOP-IEC61131-3--Curso-Youtube
+repo_url: https://github.com/runtimevic/OOP-IEC61131-3--Curso-Youtube
+edit_uri: ""
+
+theme:
+  name: material
+#  logo: imagenes/OOP_Logo2.png
+  custom_dir: overrides
+  logo: imagenes/oop_logg.webp
+  palette:
+     # Palette toggle for light mode
+    - scheme: default
+      toggle:
+        icon: material/brightness-7 
+        name: Switch to dark mode
+
+    # Palette toggle for dark mode
+    - scheme: slate
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+#  features:
+#    - navigation.tabs        
+  language: it
+  features:
+    - navigation.footer
+        
+  icon:
+    admonition:
+      note: octicons/tag-16
+      abstract: octicons/checklist-16
+      info: octicons/info-16
+      tip: octicons/squirrel-16
+      success: octicons/check-16
+      question: octicons/question-16
+      warning: octicons/alert-16
+      failure: octicons/x-circle-16
+      danger: octicons/zap-16
+      bug: octicons/bug-16
+      example: octicons/beaker-16
+      quote: octicons/quote-16    
+
+# Plugins
+plugins:
+  - search:
+      lang: it
+  - with-pdf:
+      copyright: Copyright &copy; 2023 Víctor Durán.
+      cover_subtitle: Object Oriented Programming OOP IEC61131-3 PLC Youtube Course by Runtimevic.
+      output_path: ../document-it.pdf
+  - pdf-export:
+      combined: true
+               
+# Customization
+extra:
+  social:
+    - icon: fontawesome/brands/linkedin
+      link: https://www.linkedin.com/in/v%C3%ADctor-dur%C3%A1n-mu%C3%B1oz-2879a913/
+    - icon: fontawesome/brands/github
+      link: https://github.com/runtimevic/OOP-IEC61131-3--Curso-Youtube
+    - icon: fontawesome/solid/paper-plane
+      link: mailto:victorduranm@hotmail.com
+    - icon: fontawesome/regular/file-pdf
+      link: https://github.com/runtimevic/OOP-IEC61131-3--Curso-Youtube/blob/gh-pages/document-it.pdf
+    - icon: fontawesome/brands/youtube
+      link: https://youtube.com/playlist?list=PLEfi_hUmmSjFpfdJ6yw3B9yj7dWHYkHmQ         
+  version:
+    provider: mike
+  alternate:
+    - name: Inglese
+      link: /OOP-IEC61131-3--Curso-Youtube/en/
+      lang: en
+    - name: Spagnolo
+      link: /OOP-IEC61131-3--Curso-Youtube/es/
+      lang: es
+    - name: Italiano
+      link: /OOP-IEC61131-3--Curso-Youtube/it/
+      lang: it   
+      
+  #disqus: 'OOP IEC-61131-3 PLC'        
+
+markdown_extensions:
+  - attr_list
+  - md_in_html  
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
+  - pymdownx.highlight:
+      linenums: true      
+  - pymdownx.critic
+  - pymdownx.caret
+  - pymdownx.keys
+  - pymdownx.mark
+  - pymdownx.tilde   
+  - tables
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - admonition
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - meta          
+
+nav:
+    - Requisiti: requisiti.md
+    - Introduzione: index.md
+    - Tipi di paradigmi: tipi di paradigmi.md
+    - Classi e oggetti:
+       - Classi e oggetti: Classi e Oggetti/Classi e Oggetti.md
+       - Blocco funzione:
+          - Blocco funzione: Classi e Oggetti/Blocco funzione.md
+          - Modificatori di accesso ai blocchi funzione: Classi e Oggetti/Modificatori di accesso ai blocchi funzione.md
+          - Function Block Dichiarazione variabili: Classi e Oggetti/Function Block Dichiarazione di variabili.md
+          - Costruttore e distruttore: Classi e Oggetti/Costruttore e Distruttore.md         
+       - Metodo oggetto:
+          - Metodo: Classi e Oggetti/Metodo.md
+          - Modificatori di accesso ai metodi: Classi e Oggetti/Modificatori di accesso ai metodi.md
+          - Metodo Dichiarazione delle variabili: Classi e Oggetti/Metodo Dichiarazione delle variabili.md
+          - Tipi di variabili restituite dal metodo: Classi e Oggetti/Tipi metodo delle variabili restituite.md      
+       - Proprietà oggetto: Classi e Oggetti/Proprieta.md
+       - Ereditarietà:
+          - Blocco funzione ereditarietà: Classi e Oggetti/Ereditarieta/Blocco funzione ereditarieta.md
+          - Struttura di ereditarietà: Classi e Oggetti/Ereditarieta/Struttura di ereditarieta.md
+          - Interfaccia di ereditarietà: Classi e Oggetti/Ereditarieta/Interfaccia di ereditarieta.md
+       - THIS puntatore: Classi e Oggetti/THIS puntatore.md
+       - SUPER puntatore: Classi e Oggetti/SUPER puntatore.md    
+       - Interfaccia: Classi e Oggetti/Interfaccia.md
+       - puntatore e riferimento: Classi e Oggetti/puntatore e riferimento.md
+       - FB Abstract vs. Interfaccia: Classi e Oggetti/FB abstract vs Interfaccia.md
+    - Tabella dei modificatori di accesso: Tabella dei modificatori di accesso.md    
+    - Tipi di variabili e variabili speciali: Tipi di variabili e variabili speciali.md
+    - Tipi di dati: Tipi di dati.md
+    - Interfaccia fluente: interfaccia fluente.md
+    - Principi OOP: 
+       - 4 Pilastri: principi/_principi OOP.md
+       - Astrazione: principi/Astrazione.md
+       - Incapsulamento: principi/Incapsulamento.md
+       - Ereditarietà: principi/Eredita.md
+       - Polimorfismo: principi/Polimorfismo.md
+    - Relazioni: Relazioni.md
+    - SOLID: 
+       - SOLID: Solid/_SOLID.md
+       - Principio di responsabilità esclusiva: Solid/Principio di responsabilita esclusiva.md
+       - Principio aperto/chiuso: Solid/Principio aperto chiuso.md
+       - Principio di sostituzione di Liskov: Solid/Principio di sostituzione di Liskov.md
+       - Principio di segregazione dell'interfaccia: Solid/Principio di segregazione dell interfaccia.md
+       - Principio di inversione delle dipendenze: Solid/Principio di inversione delle dipendenze.md
+    - UML: 
+       - UML: UML/UML.md
+       - Classe UML: UML/Classe UML.md
+       - StateChart UML: UML/Statechart UML.md
+    - Tipi di progettazione per la programmazione PLC: Tipi di progettazione per la programmazione PLC.md
+    - Modelli di progettazione:
+       - Modelli di progettazione: Modelli di progettazione/_Modelli di progettazione.md
+       - Modello di strategia: Modelli di progettazione/modello di strategia.md
+    - Links: links.md 

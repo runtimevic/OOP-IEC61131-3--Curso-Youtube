@@ -44,3 +44,7 @@ El polimorfismo se puede obtener gracias a las Interfaces y/o las Clases Abstrac
 - 🔗 [abstract, www.plccoder.com](https://www.plccoder.com/abstract/)
 
 - 🔗 [stefanhenneken.net,iec-61131-3-methods-properties-and-inheritance](https://stefanhenneken.net/2017/04/23/
+
+- 🔗 [AT&U, CODESYS - Runtime polymorphism using inheritance (OOP)](https://www.youtube.com/watch?v=oxwkeLggtnM)
+
+- 🔗 [AT&U,CODESYS - Runtime polymorphism using an ITF (OOP)](https://www.youtube.com/watch?v=dcSW0X4gM98)
