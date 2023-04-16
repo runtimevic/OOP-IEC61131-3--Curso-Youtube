@@ -80,6 +80,9 @@ extra:
     - name: Español
       link: /OOP-IEC61131-3--Curso-Youtube/es/
       lang: es
+    - name: Italian
+      link: /OOP-IEC61131-3--Curso-Youtube/it/
+      lang: it 
   #disqus: 'OOP IEC-61131-3 PLC'        
 
 markdown_extensions:

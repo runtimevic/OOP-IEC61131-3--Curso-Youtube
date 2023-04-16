@@ -80,6 +80,9 @@ extra:
     - name: Español
       link: /OOP-IEC61131-3--Curso-Youtube/es/
       lang: es
+    - name: Italiano
+      link: /OOP-IEC61131-3--Curso-Youtube/it/
+      lang: it      
 
 markdown_extensions:
   - attr_list
