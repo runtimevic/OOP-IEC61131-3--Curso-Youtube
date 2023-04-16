@@ -13,7 +13,7 @@ theme:
   name: material
 #  logo: imagenes/OOP_Logo2.png
   custom_dir: overrides
-  logo: imagenes/oop_logg.webp
+  logo: immagini/oop_logg.webp
   palette:
      # Palette toggle for light mode
     - scheme: default
