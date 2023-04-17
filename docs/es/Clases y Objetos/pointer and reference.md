@@ -1,4 +1,7 @@
 ### <span style="color:grey">Puntero y Referencia:</span>
+En la programación orientada a objetos (OOP) en PLC IEC 61131-3, los punteros y las referencias son dos conceptos importantes que se utilizan para acceder a los datos y métodos de un objeto. 
+Un puntero es una variable que almacena la dirección de memoria de otra variable. 
+Una referencia es una variable que se utiliza para acceder a otra variable sin tener que conocer su dirección de memoria.
 ### <span style="color:grey">. ¿Qué es un puntero?</span>
 
 - Es un dato que apunta o señala hacia una dirección de memoria.
