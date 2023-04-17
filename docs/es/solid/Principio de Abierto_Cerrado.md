@@ -21,3 +21,5 @@ Sin embargo, adherirse al principio abierto/cerrado (OCP) conlleva el riesgo de 
 ### <span style="color:grey">Links:</span>
 
 - 🔗 [stefanhenneken.net, iec-61131-3-solid-das-open-closed-principle](https://stefanhenneken.net/2023/03/09/iec-61131-3-solid-das-open-closed-principle/)
+
+- 🔗 [stefanhenneken.net, EC 61131-3: SOLID – The Open/Closed Principle](https://stefanhenneken.net/2023/04/06/iec-61131-3-solid-the-open-closed-principle/)
