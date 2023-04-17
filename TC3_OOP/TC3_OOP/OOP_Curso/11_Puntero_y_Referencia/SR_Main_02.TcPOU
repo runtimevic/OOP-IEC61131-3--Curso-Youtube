@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.12">
+  <POU Name="SR_Main_02" Id="{f83be4e7-8600-44cf-bc6d-45274d523f69}" SpecialFunc="None">
+    <Declaration><![CDATA[PROGRAM SR_Main_02
+VAR
+    in01    : INT; //Declaración de la variable in01 de tipo entero.
+    in02    : INT := 123; //Declaración e inicialización de la variable in02 de tipo entero.
+    in03    : INT; //Declaración de la variable in03 de tipo entero.
+
+    pint    : POINTER TO INT; //Declaración de un puntero para acceder a variables del tipo entero.
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[// Ejemplo de uso básico de los operadores ADR y del operador de contenido ^
+// Se muestra como asignar a un puntero la dirección de memoria de una variable y como leer/escribir
+// así como un ejemplo de acceso a variables locales de otros programas.
+
+pint := ADR(in01); //Asignamos al puntero la dirección de memoria donde se ubica la variable in01.
+pint^ := 44;     //A la posición de memoria indicada por el puntero, le asignamos el valor 44
+                 //Por tanto a la variable in01 se le ha escrito el valor 44.
+
+in02 := in01; // in02 será igual a 44.
+
+pint := ADR(in02); //Cambiamos la dirección para acceder a la dirección de la variable in02.
+in03 := pint^; // in03 tomara el valor del contenido de la posición de memoria contenida en el
+               // que hemos asignado la dirección de in02, por tanto in03= 123.
+
+pint := ADR(SR_Main_01.inLocalAway); //Cargamos la dirección de memoria de una variable local de 
+                                     // otro programa, la que sería inaccesible por otros medios.
+pint^ := 240 ; // La varible local del programa SR_Main_01.inLocalAway tomará el valor 240  ]]></ST>
+    </Implementation>
+  </POU>
+</TcPlcObject>

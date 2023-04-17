@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.12">
+  <POU Name="_11_Puntero_y_Referencia" Id="{8187cf33-583d-4284-b40a-6fe760f59fca}" SpecialFunc="None">
+    <Declaration><![CDATA[PROGRAM _11_Puntero_y_Referencia
+VAR
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[
+SR_Main_01();
+
+SR_Main_02();
+
+SR_Main_03();
+
+SR_Main_04();
+]]></ST>
+    </Implementation>
+  </POU>
+</TcPlcObject>

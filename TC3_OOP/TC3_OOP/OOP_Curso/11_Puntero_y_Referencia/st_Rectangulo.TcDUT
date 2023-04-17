@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.12">
+  <DUT Name="st_Rectangulo" Id="{dd70f93a-d982-45c2-b6bc-bd742d42884e}">
+    <Declaration><![CDATA[TYPE st_Rectangulo :
+STRUCT
+   rASide    	: REAL; // Parámetro de entrada que contiene el lado A del rectangulo.
+   rBSide    	: REAL; // Parámetro de entrada que contiene el lado B del rectangulo.	
+   rArea		: REAL; // Valor del area
+END_STRUCT
+END_TYPE
+]]></Declaration>
+  </DUT>
+</TcPlcObject>

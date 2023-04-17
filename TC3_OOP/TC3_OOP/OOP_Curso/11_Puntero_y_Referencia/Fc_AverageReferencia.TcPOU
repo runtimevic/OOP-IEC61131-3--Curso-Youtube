@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.12">
+  <POU Name="Fc_AverageReferencia" Id="{1d5d4f7d-f36b-47bb-a9b6-c0e808cf08df}" SpecialFunc="None">
+    <Declaration><![CDATA[FUNCTION Fc_AverageReferencia : REAL
+VAR_INPUT
+ i_Ref : REFERENCE TO ARRAY[1..20] OF REAL;
+END_VAR
+VAR
+ intIdx : INT;      // Variable indice para el bucle.
+ rVAcum : REAL:=0; // Valor acumulado.
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[// Retorna la suma de todos los valores divida del número de valores que son 20.
+
+FOR intIdx:=1 TO 20 BY 1 DO
+ rVAcum := rVAcum + i_Ref[intIdx];
+END_FOR;
+Fc_AverageReferencia := rVAcum / 20.0;]]></ST>
+    </Implementation>
+  </POU>
+</TcPlcObject>

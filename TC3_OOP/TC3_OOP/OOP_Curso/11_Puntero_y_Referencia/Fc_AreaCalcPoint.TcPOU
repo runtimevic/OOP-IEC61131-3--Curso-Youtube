@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.12">
+  <POU Name="Fc_AreaCalcPoint" Id="{d227d71a-ad5b-474b-97db-9d4e8b6cf09b}" SpecialFunc="None">
+    <Declaration><![CDATA[FUNCTION Fc_AreaCalcPoint : REAL
+VAR_INPUT
+    i_ptstRect : POINTER TO st_Rectangulo; // Puntero de entrada con la dirección de la estructura.
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[// El valor del area, de la estructura indicada por la dirección del puntero es igual al
+// valor del lado A de la estructura indicada por la dirección del puntero por
+// el valor del lado B de la estructura indicada por la dirección del puntero
+i_ptstRect^.rArea := i_ptstRect^.rASide * i_ptstRect^.rBSide;]]></ST>
+    </Implementation>
+  </POU>
+</TcPlcObject>

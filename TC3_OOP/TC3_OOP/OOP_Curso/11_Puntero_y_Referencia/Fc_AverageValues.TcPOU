@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.12">
+  <POU Name="Fc_AverageValues" Id="{f5b1c6b0-ad6b-4a2a-8d6a-86db6d8c8d59}" SpecialFunc="None">
+    <Declaration><![CDATA[FUNCTION Fc_AverageValues : REAL
+VAR_INPUT
+    i_REALV1  : REAL; //Valor posición 1
+    i_REALV2  : REAL; //Valor posición 2
+    i_REALV3  : REAL; //Valor posición 3
+    i_REALV4  : REAL; //Valor posición 4
+    i_REALV5  : REAL; //Valor posición 5
+    i_REALV6  : REAL; //Valor posición 6
+    i_REALV7  : REAL; //Valor posición 7
+    i_REALV8  : REAL; //Valor posición 8
+    i_REALV9  : REAL; //Valor posición 9
+    i_REALV10 : REAL; //Valor posición 10
+    i_REALV11 : REAL; //Valor posición 11
+    i_REALV12 : REAL; //Valor posición 12
+    i_REALV13 : REAL; //Valor posición 13
+    i_REALV14 : REAL; //Valor posición 14
+    i_REALV15 : REAL; //Valor posición 15
+    i_REALV16 : REAL; //Valor posición 16
+    i_REALV17 : REAL; //Valor posición 17
+    i_REALV18 : REAL; //Valor posición 18
+    i_REALV19 : REAL; //Valor posición 19
+    i_REALV20 : REAL; //Valor posición 20
+END_VAR
+
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[//Retorna la suma de todos los valores dividida del número de valores que son 20.
+
+Fc_AverageValues := (i_REALV1 + i_REALV2 + i_REALV3 + i_REALV4 + i_REALV5 + i_REALV6 + i_REALV7 + 
+                    i_REALV8 + i_REALV9 + i_REALV10 + i_REALV11 + i_REALV12 + i_REALV13 + 
+                    i_REALV14 + i_REALV15 + i_REALV16 + i_REALV17 + i_REALV18 + 
+                    i_REALV19 + i_REALV20) / 20.0 ;]]></ST>
+    </Implementation>
+  </POU>
+</TcPlcObject>

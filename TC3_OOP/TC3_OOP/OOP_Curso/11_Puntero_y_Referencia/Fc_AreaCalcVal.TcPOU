@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.12">
+  <POU Name="Fc_AreaCalcVal" Id="{db19088d-b67e-469c-953d-d321dc8d7c17}" SpecialFunc="None">
+    <Declaration><![CDATA[FUNCTION Fc_AreaCalcVal : REAL
+VAR_INPUT
+    i_rASide    : REAL; // Parámetro de entrada que contiene el lado A del rectangulo.
+    i_rBSide    : REAL; // Parámetro de entrada que contiene el lado B del rectangulo.
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[Fc_AreaCalcVal := i_rASide * i_rBSide; // Retorna el resultado de multiplicar el lado A por el lado B.]]></ST>
+    </Implementation>
+  </POU>
+</TcPlcObject>

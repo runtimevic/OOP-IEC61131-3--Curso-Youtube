@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.12">
+  <DUT Name="stMotorCtrl" Id="{2fa7d62e-97b0-453c-a8f1-3cee677f3d5f}">
+    <Declaration><![CDATA[TYPE stMotorCtrl :
+STRUCT
+	rTpoAcelDecel :REAL; // Tiempo para acelerar/decelerar hasta alcanazar la velocidad.
+	rVelRpm       :REAL; // Velocidad en RPM.
+	xMotorOff     :BOOL; // Bit de paro ON.
+	xMotorOn      :BOOL   ; // Bit de marcha OFF.	
+END_STRUCT
+END_TYPE
+]]></Declaration>
+  </DUT>
+</TcPlcObject>

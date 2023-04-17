@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.12">
+  <POU Name="SR_Main_03" Id="{dcba6455-3390-47ac-92b8-2af567502378}" SpecialFunc="None">
+    <Declaration><![CDATA[PROGRAM SR_Main_03
+VAR
+    stMotor_01 : stMotorCtrl; // Estructura de control del motor 1
+    stMotor_02 : stMotorCtrl; // Estructura de control del motor 2
+    stMotor_03 : stMotorCtrl; // Estructura de control del motor 3
+    pstMotorCtrl : POINTER TO stMotorCtrl; // Puntero para acceder a estructuras del tipo stMotorCtrl.
+    xMarcha : BOOL; // Pulsador marcha motores.
+END_VAR
+
+VAR
+    aintFIFO    : ARRAY[1..20] OF INT; // Array de 20 enteros.
+    aintFIFO2   : ARRAY[1..20] OF INT; // Array de 20 enteros.
+    paint       : POINTER TO ARRAY[1..20] OF INT; // Puntero al array.
+    pint        : POINTER TO INT; // Puntero a un entero.
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[// Ejemplo básico de como acceder a estructuras de datos mediante punteros.
+// La estructura de datos empleada es una llamada a stMotorCtrl, que coincide un bit de marcha, otro de paro y
+// valores de velocidad en Rpms y tiempo de aceleración/deceleración.
+
+// Asignamos valores a la estructura para el control del motor 1.
+
+stMotor_01.rTpoAcelDecel := 5.4; // Tiempo para acelerar/decelerar hasta alcanazar la velocidad.
+stMotor_01.rVelRpm := 1436.2; // Velocidad en RPM.
+stMotor_01.xMotorOff := TRUE; // Bit de paro ON.
+stMotor_01.xMotorOn := FALSE   ; // Bit de marcha OFF.
+
+pstMotorCtrl := ADR(stMotor_01); // Cargamos la dirección de memoria de la estructura del motor 1
+stMotor_02 := pstMotorCtrl^; // Copia el contenido de la zona de memoria apuntada a la
+                             // estructura del motor 2, en este caso el resultado es el mismo
+                             // que se obtendría con stMotor_02:= stMotor_01;
+
+stMotor_03 := stMotor_02; // Copia los mismos valores al motor 3;
+
+IF xMarcha THEN         // Si se pulsa marcha máquina
+    pstMotorCtrl^.xMotorOn := TRUE; // Se activa el bit de marcha al que apunta el puntero (stMotor_01).
+    pstMotorCtrl^.xMotorOff := FALSE; // Se desactiva el bit de paro al que apunta el puntero (stMotor_01)
+END_IF
+
+//***************************************************************************************************************
+// Ejemplo basico de como acceder a arrays mediante punteros:
+paint := ADR(aintFIFO); // _Asignamos la dirección del array al puntero.
+paint^[3] := 4; // Dentro del array podemos acceder a un elemento en concreto
+aintFIFO2 := paint^; // O copiar el array apuntado entero, sobre otro array
+pint := paint + (4 * SIZEOF (INT)); // Tambien se puede crear un puntero a un INT para acceder a uno de los
+                                    // elementos del array. Tomamos la dirección inicial del array y le
+                                    // sumampos un offeset de tantos bytes como se necesitan para el tipo de 
+                                    // datos INT y lo multiplicamos por el indice del array al que queremos
+                                    // acceder. SIZEOF (TYPE) retorna el número de bytes según el tipo de datos.
+
+pint^ := 5;                         // Asignamos el valor de 5, aintFIFO[5]:=5 sería lo mismo. ]]></ST>
+    </Implementation>
+  </POU>
+</TcPlcObject>

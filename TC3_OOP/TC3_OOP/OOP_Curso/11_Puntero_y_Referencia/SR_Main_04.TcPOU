@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.12">
+  <POU Name="SR_Main_04" Id="{fe911f1e-acb6-40f7-b4de-63747fe70f51}" SpecialFunc="None">
+    <Declaration><![CDATA[PROGRAM SR_Main_04
+VAR
+ arFIFO  : ARRAY[1..20] OF REAL; // FIFO con los valores de fuerza registrados.
+ intIdx  : INT;                  // Variable de indice.
+ rIncAng : REAL;                 // Valor de incremento angular para generación de senoide.
+ rValAng : REAL;                 // Valor actual de angulo.
+ rValSin : REAL;                 // Amplitud de la senoide superpuesta.
+ rVMed   : REAL;                 // Resultado del cálculo.
+
+ refFIFO : REFERENCE TO ARRAY[1..20] OF REAL := arFIFO; // Crea una referencia y la asigna a arFIFO
+ rMedRef : REAL;           // Resultado del cálculo para el ejemplo de pase de valores por Ref.
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[// Ejemplo de como realizar el cálculo del valor medio de las lecturas de fuerza contenidas en arFIFO
+// mediante la función Fc_AverageValues (Pase de parámetros por valores) y Fc_AverageReferencia (Pase de
+// parámetros por referencia)
+// Lo que se pretende es ver las ventajas del pase por referencia
+
+// Asignación de valores para llenar el FIFO a efectos de tener algunos valores para el cálculo de la media
+// al valor 124 le superpone una variación senoidal de amplitud 6
+
+rIncAng := (2 * 3.14159) / 20.0; // 2 * PI Radianes dividido entre 20 puntos.
+rValAng := 0.0;                   // Valor inicial del angulo.
+
+FOR intIdx :=1 TO 20 BY 1 DO
+ rValSin := SIN(rValAng) * 6;         // Valor del seno para una amplitud de 6
+ arFIFO[intIdx] := 124.0 + rValSin;  // A un nivel de 124.0 se superpone un seno de amplitud 6.
+ rValAng := rValAng + rIncAng;       // Próximo valor angular. 
+END_FOR;
+
+// Con el FIFO de valores llamaremos a la función para el cálculo de la media pasando valores.
+// Lo que no sería para nada adecuado por tratarse de muchos parámetros.
+
+rVMed:= Fc_AverageValues( i_REALV1  := arFIFO[1],
+                          i_REALV2  := arFIFO[2],
+                          i_REALV3  := arFIFO[3],
+                          i_REALV4  := arFIFO[4], 
+                          i_REALV5  := arFIFO[5],
+                          i_REALV6  := arFIFO[6], 
+                          i_REALV7  := arFIFO[7],
+                          i_REALV8  := arFIFO[8],
+                          i_REALV9  := arFIFO[9],
+                          i_REALV10 := arFIFO[10],
+                          i_REALV11 := arFIFO[11],
+                          i_REALV12 := arFIFO[12],
+                          i_REALV13 := arFIFO[13],
+                          i_REALV14 := arFIFO[14],
+                          i_REALV15 := arFIFO[15],
+                          i_REALV16 := arFIFO[16],
+                          i_REALV17 := arFIFO[17],
+                          i_REALV18 := arFIFO[18],
+                          i_REALV19 := arFIFO[19],
+                          i_REALV20 := arFIFO[20]);
+
+// Con el FIFO lleno de valores llamaremos a la función para el cálculo de la media pasando valores por referencia
+// para ver lo sencillo que resulta en este caso.
+
+rMedRef := Fc_AverageReferencia(i_Ref:=refFIFO);]]></ST>
+    </Implementation>
+  </POU>
+</TcPlcObject>

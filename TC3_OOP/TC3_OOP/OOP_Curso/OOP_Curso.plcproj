@@ -153,6 +153,42 @@
     <Compile Include="10_Interface\_10_Interface.TcPOU">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="11_Puntero_y_Referencia\Fc_AreaCalcPoint.TcPOU">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="11_Puntero_y_Referencia\Fc_AreaCalcRef.TcPOU">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="11_Puntero_y_Referencia\Fc_AreaCalcVal.TcPOU">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="11_Puntero_y_Referencia\Fc_AverageReferencia.TcPOU">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="11_Puntero_y_Referencia\Fc_AverageValues.TcPOU">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="11_Puntero_y_Referencia\SR_Main_01.TcPOU">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="11_Puntero_y_Referencia\SR_Main_02.TcPOU">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="11_Puntero_y_Referencia\SR_Main_03.TcPOU">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="11_Puntero_y_Referencia\SR_Main_04.TcPOU">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="11_Puntero_y_Referencia\stMotorCtrl.TcDUT">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="11_Puntero_y_Referencia\st_Rectangulo.TcDUT">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="11_Puntero_y_Referencia\_11_Puntero_y_Referencia.TcPOU">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="PlcTask.TcTTO">
       <SubType>Code</SubType>
     </Compile>

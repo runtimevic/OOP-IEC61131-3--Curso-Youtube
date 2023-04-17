@@ -210,7 +210,7 @@ Fc_AreaCalcVal := i_rASide * i_rBSide; // Retorna el resultado de multiplicar el
 // La estructura se pasa mediante un puntero a la estructura stRectangulo deseada y la función retorna el resultado a la 
 // misma estructura.
 
-FUNCTION Fc_AreaCalcPoint
+FUNCTION Fc_AreaCalcPoint : REAL
 VAR_INPUT
     i_ptstRect : POINTER TO st_Rectangulo; // Puntero de entrada con la dirección de la estructura.
 END_VAR
@@ -227,7 +227,7 @@ i_ptstRect^.rArea := i_ptstRect^.rASide * i_ptstRect^.rBSide;
 
 FUNCTION Fc_AreaCalcRef : REAL
 VAR_INPUT
-    i_Ref : REFERENCE TO stRectangulo
+    i_Ref : REFERENCE TO st_Rectangulo;
 END_VAR
 
 i_Ref.rArea := i_Ref.rASide * i_Ref.rBSide;
@@ -237,11 +237,11 @@ i_Ref.rArea := i_Ref.rASide * i_Ref.rBSide;
 PROGRAM SR_Main_01
 VAR
     inLocalAway : INT; // Variable integer local de SR_Main_01 para ser accedida externamente
-    stRectangulo1 : stRectangulo; // Estructura que contiene los datos del rectangulo1 A, B y su area
-    stRectangulo2 : stRectangulo; // Estructura que contiene los datos del rectangulo2 A, B y su area
-    stRectangulo3 : stRectangulo; // Estructura que contiene los datos del rectangulo3 A, B y su area
+    stRectangulo1 : st_Rectangulo; // Estructura que contiene los datos del rectangulo1 A, B y su area
+    stRectangulo2 : st_Rectangulo; // Estructura que contiene los datos del rectangulo2 A, B y su area
+    stRectangulo3 : st_Rectangulo; // Estructura que contiene los datos del rectangulo3 A, B y su area
 
-    refRectangulo : REFERENCE TO stRectangulo := stRectangulo3; // Hace Referencia a stRectangulo3   
+    refRectangulo : REFERENCE TO st_Rectangulo := stRectangulo3; // Hace Referencia a stRectangulo3   
 END_VAR
 
 // Asignación de valores a los lados de los tres rectángulos.
@@ -320,7 +320,7 @@ Fc_AverageValues := (i_REALV1 + i_REALV2 + i_REALV3 + i_REALV4 + i_REALV5 + i_RE
 FUNCTION Fc_AverageReferencia : REAL
 
 VAR_INPUT
- i_ref : REFERENCE TO ARRAY[1..20] OF REAL;
+ i_Ref : REFERENCE TO ARRAY[1..20] OF REAL;
 END_VAR
 VAR
  intIdx : INT;      // Variable indice para el bucle.
@@ -330,7 +330,7 @@ END_VAR
 // Retorna la suma de todos los valores divida del número de valores que son 20.
 
 FOR intIdx:=1 TO 20 BY 1 DO
- rVAcum := rVAcum + i_ref[intIdx];
+ rVAcum := rVAcum + i_Ref[intIdx];
 END_FOR;
 Fc_AverageReferencia := rVAcum / 20.0;
 ```
@@ -346,7 +346,7 @@ VAR
  rVMed   : REAL;                 // Resultado del cálculo.
 
  refFIFO : REFERENCE TO ARRAY[1..20] OF REAL := arFIFO; // Crea una referencia y la asigna a arFIFO
- rMedref : REAL;           // Resultado del cálculo para el ejemplo de pase de valores por Ref.
+ rMedRef : REAL;           // Resultado del cálculo para el ejemplo de pase de valores por Ref.
 END_VAR
 
 // Ejemplo de como realizar el cálculo del valor medio de las lecturas de fuerza contenidas en arFIFO
@@ -357,8 +357,8 @@ END_VAR
 // Asignación de valores para llenar el FIFO a efectos de tener algunos valores para el cálculo de la media
 // al valor 124 le superpone una variación senoidal de amplitud 6
 
-rIncAng := (2 * 3.14159) / 20.0 // 2 * PI Radianes dividido entre 20 puntos.
-rValAng := 0;                   // Valor inicial del angulo.
+rIncAng := (2 * 3.14159) / 20.0; // 2 * PI Radianes dividido entre 20 puntos.
+rValAng := 0.0;                   // Valor inicial del angulo.
 
 FOR intIdx :=1 TO 20 BY 1 DO
  rValSin := SIN(rValAng) * 6;         // Valor del seno para una amplitud de 6
@@ -369,31 +369,31 @@ END_FOR;
 // Con el FIFO de valores llamaremos a la función para el cálculo de la media pasando valores.
 // Lo que no sería para nada adecuado por tratarse de muchos parámetros.
 
-rVMed:= Fc_AverageValues( i_REALV1  : arFIFO[1],
-                          i_REALV2  : arFIFO[2],
-                          i_REALV3  : arFIFO[3],
-                          i_REALV4  : arFIFO[4], 
-                          i_REALV5  : arFIFO[5],
-                          i_REALV6  : arFIFO[6], 
-                          i_REALV7  : arFIFO[7],
-                          i_REALV8  : arFIFO[8],
-                          i_REALV9  : arFIFO[9],
-                          i_REALV10 : arFIFO[10],
-                          i_REALV11 : arFIFO[11],
-                          i_REALV12 : arFIFO[12],
-                          i_REALV13 : arFIFO[13],
-                          i_REALV14 : arFIFO[14],
-                          i_REALV15 : arFIFO[15],
-                          i_REALV16 : arFIFO[16],
-                          i_REALV17 : arFIFO[17],
-                          i_REALV18 : arFIFO[18],
-                          i_REALV19 : arFIFO[19],
-                          i_REALV20 : arFIFO[20]);
+rVMed:= Fc_AverageValues( i_REALV1  := arFIFO[1],
+                          i_REALV2  := arFIFO[2],
+                          i_REALV3  := arFIFO[3],
+                          i_REALV4  := arFIFO[4], 
+                          i_REALV5  := arFIFO[5],
+                          i_REALV6  := arFIFO[6], 
+                          i_REALV7  := arFIFO[7],
+                          i_REALV8  := arFIFO[8],
+                          i_REALV9  := arFIFO[9],
+                          i_REALV10 := arFIFO[10],
+                          i_REALV11 := arFIFO[11],
+                          i_REALV12 := arFIFO[12],
+                          i_REALV13 := arFIFO[13],
+                          i_REALV14 := arFIFO[14],
+                          i_REALV15 := arFIFO[15],
+                          i_REALV16 := arFIFO[16],
+                          i_REALV17 := arFIFO[17],
+                          i_REALV18 := arFIFO[18],
+                          i_REALV19 := arFIFO[19],
+                          i_REALV20 := arFIFO[20]);
 
 // Con el FIFO lleno de valores llamaremos a la función para el cálculo de la media pasando valores por referencia
 // para ver lo sencillo que resulta en este caso.
 
-rMedRef := FcAverageReferencia(i_Ref:=refFIFO);
+rMedRef := Fc_AverageReferencia(i_Ref:=refFIFO);
 ```
 Claramente la llamada a la función pasando los valores por referencia es la mejor.
 Y en este ejemplo se ha supuesto un ejemplo con solo 20 datos de entrada,

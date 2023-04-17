@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.12">
+  <POU Name="SR_Main_01" Id="{5053f9db-5f78-45ed-a6f8-173f0caca697}" SpecialFunc="None">
+    <Declaration><![CDATA[PROGRAM SR_Main_01
+VAR
+	inLocalAway : INT; // Variable integer local de SR_Main_01 para ser accedida externamente
+END_VAR
+	
+VAR
+    aR20: ARRAY[1..20] OF REAL; //Declara un array de 20 elementos del tipo REAL.
+    inIndex: INT; //Declara la variable de indice del array para el acceso indirecto
+    xNewVal: BOOL; //Indica que hay una nueva lectura del sensor de fuerza.
+    rFuerza: REAL; //Valor de fuerza del sensor.
+END_VAR
+
+VAR 
+    stRectangulo1 : st_Rectangulo; // Estructura que contiene los datos del rectangulo1 A, B y su area
+    stRectangulo2 : st_Rectangulo; // Estructura que contiene los datos del rectangulo2 A, B y su area
+    stRectangulo3 : st_Rectangulo; // Estructura que contiene los datos del rectangulo3 A, B y su area
+
+    refRectangulo : REFERENCE TO st_Rectangulo := stRectangulo3; // Hace Referencia a stRectangulo3   
+END_VAR
+
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[// Ejemplo01: Se asigna valores del 1 al 20 a cada elemento del array mediante un bucle.
+FOR inIndex:=1 TO 20 BY 1 DO  // Se empieza por el valor de la variable indice a 1, hasta 20
+    aR20[inIndex] := inIndex; // Al elemento aR20[inIndex] se le asigna el valor de inIndex
+END_FOR;                      // Se incrementa inIndex y se repite el proceso.
+
+// Ejemplo02: Creamos un FIFO en el que guardamos un valor analógico de fuera a cada impulso de la señal xNewVal.
+IF xNewVal THEN                // Si hay un nuevo valor de fuerza realizamos el codigo.
+    xNewVal := FALSE;          // Reset de la señal xNewVal.
+
+    FOR inIndex:=20 TO 2 BY -1 DO // Variable indice a 20, hasta 2.
+        aR20[inIndex] := aR20[inIndex-1]; //Desplazamiento de los valores en el FIFO --->
+    END_FOR;                             // Se decrementa inIndex y se repite el proceso.
+
+    aR20[1] := rFuerza; // Entrada del valor de fuerza en el primer elemento del FIFO.
+END_IF
+
+//*********************************************************************************************************
+
+// Asignación de valores a los lados de los tres rectángulos.
+
+// Asignación de valores de los lados del rectángulo 1
+stRectangulo1.rAside := 44; //Valor del lado A.
+stRectangulo1.rBside := 32; //Valor del lado B.
+
+// Asignación de valores de los lados del rectángulo 2
+stRectangulo2.rAside := 12.8; //Valor del lado A.
+stRectangulo2.rBside := 320.4; //Valor del lado B.
+
+// Asignación de valores de los lados del rectángulo 3
+stRectangulo3.rAside := 1024.2; //Valor del lado A.
+stRectangulo3.rBside := 2048.4; //Valor del lado B.
+
+// Cálculo del área del rectángulo pasando valores a la función
+stRectangulo1.rArea := Fc_AreaCalcVal(i_rAside:=stRectangulo1.rAside, i_rBside:= stRectangulo1.rBside);
+
+// Cálculo del área del rectángulo pasando un puntero a la función
+Fc_AreaCalcPoint(ADR(stRectangulo2));
+
+// Cálculo del área del rectángulo pasando una referencia a la función
+Fc_AreaCalcRef(refRectangulo);]]></ST>
+    </Implementation>
+  </POU>
+</TcPlcObject>

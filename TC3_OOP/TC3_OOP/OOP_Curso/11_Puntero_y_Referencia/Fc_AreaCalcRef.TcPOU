@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.12">
+  <POU Name="Fc_AreaCalcRef" Id="{c39b6b34-f5cf-45c1-91c8-b3d6031446f6}" SpecialFunc="None">
+    <Declaration><![CDATA[FUNCTION Fc_AreaCalcRef : REAL
+VAR_INPUT
+    i_Ref : REFERENCE TO st_Rectangulo;
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[i_Ref.rArea := i_Ref.rASide * i_Ref.rBSide;]]></ST>
+    </Implementation>
+  </POU>
+</TcPlcObject>
