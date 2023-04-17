@@ -273,8 +273,128 @@ Seguidamente se muestra un ejemplo de una función para calcular el valor promed
 pasando los valores mediante una referencia.
 
 ### Código de la función Fc_AverageValues para pase de valores:
-!!!!!!!!!!! VOY POR AQUI!!!!!!!!!
+```javascript
+// Esta función calcula la media de un buffer de 20 elementos. Solo a modo de ejemplo comparativo
+// no sería una forma muy adecuada de hacerlo así
 
+FUNCTION Fc_AverageValues : REAL
+VAR_INPUT
+    i_REALV1  : REAL; //Valor posición 1
+    i_REALV2  : REAL; //Valor posición 2
+    i_REALV3  : REAL; //Valor posición 3
+    i_REALV4  : REAL; //Valor posición 4
+    i_REALV5  : REAL; //Valor posición 5
+    i_REALV6  : REAL; //Valor posición 6
+    i_REALV7  : REAL; //Valor posición 7
+    i_REALV8  : REAL; //Valor posición 8
+    i_REALV9  : REAL; //Valor posición 9
+    i_REALV10 : REAL; //Valor posición 10
+    i_REALV11 : REAL; //Valor posición 11
+    i_REALV12 : REAL; //Valor posición 12
+    i_REALV13 : REAL; //Valor posición 13
+    i_REALV14 : REAL; //Valor posición 14
+    i_REALV15 : REAL; //Valor posición 15
+    i_REALV16 : REAL; //Valor posición 16
+    i_REALV17 : REAL; //Valor posición 17
+    i_REALV18 : REAL; //Valor posición 18
+    i_REALV19 : REAL; //Valor posición 19
+    i_REALV20 : REAL; //Valor posición 20
+END_VAR
+
+//Retorna la suma de todos los valores dividida del número de valores que son 20.
+
+Fc_AverageValues := (i_REALV1 + i_REALV2 + i_REALV3 + i_REALV4 + i_REALV5 + i_REALV6 + i_REALV7 + 
+                    i_REALV8 + i_REALV9 + i_REALV10 + i_REALV11 + i_REALV12 + i_REALV13 + 
+                    i_REALV14 + i_REALV15 + i_REALV16 + i_REALV17 + i_REALV18 + 
+                    i_REALV19 + i_REALV20) / 20.0 ;
+
+```
+### Código de la función Fc_AverageReferencia para pase por referencia:
+```javascript
+// Esta función calcula la media de un buffer de 20 elementos. Solo a modo de ejemplo comparativo
+// pasando valores por referencia.
+
+FUNCTION Fc_AverageReferencia : REAL
+
+VAR_INPUT
+ i_ref : REFERENCE TO ARRAY[1..20] OF REAL;
+END_VAR
+VAR
+ intIdx : INT;      // Variable indice para el bucle.
+ rVAcum : REAL:=0; // Valor acumulado.
+END_VAR
+
+// Retorna la suma de todos los valores divida del número de valores que son 20.
+
+FOR intIdx:=1 TO 20 BY 1 DO
+ rVAcum := rVAcum + i_ref[intIdx];
+END_FOR;
+Fc_AverageReferencia := rVAcum / 20.0;
+```
+### Código de ejemplo de llamada a ambas funciones:
+```javascript
+PROGRAM SR_Main_04
+VAR
+ arFIFO  : ARRAY[1..20] OF REAL; // FIFO con los valores de fuerza registrados.
+ intIdx  : INT;                  // Variable de indice.
+ rIncAng : REAL;                 // Valor de incremento angular para generación de senoide.
+ rValAng : REAL;                 // Valor actual de angulo.
+ rValSin : REAL;                 // Amplitud de la senoide superpuesta.
+ rVMed   : REAL;                 // Resultado del cálculo.
+
+ refFIFO : REFERENCE TO ARRAY[1..20] OF REAL := arFIFO; // Crea una referencia y la asigna a arFIFO
+ rMedref : REAL;           // Resultado del cálculo para el ejemplo de pase de valores por Ref.
+END_VAR
+
+// Ejemplo de como realizar el cálculo del valor medio de las lecturas de fuerza contenidas en arFIFO
+// mediante la función Fc_AverageValues (Pase de parámetros por valores) y Fc_AverageReferencia (Pase de
+// parámetros por referencia)
+// Lo que se pretende es ver las ventajas del pase por referencia
+
+// Asignación de valores para llenar el FIFO a efectos de tener algunos valores para el cálculo de la media
+// al valor 124 le superpone una variación senoidal de amplitud 6
+
+rIncAng := (2 * 3.14159) / 20.0 // 2 * PI Radianes dividido entre 20 puntos.
+rValAng := 0;                   // Valor inicial del angulo.
+
+FOR intIdx :=1 TO 20 BY 1 DO
+ rValSin := SIN(rValAng) * 6;         // Valor del seno para una amplitud de 6
+ arFIFO[intIdx] := 124.0 + rValSin;  // A un nivel de 124.0 se superpone un seno de amplitud 6.
+ rValAng := rValAng + rIncAng;       // Próximo valor angular. 
+END_FOR;
+
+// Con el FIFO de valores llamaremos a la función para el cálculo de la media pasando valores.
+// Lo que no sería para nada adecuado por tratarse de muchos parámetros.
+
+rVMed:= Fc_AverageValues( i_REALV1  : arFIFO[1],
+                          i_REALV2  : arFIFO[2],
+                          i_REALV3  : arFIFO[3],
+                          i_REALV4  : arFIFO[4], 
+                          i_REALV5  : arFIFO[5],
+                          i_REALV6  : arFIFO[6], 
+                          i_REALV7  : arFIFO[7],
+                          i_REALV8  : arFIFO[8],
+                          i_REALV9  : arFIFO[9],
+                          i_REALV10 : arFIFO[10],
+                          i_REALV11 : arFIFO[11],
+                          i_REALV12 : arFIFO[12],
+                          i_REALV13 : arFIFO[13],
+                          i_REALV14 : arFIFO[14],
+                          i_REALV15 : arFIFO[15],
+                          i_REALV16 : arFIFO[16],
+                          i_REALV17 : arFIFO[17],
+                          i_REALV18 : arFIFO[18],
+                          i_REALV19 : arFIFO[19],
+                          i_REALV20 : arFIFO[20]);
+
+// Con el FIFO lleno de valores llamaremos a la función para el cálculo de la media pasando valores por referencia
+// para ver lo sencillo que resulta en este caso.
+
+rMedRef := FcAverageReferencia(i_Ref:=refFIFO);
+```
+Claramente la llamada a la función pasando los valores por referencia es la mejor.
+Y en este ejemplo se ha supuesto un ejemplo con solo 20 datos de entrada,
+pero lo normal es encontrar aplicaciones con estructuras de datos de varios Kbytes.
 ***
 - Un puntero de tipo T apunta a un objeto de tipo T (T = tipo de datos básico o definido por el usuario)
 - Un puntero contiene la dirección del objeto al que apunta.
@@ -293,18 +413,18 @@ El mejor uso de punteros y referencias es cuando desea pasar o devolver un objet
 
 ### <span style="color:grey">.Resumen / Conclusiones:</span>
 
-- La memoria contiene miles y hasta millones de celdas o byte, en las que se ubica el código del programa y todos los datos/variables. Cada celda tiene su número, al que se llama dirección de memoria y que se suele expresar en hexadecimal 16#FA1204 -como ejemplo-
-- Un puntero es una variable, que en lugar de contener un valor contiene una dirección de memoria, en la que “vive” la variable a la que realmente queremos acceder. 
-- Al igual que cualquier otra variable, hay que declarar los punteros para que el compilador pueda ubicarlos en la memoria. 
+- **La memoria contiene** miles y hasta millones de celdas o byte, en las que se ubica el código del programa y todos los datos/variables. Cada celda tiene su número, al que se llama dirección de memoria y que se suele expresar en hexadecimal 16#FA1204 -como ejemplo-
+- **Un puntero es una variable**, que en lugar de contener un valor contiene una dirección de memoria, en la que “vive” la variable a la que realmente queremos acceder. 
+- Al igual que cualquier otra variable, **hay que declarar los punteros** para que el compilador pueda ubicarlos en la memoria. 
 Recordemos que un puntero es una variable, pero que su contenido es una dirección de memoria.
-- Para cada tipo de variable se precisa el correspondiente tipo de puntero. 
+- **Para cada tipo de variable** se precisa el correspondiente **tipo de puntero**. 
 No se puede acceder a una variable INT con un puntero pensado para acceder a una estructura de datos.
-- Nada tiene que ver el acceso indirecto a un array mediante una variable de índice, con un puntero. 
+- Nada tiene que ver el **acceso indirecto** a un array mediante una variable de índice, con un puntero. 
 En este caso el acceso está limitado al propio array, con el puntero se puede acceder a cualquier dirección de memoria.
-- Con punteros se puede acceder a todo tipo de datos, en una simple línea de código se puede copiar una estructura entera de varios Kbytes de datos. Lo que resulta mucho más rápido.
+- **Con punteros se puede acceder a todo tipo de datos**, en una simple línea de código se puede copiar una estructura entera de varios Kbytes de datos. Lo que resulta mucho más rápido.
 - Una referencia se parece mucho a un puntero, para simplificar podríamos decir que es un “alias” de un objeto y que es algo menos crítico que los punteros, su principal utilidad es la de pasar gran cantidad de parámetros a funciones, de forma muy simple y rápida.
-- El pase de parámetros a una función se puede realizar de diversas formas, por valores, por punteros o por referencia, el programador deberá elegir el más adecuado para cada aplicación.
-- Cuando se trata de grandes cantidades de datos el pase de parámetros por referencia o por punteros, serán los adecuados
+- **El pase de parámetros a una función** se puede realizar de diversas formas, por valores, por punteros o por referencia, el programador deberá elegir el más adecuado para cada aplicación.
+- Cuando se trata de **grandes cantidades de datos** el pase de parámetros por referencia o por punteros, serán los adecuados
 
 ***
 ### <span style="color:grey">Links de Puntero y Referencia:</span>
