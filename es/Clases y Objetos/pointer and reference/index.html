@@ -859,6 +859,20 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#codigo-de-la-funcion-fc_averagereferencia-para-pase-por-referencia" class="md-nav__link">
+    Código de la función Fc_AverageReferencia para pase por referencia:
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#codigo-de-ejemplo-de-llamada-a-ambas-funciones" class="md-nav__link">
+    Código de ejemplo de llamada a ambas funciones:
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#resumen-conclusiones" class="md-nav__link">
     .Resumen / Conclusiones:
   </a>
@@ -1507,6 +1521,20 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#codigo-de-la-funcion-fc_averagereferencia-para-pase-por-referencia" class="md-nav__link">
+    Código de la función Fc_AverageReferencia para pase por referencia:
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#codigo-de-ejemplo-de-llamada-a-ambas-funciones" class="md-nav__link">
+    Código de ejemplo de llamada a ambas funciones:
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#resumen-conclusiones" class="md-nav__link">
     .Resumen / Conclusiones:
   </a>
@@ -1958,7 +1986,231 @@ En el caso de tener que pasar grandes cantidades de datos, la solución es el em
 Seguidamente se muestra un ejemplo de una función para calcular el valor promedio de un array de 20 elementos, pasando los valores a la función y 
 pasando los valores mediante una referencia.</p>
 <h3 id="codigo-de-la-funcion-fc_averagevalues-para-pase-de-valores">Código de la función Fc_AverageValues para pase de valores:</h3>
-<p>!!!!!!!!!!! VOY POR AQUI!!!!!!!!!</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span>
+<span class="normal">25</span>
+<span class="normal">26</span>
+<span class="normal">27</span>
+<span class="normal">28</span>
+<span class="normal">29</span>
+<span class="normal">30</span>
+<span class="normal">31</span>
+<span class="normal">32</span>
+<span class="normal">33</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1">// Esta función calcula la media de un buffer de 20 elementos. Solo a modo de ejemplo comparativo</span>
+<span class="c1">// no sería una forma muy adecuada de hacerlo así</span>
+
+<span class="nx">FUNCTION</span><span class="w"> </span><span class="nx">Fc_AverageValues</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="nx">REAL</span>
+<span class="nx">VAR_INPUT</span>
+<span class="w">    </span><span class="nx">i_REALV1</span><span class="w">  </span><span class="o">:</span><span class="w"> </span><span class="nx">REAL</span><span class="p">;</span><span class="w"> </span><span class="c1">//Valor posición 1</span>
+<span class="w">    </span><span class="nx">i_REALV2</span><span class="w">  </span><span class="o">:</span><span class="w"> </span><span class="nx">REAL</span><span class="p">;</span><span class="w"> </span><span class="c1">//Valor posición 2</span>
+<span class="w">    </span><span class="nx">i_REALV3</span><span class="w">  </span><span class="o">:</span><span class="w"> </span><span class="nx">REAL</span><span class="p">;</span><span class="w"> </span><span class="c1">//Valor posición 3</span>
+<span class="w">    </span><span class="nx">i_REALV4</span><span class="w">  </span><span class="o">:</span><span class="w"> </span><span class="nx">REAL</span><span class="p">;</span><span class="w"> </span><span class="c1">//Valor posición 4</span>
+<span class="w">    </span><span class="nx">i_REALV5</span><span class="w">  </span><span class="o">:</span><span class="w"> </span><span class="nx">REAL</span><span class="p">;</span><span class="w"> </span><span class="c1">//Valor posición 5</span>
+<span class="w">    </span><span class="nx">i_REALV6</span><span class="w">  </span><span class="o">:</span><span class="w"> </span><span class="nx">REAL</span><span class="p">;</span><span class="w"> </span><span class="c1">//Valor posición 6</span>
+<span class="w">    </span><span class="nx">i_REALV7</span><span class="w">  </span><span class="o">:</span><span class="w"> </span><span class="nx">REAL</span><span class="p">;</span><span class="w"> </span><span class="c1">//Valor posición 7</span>
+<span class="w">    </span><span class="nx">i_REALV8</span><span class="w">  </span><span class="o">:</span><span class="w"> </span><span class="nx">REAL</span><span class="p">;</span><span class="w"> </span><span class="c1">//Valor posición 8</span>
+<span class="w">    </span><span class="nx">i_REALV9</span><span class="w">  </span><span class="o">:</span><span class="w"> </span><span class="nx">REAL</span><span class="p">;</span><span class="w"> </span><span class="c1">//Valor posición 9</span>
+<span class="w">    </span><span class="nx">i_REALV10</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="nx">REAL</span><span class="p">;</span><span class="w"> </span><span class="c1">//Valor posición 10</span>
+<span class="w">    </span><span class="nx">i_REALV11</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="nx">REAL</span><span class="p">;</span><span class="w"> </span><span class="c1">//Valor posición 11</span>
+<span class="w">    </span><span class="nx">i_REALV12</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="nx">REAL</span><span class="p">;</span><span class="w"> </span><span class="c1">//Valor posición 12</span>
+<span class="w">    </span><span class="nx">i_REALV13</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="nx">REAL</span><span class="p">;</span><span class="w"> </span><span class="c1">//Valor posición 13</span>
+<span class="w">    </span><span class="nx">i_REALV14</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="nx">REAL</span><span class="p">;</span><span class="w"> </span><span class="c1">//Valor posición 14</span>
+<span class="w">    </span><span class="nx">i_REALV15</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="nx">REAL</span><span class="p">;</span><span class="w"> </span><span class="c1">//Valor posición 15</span>
+<span class="w">    </span><span class="nx">i_REALV16</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="nx">REAL</span><span class="p">;</span><span class="w"> </span><span class="c1">//Valor posición 16</span>
+<span class="w">    </span><span class="nx">i_REALV17</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="nx">REAL</span><span class="p">;</span><span class="w"> </span><span class="c1">//Valor posición 17</span>
+<span class="w">    </span><span class="nx">i_REALV18</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="nx">REAL</span><span class="p">;</span><span class="w"> </span><span class="c1">//Valor posición 18</span>
+<span class="w">    </span><span class="nx">i_REALV19</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="nx">REAL</span><span class="p">;</span><span class="w"> </span><span class="c1">//Valor posición 19</span>
+<span class="w">    </span><span class="nx">i_REALV20</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="nx">REAL</span><span class="p">;</span><span class="w"> </span><span class="c1">//Valor posición 20</span>
+<span class="nx">END_VAR</span>
+
+<span class="c1">//Retorna la suma de todos los valores dividida del número de valores que son 20.</span>
+
+<span class="nx">Fc_AverageValues</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="p">(</span><span class="nx">i_REALV1</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">i_REALV2</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">i_REALV3</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">i_REALV4</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">i_REALV5</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">i_REALV6</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">i_REALV7</span><span class="w"> </span><span class="o">+</span><span class="w"> </span>
+<span class="w">                    </span><span class="nx">i_REALV8</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">i_REALV9</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">i_REALV10</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">i_REALV11</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">i_REALV12</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">i_REALV13</span><span class="w"> </span><span class="o">+</span><span class="w"> </span>
+<span class="w">                    </span><span class="nx">i_REALV14</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">i_REALV15</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">i_REALV16</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">i_REALV17</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">i_REALV18</span><span class="w"> </span><span class="o">+</span><span class="w"> </span>
+<span class="w">                    </span><span class="nx">i_REALV19</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">i_REALV20</span><span class="p">)</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mf">20.0</span><span class="w"> </span><span class="p">;</span>
+</code></pre></div></td></tr></table></div>
+<h3 id="codigo-de-la-funcion-fc_averagereferencia-para-pase-por-referencia">Código de la función Fc_AverageReferencia para pase por referencia:</h3>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1">// Esta función calcula la media de un buffer de 20 elementos. Solo a modo de ejemplo comparativo</span>
+<span class="c1">// pasando valores por referencia.</span>
+
+<span class="nx">FUNCTION</span><span class="w"> </span><span class="nx">Fc_AverageReferencia</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="nx">REAL</span>
+
+<span class="nx">VAR_INPUT</span>
+<span class="w"> </span><span class="nx">i_ref</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="nx">REFERENCE</span><span class="w"> </span><span class="nx">TO</span><span class="w"> </span><span class="nx">ARRAY</span><span class="p">[</span><span class="mf">1..20</span><span class="p">]</span><span class="w"> </span><span class="nx">OF</span><span class="w"> </span><span class="nx">REAL</span><span class="p">;</span>
+<span class="nx">END_VAR</span>
+<span class="nx">VAR</span>
+<span class="w"> </span><span class="nx">intIdx</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="nx">INT</span><span class="p">;</span><span class="w">      </span><span class="c1">// Variable indice para el bucle.</span>
+<span class="w"> </span><span class="nx">rVAcum</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="nx">REAL</span><span class="o">:=</span><span class="mf">0</span><span class="p">;</span><span class="w"> </span><span class="c1">// Valor acumulado.</span>
+<span class="nx">END_VAR</span>
+
+<span class="c1">// Retorna la suma de todos los valores divida del número de valores que son 20.</span>
+
+<span class="nx">FOR</span><span class="w"> </span><span class="nx">intIdx</span><span class="o">:=</span><span class="mf">1</span><span class="w"> </span><span class="nx">TO</span><span class="w"> </span><span class="mf">20</span><span class="w"> </span><span class="nx">BY</span><span class="w"> </span><span class="mf">1</span><span class="w"> </span><span class="nx">DO</span>
+<span class="w"> </span><span class="nx">rVAcum</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">rVAcum</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">i_ref</span><span class="p">[</span><span class="nx">intIdx</span><span class="p">];</span>
+<span class="nx">END_FOR</span><span class="p">;</span>
+<span class="nx">Fc_AverageReferencia</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">rVAcum</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mf">20.0</span><span class="p">;</span>
+</code></pre></div></td></tr></table></div>
+<h3 id="codigo-de-ejemplo-de-llamada-a-ambas-funciones">Código de ejemplo de llamada a ambas funciones:</h3>
+<p><div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span>
+<span class="normal">25</span>
+<span class="normal">26</span>
+<span class="normal">27</span>
+<span class="normal">28</span>
+<span class="normal">29</span>
+<span class="normal">30</span>
+<span class="normal">31</span>
+<span class="normal">32</span>
+<span class="normal">33</span>
+<span class="normal">34</span>
+<span class="normal">35</span>
+<span class="normal">36</span>
+<span class="normal">37</span>
+<span class="normal">38</span>
+<span class="normal">39</span>
+<span class="normal">40</span>
+<span class="normal">41</span>
+<span class="normal">42</span>
+<span class="normal">43</span>
+<span class="normal">44</span>
+<span class="normal">45</span>
+<span class="normal">46</span>
+<span class="normal">47</span>
+<span class="normal">48</span>
+<span class="normal">49</span>
+<span class="normal">50</span>
+<span class="normal">51</span>
+<span class="normal">52</span>
+<span class="normal">53</span>
+<span class="normal">54</span>
+<span class="normal">55</span>
+<span class="normal">56</span>
+<span class="normal">57</span>
+<span class="normal">58</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nx">PROGRAM</span><span class="w"> </span><span class="nx">SR_Main_04</span>
+<span class="nx">VAR</span>
+<span class="w"> </span><span class="nx">arFIFO</span><span class="w">  </span><span class="o">:</span><span class="w"> </span><span class="nx">ARRAY</span><span class="p">[</span><span class="mf">1..20</span><span class="p">]</span><span class="w"> </span><span class="nx">OF</span><span class="w"> </span><span class="nx">REAL</span><span class="p">;</span><span class="w"> </span><span class="c1">// FIFO con los valores de fuerza registrados.</span>
+<span class="w"> </span><span class="nx">intIdx</span><span class="w">  </span><span class="o">:</span><span class="w"> </span><span class="nx">INT</span><span class="p">;</span><span class="w">                  </span><span class="c1">// Variable de indice.</span>
+<span class="w"> </span><span class="nx">rIncAng</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="nx">REAL</span><span class="p">;</span><span class="w">                 </span><span class="c1">// Valor de incremento angular para generación de senoide.</span>
+<span class="w"> </span><span class="nx">rValAng</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="nx">REAL</span><span class="p">;</span><span class="w">                 </span><span class="c1">// Valor actual de angulo.</span>
+<span class="w"> </span><span class="nx">rValSin</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="nx">REAL</span><span class="p">;</span><span class="w">                 </span><span class="c1">// Amplitud de la senoide superpuesta.</span>
+<span class="w"> </span><span class="nx">rVMed</span><span class="w">   </span><span class="o">:</span><span class="w"> </span><span class="nx">REAL</span><span class="p">;</span><span class="w">                 </span><span class="c1">// Resultado del cálculo.</span>
+
+<span class="w"> </span><span class="nx">refFIFO</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="nx">REFERENCE</span><span class="w"> </span><span class="nx">TO</span><span class="w"> </span><span class="nx">ARRAY</span><span class="p">[</span><span class="mf">1..20</span><span class="p">]</span><span class="w"> </span><span class="nx">OF</span><span class="w"> </span><span class="nx">REAL</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">arFIFO</span><span class="p">;</span><span class="w"> </span><span class="c1">// Crea una referencia y la asigna a arFIFO</span>
+<span class="w"> </span><span class="nx">rMedref</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="nx">REAL</span><span class="p">;</span><span class="w">           </span><span class="c1">// Resultado del cálculo para el ejemplo de pase de valores por Ref.</span>
+<span class="nx">END_VAR</span>
+
+<span class="c1">// Ejemplo de como realizar el cálculo del valor medio de las lecturas de fuerza contenidas en arFIFO</span>
+<span class="c1">// mediante la función Fc_AverageValues (Pase de parámetros por valores) y Fc_AverageReferencia (Pase de</span>
+<span class="c1">// parámetros por referencia)</span>
+<span class="c1">// Lo que se pretende es ver las ventajas del pase por referencia</span>
+
+<span class="c1">// Asignación de valores para llenar el FIFO a efectos de tener algunos valores para el cálculo de la media</span>
+<span class="c1">// al valor 124 le superpone una variación senoidal de amplitud 6</span>
+
+<span class="nx">rIncAng</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="p">(</span><span class="mf">2</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mf">3.14159</span><span class="p">)</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mf">20.0</span><span class="w"> </span><span class="c1">// 2 * PI Radianes dividido entre 20 puntos.</span>
+<span class="nx">rValAng</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="mf">0</span><span class="p">;</span><span class="w">                   </span><span class="c1">// Valor inicial del angulo.</span>
+
+<span class="nx">FOR</span><span class="w"> </span><span class="nx">intIdx</span><span class="w"> </span><span class="o">:=</span><span class="mf">1</span><span class="w"> </span><span class="nx">TO</span><span class="w"> </span><span class="mf">20</span><span class="w"> </span><span class="nx">BY</span><span class="w"> </span><span class="mf">1</span><span class="w"> </span><span class="nx">DO</span>
+<span class="w"> </span><span class="nx">rValSin</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">SIN</span><span class="p">(</span><span class="nx">rValAng</span><span class="p">)</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mf">6</span><span class="p">;</span><span class="w">         </span><span class="c1">// Valor del seno para una amplitud de 6</span>
+<span class="w"> </span><span class="nx">arFIFO</span><span class="p">[</span><span class="nx">intIdx</span><span class="p">]</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="mf">124.0</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">rValSin</span><span class="p">;</span><span class="w">  </span><span class="c1">// A un nivel de 124.0 se superpone un seno de amplitud 6.</span>
+<span class="w"> </span><span class="nx">rValAng</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">rValAng</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">rIncAng</span><span class="p">;</span><span class="w">       </span><span class="c1">// Próximo valor angular. </span>
+<span class="nx">END_FOR</span><span class="p">;</span>
+
+<span class="c1">// Con el FIFO de valores llamaremos a la función para el cálculo de la media pasando valores.</span>
+<span class="c1">// Lo que no sería para nada adecuado por tratarse de muchos parámetros.</span>
+
+<span class="nx">rVMed</span><span class="o">:=</span><span class="w"> </span><span class="nx">Fc_AverageValues</span><span class="p">(</span><span class="w"> </span><span class="nx">i_REALV1</span><span class="w">  </span><span class="o">:</span><span class="w"> </span><span class="nx">arFIFO</span><span class="p">[</span><span class="mf">1</span><span class="p">],</span>
+<span class="w">                          </span><span class="nx">i_REALV2</span><span class="w">  </span><span class="o">:</span><span class="w"> </span><span class="nx">arFIFO</span><span class="p">[</span><span class="mf">2</span><span class="p">],</span>
+<span class="w">                          </span><span class="nx">i_REALV3</span><span class="w">  </span><span class="o">:</span><span class="w"> </span><span class="nx">arFIFO</span><span class="p">[</span><span class="mf">3</span><span class="p">],</span>
+<span class="w">                          </span><span class="nx">i_REALV4</span><span class="w">  </span><span class="o">:</span><span class="w"> </span><span class="nx">arFIFO</span><span class="p">[</span><span class="mf">4</span><span class="p">],</span><span class="w"> </span>
+<span class="w">                          </span><span class="nx">i_REALV5</span><span class="w">  </span><span class="o">:</span><span class="w"> </span><span class="nx">arFIFO</span><span class="p">[</span><span class="mf">5</span><span class="p">],</span>
+<span class="w">                          </span><span class="nx">i_REALV6</span><span class="w">  </span><span class="o">:</span><span class="w"> </span><span class="nx">arFIFO</span><span class="p">[</span><span class="mf">6</span><span class="p">],</span><span class="w"> </span>
+<span class="w">                          </span><span class="nx">i_REALV7</span><span class="w">  </span><span class="o">:</span><span class="w"> </span><span class="nx">arFIFO</span><span class="p">[</span><span class="mf">7</span><span class="p">],</span>
+<span class="w">                          </span><span class="nx">i_REALV8</span><span class="w">  </span><span class="o">:</span><span class="w"> </span><span class="nx">arFIFO</span><span class="p">[</span><span class="mf">8</span><span class="p">],</span>
+<span class="w">                          </span><span class="nx">i_REALV9</span><span class="w">  </span><span class="o">:</span><span class="w"> </span><span class="nx">arFIFO</span><span class="p">[</span><span class="mf">9</span><span class="p">],</span>
+<span class="w">                          </span><span class="nx">i_REALV10</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="nx">arFIFO</span><span class="p">[</span><span class="mf">10</span><span class="p">],</span>
+<span class="w">                          </span><span class="nx">i_REALV11</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="nx">arFIFO</span><span class="p">[</span><span class="mf">11</span><span class="p">],</span>
+<span class="w">                          </span><span class="nx">i_REALV12</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="nx">arFIFO</span><span class="p">[</span><span class="mf">12</span><span class="p">],</span>
+<span class="w">                          </span><span class="nx">i_REALV13</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="nx">arFIFO</span><span class="p">[</span><span class="mf">13</span><span class="p">],</span>
+<span class="w">                          </span><span class="nx">i_REALV14</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="nx">arFIFO</span><span class="p">[</span><span class="mf">14</span><span class="p">],</span>
+<span class="w">                          </span><span class="nx">i_REALV15</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="nx">arFIFO</span><span class="p">[</span><span class="mf">15</span><span class="p">],</span>
+<span class="w">                          </span><span class="nx">i_REALV16</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="nx">arFIFO</span><span class="p">[</span><span class="mf">16</span><span class="p">],</span>
+<span class="w">                          </span><span class="nx">i_REALV17</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="nx">arFIFO</span><span class="p">[</span><span class="mf">17</span><span class="p">],</span>
+<span class="w">                          </span><span class="nx">i_REALV18</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="nx">arFIFO</span><span class="p">[</span><span class="mf">18</span><span class="p">],</span>
+<span class="w">                          </span><span class="nx">i_REALV19</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="nx">arFIFO</span><span class="p">[</span><span class="mf">19</span><span class="p">],</span>
+<span class="w">                          </span><span class="nx">i_REALV20</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="nx">arFIFO</span><span class="p">[</span><span class="mf">20</span><span class="p">]);</span>
+
+<span class="c1">// Con el FIFO lleno de valores llamaremos a la función para el cálculo de la media pasando valores por referencia</span>
+<span class="c1">// para ver lo sencillo que resulta en este caso.</span>
+
+<span class="nx">rMedRef</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">FcAverageReferencia</span><span class="p">(</span><span class="nx">i_Ref</span><span class="o">:=</span><span class="nx">refFIFO</span><span class="p">);</span>
+</code></pre></div></td></tr></table></div>
+Claramente la llamada a la función pasando los valores por referencia es la mejor.
+Y en este ejemplo se ha supuesto un ejemplo con solo 20 datos de entrada,
+pero lo normal es encontrar aplicaciones con estructuras de datos de varios Kbytes.</p>
 <hr />
 <ul>
 <li>Un puntero de tipo T apunta a un objeto de tipo T (T = tipo de datos básico o definido por el usuario)</li>
@@ -1977,18 +2229,18 @@ pasando los valores mediante una referencia.</p>
 <p>El mejor uso de punteros y referencias es cuando desea pasar o devolver un objeto de algún tipo a una función o bloque de funciones por "referencia" porque el objeto es demasiado grande o desea manipular el objeto pasado dentro de la función/bloque de función. Asegúrese de que el lector de su código sepa que va a cambiar el valor del objeto dentro de la función/bloque de funciones si esto es lo que pretende hacer cuando lo pasa como argumento.</p>
 <h3 id="resumen-conclusiones"><span style="color:grey">.Resumen / Conclusiones:</span></h3>
 <ul>
-<li>La memoria contiene miles y hasta millones de celdas o byte, en las que se ubica el código del programa y todos los datos/variables. Cada celda tiene su número, al que se llama dirección de memoria y que se suele expresar en hexadecimal 16#FA1204 -como ejemplo-</li>
-<li>Un puntero es una variable, que en lugar de contener un valor contiene una dirección de memoria, en la que “vive” la variable a la que realmente queremos acceder. </li>
-<li>Al igual que cualquier otra variable, hay que declarar los punteros para que el compilador pueda ubicarlos en la memoria. 
+<li><strong>La memoria contiene</strong> miles y hasta millones de celdas o byte, en las que se ubica el código del programa y todos los datos/variables. Cada celda tiene su número, al que se llama dirección de memoria y que se suele expresar en hexadecimal 16#FA1204 -como ejemplo-</li>
+<li><strong>Un puntero es una variable</strong>, que en lugar de contener un valor contiene una dirección de memoria, en la que “vive” la variable a la que realmente queremos acceder. </li>
+<li>Al igual que cualquier otra variable, <strong>hay que declarar los punteros</strong> para que el compilador pueda ubicarlos en la memoria. 
 Recordemos que un puntero es una variable, pero que su contenido es una dirección de memoria.</li>
-<li>Para cada tipo de variable se precisa el correspondiente tipo de puntero. 
+<li><strong>Para cada tipo de variable</strong> se precisa el correspondiente <strong>tipo de puntero</strong>. 
 No se puede acceder a una variable INT con un puntero pensado para acceder a una estructura de datos.</li>
-<li>Nada tiene que ver el acceso indirecto a un array mediante una variable de índice, con un puntero. 
+<li>Nada tiene que ver el <strong>acceso indirecto</strong> a un array mediante una variable de índice, con un puntero. 
 En este caso el acceso está limitado al propio array, con el puntero se puede acceder a cualquier dirección de memoria.</li>
-<li>Con punteros se puede acceder a todo tipo de datos, en una simple línea de código se puede copiar una estructura entera de varios Kbytes de datos. Lo que resulta mucho más rápido.</li>
+<li><strong>Con punteros se puede acceder a todo tipo de datos</strong>, en una simple línea de código se puede copiar una estructura entera de varios Kbytes de datos. Lo que resulta mucho más rápido.</li>
 <li>Una referencia se parece mucho a un puntero, para simplificar podríamos decir que es un “alias” de un objeto y que es algo menos crítico que los punteros, su principal utilidad es la de pasar gran cantidad de parámetros a funciones, de forma muy simple y rápida.</li>
-<li>El pase de parámetros a una función se puede realizar de diversas formas, por valores, por punteros o por referencia, el programador deberá elegir el más adecuado para cada aplicación.</li>
-<li>Cuando se trata de grandes cantidades de datos el pase de parámetros por referencia o por punteros, serán los adecuados</li>
+<li><strong>El pase de parámetros a una función</strong> se puede realizar de diversas formas, por valores, por punteros o por referencia, el programador deberá elegir el más adecuado para cada aplicación.</li>
+<li>Cuando se trata de <strong>grandes cantidades de datos</strong> el pase de parámetros por referencia o por punteros, serán los adecuados</li>
 </ul>
 <hr />
 <h3 id="links-de-puntero-y-referencia"><span style="color:grey">Links de Puntero y Referencia:</span></h3>
