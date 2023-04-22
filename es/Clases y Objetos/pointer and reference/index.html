@@ -21,7 +21,7 @@
         <link rel="next" href="../FB%20abstracto%20frente%20a%20interfaz/">
       
       <link rel="icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.1.6">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.1.7">
     
     
       
@@ -106,7 +106,7 @@
     
     
     
-    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="" data-md-color-accent="">
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
   
     
     
@@ -166,7 +166,9 @@
       <form class="md-header__option" data-md-component="palette">
         
           
-          <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="" data-md-color-accent=""  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+          
+          
+          <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
           
             <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
@@ -174,7 +176,9 @@
           
         
           
-          <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="" data-md-color-accent=""  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
+          
+          
+          <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
           
             <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12c0-2.42-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
@@ -1608,9 +1612,9 @@ En el código se muestra el script necesario para la declaración de varios tipo
 <span class="w">    </span><span class="nx">pin01</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="nx">POINTER</span><span class="w"> </span><span class="nx">TO</span><span class="w"> </span><span class="nx">INT</span><span class="p">;</span><span class="w"> </span><span class="c1">//Declara un puntero para acceder a variables del tipo INT.</span>
 <span class="w">    </span><span class="nx">ps20</span><span class="w">  </span><span class="o">:</span><span class="w"> </span><span class="nx">POINTER</span><span class="w"> </span><span class="nx">TO</span><span class="w"> </span><span class="nx">STRING</span><span class="p">[</span><span class="mf">20</span><span class="p">];</span><span class="w"> </span><span class="c1">//Declara un puntero para acceder a variables del tipo STRING de 20 caracteres.</span>
 <span class="w">    </span><span class="nx">pa20</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="nx">POINTER</span><span class="w"> </span><span class="nx">TO</span><span class="w"> </span><span class="nx">ARRAY</span><span class="w"> </span><span class="p">[</span><span class="mf">1..20</span><span class="p">]</span><span class="w"> </span><span class="nx">OF</span><span class="w"> </span><span class="nx">INT</span><span class="p">;</span><span class="w"> </span><span class="c1">//Declara un puntero para acceder a variables del tipo ARRAY de 20 elementos del tipo INT.</span>
-<span class="w">    </span><span class="nx">pDword</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="nx">POINTER</span><span class="w"> </span><span class="nx">TO</span><span class="w"> </span><span class="nx">DWORD</span><span class="p">;</span><span class="w"> </span><span class="c1">//Declar un puntero para acceder a variables del tipo DWORD.</span>
-<span class="w">    </span><span class="nx">past1</span><span class="w">  </span><span class="o">:</span><span class="w"> </span><span class="nx">POINTER</span><span class="w"> </span><span class="nx">TO</span><span class="w"> </span><span class="nx">stTipo1</span><span class="p">;</span><span class="w"> </span><span class="c1">//Declar un puntero para acceder a variables del tipo stTipo1.</span>
-<span class="w">    </span><span class="nx">pReal</span><span class="w">  </span><span class="o">:</span><span class="w"> </span><span class="nx">POINTER</span><span class="w"> </span><span class="nx">TO</span><span class="w"> </span><span class="nx">REAL</span><span class="p">;</span><span class="w"> </span><span class="c1">//Declar un puntero para acceder a variables del tipo REAL.</span>
+<span class="w">    </span><span class="nx">pDword</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="nx">POINTER</span><span class="w"> </span><span class="nx">TO</span><span class="w"> </span><span class="nx">DWORD</span><span class="p">;</span><span class="w"> </span><span class="c1">//Declara un puntero para acceder a variables del tipo DWORD.</span>
+<span class="w">    </span><span class="nx">past1</span><span class="w">  </span><span class="o">:</span><span class="w"> </span><span class="nx">POINTER</span><span class="w"> </span><span class="nx">TO</span><span class="w"> </span><span class="nx">stTipo1</span><span class="p">;</span><span class="w"> </span><span class="c1">//Declara un puntero para acceder a variables del tipo stTipo1.</span>
+<span class="w">    </span><span class="nx">pReal</span><span class="w">  </span><span class="o">:</span><span class="w"> </span><span class="nx">POINTER</span><span class="w"> </span><span class="nx">TO</span><span class="w"> </span><span class="nx">REAL</span><span class="p">;</span><span class="w"> </span><span class="c1">//Declara un puntero para acceder a variables del tipo REAL.</span>
 <span class="nx">END_VAR</span>
 </code></pre></div></td></tr></table></div>
 <h3 id="como-saber-que-direccion-asignar-al-puntero"><span style="color:grey">. Como saber qué dirección asignar al puntero:</span></h3>
@@ -1837,19 +1841,21 @@ Las referencias se inicializan al principio del programa y no pueden cambiar dur
 A un puntero se le puede cambiar su dirección tanto como sea necesario durante la ejecución del programa.
 Otra forma de entender las referencias es como si fuesen otra manera de referirse a un mismo objeto/variable, como si fuese un alias.
 Frente a los punteros, las referencias presentan las siguientes ventajas:
-1) Facilidad de uso.
-2) Sintaxis más sencilla a la hora de pasar parámetros a funciones.
-3) Minimiza errores en la escritura del código.
-El resumen de todo esto, que se puede prestar a mucha confusión, es que, como 
-se verá más adelante, el gran valor de las referencias es a la hora de pasar grandes 
+- 1) Facilidad de uso.
+- 2) Sintaxis más sencilla a la hora de pasar parámetros a funciones.
+- 3) Minimiza errores en la escritura del código.</p>
+<p>El resumen de todo esto, que se puede prestar a mucha confusión, es que, como se verá más adelante, el gran valor de las referencias es a la hora de pasar grandes 
 cantidades de datos como parámetros de entrada a funciones.</p>
 <h3 id="diversas-formas-de-pase-de-parametros-a-funciones"><span style="color:grey">. Diversas formas de pase de parámetros a funciones:</span></h3>
 <p>Normalmente una función realiza unas operaciones con unos parámetros de entrada y retorna un valor - o varios - como resultado. 
-En el ejemplo que veremos seguidamente se trata de una función para calcular el área de un rectángulo, a la que le pasaremos los valores del lado A y el lado B para que nos retorne el resultado del área. Lo primero definiremos un tipo de dato [stRectángulo] que contendrá el lado A, el B y el área. Crearemos tres rectángulos, [stRectangulo01], [stRectangulo02] y [stRectangulo03]. Junto con tres variantes de la función para el cálculo del área, 
-[Fc_AreaCalcVal] - pase por valores -, 
-[Fc_AreaCalcPoint] - pase por puntero - 
-[Fc_AreaCalcRef] - pase por referencia –
-A continuación, el código de las tres funciones:</p>
+En el ejemplo que veremos seguidamente se trata de una función para calcular el área de un rectángulo, a la que le pasaremos los valores del lado A y el lado B para que nos retorne el resultado del área. </p>
+<p>Lo primero definiremos un tipo de dato [stRectángulo] que contendrá el lado A, el B y el área. </p>
+<p>Crearemos tres rectángulos, [stRectangulo01], [stRectangulo02] y [stRectangulo03]. </p>
+<p>Junto con tres variantes de la función para el cálculo del área: 
+- [Fc_AreaCalcVal] - pase por valores - 
+- [Fc_AreaCalcPoint] - pase por puntero - 
+- [Fc_AreaCalcRef] - pase por referencia –</p>
+<p>A continuación, el código de las tres funciones:</p>
 <h3 id="pase-de-valores">Pase de valores:</h3>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
@@ -1982,7 +1988,7 @@ A continuación, el código de las tres funciones:</p>
 <span class="c1">// Cálculo del área del rectángulo pasando una referencia a la función</span>
 <span class="nx">Fc_AreaCalcRef</span><span class="p">(</span><span class="nx">refRectangulo</span><span class="p">);</span>
 </code></pre></div></td></tr></table></div>
-En este caso puede las diferencias pueden parecer insignificantes, puesto que la cantidad de datos que se le pasan a la función son pocos. Pero seguidamente veremos un ejemplo con mayor número de parámetros de entrada para poder apreciar las ventajas del pase de parámetros por, especialmente, referencia y también por puntero.</p>
+En este caso puede que las diferencias pueden parecer insignificantes, puesto que la cantidad de datos que se le pasan a la función son pocos. Pero seguidamente veremos un ejemplo con mayor número de parámetros de entrada para poder apreciar las ventajas del pase de parámetros por, especialmente, referencia y también por puntero.</p>
 <h3 id="caso-de-pase-de-grandes-cantidades-de-datos-a-funciones"><span style="color:grey">.Caso de pase de grandes cantidades de datos a funciones:</span></h3>
 <p>Cuando se precisa pasar estructuras con gran cantidad de datos a funciones ó a FB´s, el pase de parámetros por valores no es el método más adecuado puesto que se requieren gran cantidad de parámetros de entrada, cada parámetro implica crear una nueva variable local de la función, o del FB, lo que supone gasto de memoria y tiempo de ejecución en copiar los datos. Caso de estructuras de datos de varios Kbytes, o arrays de centenares o miles de elementos, este método es impensable. 
 En el caso de tener que pasar grandes cantidades de datos, la solución es el empleo de punteros, o mejor aún, el pase de datos por referencia. 
