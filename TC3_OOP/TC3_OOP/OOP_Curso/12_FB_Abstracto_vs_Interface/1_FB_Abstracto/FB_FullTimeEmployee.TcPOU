@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.12">
+  <POU Name="FB_FullTimeEmployee" Id="{a3fcde26-925a-40bc-9c5d-c909b2dc2c4f}" SpecialFunc="None">
+    <Declaration><![CDATA[{attribute 'hide_all_locals'}
+FUNCTION_BLOCK PUBLIC FB_FullTimeEmployee EXTENDS FB_Employee
+VAR_INPUT
+END_VAR
+VAR_OUTPUT
+END_VAR
+VAR
+	nAnnualSalaryBacking	:	UINT;
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[]]></ST>
+    </Implementation>
+    <Method Name="GetMonthlySalary" Id="{19b65e9d-1ce3-41b1-864d-5a175dc14c55}">
+      <Declaration><![CDATA[METHOD PUBLIC GetMonthlySalary : LREAL
+VAR_INPUT
+END_VAR
+]]></Declaration>
+      <Implementation>
+        <ST><![CDATA[GetMonthlySalary := nAnnualSalary / 12;]]></ST>
+      </Implementation>
+    </Method>
+    <Property Name="nAnnualSalary" Id="{ecc488aa-1029-4a23-bad9-42ea4e1652f0}">
+      <Declaration><![CDATA[{attribute 'monitoring' := 'variable'}
+PROPERTY PUBLIC nAnnualSalary : UINT]]></Declaration>
+      <Get Name="Get" Id="{f7edb5cb-5589-45d3-ae3a-a93f8aec8744}">
+        <Declaration><![CDATA[VAR
+END_VAR
+]]></Declaration>
+        <Implementation>
+          <ST><![CDATA[nAnnualSalary := nAnnualSalaryBacking;]]></ST>
+        </Implementation>
+      </Get>
+      <Set Name="Set" Id="{8cae3932-cb3a-4432-9437-9675c2091110}">
+        <Declaration><![CDATA[VAR
+END_VAR
+]]></Declaration>
+        <Implementation>
+          <ST><![CDATA[nAnnualSalaryBacking := nAnnualSalary;]]></ST>
+        </Implementation>
+      </Set>
+    </Property>
+  </POU>
+</TcPlcObject>

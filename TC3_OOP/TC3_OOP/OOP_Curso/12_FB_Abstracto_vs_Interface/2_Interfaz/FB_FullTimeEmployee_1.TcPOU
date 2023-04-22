@@ -1,0 +1,120 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.12">
+  <POU Name="FB_FullTimeEmployee_1" Id="{dfec49e1-e402-4f56-aacf-daa5f15adaee}" SpecialFunc="None">
+    <Declaration><![CDATA[{attribute 'hide_all_locals'}
+FUNCTION_BLOCK PUBLIC FB_FullTimeEmployee_1 IMPLEMENTS I_Employee
+VAR_INPUT
+END_VAR
+VAR_OUTPUT
+END_VAR
+VAR
+	nPersonnelNumberBacking :	UINT;
+	sFirstNameBacking		:	STRING;
+	sLastNameBacking		:	STRING;	
+
+	nAnnualSalaryBacking	:	UINT;
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[]]></ST>
+    </Implementation>
+    <Method Name="GetFullName" Id="{1f4fc63b-1fa3-4484-87f5-a5d21322a9fd}">
+      <Declaration><![CDATA[METHOD GetFullName : STRING
+VAR_INPUT
+END_VAR
+]]></Declaration>
+      <Implementation>
+        <ST><![CDATA[GetFullName := CONCAT(CONCAT(CONCAT(CONCAT(TO_STRING(nPersonnelNumber), ': '), sFirstName), ' '), sLastName);]]></ST>
+      </Implementation>
+    </Method>
+    <Method Name="GetMonthlySalary" Id="{13b3d658-eda0-4112-84fa-22ff17368360}">
+      <Declaration><![CDATA[METHOD PUBLIC GetMonthlySalary : LREAL
+VAR_INPUT
+END_VAR
+]]></Declaration>
+      <Implementation>
+        <ST><![CDATA[GetMonthlySalary := nAnnualSalary / 12;]]></ST>
+      </Implementation>
+    </Method>
+    <Property Name="nAnnualSalary" Id="{3af18f0e-7d9a-4c23-8283-f3e6ed5a9aa9}">
+      <Declaration><![CDATA[{attribute 'monitoring' := 'variable'}
+PROPERTY PUBLIC nAnnualSalary : UINT]]></Declaration>
+      <Get Name="Get" Id="{a7dadd95-79a2-4986-84aa-c6df21296c13}">
+        <Declaration><![CDATA[VAR
+END_VAR
+]]></Declaration>
+        <Implementation>
+          <ST><![CDATA[nAnnualSalary := nAnnualSalaryBacking;]]></ST>
+        </Implementation>
+      </Get>
+      <Set Name="Set" Id="{f0f4c3b1-a73f-44e8-8348-fed696c13ad4}">
+        <Declaration><![CDATA[VAR
+END_VAR
+]]></Declaration>
+        <Implementation>
+          <ST><![CDATA[nAnnualSalaryBacking := nAnnualSalary;]]></ST>
+        </Implementation>
+      </Set>
+    </Property>
+    <Property Name="nPersonnelNumber" Id="{74ba115b-80a7-4e0a-a70a-3b03d5267acd}">
+      <Declaration><![CDATA[{attribute 'monitoring' := 'variable'}
+PROPERTY nPersonnelNumber : UINT]]></Declaration>
+      <Get Name="Get" Id="{4052ad52-b85c-4f93-8a1f-ace242d16e0a}">
+        <Declaration><![CDATA[VAR
+END_VAR
+]]></Declaration>
+        <Implementation>
+          <ST><![CDATA[nPersonnelNumber := nPersonnelNumberBacking;]]></ST>
+        </Implementation>
+      </Get>
+      <Set Name="Set" Id="{6cb9e4f9-177f-419f-ac26-d270c0a57ca0}">
+        <Declaration><![CDATA[VAR
+END_VAR
+]]></Declaration>
+        <Implementation>
+          <ST><![CDATA[nPersonnelNumberBacking := nPersonnelNumber;]]></ST>
+        </Implementation>
+      </Set>
+    </Property>
+    <Property Name="sFirstName" Id="{79cc0d18-31f6-45b4-a90c-2388ddcf14e2}">
+      <Declaration><![CDATA[{attribute 'monitoring' := 'variable'}
+PROPERTY sFirstName : STRING]]></Declaration>
+      <Get Name="Get" Id="{2132b76d-6c9c-44ee-8958-7ec7d57ddf5d}">
+        <Declaration><![CDATA[VAR
+END_VAR
+]]></Declaration>
+        <Implementation>
+          <ST><![CDATA[sFirstName := sFirstNameBacking;]]></ST>
+        </Implementation>
+      </Get>
+      <Set Name="Set" Id="{1d40b48b-9bc7-4ec8-9a3a-6c54b03a601a}">
+        <Declaration><![CDATA[VAR
+END_VAR
+]]></Declaration>
+        <Implementation>
+          <ST><![CDATA[sFirstNameBacking := sFirstName;]]></ST>
+        </Implementation>
+      </Set>
+    </Property>
+    <Property Name="sLastName" Id="{64bfffa5-c866-4bd1-a01d-e3022db80328}">
+      <Declaration><![CDATA[{attribute 'monitoring' := 'variable'}
+PROPERTY sLastName : STRING]]></Declaration>
+      <Get Name="Get" Id="{29f446ab-b8a7-448a-8d66-439ccbf4c4de}">
+        <Declaration><![CDATA[VAR
+END_VAR
+]]></Declaration>
+        <Implementation>
+          <ST><![CDATA[sLastName := sLastNameBacking;]]></ST>
+        </Implementation>
+      </Get>
+      <Set Name="Set" Id="{f23147df-1a67-4f9b-8cae-4ed27b0d61da}">
+        <Declaration><![CDATA[VAR
+END_VAR
+]]></Declaration>
+        <Implementation>
+          <ST><![CDATA[sLastNameBacking := sLastName;]]></ST>
+        </Implementation>
+      </Set>
+    </Property>
+  </POU>
+</TcPlcObject>

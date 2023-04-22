@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.12">
+  <POU Name="POU_Main_Combinacion" Id="{6a72df8c-ca8f-4792-b7d5-7473aecf839b}" SpecialFunc="None">
+    <Declaration><![CDATA[PROGRAM POU_Main_Combinacion
+VAR
+	fbFullTimeEmployee	:	FB_FullTimeEmployee_2;
+	fbContractEmployee	:	FB_ContractEmployee_2;
+	refEmployee			:	REFERENCE TO FB_Employee_1;
+	ipEmployee			:	I_Employee_1;	
+	aFullName			:	ARRAY[1..2] OF STRING;
+	aMonthlySalary		:	ARRAY[1..2] OF LREAL;
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[fbFullTimeEmployee.nPersonnelNumber := 1;
+fbFullTimeEmployee.sFirstName := 'John';
+fbFullTimeEmployee.sLastName := 'Taylor';
+fbFullTimeEmployee.nAnnualSalary := 60000;
+// access via concrete FB
+aFullName[1] := fbFullTimeEmployee.GetFullName();
+aMonthlySalary[1] := fbFullTimeEmployee.GetMonthlySalary();
+// access via abstract FB
+refEmployee REF= fbFullTimeEmployee;
+aFullName[1] := refEmployee.GetFullName();
+aMonthlySalary[1] := refEmployee.GetMonthlySalary();
+// access via interface
+ipEmployee := fbFullTimeEmployee;
+aFullName[1] := ipEmployee.GetFullName();
+aMonthlySalary[1] := ipEmployee.GetMonthlySalary();
+
+fbContractEmployee.nPersonnelNumber := 2;
+fbContractEmployee.sFirstName := 'Tim';
+fbContractEmployee.sLastName := 'Brown';
+fbContractEmployee.nMonthlyHours := 160;
+fbContractEmployee.nHourlyPay := 35;
+// access via concrete FB
+aFullName[2] := fbContractEmployee.GetFullName();
+aMonthlySalary[2] := fbContractEmployee.GetMonthlySalary();
+// access via abstract FB
+refEmployee REF= fbContractEmployee;
+aFullName[2] := refEmployee.GetFullName();
+aMonthlySalary[2] := refEmployee.GetMonthlySalary();
+// access via interface
+ipEmployee := fbContractEmployee;
+aFullName[2] := ipEmployee.GetFullName();
+aMonthlySalary[2] := ipEmployee.GetMonthlySalary();]]></ST>
+    </Implementation>
+  </POU>
+</TcPlcObject>

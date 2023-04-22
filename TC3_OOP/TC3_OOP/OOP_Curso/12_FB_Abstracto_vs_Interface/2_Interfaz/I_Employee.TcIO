@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.12">
+  <Itf Name="I_Employee" Id="{df779f5a-d8bd-4c91-a6c6-f3059acfbbf2}">
+    <Declaration><![CDATA[INTERFACE I_Employee 
+]]></Declaration>
+    <Method Name="GetFullName" Id="{4d40cb76-aa03-40a7-97ca-b63d4695527d}">
+      <Declaration><![CDATA[METHOD GetFullName : STRING
+VAR_INPUT
+END_VAR
+]]></Declaration>
+    </Method>
+    <Method Name="GetMonthlySalary" Id="{29b41e8a-02ff-4cf4-bdff-bd13dee4a19a}">
+      <Declaration><![CDATA[METHOD GetMonthlySalary : LREAL
+VAR_INPUT
+END_VAR
+]]></Declaration>
+    </Method>
+    <Property Name="nPersonnelNumber" Id="{fd688ad8-9a7a-4666-a6b1-95f5cf5c3db9}">
+      <Declaration><![CDATA[PROPERTY nPersonnelNumber : UINT]]></Declaration>
+      <Get Name="Get" Id="{3a80cd25-ba9b-4a20-bf55-a9a19884398c}">
+        <Declaration><![CDATA[]]></Declaration>
+      </Get>
+      <Set Name="Set" Id="{36772610-1731-4d0c-863a-e0f202eb4878}">
+        <Declaration><![CDATA[]]></Declaration>
+      </Set>
+    </Property>
+    <Property Name="sFirstName" Id="{c49f2840-d07d-45f2-9e62-4a95c0f223dd}">
+      <Declaration><![CDATA[PROPERTY sFirstName : STRING]]></Declaration>
+      <Get Name="Get" Id="{6763e9cc-3409-4ab4-a1d7-051b19da01d4}">
+        <Declaration><![CDATA[]]></Declaration>
+      </Get>
+      <Set Name="Set" Id="{cb896d94-52f7-42cf-8556-d3d0fc453955}">
+        <Declaration><![CDATA[]]></Declaration>
+      </Set>
+    </Property>
+    <Property Name="sLastName" Id="{b6ff284d-bc9d-4c34-b7d3-c25b9e603786}">
+      <Declaration><![CDATA[PROPERTY sLastName : STRING]]></Declaration>
+      <Get Name="Get" Id="{7b1d9b32-3e7d-4d63-97ab-3be4dd0ee169}">
+        <Declaration><![CDATA[]]></Declaration>
+      </Get>
+      <Set Name="Set" Id="{42df88ea-daac-4532-9e8e-2533592ae037}">
+        <Declaration><![CDATA[]]></Declaration>
+      </Set>
+    </Property>
+  </Itf>
+</TcPlcObject>

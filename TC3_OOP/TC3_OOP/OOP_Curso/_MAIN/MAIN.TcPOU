@@ -34,7 +34,12 @@ _09_THIS_SUPER();
 _10_Interface();
 
 // Video de Youtube 11;
-_11_Puntero_y_Referencia();]]></ST>
+_11_Puntero_y_Referencia();
+
+// Video de Youtube 12;
+POU_Main_FB_Abstract();
+POU_Main_Interfaz();
+POU_Main_Combinacion();]]></ST>
     </Implementation>
   </POU>
 </TcPlcObject>

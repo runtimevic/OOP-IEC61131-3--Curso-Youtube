@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.12">
+  <POU Name="FB_ContractEmployee" Id="{157c2f82-61ed-4d42-a2ee-c21047f94b9c}" SpecialFunc="None">
+    <Declaration><![CDATA[{attribute 'hide_all_locals'}
+FUNCTION_BLOCK PUBLIC FB_ContractEmployee EXTENDS FB_Employee
+VAR_INPUT
+END_VAR
+VAR_OUTPUT
+END_VAR
+VAR
+	nHourlyPayBacking		:	UINT;
+	nMonthlyHoursBacking	:	UINT;
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[]]></ST>
+    </Implementation>
+    <Method Name="GetMonthlySalary" Id="{c12eb332-fc82-426a-92c7-ec1217ac0d92}">
+      <Declaration><![CDATA[METHOD PUBLIC GetMonthlySalary : LREAL
+VAR_INPUT
+END_VAR
+]]></Declaration>
+      <Implementation>
+        <ST><![CDATA[GetMonthlySalary := nMonthlyHours * nHourlyPay;]]></ST>
+      </Implementation>
+    </Method>
+    <Property Name="nHourlyPay" Id="{294cabb8-8983-44d0-9f47-aa45aceec345}">
+      <Declaration><![CDATA[{attribute 'monitoring' := 'variable'}
+PROPERTY PUBLIC nHourlyPay : UINT]]></Declaration>
+      <Get Name="Get" Id="{0f5195bb-fb1e-4889-b33d-73e29653fedc}">
+        <Declaration><![CDATA[VAR
+END_VAR
+]]></Declaration>
+        <Implementation>
+          <ST><![CDATA[nHourlyPay := nHourlyPayBacking;]]></ST>
+        </Implementation>
+      </Get>
+      <Set Name="Set" Id="{9e5f73d0-7718-40b5-919d-924af5753c5c}">
+        <Declaration><![CDATA[VAR
+END_VAR
+]]></Declaration>
+        <Implementation>
+          <ST><![CDATA[nHourlyPayBacking := nHourlyPay;]]></ST>
+        </Implementation>
+      </Set>
+    </Property>
+    <Property Name="nMonthlyHours" Id="{606408a0-2842-4236-803f-0fb36ca0db85}">
+      <Declaration><![CDATA[{attribute 'monitoring' := 'variable'}
+PROPERTY PUBLIC nMonthlyHours : UINT]]></Declaration>
+      <Get Name="Get" Id="{c27e7be6-8d4e-4fa8-a965-66abeb86884c}">
+        <Declaration><![CDATA[VAR
+END_VAR
+]]></Declaration>
+        <Implementation>
+          <ST><![CDATA[nMonthlyHours := nMonthlyHoursBacking;]]></ST>
+        </Implementation>
+      </Get>
+      <Set Name="Set" Id="{269e8aea-5d44-4402-95a8-e30b76831de9}">
+        <Declaration><![CDATA[VAR
+END_VAR
+]]></Declaration>
+        <Implementation>
+          <ST><![CDATA[nMonthlyHoursBacking := nMonthlyHours;]]></ST>
+        </Implementation>
+      </Set>
+    </Property>
+  </POU>
+</TcPlcObject>

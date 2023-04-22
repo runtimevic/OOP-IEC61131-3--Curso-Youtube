@@ -29,9 +29,9 @@ VAR
     pin01 : POINTER TO INT; //Declara un puntero para acceder a variables del tipo INT.
     ps20  : POINTER TO STRING[20]; //Declara un puntero para acceder a variables del tipo STRING de 20 caracteres.
     pa20 : POINTER TO ARRAY [1..20] OF INT; //Declara un puntero para acceder a variables del tipo ARRAY de 20 elementos del tipo INT.
-    pDword : POINTER TO DWORD; //Declar un puntero para acceder a variables del tipo DWORD.
-    past1  : POINTER TO stTipo1; //Declar un puntero para acceder a variables del tipo stTipo1.
-    pReal  : POINTER TO REAL; //Declar un puntero para acceder a variables del tipo REAL.
+    pDword : POINTER TO DWORD; //Declara un puntero para acceder a variables del tipo DWORD.
+    past1  : POINTER TO stTipo1; //Declara un puntero para acceder a variables del tipo stTipo1.
+    pReal  : POINTER TO REAL; //Declara un puntero para acceder a variables del tipo REAL.
 END_VAR
 ```
 ### <span style="color:grey">. Como saber qué dirección asignar al puntero:</span>
@@ -175,20 +175,27 @@ Las referencias se inicializan al principio del programa y no pueden cambiar dur
 A un puntero se le puede cambiar su dirección tanto como sea necesario durante la ejecución del programa.
 Otra forma de entender las referencias es como si fuesen otra manera de referirse a un mismo objeto/variable, como si fuese un alias.
 Frente a los punteros, las referencias presentan las siguientes ventajas:
-1) Facilidad de uso.
-2) Sintaxis más sencilla a la hora de pasar parámetros a funciones.
-3) Minimiza errores en la escritura del código.
-El resumen de todo esto, que se puede prestar a mucha confusión, es que, como 
-se verá más adelante, el gran valor de las referencias es a la hora de pasar grandes 
+- 1) Facilidad de uso.
+- 2) Sintaxis más sencilla a la hora de pasar parámetros a funciones.
+- 3) Minimiza errores en la escritura del código.
+
+El resumen de todo esto, que se puede prestar a mucha confusión, es que, como se verá más adelante, el gran valor de las referencias es a la hora de pasar grandes 
 cantidades de datos como parámetros de entrada a funciones.
 
 ### <span style="color:grey">. Diversas formas de pase de parámetros a funciones:</span>
 
 Normalmente una función realiza unas operaciones con unos parámetros de entrada y retorna un valor - o varios - como resultado. 
-En el ejemplo que veremos seguidamente se trata de una función para calcular el área de un rectángulo, a la que le pasaremos los valores del lado A y el lado B para que nos retorne el resultado del área. Lo primero definiremos un tipo de dato [stRectángulo] que contendrá el lado A, el B y el área. Crearemos tres rectángulos, [stRectangulo01], [stRectangulo02] y [stRectangulo03]. Junto con tres variantes de la función para el cálculo del área, 
-[Fc_AreaCalcVal] - pase por valores -, 
-[Fc_AreaCalcPoint] - pase por puntero - 
-[Fc_AreaCalcRef] - pase por referencia –
+En el ejemplo que veremos seguidamente se trata de una función para calcular el área de un rectángulo, a la que le pasaremos los valores del lado A y el lado B para que nos retorne el resultado del área. 
+
+Lo primero definiremos un tipo de dato [stRectángulo] que contendrá el lado A, el B y el área. 
+
+Crearemos tres rectángulos, [stRectangulo01], [stRectangulo02] y [stRectangulo03]. 
+
+Junto con tres variantes de la función para el cálculo del área: 
+- [Fc_AreaCalcVal] - pase por valores - 
+- [Fc_AreaCalcPoint] - pase por puntero - 
+- [Fc_AreaCalcRef] - pase por referencia –
+
 A continuación, el código de las tres funciones:
 
 ### Pase de valores:
@@ -267,7 +274,7 @@ Fc_AreaCalcPoint(ADR(stRectangulo2));
 // Cálculo del área del rectángulo pasando una referencia a la función
 Fc_AreaCalcRef(refRectangulo);
 ```
-En este caso puede las diferencias pueden parecer insignificantes, puesto que la cantidad de datos que se le pasan a la función son pocos. Pero seguidamente veremos un ejemplo con mayor número de parámetros de entrada para poder apreciar las ventajas del pase de parámetros por, especialmente, referencia y también por puntero.
+En este caso puede que las diferencias pueden parecer insignificantes, puesto que la cantidad de datos que se le pasan a la función son pocos. Pero seguidamente veremos un ejemplo con mayor número de parámetros de entrada para poder apreciar las ventajas del pase de parámetros por, especialmente, referencia y también por puntero.
 
 ### <span style="color:grey">.Caso de pase de grandes cantidades de datos a funciones:</span>
 Cuando se precisa pasar estructuras con gran cantidad de datos a funciones ó a FB´s, el pase de parámetros por valores no es el método más adecuado puesto que se requieren gran cantidad de parámetros de entrada, cada parámetro implica crear una nueva variable local de la función, o del FB, lo que supone gasto de memoria y tiempo de ejecución en copiar los datos. Caso de estructuras de datos de varios Kbytes, o arrays de centenares o miles de elementos, este método es impensable. 
