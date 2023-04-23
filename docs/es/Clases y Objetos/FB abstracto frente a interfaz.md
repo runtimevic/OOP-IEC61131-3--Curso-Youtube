@@ -13,7 +13,7 @@ Imaginar que tienes un programa que controla diferentes tipos de motores, como m
 - La instanciación directa de FBs abstractos no es posible.Por lo tanto, los FB abstractos tienen cierta similitud con las interfaces.
 
 Ahora, la pregunta es en qué caso se debe usar una interfaz y en qué caso un FB abstracto.
-### <span style="color:grey">métodos abstractos:</span>
+### <span style="color:grey">Métodos abstractos:</span>
 ```javascript
 METHOD PUBLIC ABSTRACT DoSomething : LREAL
 ```
@@ -21,7 +21,7 @@ METHOD PUBLIC ABSTRACT DoSomething : LREAL
 - Consisten exclusivamente en la declaración y no contienen ninguna implementación. El cuerpo del método está vacío.
 - Puede ser público , protegido o interno . El modificador de acceso privado no está permitido.
 - No puede ser declarada adicionalmente como definitiva.
-### <span style="color:grey">propiedades abstractas:</span>
+### <span style="color:grey">Propiedades abstractas:</span>
 ```javascript
 PROPERTY PUBLIC ABSTRACT nAnyValue : UINT
 ```
@@ -30,7 +30,7 @@ PROPERTY PUBLIC ABSTRACT nAnyValue : UINT
 - Getter y setter consisten solo en la declaración y no contienen ninguna implementación.
 - Puede ser público , protegido o interno . El modificador de acceso privado no está permitido.
 - No puede ser declarada adicionalmente como definitiva .
-### <span style="color:grey">bloques de funciones abstractas:</span>
+### <span style="color:grey">Bloques de funciones abstractas:</span>
 ```javascript
 FUNCTION_BLOCK PUBLIC ABSTRACT FB_Foo
 ```
@@ -61,13 +61,13 @@ Los bloques de funciones deben diseñarse para la gestión de datos de los emple
 
 Lo resolveremos de 3 formas distintas:
 
-- 1. Enfoque de solución: FB abstracto
+- ### 1. Enfoque de solución: FB abstracto
 ![12.1_Abstract](../imagenes/12.1_Abstract.png)
 
-- 2. Enfoque de solución: Interfaz
+- ### 2. Enfoque de solución: Interfaz
 ![12.2_Interface](../imagenes/12.2_Interface.png)
 
-- 3. Enfoque de solución: combinación de FB abstracto e interfaz
+- ### 3. Enfoque de solución: combinación de FB abstracto e interfaz
 ![12.3_Combination](../imagenes/12.3_Combination.png)
 ### <span style="color:grey">Resumen, Conclusiones:</span>
 - Si el usuario no debe crear una instancia propia del FB (porque esto no parece ser útil), entonces los FB abstractos o las interfaces son útiles.

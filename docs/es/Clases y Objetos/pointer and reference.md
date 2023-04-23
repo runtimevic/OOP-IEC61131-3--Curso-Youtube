@@ -175,6 +175,7 @@ Las referencias se inicializan al principio del programa y no pueden cambiar dur
 A un puntero se le puede cambiar su dirección tanto como sea necesario durante la ejecución del programa.
 Otra forma de entender las referencias es como si fuesen otra manera de referirse a un mismo objeto/variable, como si fuese un alias.
 Frente a los punteros, las referencias presentan las siguientes ventajas:
+
 - 1) Facilidad de uso.
 - 2) Sintaxis más sencilla a la hora de pasar parámetros a funciones.
 - 3) Minimiza errores en la escritura del código.
@@ -191,7 +192,8 @@ Lo primero definiremos un tipo de dato [stRectángulo] que contendrá el lado A,
 
 Crearemos tres rectángulos, [stRectangulo01], [stRectangulo02] y [stRectangulo03]. 
 
-Junto con tres variantes de la función para el cálculo del área: 
+Junto con tres variantes de la función para el cálculo del área:
+
 - [Fc_AreaCalcVal] - pase por valores - 
 - [Fc_AreaCalcPoint] - pase por puntero - 
 - [Fc_AreaCalcRef] - pase por referencia –
