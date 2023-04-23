@@ -1,4 +1,4 @@
-### <span style="color:grey"> FB Abstracto frente a Interface::</span>
+### <span style="color:grey"> FB Abstracto frente a Interface:</span>
 
 la diferencia entre utilizar un bloque de función abstracto y una interfaz es que el FB Abstracto es un tipo de plantilla que define un conjunto de variables y parámetros de entrada/salida para ser utilizados en diferentes partes del programa. 
 
@@ -17,21 +17,24 @@ Ahora, la pregunta es en qué caso se debe usar una interfaz y en qué caso un F
 ```javascript
 METHOD PUBLIC ABSTRACT DoSomething : LREAL
 ```
-- consisten exclusivamente en la declaración y no contienen ninguna implementación. El cuerpo del método está vacío.
-- puede ser público , protegido o interno . El modificador de acceso privado no está permitido.
-- no puede ser declarada adicionalmente como definitiva.
-### <span style="color:grey">propiedades abstractos:</span>
+
+- Consisten exclusivamente en la declaración y no contienen ninguna implementación. El cuerpo del método está vacío.
+- Puede ser público , protegido o interno . El modificador de acceso privado no está permitido.
+- No puede ser declarada adicionalmente como definitiva.
+### <span style="color:grey">propiedades abstractas:</span>
 ```javascript
 PROPERTY PUBLIC ABSTRACT nAnyValue : UINT
 ```
-- puede contener getters, setters o ambos.
-- getter y setter consisten solo en la declaración y no contienen ninguna implementación.
-- puede ser público , protegido o interno . El modificador de acceso privado no está permitido.
-- no puede ser declarada adicionalmente como definitiva .
+
+- Puede contener getters, setters o ambos.
+- Getter y setter consisten solo en la declaración y no contienen ninguna implementación.
+- Puede ser público , protegido o interno . El modificador de acceso privado no está permitido.
+- No puede ser declarada adicionalmente como definitiva .
 ### <span style="color:grey">bloques de funciones abstractas:</span>
 ```javascript
 FUNCTION_BLOCK PUBLIC ABSTRACT FB_Foo
 ```
+
 - Tan pronto como un método o una propiedad se declaran como abstractos , el bloque de funciones también debe declararse como abstracto .
 - No se pueden crear instancias a partir de FB abstractos. Los FB abstractos solo se pueden usar como FB básicos cuando se heredan.
 - Todos los métodos abstractos y todas las propiedades abstractas deben sobrescribirse para crear un FB no abstracto. Un método abstracto o una propiedad abstracta se convierte en un método no abstracto o una propiedad no abstracta al sobrescribir.
@@ -40,6 +43,7 @@ FUNCTION_BLOCK PUBLIC ABSTRACT FB_Foo
 - Se permiten punteros o referencias de tipo FB abstracto. Sin embargo, estos pueden referirse a FB no abstractos y, por lo tanto, llamar a sus métodos o propiedades (polimorfismo).
 ### <span style="color:grey">Diferencias entre un FB abstracto y una interfaz:</span>
 Si un bloque de funciones consta exclusivamente de métodos abstractos y propiedades abstractas, entonces no contiene ninguna implementación y, por lo tanto, tiene cierta similitud con las interfaces. Sin embargo, hay algunas características especiales a considerar en detalle.
+
 |  | **Interfaz**  | **FB Abstracto** |
 |:------------- |:----------------| :-------------| 
 | **admite herencia múltiple**         | + | - |
@@ -56,10 +60,13 @@ Por lo tanto, como desarrollador, desea saber cuándo se debe usar una interfaz 
 Los bloques de funciones deben diseñarse para la gestión de datos de los empleados. Se hace una distinción entre empleados permanentes ( FB_FullTimeEmployee ) y empleados por contrato ( FB_ContractEmployee ). Cada empleado se identifica por su nombre ( sFirstName ), apellido ( sLastName ) y el número de personal ( nPersonnelNumber ). Las propiedades correspondientes se proporcionan para este propósito. Además, se requiere un método que genere el nombre completo, incluido el número de personal, como una cadena formateada ( GetFullName() ). El cálculo de los ingresos mensuales se realiza mediante el método GetMonthlySalary().
 
 Lo resolveremos de 3 formas distintas:
+
 - 1. Enfoque de solución: FB abstracto
 ![12.1_Abstract](../imagenes/12.1_Abstract.png)
+
 - 2. Enfoque de solución: Interfaz
 ![12.2_Interface](../imagenes/12.2_Interface.png)
+
 - 3. Enfoque de solución: combinación de FB abstracto e interfaz
 ![12.3_Combination](../imagenes/12.3_Combination.png)
 ### <span style="color:grey">Resumen, Conclusiones:</span>
