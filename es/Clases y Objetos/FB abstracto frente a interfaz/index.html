@@ -766,7 +766,7 @@
       
         <li class="md-nav__item">
   <a href="#fb-abstracto-frente-a-interface" class="md-nav__link">
-     FB Abstracto frente a Interface::
+     FB Abstracto frente a Interface:
   </a>
   
 </li>
@@ -779,8 +779,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#propiedades-abstractos" class="md-nav__link">
-    propiedades abstractos:
+  <a href="#propiedades-abstractas" class="md-nav__link">
+    propiedades abstractas:
   </a>
   
 </li>
@@ -1330,7 +1330,7 @@
       
         <li class="md-nav__item">
   <a href="#fb-abstracto-frente-a-interface" class="md-nav__link">
-     FB Abstracto frente a Interface::
+     FB Abstracto frente a Interface:
   </a>
   
 </li>
@@ -1343,8 +1343,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#propiedades-abstractos" class="md-nav__link">
-    propiedades abstractos:
+  <a href="#propiedades-abstractas" class="md-nav__link">
+    propiedades abstractas:
   </a>
   
 </li>
@@ -1402,7 +1402,7 @@
 
   <h1>FB abstracto frente a interfaz</h1>
 
-<h3 id="fb-abstracto-frente-a-interface"><span style="color:grey"> FB Abstracto frente a Interface::</span></h3>
+<h3 id="fb-abstracto-frente-a-interface"><span style="color:grey"> FB Abstracto frente a Interface:</span></h3>
 <p>la diferencia entre utilizar un bloque de función abstracto y una interfaz es que el FB Abstracto es un tipo de plantilla que define un conjunto de variables y parámetros de entrada/salida para ser utilizados en diferentes partes del programa. </p>
 <p>Por otro lado, una interfaz define un conjunto de métodos y atributos (propiedades) que deben ser implementados por cualquier clase que la implemente. </p>
 <p>En resumen, los bloques de función abstractos son útiles cuando se necesita reutilizar código en diferentes partes del programa, mientras que las interfaces son útiles cuando se quiere asegurar que determinadas clases implementen ciertos métodos.</p>
@@ -1414,48 +1414,101 @@
 </ul>
 <p>Ahora, la pregunta es en qué caso se debe usar una interfaz y en qué caso un FB abstracto.</p>
 <h3 id="metodos-abstractos"><span style="color:grey">métodos abstractos:</span></h3>
-<p><div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nx">METHOD</span><span class="w"> </span><span class="nx">PUBLIC</span><span class="w"> </span><span class="nx">ABSTRACT</span><span class="w"> </span><span class="nx">DoSomething</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="nx">LREAL</span>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nx">METHOD</span><span class="w"> </span><span class="nx">PUBLIC</span><span class="w"> </span><span class="nx">ABSTRACT</span><span class="w"> </span><span class="nx">DoSomething</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="nx">LREAL</span>
 </code></pre></div></td></tr></table></div>
-- consisten exclusivamente en la declaración y no contienen ninguna implementación. El cuerpo del método está vacío.
-- puede ser público , protegido o interno . El modificador de acceso privado no está permitido.
-- no puede ser declarada adicionalmente como definitiva.</p>
-<h3 id="propiedades-abstractos"><span style="color:grey">propiedades abstractos:</span></h3>
-<p><div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nx">PROPERTY</span><span class="w"> </span><span class="nx">PUBLIC</span><span class="w"> </span><span class="nx">ABSTRACT</span><span class="w"> </span><span class="nx">nAnyValue</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="nx">UINT</span>
+<ul>
+<li>Consisten exclusivamente en la declaración y no contienen ninguna implementación. El cuerpo del método está vacío.</li>
+<li>Puede ser público , protegido o interno . El modificador de acceso privado no está permitido.</li>
+<li>No puede ser declarada adicionalmente como definitiva.</li>
+</ul>
+<h3 id="propiedades-abstractas"><span style="color:grey">propiedades abstractas:</span></h3>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nx">PROPERTY</span><span class="w"> </span><span class="nx">PUBLIC</span><span class="w"> </span><span class="nx">ABSTRACT</span><span class="w"> </span><span class="nx">nAnyValue</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="nx">UINT</span>
 </code></pre></div></td></tr></table></div>
-- puede contener getters, setters o ambos.
-- getter y setter consisten solo en la declaración y no contienen ninguna implementación.
-- puede ser público , protegido o interno . El modificador de acceso privado no está permitido.
-- no puede ser declarada adicionalmente como definitiva .</p>
+<ul>
+<li>Puede contener getters, setters o ambos.</li>
+<li>Getter y setter consisten solo en la declaración y no contienen ninguna implementación.</li>
+<li>Puede ser público , protegido o interno . El modificador de acceso privado no está permitido.</li>
+<li>No puede ser declarada adicionalmente como definitiva .</li>
+</ul>
 <h3 id="bloques-de-funciones-abstractas"><span style="color:grey">bloques de funciones abstractas:</span></h3>
-<p><div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nx">FUNCTION_BLOCK</span><span class="w"> </span><span class="nx">PUBLIC</span><span class="w"> </span><span class="nx">ABSTRACT</span><span class="w"> </span><span class="nx">FB_Foo</span>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nx">FUNCTION_BLOCK</span><span class="w"> </span><span class="nx">PUBLIC</span><span class="w"> </span><span class="nx">ABSTRACT</span><span class="w"> </span><span class="nx">FB_Foo</span>
 </code></pre></div></td></tr></table></div>
-- Tan pronto como un método o una propiedad se declaran como abstractos , el bloque de funciones también debe declararse como abstracto .
-- No se pueden crear instancias a partir de FB abstractos. Los FB abstractos solo se pueden usar como FB básicos cuando se heredan.
-- Todos los métodos abstractos y todas las propiedades abstractas deben sobrescribirse para crear un FB no abstracto. Un método abstracto o una propiedad abstracta se convierte en un método no abstracto o una propiedad no abstracta al sobrescribir.
-- Los bloques de funciones abstractas pueden contener además métodos no abstractos y/o propiedades no abstractas.
-- Si no se sobrescriben todos los métodos abstractos o todas las propiedades abstractas durante la herencia, el FB heredado solo puede ser un FB abstracto (concretización paso a paso).
-- Se permiten punteros o referencias de tipo FB abstracto. Sin embargo, estos pueden referirse a FB no abstractos y, por lo tanto, llamar a sus métodos o propiedades (polimorfismo).</p>
+<ul>
+<li>Tan pronto como un método o una propiedad se declaran como abstractos , el bloque de funciones también debe declararse como abstracto .</li>
+<li>No se pueden crear instancias a partir de FB abstractos. Los FB abstractos solo se pueden usar como FB básicos cuando se heredan.</li>
+<li>Todos los métodos abstractos y todas las propiedades abstractas deben sobrescribirse para crear un FB no abstracto. Un método abstracto o una propiedad abstracta se convierte en un método no abstracto o una propiedad no abstracta al sobrescribir.</li>
+<li>Los bloques de funciones abstractas pueden contener además métodos no abstractos y/o propiedades no abstractas.</li>
+<li>Si no se sobrescriben todos los métodos abstractos o todas las propiedades abstractas durante la herencia, el FB heredado solo puede ser un FB abstracto (concretización paso a paso).</li>
+<li>Se permiten punteros o referencias de tipo FB abstracto. Sin embargo, estos pueden referirse a FB no abstractos y, por lo tanto, llamar a sus métodos o propiedades (polimorfismo).</li>
+</ul>
 <h3 id="diferencias-entre-un-fb-abstracto-y-una-interfaz"><span style="color:grey">Diferencias entre un FB abstracto y una interfaz:</span></h3>
-<p>Si un bloque de funciones consta exclusivamente de métodos abstractos y propiedades abstractas, entonces no contiene ninguna implementación y, por lo tanto, tiene cierta similitud con las interfaces. Sin embargo, hay algunas características especiales a considerar en detalle.
-|  | <strong>Interfaz</strong>  | <strong>FB Abstracto</strong> |
-|:------------- |:----------------| :-------------| 
-| <strong>admite herencia múltiple</strong>         | + | - |
-| <strong>puede contener variables locales</strong>       | - | + |
-| <strong>puede contener métodos no abstractos</strong>          | - | + |
-| <strong>puede contener propiedades no abstractas</strong>       | - | + |
-| <strong>admite más modificadores de acceso además de público</strong>        | - | + | 
-| <strong>aplicable con matriz</strong>      | + | solo através de PUNTERO |</p>
+<p>Si un bloque de funciones consta exclusivamente de métodos abstractos y propiedades abstractas, entonces no contiene ninguna implementación y, por lo tanto, tiene cierta similitud con las interfaces. Sin embargo, hay algunas características especiales a considerar en detalle.</p>
+<table>
+<thead>
+<tr>
+<th align="left"></th>
+<th align="left"><strong>Interfaz</strong></th>
+<th align="left"><strong>FB Abstracto</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left"><strong>admite herencia múltiple</strong></td>
+<td align="left">+</td>
+<td align="left">-</td>
+</tr>
+<tr>
+<td align="left"><strong>puede contener variables locales</strong></td>
+<td align="left">-</td>
+<td align="left">+</td>
+</tr>
+<tr>
+<td align="left"><strong>puede contener métodos no abstractos</strong></td>
+<td align="left">-</td>
+<td align="left">+</td>
+</tr>
+<tr>
+<td align="left"><strong>puede contener propiedades no abstractas</strong></td>
+<td align="left">-</td>
+<td align="left">+</td>
+</tr>
+<tr>
+<td align="left"><strong>admite más modificadores de acceso además de público</strong></td>
+<td align="left">-</td>
+<td align="left">+</td>
+</tr>
+<tr>
+<td align="left"><strong>aplicable con matriz</strong></td>
+<td align="left">+</td>
+<td align="left">solo através de PUNTERO</td>
+</tr>
+</tbody>
+</table>
 <p>La tabla puede dar la impresión de que las interfaces pueden reemplazarse casi por completo por FB abstractos. Sin embargo, las interfaces ofrecen una mayor flexibilidad porque se pueden usar en diferentes jerarquías de herencia.</p>
 <p>Por lo tanto, como desarrollador, desea saber cuándo se debe usar una interfaz y cuándo se debe usar un FB abstracto. La respuesta simple es preferiblemente ambos al mismo tiempo. Esto proporciona una implementación estándar en el FB base abstracto, lo que facilita su derivación. Sin embargo, cada desarrollador tiene la libertad de implementar la interfaz directamente.</p>
 <h3 id="ejemplo"><span style="color:grey">Ejemplo:</span></h3>
 <p>Los bloques de funciones deben diseñarse para la gestión de datos de los empleados. Se hace una distinción entre empleados permanentes ( FB_FullTimeEmployee ) y empleados por contrato ( FB_ContractEmployee ). Cada empleado se identifica por su nombre ( sFirstName ), apellido ( sLastName ) y el número de personal ( nPersonnelNumber ). Las propiedades correspondientes se proporcionan para este propósito. Además, se requiere un método que genere el nombre completo, incluido el número de personal, como una cadena formateada ( GetFullName() ). El cálculo de los ingresos mensuales se realiza mediante el método GetMonthlySalary().</p>
-<p>Lo resolveremos de 3 formas distintas:
-- 1. Enfoque de solución: FB abstracto
-<img alt="12.1_Abstract" src="../../imagenes/12.1_Abstract.png" />
-- 2. Enfoque de solución: Interfaz
-<img alt="12.2_Interface" src="../../imagenes/12.2_Interface.png" />
-- 3. Enfoque de solución: combinación de FB abstracto e interfaz
-<img alt="12.3_Combination" src="../../imagenes/12.3_Combination.png" /></p>
+<p>Lo resolveremos de 3 formas distintas:</p>
+<ul>
+<li>
+<ol>
+<li>Enfoque de solución: FB abstracto
+<img alt="12.1_Abstract" src="../../imagenes/12.1_Abstract.png" /></li>
+</ol>
+</li>
+<li>
+<ol>
+<li>Enfoque de solución: Interfaz
+<img alt="12.2_Interface" src="../../imagenes/12.2_Interface.png" /></li>
+</ol>
+</li>
+<li>
+<ol>
+<li>Enfoque de solución: combinación de FB abstracto e interfaz
+<img alt="12.3_Combination" src="../../imagenes/12.3_Combination.png" /></li>
+</ol>
+</li>
+</ul>
 <h3 id="resumen-conclusiones"><span style="color:grey">Resumen, Conclusiones:</span></h3>
 <ul>
 <li>Si el usuario no debe crear una instancia propia del FB (porque esto no parece ser útil), entonces los FB abstractos o las interfaces son útiles.</li>
