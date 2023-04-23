@@ -773,21 +773,21 @@
       
         <li class="md-nav__item">
   <a href="#metodos-abstractos" class="md-nav__link">
-    métodos abstractos:
+    Métodos abstractos:
   </a>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#propiedades-abstractas" class="md-nav__link">
-    propiedades abstractas:
+    Propiedades abstractas:
   </a>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#bloques-de-funciones-abstractas" class="md-nav__link">
-    bloques de funciones abstractas:
+    Bloques de funciones abstractas:
   </a>
   
 </li>
@@ -802,6 +802,27 @@
         <li class="md-nav__item">
   <a href="#ejemplo" class="md-nav__link">
     Ejemplo:
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1-enfoque-de-solucion-fb-abstracto" class="md-nav__link">
+    1. Enfoque de solución: FB abstracto
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-enfoque-de-solucion-interfaz" class="md-nav__link">
+    2. Enfoque de solución: Interfaz
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-enfoque-de-solucion-combinacion-de-fb-abstracto-e-interfaz" class="md-nav__link">
+    3. Enfoque de solución: combinación de FB abstracto e interfaz
   </a>
   
 </li>
@@ -1337,21 +1358,21 @@
       
         <li class="md-nav__item">
   <a href="#metodos-abstractos" class="md-nav__link">
-    métodos abstractos:
+    Métodos abstractos:
   </a>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#propiedades-abstractas" class="md-nav__link">
-    propiedades abstractas:
+    Propiedades abstractas:
   </a>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#bloques-de-funciones-abstractas" class="md-nav__link">
-    bloques de funciones abstractas:
+    Bloques de funciones abstractas:
   </a>
   
 </li>
@@ -1366,6 +1387,27 @@
         <li class="md-nav__item">
   <a href="#ejemplo" class="md-nav__link">
     Ejemplo:
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1-enfoque-de-solucion-fb-abstracto" class="md-nav__link">
+    1. Enfoque de solución: FB abstracto
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-enfoque-de-solucion-interfaz" class="md-nav__link">
+    2. Enfoque de solución: Interfaz
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-enfoque-de-solucion-combinacion-de-fb-abstracto-e-interfaz" class="md-nav__link">
+    3. Enfoque de solución: combinación de FB abstracto e interfaz
   </a>
   
 </li>
@@ -1413,7 +1455,7 @@
 <li>La instanciación directa de FBs abstractos no es posible.Por lo tanto, los FB abstractos tienen cierta similitud con las interfaces.</li>
 </ul>
 <p>Ahora, la pregunta es en qué caso se debe usar una interfaz y en qué caso un FB abstracto.</p>
-<h3 id="metodos-abstractos"><span style="color:grey">métodos abstractos:</span></h3>
+<h3 id="metodos-abstractos"><span style="color:grey">Métodos abstractos:</span></h3>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nx">METHOD</span><span class="w"> </span><span class="nx">PUBLIC</span><span class="w"> </span><span class="nx">ABSTRACT</span><span class="w"> </span><span class="nx">DoSomething</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="nx">LREAL</span>
 </code></pre></div></td></tr></table></div>
 <ul>
@@ -1421,7 +1463,7 @@
 <li>Puede ser público , protegido o interno . El modificador de acceso privado no está permitido.</li>
 <li>No puede ser declarada adicionalmente como definitiva.</li>
 </ul>
-<h3 id="propiedades-abstractas"><span style="color:grey">propiedades abstractas:</span></h3>
+<h3 id="propiedades-abstractas"><span style="color:grey">Propiedades abstractas:</span></h3>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nx">PROPERTY</span><span class="w"> </span><span class="nx">PUBLIC</span><span class="w"> </span><span class="nx">ABSTRACT</span><span class="w"> </span><span class="nx">nAnyValue</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="nx">UINT</span>
 </code></pre></div></td></tr></table></div>
 <ul>
@@ -1430,7 +1472,7 @@
 <li>Puede ser público , protegido o interno . El modificador de acceso privado no está permitido.</li>
 <li>No puede ser declarada adicionalmente como definitiva .</li>
 </ul>
-<h3 id="bloques-de-funciones-abstractas"><span style="color:grey">bloques de funciones abstractas:</span></h3>
+<h3 id="bloques-de-funciones-abstractas"><span style="color:grey">Bloques de funciones abstractas:</span></h3>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nx">FUNCTION_BLOCK</span><span class="w"> </span><span class="nx">PUBLIC</span><span class="w"> </span><span class="nx">ABSTRACT</span><span class="w"> </span><span class="nx">FB_Foo</span>
 </code></pre></div></td></tr></table></div>
 <ul>
@@ -1491,22 +1533,16 @@
 <p>Lo resolveremos de 3 formas distintas:</p>
 <ul>
 <li>
-<ol>
-<li>Enfoque de solución: FB abstracto
-<img alt="12.1_Abstract" src="../../imagenes/12.1_Abstract.png" /></li>
-</ol>
+<h3 id="1-enfoque-de-solucion-fb-abstracto">1. Enfoque de solución: FB abstracto</h3>
+<p><img alt="12.1_Abstract" src="../../imagenes/12.1_Abstract.png" /></p>
 </li>
 <li>
-<ol>
-<li>Enfoque de solución: Interfaz
-<img alt="12.2_Interface" src="../../imagenes/12.2_Interface.png" /></li>
-</ol>
+<h3 id="2-enfoque-de-solucion-interfaz">2. Enfoque de solución: Interfaz</h3>
+<p><img alt="12.2_Interface" src="../../imagenes/12.2_Interface.png" /></p>
 </li>
 <li>
-<ol>
-<li>Enfoque de solución: combinación de FB abstracto e interfaz
-<img alt="12.3_Combination" src="../../imagenes/12.3_Combination.png" /></li>
-</ol>
+<h3 id="3-enfoque-de-solucion-combinacion-de-fb-abstracto-e-interfaz">3. Enfoque de solución: combinación de FB abstracto e interfaz</h3>
+<p><img alt="12.3_Combination" src="../../imagenes/12.3_Combination.png" /></p>
 </li>
 </ul>
 <h3 id="resumen-conclusiones"><span style="color:grey">Resumen, Conclusiones:</span></h3>
