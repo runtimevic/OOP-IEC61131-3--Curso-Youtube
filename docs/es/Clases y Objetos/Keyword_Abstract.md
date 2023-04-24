@@ -4,7 +4,7 @@
 La palabra clave ABSTRACT está disponible para bloques de funciones, métodos y propiedades. Permite la implementación de un proyecto PLC con niveles de abstracción.
 La abstracción es un concepto clave de la programación orientada a objetos. Los diferentes niveles de abstracción contienen aspectos de implementación generales o específicos.
 
-### <span style="color:grey">CONCEPTO ABSTRACTO 1:</span>
+### <span style="color:grey">Disponibilidad ABSTRACTO:</span>
 Ya estaba disponible en CODESYS, pero con el lanzamiento de TwinCAT 4024 ahora también está disponible en TwinCAT: la palabra clave ABSTRACT. Disponible en TC3.1 Build 4024.
 
 ### <span style="color:grey">Aplicación de la abstracción:</span>
@@ -57,4 +57,5 @@ METHOD Execute
 
 ### <span style="color:grey">Links de ABSTRACT:</span>
 
+- 🔗 [ABSTRACT concept, infosys.beckhoff.com](https://infosys.beckhoff.com/content/1033/tc3_plc_intro/6413748235.html?id=2638086927809860687)
 - 🔗 [The ABSTRACT keyword, www.plccoder.com ](https://www.plccoder.com/abstract/)
