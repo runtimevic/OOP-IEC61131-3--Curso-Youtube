@@ -189,52 +189,70 @@
     <Compile Include="11_Puntero_y_Referencia\_11_Puntero_y_Referencia.TcPOU">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="12_FB_Abstracto_vs_Interface\1_FB_Abstracto\ClassDiagram.TcCD">
+    <Compile Include="13_FB_Abstracto_vs_Interface\1_FB_Abstracto\ClassDiagram.TcCD">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="12_FB_Abstracto_vs_Interface\1_FB_Abstracto\FB_ContractEmployee.TcPOU">
+    <Compile Include="13_FB_Abstracto_vs_Interface\1_FB_Abstracto\FB_ContractEmployee.TcPOU">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="12_FB_Abstracto_vs_Interface\1_FB_Abstracto\FB_Employee.TcPOU">
+    <Compile Include="13_FB_Abstracto_vs_Interface\1_FB_Abstracto\FB_Employee.TcPOU">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="12_FB_Abstracto_vs_Interface\1_FB_Abstracto\FB_FullTimeEmployee.TcPOU">
+    <Compile Include="13_FB_Abstracto_vs_Interface\1_FB_Abstracto\FB_FullTimeEmployee.TcPOU">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="12_FB_Abstracto_vs_Interface\1_FB_Abstracto\POU_Main_FB_Abstract.TcPOU">
+    <Compile Include="13_FB_Abstracto_vs_Interface\1_FB_Abstracto\_13_1_Main_Abstract.TcPOU">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="12_FB_Abstracto_vs_Interface\2_Interfaz\ClassDiagram_1.TcCD">
+    <Compile Include="13_FB_Abstracto_vs_Interface\2_Interfaz\ClassDiagram_1.TcCD">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="12_FB_Abstracto_vs_Interface\2_Interfaz\FB_ContractEmployee_1.TcPOU">
+    <Compile Include="13_FB_Abstracto_vs_Interface\2_Interfaz\FB_ContractEmployee_1.TcPOU">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="12_FB_Abstracto_vs_Interface\2_Interfaz\FB_FullTimeEmployee_1.TcPOU">
+    <Compile Include="13_FB_Abstracto_vs_Interface\2_Interfaz\FB_FullTimeEmployee_1.TcPOU">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="12_FB_Abstracto_vs_Interface\2_Interfaz\I_Employee.TcIO">
+    <Compile Include="13_FB_Abstracto_vs_Interface\2_Interfaz\I_Employee.TcIO">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="12_FB_Abstracto_vs_Interface\2_Interfaz\POU_Main_Interfaz.TcPOU">
+    <Compile Include="13_FB_Abstracto_vs_Interface\2_Interfaz\_13_2_Main_Interfaz.TcPOU">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="12_FB_Abstracto_vs_Interface\3_Combinacion\ClassDiagram_2.TcCD">
+    <Compile Include="13_FB_Abstracto_vs_Interface\3_Combinacion\ClassDiagram_2.TcCD">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="12_FB_Abstracto_vs_Interface\3_Combinacion\FB_ContractEmployee_2.TcPOU">
+    <Compile Include="13_FB_Abstracto_vs_Interface\3_Combinacion\FB_ContractEmployee_2.TcPOU">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="12_FB_Abstracto_vs_Interface\3_Combinacion\FB_Employee_1.TcPOU">
+    <Compile Include="13_FB_Abstracto_vs_Interface\3_Combinacion\FB_Employee_1.TcPOU">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="12_FB_Abstracto_vs_Interface\3_Combinacion\FB_FullTimeEmployee_2.TcPOU">
+    <Compile Include="13_FB_Abstracto_vs_Interface\3_Combinacion\FB_FullTimeEmployee_2.TcPOU">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="12_FB_Abstracto_vs_Interface\3_Combinacion\I_Employee_1.TcIO">
+    <Compile Include="13_FB_Abstracto_vs_Interface\3_Combinacion\I_Employee_1.TcIO">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="12_FB_Abstracto_vs_Interface\3_Combinacion\POU_Main_Combinacion.TcPOU">
+    <Compile Include="13_FB_Abstracto_vs_Interface\3_Combinacion\_13_3_Main_Combinacion.TcPOU">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="12_Concepto Keyword Abstract\AbstractLoadCell.TcPOU">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="12_Concepto Keyword Abstract\AbstractLogger.TcPOU">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="12_Concepto Keyword Abstract\ConcreteADSLogger.TcPOU">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="12_Concepto Keyword Abstract\ConcreteCSVLogger.TcPOU">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="12_Concepto Keyword Abstract\ConcreteLoadCell.TcPOU">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="12_Concepto Keyword Abstract\_12_Concepto_Keyword_Abstract.TcPOU">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="PlcTask.TcTTO">
@@ -264,10 +282,11 @@
     <Folder Include="10_Interface\Interface1" />
     <Folder Include="10_Interface\Interface2" />
     <Folder Include="11_Puntero_y_Referencia" />
-    <Folder Include="12_FB_Abstracto_vs_Interface" />
-    <Folder Include="12_FB_Abstracto_vs_Interface\1_FB_Abstracto" />
-    <Folder Include="12_FB_Abstracto_vs_Interface\2_Interfaz" />
-    <Folder Include="12_FB_Abstracto_vs_Interface\3_Combinacion" />
+    <Folder Include="13_FB_Abstracto_vs_Interface" />
+    <Folder Include="13_FB_Abstracto_vs_Interface\1_FB_Abstracto" />
+    <Folder Include="13_FB_Abstracto_vs_Interface\2_Interfaz" />
+    <Folder Include="13_FB_Abstracto_vs_Interface\3_Combinacion" />
+    <Folder Include="12_Concepto Keyword Abstract" />
     <Folder Include="_MAIN" />
   </ItemGroup>
   <ItemGroup>
@@ -278,6 +297,10 @@
     <PlaceholderReference Include="Tc2_System">
       <DefaultResolution>Tc2_System, * (Beckhoff Automation GmbH)</DefaultResolution>
       <Namespace>Tc2_System</Namespace>
+    </PlaceholderReference>
+    <PlaceholderReference Include="Tc2_Utilities">
+      <DefaultResolution>Tc2_Utilities, * (Beckhoff Automation GmbH)</DefaultResolution>
+      <Namespace>Tc2_Utilities</Namespace>
     </PlaceholderReference>
     <PlaceholderReference Include="Tc3_Module">
       <DefaultResolution>Tc3_Module, * (Beckhoff Automation GmbH)</DefaultResolution>

@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.12">
+  <POU Name="ConcreteCSVLogger" Id="{fbc42bbf-3583-445b-b5e1-c224b195dbd5}" SpecialFunc="None">
+    <Declaration><![CDATA[{attribute 'hide_all_locals'}
+FUNCTION_BLOCK FINAL ConcreteCSVLogger EXTENDS AbstractLogger
+VAR
+    fbFileOpen:FB_FileOpen;
+    fbFilePuts:FB_FilePuts;
+    fbFileClose:FB_FileClose;
+    State:INT;
+    Message:STRING;
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[CASE State OF
+    0:  IF _Busy THEN
+            State:=State+1;
+        END_IF
+     
+    1:  fbFileOpen(bExecute:=FALSE);
+        fbFileOpen(sNetId:='', //'xxx.xx.xxx.1.1.1',
+            sPathName:='C:\Log.csv',
+            nMode:=FOPEN_MODEAPPEND,
+            bExecute:=TRUE);
+        State:=State+1;
+         
+    2:  fbFileOpen(bExecute:=FALSE);
+        IF NOT fbFileOpen.bBusy THEN
+            State:=State+1;
+        END_IF
+     
+    3:  fbFilePuts(bExecute :=FALSE);
+        fbFilePuts( bExecute:=TRUE,
+                    sNetId:='',//'xxx.xx.xxx.1.1.1',
+                    hFile:=fbFileOpen.hFile,
+                    sLine:=Message);
+        State:=State+1;
+     
+    4:  fbFilePuts(bExecute:=FALSE);
+        IF NOT fbFilePuts.bBusy THEN
+            State:=State+1;
+        END_IF
+         
+    5:  fbFileClose(bExecute :=FALSE);
+        fbFileClose(sNetId:='',//'xxx.xx.xxx.1.1.1',
+                    bExecute:=TRUE,
+                    hFile:= fbFileOpen.hFile);
+        State:=State+1; 
+         
+    6:  fbFileClose(bExecute:=FALSE);
+        IF NOT fbFileClose.bBusy THEN
+            State:=0;
+            _Busy:=FALSE;
+        END_IF
+END_CASE       ]]></ST>
+    </Implementation>
+    <Method Name="InternalLog" Id="{54434449-0726-4fb5-95f9-848d25693a22}">
+      <Declaration><![CDATA[METHOD PROTECTED  InternalLog
+VAR_INPUT
+    Message:STRING;
+END_VAR
+]]></Declaration>
+      <Implementation>
+        <ST><![CDATA[THIS^.Message:=CONCAT(Message,'$n');
+_Busy:=TRUE;]]></ST>
+      </Implementation>
+    </Method>
+  </POU>
+</TcPlcObject>

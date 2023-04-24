@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.12">
+  <POU Name="ConcreteADSLogger" Id="{bcd41922-23fa-4c27-9719-0a03add0316b}" SpecialFunc="None">
+    <Declaration><![CDATA[FUNCTION_BLOCK PUBLIC FINAL ConcreteADSLogger EXTENDS AbstractLogger
+VAR_INPUT
+END_VAR
+VAR_OUTPUT
+END_VAR
+VAR
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[]]></ST>
+    </Implementation>
+    <Method Name="InternalLog" Id="{e1dbd88f-0eb2-4e8b-9585-69e7edd4ab47}">
+      <Declaration><![CDATA[METHOD PROTECTED InternalLog
+VAR_INPUT
+     Message:STRING;
+END_VAR
+]]></Declaration>
+      <Implementation>
+        <ST><![CDATA[_Busy:=TRUE;
+ 
+ADSLOGSTR(    msgCtrlMask:=ADSLOG_MSGTYPE_LOG,
+              msgFmtStr:=Message,
+              strArg:='');
+             
+_Busy:=FALSE;]]></ST>
+      </Implementation>
+    </Method>
+  </POU>
+</TcPlcObject>

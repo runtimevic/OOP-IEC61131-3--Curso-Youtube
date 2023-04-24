@@ -62,13 +62,13 @@ Los bloques de funciones deben diseñarse para la gestión de datos de los emple
 Lo resolveremos de 3 formas distintas:
 
 - ### 1. Enfoque de solución: FB abstracto
-![12.1_Abstract](../imagenes/12.1_Abstract.png)
+![13.1_Abstract](../imagenes/13.1_Abstract.png)
 
 - ### 2. Enfoque de solución: Interfaz
-![12.2_Interface](../imagenes/12.2_Interface.png)
+![13.2_Interface](../imagenes/13.2_Interface.png)
 
 - ### 3. Enfoque de solución: combinación de FB abstracto e interfaz
-![12.3_Combination](../imagenes/12.3_Combination.png)
+![13.3_Combination](../imagenes/13.3_Combination.png)
 ### <span style="color:grey">Resumen, Conclusiones:</span>
 - Si el usuario no debe crear una instancia propia del FB (porque esto no parece ser útil), entonces los FB abstractos o las interfaces son útiles.
 - Si se quiere tener la posibilidad de generalizar en más de un tipo básico, se debe utilizar una interfaz.

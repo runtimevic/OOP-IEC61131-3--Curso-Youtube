@@ -1,0 +1,712 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<project xmlns="http://www.plcopen.org/xml/tc6_0200">
+  <fileHeader companyName="Beckhoff Automation GmbH" productName="TwinCAT PLC Control" productVersion="3.5.13.21" creationDateTime="2023-04-24T11:18:57.3670637" />
+  <contentHeader name="OOP_Curso" modificationDateTime="2023-04-24T11:18:57.3670637">
+    <coordinateInfo>
+      <fbd>
+        <scaling x="1" y="1" />
+      </fbd>
+      <ld>
+        <scaling x="1" y="1" />
+      </ld>
+      <sfc>
+        <scaling x="1" y="1" />
+      </sfc>
+    </coordinateInfo>
+    <addData>
+      <data name="http://www.3s-software.com/plcopenxml/projectinformation" handleUnknown="implementation">
+        <ProjectInformation />
+      </data>
+    </addData>
+  </contentHeader>
+  <types>
+    <dataTypes />
+    <pous>
+      <pou name="_12_Concepto_Keyword_Abstract" pouType="program">
+        <interface>
+          <localVars>
+            <variable name="ConcreteCSVLogger">
+              <type>
+                <derived name="ConcreteCSVLogger" />
+              </type>
+              <documentation>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml"> 	fbLoadCell:REFERENCE TO AbstractLoadCell;</xhtml>
+              </documentation>
+            </variable>
+            <variable name="ConcreteAdsLogger">
+              <type>
+                <derived name="ConcreteADSLogger" />
+              </type>
+            </variable>
+            <variable name="AbstractLogger">
+              <type>
+                <pointer>
+                  <baseType>
+                    <derived name="AbstractLogger" />
+                  </baseType>
+                </pointer>
+              </type>
+            </variable>
+            <variable name="LogNow">
+              <type>
+                <BOOL />
+              </type>
+            </variable>
+            <variable name="Process1">
+              <type>
+                <INT />
+              </type>
+            </variable>
+            <variable name="Process2">
+              <type>
+                <INT />
+              </type>
+            </variable>
+          </localVars>
+        </interface>
+        <body>
+          <ST>
+            <xhtml xmlns="http://www.w3.org/1999/xhtml">(*
+Concepto ABSTRACTO
+La palabra clave ABSTRACT está disponible para bloques de funciones, métodos y propiedades. Permite la implementación de un proyecto PLC con niveles de abstracción.
+La abstracción es un concepto clave de la programación orientada a objetos. Los diferentes niveles de abstracción contienen aspectos de implementación generales o específicos.
+
+CONCEPTO ABSTRACTO 1:	
+Disponible en TC3.1 Build 4024
+
+Aplicación de la abstracción
+Es útil implementar funciones básicas o puntos en común de diferentes clases en una clase básica abstracta. Se implementan aspectos específicos en subclases no abstractas.
+El principio es similar al uso de una interfaz. Las interfaces corresponden a clases puramente abstractas que contienen sólo métodos y propiedades abstractas.
+Una clase abstracta también puede contener métodos y propiedades no abstractos.
+
+Reglas para el uso de la palabra clave ABSTRACT
+Los bloques de funciones abstractas no se pueden instanciar.
+Los bloques de funciones abstractas pueden contener métodos y propiedades abstractos y no abstractos.
+Los métodos abstractos o las propiedades no contienen ninguna implementación (solo la declaración).
+Si un bloque de funciones contiene un método o propiedad abstracta, debe ser abstracta.
+Los bloques de funciones abstractas deben extenderse para poder implementar los métodos o propiedades abstractas.
+Por lo tanto: Un FB derivado debe implementar los métodos / propiedades de su FB básico o también debe definirse como abstracto.
+Muestra
+Clase básica abstracta:
+
+FUNCTION_BLOCK ABSTRACT FB_System_Base
+Los puntos en común de todos los módulos del sistema se implementan en esta clase básica abstracta. Contiene la propiedad no abstracta "nSystemID" y el método abstracto "Execute" para esto:
+
+PROPERTY nSystemID : UINT
+METHOD ABSTRACT Execute
+mientras que la implementación de "nSystemID" es la misma para todos los sistemas, la implementación del método "Execute" difiere para los sistemas individuales.
+
+Subclase no abstracta:
+
+FUNCTION_BLOCK FB_StackSystem EXTENDS FB_System_Base
+Las clases no abstractas que se derivan de la clase básica se implementan para los sistemas específicos. Esta subclase representa una pila. Dado que no es abstracto, debe implementar el método "Execute" que define la ejecución específica de la pila:
+
+METHOD Execute
+
+*)
+
+// Process 1 assigns a logger and starts task 2.
+CASE Process1 OF
+    0: IF LogNow THEN
+            LogNow:=FALSE;
+            AbstractLogger:= ADR(ConcreteAdsLogger);
+            Process2 :=1;
+            Process1:=Process1+1;               
+        END_IF
+     
+    1: IF Process2 = 0 THEN
+            AbstractLogger:= ADR(ConcreteCSVLogger);
+            Process2:=1;
+            Process1:=Process1+1;   
+       END_IF
+        
+     2:IF Process2 = 0 THEN
+            AbstractLogger:= ADR(ConcreteAdsLogger);
+            Process2:=1;
+            Process1:=Process1+1;   
+       END_IF
+        
+      3: IF Process2 = 0 THEN
+            AbstractLogger:= ADR(ConcreteCSVLogger);
+            Process2:=1;
+            Process1:=Process1+1;   
+       END_IF
+        
+      4:IF Process2 = 0 THEN
+            Process1:=0;    
+       END_IF
+END_CASE
+ 
+//Process 2 does its task indepently of the assigned type of logger. 
+CASE process2 OF
+    1: AbstractLogger^.LogMessage(CONCAT('Important message ',INT_TO_STRING(Process1)));
+       process2:=process2+1;                
+         
+    2: AbstractLogger^();
+       IF NOT AbstractLogger^.Busy THEN
+            process2:=0;    
+       END_IF
+END_CASE</xhtml>
+          </ST>
+        </body>
+        <addData>
+          <data name="http://www.3s-software.com/plcopenxml/interfaceasplaintext" handleUnknown="implementation">
+            <InterfaceAsPlainText>
+              <xhtml xmlns="http://www.w3.org/1999/xhtml">PROGRAM _12_Concepto_Keyword_Abstract
+VAR
+// 	fbLoadCell:REFERENCE TO AbstractLoadCell;
+	
+	ConcreteCSVLogger:ConcreteCSVLogger;
+    ConcreteAdsLogger:ConcreteADSLogger;
+    AbstractLogger:POINTER TO AbstractLogger;
+    LogNow:BOOL;
+    Process1:INT;
+    Process2:INT;
+END_VAR
+</xhtml>
+            </InterfaceAsPlainText>
+          </data>
+          <data name="http://www.3s-software.com/plcopenxml/objectid" handleUnknown="discard">
+            <ObjectId>e7172edd-04b5-47f1-92d3-4540317a4a92</ObjectId>
+          </data>
+        </addData>
+      </pou>
+      <pou name="AbstractLoadCell" pouType="functionBlock">
+        <interface />
+        <body>
+          <ST>
+            <xhtml xmlns="http://www.w3.org/1999/xhtml" />
+          </ST>
+        </body>
+        <addData>
+          <data name="http://www.3s-software.com/plcopenxml/method" handleUnknown="implementation">
+            <Method name="GetActualValue" ObjectId="3da4c0e9-16f4-4522-b7df-ec2fd5b3707a">
+              <interface>
+                <returnType>
+                  <LREAL />
+                </returnType>
+              </interface>
+              <body>
+                <ST>
+                  <xhtml xmlns="http://www.w3.org/1999/xhtml" />
+                </ST>
+              </body>
+              <InterfaceAsPlainText>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">METHOD PUBLIC ABSTRACT GetActualValue : LREAL
+VAR_INPUT
+END_VAR
+</xhtml>
+              </InterfaceAsPlainText>
+              <addData />
+            </Method>
+          </data>
+          <data name="http://www.3s-software.com/plcopenxml/interfaceasplaintext" handleUnknown="implementation">
+            <InterfaceAsPlainText>
+              <xhtml xmlns="http://www.w3.org/1999/xhtml">FUNCTION_BLOCK ABSTRACT AbstractLoadCell
+VAR_INPUT
+END_VAR
+VAR_OUTPUT
+END_VAR
+VAR
+END_VAR
+</xhtml>
+            </InterfaceAsPlainText>
+          </data>
+          <data name="http://www.3s-software.com/plcopenxml/objectid" handleUnknown="discard">
+            <ObjectId>eac44cb8-b49a-4f2c-ace6-1b4d9fed91c1</ObjectId>
+          </data>
+        </addData>
+      </pou>
+      <pou name="AbstractLogger" pouType="functionBlock">
+        <interface>
+          <localVars>
+            <variable name="_Busy">
+              <type>
+                <BOOL />
+              </type>
+              <documentation>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">Backing variable for Busy property.</xhtml>
+              </documentation>
+            </variable>
+          </localVars>
+        </interface>
+        <body>
+          <ST>
+            <xhtml xmlns="http://www.w3.org/1999/xhtml" />
+          </ST>
+        </body>
+        <addData>
+          <data name="http://www.3s-software.com/plcopenxml/method" handleUnknown="implementation">
+            <Method name="InternalLog" ObjectId="ea59bba1-d565-4640-8f4c-85a687c8db5a">
+              <interface>
+                <inputVars>
+                  <variable name="Message">
+                    <type>
+                      <string />
+                    </type>
+                  </variable>
+                </inputVars>
+                <addData>
+                  <data name="http://www.3s-software.com/plcopenxml/accessmodifiers" handleUnknown="implementation">
+                    <AccessModifiers Protected="true" />
+                  </data>
+                </addData>
+              </interface>
+              <body>
+                <ST>
+                  <xhtml xmlns="http://www.w3.org/1999/xhtml" />
+                </ST>
+              </body>
+              <InterfaceAsPlainText>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">METHOD PROTECTED ABSTRACT InternalLog
+VAR_INPUT
+	Message:STRING;
+END_VAR
+</xhtml>
+              </InterfaceAsPlainText>
+              <addData />
+            </Method>
+          </data>
+          <data name="http://www.3s-software.com/plcopenxml/method" handleUnknown="implementation">
+            <Method name="LogMessage" ObjectId="b8788360-1f00-4013-8afb-c957e3303db2">
+              <interface>
+                <inputVars>
+                  <variable name="Message">
+                    <type>
+                      <string />
+                    </type>
+                  </variable>
+                </inputVars>
+                <localVars>
+                  <variable name="GetSystemTime">
+                    <type>
+                      <derived name="NT_GetTime" />
+                    </type>
+                    <initialValue>
+                      <structValue>
+                        <value member="NetID">
+                          <simpleValue value="''" />
+                        </value>
+                      </structValue>
+                    </initialValue>
+                    <documentation>
+                      <xhtml xmlns="http://www.w3.org/1999/xhtml">'xxx.xxx.xxx.1.1.1');</xhtml>
+                    </documentation>
+                  </variable>
+                </localVars>
+              </interface>
+              <body>
+                <ST>
+                  <xhtml xmlns="http://www.w3.org/1999/xhtml">// Retrieve a the current system time and combine it with the input message. 
+GetSystemTime(START:=FALSE);
+REPEAT
+    GetSystemTime(START:=TRUE);
+UNTIL (NOT GetSystemTime.BUSY)
+END_REPEAT
+ 
+//Call abstract method
+InternalLog(Message:=CONCAT(CONCAT(Message,', '),SYSTEMTIME_TO_STRING(GetSystemTime.TIMESTR)));</xhtml>
+                </ST>
+              </body>
+              <InterfaceAsPlainText>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">METHOD PUBLIC LogMessage
+VAR_INPUT
+	Message:STRING;
+END_VAR
+VAR
+    GetSystemTime : NT_GetTime:=(NetID:=''); //'xxx.xxx.xxx.1.1.1');
+END_VAR
+</xhtml>
+              </InterfaceAsPlainText>
+              <addData />
+            </Method>
+          </data>
+          <data name="http://www.3s-software.com/plcopenxml/property" handleUnknown="implementation">
+            <Property name="Busy" ObjectId="6216b7c0-1ca2-4468-a631-6e952eb95a17">
+              <interface>
+                <returnType>
+                  <BOOL />
+                </returnType>
+                <Attributes>
+                  <Attribute Name="monitoring" Value="variable" />
+                </Attributes>
+              </interface>
+              <GetAccessor>
+                <interface>
+                  <addData>
+                    <data name="http://www.3s-software.com/plcopenxml/attributes" handleUnknown="implementation">
+                      <Attributes>
+                        <Attribute Name="monitoring" Value="variable" />
+                      </Attributes>
+                    </data>
+                  </addData>
+                </interface>
+                <body>
+                  <ST>
+                    <xhtml xmlns="http://www.w3.org/1999/xhtml">Busy:=_Busy;</xhtml>
+                  </ST>
+                </body>
+                <InterfaceAsPlainText>
+                  <xhtml xmlns="http://www.w3.org/1999/xhtml">VAR
+END_VAR
+</xhtml>
+                </InterfaceAsPlainText>
+                <addData />
+              </GetAccessor>
+              <SetAccessor>
+                <interface>
+                  <addData>
+                    <data name="http://www.3s-software.com/plcopenxml/attributes" handleUnknown="implementation">
+                      <Attributes>
+                        <Attribute Name="monitoring" Value="variable" />
+                      </Attributes>
+                    </data>
+                  </addData>
+                </interface>
+                <body>
+                  <ST>
+                    <xhtml xmlns="http://www.w3.org/1999/xhtml" />
+                  </ST>
+                </body>
+                <InterfaceAsPlainText>
+                  <xhtml xmlns="http://www.w3.org/1999/xhtml">VAR
+END_VAR
+</xhtml>
+                </InterfaceAsPlainText>
+                <addData />
+              </SetAccessor>
+              <InterfaceAsPlainText>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">{attribute 'monitoring' := 'variable'}
+PROPERTY Busy : BOOL</xhtml>
+              </InterfaceAsPlainText>
+              <addData />
+            </Property>
+          </data>
+          <data name="http://www.3s-software.com/plcopenxml/interfaceasplaintext" handleUnknown="implementation">
+            <InterfaceAsPlainText>
+              <xhtml xmlns="http://www.w3.org/1999/xhtml">FUNCTION_BLOCK ABSTRACT AbstractLogger
+
+VAR
+	_Busy:BOOL; //Backing variable for Busy property.
+END_VAR
+</xhtml>
+            </InterfaceAsPlainText>
+          </data>
+          <data name="http://www.3s-software.com/plcopenxml/objectid" handleUnknown="discard">
+            <ObjectId>c28aee2d-1a6b-4bdc-b1ca-1f3861ab8247</ObjectId>
+          </data>
+        </addData>
+      </pou>
+      <pou name="ConcreteADSLogger" pouType="functionBlock">
+        <interface>
+          <addData>
+            <data name="http://www.3s-software.com/plcopenxml/pouinheritance" handleUnknown="implementation">
+              <Inheritance>
+                <Extends>AbstractLogger</Extends>
+              </Inheritance>
+            </data>
+            <data name="http://www.3s-software.com/plcopenxml/accessmodifiers" handleUnknown="implementation">
+              <AccessModifiers Final="true" />
+            </data>
+          </addData>
+        </interface>
+        <body>
+          <ST>
+            <xhtml xmlns="http://www.w3.org/1999/xhtml" />
+          </ST>
+        </body>
+        <addData>
+          <data name="http://www.3s-software.com/plcopenxml/method" handleUnknown="implementation">
+            <Method name="InternalLog" ObjectId="e1dbd88f-0eb2-4e8b-9585-69e7edd4ab47">
+              <interface>
+                <inputVars>
+                  <variable name="Message">
+                    <type>
+                      <string />
+                    </type>
+                  </variable>
+                </inputVars>
+                <addData>
+                  <data name="http://www.3s-software.com/plcopenxml/accessmodifiers" handleUnknown="implementation">
+                    <AccessModifiers Protected="true" />
+                  </data>
+                </addData>
+              </interface>
+              <body>
+                <ST>
+                  <xhtml xmlns="http://www.w3.org/1999/xhtml">_Busy:=TRUE;
+ 
+ADSLOGSTR(    msgCtrlMask:=ADSLOG_MSGTYPE_LOG,
+              msgFmtStr:=Message,
+              strArg:='');
+             
+_Busy:=FALSE;</xhtml>
+                </ST>
+              </body>
+              <InterfaceAsPlainText>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">METHOD PROTECTED InternalLog
+VAR_INPUT
+     Message:STRING;
+END_VAR
+</xhtml>
+              </InterfaceAsPlainText>
+              <addData />
+            </Method>
+          </data>
+          <data name="http://www.3s-software.com/plcopenxml/interfaceasplaintext" handleUnknown="implementation">
+            <InterfaceAsPlainText>
+              <xhtml xmlns="http://www.w3.org/1999/xhtml">FUNCTION_BLOCK PUBLIC FINAL ConcreteADSLogger EXTENDS AbstractLogger
+VAR_INPUT
+END_VAR
+VAR_OUTPUT
+END_VAR
+VAR
+END_VAR
+</xhtml>
+            </InterfaceAsPlainText>
+          </data>
+          <data name="http://www.3s-software.com/plcopenxml/objectid" handleUnknown="discard">
+            <ObjectId>bcd41922-23fa-4c27-9719-0a03add0316b</ObjectId>
+          </data>
+        </addData>
+      </pou>
+      <pou name="ConcreteCSVLogger" pouType="functionBlock">
+        <interface>
+          <localVars>
+            <variable name="fbFileOpen">
+              <type>
+                <derived name="FB_FileOpen" />
+              </type>
+              <addData>
+                <data name="http://www.3s-software.com/plcopenxml/attributes" handleUnknown="implementation">
+                  <Attributes>
+                    <Attribute Name="hide" Value="" />
+                  </Attributes>
+                </data>
+              </addData>
+            </variable>
+            <variable name="fbFilePuts">
+              <type>
+                <derived name="FB_FilePuts" />
+              </type>
+              <addData>
+                <data name="http://www.3s-software.com/plcopenxml/attributes" handleUnknown="implementation">
+                  <Attributes>
+                    <Attribute Name="hide" Value="" />
+                  </Attributes>
+                </data>
+              </addData>
+            </variable>
+            <variable name="fbFileClose">
+              <type>
+                <derived name="FB_FileClose" />
+              </type>
+              <addData>
+                <data name="http://www.3s-software.com/plcopenxml/attributes" handleUnknown="implementation">
+                  <Attributes>
+                    <Attribute Name="hide" Value="" />
+                  </Attributes>
+                </data>
+              </addData>
+            </variable>
+            <variable name="State">
+              <type>
+                <INT />
+              </type>
+              <addData>
+                <data name="http://www.3s-software.com/plcopenxml/attributes" handleUnknown="implementation">
+                  <Attributes>
+                    <Attribute Name="hide" Value="" />
+                  </Attributes>
+                </data>
+              </addData>
+            </variable>
+            <variable name="Message">
+              <type>
+                <string />
+              </type>
+              <addData>
+                <data name="http://www.3s-software.com/plcopenxml/attributes" handleUnknown="implementation">
+                  <Attributes>
+                    <Attribute Name="hide" Value="" />
+                  </Attributes>
+                </data>
+              </addData>
+            </variable>
+          </localVars>
+          <addData>
+            <data name="http://www.3s-software.com/plcopenxml/pouinheritance" handleUnknown="implementation">
+              <Inheritance>
+                <Extends>AbstractLogger</Extends>
+              </Inheritance>
+            </data>
+            <data name="http://www.3s-software.com/plcopenxml/accessmodifiers" handleUnknown="implementation">
+              <AccessModifiers Final="true" />
+            </data>
+            <data name="http://www.3s-software.com/plcopenxml/attributes" handleUnknown="implementation">
+              <Attributes>
+                <Attribute Name="hide_all_locals" Value="" />
+              </Attributes>
+            </data>
+          </addData>
+        </interface>
+        <body>
+          <ST>
+            <xhtml xmlns="http://www.w3.org/1999/xhtml">CASE State OF
+    0:  IF _Busy THEN
+            State:=State+1;
+        END_IF
+     
+    1:  fbFileOpen(bExecute:=FALSE);
+        fbFileOpen(sNetId:='', //'xxx.xx.xxx.1.1.1',
+            sPathName:='C:\Log.csv',
+            nMode:=FOPEN_MODEAPPEND,
+            bExecute:=TRUE);
+        State:=State+1;
+         
+    2:  fbFileOpen(bExecute:=FALSE);
+        IF NOT fbFileOpen.bBusy THEN
+            State:=State+1;
+        END_IF
+     
+    3:  fbFilePuts(bExecute :=FALSE);
+        fbFilePuts( bExecute:=TRUE,
+                    sNetId:='',//'xxx.xx.xxx.1.1.1',
+                    hFile:=fbFileOpen.hFile,
+                    sLine:=Message);
+        State:=State+1;
+     
+    4:  fbFilePuts(bExecute:=FALSE);
+        IF NOT fbFilePuts.bBusy THEN
+            State:=State+1;
+        END_IF
+         
+    5:  fbFileClose(bExecute :=FALSE);
+        fbFileClose(sNetId:='',//'xxx.xx.xxx.1.1.1',
+                    bExecute:=TRUE,
+                    hFile:= fbFileOpen.hFile);
+        State:=State+1; 
+         
+    6:  fbFileClose(bExecute:=FALSE);
+        IF NOT fbFileClose.bBusy THEN
+            State:=0;
+            _Busy:=FALSE;
+        END_IF
+END_CASE       </xhtml>
+          </ST>
+        </body>
+        <addData>
+          <data name="http://www.3s-software.com/plcopenxml/method" handleUnknown="implementation">
+            <Method name="InternalLog" ObjectId="54434449-0726-4fb5-95f9-848d25693a22">
+              <interface>
+                <inputVars>
+                  <variable name="Message">
+                    <type>
+                      <string />
+                    </type>
+                  </variable>
+                </inputVars>
+                <addData>
+                  <data name="http://www.3s-software.com/plcopenxml/accessmodifiers" handleUnknown="implementation">
+                    <AccessModifiers Protected="true" />
+                  </data>
+                </addData>
+              </interface>
+              <body>
+                <ST>
+                  <xhtml xmlns="http://www.w3.org/1999/xhtml">THIS^.Message:=CONCAT(Message,'$n');
+_Busy:=TRUE;</xhtml>
+                </ST>
+              </body>
+              <InterfaceAsPlainText>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">METHOD PROTECTED  InternalLog
+VAR_INPUT
+    Message:STRING;
+END_VAR
+</xhtml>
+              </InterfaceAsPlainText>
+              <addData />
+            </Method>
+          </data>
+          <data name="http://www.3s-software.com/plcopenxml/interfaceasplaintext" handleUnknown="implementation">
+            <InterfaceAsPlainText>
+              <xhtml xmlns="http://www.w3.org/1999/xhtml">{attribute 'hide_all_locals'}
+FUNCTION_BLOCK FINAL ConcreteCSVLogger EXTENDS AbstractLogger
+VAR
+    fbFileOpen:FB_FileOpen;
+    fbFilePuts:FB_FilePuts;
+    fbFileClose:FB_FileClose;
+    State:INT;
+    Message:STRING;
+END_VAR
+</xhtml>
+            </InterfaceAsPlainText>
+          </data>
+          <data name="http://www.3s-software.com/plcopenxml/objectid" handleUnknown="discard">
+            <ObjectId>fbc42bbf-3583-445b-b5e1-c224b195dbd5</ObjectId>
+          </data>
+        </addData>
+      </pou>
+      <pou name="ConcreteLoadCell" pouType="functionBlock">
+        <interface>
+          <addData>
+            <data name="http://www.3s-software.com/plcopenxml/pouinheritance" handleUnknown="implementation">
+              <Inheritance>
+                <Extends>AbstractLoadCell</Extends>
+              </Inheritance>
+            </data>
+          </addData>
+        </interface>
+        <body>
+          <ST>
+            <xhtml xmlns="http://www.w3.org/1999/xhtml" />
+          </ST>
+        </body>
+        <addData>
+          <data name="http://www.3s-software.com/plcopenxml/interfaceasplaintext" handleUnknown="implementation">
+            <InterfaceAsPlainText>
+              <xhtml xmlns="http://www.w3.org/1999/xhtml">FUNCTION_BLOCK PUBLIC ConcreteLoadCell EXTENDS AbstractLoadCell
+VAR_INPUT
+END_VAR
+VAR_OUTPUT
+END_VAR
+VAR
+END_VAR
+</xhtml>
+            </InterfaceAsPlainText>
+          </data>
+          <data name="http://www.3s-software.com/plcopenxml/objectid" handleUnknown="discard">
+            <ObjectId>7ae39fc0-1d4f-4f20-aec2-7272e61a71f8</ObjectId>
+          </data>
+        </addData>
+      </pou>
+    </pous>
+  </types>
+  <instances>
+    <configurations />
+  </instances>
+  <addData>
+    <data name="http://www.3s-software.com/plcopenxml/projectstructure" handleUnknown="discard">
+      <ProjectStructure>
+        <Folder Name="12_Concepto Keyword Abstract">
+          <Object Name="AbstractLoadCell" ObjectId="eac44cb8-b49a-4f2c-ace6-1b4d9fed91c1">
+            <Object Name="GetActualValue" ObjectId="3da4c0e9-16f4-4522-b7df-ec2fd5b3707a" />
+          </Object>
+          <Object Name="AbstractLogger" ObjectId="c28aee2d-1a6b-4bdc-b1ca-1f3861ab8247">
+            <Object Name="Busy" ObjectId="6216b7c0-1ca2-4468-a631-6e952eb95a17" />
+            <Object Name="InternalLog" ObjectId="ea59bba1-d565-4640-8f4c-85a687c8db5a" />
+            <Object Name="LogMessage" ObjectId="b8788360-1f00-4013-8afb-c957e3303db2" />
+          </Object>
+          <Object Name="ConcreteADSLogger" ObjectId="bcd41922-23fa-4c27-9719-0a03add0316b">
+            <Object Name="InternalLog" ObjectId="e1dbd88f-0eb2-4e8b-9585-69e7edd4ab47" />
+          </Object>
+          <Object Name="ConcreteCSVLogger" ObjectId="fbc42bbf-3583-445b-b5e1-c224b195dbd5">
+            <Object Name="InternalLog" ObjectId="54434449-0726-4fb5-95f9-848d25693a22" />
+          </Object>
+          <Object Name="ConcreteLoadCell" ObjectId="7ae39fc0-1d4f-4f20-aec2-7272e61a71f8" />
+          <Object Name="_12_Concepto_Keyword_Abstract" ObjectId="e7172edd-04b5-47f1-92d3-4540317a4a92" />
+        </Folder>
+      </ProjectStructure>
+    </data>
+  </addData>
+</project>

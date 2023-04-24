@@ -1,0 +1,100 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.12">
+  <POU Name="_12_Concepto_Keyword_Abstract" Id="{e7172edd-04b5-47f1-92d3-4540317a4a92}" SpecialFunc="None">
+    <Declaration><![CDATA[PROGRAM _12_Concepto_Keyword_Abstract
+VAR
+// 	fbLoadCell:REFERENCE TO AbstractLoadCell;
+	
+	ConcreteCSVLogger:ConcreteCSVLogger;
+    ConcreteAdsLogger:ConcreteADSLogger;
+    AbstractLogger:POINTER TO AbstractLogger;
+    LogNow:BOOL;
+    Process1:INT;
+    Process2:INT;
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[(*
+Concepto ABSTRACTO
+La palabra clave ABSTRACT está disponible para bloques de funciones, métodos y propiedades. Permite la implementación de un proyecto PLC con niveles de abstracción.
+La abstracción es un concepto clave de la programación orientada a objetos. Los diferentes niveles de abstracción contienen aspectos de implementación generales o específicos.
+
+CONCEPTO ABSTRACTO 1:	
+Disponible en TC3.1 Build 4024
+
+Aplicación de la abstracción
+Es útil implementar funciones básicas o puntos en común de diferentes clases en una clase básica abstracta. Se implementan aspectos específicos en subclases no abstractas.
+El principio es similar al uso de una interfaz. Las interfaces corresponden a clases puramente abstractas que contienen sólo métodos y propiedades abstractas.
+Una clase abstracta también puede contener métodos y propiedades no abstractos.
+
+Reglas para el uso de la palabra clave ABSTRACT
+Los bloques de funciones abstractas no se pueden instanciar.
+Los bloques de funciones abstractas pueden contener métodos y propiedades abstractos y no abstractos.
+Los métodos abstractos o las propiedades no contienen ninguna implementación (solo la declaración).
+Si un bloque de funciones contiene un método o propiedad abstracta, debe ser abstracta.
+Los bloques de funciones abstractas deben extenderse para poder implementar los métodos o propiedades abstractas.
+Por lo tanto: Un FB derivado debe implementar los métodos / propiedades de su FB básico o también debe definirse como abstracto.
+Muestra
+Clase básica abstracta:
+
+FUNCTION_BLOCK ABSTRACT FB_System_Base
+Los puntos en común de todos los módulos del sistema se implementan en esta clase básica abstracta. Contiene la propiedad no abstracta "nSystemID" y el método abstracto "Execute" para esto:
+
+PROPERTY nSystemID : UINT
+METHOD ABSTRACT Execute
+mientras que la implementación de "nSystemID" es la misma para todos los sistemas, la implementación del método "Execute" difiere para los sistemas individuales.
+
+Subclase no abstracta:
+
+FUNCTION_BLOCK FB_StackSystem EXTENDS FB_System_Base
+Las clases no abstractas que se derivan de la clase básica se implementan para los sistemas específicos. Esta subclase representa una pila. Dado que no es abstracto, debe implementar el método "Execute" que define la ejecución específica de la pila:
+
+METHOD Execute
+
+*)
+
+// Process 1 assigns a logger and starts task 2.
+CASE Process1 OF
+    0: IF LogNow THEN
+            LogNow:=FALSE;
+            AbstractLogger:= ADR(ConcreteAdsLogger);
+            Process2 :=1;
+            Process1:=Process1+1;               
+        END_IF
+     
+    1: IF Process2 = 0 THEN
+            AbstractLogger:= ADR(ConcreteCSVLogger);
+            Process2:=1;
+            Process1:=Process1+1;   
+       END_IF
+        
+     2:IF Process2 = 0 THEN
+            AbstractLogger:= ADR(ConcreteAdsLogger);
+            Process2:=1;
+            Process1:=Process1+1;   
+       END_IF
+        
+      3: IF Process2 = 0 THEN
+            AbstractLogger:= ADR(ConcreteCSVLogger);
+            Process2:=1;
+            Process1:=Process1+1;   
+       END_IF
+        
+      4:IF Process2 = 0 THEN
+            Process1:=0;    
+       END_IF
+END_CASE
+ 
+//Process 2 does its task indepently of the assigned type of logger. 
+CASE process2 OF
+    1: AbstractLogger^.LogMessage(CONCAT('Important message ',INT_TO_STRING(Process1)));
+       process2:=process2+1;                
+         
+    2: AbstractLogger^();
+       IF NOT AbstractLogger^.Busy THEN
+            process2:=0;    
+       END_IF
+END_CASE]]></ST>
+    </Implementation>
+  </POU>
+</TcPlcObject>

@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.12">
+  <POU Name="AbstractLogger" Id="{c28aee2d-1a6b-4bdc-b1ca-1f3861ab8247}" SpecialFunc="None">
+    <Declaration><![CDATA[FUNCTION_BLOCK ABSTRACT AbstractLogger
+
+VAR
+	_Busy:BOOL; //Backing variable for Busy property.
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[]]></ST>
+    </Implementation>
+    <Property Name="Busy" Id="{6216b7c0-1ca2-4468-a631-6e952eb95a17}">
+      <Declaration><![CDATA[{attribute 'monitoring' := 'variable'}
+PROPERTY Busy : BOOL]]></Declaration>
+      <Get Name="Get" Id="{51fb707d-4aed-4c1b-bac1-261c5b28e2fe}">
+        <Declaration><![CDATA[VAR
+END_VAR
+]]></Declaration>
+        <Implementation>
+          <ST><![CDATA[Busy:=_Busy;]]></ST>
+        </Implementation>
+      </Get>
+      <Set Name="Set" Id="{54c082a9-3944-4455-abe0-913bbd16d662}">
+        <Declaration><![CDATA[VAR
+END_VAR
+]]></Declaration>
+        <Implementation>
+          <ST><![CDATA[]]></ST>
+        </Implementation>
+      </Set>
+    </Property>
+    <Method Name="InternalLog" Id="{ea59bba1-d565-4640-8f4c-85a687c8db5a}">
+      <Declaration><![CDATA[METHOD PROTECTED ABSTRACT InternalLog
+VAR_INPUT
+	Message:STRING;
+END_VAR
+]]></Declaration>
+      <Implementation>
+        <ST><![CDATA[]]></ST>
+      </Implementation>
+    </Method>
+    <Method Name="LogMessage" Id="{b8788360-1f00-4013-8afb-c957e3303db2}">
+      <Declaration><![CDATA[METHOD PUBLIC LogMessage
+VAR_INPUT
+	Message:STRING;
+END_VAR
+VAR
+    GetSystemTime : NT_GetTime:=(NetID:=''); //'xxx.xxx.xxx.1.1.1');
+END_VAR
+]]></Declaration>
+      <Implementation>
+        <ST><![CDATA[// Retrieve a the current system time and combine it with the input message. 
+GetSystemTime(START:=FALSE);
+REPEAT
+    GetSystemTime(START:=TRUE);
+UNTIL (NOT GetSystemTime.BUSY)
+END_REPEAT
+ 
+//Call abstract method
+InternalLog(Message:=CONCAT(CONCAT(Message,', '),SYSTEMTIME_TO_STRING(GetSystemTime.TIMESTR)));]]></ST>
+      </Implementation>
+    </Method>
+  </POU>
+</TcPlcObject>

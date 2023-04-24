@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <project xmlns="http://www.plcopen.org/xml/tc6_0200">
-  <fileHeader companyName="Beckhoff Automation GmbH" productName="TwinCAT PLC Control" productVersion="3.5.13.21" creationDateTime="2023-04-23T11:42:48.8573622" />
-  <contentHeader name="OOP_Curso" modificationDateTime="2023-04-23T11:42:48.8641947">
+  <fileHeader companyName="Beckhoff Automation GmbH" productName="TwinCAT PLC Control" productVersion="3.5.13.21" creationDateTime="2023-04-24T11:19:05.539867" />
+  <contentHeader name="OOP_Curso" modificationDateTime="2023-04-24T11:19:05.539867">
     <coordinateInfo>
       <fbd>
         <scaling x="1" y="1" />
@@ -669,7 +669,7 @@ END_VAR
           </data>
         </addData>
       </pou>
-      <pou name="POU_Main_FB_Abstract" pouType="program">
+      <pou name="_13_1_Main_Abstract" pouType="program">
         <interface>
           <localVars>
             <variable name="fbFullTimeEmployee">
@@ -740,7 +740,7 @@ aMonthlySalary[2] := refEmployee.GetMonthlySalary();</xhtml>
         <addData>
           <data name="http://www.3s-software.com/plcopenxml/interfaceasplaintext" handleUnknown="implementation">
             <InterfaceAsPlainText>
-              <xhtml xmlns="http://www.w3.org/1999/xhtml">PROGRAM POU_Main_FB_Abstract
+              <xhtml xmlns="http://www.w3.org/1999/xhtml">PROGRAM _13_1_Main_Abstract
 VAR	
 	fbFullTimeEmployee	:	FB_FullTimeEmployee;
 	fbContractEmployee	:	FB_ContractEmployee;
@@ -1591,7 +1591,7 @@ END_VAR
           </data>
         </addData>
       </pou>
-      <pou name="POU_Main_Interfaz" pouType="program">
+      <pou name="_13_2_Main_Interfaz" pouType="program">
         <interface>
           <localVars>
             <variable name="fbFullTimeEmployee">
@@ -1662,7 +1662,7 @@ aMonthlySalary[2] := ipEmployee.GetMonthlySalary();</xhtml>
         <addData>
           <data name="http://www.3s-software.com/plcopenxml/interfaceasplaintext" handleUnknown="implementation">
             <InterfaceAsPlainText>
-              <xhtml xmlns="http://www.w3.org/1999/xhtml">PROGRAM POU_Main_Interfaz
+              <xhtml xmlns="http://www.w3.org/1999/xhtml">PROGRAM _13_2_Main_Interfaz
 VAR
 	fbFullTimeEmployee	:	FB_FullTimeEmployee_1;
 	fbContractEmployee	:	FB_ContractEmployee_1;
@@ -2330,7 +2330,7 @@ END_VAR
           </data>
         </addData>
       </pou>
-      <pou name="POU_Main_Combinacion" pouType="program">
+      <pou name="_13_3_Main_Combinacion" pouType="program">
         <interface>
           <localVars>
             <variable name="fbFullTimeEmployee">
@@ -2414,7 +2414,7 @@ aMonthlySalary[2] := ipEmployee.GetMonthlySalary();</xhtml>
         <addData>
           <data name="http://www.3s-software.com/plcopenxml/interfaceasplaintext" handleUnknown="implementation">
             <InterfaceAsPlainText>
-              <xhtml xmlns="http://www.w3.org/1999/xhtml">PROGRAM POU_Main_Combinacion
+              <xhtml xmlns="http://www.w3.org/1999/xhtml">PROGRAM _13_3_Main_Combinacion
 VAR
 	fbFullTimeEmployee	:	FB_FullTimeEmployee_2;
 	fbContractEmployee	:	FB_ContractEmployee_2;
@@ -2647,7 +2647,7 @@ END_VAR
     </data>
     <data name="http://www.3s-software.com/plcopenxml/projectstructure" handleUnknown="discard">
       <ProjectStructure>
-        <Folder Name="12_FB_Abstracto_vs_Interface">
+        <Folder Name="13_FB_Abstracto_vs_Interface">
           <Folder Name="1_FB_Abstracto">
             <Object Name="FB_ContractEmployee" ObjectId="157c2f82-61ed-4d42-a2ee-c21047f94b9c">
               <Object Name="GetMonthlySalary" ObjectId="c12eb332-fc82-426a-92c7-ec1217ac0d92" />
@@ -2665,7 +2665,7 @@ END_VAR
               <Object Name="GetMonthlySalary" ObjectId="19b65e9d-1ce3-41b1-864d-5a175dc14c55" />
               <Object Name="nAnnualSalary" ObjectId="ecc488aa-1029-4a23-bad9-42ea4e1652f0" />
             </Object>
-            <Object Name="POU_Main_FB_Abstract" ObjectId="dfd76726-57c0-4eac-83ea-799c6219e26f" />
+            <Object Name="_13_1_Main_Abstract" ObjectId="dfd76726-57c0-4eac-83ea-799c6219e26f" />
           </Folder>
           <Folder Name="2_Interfaz">
             <Object Name="FB_ContractEmployee_1" ObjectId="9e3681b7-c4fc-4016-b0d2-f341b5d9712f">
@@ -2692,7 +2692,7 @@ END_VAR
               <Object Name="sFirstName" ObjectId="c49f2840-d07d-45f2-9e62-4a95c0f223dd" />
               <Object Name="sLastName" ObjectId="b6ff284d-bc9d-4c34-b7d3-c25b9e603786" />
             </Object>
-            <Object Name="POU_Main_Interfaz" ObjectId="4f53430b-f645-4491-84d3-5fa3d2983840" />
+            <Object Name="_13_2_Main_Interfaz" ObjectId="4f53430b-f645-4491-84d3-5fa3d2983840" />
           </Folder>
           <Folder Name="3_Combinacion">
             <Object Name="FB_ContractEmployee_2" ObjectId="c95723a0-cc2b-4163-ac14-a3ce520e2a04">
@@ -2718,7 +2718,7 @@ END_VAR
               <Object Name="sFirstName" ObjectId="00143853-358d-4425-a2db-11a591a8d9ca" />
               <Object Name="sLastName" ObjectId="276d5ab2-6d36-4e1f-b084-4333965be967" />
             </Object>
-            <Object Name="POU_Main_Combinacion" ObjectId="6a72df8c-ca8f-4792-b7d5-7473aecf839b" />
+            <Object Name="_13_3_Main_Combinacion" ObjectId="6a72df8c-ca8f-4792-b7d5-7473aecf839b" />
           </Folder>
         </Folder>
       </ProjectStructure>
