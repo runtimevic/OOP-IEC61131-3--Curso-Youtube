@@ -138,6 +138,7 @@ nav:
        - SUPER puntatore: Classi e Oggetti/SUPER puntatore.md    
        - Interfaccia: Classi e Oggetti/Interfaccia.md
        - puntatore e riferimento: Classi e Oggetti/puntatore e riferimento.md
+       - Parola chiave Abstracto: Classi e Oggetti/Keyword_Abstract.md
        - FB Abstract vs. Interfaccia: Classi e Oggetti/FB abstract vs Interfaccia.md
     - Tabella dei modificatori di accesso: Tabella dei modificatori di accesso.md    
     - Tipi di variabili e variabili speciali: Tipi di variabili e variabili speciali.md
@@ -165,4 +166,5 @@ nav:
     - Modelli di progettazione:
        - Modelli di progettazione: Modelli di progettazione/_Modelli di progettazione.md
        - Modello di strategia: Modelli di progettazione/modello di strategia.md
+       - Modello astratto della fabbrica: Modelli di progettazione/The Abstract Factory Pattern.md
     - Links: links.md 

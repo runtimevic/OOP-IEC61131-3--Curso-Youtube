@@ -138,6 +138,7 @@ nav:
        - SUPER pointer: Clases y Objetos/SUPER pointer.md    
        - Interface: Clases y Objetos/interface.md
        - pointer and reference: Clases y Objetos/pointer and reference.md
+       - Keyword Abstract: Clases y Objetos/Keyword_Abstract.md
        - Abstract FB vs. Interface: Clases y Objetos/FB abstracto frente a interfaz.md
     - Access Modifiers Table: Tabla de Modificadores de acceso.md    
     - Variable types and special variables: Variable types and special variables.md
@@ -165,4 +166,5 @@ nav:
     - Design patterns:
        - Design patterns: Patrones de Diseño/_Patrones de Diseño.md
        - Strategy Pattern: Patrones de Diseño/Strategy pattern.md
+       - The Abstract Factory Pattern: Patrones de Diseño/The Abstract Factory Pattern.md
     - Links: links.md 
