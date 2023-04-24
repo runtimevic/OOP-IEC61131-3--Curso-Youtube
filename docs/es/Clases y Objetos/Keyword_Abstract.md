@@ -5,12 +5,21 @@ La palabra clave ABSTRACT está disponible para bloques de funciones, métodos y
 La abstracción es un concepto clave de la programación orientada a objetos. Los diferentes niveles de abstracción contienen aspectos de implementación generales o específicos.
 
 ### <span style="color:grey">CONCEPTO ABSTRACTO 1:</span>
-Disponible en TC3.1 Build 4024
+Ya estaba disponible en CODESYS, pero con el lanzamiento de TwinCAT 4024 ahora también está disponible en TwinCAT: la palabra clave ABSTRACT. Disponible en TC3.1 Build 4024.
 
 ### <span style="color:grey">Aplicación de la abstracción:</span>
 Es útil implementar funciones básicas o puntos en común de diferentes clases en una clase básica abstracta. Se implementan aspectos específicos en subclases no abstractas.
 El principio es similar al uso de una interfaz. Las interfaces corresponden a clases puramente abstractas que contienen sólo métodos y propiedades abstractas.
 Una clase abstracta también puede contener métodos y propiedades no abstractos.
+
+La abstracción y el uso de la palabra clave abstract es una práctica común en OOP y muchos lenguajes de nivel superior como C# lo admiten. A menudo se considera como el cuarto pilar de la programación orientada a objetos. 
+
+### <span style="color:grey">¿Por qué necesitamos la abstracción?</span>
+Para comprender por qué la abstracción es tan importante en la programación orientada a objetos, volvamos rápidamente a la definición de abstracción. La abstracción consiste en ocultar al usuario detalles de implementación innecesarios y centrarse en la funcionalidad.
+
+Considere un bloque de funciones que implementa una funcionalidad básica de celda de carga. Para usar esto, todo lo que necesitamos saber es que necesita una señal de entrada sin procesar y un factor de escala, y nos proporcionará un valor de salida en Newton. No necesitamos saber cómo se convierte, filtra y escala el valor de salida. Deja que alguien más se preocupe por eso. No es de influencia en nuestro programa. Solo trabajaremos con una interfaz simple de una celda de carga.
+
+Es bueno saber que el uso de abstracciones está estrechamente relacionado con el principio de inversión de dependencia,  uno de los principios SOLID . Esto se vuelve especialmente importante cuando comienzas a trabajar con pruebas unitarias.
 
 ### <span style="color:grey">Reglas para el uso de la palabra clave ABSTRACT:</span>
 
@@ -42,9 +51,10 @@ Las clases no abstractas que se derivan de la clase básica se implementan para 
 ```javascript
 METHOD Execute
 ```
-
 ### <span style="color:grey">Ejemplo de Demostracion de la palabra clave ABSTRACT en TwinCAT:</span>
 
-proyecto de la carpeta: 12_Concepto Keyword Abstract
+- 🔗 [The ABSTRACT keyword, www.plccoder.com ](https://www.plccoder.com/abstract/)
 
 ### <span style="color:grey">Links de ABSTRACT:</span>
+
+- 🔗 [The ABSTRACT keyword, www.plccoder.com ](https://www.plccoder.com/abstract/)
