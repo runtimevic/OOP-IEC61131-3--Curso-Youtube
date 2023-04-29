@@ -28,3 +28,4 @@
     - :link: [009 - OOP IEC 61131-3 PLC -- Punteros THIS^ y SUPER^](https://youtu.be/S3YdAHyBc6I)
     - :link: [010 - OOP IEC 61131-3 PLC -- Interface](https://youtu.be/ix0Amyg9RcU)
     - :link: [011 - OOP IEC 61131-3 PLC -- Puntero vs Referencia](https://youtu.be/AnJZmwQWaYQ)
+    - :link: [012 - OOP IEC 61131-3 PLC -- Abstract](https://youtu.be/-Jq0jg0foo4)
