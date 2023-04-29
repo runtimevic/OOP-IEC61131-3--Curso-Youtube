@@ -1,11 +1,10 @@
 ---
-title: Lorem ipsum dolor sit amet
-description: Nullam urna elit, malesuada eget finibus ut, ac tortor.
-subtitle: Nullam urna elit, malesuada eget finibus ut, ac tortor
+title: Links
+description: Listado de Links OOP.
+subtitle: Links subtitulo
 ---
 
-### Links
-
+### <span style="color:grey">Links de OOP:</span>
 
 
 

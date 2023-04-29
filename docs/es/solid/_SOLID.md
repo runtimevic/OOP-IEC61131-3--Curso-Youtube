@@ -14,6 +14,7 @@
 ***
 
 Además de los principios SOLID, existen otros principios como:
+
 - Keep It Simple, Stupid (KISS).
 - Don't Repeat Yourself (DRY).
 - Law Of Demeter (LOD).
