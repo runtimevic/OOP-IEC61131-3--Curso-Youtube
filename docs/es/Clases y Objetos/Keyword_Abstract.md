@@ -5,7 +5,7 @@ La palabra clave ABSTRACT está disponible para bloques de funciones, métodos y
 La abstracción es un concepto clave de la programación orientada a objetos. Los diferentes niveles de abstracción contienen aspectos de implementación generales o específicos.
 
 ### <span style="color:grey">Disponibilidad ABSTRACTO:</span>
-Ya estaba disponible en CODESYS, pero con el lanzamiento de TwinCAT 4024 ahora también está disponible en TwinCAT: la palabra clave ABSTRACT. Disponible en TC3.1 Build 4024.
+Ya estaba disponible en CODESYS, pero con el lanzamiento de TwinCAT 4024 ahora también está disponible en TwinCAT: la palabra clave ABSTRACT. (Disponible en TC3.1 Build 4024).
 
 ### <span style="color:grey">Aplicación de la abstracción:</span>
 Es útil implementar funciones básicas o puntos en común de diferentes clases en una clase básica abstracta. Se implementan aspectos específicos en subclases no abstractas.

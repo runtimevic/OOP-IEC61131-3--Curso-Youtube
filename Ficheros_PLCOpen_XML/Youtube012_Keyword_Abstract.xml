@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <project xmlns="http://www.plcopen.org/xml/tc6_0200">
-  <fileHeader companyName="Beckhoff Automation GmbH" productName="TwinCAT PLC Control" productVersion="3.5.13.21" creationDateTime="2023-04-24T11:18:57.3670637" />
-  <contentHeader name="OOP_Curso" modificationDateTime="2023-04-24T11:18:57.3670637">
+  <fileHeader companyName="Beckhoff Automation GmbH" productName="TwinCAT PLC Control" productVersion="3.5.13.21" creationDateTime="2023-04-29T10:41:28.5260482" />
+  <contentHeader name="OOP_Curso" modificationDateTime="2023-04-29T10:41:28.535808">
     <coordinateInfo>
       <fbd>
         <scaling x="1" y="1" />
@@ -25,13 +25,15 @@
       <pou name="_12_Concepto_Keyword_Abstract" pouType="program">
         <interface>
           <localVars>
+            <variable name="fbLoadCell">
+              <type>
+                <derived name="REFERENCE TO AbstractLoadCell" />
+              </type>
+            </variable>
             <variable name="ConcreteCSVLogger">
               <type>
                 <derived name="ConcreteCSVLogger" />
               </type>
-              <documentation>
-                <xhtml xmlns="http://www.w3.org/1999/xhtml"> 	fbLoadCell:REFERENCE TO AbstractLoadCell;</xhtml>
-              </documentation>
             </variable>
             <variable name="ConcreteAdsLogger">
               <type>
@@ -154,11 +156,12 @@ END_CASE</xhtml>
             <InterfaceAsPlainText>
               <xhtml xmlns="http://www.w3.org/1999/xhtml">PROGRAM _12_Concepto_Keyword_Abstract
 VAR
-// 	fbLoadCell:REFERENCE TO AbstractLoadCell;
-	
+ 	fbLoadCell:REFERENCE TO AbstractLoadCell;
+	   
 	ConcreteCSVLogger:ConcreteCSVLogger;
     ConcreteAdsLogger:ConcreteADSLogger;
-    AbstractLogger:POINTER TO AbstractLogger;
+	AbstractLogger:POINTER TO AbstractLogger;
+ 
     LogNow:BOOL;
     Process1:INT;
     Process2:INT;

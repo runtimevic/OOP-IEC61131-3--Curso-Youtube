@@ -3,11 +3,12 @@
   <POU Name="_12_Concepto_Keyword_Abstract" Id="{e7172edd-04b5-47f1-92d3-4540317a4a92}" SpecialFunc="None">
     <Declaration><![CDATA[PROGRAM _12_Concepto_Keyword_Abstract
 VAR
-// 	fbLoadCell:REFERENCE TO AbstractLoadCell;
-	
+ 	fbLoadCell:REFERENCE TO AbstractLoadCell;
+	   
 	ConcreteCSVLogger:ConcreteCSVLogger;
     ConcreteAdsLogger:ConcreteADSLogger;
-    AbstractLogger:POINTER TO AbstractLogger;
+	AbstractLogger:POINTER TO AbstractLogger;
+ 
     LogNow:BOOL;
     Process1:INT;
     Process2:INT;
