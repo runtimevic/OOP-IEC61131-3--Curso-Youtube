@@ -51,11 +51,6 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://runtimevic.github.io/OOP-IEC61131-3--Curso-Youtube/relaciones/</loc>
-         <lastmod>2023-04-30</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
          <loc>https://runtimevic.github.io/OOP-IEC61131-3--Curso-Youtube/requeriments/</loc>
          <lastmod>2023-04-30</lastmod>
          <changefreq>daily</changefreq>
@@ -197,6 +192,11 @@
     </url>
     <url>
          <loc>https://runtimevic.github.io/OOP-IEC61131-3--Curso-Youtube/UML/UML/</loc>
+         <lastmod>2023-04-30</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://runtimevic.github.io/OOP-IEC61131-3--Curso-Youtube/UML/relations/</loc>
          <lastmod>2023-04-30</lastmod>
          <changefreq>daily</changefreq>
     </url>

@@ -148,8 +148,7 @@ nav:
        - Abstracción: principios/abstraccion.md
        - Encapsulamiento: principios/encapsulamiento.md
        - Herencia: principios/herencia.md
-       - Polimorfismo: principios/polimorfismo.md
-    - Relaciones: relaciones.md
+       - Polimorfismo: principios/polimorfismo.md    
     - SOLID: 
        - SOLID: solid/_SOLID.md
        - Principio de Responsabilidad Única: solid/Principio de Responsabilidad Única.md
@@ -160,6 +159,7 @@ nav:
     - UML: 
        - UML: UML/UML.md
        - Class UML: UML/Class UML.md
+       - Relaciones: UML/relaciones.md
        - StateChart UML: UML/Statechart UML.md
     - Tipos de Diseño para programacion de PLC: Tipos de Diseño para programacion de PLC.md
     - Patrones de Diseño:

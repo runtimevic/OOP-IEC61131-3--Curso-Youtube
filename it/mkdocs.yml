@@ -150,7 +150,6 @@ nav:
        - Incapsulamento: principi/Incapsulamento.md
        - Ereditarietà: principi/Eredita.md
        - Polimorfismo: principi/Polimorfismo.md
-    - Relazioni: Relazioni.md
     - SOLID: 
        - SOLID: Solid/_SOLID.md
        - Principio di responsabilità esclusiva: Solid/Principio di responsabilita esclusiva.md
@@ -161,6 +160,7 @@ nav:
     - UML: 
        - UML: UML/UML.md
        - Classe UML: UML/Classe UML.md
+       - Relazioni: UML/Relazioni.md
        - StateChart UML: UML/Statechart UML.md
     - Tipi di progettazione per la programmazione PLC: Tipi di progettazione per la programmazione PLC.md
     - Modelli di progettazione:
