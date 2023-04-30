@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.12">
+  <Itf Name="I_Calculate" Id="{9a89b709-23b4-4f59-9523-40adfd5fa329}">
+    <Declaration><![CDATA[INTERFACE I_Calculate
+]]></Declaration>
+    <Method Name="Clear" Id="{99b54dbd-bfee-463b-ab11-2cec5955bc7d}">
+      <Declaration><![CDATA[METHOD Clear : I_Calculate
+
+]]></Declaration>
+    </Method>
+    <Method Name="DecreaseBy" Id="{8b94408c-fd63-4aa5-b636-baf239f7028e}">
+      <Declaration><![CDATA[METHOD DecreaseBy : I_Calculate
+VAR_INPUT
+	lDecreaseBy : REAL;
+END_VAR
+]]></Declaration>
+    </Method>
+    <Method Name="DivideBy" Id="{71bcaa5c-b3bf-4673-8566-ac685c13bfac}">
+      <Declaration><![CDATA[METHOD DivideBy : I_Calculate
+VAR_INPUT
+	lDivideBy : REAL;
+END_VAR]]></Declaration>
+    </Method>
+    <Method Name="GetResult" Id="{3bcc4857-e052-457f-a9c1-aff1a05e935f}">
+      <Declaration><![CDATA[METHOD GetResult : LREAL
+VAR_INPUT
+END_VAR
+]]></Declaration>
+    </Method>
+    <Method Name="IncreaseBy" Id="{e8644b0e-0c6d-4710-be1b-4f6c4a23f7af}">
+      <Declaration><![CDATA[METHOD IncreaseBy : I_Calculate
+VAR_INPUT
+	lIncreaseBy : REAL;
+END_VAR
+]]></Declaration>
+    </Method>
+    <Method Name="MultiplyBy" Id="{0b9d9e96-f758-4358-b75b-72e2c3603b98}">
+      <Declaration><![CDATA[METHOD MultiplyBy : I_Calculate
+VAR_INPUT
+	lMultiplyBy : REAL;
+END_VAR
+]]></Declaration>
+    </Method>
+    <Method Name="SetNumber" Id="{a2d82639-f74a-4fe7-8d71-7f8b1d0bf467}">
+      <Declaration><![CDATA[METHOD SetNumber : I_Calculate
+VAR_INPUT
+	lNumber : LREAL;
+END_VAR
+]]></Declaration>
+    </Method>
+  </Itf>
+</TcPlcObject>

@@ -1,0 +1,91 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.12">
+  <POU Name="FB_Calculate" Id="{fd0f0c21-0296-466b-abff-e0b229984285}" SpecialFunc="None">
+    <Declaration><![CDATA[FUNCTION_BLOCK FB_Calculate IMPLEMENTS I_Calculate
+VAR
+	{attribute  'hide'}
+	lResult : LREAL := 0;
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[]]></ST>
+    </Implementation>
+    <Method Name="Clear" Id="{33b45ed3-12a4-4213-8e47-d19c93bca373}">
+      <Declaration><![CDATA[
+METHOD Clear : I_Calculate
+]]></Declaration>
+      <Implementation>
+        <ST><![CDATA[MEMSET(destAddr:= ADR(lResult),fillByte :=0, n:=SIZEOF(lResult));
+Clear := THIS^;]]></ST>
+      </Implementation>
+    </Method>
+    <Method Name="DecreaseBy" Id="{6b72b71c-27c8-4bf6-a884-8f4d65f2ba98}">
+      <Declaration><![CDATA[
+METHOD DecreaseBy : I_Calculate
+VAR_INPUT
+	lDecreaseBy : REAL;
+END_VAR]]></Declaration>
+      <Implementation>
+        <ST><![CDATA[lResult := lResult - lDecreaseBy;
+DecreaseBy := THIS^;]]></ST>
+      </Implementation>
+    </Method>
+    <Method Name="DivideBy" Id="{4f10380e-fa29-4ad3-86e5-a4e15fbb69ff}">
+      <Declaration><![CDATA[
+METHOD DivideBy : I_Calculate
+VAR_INPUT
+	lDivideBy : REAL;
+END_VAR]]></Declaration>
+      <Implementation>
+        <ST><![CDATA[IF lDivideBy = 0 THEN
+	lResult := 0;
+ELSE	
+	lResult := lResult / lDivideBy;
+END_IF
+
+DivideBy := THIS^;]]></ST>
+      </Implementation>
+    </Method>
+    <Method Name="GetResult" Id="{ed0383b5-a43c-41e3-8070-9451dbf58f49}">
+      <Declaration><![CDATA[
+METHOD GetResult : LREAL
+]]></Declaration>
+      <Implementation>
+        <ST><![CDATA[GetResult := lResult;]]></ST>
+      </Implementation>
+    </Method>
+    <Method Name="IncreaseBy" Id="{7e263cec-5197-47d7-a28d-e3fc97c94677}">
+      <Declaration><![CDATA[METHOD IncreaseBy : I_Calculate
+VAR_INPUT
+	lIncreaseBy : REAL;
+END_VAR]]></Declaration>
+      <Implementation>
+        <ST><![CDATA[lResult := lResult + lIncreaseBy;
+IncreaseBy := THIS^;]]></ST>
+      </Implementation>
+    </Method>
+    <Method Name="MultiplyBy" Id="{0f8b7f56-e647-4043-b82c-156f134385a4}">
+      <Declaration><![CDATA[
+METHOD MultiplyBy : I_Calculate
+VAR_INPUT
+	lMultiplyBy : REAL;
+END_VAR
+]]></Declaration>
+      <Implementation>
+        <ST><![CDATA[lResult := lResult * lMultiplyBy;
+MultiplyBy := THIS^;]]></ST>
+      </Implementation>
+    </Method>
+    <Method Name="SetNumber" Id="{e56ecddd-c17f-4c0c-b3ed-ea2c5a33467e}">
+      <Declaration><![CDATA[METHOD SetNumber : I_Calculate
+VAR_INPUT
+	lNumber : LREAL;
+END_VAR
+]]></Declaration>
+      <Implementation>
+        <ST><![CDATA[lResult := lNumber;
+SetNumber := THIS^;]]></ST>
+      </Implementation>
+    </Method>
+  </POU>
+</TcPlcObject>

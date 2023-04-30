@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.12">
+  <Itf Name="I_SetNumber" Id="{a8bfa0b1-c7e9-461a-8f37-98b910e38d5b}">
+    <Declaration><![CDATA[INTERFACE I_SetNumber
+]]></Declaration>
+    <Method Name="SetNumber" Id="{0e8d76fc-c3ae-42ca-98ba-521a40642a18}">
+      <Declaration><![CDATA[METHOD SetNumber : I_Operation
+VAR_INPUT
+	lNumber : LREAL;
+END_VAR
+]]></Declaration>
+    </Method>
+  </Itf>
+</TcPlcObject>

@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.12">
+  <POU Name="_14_Interface_Fluida" Id="{d773237d-8a88-4f7f-ae3b-c36a66e1a868}" SpecialFunc="None">
+    <Declaration><![CDATA[PROGRAM _14_Interface_Fluida
+VAR
+	fMyResult1 : LREAL;
+	fbCalculate : FB_Calculate;
+	
+	fMyResult2 : LREAL;
+	fbCalcul : FB_Calcul;
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[// 14_1 : se ha realizado un ejemplo de interface fluida.
+fMyResult1 := fbCalculate.Clear()
+		            		.SetNumber(12)
+		        			.DecreaseBy(2)
+		        			.IncreaseBy(3.9)
+	                		.MultiplyBy(5)
+		        			.DivideBy(3)
+		        			.GetResult();
+						
+// 14_2 : se ha optimazado un poco, para que la interfaz fluida no deje ir encadenando metodos que se contradigan entre si...	
+// por ejemplo el metodo SetNumber() solo tiene sentido después del metodo Clear()..
+// y los metodos de realizar operaciones solo tienen sentido si ha realizado antes el metodo SetNumber()...					
+fMyResult2 := fbCalcul.Clear()
+						.SetNumber(12)
+						.DecreaseBy(2)
+		        		.IncreaseBy(3.9)
+	                	.MultiplyBy(5)
+		        		.DivideBy(3)						
+						.GetResult();
+
+// 14_3 : la forma mas optima sería que primero de todo solo pidiese el metodo Clear() y despues solo saliese el metodo SetNumber() y después ya se pudiesen poner solo los metodos de operaciones y el de GetResult()
+
+					]]></ST>
+    </Implementation>
+  </POU>
+</TcPlcObject>

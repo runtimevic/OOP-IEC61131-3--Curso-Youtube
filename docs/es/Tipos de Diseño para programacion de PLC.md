@@ -9,21 +9,17 @@ Ingenieria de desarrollo para la programación OOP
 - Diseño en UML.
 
 Units: (Ejemplo de Unidades):
+-FBTimer
 -FCAnalogSensor
 -FBGenericUnit
 
 !!! puntos que se pueden incluir en el curso!!!
 
 - Basic of Structured Text programming Language
+- UDT (estructuras)
 - Modular Design
-- Classes
-- Methods
-- Properties
-- Inheritance
 - Polymorphism
 - Access Specifiers
-- Pointers and References
-- Interfaces and Abstractions
 - Advanced State Pattern
 - Wrappers and Features
 - Layered Design

@@ -22,3 +22,5 @@ Cada caja representa un bloque de función y siempre se divide en tres secciones
 - 🔗 [www.planttext.com](https://www.planttext.com/)
 
 - 🔗 [UML Infosys Beckhoff](https://infosys.beckhoff.com/english.php?content=../content/1033/tf1910_tc3_uml/1510519307.html&id=)
+
+- 🔗 [Tutorial - Diagrama de Clases UML](https://www.youtube.com/watch?v=Z0yLerU0g-Q)

@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.12">
+  <Itf Name="I_Clear" Id="{83be75c4-62a3-4d02-8eb0-dde04a84ab35}">
+    <Declaration><![CDATA[INTERFACE I_Clear
+]]></Declaration>
+    <Method Name="Clear" Id="{195c8fc3-ce62-471f-8dec-0cc2a3f7ae6b}">
+      <Declaration><![CDATA[METHOD Clear : I_SetNumber
+
+]]></Declaration>
+    </Method>
+  </Itf>
+</TcPlcObject>
