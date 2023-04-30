@@ -31,7 +31,7 @@ Podemos pensar en la interfaz fluida como un concepto, mientras que el encadenam
 Al hacer que el código sea comprensible y fluido, la interfaz fluida le da la impresión de que está leyendo una oración. Para lograr este patrón de diseño, necesitaría usar **el encadenamiento de métodos**.
 
 En esta técnica, cada método devuelve un objeto y puede encadenar todos los métodos.
- 
+
 - veanse los links a los que se hace referencia, veremos un ejemplo en el cual implementaremos una interface fluida para realizar operaciones matematicas...
 
 ![Fluid_Interface](../imagenes/Fluid_Interface.PNG)
@@ -41,3 +41,5 @@ En esta técnica, cada método devuelve un objeto y puede encadenar todos los m�
 - 🔗 [fluent-code, www.plccoder.com](https://www.plccoder.com/fluent-code/)
 
 - 🔗 [fluent-interface-and-method-chaining-in-twincat-3](https://twincontrols.com/community/twincat-knowledgebase/fluent-interface-and-method-chaining-in-twincat-3/#post-278)
+
+- 🔗 [tc3-data-logger creado con interface fluida, github.com/benhar-dev](https://github.com/benhar-dev/tc3-data-logger)
