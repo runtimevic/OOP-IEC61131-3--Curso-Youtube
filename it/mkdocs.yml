@@ -117,6 +117,10 @@ nav:
     - Requisiti: requisiti.md
     - Introduzione: index.md
     - Tipi di paradigmi: tipi di paradigmi.md
+    - Concetti Precedenti:
+       - Tipo di dati: Concetti Precedenti/Tipo di dati.md       
+       - Tipi di variabili e variabili speciali: Concetti Precedenti/Tipi di variabili e variabili speciali.md
+       - Tabella dei modificatori di accesso: Concetti Precedenti/Tabella dei modificatori di accesso.md       
     - Classi e oggetti:
        - Classi e oggetti: Classi e Oggetti/Classi e Oggetti.md
        - Blocco funzione:
@@ -140,10 +144,7 @@ nav:
        - puntatore e riferimento: Classi e Oggetti/puntatore e riferimento.md
        - Parola chiave Abstracto: Classi e Oggetti/Keyword_Abstract.md
        - FB Abstract vs. Interfaccia: Classi e Oggetti/FB abstract vs Interfaccia.md
-       - Interfaccia fluente: Classi e Oggetti/interfaccia fluente.md
-    - Tabella dei modificatori di accesso: Tabella dei modificatori di accesso.md    
-    - Tipi di variabili e variabili speciali: Tipi di variabili e variabili speciali.md
-    - Tipi di dati: Tipi di dati.md    
+       - Interfaccia fluente: Classi e Oggetti/interfaccia fluente.md   
     - Principi OOP: 
        - 4 Pilastri: principi/_principi OOP.md
        - Astrazione: principi/Astrazione.md

@@ -116,14 +116,17 @@ nav:
     - Requeriments: requeriments.md
     - Introduction: index.md
     - Types of paradigms: tipos de paradigmas.md
+    - Concepts Previous:
+       - Type of Data: Concepts Previous/Tipos de datos.md       
+       - Variable types and special variables: Concepts Previous/Variable types and special variables.md
+       - Access Modifiers Table: Concepts Previous/Tabla de Modificadores de acceso.md   
     - Classes and Objects:
        - Classes and Objects: Clases y Objetos/clases y objetos.md
        - Function Block: 
           - Function Block: Clases y Objetos/Function Block.md
           - Function Block Access Modifiers:  Clases y Objetos/Function Block Modificadores de acceso.md
           - Function Block Declaration variables: Clases y Objetos/Function Block Declaracion de variables.md
-          - Constructor and Destructor: Clases y Objetos/Constructor y Destructor.md
-#       - Access modifiers: Clases y Objetos/modificadores de acceso.md           
+          - Constructor and Destructor: Clases y Objetos/Constructor y Destructor.md          
        - Object Method:
           - Method: Clases y Objetos/metodo.md
           - Method access modifiers: Clases y Objetos/Metodo Modificadores de acceso.md
@@ -141,9 +144,6 @@ nav:
        - Keyword Abstract: Clases y Objetos/Keyword_Abstract.md
        - Abstract FB vs. Interface: Clases y Objetos/FB abstracto frente a interfaz.md
        - Fluent Interface: Clases y Objetos/Interfaz fluida.md
-    - Access Modifiers Table: Tabla de Modificadores de acceso.md    
-    - Variable types and special variables: Variable types and special variables.md
-    - Types of data: Tipos de datos.md
     - OOP Principles: 
        - 4 Pillars: principios/_principios OOP.md
        - Abstraction: principios/abstraccion.md

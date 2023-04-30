@@ -115,6 +115,10 @@ nav:
     - Requisitos: requisitos.md
     - Introduccion: index.md
     - Tipos de paradigmas: tipos de paradigmas.md
+    - Conceptos Previos:
+       - Tipos de Datos: Conceptos Previos/Tipos de datos.md       
+       - Tipos de variables y variables especiales: Conceptos Previos/Variable types and special variables.md
+       - Tabla de Modificadores de acceso: Conceptos Previos/Tabla de Modificadores de acceso.md      
     - Clases y Objetos:
        - Clases y Objetos: Clases y Objetos/clases y objetos.md
        - Bloque de Funciones: 
@@ -139,10 +143,7 @@ nav:
        - puntero y referencia: Clases y Objetos/pointer and reference.md
        - Palabra clave Abstracto: Clases y Objetos/Keyword_Abstract.md
        - FB abstracto frente a interfaz: Clases y Objetos/FB abstracto frente a interfaz.md
-       - Interfaz fluida: Clases y Objetos/Interfaz fluida.md
-    - Tabla de Modificadores de acceso: Tabla de Modificadores de acceso.md
-    - Tipos de variables y variables especiales: Variable types and special variables.md
-    - Tipos de Datos: Tipos de datos.md
+       - Interfaz fluida: Clases y Objetos/Interfaz fluida.md   
     - Principios OOP: 
        - 4 Pilares: principios/_principios OOP.md
        - Abstracción: principios/abstraccion.md
