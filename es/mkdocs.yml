@@ -125,8 +125,7 @@ nav:
           - Bloques de Funciones: Clases y Objetos/Function Block.md
           - Bloque de Funcion Modificadores de acceso:  Clases y Objetos/Function Block Modificadores de acceso.md
           - Bloque de Funcion Declaracion de variables: Clases y Objetos/Function Block Declaracion de variables.md
-          - Constructor y Destructor: Clases y Objetos/Constructor y Destructor.md
-#       - Modificadores de acceso: Clases y Objetos/modificadores de acceso.md           
+          - Constructor y Destructor: Clases y Objetos/Constructor y Destructor.md          
        - Objeto Metodo: 
           - Metodo: Clases y Objetos/metodo.md
           - Metodo Modificadores de acceso: Clases y Objetos/Metodo Modificadores de acceso.md
@@ -165,6 +164,14 @@ nav:
     - Tipos de Diseño para programacion de PLC: Tipos de Diseño para programacion de PLC.md
     - Patrones de Diseño:
        - Patrones de Diseño : Patrones de Diseño/_Patrones de Diseño.md
-       - Patron de Estrategia: Patrones de Diseño/Strategy pattern.md
-       - The Abstract Factory Pattern: Patrones de Diseño/The Abstract Factory Pattern.md
+       - Patrones de Diseño Creacional:
+          - Patron Metodo de Fabrica: Patrones de Diseño/Factory Method Design Pattern.md
+          - Patron Fabrica Abstracta: Patrones de Diseño/The Abstract Factory Pattern.md
+       - Patrones de Diseño Estructural:
+          - Patron Decorador: Patrones de Diseño/Decorator Design Pattern.md
+       - Patrones de Diseño de Comportamiento:
+          - Patron de Estrategia: Patrones de Diseño/Strategy pattern.md
+          - Patron Observador: Patrones de Diseño/Observer Design Pattern.md
+           
+       
     - Links: links.md
