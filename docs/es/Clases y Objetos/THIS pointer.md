@@ -102,3 +102,7 @@ fbMyFbB.DoIt();
 - 🔗 [help.codesys.com, THIS](https://help.codesys.com/api-content/2/codesys/3.5.14.0/en/_cds_pointer_this/#efa671ce4f92ff0c0a8640e009d26eb-id-939859e9e4f92fefc0a8640e00938466)
 
 - 🔗 [stefanhenneken.net,iec-61131-3-methods-properties-and-inheritance](https://stefanhenneken.net/2017/04/23/iec-61131-3-methods-properties-and-inheritance/)
+
+***
+### <span style="color:grey">Link al Video de Youtube 009:</span>
+- 🔗 [009 - OOP IEC 61131-3 PLC -- Punteros THIS^ y SUPER^](https://youtu.be/S3YdAHyBc6I)

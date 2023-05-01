@@ -52,5 +52,8 @@ by Runtimevic -- Víctor Durán Muñoz.
 
 - 🔗 [Beckhoff TwinCAT 3 admite OOP](https://infosys.beckhoff.com/english.php?content=../content/1033/tc3_plc_intro/2527303819.html&id=)
 
+### <span style="color:grey">Link al Video de Youtube 001:</span>
+- 🔗 [001 - OOP IEC 61131-3 PLC -- Introducción a la pagina de documentación SSG, repositorio...](https://www.youtube.com/watch?v=a7eNCefcjGM)
+
 
 

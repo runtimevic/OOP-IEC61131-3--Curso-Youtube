@@ -26,3 +26,8 @@ Los datos están en forma de campos y el código está en forma de procedimiento
 ### <span style="color:grey"> Ventajas de la Programación OOP:</span>
 - rutinas y datos se combinan en un objeto -> Encapsulación.
 - métodos/Propiedades -> interfaces definidas para llamadas y acceso a datos.
+
+***
+### <span style="color:grey">Link al Video de Youtube 002:</span>
+- 🔗 [002 - OOP IEC 61131-3 PLC -- Clase y Objeto](https://youtu.be/3IudQIj1noo)
+- 🔗 [003 - OOP IEC 61131-3 PLC -- Clase y Objeto](https://youtu.be/lchxx28wwXM)

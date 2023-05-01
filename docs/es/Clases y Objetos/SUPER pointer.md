@@ -78,3 +78,7 @@ nTHIS := fbMyFB_1.nCnt;
 - 🔗 [help.codesys.com, SUPER](https://help.codesys.com/api-content/2/codesys/3.5.14.0/en/_cds_pointer_super/)
 
 - 🔗 [stefanhenneken.net,iec-61131-3-methods-properties-and-inheritance](https://stefanhenneken.net/2017/04/23/iec-61131-3-methods-properties-and-inheritance/)
+
+***
+### <span style="color:grey">Link al Video de Youtube 009:</span>
+- 🔗 [009 - OOP IEC 61131-3 PLC -- Punteros THIS^ y SUPER^](https://youtu.be/S3YdAHyBc6I)

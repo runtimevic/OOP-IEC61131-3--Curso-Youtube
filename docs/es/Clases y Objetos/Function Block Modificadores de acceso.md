@@ -32,4 +32,8 @@ FUNCTION_BLOCK PUBLIC ABSTRACT FB_Foo
     - Todos los métodos abstractos y todas las propiedades abstractas deben sobrescribirse para crear un FB no abstracto. Un método abstracto o una propiedad abstracta se convierte en un método no abstracto o una propiedad no abstracta al sobrescribir.
     - Los bloques de funciones abstractas pueden contener además métodos no abstractos y/o propiedades no abstractas.
     - Si no se sobrescriben todos los métodos abstractos o todas las propiedades abstractas durante la herencia, el FB heredado solo puede ser un FB abstracto (concretización paso a paso).
-    - Se permiten punteros o referencias de tipo FB abstracto. Sin embargo, estos pueden referirse a FB no abstractos y, por lo tanto, llamar a sus métodos o propiedades (polimorfismo).   
+    - Se permiten punteros o referencias de tipo FB abstracto. Sin embargo, estos pueden referirse a FB no abstractos y, por lo tanto, llamar a sus métodos o propiedades (polimorfismo).
+
+***
+### <span style="color:grey">Link al Video de Youtube 004:</span>
+- 🔗 [004 - OOP IEC 61131-3 PLC -- Clase y Objeto](https://youtu.be/jGtGV9icvO0)     

@@ -83,3 +83,7 @@ llama al método Stop() desde FB_Engine . El método Stop() ha sido heredado por
 - 🔗 [Simple Codesys OOP - Inheritance](https://www.youtube.com/watch?v=ehwCe9C4gWQ)
 
 - 🔗 [TC11.Beckhoff TwinCAT3 Function Block Extend.JP](https://www.youtube.com/watch?v=rz-a5iM3-uM)
+
+***
+### <span style="color:grey">Link al Video de Youtube 007:</span>
+- 🔗 [007 - OOP IEC 61131-3 PLC -- Herencia FB](https://youtu.be/-twPN0jTrKA)

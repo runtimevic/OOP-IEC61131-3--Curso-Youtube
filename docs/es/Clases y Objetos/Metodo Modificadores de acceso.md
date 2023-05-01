@@ -22,3 +22,7 @@ La configuración predeterminada donde no se define ningún especificador de acc
     - No se permite sobrescribir, en un derivado del bloque de funciones. 
     - Esto significa que no se puede sobrescribir/extender en una subclase posiblemente existente.
 
+***
+### <span style="color:grey">Link al Video de Youtube 005:</span>
+- 🔗 [005 - OOP IEC 61131-3 PLC -- Objeto Metodo](https://youtu.be/fa0tUTICVF0)
+

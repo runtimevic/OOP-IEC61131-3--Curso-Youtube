@@ -96,3 +96,7 @@ STRUCT
 - 🔗 [help.codesys.com, Structure](https://help.codesys.com/api-content/2/codesys/3.5.14.0/en/_cds_obj_dut/)
 
 - 🔗 [help.codesys.com, Structure](https://help.codesys.com/api-content/2/codesys/3.5.14.0/en/_cds_datatype_structure/#b2e3e6da93f532b0c0a8640e011c7a1d-3s-structures)
+
+***
+### <span style="color:grey">Link al Video de Youtube 008:</span>
+- 🔗 [008 - OOP IEC 61131-3 PLC -- Herencia Estructura e Interface](https://youtu.be/G0suYh_bz0o)

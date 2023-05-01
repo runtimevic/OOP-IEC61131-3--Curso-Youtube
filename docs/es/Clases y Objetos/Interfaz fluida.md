@@ -43,3 +43,7 @@ En esta técnica, cada método devuelve un objeto y puede encadenar todos los m�
 - 🔗 [fluent-interface-and-method-chaining-in-twincat-3](https://twincontrols.com/community/twincat-knowledgebase/fluent-interface-and-method-chaining-in-twincat-3/#post-278)
 
 - 🔗 [tc3-data-logger creado con interface fluida, github.com/benhar-dev](https://github.com/benhar-dev/tc3-data-logger)
+
+***
+### <span style="color:grey">Link al Video de Youtube 014:</span>
+- 🔗 [014 - OOP IEC 61131-3 PLC -- Interface Fluida]()

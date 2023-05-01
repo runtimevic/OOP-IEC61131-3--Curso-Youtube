@@ -61,3 +61,6 @@ VAR CONSTANT
 	n : INT:= 10;
 END_VAR
 ```
+***
+### <span style="color:grey">Link al Video de Youtube 004:</span>
+- 🔗 [004 - OOP IEC 61131-3 PLC -- Clase y Objeto](https://youtu.be/jGtGV9icvO0) 

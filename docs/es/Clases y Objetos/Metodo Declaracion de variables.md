@@ -63,4 +63,7 @@ END_VAR
 VAR CONSTANT
 	n : INT:= 10;
 END_VAR
-```    
+```
+***
+### <span style="color:grey">Link al Video de Youtube 005:</span>
+- 🔗 [005 - OOP IEC 61131-3 PLC -- Objeto Metodo](https://youtu.be/fa0tUTICVF0)   

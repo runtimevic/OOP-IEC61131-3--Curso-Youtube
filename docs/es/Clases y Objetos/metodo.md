@@ -55,3 +55,7 @@ END_VAR
 
 - 🔗 [TC08.Beckhoff TwinCAT3 Function Block-Part3 Method.JP](https://www.youtube.com/watch?v=csr11XOva_w)
 
+***
+### <span style="color:grey">Link al Video de Youtube 005:</span>
+- 🔗 [005 - OOP IEC 61131-3 PLC -- Objeto Metodo](https://youtu.be/fa0tUTICVF0)
+

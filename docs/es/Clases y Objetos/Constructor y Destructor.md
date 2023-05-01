@@ -22,3 +22,7 @@ Si es necesario, debe implementar FB_exit explícitamente. Si este método está
 - 🔗 [Métodos 'FB_Init', 'FB_Reinit' y 'FB_Exit', Codesys](https://help.codesys.com/api-content/2/codesys/3.5.12.0/en/_cds_method_fb_init_fb_reinit/)
 
 - 🔗 [iec-61131-3-parameter-transfer-via-fb_init, stefanhenneken.net](https://stefanhenneken.net/2019/07/26/iec-61131-3-parameter-transfer-via-fb_init/)
+
+***
+### <span style="color:grey">Link al Video de Youtube 003:</span>
+- 🔗 [003 - OOP IEC 61131-3 PLC -- Clase y Objeto](https://youtu.be/lchxx28wwXM)

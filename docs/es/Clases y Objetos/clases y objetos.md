@@ -86,3 +86,7 @@ Color := Mercedes.Color;
 ### <span style="color:grey">Links:</span>
 
 - 🔗 [methods-properties-and-inheritance (stefanhenneken)](https://stefanhenneken.net/2017/04/23/iec-61131-3-methods-properties-and-inheritance/)
+
+***
+### <span style="color:grey">Link al Video de Youtube 002:</span>
+- 🔗 [002 - OOP IEC 61131-3 PLC -- Clase y Objeto](https://youtu.be/3IudQIj1noo)

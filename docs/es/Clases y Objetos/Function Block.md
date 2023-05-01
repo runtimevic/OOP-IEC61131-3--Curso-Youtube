@@ -18,6 +18,7 @@ FUNCTION_BLOCK <access specifier> <function block> | EXTENDS <function block> | 
 - Si en el FB se implementa una interfaz es obligatorio en el FB crear la programación de los metodos y propiedades de la interfaz implementada.
 ***
 - Ejemplos de declaración de FUNCTION_BLOCK:
+
 ```javascript
 FUNCTION_BLOCK INTERNAL ABSTRACT FB
 FUNCTION_BLOCK INTERNAL FINAL FB
@@ -26,3 +27,8 @@ FUNCTION_BLOCK ABSTRACT FB
 FUNCTION_BLOCK PUBLIC ABSTRACT FB
 FUNCTION_BLOCK FB EXTENDS FB1 IMPLEMENTS Interface1, Interface2, Interface3
 ```
+***
+### <span style="color:grey">Link al Video de Youtube 003:</span>
+- 🔗 [003 - OOP IEC 61131-3 PLC -- Clase y Objeto](https://youtu.be/lchxx28wwXM)
+### <span style="color:grey">Link al Video de Youtube 004:</span>
+- 🔗 [004 - OOP IEC 61131-3 PLC -- Clase y Objeto](https://youtu.be/jGtGV9icvO0)

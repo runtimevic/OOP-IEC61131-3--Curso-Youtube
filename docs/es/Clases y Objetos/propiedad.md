@@ -68,3 +68,7 @@ Los pragmas son muy útiles para monitorear propiedades en modo en línea. Para 
 - 🔗 [object-oriented-programming-in-programmable-logic-controllers-plc-whats-really-new,en.grse.de](https://en.grse.de/blog/object-oriented-programming-in-programmable-logic-controllers-plc-whats-really-new/)
 
 - 🔗 [TC07.Beckhoff TwinCAT3 Function Block-Part2 Property.JP- DUT](https://www.youtube.com/watch?v=zbnb8K15YdI)
+
+***
+### <span style="color:grey">Link al Video de Youtube 006:</span>
+- 🔗 [006 - OOP IEC 61131-3 PLC -- Objeto Propiedad](https://youtu.be/Ci7FExNF7vQ)

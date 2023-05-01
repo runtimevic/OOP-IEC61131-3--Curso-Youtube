@@ -79,3 +79,7 @@ Lo resolveremos de 3 formas distintas:
 - 🔗 [The ABSTRACT keyword, www.plccoder.com ](https://www.plccoder.com/abstract/)
 
 - 🔗 [ABSTRACT concept, infosys.beckhoff.com ](https://infosys.beckhoff.com/english.php?content=../content/1033/tc3_plc_intro/6413748235.html&id=)
+
+***
+### <span style="color:grey">Link al Video de Youtube 013:</span>
+- 🔗 [013 - OOP IEC 61131-3 PLC -- FB Abstract vs Interface]()

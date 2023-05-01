@@ -107,4 +107,8 @@ Ejemplo de declaración de un método que nos devuelve una variable del tipo **F
 METHOD Method1 : FB1
 ```
 
+***
+### <span style="color:grey">Link al Video de Youtube 005:</span>
+- 🔗 [005 - OOP IEC 61131-3 PLC -- Objeto Metodo](https://youtu.be/fa0tUTICVF0)
+
 

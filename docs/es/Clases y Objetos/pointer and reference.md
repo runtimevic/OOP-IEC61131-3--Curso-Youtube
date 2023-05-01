@@ -449,3 +449,7 @@ En este caso el acceso está limitado al propio array, con el puntero se puede a
 - 🔗 [AT&U, CODESYS - Difference between pointer and reference](https://www.youtube.com/watch?v=CAeWLPaUeuM)
 
 - 🔗 [AT&U, CODESYS -Differente between pass by vale and pass by Reference](https://www.youtube.com/watch?v=rUfDD5FTgE0)
+
+***
+### <span style="color:grey">Link al Video de Youtube 011:</span>
+- 🔗 [011 - OOP IEC 61131-3 PLC -- Puntero vs Referencia](https://youtu.be/AnJZmwQWaYQ)

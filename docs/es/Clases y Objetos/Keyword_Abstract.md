@@ -59,3 +59,7 @@ METHOD Execute
 
 - 🔗 [ABSTRACT concept, infosys.beckhoff.com](https://infosys.beckhoff.com/content/1033/tc3_plc_intro/6413748235.html?id=2638086927809860687)
 - 🔗 [The ABSTRACT keyword, www.plccoder.com ](https://www.plccoder.com/abstract/)
+
+***
+### <span style="color:grey">Link al Video de Youtube 012:</span>
+- 🔗 [012 - OOP IEC 61131-3 PLC -- Abstract](https://youtu.be/-Jq0jg0foo4)
