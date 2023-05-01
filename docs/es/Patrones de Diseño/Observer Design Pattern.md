@@ -1,0 +1,1 @@
+- 🔗 [Observer Design Pattern](https://www.twincontrols.com/community/twincat-knowledgebase/observer-design-pattern/) 

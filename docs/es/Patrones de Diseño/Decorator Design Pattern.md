@@ -1,0 +1,1 @@
+- 🔗 [Decorator Design Pattern](https://www.twincontrols.com/community/twincat-knowledgebase/decorator-design-pattern/#post-655)
