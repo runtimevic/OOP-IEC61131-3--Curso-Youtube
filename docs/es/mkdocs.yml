@@ -150,7 +150,7 @@ nav:
        - Herencia: principios/herencia.md
        - Polimorfismo: principios/polimorfismo.md    
     - SOLID: 
-       - SOLID: SOLID/_SOLID.md
+       - SOLID: solid/_SOLID.md
        - Principio de Responsabilidad Única: SOLID/Principio de Responsabilidad Única.md
        - Principio de Abierto/Cerrado: SOLID/Principio de Abierto_Cerrado.md
        - Principio de Sustitución de Liskov: SOLID/Principio de Sustitución de Liskov.md
