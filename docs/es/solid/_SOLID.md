@@ -15,15 +15,45 @@
 
 Además de los principios SOLID, existen otros principios como:
 
-- Keep It Simple, Stupid (KISS).
-- Don't Repeat Yourself (DRY).
-- Law Of Demeter (LOD).
-- You Ain't Gonna Need It (YAGNI).
+### Keep It Simple, Stupid (KISS).
+```
+" Mantenlo Simple, Estúpido "
+```
+- Evite la complejidad innecesaria en su código, use soluciones simples para resolver problemas.
+
+- **Ejemplo:** En lugar de escribir un algoritmo personalizado para generar un número aleatorio dentro de un rango, use el generador de números aleatorios incorporado en su lenguaje de programación.
+
+### Don't Repeat Yourself (DRY).
+```
+" No te repitas "
+```
+- Cada pieza de conocimiento debe tener una representación única, inequívoca y autorizada dentro de un sistema.
+- Evite la duplicación de código y mantenga su base de código lo más mantenible y escalable posible.
+- **Ejemplo:** En lugar de copiar y pegar el mismo bloque de código en varios lugares, cree una función o módulo que se pueda reutilizar.
+
+### Law Of Demeter (LOD).
+```
+" Habla Solo con tus amigos inmediatos "
+```
+- La Ley de Demeter (LOD) en programación es un principio que establece que un objeto debe tener acceso limitado a los objetos relacionados con él y solo interactuar con los objetos más cercanos a él. En resumen, un objeto no debe conocer la estructura interna de otros objetos y solo debe comunicarse con ellos a través de una interfaz limitada.
+- **Ejemplo:** Si tienes una clase "Persona" que tiene un método "getNombre()" y otra clase "Empresa" que tiene un método "getPersona()". En lugar de acceder directamente al nombre de la persona desde la clase Empresa, se debería llamar al método "getNombre()" de la clase Persona desde fuera de la clase Empresa, para evitar una dependencia innecesaria y mantener una comunicación limitada entre objetos.
+### You Ain't Gonna Need It (YAGNI).
+```
+" No lo vas a necesitar "
+```
+- No agregue funcionalidad a su código hasta que realmente lo necesite.
+
+- **Ejemplo:** No agregue una función a su aplicación que permita a los usuarios cambiar el color de la fuente si no es parte de los requisitos principales.
+
 
 Todos estos principios tienen el objetivo común de mejorar la mantenibilidad y la reutilización del software.
+
+***
 ### <span style="color:grey">Links:</span>
 - 🔗 [Cómo explicar conceptos de programación orientada a objetos a un niño de 6 años](https://www.freecodecamp.org/news/object-oriented-programming-concepts-21bb035f7260/#:~:text=The%20four%20principles%20of%20object,abstraction%2C%20inheritance%2C%20and%20polymorphism.)
 
 - 🔗 [iec-61131-3-solid-five-principles-for-better-software,stefanhenneken.net](https://stefanhenneken.net/2021/07/25/iec-61131-3-solid-five-principles-for-better-software/#more-1892)
+
+- 🔗 [kentcdodds.com,aha-programming](https://kentcdodds.com/blog/aha-programming)
 
 

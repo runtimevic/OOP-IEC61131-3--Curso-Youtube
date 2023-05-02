@@ -62,7 +62,52 @@ Patrones de comportamiento:
 - Observer 
 - State 
 - Visitor 
-- Iterator 
+- Iterator
+***
+Los patrones de diseño son soluciones reutilizables para problemas comunes de diseño de software. Proporcionan una forma para que los desarrolladores de software resuelvan problemas comunes de manera consistente y eficiente, sin tener que reinventar la rueda cada vez.
 
+Beneficios de usar Patrones de Diseño =>
+
+• Reusabilidad: Evite reinventar la rueda cada vez.
+
+• Escalabilidad: Diseño de software flexible y adaptable.
+
+• Capacidad de mantenimiento: Código más fácil de modificar y depurar.
+
+• Estandarización: Vocabulario común y estructura a través de diferentes proyectos.
+
+• Colaboración: más fácil para varios desarrolladores trabajar en el mismo código base.
+
+
+Algunos patrones de diseño de uso común =>
+
+• Patrón de estrategia: el patrón de estrategia se utiliza para definir una familia de algoritmos, encapsular cada uno y hacerlos intercambiables.
+
+Por ejemplo, imagina que tienes un juego con diferentes tipos de personajes, cada uno con sus propias habilidades únicas. El patrón de estrategia le permitiría definir un conjunto de estrategias (es decir, algoritmos) para cada tipo de personaje y luego cambiar fácilmente entre ellas según sea necesario.
+
+• Patrón de observador: el patrón de observador se utiliza para notificar a los objetos cuando hay un cambio en otro objeto.
+
+Por ejemplo, imagine que tiene una aplicación meteorológica que necesita notificar a sus usuarios cuando cambia la temperatura. El patrón de observador le permitiría definir un conjunto de observadores (es decir, los usuarios) y luego notificarles cuando cambie la temperatura.
+
+• Patrón de decorador: el patrón de decorador se utiliza para agregar funcionalidad a un objeto de forma dinámica, sin cambiar su estructura original.
+
+Por ejemplo, imagine que tiene un automóvil y desea agregarle un sistema de navegación GPS. El patrón decorador le permitiría agregar el sistema GPS sin tener que modificar el propio automóvil.
+
+• Patrón de comando: el patrón de comando se usa para encapsular una solicitud como un objeto, lo que permite que se almacene, pase y ejecute en un momento posterior.
+
+Por ejemplo, imagina que tienes un sistema de automatización del hogar que te permite controlar las luces, el termostato y otros dispositivos. El patrón de comando le permitiría encapsular cada comando (por ejemplo, encender las luces), almacenarlo como un objeto y ejecutarlo más tarde.
+
+• Patrón de fábrica: el patrón de fábrica se utiliza para crear objetos sin exponer la lógica de creación al cliente.
+
+Por ejemplo, imagina que tienes un juego con diferentes niveles, cada uno con su propio conjunto de enemigos. El patrón de fábrica te permitiría crear enemigos para cada nivel sin exponer la lógica de creación al cliente.
+
+• Patrón compuesto: el patrón compuesto se utiliza para crear una estructura de objetos en forma de árbol, donde los objetos individuales y los grupos de objetos se tratan de la misma manera.
+
+Por ejemplo, imagine que tiene un sistema de archivos, donde los archivos y los directorios se tratan de la misma manera. El patrón compuesto le permitiría tratar archivos y directorios individuales como el mismo tipo de objeto y crear una estructura similar a un árbol de todo el sistema de archivos.
+
+
+***
 ### <span style="color:grey">Links de Patrones de Diseño:</span>
-- [IEC 61131-3: SOLID – The Interface Segregation Principle](https://stefanhenneken.net/2023/02/25/iec-61131-3-solid-the-interface-segregation-principle/#more-2505)
+
+- 🔗 [0w8States/PLC-Design-Patterns](https://github.com/0w8States/PLC-Design-Patterns)
+
