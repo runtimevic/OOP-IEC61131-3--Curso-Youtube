@@ -1,7 +1,9 @@
 ![SOLID](../imagenes/SOLID.png)
+
 - Propuesta por **Robert C.Martin** en el 2000.
 - Son **recomendaciones** para escribir un código **sostenible,mantenible,escalable y robusto**.
-- Beneficios:  
+- Beneficios:
+
     - Alta **Cohesión**. Colaboracion entre clases.
     - Bajo **Acoplamiento**. Evitar que una clase dependa fuertemente de otra clase.
 
