@@ -15,10 +15,6 @@
         <link rel="canonical" href="https://runtimevic.github.io/OOP-IEC61131-3--Curso-Youtube/es/solid/_SOLID/">
       
       
-        <link rel="prev" href="../../principios/polimorfismo/">
-      
-      
-        <link rel="next" href="../Principio%20de%20Responsabilidad%20%C3%9Anica/">
       
       <link rel="icon" href="../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.1.8">
@@ -118,7 +114,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#links" class="md-skip">
+        <a href="#keep-it-simple-stupid-kiss" class="md-skip">
           Saltar a contenido
         </a>
       
@@ -156,7 +152,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              SOLID
+               SOLID
             
           </span>
         </div>
@@ -965,16 +961,14 @@
 
   
   
-    
-  
   
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
       
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" checked>
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
       
       
       
@@ -983,7 +977,7 @@
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="true">
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_7">
           <span class="md-nav__icon md-icon"></span>
           SOLID
@@ -994,48 +988,11 @@
               
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          SOLID
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../SOLID/_SOLID.md" class="md-nav__link">
         SOLID
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
-  
-  
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Tabla de contenidos
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#links" class="md-nav__link">
-    Links:
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -1047,7 +1004,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Principio%20de%20Responsabilidad%20%C3%9Anica/" class="md-nav__link">
+      <a href="../../SOLID/Principio de Responsabilidad Única.md" class="md-nav__link">
         Principio de Responsabilidad Única
       </a>
     </li>
@@ -1061,7 +1018,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Principio%20de%20Abierto_Cerrado/" class="md-nav__link">
+      <a href="../../SOLID/Principio de Abierto_Cerrado.md" class="md-nav__link">
         Principio de Abierto/Cerrado
       </a>
     </li>
@@ -1075,7 +1032,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Principio%20de%20Sustituci%C3%B3n%20de%20Liskov/" class="md-nav__link">
+      <a href="../../SOLID/Principio de Sustitución de Liskov.md" class="md-nav__link">
         Principio de Sustitución de Liskov
       </a>
     </li>
@@ -1089,7 +1046,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Principio%20de%20Segregaci%C3%B3n%20de%20Interfaz/" class="md-nav__link">
+      <a href="../../SOLID/Principio de Segregación de Interfaz.md" class="md-nav__link">
         Principio de Segregación de Interfaz
       </a>
     </li>
@@ -1103,7 +1060,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Principio%20de%20Inversi%C3%B3n%20de%20Dependencia/" class="md-nav__link">
+      <a href="../../SOLID/Principio de Inversión de Dependencia.md" class="md-nav__link">
         Principio de Inversión de Dependencia
       </a>
     </li>
@@ -1484,6 +1441,34 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#keep-it-simple-stupid-kiss" class="md-nav__link">
+    Keep It Simple, Stupid (KISS).
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dont-repeat-yourself-dry" class="md-nav__link">
+    Don't Repeat Yourself (DRY).
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#law-of-demeter-lod" class="md-nav__link">
+    Law Of Demeter (LOD).
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#you-aint-gonna-need-it-yagni" class="md-nav__link">
+    You Ain't Gonna Need It (YAGNI).
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#links" class="md-nav__link">
     Links:
   </a>
@@ -1500,13 +1485,13 @@
           
           
             <div class="md-content" data-md-component="content">
-              <article class="md-content__inner md-typeset"><a class="md-content__button md-icon" download href="../../pdf/combined.pdf" title="PDF Export"><svg style="height: 1.2rem; width: 1.2rem;" viewBox="0 0 384 512" xmlns="http://www.w3.org/2000/svg"><path d="M224 136V0H24C10.7 0 0 10.7 0 24v464c0 13.3 10.7 24 24 24h336c13.3 0 24-10.7 24-24V160H248c-13.2 0-24-10.8-24-24zm76.45 211.36l-96.42 95.7c-6.65 6.61-17.39 6.61-24.04 0l-96.42-95.7C73.42 337.29 80.54 320 94.82 320H160v-80c0-8.84 7.16-16 16-16h32c8.84 0 16 7.16 16 16v80h65.18c14.28 0 21.4 17.29 11.27 27.36zM377 105L279.1 7c-4.5-4.5-10.6-7-17-7H256v128h128v-6.1c0-6.3-2.5-12.4-7-16.9z"></path></svg></a>
+              <article class="md-content__inner md-typeset">
                 
     
                   
 
 
-  <h1>SOLID</h1>
+  <h1> SOLID</h1>
 
 <p><img alt="SOLID" src="../../imagenes/SOLID.png" />
 - Propuesta por <strong>Robert C.Martin</strong> en el 2000.
@@ -1523,13 +1508,33 @@
 </ul>
 <hr />
 <p>Además de los principios SOLID, existen otros principios como:</p>
+<h3 id="keep-it-simple-stupid-kiss">Keep It Simple, Stupid (KISS).</h3>
+<p><div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>&quot; Mantenlo Simple, Estúpido &quot;
+</code></pre></div></td></tr></table></div>
+- Evite la complejidad innecesaria en su código, use soluciones simples para resolver problemas.</p>
 <ul>
-<li>Keep It Simple, Stupid (KISS).</li>
-<li>Don't Repeat Yourself (DRY).</li>
-<li>Law Of Demeter (LOD).</li>
-<li>You Ain't Gonna Need It (YAGNI).</li>
+<li><strong>Ejemplo:</strong> En lugar de escribir un algoritmo personalizado para generar un número aleatorio dentro de un rango, use el generador de números aleatorios incorporado en su lenguaje de programación.</li>
+</ul>
+<h3 id="dont-repeat-yourself-dry">Don't Repeat Yourself (DRY).</h3>
+<p><div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>&quot; No te repitas &quot;
+</code></pre></div></td></tr></table></div>
+- Cada pieza de conocimiento debe tener una representación única, inequívoca y autorizada dentro de un sistema.
+- Evite la duplicación de código y mantenga su base de código lo más mantenible y escalable posible.
+- <strong>Ejemplo:</strong> En lugar de copiar y pegar el mismo bloque de código en varios lugares, cree una función o módulo que se pueda reutilizar.</p>
+<h3 id="law-of-demeter-lod">Law Of Demeter (LOD).</h3>
+<p><div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>&quot; Habla Solo con tus amigos inmediatos &quot;
+</code></pre></div></td></tr></table></div>
+- La Ley de Demeter (LOD) en programación es un principio que establece que un objeto debe tener acceso limitado a los objetos relacionados con él y solo interactuar con los objetos más cercanos a él. En resumen, un objeto no debe conocer la estructura interna de otros objetos y solo debe comunicarse con ellos a través de una interfaz limitada.
+- <strong>Ejemplo:</strong> Si tienes una clase "Persona" que tiene un método "getNombre()" y otra clase "Empresa" que tiene un método "getPersona()". En lugar de acceder directamente al nombre de la persona desde la clase Empresa, se debería llamar al método "getNombre()" de la clase Persona desde fuera de la clase Empresa, para evitar una dependencia innecesaria y mantener una comunicación limitada entre objetos.</p>
+<h3 id="you-aint-gonna-need-it-yagni">You Ain't Gonna Need It (YAGNI).</h3>
+<p><div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>&quot; No lo vas a necesitar &quot;
+</code></pre></div></td></tr></table></div>
+- No agregue funcionalidad a su código hasta que realmente lo necesite.</p>
+<ul>
+<li><strong>Ejemplo:</strong> No agregue una función a su aplicación que permita a los usuarios cambiar el color de la fuente si no es parte de los requisitos principales.</li>
 </ul>
 <p>Todos estos principios tienen el objetivo común de mejorar la mantenibilidad y la reutilización del software.</p>
+<hr />
 <h3 id="links"><span style="color:grey">Links:</span></h3>
 <ul>
 <li>
@@ -1537,6 +1542,9 @@
 </li>
 <li>
 <p>🔗 <a href="https://stefanhenneken.net/2021/07/25/iec-61131-3-solid-five-principles-for-better-software/#more-1892">iec-61131-3-solid-five-principles-for-better-software,stefanhenneken.net</a></p>
+</li>
+<li>
+<p>🔗 <a href="https://kentcdodds.com/blog/aha-programming">kentcdodds.com,aha-programming</a></p>
 </li>
 </ul>
 
@@ -1604,42 +1612,6 @@
       
         <footer class="md-footer">
   
-    
-      
-      <nav class="md-footer__inner md-grid" aria-label="Pie" >
-        
-          
-          <a href="../../principios/polimorfismo/" class="md-footer__link md-footer__link--prev" aria-label="Anterior: Polimorfismo" rel="prev">
-            <div class="md-footer__button md-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
-            </div>
-            <div class="md-footer__title">
-              <span class="md-footer__direction">
-                Anterior
-              </span>
-              <div class="md-ellipsis">
-                Polimorfismo
-              </div>
-            </div>
-          </a>
-        
-        
-          
-          <a href="../Principio%20de%20Responsabilidad%20%C3%9Anica/" class="md-footer__link md-footer__link--next" aria-label="Siguiente: Principio de Responsabilidad Única" rel="next">
-            <div class="md-footer__title">
-              <span class="md-footer__direction">
-                Siguiente
-              </span>
-              <div class="md-ellipsis">
-                Principio de Responsabilidad Única
-              </div>
-            </div>
-            <div class="md-footer__button md-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
-            </div>
-          </a>
-        
-      </nav>
     
   
   <div class="md-footer-meta md-typeset">
