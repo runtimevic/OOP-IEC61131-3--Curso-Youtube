@@ -35,24 +35,40 @@ Clasificación según su ámbito:
 -	De objeto: Basados en la utilización dinámica de objetos. 
 
 
-Patrones creacionales:
+### Patrones Creacionales:
 
-- Builder
-- Singleton 
+- Los patrones de Creación abstraen la forma en que se crean los objetos, de forma que permite tratar las clases a crear de forma genérica apartando la decisión de qué clases crear o como crearlas. 
+Pero los Patrones de Diseño son conceptos aplicables directamente en la producción de software, cualquier abstracción no se queda en el aire como una entelequia que solo sirve para dar discursos, así:
+Según a donde quede desplazada dicha decisión se habla de Patrones de Clase (utiliza la herencia para determinar la creación de las instancias, es decir en los constructores de las clases) o Patrones de Objeto (es en métodos de los objetos creados donde se modifica la clase) 
+
+-	Patrones de Creación de Clase:
+    -	Factoría Abstracta 
+    -	Builder 
+-	Patrones de Creación de Objeto: 
+    -	Método Factoría 
+    -	Prototipo 
+    -	Singleton 
+    -	Object Pool 
+
+
+- Builder*
+- Singleton *
 - Dependency Injection 
 - Service Locator 
-- Abstract Factory
-- Factory Method 
+- Abstract Factory*
+- Factory Method *
 
-Patrones estructurales:
-
+### Patrones Estructurales:
+Tratan la relación entre clases, la combinación clases y la formación de estructuras de mayor complejidad. 
 - Adapter
 - Data Access Object (DAO)  
 - Query Object 
 - Decorator 
 - Bridge 
 
-Patrones de comportamiento:
+### Patrones de Comportamiento:
+Los patrones de comportamiento hablan de como interaccionan entre si los objetos para conseguir ciertos resultados. 
+Los principales patrones de comportamiento son: 
 
 - Command
 - Chain of Responsibility 
@@ -104,10 +120,16 @@ Por ejemplo, imagina que tienes un juego con diferentes niveles, cada uno con su
 • Patrón compuesto: el patrón compuesto se utiliza para crear una estructura de objetos en forma de árbol, donde los objetos individuales y los grupos de objetos se tratan de la misma manera.
 
 Por ejemplo, imagine que tiene un sistema de archivos, donde los archivos y los directorios se tratan de la misma manera. El patrón compuesto le permitiría tratar archivos y directorios individuales como el mismo tipo de objeto y crear una estructura similar a un árbol de todo el sistema de archivos.
-
-
 ***
+Además de los Patrones de Diseño tenemos:
+
+-	Patrones de Arquitectura. Formas de descomponer, conectar y relacionar sistemas, trata conceptos como: niveles, tuberías y filtros. Es un nivel de abstracción mayor que el de los Patrones de Diseño. 
+-	Patrones de Programación (Idioms Patterns). Patrones de bajo nivel acerca de un lenguaje de programación concreto, describen como implementar cuestiones concretas. 
+-	Patrones de Analisis. Conjunto de reglas que permiten modelar un sistema de forma satisfactoria. 
+-	Patrones de Organizacionales. Describen como organizar grupos humanos, generalmente relacionados con el software. 
+-	Otros Patrones de Software. Se puede hablar de patrones de Programación concurrente, de Interfaz Gráfica, de Organización de Código, de Optimización de Código, de Robustez de Código, de Fase de Prueba. 
+
+
 ### <span style="color:grey">Links de Patrones de Diseño:</span>
 
 - 🔗 [0w8States/PLC-Design-Patterns](https://github.com/0w8States/PLC-Design-Patterns)
-
