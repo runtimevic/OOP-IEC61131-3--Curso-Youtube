@@ -21,7 +21,7 @@
         <link rel="next" href="../Factory%20Method%20Design%20Pattern/">
       
       <link rel="icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.1.9">
+      <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.9">
     
     
       
@@ -1258,6 +1258,27 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#patrones-creacionales" class="md-nav__link">
+    Patrones Creacionales:
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#patrones-estructurales" class="md-nav__link">
+    Patrones Estructurales:
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#patrones-de-comportamiento" class="md-nav__link">
+    Patrones de Comportamiento:
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#links-de-patrones-de-diseno" class="md-nav__link">
     Links de Patrones de Diseño:
   </a>
@@ -1498,6 +1519,27 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#patrones-creacionales" class="md-nav__link">
+    Patrones Creacionales:
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#patrones-estructurales" class="md-nav__link">
+    Patrones Estructurales:
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#patrones-de-comportamiento" class="md-nav__link">
+    Patrones de Comportamiento:
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#links-de-patrones-de-diseno" class="md-nav__link">
     Links de Patrones de Diseño:
   </a>
@@ -1558,24 +1600,48 @@ Los patrones de diseño se clasificaron originalmente en tres grupos: </p>
 <li>De clase: Basados en la herencia de clases. </li>
 <li>De objeto: Basados en la utilización dinámica de objetos. </li>
 </ul>
-<p>Patrones creacionales:</p>
+<h3 id="patrones-creacionales">Patrones Creacionales:</h3>
 <ul>
-<li>Builder</li>
+<li>
+<p>Los patrones de Creación abstraen la forma en que se crean los objetos, de forma que permite tratar las clases a crear de forma genérica apartando la decisión de qué clases crear o como crearlas. 
+Pero los Patrones de Diseño son conceptos aplicables directamente en la producción de software, cualquier abstracción no se queda en el aire como una entelequia que solo sirve para dar discursos, así:
+Según a donde quede desplazada dicha decisión se habla de Patrones de Clase (utiliza la herencia para determinar la creación de las instancias, es decir en los constructores de las clases) o Patrones de Objeto (es en métodos de los objetos creados donde se modifica la clase) </p>
+</li>
+<li>
+<p>Patrones de Creación de Clase:</p>
+<ul>
+<li>Factoría Abstracta </li>
+<li>Builder </li>
+</ul>
+</li>
+<li>
+<p>Patrones de Creación de Objeto: </p>
+<ul>
+<li>Método Factoría </li>
+<li>Prototipo </li>
 <li>Singleton </li>
+<li>Object Pool </li>
+</ul>
+</li>
+<li>
+<p>Builder*</p>
+</li>
+<li>Singleton *</li>
 <li>Dependency Injection </li>
 <li>Service Locator </li>
-<li>Abstract Factory</li>
-<li>Factory Method </li>
+<li>Abstract Factory*</li>
+<li>Factory Method *</li>
 </ul>
-<p>Patrones estructurales:</p>
-<ul>
-<li>Adapter</li>
-<li>Data Access Object (DAO)  </li>
-<li>Query Object </li>
-<li>Decorator </li>
-<li>Bridge </li>
-</ul>
-<p>Patrones de comportamiento:</p>
+<h3 id="patrones-estructurales">Patrones Estructurales:</h3>
+<p>Tratan la relación entre clases, la combinación clases y la formación de estructuras de mayor complejidad. 
+- Adapter
+- Data Access Object (DAO)<br />
+- Query Object 
+- Decorator 
+- Bridge </p>
+<h3 id="patrones-de-comportamiento">Patrones de Comportamiento:</h3>
+<p>Los patrones de comportamiento hablan de como interaccionan entre si los objetos para conseguir ciertos resultados. 
+Los principales patrones de comportamiento son: </p>
 <ul>
 <li>Command</li>
 <li>Chain of Responsibility </li>
@@ -1609,6 +1675,14 @@ Los patrones de diseño se clasificaron originalmente en tres grupos: </p>
 <p>• Patrón compuesto: el patrón compuesto se utiliza para crear una estructura de objetos en forma de árbol, donde los objetos individuales y los grupos de objetos se tratan de la misma manera.</p>
 <p>Por ejemplo, imagine que tiene un sistema de archivos, donde los archivos y los directorios se tratan de la misma manera. El patrón compuesto le permitiría tratar archivos y directorios individuales como el mismo tipo de objeto y crear una estructura similar a un árbol de todo el sistema de archivos.</p>
 <hr />
+<p>Además de los Patrones de Diseño tenemos:</p>
+<ul>
+<li>Patrones de Arquitectura. Formas de descomponer, conectar y relacionar sistemas, trata conceptos como: niveles, tuberías y filtros. Es un nivel de abstracción mayor que el de los Patrones de Diseño. </li>
+<li>Patrones de Programación (Idioms Patterns). Patrones de bajo nivel acerca de un lenguaje de programación concreto, describen como implementar cuestiones concretas. </li>
+<li>Patrones de Analisis. Conjunto de reglas que permiten modelar un sistema de forma satisfactoria. </li>
+<li>Patrones de Organizacionales. Describen como organizar grupos humanos, generalmente relacionados con el software. </li>
+<li>Otros Patrones de Software. Se puede hablar de patrones de Programación concurrente, de Interfaz Gráfica, de Organización de Código, de Optimización de Código, de Robustez de Código, de Fase de Prueba. </li>
+</ul>
 <h3 id="links-de-patrones-de-diseno"><span style="color:grey">Links de Patrones de Diseño:</span></h3>
 <ul>
 <li>🔗 <a href="https://github.com/0w8States/PLC-Design-Patterns">0w8States/PLC-Design-Patterns</a></li>
