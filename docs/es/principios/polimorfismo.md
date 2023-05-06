@@ -1,34 +1,34 @@
-### polimorfismo
+### <span style="color:grey"> Polimorfismo:</span>
 
-The concept of polymorphism is derived by the combination of two words: Poly (Many) and 
-Morphism (Form). It refactors ugly and complex switch cases/case statements.
-Object-Oriented PLC Programming
-8
-Polymorphism allows an object to change its appearance and performance depending on the 
-practical situation in order to be able to carry out a particular task [10]. It can be either static or 
-dynamic: static polymorphism occurs when the object’s type is defined by the compiler; 
-dynamic polymorphism occurs when the type is determined during run-time, making it possible 
-for a same variable to access different objects while the program is running.
-A good example to explain polymorphism is a Swiss Army Knife (Figure 2.4):
-Figure 2.4 - Swiss Army Knife
-A Swiss Army Knife is a single tool that includes a bunch of resources that can be used to solve
-different issues. Selecting the proper tool, a Swiss Army Knife can be used to efficiently
-perform a certain set of valuable tasks. In the dual way, a simple adder block that adapts itself 
-to cope with, for instance, int, float, string, and time data types is an example of a polymorphic 
-programming resource.
+El concepto de polimorfismo se deriva de la combinación de dos palabras: Poly (Muchos) y Morfismo (Forma).
+Refactoriza casos de cambio/declaraciones de casos feos y complejos.
+El polimorfismo permite que un objeto cambie su apariencia y desempeño dependiendo de la
+situación práctica para poder realizar una determinada tarea. 
+Puede ser estático o dinámico:
 
+- El polimorfismo estático ocurre cuando el compilador define el tipo de objeto;
+- El polimorfismo dinámico se produce cuando el tipo se determina durante el tiempo de ejecución, lo que hace posible
+para que una misma variable acceda a diferentes objetos mientras el programa se está ejecutando.
+Un buen ejemplo para explicar el polimorfismo es una navaja suiza.
+Una navaja suiza es una herramienta única que incluye un montón de recursos que se pueden utilizar para resolver
+problemas diferentes. Al seleccionar la herramienta adecuada, se puede utilizar una navaja suiza para
+realizar un determinado conjunto de tareas valiosas. De la manera dual, un bloque sumador simple que se adapta
+para hacer frente a, por ejemplo, los tipos de datos int, float, string y time es un ejemplo de un polimórfico
+recurso de programación.
 ***
 
-¿Como conseguir el Polimorfismo?
+### <span style="color:grey">¿Como conseguir el Polimorfismo?</span>
 
 El polimorfismo se puede obtener gracias a las Interfaces y/o las Clases Abstractas.
 
-.Interface: (INTERFACE)
-- Son un **contrato que obliga** a una clase a **implementar** las **propiedades** y/o **métodos** definidos.
-- Son una plantilla (sin lógica).
+- Interface: (INTERFACE)
 
-.Clases Abstractas: (ABSTRACT)
-- Son Clases que no se pueden instanciar, solo pueden ser implementadas a través de la herencia.
+    - Son un **contrato que obliga** a una clase a **implementar** las **propiedades** y/o **métodos** definidos.
+    - Son una plantilla (sin lógica).
+
+- Clases Abstractas: (ABSTRACT)
+
+    - Son Clases que no se pueden instanciar, solo pueden ser implementadas a través de la herencia.
 
 - Diferencias:
 
@@ -36,6 +36,7 @@ El polimorfismo se puede obtener gracias a las Interfaces y/o las Clases Abstrac
     | :--- | :--- |     
     | 1.- Limitadas a una sola implementación.   | 1. No tiene limitación de implementación.     | 
     | 2.- Pueden definir comportamiento base.     | 2. Expone propiedades y métodos abstractos (sin lógica).     |
+
 ***    
 ### <span style="color:grey">Links Polimorfismo:</span>
 
@@ -43,7 +44,7 @@ El polimorfismo se puede obtener gracias a las Interfaces y/o las Clases Abstrac
 
 - 🔗 [abstract, www.plccoder.com](https://www.plccoder.com/abstract/)
 
-- 🔗 [stefanhenneken.net,iec-61131-3-methods-properties-and-inheritance](https://stefanhenneken.net/2017/04/23/
+- 🔗 [stefanhenneken.net,iec-61131-3-methods-properties-and-inheritance](https://stefanhenneken.net/2017/04/23/)
 
 - 🔗 [AT&U, CODESYS - Runtime polymorphism using inheritance (OOP)](https://www.youtube.com/watch?v=oxwkeLggtnM)
 

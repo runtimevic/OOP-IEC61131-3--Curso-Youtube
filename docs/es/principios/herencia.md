@@ -1,18 +1,19 @@
-### herencia
+### <span style="color:grey">Herencia:</span>
 
-Inheritance allows the user to create classes based on other classes. The inherited classes can 
-use the base class’s functionalities as well as some additional functionalities that the user may 
-define. It eliminates redundant code, prevents copying and pasting and makes expansion easier. 
-This is very useful because it allows classes to be extended of modified (overridden) without 
-changing the base class’s code implementation.
-What do an old landline phone and a smartphone have in common? Both of them can be 
-classified as phones. Should they be classified as objects? No, as they also define the properties 
-and behaviors of a group of objects. A smartphone works just like a regular phone, but it is also 
-able to take pictures, navigate the internet, and do many other things. So, old landline phone
-and smartphone are child classes that extend the parent phone class.
+La herencia permite al usuario crear clases basadas en otras clases. Las clases heredadas pueden
+utilizar las funcionalidades de la clase base, así como algunas funcionalidades adicionales que el usuario puede
+definir. Elimina el código redundante, evita copiar y pegar y facilita la expansión.
+Esto es muy útil porque permite ampliar o modificar (anular) las clases sin cambiar la implementación del código de la clase base.
+¿Qué tienen en común un teléfono fijo antiguo y un smartphone? Ambos pueden ser
+clasificados como teléfonos. ¿Deberían clasificarse como objetos? No, ya que también definen las propiedades
+y comportamientos de un grupo de objetos. Un teléfono inteligente funciona como un teléfono normal, pero también es
+capaz de tomar fotografías, navegar por Internet y hacer muchas otras cosas. Entonces, teléfono fijo antiguo
+y el teléfono inteligente son clases secundarias que amplían la clase de teléfono principal.
 ***
-Superclase: la clase cuyas características se heredan se conoce como superclase (o una clase base o una clase principal). 
-Subclase: la clase que hereda la otra clase se conoce como subclase (o una clase derivada, clase extendida o clase hija).
 
+- Superclase: La clase cuyas características se heredan se conoce como superclase (ó una clase base ó una clase principal ó clase padre). 
+- Subclase: La clase que hereda la otra clase se conoce como subclase (ó una clase derivada, clase extendida ó clase hija).
+***
+### <span style="color:grey">Links Herencia:</span>
 
 - 🔗 [stefanhenneken.net,iec-61131-3-methods-properties-and-inheritance](https://stefanhenneken.net/2017/04/23/
