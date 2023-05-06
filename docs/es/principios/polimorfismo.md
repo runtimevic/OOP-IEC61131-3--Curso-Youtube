@@ -21,16 +21,16 @@ recurso de programación.
 
 El polimorfismo se puede obtener gracias a las Interfaces y/o las Clases Abstractas.
 
-- Interface: (INTERFACE)
+- <span style="color:orange"><font size="4">Interface: (INTERFACE)</font></span>
 
     - Son un **contrato que obliga** a una clase a **implementar** las **propiedades** y/o **métodos** definidos.
     - Son una plantilla (sin lógica).
 
-- Clases Abstractas: (ABSTRACT)
+- <span style="color:orange"><font size="4">Clases Abstractas: (ABSTRACT)</font></span>
 
     - Son Clases que no se pueden instanciar, solo pueden ser implementadas a través de la herencia.
 
-- Diferencias:
+- <span style="color:orange"><font size="4">Diferencias:</font></span>
 
     | Clases abstractas | Interfaces | 
     | :--- | :--- |     

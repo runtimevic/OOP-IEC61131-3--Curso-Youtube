@@ -11,9 +11,9 @@ capaz de tomar fotografías, navegar por Internet y hacer muchas otras cosas. En
 y el teléfono inteligente son clases secundarias que amplían la clase de teléfono principal.
 ***
 
-- Superclase: La clase cuyas características se heredan se conoce como superclase (ó una clase base ó una clase principal ó clase padre). 
-- Subclase: La clase que hereda la otra clase se conoce como subclase (ó una clase derivada, clase extendida ó clase hija).
+- <span style="color:orange"><font size="4">Superclase:</font></span> La clase cuyas características se heredan se conoce como superclase (ó una clase base ó una clase principal ó clase padre). 
+- <span style="color:orange"><font size="4">Subclase:</font></span> La clase que hereda la otra clase se conoce como subclase (ó una clase derivada, clase extendida ó clase hija).
 ***
 ### <span style="color:grey">Links Herencia:</span>
 
-- 🔗 [stefanhenneken.net,iec-61131-3-methods-properties-and-inheritance](https://stefanhenneken.net/2017/04/23/
+- 🔗 [stefanhenneken.net,iec-61131-3-methods-properties-and-inheritance](https://stefanhenneken.net/2017/04/23/)
