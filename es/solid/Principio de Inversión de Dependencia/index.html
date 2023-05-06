@@ -1103,6 +1103,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#ejemplo" class="md-nav__link">
+    Ejemplo:
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#links" class="md-nav__link">
     Links:
   </a>
@@ -1498,6 +1505,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#ejemplo" class="md-nav__link">
+    Ejemplo:
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#links" class="md-nav__link">
     Links:
   </a>
@@ -1523,6 +1537,32 @@
   <h1>Principio de Inversión de Dependencia - DIP</h1>
 
 <h3 id="principio-de-inversion-de-dependencia-dependency-inversion-principle-dip"><span style="color:grey"> Principio de Inversión de Dependencia -- (Dependency Inversion Principle) DIP :</span></h3>
+<p>El principio de inversión de dependencia establece que los módulos de nivel superior no deben depender de los módulos de nivel inferior, sino que ambos deben depender de abstracciones.</p>
+<h3 id="ejemplo"><span style="color:grey">Ejemplo:</span></h3>
+<p>```javascript
+INTERFACE IConexion
+// interfaz para la conexión
+METHODS
+    EstablecerConexion : BOOL; // método para establecer la conexión
+END_INTERFACE</p>
+<p>FUNCTION_BLOCK ConexionSerial IMPLEMENTS IConexion // implementa la interfaz IConexion
+// implementación para la conexión serial
+END_FUNCTION_BLOCK</p>
+<p>FUNCTION_BLOCK ConexionEthernet IMPLEMENTS IConexion // implementa la interfaz IConexion
+// implementación para la conexión ethernet
+END_FUNCTION_BLOCK</p>
+<p>FUNCTION_BLOCK Dispositivo
+VAR_INPUT
+    conexion : IConexion; // interfaz IConexion
+END_VAR</p>
+<p>// constructor
+Dispositivo(conexion);</p>
+<p>// método para establecer la conexión
+establecerConexion();</p>
+<p>END_FUNCTION_BLOCK
+<code>```
+Esto permite que se pueda pasar cualquier objeto que implemente la interfaz</code>IConexion`, lo que cumple con el principio de inversión de dependencias.</p>
+<p>Además, se utiliza el método <code>EstablecerConexion</code> definido en la interfaz <code>IConexion</code>, lo que demuestra cómo se puede utilizar una abstracción (la interfaz) para trabajar con diferentes implementaciones concretas de manera uniforme.</p>
 <hr />
 <h3 id="links"><span style="color:grey">Links:</span></h3>
 <ul>

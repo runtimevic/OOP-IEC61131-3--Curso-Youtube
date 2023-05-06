@@ -1089,6 +1089,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#ejemplo" class="md-nav__link">
+    Ejemplo:
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#links" class="md-nav__link">
     Links:
   </a>
@@ -1498,6 +1505,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#ejemplo" class="md-nav__link">
+    Ejemplo:
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#links" class="md-nav__link">
     Links:
   </a>
@@ -1523,6 +1537,111 @@
   <h1>Principio de Segregación de Interfaz - ISP</h1>
 
 <h3 id="principio-de-segregacion-de-interfaz-interface-segregation-principle-isp"><span style="color:grey"> Principio de Segregación de Interfaz -- (Interface Segregation Principle) ISP :</span></h3>
+<p>El principio de segregación de interfaz establece que una clase no debe implementar interfaces que no utilice y que debe dividirse en interfaces más pequeñas y específicas.</p>
+<h3 id="ejemplo"><span style="color:grey">Ejemplo:</span></h3>
+<p><div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span>
+<span class="normal">25</span>
+<span class="normal">26</span>
+<span class="normal">27</span>
+<span class="normal">28</span>
+<span class="normal">29</span>
+<span class="normal">30</span>
+<span class="normal">31</span>
+<span class="normal">32</span>
+<span class="normal">33</span>
+<span class="normal">34</span>
+<span class="normal">35</span>
+<span class="normal">36</span>
+<span class="normal">37</span>
+<span class="normal">38</span>
+<span class="normal">39</span>
+<span class="normal">40</span>
+<span class="normal">41</span>
+<span class="normal">42</span>
+<span class="normal">43</span>
+<span class="normal">44</span>
+<span class="normal">45</span>
+<span class="normal">46</span>
+<span class="normal">47</span>
+<span class="normal">48</span>
+<span class="normal">49</span>
+<span class="normal">50</span>
+<span class="normal">51</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nx">INTERFACE</span><span class="w"> </span><span class="nx">IAveVoladora</span>
+<span class="c1">// interfaz para las aves voladoras</span>
+<span class="nx">METHODS</span>
+<span class="w">    </span><span class="nx">Volar</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="nx">BOOL</span><span class="p">;</span><span class="w"> </span><span class="c1">// método para volar</span>
+<span class="nx">END_INTERFACE</span>
+
+<span class="nx">INTERFACE</span><span class="w"> </span><span class="nx">IAveNadadora</span>
+<span class="c1">// interfaz para las aves nadadoras</span>
+<span class="nx">METHODS</span>
+<span class="w">    </span><span class="nx">Nadar</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="nx">BOOL</span><span class="p">;</span><span class="w"> </span><span class="c1">// método para nadar</span>
+<span class="nx">END_INTERFACE</span>
+
+<span class="nx">INTERFACE</span><span class="w"> </span><span class="nx">IAveCorredora</span>
+<span class="c1">// interfaz para las aves corredoras</span>
+<span class="nx">METHODS</span>
+<span class="w">    </span><span class="nx">Correr</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="nx">BOOL</span><span class="p">;</span><span class="w"> </span><span class="c1">// método para correr</span>
+<span class="nx">END_INTERFACE</span>
+
+<span class="nx">FUNCTION_BLOCK</span><span class="w"> </span><span class="nx">Pato</span><span class="w"> </span><span class="nx">IMPLEMENTS</span><span class="w"> </span><span class="nx">IAveVoladora</span><span class="p">,</span><span class="w"> </span><span class="nx">IAveNadadora</span><span class="w"> </span><span class="c1">// implementa las interfaces IAveVoladora e IAveNadadora</span>
+<span class="nx">VAR_INPUT</span>
+<span class="w">    </span><span class="nx">velocidad</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="nx">REAL</span><span class="p">;</span>
+<span class="w">    </span><span class="nx">alturaMaxima</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="nx">REAL</span><span class="p">;</span>
+<span class="w">    </span><span class="nx">tiempoBuceo</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="nx">TIME</span><span class="p">;</span>
+<span class="nx">END_VAR</span>
+
+<span class="c1">// implementación para el pato</span>
+<span class="c1">// métodos para volar y nadar</span>
+
+<span class="nx">END_FUNCTION_BLOCK</span>
+
+<span class="nx">FUNCTION_BLOCK</span><span class="w"> </span><span class="nx">Aguila</span><span class="w"> </span><span class="nx">IMPLEMENTS</span><span class="w"> </span><span class="nx">IAveVoladora</span><span class="w"> </span><span class="c1">// implementa la interfaz IAveVoladora solamente</span>
+<span class="nx">VAR_INPUT</span>
+<span class="w">    </span><span class="nx">velocidad</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="nx">REAL</span><span class="p">;</span>
+<span class="w">    </span><span class="nx">alturaMaxima</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="nx">REAL</span><span class="p">;</span>
+<span class="nx">END_VAR</span>
+
+<span class="c1">// implementación para el águila</span>
+<span class="c1">// método para volar</span>
+
+<span class="nx">END_FUNCTION_BLOCK</span>
+
+<span class="nx">FUNCTION_BLOCK</span><span class="w"> </span><span class="nx">Avestruz</span><span class="w"> </span><span class="nx">IMPLEMENTS</span><span class="w"> </span><span class="nx">IAveCorredora</span><span class="w"> </span><span class="c1">// implementa la interfaz IAveCorredora solamente</span>
+<span class="nx">VAR_INPUT</span>
+<span class="w">    </span><span class="nx">velocidad</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="nx">REAL</span><span class="p">;</span>
+<span class="w">    </span><span class="nx">tiempoCorriendo</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="nx">TIME</span><span class="p">;</span>
+<span class="nx">END_VAR</span>
+
+<span class="c1">// implementación para el avestruz</span>
+<span class="c1">// método para correr</span>
+
+<span class="nx">END_FUNCTION_BLOCK</span>
+</code></pre></div></td></tr></table></div>
+De esta manera, cada clase tiene solo los métodos necesarios y se divide en interfaces más pequeñas y específicas. Además, se utilizan interfaces en lugar de function blocks para implementar el principio de segregación de interfaz. Esto permite una mayor flexibilidad y evita la necesidad de implementar métodos innecesarios en una clase.</p>
 <hr />
 <h3 id="links"><span style="color:grey">Links:</span></h3>
 <ul>

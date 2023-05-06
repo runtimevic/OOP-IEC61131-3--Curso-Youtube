@@ -1068,6 +1068,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#ejemplo" class="md-nav__link">
+    Ejemplo:
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#links" class="md-nav__link">
     Links:
   </a>
@@ -1512,6 +1519,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#ejemplo" class="md-nav__link">
+    Ejemplo:
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#links" class="md-nav__link">
     Links:
   </a>
@@ -1547,6 +1561,78 @@ Entidad de software: Esto significa una clase, bloque de función, módulo, mét
 <p>Cuando Robert C. Martin se hizo cargo del principio de Bertrand Meyer en la década de 1990, lo implementó técnicamente de manera diferente. C ++ permite el uso de herencia múltiple, mientras que la herencia múltiple rara vez se encuentra en los lenguajes de programación más nuevos. Por este motivo, Robert C. Martin se centró en el uso de interfaces. Se puede encontrar más información al respecto en el libro (enlace publicitario de Amazon *) <a href="https://www.amazon.de/gp/product/395845724X/ref=as_li_tl?ie=UTF8&amp;camp=1638&amp;creative=6742&amp;creativeASIN=395845724X&amp;linkCode=as2&amp;tag=0101e3-21&amp;linkId=77473018891c27120a9cebe02be17c27">Arquitectura limpia: el manual práctico para el diseño de software profesional.</a></p>
 <h3 id="resumen"><span style="color:grey">Resumen:</span></h3>
 <p>Sin embargo, adherirse al principio abierto/cerrado (OCP) conlleva el riesgo de un exceso de ingeniería. La opción de extensiones solo debe implementarse donde sea específicamente necesario. El software no puede diseñarse de tal manera que todas las extensiones imaginables puedan implementarse sin realizar ajustes en el código fuente.</p>
+<h3 id="ejemplo"><span style="color:grey">Ejemplo:</span></h3>
+<p><div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span>
+<span class="normal">25</span>
+<span class="normal">26</span>
+<span class="normal">27</span>
+<span class="normal">28</span>
+<span class="normal">29</span>
+<span class="normal">30</span>
+<span class="normal">31</span>
+<span class="normal">32</span>
+<span class="normal">33</span>
+<span class="normal">34</span>
+<span class="normal">35</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nx">FUNCTION_BLOCK</span><span class="w"> </span><span class="nx">Vehiculo</span>
+<span class="nx">VAR_INPUT</span>
+<span class="w">    </span><span class="nx">velocidad</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="nx">REAL</span><span class="p">;</span>
+<span class="nx">END_VAR</span>
+
+<span class="c1">// método para obtener la velocidad</span>
+<span class="nx">getVelocidad</span><span class="p">()</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="nx">REAL</span><span class="p">;</span>
+
+<span class="nx">END_FUNCTION_BLOCK</span>
+
+<span class="nx">FUNCTION_BLOCK</span><span class="w"> </span><span class="nx">Coche</span><span class="w"> </span><span class="nx">EXTENDS</span><span class="w"> </span><span class="nx">Vehiculo</span><span class="w"> </span><span class="c1">// extiende la función Vehiculo</span>
+<span class="nx">VAR_INPUT</span>
+<span class="w">    </span><span class="nx">velocidadMaxima</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="nx">REAL</span><span class="p">;</span>
+<span class="nx">END_VAR</span>
+
+<span class="c1">// constructor</span>
+<span class="nx">Coche</span><span class="p">(</span><span class="nx">velocidad</span><span class="p">,</span><span class="w"> </span><span class="nx">velocidadMaxima</span><span class="p">);</span>
+
+<span class="c1">// método para obtener la velocidad máxima</span>
+<span class="nx">getVelocidadMaxima</span><span class="p">()</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="nx">REAL</span><span class="p">;</span>
+
+<span class="nx">END_FUNCTION_BLOCK</span>
+
+<span class="nx">FUNCTION_BLOCK</span><span class="w"> </span><span class="nx">Moto</span><span class="w"> </span><span class="nx">EXTENDS</span><span class="w"> </span><span class="nx">Vehiculo</span><span class="w"> </span><span class="c1">// extiende la función Vehiculo</span>
+<span class="nx">VAR_INPUT</span>
+<span class="w">    </span><span class="nx">aceleracion</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="nx">REAL</span><span class="p">;</span>
+<span class="nx">END_VAR</span>
+
+<span class="c1">// constructor</span>
+<span class="nx">Moto</span><span class="p">(</span><span class="nx">velocidad</span><span class="p">,</span><span class="w"> </span><span class="nx">aceleracion</span><span class="p">);</span>
+
+<span class="c1">// método para obtener la aceleración</span>
+<span class="nx">getAceleracion</span><span class="p">()</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="nx">REAL</span><span class="p">;</span>
+
+<span class="nx">END_FUNCTION_BLOCK</span>
+</code></pre></div></td></tr></table></div>
+De esta manera, la clase "Vehiculo" está cerrada para modificaciones directas y abierta para extensiones a través de las nuevas clases "Coche" y "Moto". Cada nueva clase agrega funcionalidades específicas sin modificar directamente la clase original.</p>
 <hr />
 <h3 id="links"><span style="color:grey">Links:</span></h3>
 <ul>

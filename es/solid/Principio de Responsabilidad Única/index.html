@@ -1047,6 +1047,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#ejemplo" class="md-nav__link">
+     Ejemplo :
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#links" class="md-nav__link">
     Links:
   </a>
@@ -1498,6 +1505,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#ejemplo" class="md-nav__link">
+     Ejemplo :
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#links" class="md-nav__link">
     Links:
   </a>
@@ -1523,6 +1537,75 @@
   <h1>Principio de Responsabilidad Única - SRP</h1>
 
 <h3 id="principio-de-responsabilidad-unica-single-responsibility-principle-srp"><span style="color:grey"> Principio de Responsabilidad Única -- (Single Responsibility Principle) SRP :</span></h3>
+<p>El principio de responsabilidad única establece que una clase debe tener una sola responsabilidad en un programa.</p>
+<h3 id="ejemplo"><span style="color:grey"> Ejemplo :</span></h3>
+<p>Por ejemplo, en lugar de tener una clase "Empleado" que maneje tanto la información personal como el registro de tiempo, se deben crear dos clases separadas: "Empleado" para la información personal y "RegistroDeTiempo" para el registro de tiempo. De esta manera, cada clase se enfoca en una sola tarea y es más fácil de mantener y modificar.</p>
+<p>En lugar de tener una Clase que maneje todo, creamos dos Clases separadas:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nx">FUNCTION_BLOCK</span><span class="w"> </span><span class="nx">Empleado</span>
+<span class="nx">VAR_INPUT</span>
+<span class="w">    </span><span class="nx">nombre</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="nx">STRING</span><span class="p">;</span>
+<span class="w">    </span><span class="nx">apellido</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="nx">STRING</span><span class="p">;</span>
+<span class="w">    </span><span class="nx">correoElectronico</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="nx">STRING</span><span class="p">;</span>
+<span class="nx">END_VAR</span>
+
+<span class="c1">// constructor</span>
+<span class="nx">Empleado</span><span class="p">(</span><span class="nx">nombre</span><span class="p">,</span><span class="w"> </span><span class="nx">apellido</span><span class="p">,</span><span class="w"> </span><span class="nx">correoElectronico</span><span class="p">);</span>
+
+<span class="c1">// getters y setters</span>
+<span class="nx">nombre</span><span class="p">();</span>
+<span class="nx">apellido</span><span class="p">();</span>
+<span class="nx">correoElectronico</span><span class="p">();</span>
+
+<span class="nx">END_FUNCTION_BLOCK</span>
+</code></pre></div></td></tr></table></div>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nx">FUNCTION_BLOCK</span><span class="w"> </span><span class="nx">RegistroDeTiempo</span>
+<span class="nx">VAR_INPUT</span>
+<span class="w">    </span><span class="nx">empleado</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="nx">Empleado</span><span class="p">;</span><span class="w"> </span><span class="c1">// instancia de la función Empleado</span>
+<span class="w">    </span><span class="nx">horaEntrada</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="nx">DATE_AND_TIME</span><span class="p">;</span>
+<span class="w">    </span><span class="nx">horaSalida</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="nx">DATE_AND_TIME</span><span class="p">;</span>
+<span class="nx">END_VAR</span>
+
+<span class="c1">// constructor</span>
+<span class="nx">RegistroDeTiempo</span><span class="p">(</span><span class="nx">empleado</span><span class="p">,</span><span class="w"> </span><span class="nx">horaEntrada</span><span class="p">,</span><span class="w"> </span><span class="nx">horaSalida</span><span class="p">);</span>
+
+<span class="c1">// getters y setters</span>
+<span class="nx">empleado</span><span class="p">();</span>
+<span class="nx">horaEntrada</span><span class="p">();</span>
+<span class="nx">horaSalida</span><span class="p">();</span>
+
+<span class="nx">END_FUNCTION_BLOCK</span>
+</code></pre></div></td></tr></table></div>
+<p>De esta manera, la Clase "Empleado" solo maneja la información personal del empleado y la Clase "RegistroDeTiempo" solo maneja el registro de tiempo. Cada Clase tiene una sola responsabilidad y es más fácil de mantener y modificar en el futuro.</p>
 <hr />
 <h3 id="links"><span style="color:grey">Links:</span></h3>
 <ul>
