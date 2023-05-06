@@ -1539,29 +1539,59 @@
 <h3 id="principio-de-inversion-de-dependencia-dependency-inversion-principle-dip"><span style="color:grey"> Principio de Inversión de Dependencia -- (Dependency Inversion Principle) DIP :</span></h3>
 <p>El principio de inversión de dependencia establece que los módulos de nivel superior no deben depender de los módulos de nivel inferior, sino que ambos deben depender de abstracciones.</p>
 <h3 id="ejemplo"><span style="color:grey">Ejemplo:</span></h3>
-<p>```javascript
-INTERFACE IConexion
-// interfaz para la conexión
-METHODS
-    EstablecerConexion : BOOL; // método para establecer la conexión
-END_INTERFACE</p>
-<p>FUNCTION_BLOCK ConexionSerial IMPLEMENTS IConexion // implementa la interfaz IConexion
-// implementación para la conexión serial
-END_FUNCTION_BLOCK</p>
-<p>FUNCTION_BLOCK ConexionEthernet IMPLEMENTS IConexion // implementa la interfaz IConexion
-// implementación para la conexión ethernet
-END_FUNCTION_BLOCK</p>
-<p>FUNCTION_BLOCK Dispositivo
-VAR_INPUT
-    conexion : IConexion; // interfaz IConexion
-END_VAR</p>
-<p>// constructor
-Dispositivo(conexion);</p>
-<p>// método para establecer la conexión
-establecerConexion();</p>
-<p>END_FUNCTION_BLOCK
-<code>```
-Esto permite que se pueda pasar cualquier objeto que implemente la interfaz</code>IConexion`, lo que cumple con el principio de inversión de dependencias.</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span>
+<span class="normal">25</span>
+<span class="normal">26</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nx">INTERFACE</span><span class="w"> </span><span class="nx">IConexion</span>
+<span class="c1">// interfaz para la conexión</span>
+<span class="nx">METHODS</span>
+<span class="w">    </span><span class="nx">EstablecerConexion</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="nx">BOOL</span><span class="p">;</span><span class="w"> </span><span class="c1">// método para establecer la conexión</span>
+<span class="nx">END_INTERFACE</span>
+
+<span class="nx">FUNCTION_BLOCK</span><span class="w"> </span><span class="nx">ConexionSerial</span><span class="w"> </span><span class="nx">IMPLEMENTS</span><span class="w"> </span><span class="nx">IConexion</span><span class="w"> </span><span class="c1">// implementa la interfaz IConexion</span>
+<span class="c1">// implementación para la conexión serial</span>
+<span class="nx">END_FUNCTION_BLOCK</span>
+
+<span class="nx">FUNCTION_BLOCK</span><span class="w"> </span><span class="nx">ConexionEthernet</span><span class="w"> </span><span class="nx">IMPLEMENTS</span><span class="w"> </span><span class="nx">IConexion</span><span class="w"> </span><span class="c1">// implementa la interfaz IConexion</span>
+<span class="c1">// implementación para la conexión ethernet</span>
+<span class="nx">END_FUNCTION_BLOCK</span>
+
+<span class="nx">FUNCTION_BLOCK</span><span class="w"> </span><span class="nx">Dispositivo</span>
+<span class="nx">VAR_INPUT</span>
+<span class="w">    </span><span class="nx">conexion</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="nx">IConexion</span><span class="p">;</span><span class="w"> </span><span class="c1">// interfaz IConexion</span>
+<span class="nx">END_VAR</span>
+
+<span class="c1">// constructor</span>
+<span class="nx">Dispositivo</span><span class="p">(</span><span class="nx">conexion</span><span class="p">);</span>
+
+<span class="c1">// método para establecer la conexión</span>
+<span class="nx">establecerConexion</span><span class="p">();</span>
+
+<span class="nx">END_FUNCTION_BLOCK</span>
+</code></pre></div></td></tr></table></div>
+<p>Esto permite que se pueda pasar cualquier objeto que implemente la interfaz <code>IConexion</code>, lo que cumple con el principio de inversión de dependencias.</p>
 <p>Además, se utiliza el método <code>EstablecerConexion</code> definido en la interfaz <code>IConexion</code>, lo que demuestra cómo se puede utilizar una abstracción (la interfaz) para trabajar con diferentes implementaciones concretas de manera uniforme.</p>
 <hr />
 <h3 id="links"><span style="color:grey">Links:</span></h3>
