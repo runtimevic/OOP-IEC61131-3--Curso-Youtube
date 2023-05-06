@@ -151,11 +151,11 @@ nav:
        - Polimorfismo: principios/polimorfismo.md    
     - SOLID: 
        - SOLID: solid/_SOLID.md
-       - Principio de Responsabilidad Única: solid/Principio de Responsabilidad Única.md
-       - Principio de Abierto/Cerrado: solid/Principio de Abierto_Cerrado.md
-       - Principio de Sustitución de Liskov: solid/Principio de Sustitución de Liskov.md
-       - Principio de Segregación de Interfaz: solid/Principio de Segregación de Interfaz.md
-       - Principio de Inversión de Dependencia: solid/Principio de Inversión de Dependencia.md
+       - Principio de Responsabilidad Única - SRP: solid/Principio de Responsabilidad Única.md
+       - Principio de Abierto/Cerrado - OCP: solid/Principio de Abierto_Cerrado.md
+       - Principio de Sustitución de Liskov - LSP: solid/Principio de Sustitución de Liskov.md
+       - Principio de Segregación de Interfaz - ISP: solid/Principio de Segregación de Interfaz.md
+       - Principio de Inversión de Dependencia - DIP : solid/Principio de Inversión de Dependencia.md
     - UML: 
        - UML: UML/UML.md
        - Class UML: UML/Class UML.md
