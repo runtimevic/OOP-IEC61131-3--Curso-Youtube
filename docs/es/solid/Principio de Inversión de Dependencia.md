@@ -31,7 +31,8 @@ Dispositivo(conexion);
 establecerConexion();
 
 END_FUNCTION_BLOCK
-````
+```
+
 Esto permite que se pueda pasar cualquier objeto que implemente la interfaz `IConexion`, lo que cumple con el principio de inversión de dependencias.
 
 Además, se utiliza el método `EstablecerConexion` definido en la interfaz `IConexion`, lo que demuestra cómo se puede utilizar una abstracción (la interfaz) para trabajar con diferentes implementaciones concretas de manera uniforme.
