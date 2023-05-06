@@ -17,6 +17,46 @@ Cuando Robert C. Martin se hizo cargo del principio de Bertrand Meyer en la déc
 ### <span style="color:grey">Resumen:</span>
 Sin embargo, adherirse al principio abierto/cerrado (OCP) conlleva el riesgo de un exceso de ingeniería. La opción de extensiones solo debe implementarse donde sea específicamente necesario. El software no puede diseñarse de tal manera que todas las extensiones imaginables puedan implementarse sin realizar ajustes en el código fuente.
 
+### <span style="color:grey">Ejemplo:</span>
+
+```javascript
+FUNCTION_BLOCK Vehiculo
+VAR_INPUT
+    velocidad : REAL;
+END_VAR
+
+// método para obtener la velocidad
+getVelocidad() : REAL;
+
+END_FUNCTION_BLOCK
+
+FUNCTION_BLOCK Coche EXTENDS Vehiculo // extiende la función Vehiculo
+VAR_INPUT
+    velocidadMaxima : REAL;
+END_VAR
+
+// constructor
+Coche(velocidad, velocidadMaxima);
+
+// método para obtener la velocidad máxima
+getVelocidadMaxima() : REAL;
+
+END_FUNCTION_BLOCK
+
+FUNCTION_BLOCK Moto EXTENDS Vehiculo // extiende la función Vehiculo
+VAR_INPUT
+    aceleracion : REAL;
+END_VAR
+
+// constructor
+Moto(velocidad, aceleracion);
+
+// método para obtener la aceleración
+getAceleracion() : REAL;
+
+END_FUNCTION_BLOCK
+```
+De esta manera, la clase "Vehiculo" está cerrada para modificaciones directas y abierta para extensiones a través de las nuevas clases "Coche" y "Moto". Cada nueva clase agrega funcionalidades específicas sin modificar directamente la clase original.
 ***
 ### <span style="color:grey">Links:</span>
 
