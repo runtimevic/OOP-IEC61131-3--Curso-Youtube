@@ -50,6 +50,7 @@ Además de los principios SOLID, existen otros principios como:
 
 Todos estos principios tienen el objetivo común de mejorar la mantenibilidad y la reutilización del software.
 
+Los principios SOLID no son reglas o leyes que deban seguirse estrictamente. Son pautas que pueden ayudarnos a mejorar nuestra calidad de código y habilidades de diseño. No están destinados a ser aplicados ciega o dogmáticamente. Están destinados a ser utilizados con sentido común y juicio.
 ***
 ### <span style="color:grey">Links:</span>
 - 🔗 [Cómo explicar conceptos de programación orientada a objetos a un niño de 6 años](https://www.freecodecamp.org/news/object-oriented-programming-concepts-21bb035f7260/#:~:text=The%20four%20principles%20of%20object,abstraction%2C%20inheritance%2C%20and%20polymorphism.)
