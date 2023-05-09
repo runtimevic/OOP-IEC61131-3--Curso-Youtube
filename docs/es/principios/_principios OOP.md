@@ -11,3 +11,7 @@ Principios OOP: (4 pilares)
 
 
 ![OOP_Principios](../imagenes/OOP_basic_principles.jpeg)
+
+***
+### <span style="color:grey">Links de Principios OOP:</span>
+- 🔗 [github.com/Aliazzzz/OOP-Concept-Examples-in-CODESYS-V3](https://github.com/Aliazzzz/OOP-Concept-Examples-in-CODESYS-V3)

@@ -1,4 +1,6 @@
-### <span style="color:grey">PATRONES DE DISEÑO:</span> 
+### <span style="color:grey">PATRONES DE DISEÑO:</span>
+
+![Designpatterns](../imagenes/DesignPatterns.PNG)
 
 Los patrones de diseño son soluciones generales y reutilizables para problemas comunes que se encuentran en la programación de software. En la programación orientada a objetos, existen muchos patrones de diseño que se pueden aplicar para mejorar la modularidad, la flexibilidad y el mantenimiento del código.
 Algunos ejemplos de patrones de diseño que se pueden aplicar en la programación de PLCs incluyen el patrón Singleton, el patrón Factory Method, el patrón Observer y el patrón Strategy.
@@ -16,10 +18,13 @@ general en un contexto particular”.
 - Gang of Four 
 ```
 
-![Designpatterns](../imagenes/Design Patterns.PNG)
-![Patrones de Diseño Creacional](../imagenes/Patrones de Diseño Creacional.PNG)
-![Patrones de Diseño Estructural](../imagenes/Patrones de Diseño Estructural.PNG)
-![Patrones de Diseño de Comportamiento](../imagenes/Patrones de Diseño de Comportamiento.PNG)
+
+![Patrones_de_Diseño_Creacional](../imagenes/Patrones de Diseño Creacional.PNG)
+
+![Patrones_de_Diseño_Estructural](../imagenes/Patrones de Diseño Estructural.PNG)
+
+![Patrones_de_Diseño_de_Comportamiento](../imagenes/Patrones de Diseño de Comportamiento.PNG)
+
 ![Design_patterns](../imagenes/Design_patterns.jpg)
 
 Clasificación según su propósito: 
@@ -129,7 +134,9 @@ Además de los Patrones de Diseño tenemos:
 -	Patrones de Organizacionales. Describen como organizar grupos humanos, generalmente relacionados con el software. 
 -	Otros Patrones de Software. Se puede hablar de patrones de Programación concurrente, de Interfaz Gráfica, de Organización de Código, de Optimización de Código, de Robustez de Código, de Fase de Prueba. 
 
-
+***
 ### <span style="color:grey">Links de Patrones de Diseño:</span>
 
+- 🔗 [refactoring.guru/es/design-patterns](https://refactoring.guru/es/design-patterns)
 - 🔗 [0w8States/PLC-Design-Patterns](https://github.com/0w8States/PLC-Design-Patterns)
+- 🔗 [github.com/Aliazzzz/Applied-Design-Patterns-in-CODESYS-V3](https://github.com/Aliazzzz/Applied-Design-Patterns-in-CODESYS-V3)
