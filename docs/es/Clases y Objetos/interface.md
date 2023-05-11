@@ -27,7 +27,9 @@ que es ejecutado.
 
 - 🔗 [Codesys Comando 'Implementar interfaces'](https://help.codesys.com/api-content/2/codesys/3.5.12.0/en/_cds_cmd_implement_interfaces/)
 
-- 🔗 [Codesys Objeto Interface](https://help.codesys.com/api-content/2/codesys/3.5.13.0/en/_cds_obj_interface/)
+- 🔗 [Codesys_3.5.13.0 Objeto Interface](https://help.codesys.com/api-content/2/codesys/3.5.13.0/en/_cds_obj_interface/)
+
+- 🔗 [Codesys_3.5.14.0 Objeto Interface](https://help.codesys.com/api-content/2/codesys/3.5.14.0/en/_cds_obj_interface/)
 
 - 🔗 [Codesys Implementando Interfaces](https://help.codesys.com/api-content/2/codesys/3.5.12.0/en/_cds_implementing_interface/)
 

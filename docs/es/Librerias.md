@@ -13,6 +13,7 @@ Mediante el uso de bibliotecas, podemos administrar el software que hemos creado
 - 🔗 [soup01.com,beckhofftwincat3-library-management](http://soup01.com/en/2023/05/11/beckhofftwincat3-library-management/)
 - 🔗 [PLC programming using TwinCAT 3 - Libraries (Part 11/18)](https://www.youtube.com/watch?v=rWWPWuUYFbg)
 - 🔗 [help.codesys.com,_cds_obj_library_manager/](https://help.codesys.com/api-content/2/codesys/3.5.13.0/en/_cds_obj_library_manager/)
+- 🔗 [help.codesys.com,_cds_library_development_information/](https://help.codesys.com/api-content/2/codesys/3.5.13.0/en/_cds_library_development_information/)
 - 🔗 [help.codesys.com,_tm_test_action_libraries_addlibrary](https://help.codesys.com/webapp/_tm_test_action_libraries_addlibrary;product=codesys_test_manager;version=4.3.1.0)
 - 🔗 [CODESYS Webinar Library Management Basics](https://www.youtube.com/watch?v=A4lQGWAUTgs)
 - 🔗 [CoDeSys - How to add libraries and more with Machine Control Studio.](https://www.youtube.com/watch?v=8OGPvyo99p8&t=351s)

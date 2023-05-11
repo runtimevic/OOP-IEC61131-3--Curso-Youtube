@@ -35,7 +35,13 @@ El polimorfismo se puede obtener gracias a las Interfaces y/o las Clases Abstrac
     | Clases abstractas | Interfaces | 
     | :--- | :--- |     
     | 1.- Limitadas a una sola implementación.   | 1. No tiene limitación de implementación.     | 
-    | 2.- Pueden definir comportamiento base.     | 2. Expone propiedades y métodos abstractos (sin lógica).     |
+    | 2.- Pueden definir comportamiento base.     | 2. Expone propiedades y métodos abstractos (sin lógica).
+    
+Tambien se puede conseguir el Polimorfismo por Referencia y/o por Punteros:
+
+- <span style="color:orange"><font size="4">Referencia: (REFERENCE)</font></span>|
+
+- <span style="color:orange"><font size="4">Puntero: (POINTER)</font></span>|
 
 ***    
 ### <span style="color:grey">Links Polimorfismo:</span>
