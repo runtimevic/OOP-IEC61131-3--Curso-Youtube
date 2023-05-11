@@ -39,9 +39,9 @@ El polimorfismo se puede obtener gracias a las Interfaces y/o las Clases Abstrac
     
 Tambien se puede conseguir el Polimorfismo por Referencia y/o por Punteros:
 
-- <span style="color:orange"><font size="4">Referencia: (REFERENCE)</font></span>|
+- <span style="color:orange"><font size="4">Referencia: (REFERENCE)</font></span>
 
-- <span style="color:orange"><font size="4">Puntero: (POINTER)</font></span>|
+- <span style="color:orange"><font size="4">Puntero: (POINTER)</font></span>
 
 ***    
 ### <span style="color:grey">Links Polimorfismo:</span>
