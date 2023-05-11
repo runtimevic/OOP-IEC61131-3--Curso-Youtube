@@ -1,4 +1,4 @@
-### Class UML
+### <span style="color:grey"> Diagrama de Clases en UML:</span>
 La jerarquía de herencia se puede representar en forma de diagrama. El lenguaje de modelado unificado (UML) es el estándar establecido en esta área. UML define varios tipos de diagramas que describen tanto la estructura como el comportamiento del software.
 
 Una buena herramienta para describir la jerarquía de herencia de bloques de funciones es el diagrama de clases.
