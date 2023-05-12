@@ -106,11 +106,6 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://runtimevic.github.io/OOP-IEC61131-3--Curso-Youtube/es/Clases%20y%20Objetos/modificadores%20de%20acceso/</loc>
-         <lastmod>2023-05-12</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
          <loc>https://runtimevic.github.io/OOP-IEC61131-3--Curso-Youtube/es/Clases%20y%20Objetos/pointer%20and%20reference/</loc>
          <lastmod>2023-05-12</lastmod>
          <changefreq>daily</changefreq>
@@ -147,6 +142,11 @@
     </url>
     <url>
          <loc>https://runtimevic.github.io/OOP-IEC61131-3--Curso-Youtube/es/Conceptos%20Previos/Variable%20types%20and%20special%20variables/</loc>
+         <lastmod>2023-05-12</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://runtimevic.github.io/OOP-IEC61131-3--Curso-Youtube/es/Conceptos%20Previos/modificadores%20de%20acceso/</loc>
          <lastmod>2023-05-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
