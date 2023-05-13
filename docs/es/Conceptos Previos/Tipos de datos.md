@@ -1,12 +1,21 @@
 ## Declaracion de una Variable:
 
 La declaración de variables en CODESYS ó TwinCAT incluirá:
+
 - Un nombre de variable
 - Dos puntos
 - Un tipo de dato
 - Un valor inicial opcional
 - Un punto y coma
 - Un comentario opcional
+
+```iecst
+VAR
+	Marca : STRING;
+	Color : INT; // Numero de color.
+	accion : BOOL;
+END_VAR
+```
 ***
 ### <span style="color:grey">🔗 [Tipos de Datos:](https://infosys.beckhoff.com/content/1033/tc3_plc_intro/2529388939.html?id=3451082169760117126)</span>
 
@@ -16,11 +25,12 @@ creados por el usuario es la claridad y el orden del código resultante.
 
 ***
 
-- Estructuras de datos: (STRUCT)
+###  Estructuras de datos: (STRUCT)
 
+- 🔗 [19. TwinCAT 3: Structures](https://www.youtube.com/watch?v=KzZ73qAevlU)
 - 🔗 [Extender una Estructura, Infosys Beckhoff](https://infosys.beckhoff.com/content/1033/tc3_plc_intro/3468091787.html?id=592001323464924565)
 
-- Datos de usuario:UDT (User Data Type)
+###  Datos de usuario:UDT (User Data Type):
 Los UDT (User Data Type) son tipos de datos que el usuario crea a su medida, 
 según las necesidades de cada proyecto.
 
