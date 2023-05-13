@@ -1748,14 +1748,25 @@
 <li>Un punto y coma</li>
 <li>Un comentario opcional</li>
 </ul>
+<p><div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="p">(</span><span class="w"> </span><span class="o">&lt;</span><span class="nx">pragma</span><span class="o">&gt;</span><span class="w"> </span><span class="p">)</span><span class="o">*</span>
+<span class="o">&lt;</span><span class="nx">scope</span><span class="o">&gt;</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="o">&lt;</span><span class="nx">type</span><span class="w"> </span><span class="nx">qualifier</span><span class="o">&gt;</span><span class="w"> </span><span class="p">)</span><span class="o">?</span>
+<span class="w">      </span><span class="o">&lt;</span><span class="nx">identifier</span><span class="o">&gt;</span><span class="w"> </span><span class="p">(</span><span class="nx">AT</span><span class="w"> </span><span class="o">&lt;</span><span class="nx">address</span><span class="o">&gt;</span><span class="w"> </span><span class="p">)</span><span class="o">?</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="o">&lt;</span><span class="nx">data</span><span class="w"> </span><span class="nx">type</span><span class="o">&gt;</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="o">&lt;</span><span class="nx">initial</span><span class="w"> </span><span class="nx">value</span><span class="o">&gt;</span><span class="w"> </span><span class="p">)</span><span class="o">?</span><span class="w"> </span><span class="p">;</span>
+<span class="nx">END_VAR</span>
+</code></pre></div></td></tr></table></div>
+- 🔗 <a href="https://infosys.beckhoff.com/english.php?content=../content/1033/tc3_plc_intro/2526557579.html&amp;id=">infosys.beckhoff.com, Declaring variables</a></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
 <span class="normal">4</span>
-<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code>VAR
-    Marca : STRING;
-    Color : INT; // Numero de color.
-    accion : BOOL;
+<span class="normal">5</span>
+<span class="normal">6</span></pre></div></td><td class="code"><div><pre><span></span><code>VAR
+    nVar1   : INT := 12;                    // initialization value 12
+    nVar2   : INT := 13 + 8;                // initialization value defined by an expression of constants
+    nVar3   : INT := nVar2 + F_Fun(4);      //initialization value defined by an expression that contains a function call; notice the order!
+    pSample : POINTER TO INT := ADR(nVar1); //not described in the standard IEC61131-3: initialization value defined by an adress function; Notice: the pointer will not be initialized during an Online Change
 END_VAR
 </code></pre></div></td></tr></table></div>
 <hr />
@@ -1836,7 +1847,12 @@ https://infosys.beckhoff.com/english.php?content=../content/1033/tc3_plc_intro/2
 <li>Structure</li>
 <li>Enumerations</li>
 <li>Alias</li>
-<li>UNION</li>
+<li>
+<p>UNION</p>
+</li>
+<li>
+<p>🔗 <a href="https://infosys.beckhoff.com/english.php?content=../content/1033/tc3_plc_intro/2529448075.html&amp;id=">Special data types XINT, UXINT, XWORD and PVOID</a></p>
+</li>
 </ul>
 <hr />
 <h3 id="links-tipos-de-datos"><span style="color:grey">Links Tipos de Datos:</span></h3>
