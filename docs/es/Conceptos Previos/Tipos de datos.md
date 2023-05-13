@@ -9,11 +9,20 @@ La declaración de variables en CODESYS ó TwinCAT incluirá:
 - Un punto y coma
 - Un comentario opcional
 
+```javascript
+( <pragma> )*
+<scope> ( <type qualifier> )?
+      <identifier> (AT <address> )? : <data type> ( := <initial value> )? ;
+END_VAR
+```
+- 🔗 [infosys.beckhoff.com, Declaring variables](https://infosys.beckhoff.com/english.php?content=../content/1033/tc3_plc_intro/2526557579.html&id=)
+
 ```iecst
 VAR
-	Marca : STRING;
-	Color : INT; // Numero de color.
-	accion : BOOL;
+    nVar1   : INT := 12;                    // initialization value 12
+    nVar2   : INT := 13 + 8;                // initialization value defined by an expression of constants
+    nVar3   : INT := nVar2 + F_Fun(4);      //initialization value defined by an expression that contains a function call; notice the order!
+    pSample : POINTER TO INT := ADR(nVar1); //not described in the standard IEC61131-3: initialization value defined by an adress function; Notice: the pointer will not be initialized during an Online Change
 END_VAR
 ```
 ***
@@ -94,6 +103,7 @@ https://infosys.beckhoff.com/english.php?content=../content/1033/tc3_plc_intro/2
 - Alias
 - UNION
 
+- 🔗 [Special data types XINT, UXINT, XWORD and PVOID](https://infosys.beckhoff.com/english.php?content=../content/1033/tc3_plc_intro/2529448075.html&id=)
 ***
 ### <span style="color:grey">Links Tipos de Datos:</span>
 - 🔗 [12. TwinCAT 3: Standard data types](https://www.youtube.com/watch?v=qh2cC6eOhKw)
