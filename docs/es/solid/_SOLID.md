@@ -14,6 +14,7 @@
 - <span style="color:orange">Principio de Segregación de Interfaz:</span> Varias **interfaces** funcionan **mejor que una sola**.
 - <span style="color:orange">Principio de Inversión de Dependencia:</span> Clases de **alto nivel** no deben depender de las clases **bajo nivel**.
 ***
+Los principios SOLID son una parte esencial del desarrollo de software orientado a objetos y han demostrado ser herramientas valiosas para desarrollar código limpio, mantenible y extensible. En la tecnología de automatización industrial, especialmente en la programación de controladores con IEC 61131-3, es de particular importancia desarrollar sistemas robustos y confiables.
 
 Además de los principios SOLID, existen otros principios como:
 
