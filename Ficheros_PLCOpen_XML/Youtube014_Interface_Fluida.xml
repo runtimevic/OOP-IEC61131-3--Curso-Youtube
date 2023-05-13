@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <project xmlns="http://www.plcopen.org/xml/tc6_0200">
-  <fileHeader companyName="Beckhoff Automation GmbH" productName="TwinCAT PLC Control" productVersion="3.5.13.21" creationDateTime="2023-04-30T12:55:15.3953781" />
-  <contentHeader name="OOP_Curso" modificationDateTime="2023-04-30T12:55:15.4031851">
+  <fileHeader companyName="Beckhoff Automation GmbH" productName="TwinCAT PLC Control" productVersion="3.5.13.21" creationDateTime="2023-05-13T12:07:58.5855925" />
+  <contentHeader name="OOP_Curso" modificationDateTime="2023-05-13T12:07:58.5904708">
     <coordinateInfo>
       <fbd>
         <scaling x="1" y="1" />
@@ -323,57 +323,6 @@ METHOD Clear : I_SetNumber
             </Method>
           </data>
           <data name="http://www.3s-software.com/plcopenxml/method" handleUnknown="implementation">
-            <Method name="SetNumber" ObjectId="c4386278-a5a3-4e65-ab49-e1a72f64fa7b">
-              <interface>
-                <returnType>
-                  <derived name="I_Operation" />
-                </returnType>
-                <inputVars>
-                  <variable name="lNumber">
-                    <type>
-                      <LREAL />
-                    </type>
-                  </variable>
-                </inputVars>
-              </interface>
-              <body>
-                <ST>
-                  <xhtml xmlns="http://www.w3.org/1999/xhtml">lResult := lNumber;
-SetNumber := THIS^;</xhtml>
-                </ST>
-              </body>
-              <InterfaceAsPlainText>
-                <xhtml xmlns="http://www.w3.org/1999/xhtml">
-METHOD SetNumber : I_Operation
-VAR_INPUT
-	lNumber	: LREAL;
-END_VAR
-</xhtml>
-              </InterfaceAsPlainText>
-              <addData />
-            </Method>
-          </data>
-          <data name="http://www.3s-software.com/plcopenxml/method" handleUnknown="implementation">
-            <Method name="GetResult" ObjectId="dbbfe739-cf55-4f0b-acab-5f4276267cf5">
-              <interface>
-                <returnType>
-                  <LREAL />
-                </returnType>
-              </interface>
-              <body>
-                <ST>
-                  <xhtml xmlns="http://www.w3.org/1999/xhtml">GetResult := lResult;</xhtml>
-                </ST>
-              </body>
-              <InterfaceAsPlainText>
-                <xhtml xmlns="http://www.w3.org/1999/xhtml">
-METHOD GetResult : LREAL
-</xhtml>
-              </InterfaceAsPlainText>
-              <addData />
-            </Method>
-          </data>
-          <data name="http://www.3s-software.com/plcopenxml/method" handleUnknown="implementation">
             <Method name="DecreaseBy" ObjectId="4c4897c8-281b-4bc6-9dd7-e43e44f6344e">
               <interface>
                 <returnType>
@@ -441,6 +390,26 @@ END_VAR
             </Method>
           </data>
           <data name="http://www.3s-software.com/plcopenxml/method" handleUnknown="implementation">
+            <Method name="GetResult" ObjectId="dbbfe739-cf55-4f0b-acab-5f4276267cf5">
+              <interface>
+                <returnType>
+                  <LREAL />
+                </returnType>
+              </interface>
+              <body>
+                <ST>
+                  <xhtml xmlns="http://www.w3.org/1999/xhtml">GetResult := lResult;</xhtml>
+                </ST>
+              </body>
+              <InterfaceAsPlainText>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">
+METHOD GetResult : LREAL
+</xhtml>
+              </InterfaceAsPlainText>
+              <addData />
+            </Method>
+          </data>
+          <data name="http://www.3s-software.com/plcopenxml/method" handleUnknown="implementation">
             <Method name="IncreaseBy" ObjectId="f414866b-25c6-4c09-b49a-3b20c351e55d">
               <interface>
                 <returnType>
@@ -502,6 +471,37 @@ END_VAR
               <addData />
             </Method>
           </data>
+          <data name="http://www.3s-software.com/plcopenxml/method" handleUnknown="implementation">
+            <Method name="SetNumber" ObjectId="c4386278-a5a3-4e65-ab49-e1a72f64fa7b">
+              <interface>
+                <returnType>
+                  <derived name="I_Operation" />
+                </returnType>
+                <inputVars>
+                  <variable name="lNumber">
+                    <type>
+                      <LREAL />
+                    </type>
+                  </variable>
+                </inputVars>
+              </interface>
+              <body>
+                <ST>
+                  <xhtml xmlns="http://www.w3.org/1999/xhtml">lResult := lNumber;
+SetNumber := THIS^;</xhtml>
+                </ST>
+              </body>
+              <InterfaceAsPlainText>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">
+METHOD SetNumber : I_Operation
+VAR_INPUT
+	lNumber	: LREAL;
+END_VAR
+</xhtml>
+              </InterfaceAsPlainText>
+              <addData />
+            </Method>
+          </data>
           <data name="http://www.3s-software.com/plcopenxml/interfaceasplaintext" handleUnknown="implementation">
             <InterfaceAsPlainText>
               <xhtml xmlns="http://www.w3.org/1999/xhtml">FUNCTION_BLOCK FB_Calcul IMPLEMENTS I_Clear, I_SetNumber, I_Operation
@@ -552,7 +552,8 @@ fMyResult1 := fbCalculate.Clear()
 		        			.IncreaseBy(3.9)
 	                		.MultiplyBy(5)
 		        			.DivideBy(3)
-		        			.GetResult();
+		        			.GetResult();							
+													
 						
 // 14_2 : se ha optimazado un poco, para que la interfaz fluida no deje ir encadenando metodos que se contradigan entre si...	
 // por ejemplo el metodo SetNumber() solo tiene sentido después del metodo Clear()..
@@ -563,9 +564,11 @@ fMyResult2 := fbCalcul.Clear()
 		        		.IncreaseBy(3.9)
 	                	.MultiplyBy(5)
 		        		.DivideBy(3)						
-						.GetResult();
+						.GetResult();											
 
-// 14_3 : la forma mas optima sería que primero de todo solo pidiese el metodo Clear() y despues solo saliese el metodo SetNumber() y después ya se pudiesen poner solo los metodos de operaciones y el de GetResult()
+// 14_3 : la forma mas optima sería que primero de todo solo pidiese el metodo Clear()
+// y despues solo saliese el metodo SetNumber() 
+// y después ya se pudiesen poner solo los metodos de operaciones y el de GetResult()
 
 					</xhtml>
           </ST>
@@ -917,7 +920,6 @@ END_VAR
     <data name="http://www.3s-software.com/plcopenxml/projectstructure" handleUnknown="discard">
       <ProjectStructure>
         <Folder Name="14_Interface_Fluida">
-          <Object Name="_14_Interface_Fluida" ObjectId="d773237d-8a88-4f7f-ae3b-c36a66e1a868" />
           <Folder Name="14_1">
             <Object Name="FB_Calculate" ObjectId="fd0f0c21-0296-466b-abff-e0b229984285">
               <Object Name="Clear" ObjectId="33b45ed3-12a4-4213-8e47-d19c93bca373" />
@@ -941,12 +943,12 @@ END_VAR
           <Folder Name="14_2">
             <Object Name="FB_Calcul" ObjectId="a3ffe25b-7e16-4b11-8e6c-b431024bc7bf">
               <Object Name="Clear" ObjectId="08aa8cf2-ddf4-4164-9a8b-99f40703dfb3" />
-              <Object Name="SetNumber" ObjectId="c4386278-a5a3-4e65-ab49-e1a72f64fa7b" />
-              <Object Name="GetResult" ObjectId="dbbfe739-cf55-4f0b-acab-5f4276267cf5" />
               <Object Name="DecreaseBy" ObjectId="4c4897c8-281b-4bc6-9dd7-e43e44f6344e" />
               <Object Name="DivideBy" ObjectId="76341c2b-5d55-4c13-b270-8c8941f2d7e5" />
+              <Object Name="GetResult" ObjectId="dbbfe739-cf55-4f0b-acab-5f4276267cf5" />
               <Object Name="IncreaseBy" ObjectId="f414866b-25c6-4c09-b49a-3b20c351e55d" />
               <Object Name="MultiplyBy" ObjectId="f4369c70-6151-4970-a05a-bcf0426819a3" />
+              <Object Name="SetNumber" ObjectId="c4386278-a5a3-4e65-ab49-e1a72f64fa7b" />
             </Object>
             <Object Name="I_Clear" ObjectId="83be75c4-62a3-4d02-8eb0-dde04a84ab35">
               <Object Name="Clear" ObjectId="195c8fc3-ce62-471f-8dec-0cc2a3f7ae6b" />
@@ -962,6 +964,7 @@ END_VAR
               <Object Name="SetNumber" ObjectId="0e8d76fc-c3ae-42ca-98ba-521a40642a18" />
             </Object>
           </Folder>
+          <Object Name="_14_Interface_Fluida" ObjectId="d773237d-8a88-4f7f-ae3b-c36a66e1a868" />
         </Folder>
       </ProjectStructure>
     </data>

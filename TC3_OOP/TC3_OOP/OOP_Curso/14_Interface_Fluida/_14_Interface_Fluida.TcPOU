@@ -18,7 +18,8 @@ fMyResult1 := fbCalculate.Clear()
 		        			.IncreaseBy(3.9)
 	                		.MultiplyBy(5)
 		        			.DivideBy(3)
-		        			.GetResult();
+		        			.GetResult();							
+													
 						
 // 14_2 : se ha optimazado un poco, para que la interfaz fluida no deje ir encadenando metodos que se contradigan entre si...	
 // por ejemplo el metodo SetNumber() solo tiene sentido después del metodo Clear()..
@@ -29,9 +30,11 @@ fMyResult2 := fbCalcul.Clear()
 		        		.IncreaseBy(3.9)
 	                	.MultiplyBy(5)
 		        		.DivideBy(3)						
-						.GetResult();
+						.GetResult();											
 
-// 14_3 : la forma mas optima sería que primero de todo solo pidiese el metodo Clear() y despues solo saliese el metodo SetNumber() y después ya se pudiesen poner solo los metodos de operaciones y el de GetResult()
+// 14_3 : la forma mas optima sería que primero de todo solo pidiese el metodo Clear()
+// y despues solo saliese el metodo SetNumber() 
+// y después ya se pudiesen poner solo los metodos de operaciones y el de GetResult()
 
 					]]></ST>
     </Implementation>
