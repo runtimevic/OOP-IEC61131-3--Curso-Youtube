@@ -449,6 +449,20 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#estructuras-de-datos-struct" class="md-nav__link">
+    Estructuras de datos: (STRUCT)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#datos-de-usuarioudt-user-data-type" class="md-nav__link">
+    Datos de usuario:UDT (User Data Type):
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#standard-data-types" class="md-nav__link">
     Standard data types
   </a>
@@ -1653,6 +1667,20 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#estructuras-de-datos-struct" class="md-nav__link">
+    Estructuras de datos: (STRUCT)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#datos-de-usuarioudt-user-data-type" class="md-nav__link">
+    Datos de usuario:UDT (User Data Type):
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#standard-data-types" class="md-nav__link">
     Standard data types
   </a>
@@ -1711,13 +1739,25 @@
   <h1>Tipos de Datos</h1>
 
 <h2 id="declaracion-de-una-variable">Declaracion de una Variable:</h2>
-<p>La declaración de variables en CODESYS ó TwinCAT incluirá:
-- Un nombre de variable
-- Dos puntos
-- Un tipo de dato
-- Un valor inicial opcional
-- Un punto y coma
-- Un comentario opcional</p>
+<p>La declaración de variables en CODESYS ó TwinCAT incluirá:</p>
+<ul>
+<li>Un nombre de variable</li>
+<li>Dos puntos</li>
+<li>Un tipo de dato</li>
+<li>Un valor inicial opcional</li>
+<li>Un punto y coma</li>
+<li>Un comentario opcional</li>
+</ul>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code>VAR
+    Marca : STRING;
+    Color : INT; // Numero de color.
+    accion : BOOL;
+END_VAR
+</code></pre></div></td></tr></table></div>
 <hr />
 <h3 id="tipos-de-datos"><span style="color:grey">🔗 <a href="https://infosys.beckhoff.com/content/1033/tc3_plc_intro/2529388939.html?id=3451082169760117126">Tipos de Datos:</a></span></h3>
 <h3 id="las-ventajas-de-las-estructuras-de-datos">Las ventajas de las estructuras de datos.</h3>
@@ -1726,19 +1766,14 @@
 creados por el usuario es la claridad y el orden del código resultante.</li>
 </ul>
 <hr />
+<h3 id="estructuras-de-datos-struct">Estructuras de datos: (STRUCT)</h3>
 <ul>
-<li>
-<p>Estructuras de datos: (STRUCT)</p>
-</li>
-<li>
-<p>🔗 <a href="https://infosys.beckhoff.com/content/1033/tc3_plc_intro/3468091787.html?id=592001323464924565">Extender una Estructura, Infosys Beckhoff</a></p>
-</li>
-<li>
-<p>Datos de usuario:UDT (User Data Type)
-Los UDT (User Data Type) son tipos de datos que el usuario crea a su medida, 
-según las necesidades de cada proyecto.</p>
-</li>
+<li>🔗 <a href="https://www.youtube.com/watch?v=KzZ73qAevlU">19. TwinCAT 3: Structures</a></li>
+<li>🔗 <a href="https://infosys.beckhoff.com/content/1033/tc3_plc_intro/3468091787.html?id=592001323464924565">Extender una Estructura, Infosys Beckhoff</a></li>
 </ul>
+<h3 id="datos-de-usuarioudt-user-data-type">Datos de usuario:UDT (User Data Type):</h3>
+<p>Los UDT (User Data Type) son tipos de datos que el usuario crea a su medida, 
+según las necesidades de cada proyecto.</p>
 <hr />
 <p>When programming in TwinCAT, you can use different data types or instances of function blocks. You assign a data type to each identifier. The data type determines how much memory space is allocated and how these values are interpreted.</p>
 <p>The following groups of data types are available:</p>
