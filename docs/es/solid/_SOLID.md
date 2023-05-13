@@ -58,6 +58,8 @@ Los principios SOLID no son reglas o leyes que deban seguirse estrictamente. Son
 
 - 🔗 [iec-61131-3-solid-five-principles-for-better-software,stefanhenneken.net](https://stefanhenneken.net/2021/07/25/iec-61131-3-solid-five-principles-for-better-software/#more-1892)
 
+- 🔗 [Libro SOLID IEC61131-3 en Aleman de Stefanhenneken](https://www.bod.de/buchshop/anwendung-der-solid-prinzipien-mit-der-iec-61131-3-stefan-henneken-9783757870706)
+
 - 🔗 [kentcdodds.com,aha-programming](https://kentcdodds.com/blog/aha-programming)
 
 
