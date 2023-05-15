@@ -16,7 +16,11 @@
 ***
 Los principios SOLID son una parte esencial del desarrollo de software orientado a objetos y han demostrado ser herramientas valiosas para desarrollar código limpio, mantenible y extensible. En la tecnología de automatización industrial, especialmente en la programación de controladores con IEC 61131-3, es de particular importancia desarrollar sistemas robustos y confiables.
 
+![OOP__7_Concepts](../imagenes/OOP__7_Concepts.PNG)
+
 Además de los principios SOLID, existen otros principios como:
+
+![3_Simple_Golden_Principles In_Software_Development](../imagenes/3_Simple_Golden_Principles In_Software_Development.PNG)
 
 ### Keep It Simple, Stupid (KISS).
 ```

@@ -19,13 +19,18 @@ general en un contexto particular”.
 ```
 
 
-![Patrones_de_Diseño_Creacional](../imagenes/Patrones de Diseño Creacional.PNG)
+![Patrones_de_Diseño_Creacional](../imagenes/Patrones_de Diseño_Creacional.PNG)
 
-![Patrones_de_Diseño_Estructural](../imagenes/Patrones de Diseño Estructural.PNG)
+![Patrones_de_Diseño_Estructural](../imagenes/Patrones_de Diseño_Estructural.PNG)
 
-![Patrones_de_Diseño_de_Comportamiento](../imagenes/Patrones de Diseño de Comportamiento.PNG)
+![Patrones_de_Diseño_de_Comportamiento](../imagenes/Patrones de_Diseño_de_Comportamiento.PNG)
 
 ![Design_patterns](../imagenes/Design_patterns.jpg)
+
+
+![Design_patterns_15](../imagenes/OOP__Design_Patterns_15.PNG.jpg)
+
+![Design_patterns_15](../imagenes/OOP__Design_Patterns_Use_Cases_6.PNG)
 
 Clasificación según su propósito: 
 Los patrones de diseño se clasificaron originalmente en tres grupos: 
