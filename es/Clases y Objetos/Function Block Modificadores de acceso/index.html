@@ -889,7 +889,7 @@
   
     <li class="md-nav__item">
       <a href="../FB%20abstracto%20frente%20a%20interfaz/" class="md-nav__link">
-        FB abstracto frente a interfaz
+        FB Abstracto vs Interface
       </a>
     </li>
   
@@ -903,7 +903,35 @@
   
     <li class="md-nav__item">
       <a href="../Interfaz%20fluida/" class="md-nav__link">
-        Interfaz fluida
+        Interface fluida
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Interface%20vs%20Herencia/" class="md-nav__link">
+        Interface vs Herencia
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Otros%20Operadores/" class="md-nav__link">
+        Otros Operadores
       </a>
     </li>
   
@@ -1071,7 +1099,7 @@
   
     <li class="md-nav__item">
       <a href="../../solid/Principio%20de%20Responsabilidad%20Unica/" class="md-nav__link">
-        Principio de Responsabilidad Única - SRP
+        SRP - Principio de Responsabilidad Única
       </a>
     </li>
   
@@ -1085,7 +1113,7 @@
   
     <li class="md-nav__item">
       <a href="../../solid/Principio%20de%20Abierto_Cerrado/" class="md-nav__link">
-        Principio de Abierto/Cerrado - OCP
+        OCP - Principio de Abierto/Cerrado
       </a>
     </li>
   
@@ -1099,7 +1127,7 @@
   
     <li class="md-nav__item">
       <a href="../../solid/Principio%20de%20Sustitucion%20de%20Liskov/" class="md-nav__link">
-        Principio de Sustitución de Liskov - LSP
+        LSP - Principio de Sustitución de Liskov
       </a>
     </li>
   
@@ -1113,7 +1141,7 @@
   
     <li class="md-nav__item">
       <a href="../../solid/Principio%20de%20Segregacion%20de%20Interfaz/" class="md-nav__link">
-        Principio de Segregación de Interfaz - ISP
+        ISP - Principio de Segregación de Interfaz
       </a>
     </li>
   
@@ -1127,7 +1155,7 @@
   
     <li class="md-nav__item">
       <a href="../../solid/Principio%20de%20Inversion%20de%20Dependencia/" class="md-nav__link">
-        Principio de Inversión de Dependencia - DIP
+        DIP - Principio de Inversión de Dependencia
       </a>
     </li>
   
@@ -1648,19 +1676,17 @@ La configuración predeterminada donde no se define ningún especificador de acc
 <li>Esto significa que no se puede sobrescribir/extender en una subclase posiblemente existente.    </li>
 </ul>
 </li>
-<li><span style="color:orange">ABSTRACT:</span> 
-bloques de funciones abstractas
+<li><span style="color:orange">ABSTRACT:</span></li>
+</ul>
+<p>bloques de funciones abstractas
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nx">FUNCTION_BLOCK</span><span class="w"> </span><span class="nx">PUBLIC</span><span class="w"> </span><span class="nx">ABSTRACT</span><span class="w"> </span><span class="nx">FB_Foo</span>
-</code></pre></div></td></tr></table></div><ul>
-<li>Tan pronto como un método o una propiedad se declaran como abstractos , el bloque de funciones también debe declararse como abstracto .</li>
-<li>No se pueden crear instancias a partir de FB abstractos. Los FB abstractos solo se pueden usar como FB básicos cuando se heredan.</li>
-<li>Todos los métodos abstractos y todas las propiedades abstractas deben sobrescribirse para crear un FB no abstracto. Un método abstracto o una propiedad abstracta se convierte en un método no abstracto o una propiedad no abstracta al sobrescribir.</li>
-<li>Los bloques de funciones abstractas pueden contener además métodos no abstractos y/o propiedades no abstractas.</li>
-<li>Si no se sobrescriben todos los métodos abstractos o todas las propiedades abstractas durante la herencia, el FB heredado solo puede ser un FB abstracto (concretización paso a paso).</li>
-<li>Se permiten punteros o referencias de tipo FB abstracto. Sin embargo, estos pueden referirse a FB no abstractos y, por lo tanto, llamar a sus métodos o propiedades (polimorfismo).</li>
-</ul>
-</li>
-</ul>
+</code></pre></div></td></tr></table></div>
+    - Tan pronto como un método o una propiedad se declaran como abstractos , el bloque de funciones también debe declararse como abstracto .
+    - No se pueden crear instancias a partir de FB abstractos. Los FB abstractos solo se pueden usar como FB básicos cuando se heredan.
+    - Todos los métodos abstractos y todas las propiedades abstractas deben sobrescribirse para crear un FB no abstracto. Un método abstracto o una propiedad abstracta se convierte en un método no abstracto o una propiedad no abstracta al sobrescribir.
+    - Los bloques de funciones abstractas pueden contener además métodos no abstractos y/o propiedades no abstractas.
+    - Si no se sobrescriben todos los métodos abstractos o todas las propiedades abstractas durante la herencia, el FB heredado solo puede ser un FB abstracto (concretización paso a paso).
+    - Se permiten punteros o referencias de tipo FB abstracto. Sin embargo, estos pueden referirse a FB no abstractos y, por lo tanto, llamar a sus métodos o propiedades (polimorfismo).</p>
 <hr />
 <h3 id="link-al-video-de-youtube-004"><span style="color:grey">Link al Video de Youtube 004:</span></h3>
 <ul>

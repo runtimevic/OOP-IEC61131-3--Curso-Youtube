@@ -777,8 +777,8 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#links" class="md-nav__link">
-    Links:
+  <a href="#links-herencia-bloque-de-funcion" class="md-nav__link">
+    Links Herencia Bloque de Funcion:
   </a>
   
 </li>
@@ -916,7 +916,7 @@
   
     <li class="md-nav__item">
       <a href="../../FB%20abstracto%20frente%20a%20interfaz/" class="md-nav__link">
-        FB abstracto frente a interfaz
+        FB Abstracto vs Interface
       </a>
     </li>
   
@@ -930,7 +930,35 @@
   
     <li class="md-nav__item">
       <a href="../../Interfaz%20fluida/" class="md-nav__link">
-        Interfaz fluida
+        Interface fluida
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Interface%20vs%20Herencia/" class="md-nav__link">
+        Interface vs Herencia
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Otros%20Operadores/" class="md-nav__link">
+        Otros Operadores
       </a>
     </li>
   
@@ -1098,7 +1126,7 @@
   
     <li class="md-nav__item">
       <a href="../../../solid/Principio%20de%20Responsabilidad%20Unica/" class="md-nav__link">
-        Principio de Responsabilidad Única - SRP
+        SRP - Principio de Responsabilidad Única
       </a>
     </li>
   
@@ -1112,7 +1140,7 @@
   
     <li class="md-nav__item">
       <a href="../../../solid/Principio%20de%20Abierto_Cerrado/" class="md-nav__link">
-        Principio de Abierto/Cerrado - OCP
+        OCP - Principio de Abierto/Cerrado
       </a>
     </li>
   
@@ -1126,7 +1154,7 @@
   
     <li class="md-nav__item">
       <a href="../../../solid/Principio%20de%20Sustitucion%20de%20Liskov/" class="md-nav__link">
-        Principio de Sustitución de Liskov - LSP
+        LSP - Principio de Sustitución de Liskov
       </a>
     </li>
   
@@ -1140,7 +1168,7 @@
   
     <li class="md-nav__item">
       <a href="../../../solid/Principio%20de%20Segregacion%20de%20Interfaz/" class="md-nav__link">
-        Principio de Segregación de Interfaz - ISP
+        ISP - Principio de Segregación de Interfaz
       </a>
     </li>
   
@@ -1154,7 +1182,7 @@
   
     <li class="md-nav__item">
       <a href="../../../solid/Principio%20de%20Inversion%20de%20Dependencia/" class="md-nav__link">
-        Principio de Inversión de Dependencia - DIP
+        DIP - Principio de Inversión de Dependencia
       </a>
     </li>
   
@@ -1634,8 +1662,8 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#links" class="md-nav__link">
-    Links:
+  <a href="#links-herencia-bloque-de-funcion" class="md-nav__link">
+    Links Herencia Bloque de Funcion:
   </a>
   
 </li>
@@ -1725,9 +1753,9 @@ El nuevo bloque de funciones derivado ( FB_NewEngine ) posee todas las propiedad
 <span class="nx">Gear</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">nGear</span><span class="p">;</span><span class="w"> </span><span class="c1">// new</span>
 </code></pre></div></td></tr></table></div>
 La línea 12 copia el parámetro nGear a la propiedad Gear.</p>
-<p>Cuando un método o propiedad que ya está presente en el bloque de funciones principal se redefine dentro del bloque de funciones secundario, esto se denomina sobrescritura. El bloque de funciones FB_NewEngine sobrescribe el método Start() .</p>
+<p>Cuando un método o propiedad que ya está presente en el bloque de funciones principal se redefine dentro del bloque de funciones secundario, esto se denomina sobrescritura. El bloque de funciones FB_NewEngine sobrescribe el método Start().</p>
 <p>Por lo tanto, FB_NewEngine tiene la nueva propiedad Gear y sobrescribe el método Start() .</p>
-<p><img alt="herenciaFB" src="../imagenes/herencia.png" /></p>
+<p><img alt="herencia" src="../../../imagenes/herencia.PNG" /></p>
 <p><div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nx">fbNewEngine</span><span class="p">.</span><span class="nx">Start</span><span class="p">(</span><span class="mf">1</span><span class="p">,</span><span class="w"> </span><span class="mf">7.5</span><span class="p">);</span>
 </code></pre></div></td></tr></table></div>
 llama al método Start() en FB_NewEngine, ya que este método ha sido redefinido (sobrescrito) en FB_NewEngine .</p>
@@ -1736,7 +1764,7 @@ llama al método Start() en FB_NewEngine, ya que este método ha sido redefinido
 </code></pre></div></td></tr></table></div>
 llama al método Stop() desde FB_Engine . El método Stop() ha sido heredado por FB_NewEngine de FB_Engine .</p>
 <hr />
-<h3 id="links"><span style="color:grey">Links:</span></h3>
+<h3 id="links-herencia-bloque-de-funcion"><span style="color:grey">Links Herencia Bloque de Funcion:</span></h3>
 <ul>
 <li>
 <p>🔗 <a href="https://stefanhenneken.net/2017/04/23/iec-61131-3-methods-properties-and-inheritance/">stefanhenneken.net,iec-61131-3-methods-properties-and-inheritance</a></p>

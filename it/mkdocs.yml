@@ -144,8 +144,10 @@ nav:
        - Interfaccia: Classi e Oggetti/Interfaccia.md
        - puntatore e riferimento: Classi e Oggetti/puntatore e riferimento.md
        - Parola chiave Abstracto: Classi e Oggetti/Keyword_Abstract.md
-       - FB Abstract vs. Interfaccia: Classi e Oggetti/FB abstract vs Interfaccia.md
-       - Interfaccia fluente: Classi e Oggetti/interfaccia fluente.md   
+       - FB Abstract vs Interfaccia: Classi e Oggetti/FB abstract vs Interfaccia.md
+       - Interfaccia fluente: Classi e Oggetti/interfaccia fluente.md
+       - Interfaccia vs Ereditarietà: Classi e Oggetti/Interfaccia vs Ereditarieta.md
+       - Altri Operatori: Classi e Oggetti/Altri Operatori.md   
     - Principi OOP: 
        - 4 Pilastri: principi/_principi OOP.md
        - Astrazione: principi/Astrazione.md
@@ -154,11 +156,11 @@ nav:
        - Polimorfismo: principi/Polimorfismo.md
     - SOLID: 
        - SOLID: Solid/_SOLID.md
-       - Principio di responsabilità esclusiva - SRP: Solid/Principio di responsabilita esclusiva.md
-       - Principio aperto/chiuso - OCP: Solid/Principio aperto chiuso.md
-       - Principio di sostituzione di Liskov - LSP: Solid/Principio di sostituzione di Liskov.md
-       - Principio di segregazione dell'interfaccia - ISP: Solid/Principio di segregazione dell interfaccia.md
-       - Principio di inversione delle dipendenze - DIP: Solid/Principio di inversione delle dipendenze.md
+       - SRP -Principio di responsabilità esclusiva: Solid/Principio di responsabilita esclusiva.md
+       - OCP - Principio aperto/chiuso: Solid/Principio aperto chiuso.md
+       - LSP - Principio di sostituzione di Liskov: Solid/Principio di sostituzione di Liskov.md
+       - ISP - Principio di segregazione dell'interfaccia: Solid/Principio di segregazione dell interfaccia.md
+       - DIP - Principio di inversione delle dipendenze: Solid/Principio di inversione delle dipendenze.md
     - UML: 
        - UML: UML/UML.md
        - Classe UML: UML/Classe UML.md
