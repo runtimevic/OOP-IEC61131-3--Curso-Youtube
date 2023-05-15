@@ -20,7 +20,7 @@ Los principios SOLID son una parte esencial del desarrollo de software orientado
 
 Además de los principios SOLID, existen otros principios como:
 
-![3_Simple_Golden_Principles In_Software_Development](../imagenes/3_Simple_Golde_Principles_In_Software_Development.PNG)
+![3_Simple_Golden_Principles In_Software_Development](../imagenes/3_Simple_Golden_Principles_In_Software_Development.PNG)
 
 ### Keep It Simple, Stupid (KISS).
 ```
