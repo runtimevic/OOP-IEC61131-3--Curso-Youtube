@@ -1,13 +1,18 @@
 
 ### <span style="color:grey">Otros Operadores:</span>
-
+!!! FALTA PONER LOS LINKS DE CODESYS !!!
 ### <span style="color:grey">__DELETE:</span>
 - 🔗 [__DELETE,infosys.beckhoff.com](https://infosys.beckhoff.com/content/1033/tc3_plc_intro/2529160331.html?id=2289870734872430416)
+- 🔗 []()
 ***
-🔗 [__ISVALIDREF](https://infosys.beckhoff.com/content/1033/tc3_plc_intro/2529165707.html?id=8190095739921439819)
+### <span style="color:grey">__ISVALIDREF:</span>
+- 🔗 [__ISVALIDREF, infosys.beckhoff.com](https://infosys.beckhoff.com/content/1033/tc3_plc_intro/2529165707.html?id=8190095739921439819)
+- 🔗 []()
 ***
 
-🔗 [__NEW](https://infosys.beckhoff.com/content/1033/tc3_plc_intro/2529171083.html?id=5409766235804740463)
+### <span style="color:grey">__NEW:</span>
+- 🔗 [__NEW, infosys.beckhoff](https://infosys.beckhoff.com/content/1033/tc3_plc_intro/2529171083.html?id=5409766235804740463)
+- 🔗 []()
 ***
 ### <span style="color:grey">__QUERYINTERFACE:</span>
 
@@ -26,7 +31,9 @@
 
 - Ahora está disponible para sistemas de destino de 64 bits a partir de TwinCAT versión 3.1.4026
 ***
-🔗 [__VARINFO](https://infosys.beckhoff.com/content/1033/tc3_plc_intro/3527777675.html?id=2730070918177533256)
+### <span style="color:grey">__VARINFO:</span>
+- 🔗 [__VARINFO, infosys.beckhoff.com](https://infosys.beckhoff.com/content/1033/tc3_plc_intro/3527777675.html?id=2730070918177533256)
+- 🔗 []()
 ***
 🔗 [TEST_AND_SET, Codesys](https://content.helpme-codesys.com/es/CODESYS%20Development%20System/_cds_operator_test_and_set.html)
 
