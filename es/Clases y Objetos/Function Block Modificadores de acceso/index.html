@@ -1637,24 +1637,30 @@ La configuración predeterminada donde no se define ningún especificador de acc
 </li>
 </ul>
 <hr />
-<p>Podemos tener otros 2 modificadores de acceso para el Bloque de Funciones:
-- <span style="color:orange">FINAL:</span>
-    - (en TwinCAT 3 no sale por defecto para seleccionarlo al crear un FB, pero se puede añadir mas tarde despues de crearlo...) 
-    - El FB no puede servir como un bloque de funciones principal. 
-    - Los métodos y las propiedades de esta POU no se pueden heredar. 
-    - FINAL solo está permitido para POU del tipo FUNCTION_BLOCK.
-    - No se permite sobrescribir, en un derivado del bloque de funciones. 
-    - Esto significa que no se puede sobrescribir/extender en una subclase posiblemente existente.  <br />
-- <span style="color:orange">ABSTRACT:</span> 
+<p>Podemos tener otros 2 modificadores de acceso para el Bloque de Funciones:</p>
+<ul>
+<li><span style="color:orange">FINAL:</span><ul>
+<li>(en TwinCAT 3 no sale por defecto para seleccionarlo al crear un FB, pero se puede añadir mas tarde despues de crearlo...) </li>
+<li>El FB no puede servir como un bloque de funciones principal. </li>
+<li>Los métodos y las propiedades de esta POU no se pueden heredar. </li>
+<li>FINAL solo está permitido para POU del tipo FUNCTION_BLOCK.</li>
+<li>No se permite sobrescribir, en un derivado del bloque de funciones. </li>
+<li>Esto significa que no se puede sobrescribir/extender en una subclase posiblemente existente.    </li>
+</ul>
+</li>
+<li><span style="color:orange">ABSTRACT:</span> 
 bloques de funciones abstractas
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nx">FUNCTION_BLOCK</span><span class="w"> </span><span class="nx">PUBLIC</span><span class="w"> </span><span class="nx">ABSTRACT</span><span class="w"> </span><span class="nx">FB_Foo</span>
-</code></pre></div></td></tr></table></div>
-    - Tan pronto como un método o una propiedad se declaran como abstractos , el bloque de funciones también debe declararse como abstracto .
-    - No se pueden crear instancias a partir de FB abstractos. Los FB abstractos solo se pueden usar como FB básicos cuando se heredan.
-    - Todos los métodos abstractos y todas las propiedades abstractas deben sobrescribirse para crear un FB no abstracto. Un método abstracto o una propiedad abstracta se convierte en un método no abstracto o una propiedad no abstracta al sobrescribir.
-    - Los bloques de funciones abstractas pueden contener además métodos no abstractos y/o propiedades no abstractas.
-    - Si no se sobrescriben todos los métodos abstractos o todas las propiedades abstractas durante la herencia, el FB heredado solo puede ser un FB abstracto (concretización paso a paso).
-    - Se permiten punteros o referencias de tipo FB abstracto. Sin embargo, estos pueden referirse a FB no abstractos y, por lo tanto, llamar a sus métodos o propiedades (polimorfismo).</p>
+</code></pre></div></td></tr></table></div><ul>
+<li>Tan pronto como un método o una propiedad se declaran como abstractos , el bloque de funciones también debe declararse como abstracto .</li>
+<li>No se pueden crear instancias a partir de FB abstractos. Los FB abstractos solo se pueden usar como FB básicos cuando se heredan.</li>
+<li>Todos los métodos abstractos y todas las propiedades abstractas deben sobrescribirse para crear un FB no abstracto. Un método abstracto o una propiedad abstracta se convierte en un método no abstracto o una propiedad no abstracta al sobrescribir.</li>
+<li>Los bloques de funciones abstractas pueden contener además métodos no abstractos y/o propiedades no abstractas.</li>
+<li>Si no se sobrescriben todos los métodos abstractos o todas las propiedades abstractas durante la herencia, el FB heredado solo puede ser un FB abstracto (concretización paso a paso).</li>
+<li>Se permiten punteros o referencias de tipo FB abstracto. Sin embargo, estos pueden referirse a FB no abstractos y, por lo tanto, llamar a sus métodos o propiedades (polimorfismo).</li>
+</ul>
+</li>
+</ul>
 <hr />
 <h3 id="link-al-video-de-youtube-004"><span style="color:grey">Link al Video de Youtube 004:</span></h3>
 <ul>
