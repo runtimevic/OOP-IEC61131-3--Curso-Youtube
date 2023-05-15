@@ -26,3 +26,6 @@ Las Interfaces y la Herencia pueden trabajar de la mano, utilizarse a la vez cog
 - 🔗 [www.techandsolve.com,alta-cohesion-y-bajo-acoplamiento-en-diseno-de-software](https://www.techandsolve.com/2022/09/alta-cohesion-y-bajo-acoplamiento-en-diseno-de-software/#:~:text=En%20este%20contexto%2C%20hablamos%20de,de%20otro%20tipo%20de%20naturaleza.)
 - 🔗 [object-oriented-programming-plc-using-inheritance-ralph-koettlitz](https://www.linkedin.com/pulse/object-oriented-programming-plc-using-inheritance-ralph-koettlitz/?utm_source=share&utm_medium=member_android&utm_campaign=share_via)
 - 🔗 [stefanhenneken.net,iec-61131-3-object-composition-with-the-help-of-interfaces](https://stefanhenneken.net/2014/02/18/iec-61131-3-object-composition-with-the-help-of-interfaces/)
+
+### <span style="color:grey">Link al Video de Youtube 015:</span>
+- 🔗 [015 - OOP IEC 61131-3 PLC -- Interface vs Herencia]()

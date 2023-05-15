@@ -6,6 +6,10 @@ Una buena herramienta para describir la jerarquía de herencia de bloques de fun
 Los diagramas UML se pueden crear directamente en TwinCAT 3. Los cambios en el diagrama UML tienen un efecto directo en las POU. Por lo tanto, los bloques de funciones se pueden modificar y modificar a través del diagrama UML.
 
 Cada caja representa un bloque de función y siempre se divide en tres secciones horizontales. La sección superior muestra el nombre del bloque de funciones, la sección central enumera sus propiedades y la sección inferior enumera todos sus métodos. En este ejemplo, las flechas muestran la dirección de la herencia y siempre apuntan hacia el bloque de funciones principal.
+***
+Los Modificadores de acceso de los metodos y las propiedades se veran segun la simbologia:(Disponible a partir de la versión de TwinCAT 3.1.4026)
+
+![UML_ClassDiagram Access Modifier](../imagenes/UML_Acces_Modifier_Methods_and_properties_are_displayed_TwinCAT_3.1.4026.PNG)
 ### <span style="color:grey">Links UML listado de referencias:</span>
 
 - 🔗 [stefanhenneken.net, UML Class](https://stefanhenneken.net/2017/04/23/iec-61131-3-methods-properties-and-inheritance/)
