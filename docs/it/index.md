@@ -1,6 +1,6 @@
-![help](../immagini/ayuda.png)
+![help](./immagini/ayuda.png)
 
-![help](../immagini/help.jfif)
+![help](./immagini/help.png)
 
-![help](../immagini/helpme.jfif)
+![help](./immagini/helpme.png)
 
