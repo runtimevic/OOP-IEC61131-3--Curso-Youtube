@@ -15,6 +15,7 @@ La configuración predeterminada donde no se define ningún especificador de acc
     - El acceso está limitado al espacio de nombres (la biblioteca).
 ***
 Podemos tener otros 2 modificadores de acceso para el Bloque de Funciones:
+
 - <span style="color:orange">FINAL:</span>
     - (en TwinCAT 3 no sale por defecto para seleccionarlo al crear un FB, pero se puede añadir mas tarde despues de crearlo...) 
     - El FB no puede servir como un bloque de funciones principal. 
