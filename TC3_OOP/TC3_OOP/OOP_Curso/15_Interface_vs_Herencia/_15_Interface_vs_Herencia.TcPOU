@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.12">
+  <POU Name="_15_Interface_vs_Herencia" Id="{63dd2bc0-b08a-4e9a-9268-a8cabfb2bcc9}" SpecialFunc="None">
+    <Declaration><![CDATA[PROGRAM _15_Interface_vs_Herencia
+VAR
+	//Nivel Sensor: 
+	fbNivelSensor			: FB_NivelSensor;
+	nNivelAnalogSensor 		: INT := 8000;
+	nScaledNivelSensor 		: INT;
+	nSensorNivelMaxValue 	: INT;
+
+	//UltraSonidos
+	fbUltraSonic 			: FB_UltraSonicSensor;
+	nAnalogSensor 			: INT := 8000;
+	nScaledSensor 			: INT;
+	nSensorMaxValue 		: INT;
+	
+	//Variador de Frequencia
+	fbVFD1 					: FB_VFD;
+	bCoil1 					: BOOL;
+	nFreqIn1  				: INT := 25;
+	nFreqOut1 				: INT;	
+	bStartVFD1 				: BOOL;
+	
+	//Pump
+	fbPump1 				: FB_Pump;
+	bCoilPump1				: BOOL;
+	nFreqInPump1  			: INT := 25;
+	nFreqOutPump1 			: INT;	
+	bStartPump1 			: BOOL;	
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[//Nivel Sensor
+fbNivelSensor.AnalogSignal := nNivelAnalogSensor;
+fbNivelSensor.MaxValue := 6;
+nScaledNivelSensor := fbNivelSensor.ScaledAnalog;
+fbNivelSensor.Scale();
+
+//UltraSonidos
+fbUltraSonic.AnalogSignal := nAnalogSensor;
+fbUltraSonic.MaxValue := 6;
+nScaledSensor := fbUltraSonic.ScaledAnalog;
+fbUltraSonic.Scale();
+
+//Variador de Frequencia
+fbVFD1.AnalogSignal := nFreqIn1;
+bCoil1 := fbVFD1.Coil;
+nFreqOut1 := fbVFD1.ScaledAnalog;
+fbVFD1.Scale();
+
+IF bStartVFD1 THEN
+	fbVFD1.Start();	
+ELSE
+	fbVFD1.Stop();
+END_IF
+
+//Pump
+fbPump1.AnalogSignal := nFreqInPump1;
+bCoilPump1 := fbPump1.Coil;
+nFreqOutPump1 := fbPump1.ScaledAnalog;
+fbPump1.Scale();
+
+IF bStartPump1 THEN
+	fbPump1.Start();	
+ELSE
+	fbPump1.Stop();
+END_IF
+]]></ST>
+    </Implementation>
+  </POU>
+</TcPlcObject>

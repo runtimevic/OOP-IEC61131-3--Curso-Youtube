@@ -142,8 +142,10 @@ nav:
        - Interface: Clases y Objetos/interface.md
        - puntero y referencia: Clases y Objetos/pointer and reference.md
        - Palabra clave Abstracto: Clases y Objetos/Keyword_Abstract.md
-       - FB abstracto frente a interfaz: Clases y Objetos/FB abstracto frente a interfaz.md
-       - Interfaz fluida: Clases y Objetos/Interfaz fluida.md   
+       - FB Abstracto vs Interface: Clases y Objetos/FB abstracto frente a interfaz.md
+       - Interface fluida: Clases y Objetos/Interfaz fluida.md
+       - Interface vs Herencia: Clases y Objetos/Interface vs Herencia.md
+       - Otros Operadores: Clases y Objetos/Otros Operadores.md
     - Principios OOP: 
        - 4 Pilares: principios/_principios OOP.md
        - Abstracción: principios/abstraccion.md
@@ -152,11 +154,11 @@ nav:
        - Polimorfismo: principios/polimorfismo.md    
     - SOLID: 
        - SOLID: solid/_SOLID.md
-       - Principio de Responsabilidad Única - SRP: solid/Principio de Responsabilidad Unica.md
-       - Principio de Abierto/Cerrado - OCP: solid/Principio de Abierto_Cerrado.md
-       - Principio de Sustitución de Liskov - LSP: solid/Principio de Sustitucion de Liskov.md
-       - Principio de Segregación de Interfaz - ISP: solid/Principio de Segregacion de Interfaz.md
-       - Principio de Inversión de Dependencia - DIP : solid/Principio de Inversion de Dependencia.md
+       - SRP - Principio de Responsabilidad Única: solid/Principio de Responsabilidad Unica.md
+       - OCP - Principio de Abierto/Cerrado: solid/Principio de Abierto_Cerrado.md
+       - LSP - Principio de Sustitución de Liskov: solid/Principio de Sustitucion de Liskov.md
+       - ISP - Principio de Segregación de Interfaz: solid/Principio de Segregacion de Interfaz.md
+       - DIP - Principio de Inversión de Dependencia: solid/Principio de Inversion de Dependencia.md
     - UML: 
        - UML: UML/UML.md
        - Class UML: UML/Class UML.md

@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.12">
+  <POU Name="P_DimmingLight_Test_ST" Id="{a0f539b5-31a1-424d-9748-dd8f15a48a5e}" SpecialFunc="None">
+    <Declaration><![CDATA[PROGRAM P_DimmingLight_Test_ST
+VAR
+	fbDimmingLight		:	FB_DimmingLight;
+	bOn					:	BOOL;
+	bOff				:	BOOL;
+	bRecallMinLevel		:	BOOL;
+	bSetControlLevel	:	BOOL;
+	nSetControlLevel	:	BYTE;
+	bControlLevel		:	BOOL;
+	nControlLevel		:	BYTE;
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[fbDimmingLight();
+
+IF (bOn) THEN
+	fbDimmingLight.M_On();
+	bOn := FALSE;
+END_IF
+IF (bOff) THEN
+	fbDimmingLight.M_Off();
+	bOff := FALSE;
+END_IF
+IF (bRecallMinLevel) THEN
+	fbDimmingLight.M_RecallMinLevel();
+	bRecallMinLevel := FALSE;
+END_IF
+IF (bSetControlLevel) THEN
+	fbDimmingLight.M_SetControlLevel(nSetControlLevel);
+	bSetControlLevel := FALSE;
+END_IF
+
+bControlLevel := fbDimmingLight.bControlLevel;
+nControlLevel := fbDimmingLight.nControlLevel;
+
+
+]]></ST>
+    </Implementation>
+  </POU>
+</TcPlcObject>

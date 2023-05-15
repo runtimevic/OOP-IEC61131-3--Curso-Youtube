@@ -1,5 +1,5 @@
-![help](.../imagenes/ayuda.png)
+![help](../../imagenes/ayuda.png)
 
-![help](.../imagenes/help.jfif)
+![help](../../imagenes/help.jfif)
 
-![help](.../imagenes/helpme.jfif)
+![help](../../imagenes/helpme.jfif)

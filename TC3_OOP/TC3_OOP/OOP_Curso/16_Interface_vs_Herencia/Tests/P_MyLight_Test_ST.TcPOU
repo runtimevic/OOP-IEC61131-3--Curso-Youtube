@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.12">
+  <POU Name="P_MyLight_Test_ST" Id="{8d5c2de6-c612-4a36-8f71-3b8183571ca3}" SpecialFunc="None">
+    <Declaration><![CDATA[PROGRAM P_MyLight_Test_ST
+VAR
+	fbMyLight			:	FB_MyLight;
+	bOn					:	BOOL;
+	bOff				:	BOOL;
+	bRecallMinLevel		:	BOOL;
+	bSetControlLevel	:	BOOL;
+	nSetControlLevel	:	BYTE;
+	bControlLevel		:	BOOL;
+	nControlLevel		:	BYTE;
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[fbMyLight();
+
+IF (bOn) THEN
+	fbMyLight.M_On();
+	bOn := FALSE;
+END_IF
+IF (bOff) THEN
+	fbMyLight.M_Off();
+	bOff := FALSE;
+END_IF
+IF (bRecallMinLevel) THEN
+	fbMyLight.M_RecallMinLevel();
+	bRecallMinLevel := FALSE;
+END_IF
+IF (bSetControlLevel) THEN
+	fbMyLight.M_SetControlLevel(nSetControlLevel);
+	bSetControlLevel := FALSE;
+END_IF
+
+bControlLevel := fbMyLight.bControlLevel;
+nControlLevel := fbMyLight.nControlLevel;
+
+
+]]></ST>
+    </Implementation>
+  </POU>
+</TcPlcObject>

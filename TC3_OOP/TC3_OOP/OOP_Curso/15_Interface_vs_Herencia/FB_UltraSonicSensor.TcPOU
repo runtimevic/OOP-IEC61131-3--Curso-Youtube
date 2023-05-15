@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.12">
+  <POU Name="FB_UltraSonicSensor" Id="{f192cad1-2b8f-4ad8-a2d2-5b7934e29d7b}" SpecialFunc="None">
+    <Declaration><![CDATA[FUNCTION_BLOCK FB_UltraSonicSensor EXTENDS FB_NivelSensor
+VAR_INPUT
+END_VAR
+VAR_OUTPUT
+END_VAR
+VAR
+
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[]]></ST>
+    </Implementation>
+    <Method Name="Scale" Id="{e54689f2-4b3e-41a7-9d98-911851e1da59}">
+      <Declaration><![CDATA[{warning 'Agregar implementación de método'}
+METHOD Scale : BOOL
+]]></Declaration>
+      <Implementation>
+        <ST><![CDATA[ScaledAnalog := AnalogSignal * MaxValue / 2000;]]></ST>
+      </Implementation>
+    </Method>
+  </POU>
+</TcPlcObject>

@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.12">
+  <Itf Name="I_Light" Id="{f3ecb25a-63e6-4716-a3c6-1eb2ebf947db}">
+    <Declaration><![CDATA[INTERFACE I_Light EXTENDS __SYSTEM.IQueryInterface
+
+]]></Declaration>
+    <Property Name="bControlLevel" Id="{7b5345f0-6fad-4363-b697-3d9103d3c488}">
+      <Declaration><![CDATA[PROPERTY bControlLevel : BOOL]]></Declaration>
+      <Get Name="Get" Id="{da2d654a-0f0e-4f61-ae79-6ff7b979d7c8}">
+        <Declaration><![CDATA[]]></Declaration>
+      </Get>
+      <Set Name="Set" Id="{8f6017e9-0286-4821-beed-89f45ccdce0b}">
+        <Declaration><![CDATA[]]></Declaration>
+      </Set>
+    </Property>
+    <Method Name="M_Off" Id="{74e77dc4-0cd0-4641-a1e4-5afdd2d8d959}">
+      <Declaration><![CDATA[METHOD M_Off
+VAR_INPUT
+END_VAR
+]]></Declaration>
+    </Method>
+    <Method Name="M_On" Id="{df632f07-6e29-4d5a-a7a4-c5c1b75c7618}">
+      <Declaration><![CDATA[METHOD M_On
+VAR_INPUT
+END_VAR
+]]></Declaration>
+    </Method>
+  </Itf>
+</TcPlcObject>

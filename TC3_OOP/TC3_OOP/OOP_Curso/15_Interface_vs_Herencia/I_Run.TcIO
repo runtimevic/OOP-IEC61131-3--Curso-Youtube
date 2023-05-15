@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.12">
+  <Itf Name="I_Run" Id="{0ad2c49c-b15f-4700-8e6b-5ff1d9c66633}">
+    <Declaration><![CDATA[INTERFACE I_Run
+]]></Declaration>
+    <Property Name="Coil" Id="{afc9c25c-b762-4254-8575-4aae88448b70}">
+      <Declaration><![CDATA[PROPERTY Coil : BOOL]]></Declaration>
+      <Get Name="Get" Id="{52897dda-31ff-4fb4-bf6f-cfb4dca8924c}">
+        <Declaration><![CDATA[]]></Declaration>
+      </Get>
+      <Set Name="Set" Id="{0dbbe41c-8b94-47d8-9f83-63ec8ecae196}">
+        <Declaration><![CDATA[]]></Declaration>
+      </Set>
+    </Property>
+    <Method Name="Start" Id="{942cd935-50f4-4ea8-b105-831fc90f8a2a}">
+      <Declaration><![CDATA[METHOD Start : BOOL
+VAR_INPUT
+END_VAR
+]]></Declaration>
+    </Method>
+    <Method Name="Stop" Id="{db166316-30a8-4656-95db-4f16b8271e8b}">
+      <Declaration><![CDATA[METHOD Stop : BOOL
+VAR_INPUT
+END_VAR
+]]></Declaration>
+    </Method>
+  </Itf>
+</TcPlcObject>

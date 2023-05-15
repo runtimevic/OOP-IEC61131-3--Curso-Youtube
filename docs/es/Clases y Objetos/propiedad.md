@@ -41,9 +41,9 @@ Especificador de acceso:
 - <span style="color:orange">PUBLIC:</span> 
     - Corresponde a la especificación de modificador sin acceso.
 - <span style="color:orange">PRIVATE:</span> 
-    - El acceso a la propiedad está limitado solo al bloque de funciones.
+    - El acceso a la propiedad está limitado solo dentro de su propia Clase (Bloque de Funciones).
 - <span style="color:orange">PROTECTED:</span>
-    - El acceso a la propiedad está limitado al programa o al bloque de función y sus derivados.
+    - El acceso está restringido,no se puede acceder desde el programa principal, desde el MAIN.
 - <span style="color:orange">INTERNAL:</span>
     - El acceso a la propiedad está limitado al espacio de nombres, es decir, a la biblioteca.
 - <span style="color:orange">FINAL:</span> 

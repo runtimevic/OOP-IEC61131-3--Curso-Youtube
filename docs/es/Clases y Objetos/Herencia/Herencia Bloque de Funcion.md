@@ -57,11 +57,11 @@ Gear := nGear; // new
 ```
 La línea 12 copia el parámetro nGear a la propiedad Gear.
 
-Cuando un método o propiedad que ya está presente en el bloque de funciones principal se redefine dentro del bloque de funciones secundario, esto se denomina sobrescritura. El bloque de funciones FB_NewEngine sobrescribe el método Start() .
+Cuando un método o propiedad que ya está presente en el bloque de funciones principal se redefine dentro del bloque de funciones secundario, esto se denomina sobrescritura. El bloque de funciones FB_NewEngine sobrescribe el método Start().
 
 Por lo tanto, FB_NewEngine tiene la nueva propiedad Gear y sobrescribe el método Start() .
 
-![herenciaFB](../imagenes/herencia.png)
+![herencia](../../imagenes/herencia.PNG)
 
 ```javascript
 fbNewEngine.Start(1, 7.5);
@@ -76,7 +76,7 @@ fbNewEngine.Stop();
 llama al método Stop() desde FB_Engine . El método Stop() ha sido heredado por FB_NewEngine de FB_Engine .
 
 ***
-### <span style="color:grey">Links:</span>
+### <span style="color:grey">Links Herencia Bloque de Funcion:</span>
 
 - 🔗 [stefanhenneken.net,iec-61131-3-methods-properties-and-inheritance](https://stefanhenneken.net/2017/04/23/iec-61131-3-methods-properties-and-inheritance/)
 

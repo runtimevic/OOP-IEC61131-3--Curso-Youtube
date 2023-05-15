@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.12">
+  <POU Name="P_DelayedLight_Test_ST" Id="{e8ff1aaf-450c-4f38-a1b0-b04587cc28eb}" SpecialFunc="None">
+    <Declaration><![CDATA[PROGRAM P_DelayedLight_Test_ST
+VAR
+	fbDelayedLight		:	FB_DelayedLight;
+	bOn					:	BOOL;
+	bOff				:	BOOL;
+	bControlLevel		:	BOOL;	
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[fbDelayedLight();
+
+IF (bOn) THEN
+	fbDelayedLight.M_On();
+	bOn := FALSE;
+END_IF
+IF (bOff) THEN
+	fbDelayedLight.M_Off();
+	bOff := FALSE;
+END_IF
+
+bControlLevel := fbDelayedLight.bControlLevel;
+
+]]></ST>
+    </Implementation>
+  </POU>
+</TcPlcObject>

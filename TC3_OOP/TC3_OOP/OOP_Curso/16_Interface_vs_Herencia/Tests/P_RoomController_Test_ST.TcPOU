@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.12">
+  <POU Name="P_RoomController_Test_ST" Id="{3554a96d-746a-4124-9b19-fada433b3760}" SpecialFunc="None">
+    <Declaration><![CDATA[PROGRAM P_RoomController_Test_ST
+VAR
+	fbRoomController	:	FB_RoomController;
+	fbMyLight			:	FB_MyLight;
+	fbDelayedLight		:	FB_DelayedLight;
+	fbDimmingLight		:	FB_DimmingLight;
+	bAllOn				:	BOOL;
+	bAllOff				:	BOOL;
+	bAllCallMinLevel	:	BOOL;
+	aControlLevel		:	ARRAY [1..3] OF BOOL;
+	aDimmLevel			:	ARRAY [1..3] OF BYTE;
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[fbRoomController(bAllOn	:= bAllOn,
+				 bAllOff := bAllOff,
+				 bAllCallMinLevel := bAllCallMinLevel,
+				 refLight01 := fbMyLight,
+				 refLight02 := fbDelayedLight,
+				 refLight03 := fbDimmingLight,
+				 aControlLevel => aControlLevel,
+				 aDimmLevel => aDimmLevel);
+]]></ST>
+    </Implementation>
+  </POU>
+</TcPlcObject>

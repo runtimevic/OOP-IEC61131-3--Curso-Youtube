@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.12">
+  <Itf Name="I_Dimmable" Id="{b7492116-7ecc-429f-aca2-bf88e4725b00}">
+    <Declaration><![CDATA[INTERFACE I_Dimmable EXTENDS __SYSTEM.IQueryInterface
+]]></Declaration>
+    <Method Name="M_RecallMinLevel" Id="{36b8e14a-3d46-4770-9bea-53d6acf4f89b}">
+      <Declaration><![CDATA[METHOD M_RecallMinLevel
+VAR_INPUT
+END_VAR
+]]></Declaration>
+    </Method>
+    <Method Name="M_SetControlLevel" Id="{193a878d-92d6-4792-b65a-bdf92939c23d}">
+      <Declaration><![CDATA[METHOD M_SetControlLevel
+VAR_INPUT
+	nControlLevel	:	BYTE;
+END_VAR
+]]></Declaration>
+    </Method>
+    <Property Name="nControlLevel" Id="{9eb81d6f-aa2c-479d-80eb-70339adc4290}">
+      <Declaration><![CDATA[PROPERTY nControlLevel : BYTE]]></Declaration>
+      <Get Name="Get" Id="{c1148527-b01d-40b3-821c-500dac438454}">
+        <Declaration><![CDATA[]]></Declaration>
+      </Get>
+      <Set Name="Set" Id="{45f91477-79b3-4ccf-9b3c-d632b1a7d2b6}">
+        <Declaration><![CDATA[]]></Declaration>
+      </Set>
+    </Property>
+    <Property Name="nMaxLevel" Id="{9ba1e131-5917-46f3-a92a-e210574144ca}">
+      <Declaration><![CDATA[PROPERTY nMaxLevel : BYTE]]></Declaration>
+      <Get Name="Get" Id="{6181fca1-d4cb-450d-a673-988326c63c34}">
+        <Declaration><![CDATA[]]></Declaration>
+      </Get>
+      <Set Name="Set" Id="{cf8de8b8-4e5f-45d2-9fb5-6ef5ca5764ae}">
+        <Declaration><![CDATA[]]></Declaration>
+      </Set>
+    </Property>
+    <Property Name="nMinLevel" Id="{b8b863f9-435f-4235-ac3c-dbabdc47862c}">
+      <Declaration><![CDATA[PROPERTY nMinLevel : BYTE]]></Declaration>
+      <Get Name="Get" Id="{4d2c8918-f47d-4e28-a1a1-0ab8e4d5376e}">
+        <Declaration><![CDATA[]]></Declaration>
+      </Get>
+      <Set Name="Set" Id="{38bb7413-3274-4835-93dd-5065c3bf1e3a}">
+        <Declaration><![CDATA[]]></Declaration>
+      </Set>
+    </Property>
+  </Itf>
+</TcPlcObject>

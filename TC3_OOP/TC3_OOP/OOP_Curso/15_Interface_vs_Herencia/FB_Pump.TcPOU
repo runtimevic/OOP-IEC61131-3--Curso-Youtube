@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.12">
+  <POU Name="FB_Pump" Id="{8f64b28a-4312-4d8d-8ce7-a7209cc80f47}" SpecialFunc="None">
+    <Declaration><![CDATA[FUNCTION_BLOCK FB_Pump EXTENDS FB_VFD
+VAR_INPUT
+END_VAR
+VAR_OUTPUT
+END_VAR
+VAR
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[]]></ST>
+    </Implementation>
+    <Method Name="Scale" Id="{0736ad1e-e81b-44cd-91ae-0b85dc33a765}">
+      <Declaration><![CDATA[{warning 'Agregar implementación de método'}
+METHOD Scale : BOOL
+]]></Declaration>
+      <Implementation>
+        <ST><![CDATA[ScaledAnalog := AnalogSignal * 100;]]></ST>
+      </Implementation>
+    </Method>
+  </POU>
+</TcPlcObject>

@@ -4,13 +4,13 @@ La declaración del método puede incluir un especificador de acceso opcional. E
 - <span style="color:orange">PUBLIC:</span> 
 	- Cualquiera puede llamar al método, no hay restricciones.
 - <span style="color:orange">PRIVATE:</span> 
-	- El método está disponible solo dentro de la POU. No se puede llamar desde fuera de la POU.
-    - Son accesibles dentro de la clase.
-    - El acceso está restringido al bloque de funciones o al programa, respectivamente.
+    - Son accesibles solo dentro de su propia Clase (Bloque de Función).
+    - Sin acceso desde la clase heredada.
+    - Sin acceso desde el programa principal, desde el MAIN.
 - <span style="color:orange">PROTECTED:</span> 
-    - Solo su propia POU o las POU derivadas (herencia) de ella pueden acceder al método. La derivación se analiza a continuación.
-    - Son accesibles a través de la herencia.
-    - El acceso está restringido al programa o al bloque de función y sus derivados respectivamente.
+    - Accesible desde dentro de su propia Clase.
+    - Accesible desde clases heredadas.
+    - El acceso está restringido,no se puede acceder desde el programa principal, desde el MAIN.
 - <span style="color:orange">INTERNAL:</span> 
     - Solo se puede acceder al método desde el mismo espacio de nombres. Esto permite que los métodos estén disponibles solo dentro de una determinada biblioteca, por ejemplo.
     - El acceso está limitado al espacio de nombres (la biblioteca).

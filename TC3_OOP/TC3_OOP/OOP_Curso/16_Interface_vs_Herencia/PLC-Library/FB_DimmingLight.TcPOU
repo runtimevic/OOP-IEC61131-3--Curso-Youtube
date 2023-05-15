@@ -1,0 +1,167 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.12">
+  <POU Name="FB_DimmingLight" Id="{1826553c-b915-4833-a4c3-433f365bae95}" SpecialFunc="None">
+    <Declaration><![CDATA[FUNCTION_BLOCK PUBLIC FB_DimmingLight EXTENDS FB_Light IMPLEMENTS I_Dimmable
+VAR_INPUT
+	bRecallMinLevel			:	BOOL;
+	bSetControlLevel		:	BOOL;
+	nSetControlLevel		:	BYTE;
+END_VAR
+VAR_OUTPUT
+	nControl				:	BYTE;
+END_VAR
+VAR
+	rtrigRecallMinLevel		:	R_TRIG;
+	rtrigSetControlLevel	:	R_TRIG;
+	_nControlLevel			:	BYTE;
+	_nMinLevel				:	BYTE;
+	_nMaxLevel				:	BYTE;
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[rtrigOn(CLK := bOn);
+IF (rtrigOn.Q) THEN
+	M_On();
+END_IF
+
+rtrigOff(CLK := bOff);
+IF (rtrigOff.Q) THEN
+	M_Off();
+END_IF
+
+rtrigRecallMinLevel(CLK := bRecallMinLevel);
+IF (rtrigRecallMinLevel.Q) THEN
+	M_RecallMinLevel();
+END_IF
+
+rtrigSetControlLevel(CLK := bSetControlLevel);
+IF (rtrigSetControlLevel.Q) THEN
+	M_SetControlLevel(nSetControlLevel);
+END_IF
+
+bControl := bControlLevel;
+nControl := nControlLevel;
+
+]]></ST>
+    </Implementation>
+    <Method Name="FB_init" Id="{6fff9f98-763b-4dab-851c-ffde17835f91}">
+      <Declaration><![CDATA[METHOD PUBLIC FB_init : BOOL
+VAR_INPUT
+	bInitRetains : BOOL; // bei TRUE werden die Retain-Variablen initialisiert (Warmstart / Kaltstart)
+	bInCopyCode : BOOL;  // bei TRUE wird die Instanz anschließend in den Copy-Code kopiert (Online Change)
+END_VAR
+]]></Declaration>
+      <Implementation>
+        <ST><![CDATA[_nMinLevel := 10;
+_nMaxLevel := 100;
+]]></ST>
+      </Implementation>
+    </Method>
+    <Method Name="M_Off" Id="{98ed7e3c-c38e-4acd-9292-6a681780cf2c}">
+      <Declaration><![CDATA[METHOD PUBLIC M_Off
+]]></Declaration>
+      <Implementation>
+        <ST><![CDATA[_bControlLevel := FALSE;
+_nControlLevel := 0;]]></ST>
+      </Implementation>
+    </Method>
+    <Method Name="M_On" Id="{01e14d7e-f4aa-464d-bede-b40eaf75570b}">
+      <Declaration><![CDATA[METHOD PUBLIC M_On
+]]></Declaration>
+      <Implementation>
+        <ST><![CDATA[_bControlLevel := TRUE;
+_nControlLevel := _nMaxLevel;]]></ST>
+      </Implementation>
+    </Method>
+    <Method Name="M_RecallMinLevel" Id="{decb0434-7eba-4297-945b-fbcd54b7ca8a}">
+      <Declaration><![CDATA[METHOD PUBLIC M_RecallMinLevel
+]]></Declaration>
+      <Implementation>
+        <ST><![CDATA[_bControlLevel := TRUE;
+_nControlLevel := _nMinLevel;]]></ST>
+      </Implementation>
+    </Method>
+    <Method Name="M_SetControlLevel" Id="{f9e80115-bd7a-4c33-afa5-10632bab5689}">
+      <Declaration><![CDATA[METHOD PUBLIC M_SetControlLevel
+VAR_INPUT
+	nControlLevel	: BYTE;
+END_VAR
+]]></Declaration>
+      <Implementation>
+        <ST><![CDATA[IF (nControlLevel = 0) THEN
+	THIS^.M_Off();
+ELSIF ((nControlLevel > 0) AND (nControlLevel <= _nMinLevel)) THEN
+	_bControlLevel := TRUE;
+	_nControlLevel := _nMinLevel;	
+ELSIF ((nControlLevel > _nMinLevel) AND (nControlLevel <= _nMaxLevel)) THEN
+	_bControlLevel := TRUE;
+	_nControlLevel := nControlLevel;	
+ELSE
+	_bControlLevel := TRUE;
+	_nControlLevel := _nMaxLevel;	
+END_IF
+]]></ST>
+      </Implementation>
+    </Method>
+    <Property Name="nControlLevel" Id="{f99dd978-4356-4da9-b103-7be88e005014}">
+      <Declaration><![CDATA[PROPERTY nControlLevel : BYTE
+]]></Declaration>
+      <Get Name="Get" Id="{e34cf1bb-a281-4922-bf43-d8f17b0fbf6b}">
+        <Declaration><![CDATA[VAR
+END_VAR
+]]></Declaration>
+        <Implementation>
+          <ST><![CDATA[nControlLevel := _nControlLevel;]]></ST>
+        </Implementation>
+      </Get>
+      <Set Name="Set" Id="{c920c274-21be-4056-b850-a69afb30eb1a}">
+        <Declaration><![CDATA[VAR
+END_VAR
+]]></Declaration>
+        <Implementation>
+          <ST><![CDATA[]]></ST>
+        </Implementation>
+      </Set>
+    </Property>
+    <Property Name="nMaxLevel" Id="{3ca97db3-ea5f-4f61-9ad7-8de6d43dc13d}">
+      <Declaration><![CDATA[PROPERTY nMaxLevel : BYTE
+]]></Declaration>
+      <Get Name="Get" Id="{b41ea1cc-ac2c-4884-973b-67ec7e32bb42}">
+        <Declaration><![CDATA[VAR
+END_VAR
+]]></Declaration>
+        <Implementation>
+          <ST><![CDATA[nMaxLevel := _nMaxLevel;]]></ST>
+        </Implementation>
+      </Get>
+      <Set Name="Set" Id="{7653750b-551f-4d56-b05f-2be743c287ad}">
+        <Declaration><![CDATA[VAR
+END_VAR
+]]></Declaration>
+        <Implementation>
+          <ST><![CDATA[_nMaxLevel := nMaxLevel;]]></ST>
+        </Implementation>
+      </Set>
+    </Property>
+    <Property Name="nMinLevel" Id="{8f16db86-10f5-4940-90e8-e51b23fcd72f}">
+      <Declaration><![CDATA[PROPERTY nMinLevel : BYTE
+]]></Declaration>
+      <Get Name="Get" Id="{8cfe566a-38aa-4fa2-b068-bf214bca823b}">
+        <Declaration><![CDATA[VAR
+END_VAR
+]]></Declaration>
+        <Implementation>
+          <ST><![CDATA[nMinLevel := _nMinLevel;]]></ST>
+        </Implementation>
+      </Get>
+      <Set Name="Set" Id="{1267f3d7-cb9e-4530-a68f-a2bd549379de}">
+        <Declaration><![CDATA[VAR
+END_VAR
+]]></Declaration>
+        <Implementation>
+          <ST><![CDATA[_nMinLevel := nMinLevel;]]></ST>
+        </Implementation>
+      </Set>
+    </Property>
+  </POU>
+</TcPlcObject>

@@ -1,0 +1,127 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.12">
+  <POU Name="FB_DelayedLight" Id="{b9811f47-d520-4c1c-b4ba-1653b30fe046}" SpecialFunc="None">
+    <Declaration><![CDATA[FUNCTION_BLOCK PUBLIC FB_DelayedLight EXTENDS FB_Light IMPLEMENTS I_Delayable
+VAR_INPUT
+END_VAR
+VAR_OUTPUT
+END_VAR
+VAR
+	_tOnDelay			:	TIME;
+	_tOffDelay			:	TIME;
+	tonOnDelay			:	TON;
+	tonOffDelay			:	TON;
+	bStartOnDelay		:	BOOL;
+	bStartOffDelay		:	BOOL;
+	nStep				:	INT;
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[rtrigOn(CLK := bOn);
+IF (rtrigOn.Q) THEN
+	M_On();
+END_IF
+
+rtrigOff(CLK := bOff);
+IF (rtrigOff.Q) THEN
+	M_Off();
+END_IF
+
+CASE nStep OF
+	0:
+		IF ((bStartOnDelay AND nStep = 0)) THEN
+			tonOnDelay(IN := FALSE);
+			nStep := 10;
+		END_IF
+		IF ((bStartOffDelay AND nStep = 0)) THEN
+			tonOffDelay(IN := FALSE);
+			nStep := 20;
+		END_IF
+	10:
+		tonOnDelay(IN := TRUE, pt := tOnDelay);
+		IF (tonOnDelay.Q) THEN
+			SUPER^._bControlLevel := TRUE;
+			bStartOnDelay := FALSE;
+			nStep := 0;
+		END_IF
+	20:
+		tonOffDelay(IN := TRUE, pt := tOffDelay);
+		IF (tonOffDelay.Q) THEN
+			SUPER^._bControlLevel := FALSE;
+			bStartOffDelay := FALSE;
+			nStep := 0;
+		END_IF
+END_CASE
+
+bControl := bControlLevel;
+]]></ST>
+    </Implementation>
+    <Method Name="FB_init" Id="{80b80148-5b85-46df-9caa-03f8ef3c2470}">
+      <Declaration><![CDATA[METHOD PUBLIC FB_init : BOOL
+VAR_INPUT
+	bInitRetains : BOOL; // if TRUE, the retain variables are initialized (warm start / cold start)
+	bInCopyCode : BOOL;  // if TRUE, the instance afterwards gets moved into the copy code (online change)
+END_VAR
+]]></Declaration>
+      <Implementation>
+        <ST><![CDATA[_tOnDelay := T#1S;
+_tOffDelay := T#2S;
+]]></ST>
+      </Implementation>
+    </Method>
+    <Method Name="M_Off" Id="{e0b32897-5bf5-40bd-b2bb-1301024ef38d}">
+      <Declaration><![CDATA[METHOD PUBLIC M_Off
+]]></Declaration>
+      <Implementation>
+        <ST><![CDATA[bStartOffDelay := TRUE;]]></ST>
+      </Implementation>
+    </Method>
+    <Method Name="M_On" Id="{8623f43e-a70b-462c-b9a0-fed444694e99}">
+      <Declaration><![CDATA[METHOD PUBLIC M_On
+]]></Declaration>
+      <Implementation>
+        <ST><![CDATA[bStartOnDelay := TRUE;]]></ST>
+      </Implementation>
+    </Method>
+    <Property Name="tOffDelay" Id="{ac8bdadc-60e8-464e-a14c-4673e90c3892}">
+      <Declaration><![CDATA[PROPERTY tOffDelay : TIME
+]]></Declaration>
+      <Get Name="Get" Id="{0be7b908-d370-44f3-9e21-985468893d0c}">
+        <Declaration><![CDATA[VAR
+END_VAR
+]]></Declaration>
+        <Implementation>
+          <ST><![CDATA[tOffDelay := _tOffDelay;]]></ST>
+        </Implementation>
+      </Get>
+      <Set Name="Set" Id="{ba846020-5e36-4fab-834e-b55105b317ba}">
+        <Declaration><![CDATA[VAR
+END_VAR
+]]></Declaration>
+        <Implementation>
+          <ST><![CDATA[_tOffDelay := tOffDelay;]]></ST>
+        </Implementation>
+      </Set>
+    </Property>
+    <Property Name="tOnDelay" Id="{6f7eaee8-1cc3-49d3-8f60-99156c7d43f6}">
+      <Declaration><![CDATA[PROPERTY tOnDelay : TIME
+]]></Declaration>
+      <Get Name="Get" Id="{6779fc6b-8795-495c-959c-c1937aa8759e}">
+        <Declaration><![CDATA[VAR
+END_VAR
+]]></Declaration>
+        <Implementation>
+          <ST><![CDATA[tOnDelay := _tOnDelay;]]></ST>
+        </Implementation>
+      </Get>
+      <Set Name="Set" Id="{39345fd6-fd54-4ab4-8e1a-b8326a53f2d8}">
+        <Declaration><![CDATA[VAR
+END_VAR
+]]></Declaration>
+        <Implementation>
+          <ST><![CDATA[_tOnDelay := tOnDelay;]]></ST>
+        </Implementation>
+      </Set>
+    </Property>
+  </POU>
+</TcPlcObject>

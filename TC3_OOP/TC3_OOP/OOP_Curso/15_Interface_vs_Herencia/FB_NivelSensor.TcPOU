@@ -1,0 +1,88 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.12">
+  <POU Name="FB_NivelSensor" Id="{0c319140-eb32-41e5-927e-020d0f519e22}" SpecialFunc="None">
+    <Declaration><![CDATA[FUNCTION_BLOCK FB_NivelSensor IMPLEMENTS I_Analog
+VAR_INPUT
+END_VAR
+VAR_OUTPUT
+END_VAR
+VAR
+	_MaxValue 		: INT;
+	_ScaledAnalog 	: INT;
+	_AnalogSignal 	: INT;
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[]]></ST>
+    </Implementation>
+    <Property Name="AnalogSignal" Id="{f6ad1759-5a15-4ad5-a27c-6dceb5f98753}">
+      <Declaration><![CDATA[{warning 'Agregar implementación de propiedad'}
+PROPERTY AnalogSignal : INT
+]]></Declaration>
+      <Get Name="Get" Id="{78fff54e-39ce-41f6-8d48-de708c5383fa}">
+        <Declaration><![CDATA[VAR
+END_VAR
+]]></Declaration>
+        <Implementation>
+          <ST><![CDATA[AnalogSignal := _AnalogSignal;]]></ST>
+        </Implementation>
+      </Get>
+      <Set Name="Set" Id="{8270a37f-bfc0-4af1-90be-f37151cfe08d}">
+        <Declaration><![CDATA[VAR
+END_VAR
+]]></Declaration>
+        <Implementation>
+          <ST><![CDATA[_AnalogSignal := AnalogSignal;]]></ST>
+        </Implementation>
+      </Set>
+    </Property>
+    <Property Name="MaxValue" Id="{97bbebf4-703c-4100-8637-83ddace2198a}">
+      <Declaration><![CDATA[PROPERTY MaxValue : INT]]></Declaration>
+      <Get Name="Get" Id="{2ffe5770-0e9e-4a7d-88ab-425a1b837bdc}">
+        <Declaration><![CDATA[VAR
+END_VAR
+]]></Declaration>
+        <Implementation>
+          <ST><![CDATA[MaxValue := _MaxValue;]]></ST>
+        </Implementation>
+      </Get>
+      <Set Name="Set" Id="{d7a18e7a-bfb3-49d3-ac24-3b7fddbf1acc}">
+        <Declaration><![CDATA[VAR
+END_VAR
+]]></Declaration>
+        <Implementation>
+          <ST><![CDATA[_MaxValue := MaxValue;]]></ST>
+        </Implementation>
+      </Set>
+    </Property>
+    <Method Name="Scale" Id="{dc2cd368-a319-4da1-8ec9-3648759750a6}">
+      <Declaration><![CDATA[{warning 'Agregar implementación de método'}
+METHOD Scale : BOOL
+]]></Declaration>
+      <Implementation>
+        <ST><![CDATA[ScaledAnalog := AnalogSignal * MaxValue / 1000;]]></ST>
+      </Implementation>
+    </Method>
+    <Property Name="ScaledAnalog" Id="{c9d1e697-9b99-4c97-a659-849166b6dc88}">
+      <Declaration><![CDATA[{warning 'Agregar implementación de propiedad'}
+PROPERTY ScaledAnalog : INT
+]]></Declaration>
+      <Get Name="Get" Id="{d6c8fa40-6178-4e63-b5b1-248e25f434d8}">
+        <Declaration><![CDATA[VAR
+END_VAR
+]]></Declaration>
+        <Implementation>
+          <ST><![CDATA[ScaledAnalog := _ScaledAnalog;]]></ST>
+        </Implementation>
+      </Get>
+      <Set Name="Set" Id="{51ab4c22-f3ac-418e-8e2a-898e06dcae62}">
+        <Declaration><![CDATA[VAR
+END_VAR
+]]></Declaration>
+        <Implementation>
+          <ST><![CDATA[_ScaledAnalog := ScaledAnalog;]]></ST>
+        </Implementation>
+      </Set>
+    </Property>
+  </POU>
+</TcPlcObject>

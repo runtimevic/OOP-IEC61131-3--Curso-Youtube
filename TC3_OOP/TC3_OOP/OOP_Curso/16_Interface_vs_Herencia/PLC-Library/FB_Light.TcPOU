@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.12">
+  <POU Name="FB_Light" Id="{ac651da5-5748-4f92-a579-c38eff465f2e}" SpecialFunc="None">
+    <Declaration><![CDATA[FUNCTION_BLOCK PUBLIC FB_Light IMPLEMENTS I_Light
+VAR_INPUT
+	bOn					:	BOOL;
+	bOff				:	BOOL;
+END_VAR
+VAR_OUTPUT
+	bControl			:	BOOL;
+END_VAR
+VAR
+	rtrigOn				:	R_TRIG;
+	rtrigOff			:	R_TRIG;
+	_bControlLevel		:	BOOL;
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[rtrigOn(CLK := bOn);
+IF (rtrigOn.Q) THEN
+	M_On();
+END_IF
+
+rtrigOff(CLK := bOff);
+IF (rtrigOff.Q) THEN
+	M_Off();
+END_IF
+
+bControl := bControlLevel;
+]]></ST>
+    </Implementation>
+    <Property Name="bControlLevel" Id="{8f0a6793-97a1-42fb-89c5-c7cbe36a5815}">
+      <Declaration><![CDATA[PROPERTY bControlLevel : BOOL
+]]></Declaration>
+      <Get Name="Get" Id="{8452bba2-c009-4ca5-b8e7-8e3bfd4cda70}">
+        <Declaration><![CDATA[VAR
+END_VAR
+]]></Declaration>
+        <Implementation>
+          <ST><![CDATA[bControlLevel := _bControlLevel;]]></ST>
+        </Implementation>
+      </Get>
+      <Set Name="Set" Id="{757bccf7-c33a-4e19-8fa3-ae6d57cc983b}">
+        <Declaration><![CDATA[VAR
+END_VAR
+]]></Declaration>
+        <Implementation>
+          <ST><![CDATA[]]></ST>
+        </Implementation>
+      </Set>
+    </Property>
+    <Method Name="M_Off" Id="{cd28f873-04eb-42ed-b680-18b8c9700ed2}">
+      <Declaration><![CDATA[METHOD PUBLIC M_Off
+]]></Declaration>
+      <Implementation>
+        <ST><![CDATA[_bControlLevel := FALSE;]]></ST>
+      </Implementation>
+    </Method>
+    <Method Name="M_On" Id="{0b05d84c-3c99-44b7-a9f9-a9a6e37e56c6}">
+      <Declaration><![CDATA[METHOD PUBLIC M_On
+]]></Declaration>
+      <Implementation>
+        <ST><![CDATA[_bControlLevel := TRUE;]]></ST>
+      </Implementation>
+    </Method>
+  </POU>
+</TcPlcObject>

@@ -3,11 +3,12 @@
     - Son accesibles luego de instanciar la clase.
     - Corresponde a la especificación de modificador sin restricción de acceso.
 - <span style="color:orange">PRIVATE:</span> 
-    - Son accesibles dentro de la clase.
-    - El acceso está restringido al bloque de funciones o al programa, respectivamente.
+    - Son accesibles solo dentro de la clase.
+    - El acceso está restringido al bloque de funciones Heredado y en el programa MAIN, respectivamente.
 - <span style="color:orange">PROTECTED:</span> 
+    - Son accesibles dentro de la clase.
     - Son accesibles a través de la herencia.
-    - El acceso está restringido al programa o al bloque de función y sus derivados respectivamente.
+    - El acceso está restringido, no se puede acceder desde el programa principal, desde el MAIN.
 - <span style="color:orange">INTERNAL:</span>
     - El acceso está limitado al espacio de nombres (la biblioteca).  
 - <span style="color:orange">FINAL:</span>

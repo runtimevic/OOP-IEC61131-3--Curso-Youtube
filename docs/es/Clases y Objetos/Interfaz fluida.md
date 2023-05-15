@@ -44,6 +44,7 @@ En esta técnica, cada método devuelve un objeto y puede encadenar todos los m�
 
 - 🔗 [tc3-data-logger creado con interface fluida, github.com/benhar-dev](https://github.com/benhar-dev/tc3-data-logger)
 
+- 🔗 [interface fluida por referencia, getting-limits-twincat-ralph-koettlitz](https://www.linkedin.com/pulse/getting-limits-twincat-ralph-koettlitz/)
 ***
 ### <span style="color:grey">Link al Video de Youtube 014:</span>
 - 🔗 [014 - OOP IEC 61131-3 PLC -- Interface Fluida](https://youtu.be/k_VFBLGBUKk)

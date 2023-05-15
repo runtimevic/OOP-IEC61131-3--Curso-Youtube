@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.12">
+  <POU Name="P_Light_Test_ST" Id="{2dc43587-1fdb-406e-a556-9521154ef615}" SpecialFunc="None">
+    <Declaration><![CDATA[PROGRAM P_Light_Test_ST
+VAR
+	fbLight				:	FB_Light;
+	bOn					:	BOOL;
+	bOff				:	BOOL;
+	bControlLevel		:	BOOL;	
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[fbLight();
+
+IF (bOn) THEN
+	fbLight.M_On();
+	bOn := FALSE;
+END_IF
+IF (bOff) THEN
+	fbLight.M_Off();
+	bOff := FALSE;
+END_IF
+
+bControlLevel := fbLight.bControlLevel;
+
+]]></ST>
+    </Implementation>
+  </POU>
+</TcPlcObject>

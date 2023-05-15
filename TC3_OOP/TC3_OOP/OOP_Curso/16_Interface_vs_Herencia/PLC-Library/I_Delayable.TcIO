@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.12">
+  <Itf Name="I_Delayable" Id="{4cf5cd6d-0a90-402c-a922-1728b3df66ca}">
+    <Declaration><![CDATA[INTERFACE I_Delayable EXTENDS __SYSTEM.IQueryInterface 
+]]></Declaration>
+    <Property Name="tOffDelay" Id="{912eb2b3-a8ae-4ae6-aa68-276a62e1b9cd}">
+      <Declaration><![CDATA[PROPERTY tOffDelay : TIME]]></Declaration>
+      <Get Name="Get" Id="{0b41e1ae-31a4-46d6-8c18-c0d37422c735}">
+        <Declaration><![CDATA[]]></Declaration>
+      </Get>
+      <Set Name="Set" Id="{8595fc39-3a63-493c-84f7-949ae091a7d8}">
+        <Declaration><![CDATA[]]></Declaration>
+      </Set>
+    </Property>
+    <Property Name="tOnDelay" Id="{a0e6d6b2-9ab9-4dfe-a1e0-f0f9023e7867}">
+      <Declaration><![CDATA[PROPERTY tOnDelay : TIME]]></Declaration>
+      <Get Name="Get" Id="{55d0972a-b4bb-49bc-93a7-e3a1a35be0ca}">
+        <Declaration><![CDATA[]]></Declaration>
+      </Get>
+      <Set Name="Set" Id="{2f5bf27f-d26e-4510-9b85-be772898b423}">
+        <Declaration><![CDATA[]]></Declaration>
+      </Set>
+    </Property>
+  </Itf>
+</TcPlcObject>

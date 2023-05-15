@@ -23,7 +23,8 @@ Podemos tener otros 2 modificadores de acceso para el Bloque de Funciones:
     - FINAL solo está permitido para POU del tipo FUNCTION_BLOCK.
     - No se permite sobrescribir, en un derivado del bloque de funciones. 
     - Esto significa que no se puede sobrescribir/extender en una subclase posiblemente existente.    
-- <span style="color:orange">ABSTRACT:</span> 
+- <span style="color:orange">ABSTRACT:</span>
+
 bloques de funciones abstractas
 ```javascript
 FUNCTION_BLOCK PUBLIC ABSTRACT FB_Foo

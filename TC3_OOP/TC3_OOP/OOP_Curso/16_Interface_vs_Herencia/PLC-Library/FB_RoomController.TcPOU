@@ -1,0 +1,124 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.12">
+  <POU Name="FB_RoomController" Id="{2a1caed4-34c2-498a-8559-6cd323df6366}" SpecialFunc="None">
+    <Declaration><![CDATA[FUNCTION_BLOCK PUBLIC FB_RoomController
+VAR_INPUT
+	bAllOn					:	BOOL;
+	bAllOff					:	BOOL;
+	bAllCallMinLevel		:	BOOL;
+	refLight01				:	REFERENCE TO FB_Light;
+	refLight02				:	REFERENCE TO FB_Light;
+	refLight03				:	REFERENCE TO FB_Light;
+END_VAR
+VAR_OUTPUT
+	aControlLevel			:	ARRAY [1..3] OF BOOL;
+	aDimmLevel				:	ARRAY [1..3] OF BYTE;
+END_VAR
+VAR
+	aILight					:	ARRAY [1..3] OF I_Light;
+	aIDimmableLights		:	ARRAY [1..3] OF I_Dimmable;
+	rtrigAllOn				:	R_TRIG;
+	rtrigAllOff				:	R_TRIG;
+	rtrigAllCallMinLevel	:	R_TRIG;
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[rtrigAllOn(CLK := bAllOn);
+IF (rtrigAllOn.Q) THEN
+	AllOn();
+END_IF
+
+rtrigAllOff(CLK := bAllOff);
+IF (rtrigAllOff.Q) THEN
+	AllOff();
+END_IF
+
+rtrigAllCallMinLevel(CLK := bAllCallMinLevel);
+IF (rtrigAllCallMinLevel.Q) THEN
+	AllCallMinLevel();
+END_IF
+
+Invoke();
+]]></ST>
+    </Implementation>
+    <Action Name="AllCallMinLevel" Id="{eedd4bb3-df7f-453f-aa98-49a21ff69834}">
+      <Implementation>
+        <ST><![CDATA[IF (__ISVALIDREF(refLight01)) THEN
+	aILight[1] := refLight01;
+	IF (__QUERYINTERFACE(aILight[1], aIDimmableLights[1])) THEN
+		aIDimmableLights[1].M_RecallMinLevel();
+	END_IF
+END_IF
+
+IF (__ISVALIDREF(refLight02)) THEN
+	aILight[2] := refLight02;
+	IF (__QUERYINTERFACE(aILight[2], aIDimmableLights[2])) THEN
+		aIDimmableLights[2].M_RecallMinLevel();
+	END_IF
+END_IF
+
+IF (__ISVALIDREF(refLight03)) THEN
+	aILight[3] := refLight03;
+	IF (__QUERYINTERFACE(aILight[3], aIDimmableLights[3])) THEN
+		aIDimmableLights[3].M_RecallMinLevel();
+	END_IF
+END_IF]]></ST>
+      </Implementation>
+    </Action>
+    <Action Name="AllOff" Id="{0bc130ba-4953-42b5-bf57-41bf935f62bd}">
+      <Implementation>
+        <ST><![CDATA[IF (__ISVALIDREF(refLight01)) THEN
+	refLight01.M_Off();
+END_IF
+IF (__ISVALIDREF(refLight02)) THEN
+	refLight02.M_Off();
+END_IF
+IF (__ISVALIDREF(refLight03)) THEN
+	refLight03.M_Off();
+END_IF]]></ST>
+      </Implementation>
+    </Action>
+    <Action Name="AllOn" Id="{dfc7d4b2-0099-4f6c-a295-88426977e37d}">
+      <Implementation>
+        <ST><![CDATA[IF (__ISVALIDREF(refLight01)) THEN
+	refLight01.M_On();
+END_IF
+IF (__ISVALIDREF(refLight02)) THEN
+	refLight02.M_On();
+END_IF
+IF (__ISVALIDREF(refLight03)) THEN
+	refLight03.M_On();
+END_IF]]></ST>
+      </Implementation>
+    </Action>
+    <Action Name="Invoke" Id="{5a47645d-1d72-4853-8093-17343d748e59}">
+      <Implementation>
+        <ST><![CDATA[IF (__ISVALIDREF(refLight01)) THEN
+	refLight01();
+	aControlLevel[1] := refLight01.bControlLevel;	
+	aILight[1] := refLight01;
+	IF (__QUERYINTERFACE(aILight[1], aIDimmableLights[1])) THEN
+		aDimmLevel[1] := aIDimmableLights[1].nControlLevel;
+	END_IF
+END_IF
+IF (__ISVALIDREF(refLight02)) THEN
+	refLight02();
+	aControlLevel[2] := refLight02.bControlLevel;
+	aILight[2] := refLight02;
+	IF (__QUERYINTERFACE(aILight[2], aIDimmableLights[2])) THEN
+		aDimmLevel[2] := aIDimmableLights[2].nControlLevel;
+	END_IF
+END_IF
+IF (__ISVALIDREF(refLight03)) THEN
+	refLight03();
+	aControlLevel[3] := refLight03.bControlLevel;
+	aILight[3] := refLight03;
+	IF (__QUERYINTERFACE(aILight[3], aIDimmableLights[3])) THEN
+		aDimmLevel[3] := aIDimmableLights[3].nControlLevel;
+	END_IF
+END_IF
+]]></ST>
+      </Implementation>
+    </Action>
+  </POU>
+</TcPlcObject>

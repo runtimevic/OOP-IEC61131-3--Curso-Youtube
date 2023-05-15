@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.12">
+  <Itf Name="I_Analog" Id="{e5efea24-2bcb-4cf4-b329-1255d100a501}">
+    <Declaration><![CDATA[INTERFACE I_Analog
+]]></Declaration>
+    <Property Name="AnalogSignal" Id="{c0b94fb5-afa8-4ee2-a0b0-a233a53f3251}">
+      <Declaration><![CDATA[PROPERTY AnalogSignal : INT]]></Declaration>
+      <Get Name="Get" Id="{aa692638-df91-42ce-8188-59ed7b6a96e4}">
+        <Declaration><![CDATA[]]></Declaration>
+      </Get>
+      <Set Name="Set" Id="{3742b2fd-22f3-4535-b280-1463e96d076c}">
+        <Declaration><![CDATA[]]></Declaration>
+      </Set>
+    </Property>
+    <Method Name="Scale" Id="{aad8d38f-fb15-45fb-b2e7-72a4db2df1fc}">
+      <Declaration><![CDATA[METHOD Scale : BOOL
+VAR_INPUT
+END_VAR
+]]></Declaration>
+    </Method>
+    <Property Name="ScaledAnalog" Id="{b1d8e986-1d3b-4e52-b121-13b18448f590}">
+      <Declaration><![CDATA[PROPERTY ScaledAnalog : INT]]></Declaration>
+      <Get Name="Get" Id="{f8d648b0-df73-4cca-9e7e-143d0f6ed8e8}">
+        <Declaration><![CDATA[]]></Declaration>
+      </Get>
+      <Set Name="Set" Id="{ee9f6acd-689c-4f45-9373-352444588549}">
+        <Declaration><![CDATA[]]></Declaration>
+      </Set>
+    </Property>
+  </Itf>
+</TcPlcObject>

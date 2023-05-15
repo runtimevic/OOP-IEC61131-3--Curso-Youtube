@@ -1,0 +1,106 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.12">
+  <POU Name="FB_VFD" Id="{ffc6ba41-6e19-4d67-9484-e64f63cbe576}" SpecialFunc="None">
+    <Declaration><![CDATA[FUNCTION_BLOCK FB_VFD IMPLEMENTS I_Analog, I_Run
+VAR_INPUT
+END_VAR
+VAR_OUTPUT
+END_VAR
+VAR
+	_Coil 			: BOOL;
+	_AnalogSignal 	: INT;
+	_ScaledAnalog 	: INT;
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[]]></ST>
+    </Implementation>
+    <Property Name="AnalogSignal" Id="{31f78fa4-a832-42d2-ac65-0d96b1bba130}">
+      <Declaration><![CDATA[{warning 'Agregar implementación de propiedad'}
+PROPERTY AnalogSignal : INT
+]]></Declaration>
+      <Get Name="Get" Id="{a632d7f8-e87e-437f-bf1d-6eae4906db64}">
+        <Declaration><![CDATA[VAR
+END_VAR
+]]></Declaration>
+        <Implementation>
+          <ST><![CDATA[AnalogSignal := _AnalogSignal;]]></ST>
+        </Implementation>
+      </Get>
+      <Set Name="Set" Id="{9c840049-c3cb-42f5-af31-1824c15f449e}">
+        <Declaration><![CDATA[VAR
+END_VAR
+]]></Declaration>
+        <Implementation>
+          <ST><![CDATA[_AnalogSignal := AnalogSignal;]]></ST>
+        </Implementation>
+      </Set>
+    </Property>
+    <Property Name="Coil" Id="{fa8eb037-d6ab-4377-bff6-cc9476d5c0df}">
+      <Declaration><![CDATA[{warning 'Agregar implementación de propiedad'}
+PROPERTY Coil : BOOL
+]]></Declaration>
+      <Get Name="Get" Id="{ca01a59b-b518-4a6d-bb2f-be6d82019541}">
+        <Declaration><![CDATA[VAR
+END_VAR
+]]></Declaration>
+        <Implementation>
+          <ST><![CDATA[Coil := _Coil;]]></ST>
+        </Implementation>
+      </Get>
+      <Set Name="Set" Id="{386ffc64-7bb3-41b1-ad48-80e43c81d407}">
+        <Declaration><![CDATA[VAR
+END_VAR
+]]></Declaration>
+        <Implementation>
+          <ST><![CDATA[_Coil := Coil;]]></ST>
+        </Implementation>
+      </Set>
+    </Property>
+    <Method Name="Scale" Id="{01aea459-85a9-43f0-9c77-0790fff93e40}">
+      <Declaration><![CDATA[{warning 'Agregar implementación de método'}
+METHOD Scale : BOOL
+]]></Declaration>
+      <Implementation>
+        <ST><![CDATA[ScaledAnalog := AnalogSignal * 200;]]></ST>
+      </Implementation>
+    </Method>
+    <Property Name="ScaledAnalog" Id="{8d0b6189-b7fa-4f1d-a6a2-351ed9cdcc53}">
+      <Declaration><![CDATA[{warning 'Agregar implementación de propiedad'}
+PROPERTY ScaledAnalog : INT
+]]></Declaration>
+      <Get Name="Get" Id="{8eb1cc46-70ab-4c38-9988-795e01c9c5f3}">
+        <Declaration><![CDATA[VAR
+END_VAR
+]]></Declaration>
+        <Implementation>
+          <ST><![CDATA[ScaledAnalog := _ScaledAnalog;]]></ST>
+        </Implementation>
+      </Get>
+      <Set Name="Set" Id="{4b66ed0f-a0d7-43f2-a1af-31bc04b99bbb}">
+        <Declaration><![CDATA[VAR
+END_VAR
+]]></Declaration>
+        <Implementation>
+          <ST><![CDATA[_ScaledAnalog := ScaledAnalog;]]></ST>
+        </Implementation>
+      </Set>
+    </Property>
+    <Method Name="Start" Id="{1a9ecbe1-0f1f-4a9b-b69e-97b9ca9075bb}">
+      <Declaration><![CDATA[{warning 'Agregar implementación de método'}
+METHOD Start : BOOL
+]]></Declaration>
+      <Implementation>
+        <ST><![CDATA[Coil := true;]]></ST>
+      </Implementation>
+    </Method>
+    <Method Name="Stop" Id="{6f0e5fb1-6aa4-45be-ab90-5c7924fdb9e2}">
+      <Declaration><![CDATA[{warning 'Agregar implementación de método'}
+METHOD Stop : BOOL
+]]></Declaration>
+      <Implementation>
+        <ST><![CDATA[Coil := false;]]></ST>
+      </Implementation>
+    </Method>
+  </POU>
+</TcPlcObject>
