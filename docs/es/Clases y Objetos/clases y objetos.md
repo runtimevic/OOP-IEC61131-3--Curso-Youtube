@@ -87,6 +87,8 @@ Color := Mercedes.Color;
 
 - 🔗 [methods-properties-and-inheritance (stefanhenneken)](https://stefanhenneken.net/2017/04/23/iec-61131-3-methods-properties-and-inheritance/)
 
+- 🔗 [Object Oriented Industrial Programming (OOIP) -- March 2021 CODESYS Tech Talk](https://www.youtube.com/watch?v=vRGaW4L762k)
+
 ***
 ### <span style="color:grey">Link al Video de Youtube 002:</span>
 - 🔗 [002 - OOP IEC 61131-3 PLC -- Clase y Objeto](https://youtu.be/3IudQIj1noo)

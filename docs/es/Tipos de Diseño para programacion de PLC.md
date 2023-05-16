@@ -21,6 +21,7 @@ Units: (Ejemplo de Unidades):
 -FBGenericUnit
 
 !!! puntos que se pueden incluir en el curso!!!:
+- Objects composition (Composicion de Objetos)
 
 - Basic of Structured Text programming Language
 - UDT (estructuras)
