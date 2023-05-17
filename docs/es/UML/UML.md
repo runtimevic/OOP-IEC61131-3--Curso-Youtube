@@ -27,3 +27,5 @@ En Codesys y en TwinCAT tendremos el diagrama:
 - 🔗 [content.helpme-codesys.com, uml_general](https://content.helpme-codesys.com/en/CODESYS%20UML/_uml_general.html)
 - 🔗 [content.helpme-codesys.com, Class Diagram Elements](https://content.helpme-codesys.com/en/CODESYS%20UML/f_uml_ref_cd_elements.html)
 - 🔗 [content.helpme-codesys.com, uml_class_diagram_clarification_terms](https://content.helpme-codesys.com/en/CODESYS%20UML/_uml_class_diagram_clarification_terms.html)
+- 🔗 [online.visual-paradigm.com](https://online.visual-paradigm.com/diagrams/solutions/free-class-diagram-tool/)
+- 🔗 [www.eclipse.org/papyrus](https://www.eclipse.org/papyrus/)
