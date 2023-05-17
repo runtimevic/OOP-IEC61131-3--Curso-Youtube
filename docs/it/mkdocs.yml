@@ -148,7 +148,8 @@ nav:
        - Interfaccia fluente: Classi e Oggetti/interfaccia fluente.md
        - Interfaccia vs Ereditarietà: Classi e Oggetti/Interfaccia vs Ereditarieta.md
        - Altri Operatori: Classi e Oggetti/Altri Operatori.md
-    - ExST - Testo Strutturato Esteso: Extended_Structured_Text.md      
+    - ExST:
+       - Testo Strutturato Esteso: Extended_Structured_Text.md      
     - Principi OOP: 
        - 4 Pilastri: principi/_principi OOP.md
        - Astrazione: principi/Astrazione.md
