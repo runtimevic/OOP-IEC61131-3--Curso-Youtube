@@ -147,7 +147,8 @@ nav:
        - FB Abstract vs Interfaccia: Classi e Oggetti/FB abstract vs Interfaccia.md
        - Interfaccia fluente: Classi e Oggetti/interfaccia fluente.md
        - Interfaccia vs Ereditarietà: Classi e Oggetti/Interfaccia vs Ereditarieta.md
-       - Altri Operatori: Classi e Oggetti/Altri Operatori.md   
+       - Altri Operatori: Classi e Oggetti/Altri Operatori.md
+    - ExST - Testo Strutturato Esteso: Extended_Structured_Text.md      
     - Principi OOP: 
        - 4 Pilastri: principi/_principi OOP.md
        - Astrazione: principi/Astrazione.md
@@ -156,7 +157,7 @@ nav:
        - Polimorfismo: principi/Polimorfismo.md
     - SOLID: 
        - SOLID: Solid/_SOLID.md
-       - SRP -Principio di responsabilità esclusiva: Solid/Principio di responsabilita esclusiva.md
+       - SRP - Principio di responsabilità esclusiva: Solid/Principio di responsabilita esclusiva.md
        - OCP - Principio aperto/chiuso: Solid/Principio aperto chiuso.md
        - LSP - Principio di sostituzione di Liskov: Solid/Principio di sostituzione di Liskov.md
        - ISP - Principio di segregazione dell'interfaccia: Solid/Principio di segregazione dell interfaccia.md
