@@ -24,8 +24,14 @@ El Desarrollo Dirigido por Pruebas significa pasar por tres fases. Una y otra ve
 ![The_Pyramid_Of_Test](../imagenes/The_Pyramid_Of_Test.PNG)
 ***
 - El Desarrollo Guiado por Pruebas debe de empezarse a implementar lo mas temprano posible en el desarrollo del Software.
-- Deben realizarse 
+- Las pruebas solo son útiles cuando se ejecutan. Configurar un sistema de integración continua para construir y probar cada componente cada vez que hay un cambio en el código fuente es el camino a seguir.
 ***
+### <span style="color:grey">¿Como Conseguimos un Desarrollo Guiado por Pruebas TDD en PLCs?:</span>
+
+Vamos a ver una lista de todas las implementaciones que he encontrado para conseguirlo:
+
+-
+
 ### <span style="color:grey">Links Desarrollo Guiado por Pruebas:</span>
 
 - 🔗  [www.nimblework.com, desarrollo-dirigido-por-pruebas-tdd](https://www.nimblework.com/es/agile/desarrollo-dirigido-por-pruebas-tdd/)
