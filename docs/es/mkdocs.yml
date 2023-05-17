@@ -176,6 +176,7 @@ nav:
        - Patrones de Diseño de Comportamiento:
           - Patron de Estrategia: Patrones de Diseño/Strategy pattern.md
           - Patron Observador: Patrones de Diseño/Observer Design Pattern.md
+          - Patron Visitante: Patrones de Diseño/The Visitor Design Pattern.md
     - Librerias : Librerias.md
     - Links OOP: links.md
     - TDD:
