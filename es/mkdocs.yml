@@ -146,7 +146,8 @@ nav:
        - Interface fluida: Clases y Objetos/Interfaz fluida.md
        - Interface vs Herencia: Clases y Objetos/Interface vs Herencia.md
        - Otros Operadores: Clases y Objetos/Otros Operadores.md
-    - ExST - Texto Estructurado Extendido: Extended_Structured_Text.md
+    - ExST:
+       - Texto Estructurado Extendido: Extended_Structured_Text.md
     - Principios OOP: 
        - 4 Pilares: principios/_principios OOP.md
        - Abstracción: principios/abstraccion.md
