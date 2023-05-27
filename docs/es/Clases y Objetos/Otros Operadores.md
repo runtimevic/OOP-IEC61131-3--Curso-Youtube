@@ -1,18 +1,18 @@
 
 ### <span style="color:grey">Otros Operadores:</span>
-!!! FALTA PONER LOS LINKS DE CODESYS !!!
+
 ### <span style="color:grey">__DELETE:</span>
-- 🔗 [__DELETE,infosys.beckhoff.com](https://infosys.beckhoff.com/content/1033/tc3_plc_intro/2529160331.html?id=2289870734872430416)
-- 🔗 []()
+- 🔗 [__DELETE, infosys.beckhoff.com](https://infosys.beckhoff.com/content/1033/tc3_plc_intro/2529160331.html?id=2289870734872430416)
+- 🔗 [__DELETE, help.codesys.com](https://help.codesys.com/api-content/2/codesys/3.5.12.0/en/_cds_operator_delete/)
 ***
 ### <span style="color:grey">__ISVALIDREF:</span>
 - 🔗 [__ISVALIDREF, infosys.beckhoff.com](https://infosys.beckhoff.com/content/1033/tc3_plc_intro/2529165707.html?id=8190095739921439819)
-- 🔗 []()
+- 🔗 [__ISVALIDREF, help.codesys.com](https://help.codesys.com/api-content/2/codesys/3.5.14.0/en/_cds_operator_isvalidref/)
 ***
 
 ### <span style="color:grey">__NEW:</span>
 - 🔗 [__NEW, infosys.beckhoff](https://infosys.beckhoff.com/content/1033/tc3_plc_intro/2529171083.html?id=5409766235804740463)
-- 🔗 []()
+- 🔗 [__NEW, help.codesys.com](https://help.codesys.com/api-content/2/codesys/3.5.14.0/en/_cds_operator_new/)
 ***
 ### <span style="color:grey">__QUERYINTERFACE:</span>
 
@@ -33,7 +33,7 @@
 ***
 ### <span style="color:grey">__VARINFO:</span>
 - 🔗 [__VARINFO, infosys.beckhoff.com](https://infosys.beckhoff.com/content/1033/tc3_plc_intro/3527777675.html?id=2730070918177533256)
-- 🔗 []()
+- 🔗 [__VARINFO, help.codesys.com](https://help.codesys.com/webapp/_cds_operator_varinfo;product=codesys;version=3.5.14.0)
 ***
 🔗 [TEST_AND_SET, Codesys](https://content.helpme-codesys.com/es/CODESYS%20Development%20System/_cds_operator_test_and_set.html)
 
