@@ -27,5 +27,6 @@ Las Interfaces y la Herencia pueden trabajar de la mano, utilizarse a la vez cog
 - 🔗 [object-oriented-programming-plc-using-inheritance-ralph-koettlitz](https://www.linkedin.com/pulse/object-oriented-programming-plc-using-inheritance-ralph-koettlitz/?utm_source=share&utm_medium=member_android&utm_campaign=share_via)
 - 🔗 [stefanhenneken.net,iec-61131-3-object-composition-with-the-help-of-interfaces](https://stefanhenneken.net/2014/02/18/iec-61131-3-object-composition-with-the-help-of-interfaces/)
 
-### <span style="color:grey">Link al Video de Youtube 015:</span>
-- 🔗 [015 - OOP IEC 61131-3 PLC -- Interface vs Herencia]()
+### <span style="color:grey">Links Videos de Youtube 015 y 016:</span>
+- 🔗 [015 - OOP IEC 61131-3 PLC -- Interface vs Herencia_1](https://youtu.be/etY-NtkZ85w)
+- 🔗 [016 - OOP IEC 61131-3 PLC -- Interface vs Herencia_2]()

@@ -1,0 +1,948 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<project xmlns="http://www.plcopen.org/xml/tc6_0200">
+  <fileHeader companyName="Beckhoff Automation GmbH" productName="TwinCAT PLC Control" productVersion="3.5.13.21" creationDateTime="2023-05-27T11:18:57.8553898" />
+  <contentHeader name="OOP_Curso" modificationDateTime="2023-05-27T11:18:57.8622229">
+    <coordinateInfo>
+      <fbd>
+        <scaling x="1" y="1" />
+      </fbd>
+      <ld>
+        <scaling x="1" y="1" />
+      </ld>
+      <sfc>
+        <scaling x="1" y="1" />
+      </sfc>
+    </coordinateInfo>
+    <addData>
+      <data name="http://www.3s-software.com/plcopenxml/projectinformation" handleUnknown="implementation">
+        <ProjectInformation />
+      </data>
+    </addData>
+  </contentHeader>
+  <types>
+    <dataTypes />
+    <pous>
+      <pou name="_15_Interface_vs_Herencia" pouType="program">
+        <interface>
+          <localVars>
+            <variable name="fbNivelSensor">
+              <type>
+                <derived name="FB_NivelSensor" />
+              </type>
+              <documentation>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">Nivel Sensor: </xhtml>
+              </documentation>
+            </variable>
+            <variable name="nNivelAnalogSensor">
+              <type>
+                <INT />
+              </type>
+              <initialValue>
+                <simpleValue value="8000" />
+              </initialValue>
+            </variable>
+            <variable name="nScaledNivelSensor">
+              <type>
+                <INT />
+              </type>
+            </variable>
+            <variable name="nSensorNivelMaxValue">
+              <type>
+                <INT />
+              </type>
+            </variable>
+            <variable name="fbUltraSonic">
+              <type>
+                <derived name="FB_UltraSonicSensor" />
+              </type>
+              <documentation>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">UltraSonidos</xhtml>
+              </documentation>
+            </variable>
+            <variable name="nAnalogSensor">
+              <type>
+                <INT />
+              </type>
+              <initialValue>
+                <simpleValue value="8000" />
+              </initialValue>
+            </variable>
+            <variable name="nScaledSensor">
+              <type>
+                <INT />
+              </type>
+            </variable>
+            <variable name="nSensorMaxValue">
+              <type>
+                <INT />
+              </type>
+            </variable>
+            <variable name="fbVFD1">
+              <type>
+                <derived name="FB_VFD" />
+              </type>
+              <documentation>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">Variador de Frequencia</xhtml>
+              </documentation>
+            </variable>
+            <variable name="bCoil1">
+              <type>
+                <BOOL />
+              </type>
+            </variable>
+            <variable name="nFreqIn1">
+              <type>
+                <INT />
+              </type>
+              <initialValue>
+                <simpleValue value="25" />
+              </initialValue>
+            </variable>
+            <variable name="nFreqOut1">
+              <type>
+                <INT />
+              </type>
+            </variable>
+            <variable name="bStartVFD1">
+              <type>
+                <BOOL />
+              </type>
+            </variable>
+            <variable name="fbPump1">
+              <type>
+                <derived name="FB_Pump" />
+              </type>
+              <documentation>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">Pump</xhtml>
+              </documentation>
+            </variable>
+            <variable name="bCoilPump1">
+              <type>
+                <BOOL />
+              </type>
+            </variable>
+            <variable name="nFreqInPump1">
+              <type>
+                <INT />
+              </type>
+              <initialValue>
+                <simpleValue value="25" />
+              </initialValue>
+            </variable>
+            <variable name="nFreqOutPump1">
+              <type>
+                <INT />
+              </type>
+            </variable>
+            <variable name="bStartPump1">
+              <type>
+                <BOOL />
+              </type>
+            </variable>
+          </localVars>
+        </interface>
+        <body>
+          <ST>
+            <xhtml xmlns="http://www.w3.org/1999/xhtml">//Nivel Sensor
+fbNivelSensor.AnalogSignal := nNivelAnalogSensor;
+fbNivelSensor.MaxValue := 6;
+nScaledNivelSensor := fbNivelSensor.ScaledAnalog;
+fbNivelSensor.Scale();
+
+//UltraSonidos
+fbUltraSonic.AnalogSignal := nAnalogSensor;
+fbUltraSonic.MaxValue := 6;
+nScaledSensor := fbUltraSonic.ScaledAnalog;
+fbUltraSonic.Scale();
+
+//Variador de Frequencia
+fbVFD1.AnalogSignal := nFreqIn1;
+bCoil1 := fbVFD1.Coil;
+nFreqOut1 := fbVFD1.ScaledAnalog;
+fbVFD1.Scale();
+
+IF bStartVFD1 THEN
+	fbVFD1.Start();	
+ELSE
+	fbVFD1.Stop();
+END_IF
+
+//Pump
+fbPump1.AnalogSignal := nFreqInPump1;
+bCoilPump1 := fbPump1.Coil;
+nFreqOutPump1 := fbPump1.ScaledAnalog;
+fbPump1.Scale();
+
+IF bStartPump1 THEN
+	fbPump1.Start();	
+ELSE
+	fbPump1.Stop();
+END_IF
+</xhtml>
+          </ST>
+        </body>
+        <addData>
+          <data name="http://www.3s-software.com/plcopenxml/interfaceasplaintext" handleUnknown="implementation">
+            <InterfaceAsPlainText>
+              <xhtml xmlns="http://www.w3.org/1999/xhtml">PROGRAM _15_Interface_vs_Herencia
+VAR
+	//Nivel Sensor: 
+	fbNivelSensor			: FB_NivelSensor;
+	nNivelAnalogSensor 		: INT := 8000;
+	nScaledNivelSensor 		: INT;
+	nSensorNivelMaxValue 	: INT;
+
+	//UltraSonidos
+	fbUltraSonic 			: FB_UltraSonicSensor;
+	nAnalogSensor 			: INT := 8000;
+	nScaledSensor 			: INT;
+	nSensorMaxValue 		: INT;
+	
+	//Variador de Frequencia
+	fbVFD1 					: FB_VFD;
+	bCoil1 					: BOOL;
+	nFreqIn1  				: INT := 25;
+	nFreqOut1 				: INT;	
+	bStartVFD1 				: BOOL;
+	
+	//Pump
+	fbPump1 				: FB_Pump;
+	bCoilPump1				: BOOL;
+	nFreqInPump1  			: INT := 25;
+	nFreqOutPump1 			: INT;	
+	bStartPump1 			: BOOL;	
+END_VAR
+</xhtml>
+            </InterfaceAsPlainText>
+          </data>
+          <data name="http://www.3s-software.com/plcopenxml/objectid" handleUnknown="discard">
+            <ObjectId>63dd2bc0-b08a-4e9a-9268-a8cabfb2bcc9</ObjectId>
+          </data>
+        </addData>
+      </pou>
+      <pou name="FB_NivelSensor" pouType="functionBlock">
+        <interface>
+          <localVars>
+            <variable name="_MaxValue">
+              <type>
+                <INT />
+              </type>
+            </variable>
+            <variable name="_ScaledAnalog">
+              <type>
+                <INT />
+              </type>
+            </variable>
+            <variable name="_AnalogSignal">
+              <type>
+                <INT />
+              </type>
+            </variable>
+          </localVars>
+          <addData>
+            <data name="http://www.3s-software.com/plcopenxml/pouinheritance" handleUnknown="implementation">
+              <Inheritance>
+                <Implements>I_Analog</Implements>
+              </Inheritance>
+            </data>
+          </addData>
+        </interface>
+        <body>
+          <ST>
+            <xhtml xmlns="http://www.w3.org/1999/xhtml" />
+          </ST>
+        </body>
+        <addData>
+          <data name="http://www.3s-software.com/plcopenxml/method" handleUnknown="implementation">
+            <Method name="Scale" ObjectId="dc2cd368-a319-4da1-8ec9-3648759750a6">
+              <interface>
+                <returnType>
+                  <BOOL />
+                </returnType>
+              </interface>
+              <body>
+                <ST>
+                  <xhtml xmlns="http://www.w3.org/1999/xhtml">ScaledAnalog := AnalogSignal * MaxValue / 1000;</xhtml>
+                </ST>
+              </body>
+              <InterfaceAsPlainText>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">{warning 'Agregar implementación de método'}
+METHOD Scale : BOOL
+</xhtml>
+              </InterfaceAsPlainText>
+              <addData />
+            </Method>
+          </data>
+          <data name="http://www.3s-software.com/plcopenxml/property" handleUnknown="implementation">
+            <Property name="AnalogSignal" ObjectId="f6ad1759-5a15-4ad5-a27c-6dceb5f98753">
+              <interface>
+                <returnType>
+                  <INT />
+                </returnType>
+              </interface>
+              <GetAccessor>
+                <interface />
+                <body>
+                  <ST>
+                    <xhtml xmlns="http://www.w3.org/1999/xhtml">AnalogSignal := _AnalogSignal;</xhtml>
+                  </ST>
+                </body>
+                <InterfaceAsPlainText>
+                  <xhtml xmlns="http://www.w3.org/1999/xhtml">VAR
+END_VAR
+</xhtml>
+                </InterfaceAsPlainText>
+                <addData />
+              </GetAccessor>
+              <SetAccessor>
+                <interface />
+                <body>
+                  <ST>
+                    <xhtml xmlns="http://www.w3.org/1999/xhtml">_AnalogSignal := AnalogSignal;</xhtml>
+                  </ST>
+                </body>
+                <InterfaceAsPlainText>
+                  <xhtml xmlns="http://www.w3.org/1999/xhtml">VAR
+END_VAR
+</xhtml>
+                </InterfaceAsPlainText>
+                <addData />
+              </SetAccessor>
+              <InterfaceAsPlainText>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">{warning 'Agregar implementación de propiedad'}
+PROPERTY AnalogSignal : INT
+</xhtml>
+              </InterfaceAsPlainText>
+              <addData />
+            </Property>
+          </data>
+          <data name="http://www.3s-software.com/plcopenxml/property" handleUnknown="implementation">
+            <Property name="MaxValue" ObjectId="97bbebf4-703c-4100-8637-83ddace2198a">
+              <interface>
+                <returnType>
+                  <INT />
+                </returnType>
+              </interface>
+              <GetAccessor>
+                <interface />
+                <body>
+                  <ST>
+                    <xhtml xmlns="http://www.w3.org/1999/xhtml">MaxValue := _MaxValue;</xhtml>
+                  </ST>
+                </body>
+                <InterfaceAsPlainText>
+                  <xhtml xmlns="http://www.w3.org/1999/xhtml">VAR
+END_VAR
+</xhtml>
+                </InterfaceAsPlainText>
+                <addData />
+              </GetAccessor>
+              <SetAccessor>
+                <interface />
+                <body>
+                  <ST>
+                    <xhtml xmlns="http://www.w3.org/1999/xhtml">_MaxValue := MaxValue;</xhtml>
+                  </ST>
+                </body>
+                <InterfaceAsPlainText>
+                  <xhtml xmlns="http://www.w3.org/1999/xhtml">VAR
+END_VAR
+</xhtml>
+                </InterfaceAsPlainText>
+                <addData />
+              </SetAccessor>
+              <InterfaceAsPlainText>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">PROPERTY MaxValue : INT</xhtml>
+              </InterfaceAsPlainText>
+              <addData />
+            </Property>
+          </data>
+          <data name="http://www.3s-software.com/plcopenxml/property" handleUnknown="implementation">
+            <Property name="ScaledAnalog" ObjectId="c9d1e697-9b99-4c97-a659-849166b6dc88">
+              <interface>
+                <returnType>
+                  <INT />
+                </returnType>
+              </interface>
+              <GetAccessor>
+                <interface />
+                <body>
+                  <ST>
+                    <xhtml xmlns="http://www.w3.org/1999/xhtml">ScaledAnalog := _ScaledAnalog;</xhtml>
+                  </ST>
+                </body>
+                <InterfaceAsPlainText>
+                  <xhtml xmlns="http://www.w3.org/1999/xhtml">VAR
+END_VAR
+</xhtml>
+                </InterfaceAsPlainText>
+                <addData />
+              </GetAccessor>
+              <SetAccessor>
+                <interface />
+                <body>
+                  <ST>
+                    <xhtml xmlns="http://www.w3.org/1999/xhtml">_ScaledAnalog := ScaledAnalog;</xhtml>
+                  </ST>
+                </body>
+                <InterfaceAsPlainText>
+                  <xhtml xmlns="http://www.w3.org/1999/xhtml">VAR
+END_VAR
+</xhtml>
+                </InterfaceAsPlainText>
+                <addData />
+              </SetAccessor>
+              <InterfaceAsPlainText>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">{warning 'Agregar implementación de propiedad'}
+PROPERTY ScaledAnalog : INT
+</xhtml>
+              </InterfaceAsPlainText>
+              <addData />
+            </Property>
+          </data>
+          <data name="http://www.3s-software.com/plcopenxml/interfaceasplaintext" handleUnknown="implementation">
+            <InterfaceAsPlainText>
+              <xhtml xmlns="http://www.w3.org/1999/xhtml">FUNCTION_BLOCK FB_NivelSensor IMPLEMENTS I_Analog
+VAR_INPUT
+END_VAR
+VAR_OUTPUT
+END_VAR
+VAR
+	_MaxValue 		: INT;
+	_ScaledAnalog 	: INT;
+	_AnalogSignal 	: INT;
+END_VAR
+</xhtml>
+            </InterfaceAsPlainText>
+          </data>
+          <data name="http://www.3s-software.com/plcopenxml/objectid" handleUnknown="discard">
+            <ObjectId>0c319140-eb32-41e5-927e-020d0f519e22</ObjectId>
+          </data>
+        </addData>
+      </pou>
+      <pou name="FB_Pump" pouType="functionBlock">
+        <interface>
+          <addData>
+            <data name="http://www.3s-software.com/plcopenxml/pouinheritance" handleUnknown="implementation">
+              <Inheritance>
+                <Extends>FB_VFD</Extends>
+              </Inheritance>
+            </data>
+          </addData>
+        </interface>
+        <body>
+          <ST>
+            <xhtml xmlns="http://www.w3.org/1999/xhtml" />
+          </ST>
+        </body>
+        <addData>
+          <data name="http://www.3s-software.com/plcopenxml/method" handleUnknown="implementation">
+            <Method name="Scale" ObjectId="0736ad1e-e81b-44cd-91ae-0b85dc33a765">
+              <interface>
+                <returnType>
+                  <BOOL />
+                </returnType>
+              </interface>
+              <body>
+                <ST>
+                  <xhtml xmlns="http://www.w3.org/1999/xhtml">ScaledAnalog := AnalogSignal * 100;</xhtml>
+                </ST>
+              </body>
+              <InterfaceAsPlainText>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">{warning 'Agregar implementación de método'}
+METHOD Scale : BOOL
+</xhtml>
+              </InterfaceAsPlainText>
+              <addData />
+            </Method>
+          </data>
+          <data name="http://www.3s-software.com/plcopenxml/interfaceasplaintext" handleUnknown="implementation">
+            <InterfaceAsPlainText>
+              <xhtml xmlns="http://www.w3.org/1999/xhtml">FUNCTION_BLOCK FB_Pump EXTENDS FB_VFD
+VAR_INPUT
+END_VAR
+VAR_OUTPUT
+END_VAR
+VAR
+END_VAR
+</xhtml>
+            </InterfaceAsPlainText>
+          </data>
+          <data name="http://www.3s-software.com/plcopenxml/objectid" handleUnknown="discard">
+            <ObjectId>8f64b28a-4312-4d8d-8ce7-a7209cc80f47</ObjectId>
+          </data>
+        </addData>
+      </pou>
+      <pou name="FB_UltraSonicSensor" pouType="functionBlock">
+        <interface>
+          <addData>
+            <data name="http://www.3s-software.com/plcopenxml/pouinheritance" handleUnknown="implementation">
+              <Inheritance>
+                <Extends>FB_NivelSensor</Extends>
+              </Inheritance>
+            </data>
+          </addData>
+        </interface>
+        <body>
+          <ST>
+            <xhtml xmlns="http://www.w3.org/1999/xhtml" />
+          </ST>
+        </body>
+        <addData>
+          <data name="http://www.3s-software.com/plcopenxml/method" handleUnknown="implementation">
+            <Method name="Scale" ObjectId="e54689f2-4b3e-41a7-9d98-911851e1da59">
+              <interface>
+                <returnType>
+                  <BOOL />
+                </returnType>
+              </interface>
+              <body>
+                <ST>
+                  <xhtml xmlns="http://www.w3.org/1999/xhtml">ScaledAnalog := AnalogSignal * MaxValue / 2000;</xhtml>
+                </ST>
+              </body>
+              <InterfaceAsPlainText>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">{warning 'Agregar implementación de método'}
+METHOD Scale : BOOL
+</xhtml>
+              </InterfaceAsPlainText>
+              <addData />
+            </Method>
+          </data>
+          <data name="http://www.3s-software.com/plcopenxml/interfaceasplaintext" handleUnknown="implementation">
+            <InterfaceAsPlainText>
+              <xhtml xmlns="http://www.w3.org/1999/xhtml">FUNCTION_BLOCK FB_UltraSonicSensor EXTENDS FB_NivelSensor
+VAR_INPUT
+END_VAR
+VAR_OUTPUT
+END_VAR
+VAR
+
+END_VAR
+</xhtml>
+            </InterfaceAsPlainText>
+          </data>
+          <data name="http://www.3s-software.com/plcopenxml/objectid" handleUnknown="discard">
+            <ObjectId>f192cad1-2b8f-4ad8-a2d2-5b7934e29d7b</ObjectId>
+          </data>
+        </addData>
+      </pou>
+      <pou name="FB_VFD" pouType="functionBlock">
+        <interface>
+          <localVars>
+            <variable name="_Coil">
+              <type>
+                <BOOL />
+              </type>
+            </variable>
+            <variable name="_AnalogSignal">
+              <type>
+                <INT />
+              </type>
+            </variable>
+            <variable name="_ScaledAnalog">
+              <type>
+                <INT />
+              </type>
+            </variable>
+          </localVars>
+          <addData>
+            <data name="http://www.3s-software.com/plcopenxml/pouinheritance" handleUnknown="implementation">
+              <Inheritance>
+                <Implements>I_Analog</Implements>
+                <Implements>I_Run</Implements>
+              </Inheritance>
+            </data>
+          </addData>
+        </interface>
+        <body>
+          <ST>
+            <xhtml xmlns="http://www.w3.org/1999/xhtml" />
+          </ST>
+        </body>
+        <addData>
+          <data name="http://www.3s-software.com/plcopenxml/method" handleUnknown="implementation">
+            <Method name="Scale" ObjectId="01aea459-85a9-43f0-9c77-0790fff93e40">
+              <interface>
+                <returnType>
+                  <BOOL />
+                </returnType>
+              </interface>
+              <body>
+                <ST>
+                  <xhtml xmlns="http://www.w3.org/1999/xhtml">ScaledAnalog := AnalogSignal * 200;</xhtml>
+                </ST>
+              </body>
+              <InterfaceAsPlainText>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">{warning 'Agregar implementación de método'}
+METHOD Scale : BOOL
+</xhtml>
+              </InterfaceAsPlainText>
+              <addData />
+            </Method>
+          </data>
+          <data name="http://www.3s-software.com/plcopenxml/method" handleUnknown="implementation">
+            <Method name="Start" ObjectId="1a9ecbe1-0f1f-4a9b-b69e-97b9ca9075bb">
+              <interface>
+                <returnType>
+                  <BOOL />
+                </returnType>
+              </interface>
+              <body>
+                <ST>
+                  <xhtml xmlns="http://www.w3.org/1999/xhtml">Coil := true;</xhtml>
+                </ST>
+              </body>
+              <InterfaceAsPlainText>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">{warning 'Agregar implementación de método'}
+METHOD Start : BOOL
+</xhtml>
+              </InterfaceAsPlainText>
+              <addData />
+            </Method>
+          </data>
+          <data name="http://www.3s-software.com/plcopenxml/method" handleUnknown="implementation">
+            <Method name="Stop" ObjectId="6f0e5fb1-6aa4-45be-ab90-5c7924fdb9e2">
+              <interface>
+                <returnType>
+                  <BOOL />
+                </returnType>
+              </interface>
+              <body>
+                <ST>
+                  <xhtml xmlns="http://www.w3.org/1999/xhtml">Coil := false;</xhtml>
+                </ST>
+              </body>
+              <InterfaceAsPlainText>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">{warning 'Agregar implementación de método'}
+METHOD Stop : BOOL
+</xhtml>
+              </InterfaceAsPlainText>
+              <addData />
+            </Method>
+          </data>
+          <data name="http://www.3s-software.com/plcopenxml/property" handleUnknown="implementation">
+            <Property name="AnalogSignal" ObjectId="31f78fa4-a832-42d2-ac65-0d96b1bba130">
+              <interface>
+                <returnType>
+                  <INT />
+                </returnType>
+              </interface>
+              <GetAccessor>
+                <interface />
+                <body>
+                  <ST>
+                    <xhtml xmlns="http://www.w3.org/1999/xhtml">AnalogSignal := _AnalogSignal;</xhtml>
+                  </ST>
+                </body>
+                <InterfaceAsPlainText>
+                  <xhtml xmlns="http://www.w3.org/1999/xhtml">VAR
+END_VAR
+</xhtml>
+                </InterfaceAsPlainText>
+                <addData />
+              </GetAccessor>
+              <SetAccessor>
+                <interface />
+                <body>
+                  <ST>
+                    <xhtml xmlns="http://www.w3.org/1999/xhtml">_AnalogSignal := AnalogSignal;</xhtml>
+                  </ST>
+                </body>
+                <InterfaceAsPlainText>
+                  <xhtml xmlns="http://www.w3.org/1999/xhtml">VAR
+END_VAR
+</xhtml>
+                </InterfaceAsPlainText>
+                <addData />
+              </SetAccessor>
+              <InterfaceAsPlainText>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">{warning 'Agregar implementación de propiedad'}
+PROPERTY AnalogSignal : INT
+</xhtml>
+              </InterfaceAsPlainText>
+              <addData />
+            </Property>
+          </data>
+          <data name="http://www.3s-software.com/plcopenxml/property" handleUnknown="implementation">
+            <Property name="Coil" ObjectId="fa8eb037-d6ab-4377-bff6-cc9476d5c0df">
+              <interface>
+                <returnType>
+                  <BOOL />
+                </returnType>
+              </interface>
+              <GetAccessor>
+                <interface />
+                <body>
+                  <ST>
+                    <xhtml xmlns="http://www.w3.org/1999/xhtml">Coil := _Coil;</xhtml>
+                  </ST>
+                </body>
+                <InterfaceAsPlainText>
+                  <xhtml xmlns="http://www.w3.org/1999/xhtml">VAR
+END_VAR
+</xhtml>
+                </InterfaceAsPlainText>
+                <addData />
+              </GetAccessor>
+              <SetAccessor>
+                <interface />
+                <body>
+                  <ST>
+                    <xhtml xmlns="http://www.w3.org/1999/xhtml">_Coil := Coil;</xhtml>
+                  </ST>
+                </body>
+                <InterfaceAsPlainText>
+                  <xhtml xmlns="http://www.w3.org/1999/xhtml">VAR
+END_VAR
+</xhtml>
+                </InterfaceAsPlainText>
+                <addData />
+              </SetAccessor>
+              <InterfaceAsPlainText>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">{warning 'Agregar implementación de propiedad'}
+PROPERTY Coil : BOOL
+</xhtml>
+              </InterfaceAsPlainText>
+              <addData />
+            </Property>
+          </data>
+          <data name="http://www.3s-software.com/plcopenxml/property" handleUnknown="implementation">
+            <Property name="ScaledAnalog" ObjectId="8d0b6189-b7fa-4f1d-a6a2-351ed9cdcc53">
+              <interface>
+                <returnType>
+                  <INT />
+                </returnType>
+              </interface>
+              <GetAccessor>
+                <interface />
+                <body>
+                  <ST>
+                    <xhtml xmlns="http://www.w3.org/1999/xhtml">ScaledAnalog := _ScaledAnalog;</xhtml>
+                  </ST>
+                </body>
+                <InterfaceAsPlainText>
+                  <xhtml xmlns="http://www.w3.org/1999/xhtml">VAR
+END_VAR
+</xhtml>
+                </InterfaceAsPlainText>
+                <addData />
+              </GetAccessor>
+              <SetAccessor>
+                <interface />
+                <body>
+                  <ST>
+                    <xhtml xmlns="http://www.w3.org/1999/xhtml">_ScaledAnalog := ScaledAnalog;</xhtml>
+                  </ST>
+                </body>
+                <InterfaceAsPlainText>
+                  <xhtml xmlns="http://www.w3.org/1999/xhtml">VAR
+END_VAR
+</xhtml>
+                </InterfaceAsPlainText>
+                <addData />
+              </SetAccessor>
+              <InterfaceAsPlainText>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">{warning 'Agregar implementación de propiedad'}
+PROPERTY ScaledAnalog : INT
+</xhtml>
+              </InterfaceAsPlainText>
+              <addData />
+            </Property>
+          </data>
+          <data name="http://www.3s-software.com/plcopenxml/interfaceasplaintext" handleUnknown="implementation">
+            <InterfaceAsPlainText>
+              <xhtml xmlns="http://www.w3.org/1999/xhtml">FUNCTION_BLOCK FB_VFD IMPLEMENTS I_Analog, I_Run
+VAR_INPUT
+END_VAR
+VAR_OUTPUT
+END_VAR
+VAR
+	_Coil 			: BOOL;
+	_AnalogSignal 	: INT;
+	_ScaledAnalog 	: INT;
+END_VAR
+</xhtml>
+            </InterfaceAsPlainText>
+          </data>
+          <data name="http://www.3s-software.com/plcopenxml/objectid" handleUnknown="discard">
+            <ObjectId>ffc6ba41-6e19-4d67-9484-e64f63cbe576</ObjectId>
+          </data>
+        </addData>
+      </pou>
+    </pous>
+  </types>
+  <instances>
+    <configurations />
+  </instances>
+  <addData>
+    <data name="http://www.3s-software.com/plcopenxml/interface" handleUnknown="implementation">
+      <Interface name="I_Analog" ObjectId="e5efea24-2bcb-4cf4-b329-1255d100a501">
+        <Methods>
+          <Method name="Scale" ObjectId="aad8d38f-fb15-45fb-b2e7-72a4db2df1fc">
+            <interface>
+              <returnType>
+                <BOOL />
+              </returnType>
+            </interface>
+            <InterfaceAsPlainText>
+              <xhtml xmlns="http://www.w3.org/1999/xhtml">METHOD Scale : BOOL
+VAR_INPUT
+END_VAR
+</xhtml>
+            </InterfaceAsPlainText>
+            <addData />
+          </Method>
+        </Methods>
+        <Properties>
+          <Property name="AnalogSignal" ObjectId="c0b94fb5-afa8-4ee2-a0b0-a233a53f3251">
+            <interface>
+              <returnType>
+                <INT />
+              </returnType>
+            </interface>
+            <GetAccessor>
+              <InterfaceAsPlainText>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml" />
+              </InterfaceAsPlainText>
+            </GetAccessor>
+            <SetAccessor>
+              <InterfaceAsPlainText>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml" />
+              </InterfaceAsPlainText>
+            </SetAccessor>
+            <InterfaceAsPlainText>
+              <xhtml xmlns="http://www.w3.org/1999/xhtml">PROPERTY AnalogSignal : INT</xhtml>
+            </InterfaceAsPlainText>
+            <addData />
+          </Property>
+          <Property name="ScaledAnalog" ObjectId="b1d8e986-1d3b-4e52-b121-13b18448f590">
+            <interface>
+              <returnType>
+                <INT />
+              </returnType>
+            </interface>
+            <GetAccessor>
+              <InterfaceAsPlainText>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml" />
+              </InterfaceAsPlainText>
+            </GetAccessor>
+            <SetAccessor>
+              <InterfaceAsPlainText>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml" />
+              </InterfaceAsPlainText>
+            </SetAccessor>
+            <InterfaceAsPlainText>
+              <xhtml xmlns="http://www.w3.org/1999/xhtml">PROPERTY ScaledAnalog : INT</xhtml>
+            </InterfaceAsPlainText>
+            <addData />
+          </Property>
+        </Properties>
+        <InterfaceAsPlainText>
+          <xhtml xmlns="http://www.w3.org/1999/xhtml">INTERFACE I_Analog
+</xhtml>
+        </InterfaceAsPlainText>
+        <addData />
+      </Interface>
+    </data>
+    <data name="http://www.3s-software.com/plcopenxml/interface" handleUnknown="implementation">
+      <Interface name="I_Run" ObjectId="0ad2c49c-b15f-4700-8e6b-5ff1d9c66633">
+        <Methods>
+          <Method name="Start" ObjectId="942cd935-50f4-4ea8-b105-831fc90f8a2a">
+            <interface>
+              <returnType>
+                <BOOL />
+              </returnType>
+            </interface>
+            <InterfaceAsPlainText>
+              <xhtml xmlns="http://www.w3.org/1999/xhtml">METHOD Start : BOOL
+VAR_INPUT
+END_VAR
+</xhtml>
+            </InterfaceAsPlainText>
+            <addData />
+          </Method>
+          <Method name="Stop" ObjectId="db166316-30a8-4656-95db-4f16b8271e8b">
+            <interface>
+              <returnType>
+                <BOOL />
+              </returnType>
+            </interface>
+            <InterfaceAsPlainText>
+              <xhtml xmlns="http://www.w3.org/1999/xhtml">METHOD Stop : BOOL
+VAR_INPUT
+END_VAR
+</xhtml>
+            </InterfaceAsPlainText>
+            <addData />
+          </Method>
+        </Methods>
+        <Properties>
+          <Property name="Coil" ObjectId="afc9c25c-b762-4254-8575-4aae88448b70">
+            <interface>
+              <returnType>
+                <BOOL />
+              </returnType>
+            </interface>
+            <GetAccessor>
+              <InterfaceAsPlainText>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml" />
+              </InterfaceAsPlainText>
+            </GetAccessor>
+            <SetAccessor>
+              <InterfaceAsPlainText>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml" />
+              </InterfaceAsPlainText>
+            </SetAccessor>
+            <InterfaceAsPlainText>
+              <xhtml xmlns="http://www.w3.org/1999/xhtml">PROPERTY Coil : BOOL</xhtml>
+            </InterfaceAsPlainText>
+            <addData />
+          </Property>
+        </Properties>
+        <InterfaceAsPlainText>
+          <xhtml xmlns="http://www.w3.org/1999/xhtml">INTERFACE I_Run
+</xhtml>
+        </InterfaceAsPlainText>
+        <addData />
+      </Interface>
+    </data>
+    <data name="http://www.3s-software.com/plcopenxml/projectstructure" handleUnknown="discard">
+      <ProjectStructure>
+        <Folder Name="15_Interface_vs_Herencia">
+          <Object Name="FB_NivelSensor" ObjectId="0c319140-eb32-41e5-927e-020d0f519e22">
+            <Object Name="AnalogSignal" ObjectId="f6ad1759-5a15-4ad5-a27c-6dceb5f98753" />
+            <Object Name="MaxValue" ObjectId="97bbebf4-703c-4100-8637-83ddace2198a" />
+            <Object Name="Scale" ObjectId="dc2cd368-a319-4da1-8ec9-3648759750a6" />
+            <Object Name="ScaledAnalog" ObjectId="c9d1e697-9b99-4c97-a659-849166b6dc88" />
+          </Object>
+          <Object Name="FB_Pump" ObjectId="8f64b28a-4312-4d8d-8ce7-a7209cc80f47">
+            <Object Name="Scale" ObjectId="0736ad1e-e81b-44cd-91ae-0b85dc33a765" />
+          </Object>
+          <Object Name="I_Analog" ObjectId="e5efea24-2bcb-4cf4-b329-1255d100a501">
+            <Object Name="AnalogSignal" ObjectId="c0b94fb5-afa8-4ee2-a0b0-a233a53f3251" />
+            <Object Name="Scale" ObjectId="aad8d38f-fb15-45fb-b2e7-72a4db2df1fc" />
+            <Object Name="ScaledAnalog" ObjectId="b1d8e986-1d3b-4e52-b121-13b18448f590" />
+          </Object>
+          <Object Name="I_Run" ObjectId="0ad2c49c-b15f-4700-8e6b-5ff1d9c66633">
+            <Object Name="Coil" ObjectId="afc9c25c-b762-4254-8575-4aae88448b70" />
+            <Object Name="Start" ObjectId="942cd935-50f4-4ea8-b105-831fc90f8a2a" />
+            <Object Name="Stop" ObjectId="db166316-30a8-4656-95db-4f16b8271e8b" />
+          </Object>
+          <Object Name="FB_UltraSonicSensor" ObjectId="f192cad1-2b8f-4ad8-a2d2-5b7934e29d7b">
+            <Object Name="Scale" ObjectId="e54689f2-4b3e-41a7-9d98-911851e1da59" />
+          </Object>
+          <Object Name="FB_VFD" ObjectId="ffc6ba41-6e19-4d67-9484-e64f63cbe576">
+            <Object Name="AnalogSignal" ObjectId="31f78fa4-a832-42d2-ac65-0d96b1bba130" />
+            <Object Name="Coil" ObjectId="fa8eb037-d6ab-4377-bff6-cc9476d5c0df" />
+            <Object Name="Scale" ObjectId="01aea459-85a9-43f0-9c77-0790fff93e40" />
+            <Object Name="ScaledAnalog" ObjectId="8d0b6189-b7fa-4f1d-a6a2-351ed9cdcc53" />
+            <Object Name="Start" ObjectId="1a9ecbe1-0f1f-4a9b-b69e-97b9ca9075bb" />
+            <Object Name="Stop" ObjectId="6f0e5fb1-6aa4-45be-ab90-5c7924fdb9e2" />
+          </Object>
+          <Object Name="_15_Interface_vs_Herencia" ObjectId="63dd2bc0-b08a-4e9a-9268-a8cabfb2bcc9" />
+        </Folder>
+      </ProjectStructure>
+    </data>
+  </addData>
+</project>
