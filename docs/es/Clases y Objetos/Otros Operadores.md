@@ -24,7 +24,7 @@
 - 🔗 [__QUERYPOINTER, infosys.beckhoff.com](https://infosys.beckhoff.com/content/1033/tc3_plc_intro/2529181835.html?id=8665610409656000922)
 - 🔗 [__QUERYPOINTER, help.codesys.com](https://help.codesys.com/api-content/2/codesys/3.5.13.0/en/_cds_operator_querypointer/#a8ba732dbe7195dc0a8640e00227cc8-id-5fcc73e6dbe7195dc0a8640e0044a2da)
 ***
- ### <span style="color:grey">__TRY, __CATCH, __FINALLY, __ENDTRY:</span>
+### <span style="color:grey">__TRY, __CATCH, __FINALLY, __ENDTRY:</span>
 
 - 🔗 [ __TRY, __CATCH, __FINALLY, __ENDTRY, help.codesys.com](https://help.codesys.com/api-content/2/codesys/3.5.13.0/en/_cds_operator_try_catch_finally_endtry/#b3e0448e303c0a8640e00979ff0-id-8af3ebb8d17883fcc0a8640e0068e281)
 - 🔗 [ __TRY, __CATCH, __FINALLY, __ENDTRY, infosys.beckhoff.com](https://infosys.beckhoff.com/content/1033/tc3_plc_intro/2529187211.html?id=8164276621849278358)
