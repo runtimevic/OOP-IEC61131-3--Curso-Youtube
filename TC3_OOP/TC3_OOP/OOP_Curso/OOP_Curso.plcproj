@@ -303,28 +303,31 @@
     <Compile Include="16_Interface_vs_Herencia\FB_MyLight.TcPOU">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="16_Interface_vs_Herencia\PLC-Library\Clases\FB_DelayedLight.TcPOU">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="16_Interface_vs_Herencia\PLC-Library\Clases\FB_DimmingLight.TcPOU">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="16_Interface_vs_Herencia\PLC-Library\Clases\FB_Light.TcPOU">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="16_Interface_vs_Herencia\PLC-Library\Clases\FB_RoomController.TcPOU">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="16_Interface_vs_Herencia\PLC-Library\ClassDiagram_4.TcCD">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="16_Interface_vs_Herencia\PLC-Library\FB_DelayedLight.TcPOU">
+    <Compile Include="16_Interface_vs_Herencia\PLC-Library\FB_MyLight.TcPOU">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="16_Interface_vs_Herencia\PLC-Library\FB_DimmingLight.TcPOU">
+    <Compile Include="16_Interface_vs_Herencia\PLC-Library\Interfaces\I_Delayable.TcIO">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="16_Interface_vs_Herencia\PLC-Library\FB_Light.TcPOU">
+    <Compile Include="16_Interface_vs_Herencia\PLC-Library\Interfaces\I_Dimmable.TcIO">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="16_Interface_vs_Herencia\PLC-Library\FB_RoomController.TcPOU">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="16_Interface_vs_Herencia\PLC-Library\I_Delayable.TcIO">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="16_Interface_vs_Herencia\PLC-Library\I_Dimmable.TcIO">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="16_Interface_vs_Herencia\PLC-Library\I_Light.TcIO">
+    <Compile Include="16_Interface_vs_Herencia\PLC-Library\Interfaces\I_Light.TcIO">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="16_Interface_vs_Herencia\Tests\P_DelayedLight_Test_CFC.TcPOU">
@@ -397,6 +400,8 @@
     <Folder Include="14_Interface_Fluida\14_2" />
     <Folder Include="16_Interface_vs_Herencia" />
     <Folder Include="16_Interface_vs_Herencia\PLC-Library" />
+    <Folder Include="16_Interface_vs_Herencia\PLC-Library\Interfaces" />
+    <Folder Include="16_Interface_vs_Herencia\PLC-Library\Clases" />
     <Folder Include="16_Interface_vs_Herencia\Tests" />
     <Folder Include="15_Interface_vs_Herencia" />
     <Folder Include="_MAIN" />

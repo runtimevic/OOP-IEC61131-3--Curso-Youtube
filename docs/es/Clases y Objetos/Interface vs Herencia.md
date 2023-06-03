@@ -29,4 +29,4 @@ Las Interfaces y la Herencia pueden trabajar de la mano, utilizarse a la vez cog
 
 ### <span style="color:grey">Links Videos de Youtube 015 y 016:</span>
 - 🔗 [015 - OOP IEC 61131-3 PLC -- Interface vs Herencia_1](https://youtu.be/etY-NtkZ85w)
-- 🔗 [016 - OOP IEC 61131-3 PLC -- Interface vs Herencia_2]()
+- 🔗 [016 - OOP IEC 61131-3 PLC -- Interface vs Herencia_2](https://youtu.be/gFJN7x_m4to)

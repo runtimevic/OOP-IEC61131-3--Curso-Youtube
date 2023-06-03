@@ -1,0 +1,3236 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<project xmlns="http://www.plcopen.org/xml/tc6_0200">
+  <fileHeader companyName="Beckhoff Automation GmbH" productName="TwinCAT PLC Control" productVersion="3.5.13.21" creationDateTime="2023-06-03T18:35:39.7937632" />
+  <contentHeader name="OOP_Curso" modificationDateTime="2023-06-03T18:35:39.7937632">
+    <coordinateInfo>
+      <fbd>
+        <scaling x="1" y="1" />
+      </fbd>
+      <ld>
+        <scaling x="1" y="1" />
+      </ld>
+      <sfc>
+        <scaling x="1" y="1" />
+      </sfc>
+    </coordinateInfo>
+    <addData>
+      <data name="http://www.3s-software.com/plcopenxml/projectinformation" handleUnknown="implementation">
+        <ProjectInformation />
+      </data>
+    </addData>
+  </contentHeader>
+  <types>
+    <dataTypes />
+    <pous>
+      <pou name="FB_DelayedLight" pouType="functionBlock">
+        <interface>
+          <localVars>
+            <variable name="_tOnDelay">
+              <type>
+                <TIME />
+              </type>
+            </variable>
+            <variable name="_tOffDelay">
+              <type>
+                <TIME />
+              </type>
+            </variable>
+            <variable name="tonOnDelay">
+              <type>
+                <derived name="TON" />
+              </type>
+            </variable>
+            <variable name="tonOffDelay">
+              <type>
+                <derived name="TON" />
+              </type>
+            </variable>
+            <variable name="bStartOnDelay">
+              <type>
+                <BOOL />
+              </type>
+            </variable>
+            <variable name="bStartOffDelay">
+              <type>
+                <BOOL />
+              </type>
+            </variable>
+            <variable name="nStep">
+              <type>
+                <INT />
+              </type>
+            </variable>
+          </localVars>
+          <addData>
+            <data name="http://www.3s-software.com/plcopenxml/pouinheritance" handleUnknown="implementation">
+              <Inheritance>
+                <Extends>FB_Light</Extends>
+                <Implements>I_Delayable</Implements>
+              </Inheritance>
+            </data>
+          </addData>
+        </interface>
+        <body>
+          <ST>
+            <xhtml xmlns="http://www.w3.org/1999/xhtml">rtrigOn(CLK := bOn);
+IF (rtrigOn.Q) THEN
+	M_On();
+END_IF
+
+rtrigOff(CLK := bOff);
+IF (rtrigOff.Q) THEN
+	M_Off();
+END_IF
+
+CASE nStep OF
+	0:
+		IF ((bStartOnDelay AND nStep = 0)) THEN
+			tonOnDelay(IN := FALSE);
+			nStep := 10;
+		END_IF
+		IF ((bStartOffDelay AND nStep = 0)) THEN
+			tonOffDelay(IN := FALSE);
+			nStep := 20;
+		END_IF
+	10:
+		tonOnDelay(IN := TRUE, pt := tOnDelay);
+		IF (tonOnDelay.Q) THEN
+			SUPER^._bControlLevel := TRUE;
+			bStartOnDelay := FALSE;
+			nStep := 0;
+		END_IF
+	20:
+		tonOffDelay(IN := TRUE, pt := tOffDelay);
+		IF (tonOffDelay.Q) THEN
+			SUPER^._bControlLevel := FALSE;
+			bStartOffDelay := FALSE;
+			nStep := 0;
+		END_IF
+END_CASE
+
+bControl := bControlLevel;
+</xhtml>
+          </ST>
+        </body>
+        <addData>
+          <data name="http://www.3s-software.com/plcopenxml/method" handleUnknown="implementation">
+            <Method name="FB_init" ObjectId="80b80148-5b85-46df-9caa-03f8ef3c2470">
+              <interface>
+                <returnType>
+                  <BOOL />
+                </returnType>
+                <inputVars>
+                  <variable name="bInitRetains">
+                    <type>
+                      <BOOL />
+                    </type>
+                    <documentation>
+                      <xhtml xmlns="http://www.w3.org/1999/xhtml"> if TRUE, the retain variables are initialized (warm start / cold start)</xhtml>
+                    </documentation>
+                  </variable>
+                  <variable name="bInCopyCode">
+                    <type>
+                      <BOOL />
+                    </type>
+                    <documentation>
+                      <xhtml xmlns="http://www.w3.org/1999/xhtml"> if TRUE, the instance afterwards gets moved into the copy code (online change)</xhtml>
+                    </documentation>
+                  </variable>
+                </inputVars>
+              </interface>
+              <body>
+                <ST>
+                  <xhtml xmlns="http://www.w3.org/1999/xhtml">_tOnDelay := T#1S;
+_tOffDelay := T#2S;
+</xhtml>
+                </ST>
+              </body>
+              <InterfaceAsPlainText>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">METHOD PUBLIC FB_init : BOOL
+VAR_INPUT
+	bInitRetains : BOOL; // if TRUE, the retain variables are initialized (warm start / cold start)
+	bInCopyCode : BOOL;  // if TRUE, the instance afterwards gets moved into the copy code (online change)
+END_VAR
+</xhtml>
+              </InterfaceAsPlainText>
+              <addData />
+            </Method>
+          </data>
+          <data name="http://www.3s-software.com/plcopenxml/method" handleUnknown="implementation">
+            <Method name="M_Off" ObjectId="e0b32897-5bf5-40bd-b2bb-1301024ef38d">
+              <interface />
+              <body>
+                <ST>
+                  <xhtml xmlns="http://www.w3.org/1999/xhtml">bStartOffDelay := TRUE;</xhtml>
+                </ST>
+              </body>
+              <InterfaceAsPlainText>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">METHOD PUBLIC M_Off
+</xhtml>
+              </InterfaceAsPlainText>
+              <addData />
+            </Method>
+          </data>
+          <data name="http://www.3s-software.com/plcopenxml/method" handleUnknown="implementation">
+            <Method name="M_On" ObjectId="8623f43e-a70b-462c-b9a0-fed444694e99">
+              <interface />
+              <body>
+                <ST>
+                  <xhtml xmlns="http://www.w3.org/1999/xhtml">bStartOnDelay := TRUE;</xhtml>
+                </ST>
+              </body>
+              <InterfaceAsPlainText>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">METHOD PUBLIC M_On
+</xhtml>
+              </InterfaceAsPlainText>
+              <addData />
+            </Method>
+          </data>
+          <data name="http://www.3s-software.com/plcopenxml/property" handleUnknown="implementation">
+            <Property name="tOffDelay" ObjectId="ac8bdadc-60e8-464e-a14c-4673e90c3892">
+              <interface>
+                <returnType>
+                  <TIME />
+                </returnType>
+              </interface>
+              <GetAccessor>
+                <interface />
+                <body>
+                  <ST>
+                    <xhtml xmlns="http://www.w3.org/1999/xhtml">tOffDelay := _tOffDelay;</xhtml>
+                  </ST>
+                </body>
+                <InterfaceAsPlainText>
+                  <xhtml xmlns="http://www.w3.org/1999/xhtml">VAR
+END_VAR
+</xhtml>
+                </InterfaceAsPlainText>
+                <addData />
+              </GetAccessor>
+              <SetAccessor>
+                <interface />
+                <body>
+                  <ST>
+                    <xhtml xmlns="http://www.w3.org/1999/xhtml">_tOffDelay := tOffDelay;</xhtml>
+                  </ST>
+                </body>
+                <InterfaceAsPlainText>
+                  <xhtml xmlns="http://www.w3.org/1999/xhtml">VAR
+END_VAR
+</xhtml>
+                </InterfaceAsPlainText>
+                <addData />
+              </SetAccessor>
+              <InterfaceAsPlainText>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">PROPERTY tOffDelay : TIME
+</xhtml>
+              </InterfaceAsPlainText>
+              <addData />
+            </Property>
+          </data>
+          <data name="http://www.3s-software.com/plcopenxml/property" handleUnknown="implementation">
+            <Property name="tOnDelay" ObjectId="6f7eaee8-1cc3-49d3-8f60-99156c7d43f6">
+              <interface>
+                <returnType>
+                  <TIME />
+                </returnType>
+              </interface>
+              <GetAccessor>
+                <interface />
+                <body>
+                  <ST>
+                    <xhtml xmlns="http://www.w3.org/1999/xhtml">tOnDelay := _tOnDelay;</xhtml>
+                  </ST>
+                </body>
+                <InterfaceAsPlainText>
+                  <xhtml xmlns="http://www.w3.org/1999/xhtml">VAR
+END_VAR
+</xhtml>
+                </InterfaceAsPlainText>
+                <addData />
+              </GetAccessor>
+              <SetAccessor>
+                <interface />
+                <body>
+                  <ST>
+                    <xhtml xmlns="http://www.w3.org/1999/xhtml">_tOnDelay := tOnDelay;</xhtml>
+                  </ST>
+                </body>
+                <InterfaceAsPlainText>
+                  <xhtml xmlns="http://www.w3.org/1999/xhtml">VAR
+END_VAR
+</xhtml>
+                </InterfaceAsPlainText>
+                <addData />
+              </SetAccessor>
+              <InterfaceAsPlainText>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">PROPERTY tOnDelay : TIME
+</xhtml>
+              </InterfaceAsPlainText>
+              <addData />
+            </Property>
+          </data>
+          <data name="http://www.3s-software.com/plcopenxml/interfaceasplaintext" handleUnknown="implementation">
+            <InterfaceAsPlainText>
+              <xhtml xmlns="http://www.w3.org/1999/xhtml">FUNCTION_BLOCK PUBLIC FB_DelayedLight EXTENDS FB_Light IMPLEMENTS I_Delayable
+VAR_INPUT
+END_VAR
+VAR_OUTPUT
+END_VAR
+VAR
+	_tOnDelay			:	TIME;
+	_tOffDelay			:	TIME;
+	tonOnDelay			:	TON;
+	tonOffDelay			:	TON;
+	bStartOnDelay		:	BOOL;
+	bStartOffDelay		:	BOOL;
+	nStep				:	INT;
+END_VAR
+</xhtml>
+            </InterfaceAsPlainText>
+          </data>
+          <data name="http://www.3s-software.com/plcopenxml/objectid" handleUnknown="discard">
+            <ObjectId>b9811f47-d520-4c1c-b4ba-1653b30fe046</ObjectId>
+          </data>
+        </addData>
+      </pou>
+      <pou name="FB_DimmingLight" pouType="functionBlock">
+        <interface>
+          <inputVars>
+            <variable name="bRecallMinLevel">
+              <type>
+                <BOOL />
+              </type>
+            </variable>
+            <variable name="bSetControlLevel">
+              <type>
+                <BOOL />
+              </type>
+            </variable>
+            <variable name="nSetControlLevel">
+              <type>
+                <BYTE />
+              </type>
+            </variable>
+          </inputVars>
+          <outputVars>
+            <variable name="nControl">
+              <type>
+                <BYTE />
+              </type>
+            </variable>
+          </outputVars>
+          <localVars>
+            <variable name="rtrigRecallMinLevel">
+              <type>
+                <derived name="R_TRIG" />
+              </type>
+            </variable>
+            <variable name="rtrigSetControlLevel">
+              <type>
+                <derived name="R_TRIG" />
+              </type>
+            </variable>
+            <variable name="_nControlLevel">
+              <type>
+                <BYTE />
+              </type>
+            </variable>
+            <variable name="_nMinLevel">
+              <type>
+                <BYTE />
+              </type>
+            </variable>
+            <variable name="_nMaxLevel">
+              <type>
+                <BYTE />
+              </type>
+            </variable>
+          </localVars>
+          <addData>
+            <data name="http://www.3s-software.com/plcopenxml/pouinheritance" handleUnknown="implementation">
+              <Inheritance>
+                <Extends>FB_Light</Extends>
+                <Implements>I_Dimmable</Implements>
+              </Inheritance>
+            </data>
+          </addData>
+        </interface>
+        <body>
+          <ST>
+            <xhtml xmlns="http://www.w3.org/1999/xhtml">rtrigOn(CLK := bOn);
+IF (rtrigOn.Q) THEN
+	M_On();
+END_IF
+
+rtrigOff(CLK := bOff);
+IF (rtrigOff.Q) THEN
+	M_Off();
+END_IF
+
+rtrigRecallMinLevel(CLK := bRecallMinLevel);
+IF (rtrigRecallMinLevel.Q) THEN
+	M_RecallMinLevel();
+END_IF
+
+rtrigSetControlLevel(CLK := bSetControlLevel);
+IF (rtrigSetControlLevel.Q) THEN
+	M_SetControlLevel(nSetControlLevel);
+END_IF
+
+bControl := bControlLevel;
+nControl := nControlLevel;
+
+</xhtml>
+          </ST>
+        </body>
+        <addData>
+          <data name="http://www.3s-software.com/plcopenxml/method" handleUnknown="implementation">
+            <Method name="FB_init" ObjectId="6fff9f98-763b-4dab-851c-ffde17835f91">
+              <interface>
+                <returnType>
+                  <BOOL />
+                </returnType>
+                <inputVars>
+                  <variable name="bInitRetains">
+                    <type>
+                      <BOOL />
+                    </type>
+                    <documentation>
+                      <xhtml xmlns="http://www.w3.org/1999/xhtml"> bei TRUE werden die Retain-Variablen initialisiert (Warmstart / Kaltstart)</xhtml>
+                    </documentation>
+                  </variable>
+                  <variable name="bInCopyCode">
+                    <type>
+                      <BOOL />
+                    </type>
+                    <documentation>
+                      <xhtml xmlns="http://www.w3.org/1999/xhtml"> bei TRUE wird die Instanz anschließend in den Copy-Code kopiert (Online Change)</xhtml>
+                    </documentation>
+                  </variable>
+                </inputVars>
+              </interface>
+              <body>
+                <ST>
+                  <xhtml xmlns="http://www.w3.org/1999/xhtml">_nMinLevel := 10;
+_nMaxLevel := 100;
+</xhtml>
+                </ST>
+              </body>
+              <InterfaceAsPlainText>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">METHOD PUBLIC FB_init : BOOL
+VAR_INPUT
+	bInitRetains : BOOL; // bei TRUE werden die Retain-Variablen initialisiert (Warmstart / Kaltstart)
+	bInCopyCode : BOOL;  // bei TRUE wird die Instanz anschließend in den Copy-Code kopiert (Online Change)
+END_VAR
+</xhtml>
+              </InterfaceAsPlainText>
+              <addData />
+            </Method>
+          </data>
+          <data name="http://www.3s-software.com/plcopenxml/method" handleUnknown="implementation">
+            <Method name="M_Off" ObjectId="98ed7e3c-c38e-4acd-9292-6a681780cf2c">
+              <interface />
+              <body>
+                <ST>
+                  <xhtml xmlns="http://www.w3.org/1999/xhtml">_bControlLevel := FALSE;
+_nControlLevel := 0;</xhtml>
+                </ST>
+              </body>
+              <InterfaceAsPlainText>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">METHOD PUBLIC M_Off
+</xhtml>
+              </InterfaceAsPlainText>
+              <addData />
+            </Method>
+          </data>
+          <data name="http://www.3s-software.com/plcopenxml/method" handleUnknown="implementation">
+            <Method name="M_On" ObjectId="01e14d7e-f4aa-464d-bede-b40eaf75570b">
+              <interface />
+              <body>
+                <ST>
+                  <xhtml xmlns="http://www.w3.org/1999/xhtml">_bControlLevel := TRUE;
+_nControlLevel := _nMaxLevel;</xhtml>
+                </ST>
+              </body>
+              <InterfaceAsPlainText>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">METHOD PUBLIC M_On
+</xhtml>
+              </InterfaceAsPlainText>
+              <addData />
+            </Method>
+          </data>
+          <data name="http://www.3s-software.com/plcopenxml/method" handleUnknown="implementation">
+            <Method name="M_RecallMinLevel" ObjectId="decb0434-7eba-4297-945b-fbcd54b7ca8a">
+              <interface />
+              <body>
+                <ST>
+                  <xhtml xmlns="http://www.w3.org/1999/xhtml">_bControlLevel := TRUE;
+_nControlLevel := _nMinLevel;</xhtml>
+                </ST>
+              </body>
+              <InterfaceAsPlainText>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">METHOD PUBLIC M_RecallMinLevel
+</xhtml>
+              </InterfaceAsPlainText>
+              <addData />
+            </Method>
+          </data>
+          <data name="http://www.3s-software.com/plcopenxml/method" handleUnknown="implementation">
+            <Method name="M_SetControlLevel" ObjectId="f9e80115-bd7a-4c33-afa5-10632bab5689">
+              <interface>
+                <inputVars>
+                  <variable name="nControlLevel">
+                    <type>
+                      <BYTE />
+                    </type>
+                  </variable>
+                </inputVars>
+              </interface>
+              <body>
+                <ST>
+                  <xhtml xmlns="http://www.w3.org/1999/xhtml">IF (nControlLevel = 0) THEN
+	THIS^.M_Off();
+ELSIF ((nControlLevel &gt; 0) AND (nControlLevel &lt;= _nMinLevel)) THEN
+	_bControlLevel := TRUE;
+	_nControlLevel := _nMinLevel;	
+ELSIF ((nControlLevel &gt; _nMinLevel) AND (nControlLevel &lt;= _nMaxLevel)) THEN
+	_bControlLevel := TRUE;
+	_nControlLevel := nControlLevel;	
+ELSE
+	_bControlLevel := TRUE;
+	_nControlLevel := _nMaxLevel;	
+END_IF
+</xhtml>
+                </ST>
+              </body>
+              <InterfaceAsPlainText>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">METHOD PUBLIC M_SetControlLevel
+VAR_INPUT
+	nControlLevel	: BYTE;
+END_VAR
+</xhtml>
+              </InterfaceAsPlainText>
+              <addData />
+            </Method>
+          </data>
+          <data name="http://www.3s-software.com/plcopenxml/property" handleUnknown="implementation">
+            <Property name="nControlLevel" ObjectId="f99dd978-4356-4da9-b103-7be88e005014">
+              <interface>
+                <returnType>
+                  <BYTE />
+                </returnType>
+              </interface>
+              <GetAccessor>
+                <interface />
+                <body>
+                  <ST>
+                    <xhtml xmlns="http://www.w3.org/1999/xhtml">nControlLevel := _nControlLevel;</xhtml>
+                  </ST>
+                </body>
+                <InterfaceAsPlainText>
+                  <xhtml xmlns="http://www.w3.org/1999/xhtml">VAR
+END_VAR
+</xhtml>
+                </InterfaceAsPlainText>
+                <addData />
+              </GetAccessor>
+              <SetAccessor>
+                <interface />
+                <body>
+                  <ST>
+                    <xhtml xmlns="http://www.w3.org/1999/xhtml" />
+                  </ST>
+                </body>
+                <InterfaceAsPlainText>
+                  <xhtml xmlns="http://www.w3.org/1999/xhtml">VAR
+END_VAR
+</xhtml>
+                </InterfaceAsPlainText>
+                <addData />
+              </SetAccessor>
+              <InterfaceAsPlainText>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">PROPERTY nControlLevel : BYTE
+</xhtml>
+              </InterfaceAsPlainText>
+              <addData />
+            </Property>
+          </data>
+          <data name="http://www.3s-software.com/plcopenxml/property" handleUnknown="implementation">
+            <Property name="nMaxLevel" ObjectId="3ca97db3-ea5f-4f61-9ad7-8de6d43dc13d">
+              <interface>
+                <returnType>
+                  <BYTE />
+                </returnType>
+              </interface>
+              <GetAccessor>
+                <interface />
+                <body>
+                  <ST>
+                    <xhtml xmlns="http://www.w3.org/1999/xhtml">nMaxLevel := _nMaxLevel;</xhtml>
+                  </ST>
+                </body>
+                <InterfaceAsPlainText>
+                  <xhtml xmlns="http://www.w3.org/1999/xhtml">VAR
+END_VAR
+</xhtml>
+                </InterfaceAsPlainText>
+                <addData />
+              </GetAccessor>
+              <SetAccessor>
+                <interface />
+                <body>
+                  <ST>
+                    <xhtml xmlns="http://www.w3.org/1999/xhtml">_nMaxLevel := nMaxLevel;</xhtml>
+                  </ST>
+                </body>
+                <InterfaceAsPlainText>
+                  <xhtml xmlns="http://www.w3.org/1999/xhtml">VAR
+END_VAR
+</xhtml>
+                </InterfaceAsPlainText>
+                <addData />
+              </SetAccessor>
+              <InterfaceAsPlainText>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">PROPERTY nMaxLevel : BYTE
+</xhtml>
+              </InterfaceAsPlainText>
+              <addData />
+            </Property>
+          </data>
+          <data name="http://www.3s-software.com/plcopenxml/property" handleUnknown="implementation">
+            <Property name="nMinLevel" ObjectId="8f16db86-10f5-4940-90e8-e51b23fcd72f">
+              <interface>
+                <returnType>
+                  <BYTE />
+                </returnType>
+              </interface>
+              <GetAccessor>
+                <interface />
+                <body>
+                  <ST>
+                    <xhtml xmlns="http://www.w3.org/1999/xhtml">nMinLevel := _nMinLevel;</xhtml>
+                  </ST>
+                </body>
+                <InterfaceAsPlainText>
+                  <xhtml xmlns="http://www.w3.org/1999/xhtml">VAR
+END_VAR
+</xhtml>
+                </InterfaceAsPlainText>
+                <addData />
+              </GetAccessor>
+              <SetAccessor>
+                <interface />
+                <body>
+                  <ST>
+                    <xhtml xmlns="http://www.w3.org/1999/xhtml">_nMinLevel := nMinLevel;</xhtml>
+                  </ST>
+                </body>
+                <InterfaceAsPlainText>
+                  <xhtml xmlns="http://www.w3.org/1999/xhtml">VAR
+END_VAR
+</xhtml>
+                </InterfaceAsPlainText>
+                <addData />
+              </SetAccessor>
+              <InterfaceAsPlainText>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">PROPERTY nMinLevel : BYTE
+</xhtml>
+              </InterfaceAsPlainText>
+              <addData />
+            </Property>
+          </data>
+          <data name="http://www.3s-software.com/plcopenxml/interfaceasplaintext" handleUnknown="implementation">
+            <InterfaceAsPlainText>
+              <xhtml xmlns="http://www.w3.org/1999/xhtml">FUNCTION_BLOCK PUBLIC FB_DimmingLight EXTENDS FB_Light IMPLEMENTS I_Dimmable
+VAR_INPUT
+	bRecallMinLevel			:	BOOL;
+	bSetControlLevel		:	BOOL;
+	nSetControlLevel		:	BYTE;
+END_VAR
+VAR_OUTPUT
+	nControl				:	BYTE;
+END_VAR
+VAR
+	rtrigRecallMinLevel		:	R_TRIG;
+	rtrigSetControlLevel	:	R_TRIG;
+	_nControlLevel			:	BYTE;
+	_nMinLevel				:	BYTE;
+	_nMaxLevel				:	BYTE;
+END_VAR
+</xhtml>
+            </InterfaceAsPlainText>
+          </data>
+          <data name="http://www.3s-software.com/plcopenxml/objectid" handleUnknown="discard">
+            <ObjectId>1826553c-b915-4833-a4c3-433f365bae95</ObjectId>
+          </data>
+        </addData>
+      </pou>
+      <pou name="FB_Light" pouType="functionBlock">
+        <interface>
+          <inputVars>
+            <variable name="bOn">
+              <type>
+                <BOOL />
+              </type>
+            </variable>
+            <variable name="bOff">
+              <type>
+                <BOOL />
+              </type>
+            </variable>
+          </inputVars>
+          <outputVars>
+            <variable name="bControl">
+              <type>
+                <BOOL />
+              </type>
+            </variable>
+          </outputVars>
+          <localVars>
+            <variable name="rtrigOn">
+              <type>
+                <derived name="R_TRIG" />
+              </type>
+            </variable>
+            <variable name="rtrigOff">
+              <type>
+                <derived name="R_TRIG" />
+              </type>
+            </variable>
+            <variable name="_bControlLevel">
+              <type>
+                <BOOL />
+              </type>
+            </variable>
+          </localVars>
+          <addData>
+            <data name="http://www.3s-software.com/plcopenxml/pouinheritance" handleUnknown="implementation">
+              <Inheritance>
+                <Implements>I_Light</Implements>
+              </Inheritance>
+            </data>
+          </addData>
+        </interface>
+        <body>
+          <ST>
+            <xhtml xmlns="http://www.w3.org/1999/xhtml">rtrigOn(CLK := bOn);
+IF (rtrigOn.Q) THEN
+	M_On();
+END_IF
+
+rtrigOff(CLK := bOff);
+IF (rtrigOff.Q) THEN
+	M_Off();
+END_IF
+
+bControl := bControlLevel;
+</xhtml>
+          </ST>
+        </body>
+        <addData>
+          <data name="http://www.3s-software.com/plcopenxml/method" handleUnknown="implementation">
+            <Method name="M_Off" ObjectId="cd28f873-04eb-42ed-b680-18b8c9700ed2">
+              <interface />
+              <body>
+                <ST>
+                  <xhtml xmlns="http://www.w3.org/1999/xhtml">_bControlLevel := FALSE;</xhtml>
+                </ST>
+              </body>
+              <InterfaceAsPlainText>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">METHOD PUBLIC M_Off
+</xhtml>
+              </InterfaceAsPlainText>
+              <addData />
+            </Method>
+          </data>
+          <data name="http://www.3s-software.com/plcopenxml/method" handleUnknown="implementation">
+            <Method name="M_On" ObjectId="0b05d84c-3c99-44b7-a9f9-a9a6e37e56c6">
+              <interface />
+              <body>
+                <ST>
+                  <xhtml xmlns="http://www.w3.org/1999/xhtml">_bControlLevel := TRUE;</xhtml>
+                </ST>
+              </body>
+              <InterfaceAsPlainText>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">METHOD PUBLIC M_On
+</xhtml>
+              </InterfaceAsPlainText>
+              <addData />
+            </Method>
+          </data>
+          <data name="http://www.3s-software.com/plcopenxml/property" handleUnknown="implementation">
+            <Property name="bControlLevel" ObjectId="8f0a6793-97a1-42fb-89c5-c7cbe36a5815">
+              <interface>
+                <returnType>
+                  <BOOL />
+                </returnType>
+              </interface>
+              <GetAccessor>
+                <interface />
+                <body>
+                  <ST>
+                    <xhtml xmlns="http://www.w3.org/1999/xhtml">bControlLevel := _bControlLevel;</xhtml>
+                  </ST>
+                </body>
+                <InterfaceAsPlainText>
+                  <xhtml xmlns="http://www.w3.org/1999/xhtml">VAR
+END_VAR
+</xhtml>
+                </InterfaceAsPlainText>
+                <addData />
+              </GetAccessor>
+              <SetAccessor>
+                <interface />
+                <body>
+                  <ST>
+                    <xhtml xmlns="http://www.w3.org/1999/xhtml" />
+                  </ST>
+                </body>
+                <InterfaceAsPlainText>
+                  <xhtml xmlns="http://www.w3.org/1999/xhtml">VAR
+END_VAR
+</xhtml>
+                </InterfaceAsPlainText>
+                <addData />
+              </SetAccessor>
+              <InterfaceAsPlainText>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">PROPERTY bControlLevel : BOOL
+</xhtml>
+              </InterfaceAsPlainText>
+              <addData />
+            </Property>
+          </data>
+          <data name="http://www.3s-software.com/plcopenxml/interfaceasplaintext" handleUnknown="implementation">
+            <InterfaceAsPlainText>
+              <xhtml xmlns="http://www.w3.org/1999/xhtml">FUNCTION_BLOCK PUBLIC FB_Light IMPLEMENTS I_Light
+VAR_INPUT
+	bOn					:	BOOL;
+	bOff				:	BOOL;
+END_VAR
+VAR_OUTPUT
+	bControl			:	BOOL;
+END_VAR
+VAR
+	rtrigOn				:	R_TRIG;
+	rtrigOff			:	R_TRIG;
+	_bControlLevel		:	BOOL;
+END_VAR
+</xhtml>
+            </InterfaceAsPlainText>
+          </data>
+          <data name="http://www.3s-software.com/plcopenxml/objectid" handleUnknown="discard">
+            <ObjectId>ac651da5-5748-4f92-a579-c38eff465f2e</ObjectId>
+          </data>
+        </addData>
+      </pou>
+      <pou name="FB_RoomController" pouType="functionBlock">
+        <interface>
+          <inputVars>
+            <variable name="bAllOn">
+              <type>
+                <BOOL />
+              </type>
+            </variable>
+            <variable name="bAllOff">
+              <type>
+                <BOOL />
+              </type>
+            </variable>
+            <variable name="bAllCallMinLevel">
+              <type>
+                <BOOL />
+              </type>
+            </variable>
+            <variable name="refLight01">
+              <type>
+                <derived name="REFERENCE TO FB_Light" />
+              </type>
+            </variable>
+            <variable name="refLight02">
+              <type>
+                <derived name="REFERENCE TO FB_Light" />
+              </type>
+            </variable>
+            <variable name="refLight03">
+              <type>
+                <derived name="REFERENCE TO FB_Light" />
+              </type>
+            </variable>
+          </inputVars>
+          <outputVars>
+            <variable name="aControlLevel">
+              <type>
+                <array>
+                  <dimension lower="1" upper="3" />
+                  <baseType>
+                    <BOOL />
+                  </baseType>
+                </array>
+              </type>
+            </variable>
+            <variable name="aDimmLevel">
+              <type>
+                <array>
+                  <dimension lower="1" upper="3" />
+                  <baseType>
+                    <BYTE />
+                  </baseType>
+                </array>
+              </type>
+            </variable>
+          </outputVars>
+          <localVars>
+            <variable name="aILight">
+              <type>
+                <array>
+                  <dimension lower="1" upper="3" />
+                  <baseType>
+                    <derived name="I_Light" />
+                  </baseType>
+                </array>
+              </type>
+            </variable>
+            <variable name="aIDimmableLights">
+              <type>
+                <array>
+                  <dimension lower="1" upper="3" />
+                  <baseType>
+                    <derived name="I_Dimmable" />
+                  </baseType>
+                </array>
+              </type>
+            </variable>
+            <variable name="rtrigAllOn">
+              <type>
+                <derived name="R_TRIG" />
+              </type>
+            </variable>
+            <variable name="rtrigAllOff">
+              <type>
+                <derived name="R_TRIG" />
+              </type>
+            </variable>
+            <variable name="rtrigAllCallMinLevel">
+              <type>
+                <derived name="R_TRIG" />
+              </type>
+            </variable>
+          </localVars>
+        </interface>
+        <actions>
+          <action name="AllCallMinLevel">
+            <body>
+              <ST>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">IF (__ISVALIDREF(refLight01)) THEN
+	aILight[1] := refLight01;
+	IF (__QUERYINTERFACE(aILight[1], aIDimmableLights[1])) THEN
+		aIDimmableLights[1].M_RecallMinLevel();
+	END_IF
+END_IF
+
+IF (__ISVALIDREF(refLight02)) THEN
+	aILight[2] := refLight02;
+	IF (__QUERYINTERFACE(aILight[2], aIDimmableLights[2])) THEN
+		aIDimmableLights[2].M_RecallMinLevel();
+	END_IF
+END_IF
+
+IF (__ISVALIDREF(refLight03)) THEN
+	aILight[3] := refLight03;
+	IF (__QUERYINTERFACE(aILight[3], aIDimmableLights[3])) THEN
+		aIDimmableLights[3].M_RecallMinLevel();
+	END_IF
+END_IF</xhtml>
+              </ST>
+            </body>
+            <addData>
+              <data name="http://www.3s-software.com/plcopenxml/objectid" handleUnknown="discard">
+                <ObjectId>eedd4bb3-df7f-453f-aa98-49a21ff69834</ObjectId>
+              </data>
+            </addData>
+          </action>
+          <action name="AllOff">
+            <body>
+              <ST>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">IF (__ISVALIDREF(refLight01)) THEN
+	refLight01.M_Off();
+END_IF
+IF (__ISVALIDREF(refLight02)) THEN
+	refLight02.M_Off();
+END_IF
+IF (__ISVALIDREF(refLight03)) THEN
+	refLight03.M_Off();
+END_IF</xhtml>
+              </ST>
+            </body>
+            <addData>
+              <data name="http://www.3s-software.com/plcopenxml/objectid" handleUnknown="discard">
+                <ObjectId>0bc130ba-4953-42b5-bf57-41bf935f62bd</ObjectId>
+              </data>
+            </addData>
+          </action>
+          <action name="AllOn">
+            <body>
+              <ST>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">IF (__ISVALIDREF(refLight01)) THEN
+	refLight01.M_On();
+END_IF
+IF (__ISVALIDREF(refLight02)) THEN
+	refLight02.M_On();
+END_IF
+IF (__ISVALIDREF(refLight03)) THEN
+	refLight03.M_On();
+END_IF</xhtml>
+              </ST>
+            </body>
+            <addData>
+              <data name="http://www.3s-software.com/plcopenxml/objectid" handleUnknown="discard">
+                <ObjectId>dfc7d4b2-0099-4f6c-a295-88426977e37d</ObjectId>
+              </data>
+            </addData>
+          </action>
+          <action name="Invoke">
+            <body>
+              <ST>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">IF (__ISVALIDREF(refLight01)) THEN
+	refLight01();
+	aControlLevel[1] := refLight01.bControlLevel;	
+	aILight[1] := refLight01;
+	IF (__QUERYINTERFACE(aILight[1], aIDimmableLights[1])) THEN
+		aDimmLevel[1] := aIDimmableLights[1].nControlLevel;
+	END_IF
+END_IF
+IF (__ISVALIDREF(refLight02)) THEN
+	refLight02();
+	aControlLevel[2] := refLight02.bControlLevel;
+	aILight[2] := refLight02;
+	IF (__QUERYINTERFACE(aILight[2], aIDimmableLights[2])) THEN
+		aDimmLevel[2] := aIDimmableLights[2].nControlLevel;
+	END_IF
+END_IF
+IF (__ISVALIDREF(refLight03)) THEN
+	refLight03();
+	aControlLevel[3] := refLight03.bControlLevel;
+	aILight[3] := refLight03;
+	IF (__QUERYINTERFACE(aILight[3], aIDimmableLights[3])) THEN
+		aDimmLevel[3] := aIDimmableLights[3].nControlLevel;
+	END_IF
+END_IF
+</xhtml>
+              </ST>
+            </body>
+            <addData>
+              <data name="http://www.3s-software.com/plcopenxml/objectid" handleUnknown="discard">
+                <ObjectId>5a47645d-1d72-4853-8093-17343d748e59</ObjectId>
+              </data>
+            </addData>
+          </action>
+        </actions>
+        <body>
+          <ST>
+            <xhtml xmlns="http://www.w3.org/1999/xhtml">rtrigAllOn(CLK := bAllOn);
+IF (rtrigAllOn.Q) THEN
+	AllOn();
+END_IF
+
+rtrigAllOff(CLK := bAllOff);
+IF (rtrigAllOff.Q) THEN
+	AllOff();
+END_IF
+
+rtrigAllCallMinLevel(CLK := bAllCallMinLevel);
+IF (rtrigAllCallMinLevel.Q) THEN
+	AllCallMinLevel();
+END_IF
+
+Invoke();
+</xhtml>
+          </ST>
+        </body>
+        <addData>
+          <data name="http://www.3s-software.com/plcopenxml/interfaceasplaintext" handleUnknown="implementation">
+            <InterfaceAsPlainText>
+              <xhtml xmlns="http://www.w3.org/1999/xhtml">FUNCTION_BLOCK PUBLIC FB_RoomController
+VAR_INPUT
+	bAllOn					:	BOOL;
+	bAllOff					:	BOOL;
+	bAllCallMinLevel		:	BOOL;
+	refLight01				:	REFERENCE TO FB_Light;
+	refLight02				:	REFERENCE TO FB_Light;
+	refLight03				:	REFERENCE TO FB_Light;
+END_VAR
+VAR_OUTPUT
+	aControlLevel			:	ARRAY [1..3] OF BOOL;
+	aDimmLevel				:	ARRAY [1..3] OF BYTE;
+END_VAR
+VAR
+	aILight					:	ARRAY [1..3] OF I_Light;
+	aIDimmableLights		:	ARRAY [1..3] OF I_Dimmable;
+	rtrigAllOn				:	R_TRIG;
+	rtrigAllOff				:	R_TRIG;
+	rtrigAllCallMinLevel	:	R_TRIG;
+END_VAR
+</xhtml>
+            </InterfaceAsPlainText>
+          </data>
+          <data name="http://www.3s-software.com/plcopenxml/objectid" handleUnknown="discard">
+            <ObjectId>2a1caed4-34c2-498a-8559-6cd323df6366</ObjectId>
+          </data>
+        </addData>
+      </pou>
+      <pou name="FB_MyLight" pouType="functionBlock">
+        <interface>
+          <inputVars>
+            <variable name="bRecallMinLevel">
+              <type>
+                <BOOL />
+              </type>
+            </variable>
+            <variable name="bSetControlLevel">
+              <type>
+                <BOOL />
+              </type>
+            </variable>
+            <variable name="nSetControlLevel">
+              <type>
+                <BYTE />
+              </type>
+            </variable>
+          </inputVars>
+          <outputVars>
+            <variable name="nControl">
+              <type>
+                <BYTE />
+              </type>
+            </variable>
+          </outputVars>
+          <localVars>
+            <variable name="rtrigRecallMinLevel">
+              <type>
+                <derived name="R_TRIG" />
+              </type>
+            </variable>
+            <variable name="rtrigSetControlLevel">
+              <type>
+                <derived name="R_TRIG" />
+              </type>
+            </variable>
+            <variable name="fbDimmingLight">
+              <type>
+                <derived name="FB_DimmingLight" />
+              </type>
+            </variable>
+            <variable name="fbDelayedLight">
+              <type>
+                <derived name="FB_DelayedLight" />
+              </type>
+            </variable>
+            <variable name="_nControlLevel">
+              <type>
+                <BYTE />
+              </type>
+            </variable>
+          </localVars>
+          <addData>
+            <data name="http://www.3s-software.com/plcopenxml/pouinheritance" handleUnknown="implementation">
+              <Inheritance>
+                <Extends>FB_Light</Extends>
+                <Implements>I_Delayable</Implements>
+                <Implements>I_Dimmable</Implements>
+              </Inheritance>
+            </data>
+          </addData>
+        </interface>
+        <body>
+          <ST>
+            <xhtml xmlns="http://www.w3.org/1999/xhtml">rtrigOn(CLK := bOn);
+IF (rtrigOn.Q) THEN
+	M_On();
+END_IF
+
+rtrigOff(CLK := bOff);
+IF (rtrigOff.Q) THEN
+	M_Off();
+END_IF
+
+rtrigRecallMinLevel(CLK := bRecallMinLevel);
+IF (rtrigRecallMinLevel.Q) THEN
+	M_RecallMinLevel();
+END_IF
+
+rtrigSetControlLevel(CLK := bSetControlLevel);
+IF (rtrigSetControlLevel.Q) THEN
+	M_SetControlLevel(nSetControlLevel);
+END_IF
+
+fbDimmingLight();
+fbDelayedLight();
+_bControlLevel := fbDelayedLight.bControlLevel;
+IF (_bControlLevel) THEN
+	_nControlLevel := fbDimmingLight.nControlLevel;
+ELSE
+	_nControlLevel := 0;		
+END_IF
+
+bControl := bControlLevel;
+nControl := nControlLevel;
+
+</xhtml>
+          </ST>
+        </body>
+        <addData>
+          <data name="http://www.3s-software.com/plcopenxml/method" handleUnknown="implementation">
+            <Method name="M_Off" ObjectId="5b1ce345-de44-4d0b-88e0-a14878d08de9">
+              <interface />
+              <body>
+                <ST>
+                  <xhtml xmlns="http://www.w3.org/1999/xhtml">fbDimmingLight.M_Off();
+fbDelayedLight.M_Off();
+</xhtml>
+                </ST>
+              </body>
+              <InterfaceAsPlainText>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">METHOD M_Off
+</xhtml>
+              </InterfaceAsPlainText>
+              <addData />
+            </Method>
+          </data>
+          <data name="http://www.3s-software.com/plcopenxml/method" handleUnknown="implementation">
+            <Method name="M_On" ObjectId="56d8e560-4532-4c94-a8c5-df0ead0f6f60">
+              <interface />
+              <body>
+                <ST>
+                  <xhtml xmlns="http://www.w3.org/1999/xhtml">fbDimmingLight.M_On();
+fbDelayedLight.M_On();
+</xhtml>
+                </ST>
+              </body>
+              <InterfaceAsPlainText>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">METHOD M_On
+</xhtml>
+              </InterfaceAsPlainText>
+              <addData />
+            </Method>
+          </data>
+          <data name="http://www.3s-software.com/plcopenxml/method" handleUnknown="implementation">
+            <Method name="M_RecallMinLevel" ObjectId="c19e5441-c893-4081-b829-c1d6d21901f0">
+              <interface />
+              <body>
+                <ST>
+                  <xhtml xmlns="http://www.w3.org/1999/xhtml">fbDimmingLight.M_RecallMinLevel();
+fbDelayedLight.M_On();
+</xhtml>
+                </ST>
+              </body>
+              <InterfaceAsPlainText>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">METHOD M_RecallMinLevel
+</xhtml>
+              </InterfaceAsPlainText>
+              <addData />
+            </Method>
+          </data>
+          <data name="http://www.3s-software.com/plcopenxml/method" handleUnknown="implementation">
+            <Method name="M_SetControlLevel" ObjectId="60fb3e80-764a-428f-8949-1ee43d06f7c5">
+              <interface>
+                <inputVars>
+                  <variable name="nControlLevel">
+                    <type>
+                      <BYTE />
+                    </type>
+                  </variable>
+                </inputVars>
+              </interface>
+              <body>
+                <ST>
+                  <xhtml xmlns="http://www.w3.org/1999/xhtml">fbDimmingLight.M_SetControlLevel(nControlLevel);
+IF (nControlLevel = 0) THEN
+	fbDelayedLight.M_Off();
+ELSE
+	fbDelayedLight.M_On();
+END_IF
+</xhtml>
+                </ST>
+              </body>
+              <InterfaceAsPlainText>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">METHOD M_SetControlLevel
+VAR_INPUT
+	nControlLevel: BYTE;
+END_VAR
+</xhtml>
+              </InterfaceAsPlainText>
+              <addData />
+            </Method>
+          </data>
+          <data name="http://www.3s-software.com/plcopenxml/property" handleUnknown="implementation">
+            <Property name="bControlLevel" ObjectId="96b0b6df-8322-4e4f-99c0-457b4109f5e8">
+              <interface>
+                <returnType>
+                  <BOOL />
+                </returnType>
+              </interface>
+              <GetAccessor>
+                <interface />
+                <body>
+                  <ST>
+                    <xhtml xmlns="http://www.w3.org/1999/xhtml">bControlLevel := _bControlLevel;</xhtml>
+                  </ST>
+                </body>
+                <InterfaceAsPlainText>
+                  <xhtml xmlns="http://www.w3.org/1999/xhtml" />
+                </InterfaceAsPlainText>
+                <addData />
+              </GetAccessor>
+              <SetAccessor>
+                <interface />
+                <body>
+                  <ST>
+                    <xhtml xmlns="http://www.w3.org/1999/xhtml" />
+                  </ST>
+                </body>
+                <InterfaceAsPlainText>
+                  <xhtml xmlns="http://www.w3.org/1999/xhtml" />
+                </InterfaceAsPlainText>
+                <addData />
+              </SetAccessor>
+              <InterfaceAsPlainText>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">PROPERTY bControlLevel : BOOL
+</xhtml>
+              </InterfaceAsPlainText>
+              <addData />
+            </Property>
+          </data>
+          <data name="http://www.3s-software.com/plcopenxml/property" handleUnknown="implementation">
+            <Property name="nControlLevel" ObjectId="066af10b-68de-4416-9be1-755d522e7223">
+              <interface>
+                <returnType>
+                  <BYTE />
+                </returnType>
+              </interface>
+              <GetAccessor>
+                <interface />
+                <body>
+                  <ST>
+                    <xhtml xmlns="http://www.w3.org/1999/xhtml">nControlLevel := _nControlLevel;</xhtml>
+                  </ST>
+                </body>
+                <InterfaceAsPlainText>
+                  <xhtml xmlns="http://www.w3.org/1999/xhtml" />
+                </InterfaceAsPlainText>
+                <addData />
+              </GetAccessor>
+              <SetAccessor>
+                <interface />
+                <body>
+                  <ST>
+                    <xhtml xmlns="http://www.w3.org/1999/xhtml" />
+                  </ST>
+                </body>
+                <InterfaceAsPlainText>
+                  <xhtml xmlns="http://www.w3.org/1999/xhtml" />
+                </InterfaceAsPlainText>
+                <addData />
+              </SetAccessor>
+              <InterfaceAsPlainText>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">PROPERTY nControlLevel : BYTE
+</xhtml>
+              </InterfaceAsPlainText>
+              <addData />
+            </Property>
+          </data>
+          <data name="http://www.3s-software.com/plcopenxml/property" handleUnknown="implementation">
+            <Property name="nMaxLevel" ObjectId="9b8c23e4-3cff-4d6a-9a37-3c3378264c67">
+              <interface>
+                <returnType>
+                  <BYTE />
+                </returnType>
+              </interface>
+              <GetAccessor>
+                <interface />
+                <body>
+                  <ST>
+                    <xhtml xmlns="http://www.w3.org/1999/xhtml">nMaxLevel := THIS^.fbDimmingLight.nMaxLevel;</xhtml>
+                  </ST>
+                </body>
+                <InterfaceAsPlainText>
+                  <xhtml xmlns="http://www.w3.org/1999/xhtml" />
+                </InterfaceAsPlainText>
+                <addData />
+              </GetAccessor>
+              <SetAccessor>
+                <interface />
+                <body>
+                  <ST>
+                    <xhtml xmlns="http://www.w3.org/1999/xhtml">THIS^.fbDimmingLight.nMaxLevel := nMaxLevel;</xhtml>
+                  </ST>
+                </body>
+                <InterfaceAsPlainText>
+                  <xhtml xmlns="http://www.w3.org/1999/xhtml" />
+                </InterfaceAsPlainText>
+                <addData />
+              </SetAccessor>
+              <InterfaceAsPlainText>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">PROPERTY nMaxLevel : BYTE
+</xhtml>
+              </InterfaceAsPlainText>
+              <addData />
+            </Property>
+          </data>
+          <data name="http://www.3s-software.com/plcopenxml/property" handleUnknown="implementation">
+            <Property name="nMinLevel" ObjectId="5862ba08-3bde-467d-8b5f-63bfb6e5de66">
+              <interface>
+                <returnType>
+                  <BYTE />
+                </returnType>
+              </interface>
+              <GetAccessor>
+                <interface />
+                <body>
+                  <ST>
+                    <xhtml xmlns="http://www.w3.org/1999/xhtml">nMinLevel := THIS^.fbDimmingLight.nMinLevel;</xhtml>
+                  </ST>
+                </body>
+                <InterfaceAsPlainText>
+                  <xhtml xmlns="http://www.w3.org/1999/xhtml" />
+                </InterfaceAsPlainText>
+                <addData />
+              </GetAccessor>
+              <SetAccessor>
+                <interface />
+                <body>
+                  <ST>
+                    <xhtml xmlns="http://www.w3.org/1999/xhtml">THIS^.fbDimmingLight.nMaxLevel := nMaxLevel;</xhtml>
+                  </ST>
+                </body>
+                <InterfaceAsPlainText>
+                  <xhtml xmlns="http://www.w3.org/1999/xhtml" />
+                </InterfaceAsPlainText>
+                <addData />
+              </SetAccessor>
+              <InterfaceAsPlainText>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">PROPERTY nMinLevel : BYTE
+</xhtml>
+              </InterfaceAsPlainText>
+              <addData />
+            </Property>
+          </data>
+          <data name="http://www.3s-software.com/plcopenxml/property" handleUnknown="implementation">
+            <Property name="tOffDelay" ObjectId="dbda5586-4de7-4a95-bf02-c9074b35f7f0">
+              <interface>
+                <returnType>
+                  <TIME />
+                </returnType>
+              </interface>
+              <GetAccessor>
+                <interface />
+                <body>
+                  <ST>
+                    <xhtml xmlns="http://www.w3.org/1999/xhtml" />
+                  </ST>
+                </body>
+                <InterfaceAsPlainText>
+                  <xhtml xmlns="http://www.w3.org/1999/xhtml" />
+                </InterfaceAsPlainText>
+                <addData />
+              </GetAccessor>
+              <SetAccessor>
+                <interface />
+                <body>
+                  <ST>
+                    <xhtml xmlns="http://www.w3.org/1999/xhtml" />
+                  </ST>
+                </body>
+                <InterfaceAsPlainText>
+                  <xhtml xmlns="http://www.w3.org/1999/xhtml" />
+                </InterfaceAsPlainText>
+                <addData />
+              </SetAccessor>
+              <InterfaceAsPlainText>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">PROPERTY tOffDelay : TIME
+</xhtml>
+              </InterfaceAsPlainText>
+              <addData />
+            </Property>
+          </data>
+          <data name="http://www.3s-software.com/plcopenxml/property" handleUnknown="implementation">
+            <Property name="tOnDelay" ObjectId="49e3891b-4c4f-4e9e-b9e7-f05d4f1630de">
+              <interface>
+                <returnType>
+                  <TIME />
+                </returnType>
+              </interface>
+              <GetAccessor>
+                <interface />
+                <body>
+                  <ST>
+                    <xhtml xmlns="http://www.w3.org/1999/xhtml" />
+                  </ST>
+                </body>
+                <InterfaceAsPlainText>
+                  <xhtml xmlns="http://www.w3.org/1999/xhtml" />
+                </InterfaceAsPlainText>
+                <addData />
+              </GetAccessor>
+              <SetAccessor>
+                <interface />
+                <body>
+                  <ST>
+                    <xhtml xmlns="http://www.w3.org/1999/xhtml" />
+                  </ST>
+                </body>
+                <InterfaceAsPlainText>
+                  <xhtml xmlns="http://www.w3.org/1999/xhtml" />
+                </InterfaceAsPlainText>
+                <addData />
+              </SetAccessor>
+              <InterfaceAsPlainText>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">PROPERTY tOnDelay : TIME
+</xhtml>
+              </InterfaceAsPlainText>
+              <addData />
+            </Property>
+          </data>
+          <data name="http://www.3s-software.com/plcopenxml/interfaceasplaintext" handleUnknown="implementation">
+            <InterfaceAsPlainText>
+              <xhtml xmlns="http://www.w3.org/1999/xhtml">FUNCTION_BLOCK FB_MyLight EXTENDS FB_Light IMPLEMENTS I_Delayable, I_Dimmable
+VAR_INPUT
+	bRecallMinLevel			:	BOOL;
+	bSetControlLevel		:	BOOL;
+	nSetControlLevel		:	BYTE;
+END_VAR
+VAR_OUTPUT
+	nControl				:	BYTE;
+END_VAR
+VAR
+	rtrigRecallMinLevel		:	R_TRIG;
+	rtrigSetControlLevel	:	R_TRIG;
+	fbDimmingLight			:	FB_DimmingLight;
+	fbDelayedLight			:	FB_DelayedLight;
+	_nControlLevel			:	BYTE;
+END_VAR
+</xhtml>
+            </InterfaceAsPlainText>
+          </data>
+          <data name="http://www.3s-software.com/plcopenxml/objectid" handleUnknown="discard">
+            <ObjectId>33a35145-5382-479d-a9b1-6eb7fce18066</ObjectId>
+          </data>
+        </addData>
+      </pou>
+      <pou name="P_DelayedLight_Test_CFC" pouType="program">
+        <interface>
+          <localVars>
+            <variable name="fbDelayedLight">
+              <type>
+                <derived name="FB_DelayedLight" />
+              </type>
+            </variable>
+            <variable name="bOn">
+              <type>
+                <BOOL />
+              </type>
+            </variable>
+            <variable name="bOff">
+              <type>
+                <BOOL />
+              </type>
+            </variable>
+            <variable name="bControlLevel">
+              <type>
+                <BOOL />
+              </type>
+            </variable>
+          </localVars>
+        </interface>
+        <body>
+          <ST>
+            <xhtml xmlns="http://www.w3.org/1999/xhtml" />
+          </ST>
+          <addData>
+            <data name="http://www.3s-software.com/plcopenxml/cfc" handleUnknown="implementation">
+              <CFC>
+                <inVariable localId="2">
+                  <position x="8" y="7" />
+                  <connectionPointOut>
+                    <expression />
+                  </connectionPointOut>
+                  <expression>bOn</expression>
+                </inVariable>
+                <connector localId="1" name="">
+                  <position x="0" y="0" />
+                  <connectionPointIn>
+                    <connection refLocalId="2" formalParameter="bOn" />
+                  </connectionPointIn>
+                </connector>
+                <inVariable localId="4">
+                  <position x="8" y="8" />
+                  <connectionPointOut>
+                    <expression />
+                  </connectionPointOut>
+                  <expression>bOff</expression>
+                </inVariable>
+                <connector localId="3" name="">
+                  <position x="0" y="0" />
+                  <connectionPointIn>
+                    <connection refLocalId="4" formalParameter="bOff" />
+                  </connectionPointIn>
+                </connector>
+                <block localId="0" executionOrderId="1" typeName="FB_DelayedLight" instanceName="fbDelayedLight">
+                  <position x="14" y="5" />
+                  <inputVariables>
+                    <variable formalParameter="bOn">
+                      <connectionPointIn>
+                        <relPosition x="0" y="0" />
+                        <connection refLocalId="1" />
+                      </connectionPointIn>
+                    </variable>
+                    <variable formalParameter="bOff">
+                      <connectionPointIn>
+                        <relPosition x="0" y="1" />
+                        <connection refLocalId="3" />
+                      </connectionPointIn>
+                    </variable>
+                  </inputVariables>
+                  <inOutVariables />
+                  <outputVariables>
+                    <variable formalParameter="bControl">
+                      <connectionPointOut>
+                        <relPosition x="0" y="0" />
+                        <expression />
+                      </connectionPointOut>
+                    </variable>
+                  </outputVariables>
+                  <addData>
+                    <data name="http://www.3s-software.com/plcopenxml/cfccalltype" handleUnknown="implementation">
+                      <CallType xmlns="">functionblock</CallType>
+                    </data>
+                  </addData>
+                </block>
+                <connector localId="6" name="">
+                  <position x="0" y="0" />
+                  <connectionPointIn>
+                    <connection refLocalId="0" formalParameter="bControl" />
+                  </connectionPointIn>
+                </connector>
+                <outVariable localId="5" executionOrderId="2">
+                  <position x="24" y="7" />
+                  <connectionPointIn>
+                    <relPosition x="0" y="0" />
+                    <connection refLocalId="6" />
+                  </connectionPointIn>
+                  <expression>bControlLevel</expression>
+                </outVariable>
+              </CFC>
+            </data>
+          </addData>
+        </body>
+        <addData>
+          <data name="http://www.3s-software.com/plcopenxml/interfaceasplaintext" handleUnknown="implementation">
+            <InterfaceAsPlainText>
+              <xhtml xmlns="http://www.w3.org/1999/xhtml">PROGRAM P_DelayedLight_Test_CFC
+VAR
+	fbDelayedLight		:	FB_DelayedLight;
+	bOn					:	BOOL;
+	bOff				:	BOOL;
+	bControlLevel		:	BOOL;
+END_VAR
+</xhtml>
+            </InterfaceAsPlainText>
+          </data>
+          <data name="http://www.3s-software.com/plcopenxml/objectid" handleUnknown="discard">
+            <ObjectId>5095a31f-897b-4169-abe3-542905efb1ea</ObjectId>
+          </data>
+        </addData>
+      </pou>
+      <pou name="P_DelayedLight_Test_ST" pouType="program">
+        <interface>
+          <localVars>
+            <variable name="fbDelayedLight">
+              <type>
+                <derived name="FB_DelayedLight" />
+              </type>
+            </variable>
+            <variable name="bOn">
+              <type>
+                <BOOL />
+              </type>
+            </variable>
+            <variable name="bOff">
+              <type>
+                <BOOL />
+              </type>
+            </variable>
+            <variable name="bControlLevel">
+              <type>
+                <BOOL />
+              </type>
+            </variable>
+          </localVars>
+        </interface>
+        <body>
+          <ST>
+            <xhtml xmlns="http://www.w3.org/1999/xhtml">fbDelayedLight();
+
+IF (bOn) THEN
+	fbDelayedLight.M_On();
+	bOn := FALSE;
+END_IF
+IF (bOff) THEN
+	fbDelayedLight.M_Off();
+	bOff := FALSE;
+END_IF
+
+bControlLevel := fbDelayedLight.bControlLevel;
+
+</xhtml>
+          </ST>
+        </body>
+        <addData>
+          <data name="http://www.3s-software.com/plcopenxml/interfaceasplaintext" handleUnknown="implementation">
+            <InterfaceAsPlainText>
+              <xhtml xmlns="http://www.w3.org/1999/xhtml">PROGRAM P_DelayedLight_Test_ST
+VAR
+	fbDelayedLight		:	FB_DelayedLight;
+	bOn					:	BOOL;
+	bOff				:	BOOL;
+	bControlLevel		:	BOOL;	
+END_VAR
+</xhtml>
+            </InterfaceAsPlainText>
+          </data>
+          <data name="http://www.3s-software.com/plcopenxml/objectid" handleUnknown="discard">
+            <ObjectId>e8ff1aaf-450c-4f38-a1b0-b04587cc28eb</ObjectId>
+          </data>
+        </addData>
+      </pou>
+      <pou name="P_DimmingLight_Test_CFC" pouType="program">
+        <interface>
+          <localVars>
+            <variable name="fbDimmingLight">
+              <type>
+                <derived name="FB_DimmingLight" />
+              </type>
+            </variable>
+            <variable name="bOn">
+              <type>
+                <BOOL />
+              </type>
+            </variable>
+            <variable name="bOff">
+              <type>
+                <BOOL />
+              </type>
+            </variable>
+            <variable name="bRecallMinLevel">
+              <type>
+                <BOOL />
+              </type>
+            </variable>
+            <variable name="bSetControlLevel">
+              <type>
+                <BOOL />
+              </type>
+            </variable>
+            <variable name="nSetControlLevel">
+              <type>
+                <BYTE />
+              </type>
+            </variable>
+            <variable name="bControlLevel">
+              <type>
+                <BOOL />
+              </type>
+            </variable>
+            <variable name="nControlLevel">
+              <type>
+                <BYTE />
+              </type>
+            </variable>
+          </localVars>
+        </interface>
+        <body>
+          <ST>
+            <xhtml xmlns="http://www.w3.org/1999/xhtml" />
+          </ST>
+          <addData>
+            <data name="http://www.3s-software.com/plcopenxml/cfc" handleUnknown="implementation">
+              <CFC>
+                <inVariable localId="2">
+                  <position x="9" y="4" />
+                  <connectionPointOut>
+                    <expression />
+                  </connectionPointOut>
+                  <expression>bOn</expression>
+                </inVariable>
+                <connector localId="1" name="">
+                  <position x="0" y="0" />
+                  <connectionPointIn>
+                    <connection refLocalId="2" formalParameter="bOn" />
+                  </connectionPointIn>
+                </connector>
+                <inVariable localId="4">
+                  <position x="9" y="5" />
+                  <connectionPointOut>
+                    <expression />
+                  </connectionPointOut>
+                  <expression>bOff</expression>
+                </inVariable>
+                <connector localId="3" name="">
+                  <position x="0" y="0" />
+                  <connectionPointIn>
+                    <connection refLocalId="4" formalParameter="bOff" />
+                  </connectionPointIn>
+                </connector>
+                <inVariable localId="6">
+                  <position x="5" y="6" />
+                  <connectionPointOut>
+                    <expression />
+                  </connectionPointOut>
+                  <expression>bRecallMinLevel</expression>
+                </inVariable>
+                <connector localId="5" name="">
+                  <position x="0" y="0" />
+                  <connectionPointIn>
+                    <connection refLocalId="6" formalParameter="bRecallMinLevel" />
+                  </connectionPointIn>
+                </connector>
+                <inVariable localId="8">
+                  <position x="5" y="7" />
+                  <connectionPointOut>
+                    <expression />
+                  </connectionPointOut>
+                  <expression>bSetControlLevel</expression>
+                </inVariable>
+                <connector localId="7" name="">
+                  <position x="0" y="0" />
+                  <connectionPointIn>
+                    <connection refLocalId="8" formalParameter="bSetControlLevel" />
+                  </connectionPointIn>
+                </connector>
+                <inVariable localId="10">
+                  <position x="5" y="8" />
+                  <connectionPointOut>
+                    <expression />
+                  </connectionPointOut>
+                  <expression>nSetControlLevel</expression>
+                </inVariable>
+                <connector localId="9" name="">
+                  <position x="0" y="0" />
+                  <connectionPointIn>
+                    <connection refLocalId="10" formalParameter="nSetControlLevel" />
+                  </connectionPointIn>
+                </connector>
+                <block localId="0" executionOrderId="1" typeName="FB_DimmingLight" instanceName="fbDimmingLight">
+                  <position x="15" y="2" />
+                  <inputVariables>
+                    <variable formalParameter="bOn">
+                      <connectionPointIn>
+                        <relPosition x="0" y="0" />
+                        <connection refLocalId="1" />
+                      </connectionPointIn>
+                    </variable>
+                    <variable formalParameter="bOff">
+                      <connectionPointIn>
+                        <relPosition x="0" y="1" />
+                        <connection refLocalId="3" />
+                      </connectionPointIn>
+                    </variable>
+                    <variable formalParameter="bRecallMinLevel">
+                      <connectionPointIn>
+                        <relPosition x="0" y="2" />
+                        <connection refLocalId="5" />
+                      </connectionPointIn>
+                    </variable>
+                    <variable formalParameter="bSetControlLevel">
+                      <connectionPointIn>
+                        <relPosition x="0" y="3" />
+                        <connection refLocalId="7" />
+                      </connectionPointIn>
+                    </variable>
+                    <variable formalParameter="nSetControlLevel">
+                      <connectionPointIn>
+                        <relPosition x="0" y="4" />
+                        <connection refLocalId="9" />
+                      </connectionPointIn>
+                    </variable>
+                  </inputVariables>
+                  <inOutVariables />
+                  <outputVariables>
+                    <variable formalParameter="bControl">
+                      <connectionPointOut>
+                        <relPosition x="0" y="0" />
+                        <expression />
+                      </connectionPointOut>
+                    </variable>
+                    <variable formalParameter="nControl">
+                      <connectionPointOut>
+                        <relPosition x="0" y="1" />
+                        <expression />
+                      </connectionPointOut>
+                    </variable>
+                  </outputVariables>
+                  <addData>
+                    <data name="http://www.3s-software.com/plcopenxml/cfccalltype" handleUnknown="implementation">
+                      <CallType xmlns="">functionblock</CallType>
+                    </data>
+                  </addData>
+                </block>
+                <connector localId="12" name="">
+                  <position x="0" y="0" />
+                  <connectionPointIn>
+                    <connection refLocalId="0" formalParameter="bControl" />
+                  </connectionPointIn>
+                </connector>
+                <outVariable localId="11" executionOrderId="2">
+                  <position x="29" y="4" />
+                  <connectionPointIn>
+                    <relPosition x="0" y="0" />
+                    <connection refLocalId="12" />
+                  </connectionPointIn>
+                  <expression>bControlLevel</expression>
+                </outVariable>
+                <connector localId="14" name="">
+                  <position x="0" y="0" />
+                  <connectionPointIn>
+                    <connection refLocalId="0" formalParameter="nControl" />
+                  </connectionPointIn>
+                </connector>
+                <outVariable localId="13" executionOrderId="3">
+                  <position x="29" y="5" />
+                  <connectionPointIn>
+                    <relPosition x="0" y="0" />
+                    <connection refLocalId="14" />
+                  </connectionPointIn>
+                  <expression>nControlLevel</expression>
+                </outVariable>
+              </CFC>
+            </data>
+          </addData>
+        </body>
+        <addData>
+          <data name="http://www.3s-software.com/plcopenxml/interfaceasplaintext" handleUnknown="implementation">
+            <InterfaceAsPlainText>
+              <xhtml xmlns="http://www.w3.org/1999/xhtml">PROGRAM P_DimmingLight_Test_CFC
+VAR
+	fbDimmingLight		:	FB_DimmingLight;
+	bOn					:	BOOL;
+	bOff				:	BOOL;
+	bRecallMinLevel		:	BOOL;
+	bSetControlLevel	:	BOOL;
+	nSetControlLevel	:	BYTE;
+	bControlLevel		:	BOOL;
+	nControlLevel		:	BYTE;
+END_VAR
+</xhtml>
+            </InterfaceAsPlainText>
+          </data>
+          <data name="http://www.3s-software.com/plcopenxml/objectid" handleUnknown="discard">
+            <ObjectId>19678740-a9f2-4c9d-a3af-951aff7688dc</ObjectId>
+          </data>
+        </addData>
+      </pou>
+      <pou name="P_DimmingLight_Test_ST" pouType="program">
+        <interface>
+          <localVars>
+            <variable name="fbDimmingLight">
+              <type>
+                <derived name="FB_DimmingLight" />
+              </type>
+            </variable>
+            <variable name="bOn">
+              <type>
+                <BOOL />
+              </type>
+            </variable>
+            <variable name="bOff">
+              <type>
+                <BOOL />
+              </type>
+            </variable>
+            <variable name="bRecallMinLevel">
+              <type>
+                <BOOL />
+              </type>
+            </variable>
+            <variable name="bSetControlLevel">
+              <type>
+                <BOOL />
+              </type>
+            </variable>
+            <variable name="nSetControlLevel">
+              <type>
+                <BYTE />
+              </type>
+            </variable>
+            <variable name="bControlLevel">
+              <type>
+                <BOOL />
+              </type>
+            </variable>
+            <variable name="nControlLevel">
+              <type>
+                <BYTE />
+              </type>
+            </variable>
+          </localVars>
+        </interface>
+        <body>
+          <ST>
+            <xhtml xmlns="http://www.w3.org/1999/xhtml">fbDimmingLight();
+
+IF (bOn) THEN
+	fbDimmingLight.M_On();
+	bOn := FALSE;
+END_IF
+IF (bOff) THEN
+	fbDimmingLight.M_Off();
+	bOff := FALSE;
+END_IF
+IF (bRecallMinLevel) THEN
+	fbDimmingLight.M_RecallMinLevel();
+	bRecallMinLevel := FALSE;
+END_IF
+IF (bSetControlLevel) THEN
+	fbDimmingLight.M_SetControlLevel(nSetControlLevel);
+	bSetControlLevel := FALSE;
+END_IF
+
+bControlLevel := fbDimmingLight.bControlLevel;
+nControlLevel := fbDimmingLight.nControlLevel;
+
+
+</xhtml>
+          </ST>
+        </body>
+        <addData>
+          <data name="http://www.3s-software.com/plcopenxml/interfaceasplaintext" handleUnknown="implementation">
+            <InterfaceAsPlainText>
+              <xhtml xmlns="http://www.w3.org/1999/xhtml">PROGRAM P_DimmingLight_Test_ST
+VAR
+	fbDimmingLight		:	FB_DimmingLight;
+	bOn					:	BOOL;
+	bOff				:	BOOL;
+	bRecallMinLevel		:	BOOL;
+	bSetControlLevel	:	BOOL;
+	nSetControlLevel	:	BYTE;
+	bControlLevel		:	BOOL;
+	nControlLevel		:	BYTE;
+END_VAR
+</xhtml>
+            </InterfaceAsPlainText>
+          </data>
+          <data name="http://www.3s-software.com/plcopenxml/objectid" handleUnknown="discard">
+            <ObjectId>a0f539b5-31a1-424d-9748-dd8f15a48a5e</ObjectId>
+          </data>
+        </addData>
+      </pou>
+      <pou name="P_Light_Test_CFC" pouType="program">
+        <interface>
+          <localVars>
+            <variable name="fbLight">
+              <type>
+                <derived name="FB_Light" />
+              </type>
+            </variable>
+            <variable name="bOn">
+              <type>
+                <BOOL />
+              </type>
+            </variable>
+            <variable name="bOff">
+              <type>
+                <BOOL />
+              </type>
+            </variable>
+            <variable name="bControlLevel">
+              <type>
+                <BOOL />
+              </type>
+            </variable>
+          </localVars>
+        </interface>
+        <body>
+          <ST>
+            <xhtml xmlns="http://www.w3.org/1999/xhtml" />
+          </ST>
+          <addData>
+            <data name="http://www.3s-software.com/plcopenxml/cfc" handleUnknown="implementation">
+              <CFC>
+                <inVariable localId="2">
+                  <position x="10" y="6" />
+                  <connectionPointOut>
+                    <expression />
+                  </connectionPointOut>
+                  <expression>bOn</expression>
+                </inVariable>
+                <connector localId="1" name="">
+                  <position x="0" y="0" />
+                  <connectionPointIn>
+                    <connection refLocalId="2" formalParameter="bOn" />
+                  </connectionPointIn>
+                </connector>
+                <inVariable localId="4">
+                  <position x="10" y="7" />
+                  <connectionPointOut>
+                    <expression />
+                  </connectionPointOut>
+                  <expression>bOff</expression>
+                </inVariable>
+                <connector localId="3" name="">
+                  <position x="0" y="0" />
+                  <connectionPointIn>
+                    <connection refLocalId="4" formalParameter="bOff" />
+                  </connectionPointIn>
+                </connector>
+                <block localId="0" executionOrderId="1" typeName="FB_Light" instanceName="fbLight">
+                  <position x="16" y="4" />
+                  <inputVariables>
+                    <variable formalParameter="bOn">
+                      <connectionPointIn>
+                        <relPosition x="0" y="0" />
+                        <connection refLocalId="1" />
+                      </connectionPointIn>
+                    </variable>
+                    <variable formalParameter="bOff">
+                      <connectionPointIn>
+                        <relPosition x="0" y="1" />
+                        <connection refLocalId="3" />
+                      </connectionPointIn>
+                    </variable>
+                  </inputVariables>
+                  <inOutVariables />
+                  <outputVariables>
+                    <variable formalParameter="bControl">
+                      <connectionPointOut>
+                        <relPosition x="0" y="0" />
+                        <expression />
+                      </connectionPointOut>
+                    </variable>
+                  </outputVariables>
+                  <addData>
+                    <data name="http://www.3s-software.com/plcopenxml/cfccalltype" handleUnknown="implementation">
+                      <CallType xmlns="">functionblock</CallType>
+                    </data>
+                  </addData>
+                </block>
+                <connector localId="6" name="">
+                  <position x="0" y="0" />
+                  <connectionPointIn>
+                    <connection refLocalId="0" formalParameter="bControl" />
+                  </connectionPointIn>
+                </connector>
+                <outVariable localId="5" executionOrderId="2">
+                  <position x="26" y="6" />
+                  <connectionPointIn>
+                    <relPosition x="0" y="0" />
+                    <connection refLocalId="6" />
+                  </connectionPointIn>
+                  <expression>bControlLevel</expression>
+                </outVariable>
+              </CFC>
+            </data>
+          </addData>
+        </body>
+        <addData>
+          <data name="http://www.3s-software.com/plcopenxml/interfaceasplaintext" handleUnknown="implementation">
+            <InterfaceAsPlainText>
+              <xhtml xmlns="http://www.w3.org/1999/xhtml">PROGRAM P_Light_Test_CFC
+VAR
+	fbLight				:	FB_Light;
+	bOn					:	BOOL;
+	bOff				:	BOOL;
+	bControlLevel		:	BOOL;
+END_VAR
+</xhtml>
+            </InterfaceAsPlainText>
+          </data>
+          <data name="http://www.3s-software.com/plcopenxml/objectid" handleUnknown="discard">
+            <ObjectId>40eed654-30f9-4a77-ad89-5d5f035a4f47</ObjectId>
+          </data>
+        </addData>
+      </pou>
+      <pou name="P_Light_Test_ST" pouType="program">
+        <interface>
+          <localVars>
+            <variable name="fbLight">
+              <type>
+                <derived name="FB_Light" />
+              </type>
+            </variable>
+            <variable name="bOn">
+              <type>
+                <BOOL />
+              </type>
+            </variable>
+            <variable name="bOff">
+              <type>
+                <BOOL />
+              </type>
+            </variable>
+            <variable name="bControlLevel">
+              <type>
+                <BOOL />
+              </type>
+            </variable>
+          </localVars>
+        </interface>
+        <body>
+          <ST>
+            <xhtml xmlns="http://www.w3.org/1999/xhtml">fbLight();
+
+IF (bOn) THEN
+	fbLight.M_On();
+	bOn := FALSE;
+END_IF
+IF (bOff) THEN
+	fbLight.M_Off();
+	bOff := FALSE;
+END_IF
+
+bControlLevel := fbLight.bControlLevel;
+
+</xhtml>
+          </ST>
+        </body>
+        <addData>
+          <data name="http://www.3s-software.com/plcopenxml/interfaceasplaintext" handleUnknown="implementation">
+            <InterfaceAsPlainText>
+              <xhtml xmlns="http://www.w3.org/1999/xhtml">PROGRAM P_Light_Test_ST
+VAR
+	fbLight				:	FB_Light;
+	bOn					:	BOOL;
+	bOff				:	BOOL;
+	bControlLevel		:	BOOL;	
+END_VAR
+</xhtml>
+            </InterfaceAsPlainText>
+          </data>
+          <data name="http://www.3s-software.com/plcopenxml/objectid" handleUnknown="discard">
+            <ObjectId>2dc43587-1fdb-406e-a556-9521154ef615</ObjectId>
+          </data>
+        </addData>
+      </pou>
+      <pou name="P_MyLight_Test_CFC" pouType="program">
+        <interface>
+          <localVars>
+            <variable name="fbMyLight">
+              <type>
+                <derived name="FB_MyLight" />
+              </type>
+            </variable>
+            <variable name="bOn">
+              <type>
+                <BOOL />
+              </type>
+            </variable>
+            <variable name="bOff">
+              <type>
+                <BOOL />
+              </type>
+            </variable>
+            <variable name="bRecallMinLevel">
+              <type>
+                <BOOL />
+              </type>
+            </variable>
+            <variable name="bSetControlLevel">
+              <type>
+                <BOOL />
+              </type>
+            </variable>
+            <variable name="nSetControlLevel">
+              <type>
+                <BYTE />
+              </type>
+            </variable>
+            <variable name="bControlLevel">
+              <type>
+                <BOOL />
+              </type>
+            </variable>
+            <variable name="nControlLevel">
+              <type>
+                <BYTE />
+              </type>
+            </variable>
+          </localVars>
+        </interface>
+        <body>
+          <ST>
+            <xhtml xmlns="http://www.w3.org/1999/xhtml" />
+          </ST>
+          <addData>
+            <data name="http://www.3s-software.com/plcopenxml/cfc" handleUnknown="implementation">
+              <CFC>
+                <inVariable localId="2">
+                  <position x="9" y="6" />
+                  <connectionPointOut>
+                    <expression />
+                  </connectionPointOut>
+                  <expression>bOn</expression>
+                </inVariable>
+                <connector localId="1" name="">
+                  <position x="0" y="0" />
+                  <connectionPointIn>
+                    <connection refLocalId="2" formalParameter="bOn" />
+                  </connectionPointIn>
+                </connector>
+                <inVariable localId="4">
+                  <position x="9" y="7" />
+                  <connectionPointOut>
+                    <expression />
+                  </connectionPointOut>
+                  <expression>bOff</expression>
+                </inVariable>
+                <connector localId="3" name="">
+                  <position x="0" y="0" />
+                  <connectionPointIn>
+                    <connection refLocalId="4" formalParameter="bOff" />
+                  </connectionPointIn>
+                </connector>
+                <inVariable localId="6">
+                  <position x="5" y="8" />
+                  <connectionPointOut>
+                    <expression />
+                  </connectionPointOut>
+                  <expression>bRecallMinLevel</expression>
+                </inVariable>
+                <connector localId="5" name="">
+                  <position x="0" y="0" />
+                  <connectionPointIn>
+                    <connection refLocalId="6" formalParameter="bRecallMinLevel" />
+                  </connectionPointIn>
+                </connector>
+                <inVariable localId="8">
+                  <position x="5" y="9" />
+                  <connectionPointOut>
+                    <expression />
+                  </connectionPointOut>
+                  <expression>bSetControlLevel</expression>
+                </inVariable>
+                <connector localId="7" name="">
+                  <position x="0" y="0" />
+                  <connectionPointIn>
+                    <connection refLocalId="8" formalParameter="bSetControlLevel" />
+                  </connectionPointIn>
+                </connector>
+                <inVariable localId="10">
+                  <position x="5" y="10" />
+                  <connectionPointOut>
+                    <expression />
+                  </connectionPointOut>
+                  <expression>nSetControlLevel</expression>
+                </inVariable>
+                <connector localId="9" name="">
+                  <position x="0" y="0" />
+                  <connectionPointIn>
+                    <connection refLocalId="10" formalParameter="nSetControlLevel" />
+                  </connectionPointIn>
+                </connector>
+                <block localId="0" executionOrderId="1" typeName="FB_MyLight" instanceName="fbMyLight">
+                  <position x="15" y="4" />
+                  <inputVariables>
+                    <variable formalParameter="bOn">
+                      <connectionPointIn>
+                        <relPosition x="0" y="0" />
+                        <connection refLocalId="1" />
+                      </connectionPointIn>
+                    </variable>
+                    <variable formalParameter="bOff">
+                      <connectionPointIn>
+                        <relPosition x="0" y="1" />
+                        <connection refLocalId="3" />
+                      </connectionPointIn>
+                    </variable>
+                    <variable formalParameter="bRecallMinLevel">
+                      <connectionPointIn>
+                        <relPosition x="0" y="2" />
+                        <connection refLocalId="5" />
+                      </connectionPointIn>
+                    </variable>
+                    <variable formalParameter="bSetControlLevel">
+                      <connectionPointIn>
+                        <relPosition x="0" y="3" />
+                        <connection refLocalId="7" />
+                      </connectionPointIn>
+                    </variable>
+                    <variable formalParameter="nSetControlLevel">
+                      <connectionPointIn>
+                        <relPosition x="0" y="4" />
+                        <connection refLocalId="9" />
+                      </connectionPointIn>
+                    </variable>
+                  </inputVariables>
+                  <inOutVariables />
+                  <outputVariables>
+                    <variable formalParameter="bControl">
+                      <connectionPointOut>
+                        <relPosition x="0" y="0" />
+                        <expression />
+                      </connectionPointOut>
+                    </variable>
+                    <variable formalParameter="nControl">
+                      <connectionPointOut>
+                        <relPosition x="0" y="1" />
+                        <expression />
+                      </connectionPointOut>
+                    </variable>
+                  </outputVariables>
+                  <addData>
+                    <data name="http://www.3s-software.com/plcopenxml/cfccalltype" handleUnknown="implementation">
+                      <CallType xmlns="">functionblock</CallType>
+                    </data>
+                  </addData>
+                </block>
+                <connector localId="12" name="">
+                  <position x="0" y="0" />
+                  <connectionPointIn>
+                    <connection refLocalId="0" formalParameter="bControl" />
+                  </connectionPointIn>
+                </connector>
+                <outVariable localId="11" executionOrderId="2">
+                  <position x="29" y="6" />
+                  <connectionPointIn>
+                    <relPosition x="0" y="0" />
+                    <connection refLocalId="12" />
+                  </connectionPointIn>
+                  <expression>bControlLevel</expression>
+                </outVariable>
+                <connector localId="14" name="">
+                  <position x="0" y="0" />
+                  <connectionPointIn>
+                    <connection refLocalId="0" formalParameter="nControl" />
+                  </connectionPointIn>
+                </connector>
+                <outVariable localId="13" executionOrderId="3">
+                  <position x="29" y="7" />
+                  <connectionPointIn>
+                    <relPosition x="0" y="0" />
+                    <connection refLocalId="14" />
+                  </connectionPointIn>
+                  <expression>nControlLevel</expression>
+                </outVariable>
+              </CFC>
+            </data>
+          </addData>
+        </body>
+        <addData>
+          <data name="http://www.3s-software.com/plcopenxml/interfaceasplaintext" handleUnknown="implementation">
+            <InterfaceAsPlainText>
+              <xhtml xmlns="http://www.w3.org/1999/xhtml">PROGRAM P_MyLight_Test_CFC
+VAR
+	fbMyLight			:	FB_MyLight;
+	bOn					:	BOOL;
+	bOff				:	BOOL;
+	bRecallMinLevel		:	BOOL;
+	bSetControlLevel	:	BOOL;
+	nSetControlLevel	:	BYTE;
+	bControlLevel		:	BOOL;
+	nControlLevel		:	BYTE;
+END_VAR
+</xhtml>
+            </InterfaceAsPlainText>
+          </data>
+          <data name="http://www.3s-software.com/plcopenxml/objectid" handleUnknown="discard">
+            <ObjectId>d3b75a9e-a061-47a8-b747-b803b819562c</ObjectId>
+          </data>
+        </addData>
+      </pou>
+      <pou name="P_MyLight_Test_ST" pouType="program">
+        <interface>
+          <localVars>
+            <variable name="fbMyLight">
+              <type>
+                <derived name="FB_MyLight" />
+              </type>
+            </variable>
+            <variable name="bOn">
+              <type>
+                <BOOL />
+              </type>
+            </variable>
+            <variable name="bOff">
+              <type>
+                <BOOL />
+              </type>
+            </variable>
+            <variable name="bRecallMinLevel">
+              <type>
+                <BOOL />
+              </type>
+            </variable>
+            <variable name="bSetControlLevel">
+              <type>
+                <BOOL />
+              </type>
+            </variable>
+            <variable name="nSetControlLevel">
+              <type>
+                <BYTE />
+              </type>
+            </variable>
+            <variable name="bControlLevel">
+              <type>
+                <BOOL />
+              </type>
+            </variable>
+            <variable name="nControlLevel">
+              <type>
+                <BYTE />
+              </type>
+            </variable>
+          </localVars>
+        </interface>
+        <body>
+          <ST>
+            <xhtml xmlns="http://www.w3.org/1999/xhtml">fbMyLight();
+
+IF (bOn) THEN
+	fbMyLight.M_On();
+	bOn := FALSE;
+END_IF
+IF (bOff) THEN
+	fbMyLight.M_Off();
+	bOff := FALSE;
+END_IF
+IF (bRecallMinLevel) THEN
+	fbMyLight.M_RecallMinLevel();
+	bRecallMinLevel := FALSE;
+END_IF
+IF (bSetControlLevel) THEN
+	fbMyLight.M_SetControlLevel(nSetControlLevel);
+	bSetControlLevel := FALSE;
+END_IF
+
+bControlLevel := fbMyLight.bControlLevel;
+nControlLevel := fbMyLight.nControlLevel;
+
+
+</xhtml>
+          </ST>
+        </body>
+        <addData>
+          <data name="http://www.3s-software.com/plcopenxml/interfaceasplaintext" handleUnknown="implementation">
+            <InterfaceAsPlainText>
+              <xhtml xmlns="http://www.w3.org/1999/xhtml">PROGRAM P_MyLight_Test_ST
+VAR
+	fbMyLight			:	FB_MyLight;
+	bOn					:	BOOL;
+	bOff				:	BOOL;
+	bRecallMinLevel		:	BOOL;
+	bSetControlLevel	:	BOOL;
+	nSetControlLevel	:	BYTE;
+	bControlLevel		:	BOOL;
+	nControlLevel		:	BYTE;
+END_VAR
+</xhtml>
+            </InterfaceAsPlainText>
+          </data>
+          <data name="http://www.3s-software.com/plcopenxml/objectid" handleUnknown="discard">
+            <ObjectId>8d5c2de6-c612-4a36-8f71-3b8183571ca3</ObjectId>
+          </data>
+        </addData>
+      </pou>
+      <pou name="P_RoomController_Test_CFC" pouType="program">
+        <interface>
+          <localVars>
+            <variable name="fbRoomController">
+              <type>
+                <derived name="FB_RoomController" />
+              </type>
+            </variable>
+            <variable name="fbmyLight">
+              <type>
+                <derived name="FB_MyLight" />
+              </type>
+            </variable>
+            <variable name="fbDelayedLight">
+              <type>
+                <derived name="FB_DelayedLight" />
+              </type>
+            </variable>
+            <variable name="fbDimmingLight">
+              <type>
+                <derived name="FB_DimmingLight" />
+              </type>
+            </variable>
+            <variable name="bAllOn">
+              <type>
+                <BOOL />
+              </type>
+            </variable>
+            <variable name="bAllOff">
+              <type>
+                <BOOL />
+              </type>
+            </variable>
+            <variable name="bAllCallMinLevel">
+              <type>
+                <BOOL />
+              </type>
+            </variable>
+            <variable name="aControlLevel">
+              <type>
+                <array>
+                  <dimension lower="1" upper="3" />
+                  <baseType>
+                    <BOOL />
+                  </baseType>
+                </array>
+              </type>
+            </variable>
+            <variable name="aDimmLevel">
+              <type>
+                <array>
+                  <dimension lower="1" upper="3" />
+                  <baseType>
+                    <BYTE />
+                  </baseType>
+                </array>
+              </type>
+            </variable>
+          </localVars>
+        </interface>
+        <body>
+          <ST>
+            <xhtml xmlns="http://www.w3.org/1999/xhtml" />
+          </ST>
+          <addData>
+            <data name="http://www.3s-software.com/plcopenxml/cfc" handleUnknown="implementation">
+              <CFC>
+                <inVariable localId="2">
+                  <position x="7" y="5" />
+                  <connectionPointOut>
+                    <expression />
+                  </connectionPointOut>
+                  <expression>bAllOn</expression>
+                </inVariable>
+                <connector localId="1" name="">
+                  <position x="0" y="0" />
+                  <connectionPointIn>
+                    <connection refLocalId="2" formalParameter="bAllOn" />
+                  </connectionPointIn>
+                </connector>
+                <inVariable localId="4">
+                  <position x="7" y="6" />
+                  <connectionPointOut>
+                    <expression />
+                  </connectionPointOut>
+                  <expression>bAllOff</expression>
+                </inVariable>
+                <connector localId="3" name="">
+                  <position x="0" y="0" />
+                  <connectionPointIn>
+                    <connection refLocalId="4" formalParameter="bAllOff" />
+                  </connectionPointIn>
+                </connector>
+                <inVariable localId="6">
+                  <position x="4" y="7" />
+                  <connectionPointOut>
+                    <expression />
+                  </connectionPointOut>
+                  <expression>bAllCallMinLevel</expression>
+                </inVariable>
+                <connector localId="5" name="">
+                  <position x="0" y="0" />
+                  <connectionPointIn>
+                    <connection refLocalId="6" formalParameter="bAllCallMinLevel" />
+                  </connectionPointIn>
+                </connector>
+                <inVariable localId="8">
+                  <position x="6" y="8" />
+                  <connectionPointOut>
+                    <expression />
+                  </connectionPointOut>
+                  <expression>fbMyLight</expression>
+                </inVariable>
+                <connector localId="7" name="">
+                  <position x="0" y="0" />
+                  <connectionPointIn>
+                    <connection refLocalId="8" formalParameter="fbMyLight" />
+                  </connectionPointIn>
+                </connector>
+                <inVariable localId="10">
+                  <position x="5" y="9" />
+                  <connectionPointOut>
+                    <expression />
+                  </connectionPointOut>
+                  <expression>fbDelayedLight</expression>
+                </inVariable>
+                <connector localId="9" name="">
+                  <position x="0" y="0" />
+                  <connectionPointIn>
+                    <connection refLocalId="10" formalParameter="fbDelayedLight" />
+                  </connectionPointIn>
+                </connector>
+                <inVariable localId="12">
+                  <position x="4" y="10" />
+                  <connectionPointOut>
+                    <expression />
+                  </connectionPointOut>
+                  <expression>fbDimmingLight</expression>
+                </inVariable>
+                <connector localId="11" name="">
+                  <position x="0" y="0" />
+                  <connectionPointIn>
+                    <connection refLocalId="12" formalParameter="fbDimmingLight" />
+                  </connectionPointIn>
+                </connector>
+                <block localId="0" executionOrderId="1" typeName="FB_RoomController" instanceName="fbRoomController">
+                  <position x="16" y="3" />
+                  <inputVariables>
+                    <variable formalParameter="bAllOn">
+                      <connectionPointIn>
+                        <relPosition x="0" y="0" />
+                        <connection refLocalId="1" />
+                      </connectionPointIn>
+                    </variable>
+                    <variable formalParameter="bAllOff">
+                      <connectionPointIn>
+                        <relPosition x="0" y="1" />
+                        <connection refLocalId="3" />
+                      </connectionPointIn>
+                    </variable>
+                    <variable formalParameter="bAllCallMinLevel">
+                      <connectionPointIn>
+                        <relPosition x="0" y="2" />
+                        <connection refLocalId="5" />
+                      </connectionPointIn>
+                    </variable>
+                    <variable formalParameter="refLight01">
+                      <connectionPointIn>
+                        <relPosition x="0" y="3" />
+                        <connection refLocalId="7" />
+                      </connectionPointIn>
+                    </variable>
+                    <variable formalParameter="refLight02">
+                      <connectionPointIn>
+                        <relPosition x="0" y="4" />
+                        <connection refLocalId="9" />
+                      </connectionPointIn>
+                    </variable>
+                    <variable formalParameter="refLight03">
+                      <connectionPointIn>
+                        <relPosition x="0" y="5" />
+                        <connection refLocalId="11" />
+                      </connectionPointIn>
+                    </variable>
+                  </inputVariables>
+                  <inOutVariables />
+                  <outputVariables>
+                    <variable formalParameter="aControlLevel">
+                      <connectionPointOut>
+                        <relPosition x="0" y="0" />
+                        <expression />
+                      </connectionPointOut>
+                    </variable>
+                    <variable formalParameter="aDimmLevel">
+                      <connectionPointOut>
+                        <relPosition x="0" y="1" />
+                        <expression />
+                      </connectionPointOut>
+                    </variable>
+                  </outputVariables>
+                  <addData>
+                    <data name="http://www.3s-software.com/plcopenxml/cfccalltype" handleUnknown="implementation">
+                      <CallType xmlns="">functionblock</CallType>
+                    </data>
+                  </addData>
+                </block>
+                <connector localId="14" name="">
+                  <position x="0" y="0" />
+                  <connectionPointIn>
+                    <connection refLocalId="0" formalParameter="aControlLevel" />
+                  </connectionPointIn>
+                </connector>
+                <outVariable localId="13" executionOrderId="2">
+                  <position x="33" y="5" />
+                  <connectionPointIn>
+                    <relPosition x="0" y="0" />
+                    <connection refLocalId="14" />
+                  </connectionPointIn>
+                  <expression>aControlLevel</expression>
+                </outVariable>
+                <connector localId="16" name="">
+                  <position x="0" y="0" />
+                  <connectionPointIn>
+                    <connection refLocalId="0" formalParameter="aDimmLevel" />
+                  </connectionPointIn>
+                </connector>
+                <outVariable localId="15" executionOrderId="3">
+                  <position x="33" y="6" />
+                  <connectionPointIn>
+                    <relPosition x="0" y="0" />
+                    <connection refLocalId="16" />
+                  </connectionPointIn>
+                  <expression>aDimmLevel</expression>
+                </outVariable>
+              </CFC>
+            </data>
+          </addData>
+        </body>
+        <addData>
+          <data name="http://www.3s-software.com/plcopenxml/interfaceasplaintext" handleUnknown="implementation">
+            <InterfaceAsPlainText>
+              <xhtml xmlns="http://www.w3.org/1999/xhtml">PROGRAM P_RoomController_Test_CFC
+VAR
+	fbRoomController	:	FB_RoomController;
+	fbmyLight			:	FB_MyLight;
+	fbDelayedLight		:	FB_DelayedLight;
+	fbDimmingLight		:	FB_DimmingLight;
+	bAllOn				:	BOOL;
+	bAllOff				:	BOOL;
+	bAllCallMinLevel	:	BOOL;
+	aControlLevel		:	ARRAY [1..3] OF BOOL;
+	aDimmLevel			:	ARRAY [1..3] OF BYTE;
+END_VAR
+</xhtml>
+            </InterfaceAsPlainText>
+          </data>
+          <data name="http://www.3s-software.com/plcopenxml/objectid" handleUnknown="discard">
+            <ObjectId>a6307abe-a1f8-4cf1-85d9-96120581b71f</ObjectId>
+          </data>
+        </addData>
+      </pou>
+      <pou name="P_RoomController_Test_ST" pouType="program">
+        <interface>
+          <localVars>
+            <variable name="fbRoomController">
+              <type>
+                <derived name="FB_RoomController" />
+              </type>
+            </variable>
+            <variable name="fbMyLight">
+              <type>
+                <derived name="FB_MyLight" />
+              </type>
+            </variable>
+            <variable name="fbDelayedLight">
+              <type>
+                <derived name="FB_DelayedLight" />
+              </type>
+            </variable>
+            <variable name="fbDimmingLight">
+              <type>
+                <derived name="FB_DimmingLight" />
+              </type>
+            </variable>
+            <variable name="bAllOn">
+              <type>
+                <BOOL />
+              </type>
+            </variable>
+            <variable name="bAllOff">
+              <type>
+                <BOOL />
+              </type>
+            </variable>
+            <variable name="bAllCallMinLevel">
+              <type>
+                <BOOL />
+              </type>
+            </variable>
+            <variable name="aControlLevel">
+              <type>
+                <array>
+                  <dimension lower="1" upper="3" />
+                  <baseType>
+                    <BOOL />
+                  </baseType>
+                </array>
+              </type>
+            </variable>
+            <variable name="aDimmLevel">
+              <type>
+                <array>
+                  <dimension lower="1" upper="3" />
+                  <baseType>
+                    <BYTE />
+                  </baseType>
+                </array>
+              </type>
+            </variable>
+          </localVars>
+        </interface>
+        <body>
+          <ST>
+            <xhtml xmlns="http://www.w3.org/1999/xhtml">fbRoomController(bAllOn	:= bAllOn,
+				 bAllOff := bAllOff,
+				 bAllCallMinLevel := bAllCallMinLevel,
+				 refLight01 := fbMyLight,
+				 refLight02 := fbDelayedLight,
+				 refLight03 := fbDimmingLight,
+				 aControlLevel =&gt; aControlLevel,
+				 aDimmLevel =&gt; aDimmLevel);
+</xhtml>
+          </ST>
+        </body>
+        <addData>
+          <data name="http://www.3s-software.com/plcopenxml/interfaceasplaintext" handleUnknown="implementation">
+            <InterfaceAsPlainText>
+              <xhtml xmlns="http://www.w3.org/1999/xhtml">PROGRAM P_RoomController_Test_ST
+VAR
+	fbRoomController	:	FB_RoomController;
+	fbMyLight			:	FB_MyLight;
+	fbDelayedLight		:	FB_DelayedLight;
+	fbDimmingLight		:	FB_DimmingLight;
+	bAllOn				:	BOOL;
+	bAllOff				:	BOOL;
+	bAllCallMinLevel	:	BOOL;
+	aControlLevel		:	ARRAY [1..3] OF BOOL;
+	aDimmLevel			:	ARRAY [1..3] OF BYTE;
+END_VAR
+</xhtml>
+            </InterfaceAsPlainText>
+          </data>
+          <data name="http://www.3s-software.com/plcopenxml/objectid" handleUnknown="discard">
+            <ObjectId>3554a96d-746a-4124-9b19-fada433b3760</ObjectId>
+          </data>
+        </addData>
+      </pou>
+      <pou name="_16_Interface_vs_Herencia" pouType="program">
+        <interface />
+        <body>
+          <ST>
+            <xhtml xmlns="http://www.w3.org/1999/xhtml">P_Light_Test_ST();
+P_Light_Test_CFC();
+
+P_DelayedLight_Test_ST();
+P_DelayedLight_Test_CFC();
+
+P_DimmingLight_Test_ST();
+P_DimmingLight_Test_CFC();
+
+P_MyLight_Test_ST();
+P_MyLight_Test_CFC();
+
+P_RoomController_Test_ST();
+P_RoomController_Test_CFC();</xhtml>
+          </ST>
+        </body>
+        <addData>
+          <data name="http://www.3s-software.com/plcopenxml/interfaceasplaintext" handleUnknown="implementation">
+            <InterfaceAsPlainText>
+              <xhtml xmlns="http://www.w3.org/1999/xhtml">PROGRAM _16_Interface_vs_Herencia
+VAR
+
+END_VAR
+</xhtml>
+            </InterfaceAsPlainText>
+          </data>
+          <data name="http://www.3s-software.com/plcopenxml/objectid" handleUnknown="discard">
+            <ObjectId>f91f7753-0f8e-42cd-b8fd-96db2bd303ab</ObjectId>
+          </data>
+        </addData>
+      </pou>
+    </pous>
+  </types>
+  <instances>
+    <configurations />
+  </instances>
+  <addData>
+    <data name="http://www.3s-software.com/plcopenxml/interface" handleUnknown="implementation">
+      <Interface name="I_Delayable" ObjectId="4cf5cd6d-0a90-402c-a922-1728b3df66ca">
+        <Properties>
+          <Property name="tOffDelay" ObjectId="912eb2b3-a8ae-4ae6-aa68-276a62e1b9cd">
+            <interface>
+              <returnType>
+                <TIME />
+              </returnType>
+            </interface>
+            <GetAccessor>
+              <InterfaceAsPlainText>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml" />
+              </InterfaceAsPlainText>
+            </GetAccessor>
+            <SetAccessor>
+              <InterfaceAsPlainText>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml" />
+              </InterfaceAsPlainText>
+            </SetAccessor>
+            <InterfaceAsPlainText>
+              <xhtml xmlns="http://www.w3.org/1999/xhtml">PROPERTY tOffDelay : TIME</xhtml>
+            </InterfaceAsPlainText>
+            <addData />
+          </Property>
+          <Property name="tOnDelay" ObjectId="a0e6d6b2-9ab9-4dfe-a1e0-f0f9023e7867">
+            <interface>
+              <returnType>
+                <TIME />
+              </returnType>
+            </interface>
+            <GetAccessor>
+              <InterfaceAsPlainText>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml" />
+              </InterfaceAsPlainText>
+            </GetAccessor>
+            <SetAccessor>
+              <InterfaceAsPlainText>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml" />
+              </InterfaceAsPlainText>
+            </SetAccessor>
+            <InterfaceAsPlainText>
+              <xhtml xmlns="http://www.w3.org/1999/xhtml">PROPERTY tOnDelay : TIME</xhtml>
+            </InterfaceAsPlainText>
+            <addData />
+          </Property>
+        </Properties>
+        <Inheritance>
+          <Extends>__SYSTEM.IQueryInterface</Extends>
+        </Inheritance>
+        <InterfaceAsPlainText>
+          <xhtml xmlns="http://www.w3.org/1999/xhtml">INTERFACE I_Delayable EXTENDS __SYSTEM.IQueryInterface 
+</xhtml>
+        </InterfaceAsPlainText>
+        <addData />
+      </Interface>
+    </data>
+    <data name="http://www.3s-software.com/plcopenxml/interface" handleUnknown="implementation">
+      <Interface name="I_Dimmable" ObjectId="b7492116-7ecc-429f-aca2-bf88e4725b00">
+        <Methods>
+          <Method name="M_RecallMinLevel" ObjectId="36b8e14a-3d46-4770-9bea-53d6acf4f89b">
+            <interface />
+            <InterfaceAsPlainText>
+              <xhtml xmlns="http://www.w3.org/1999/xhtml">METHOD M_RecallMinLevel
+VAR_INPUT
+END_VAR
+</xhtml>
+            </InterfaceAsPlainText>
+            <addData />
+          </Method>
+          <Method name="M_SetControlLevel" ObjectId="193a878d-92d6-4792-b65a-bdf92939c23d">
+            <interface>
+              <inputVars>
+                <variable name="nControlLevel">
+                  <type>
+                    <BYTE />
+                  </type>
+                </variable>
+              </inputVars>
+            </interface>
+            <InterfaceAsPlainText>
+              <xhtml xmlns="http://www.w3.org/1999/xhtml">METHOD M_SetControlLevel
+VAR_INPUT
+	nControlLevel	:	BYTE;
+END_VAR
+</xhtml>
+            </InterfaceAsPlainText>
+            <addData />
+          </Method>
+        </Methods>
+        <Properties>
+          <Property name="nControlLevel" ObjectId="9eb81d6f-aa2c-479d-80eb-70339adc4290">
+            <interface>
+              <returnType>
+                <BYTE />
+              </returnType>
+            </interface>
+            <GetAccessor>
+              <InterfaceAsPlainText>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml" />
+              </InterfaceAsPlainText>
+            </GetAccessor>
+            <SetAccessor>
+              <InterfaceAsPlainText>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml" />
+              </InterfaceAsPlainText>
+            </SetAccessor>
+            <InterfaceAsPlainText>
+              <xhtml xmlns="http://www.w3.org/1999/xhtml">PROPERTY nControlLevel : BYTE</xhtml>
+            </InterfaceAsPlainText>
+            <addData />
+          </Property>
+          <Property name="nMaxLevel" ObjectId="9ba1e131-5917-46f3-a92a-e210574144ca">
+            <interface>
+              <returnType>
+                <BYTE />
+              </returnType>
+            </interface>
+            <GetAccessor>
+              <InterfaceAsPlainText>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml" />
+              </InterfaceAsPlainText>
+            </GetAccessor>
+            <SetAccessor>
+              <InterfaceAsPlainText>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml" />
+              </InterfaceAsPlainText>
+            </SetAccessor>
+            <InterfaceAsPlainText>
+              <xhtml xmlns="http://www.w3.org/1999/xhtml">PROPERTY nMaxLevel : BYTE</xhtml>
+            </InterfaceAsPlainText>
+            <addData />
+          </Property>
+          <Property name="nMinLevel" ObjectId="b8b863f9-435f-4235-ac3c-dbabdc47862c">
+            <interface>
+              <returnType>
+                <BYTE />
+              </returnType>
+            </interface>
+            <GetAccessor>
+              <InterfaceAsPlainText>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml" />
+              </InterfaceAsPlainText>
+            </GetAccessor>
+            <SetAccessor>
+              <InterfaceAsPlainText>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml" />
+              </InterfaceAsPlainText>
+            </SetAccessor>
+            <InterfaceAsPlainText>
+              <xhtml xmlns="http://www.w3.org/1999/xhtml">PROPERTY nMinLevel : BYTE</xhtml>
+            </InterfaceAsPlainText>
+            <addData />
+          </Property>
+        </Properties>
+        <Inheritance>
+          <Extends>__SYSTEM.IQueryInterface</Extends>
+        </Inheritance>
+        <InterfaceAsPlainText>
+          <xhtml xmlns="http://www.w3.org/1999/xhtml">INTERFACE I_Dimmable EXTENDS __SYSTEM.IQueryInterface
+</xhtml>
+        </InterfaceAsPlainText>
+        <addData />
+      </Interface>
+    </data>
+    <data name="http://www.3s-software.com/plcopenxml/interface" handleUnknown="implementation">
+      <Interface name="I_Light" ObjectId="f3ecb25a-63e6-4716-a3c6-1eb2ebf947db">
+        <Methods>
+          <Method name="M_Off" ObjectId="74e77dc4-0cd0-4641-a1e4-5afdd2d8d959">
+            <interface />
+            <InterfaceAsPlainText>
+              <xhtml xmlns="http://www.w3.org/1999/xhtml">METHOD M_Off
+VAR_INPUT
+END_VAR
+</xhtml>
+            </InterfaceAsPlainText>
+            <addData />
+          </Method>
+          <Method name="M_On" ObjectId="df632f07-6e29-4d5a-a7a4-c5c1b75c7618">
+            <interface />
+            <InterfaceAsPlainText>
+              <xhtml xmlns="http://www.w3.org/1999/xhtml">METHOD M_On
+VAR_INPUT
+END_VAR
+</xhtml>
+            </InterfaceAsPlainText>
+            <addData />
+          </Method>
+        </Methods>
+        <Properties>
+          <Property name="bControlLevel" ObjectId="7b5345f0-6fad-4363-b697-3d9103d3c488">
+            <interface>
+              <returnType>
+                <BOOL />
+              </returnType>
+            </interface>
+            <GetAccessor>
+              <InterfaceAsPlainText>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml" />
+              </InterfaceAsPlainText>
+            </GetAccessor>
+            <SetAccessor>
+              <InterfaceAsPlainText>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml" />
+              </InterfaceAsPlainText>
+            </SetAccessor>
+            <InterfaceAsPlainText>
+              <xhtml xmlns="http://www.w3.org/1999/xhtml">PROPERTY bControlLevel : BOOL</xhtml>
+            </InterfaceAsPlainText>
+            <addData />
+          </Property>
+        </Properties>
+        <Inheritance>
+          <Extends>__SYSTEM.IQueryInterface</Extends>
+        </Inheritance>
+        <InterfaceAsPlainText>
+          <xhtml xmlns="http://www.w3.org/1999/xhtml">INTERFACE I_Light EXTENDS __SYSTEM.IQueryInterface
+
+</xhtml>
+        </InterfaceAsPlainText>
+        <addData />
+      </Interface>
+    </data>
+    <data name="http://www.3s-software.com/plcopenxml/projectstructure" handleUnknown="discard">
+      <ProjectStructure>
+        <Folder Name="16_Interface_vs_Herencia">
+          <Folder Name="PLC-Library">
+            <Folder Name="Clases">
+              <Object Name="FB_DelayedLight" ObjectId="b9811f47-d520-4c1c-b4ba-1653b30fe046">
+                <Object Name="FB_init" ObjectId="80b80148-5b85-46df-9caa-03f8ef3c2470" />
+                <Object Name="M_Off" ObjectId="e0b32897-5bf5-40bd-b2bb-1301024ef38d" />
+                <Object Name="M_On" ObjectId="8623f43e-a70b-462c-b9a0-fed444694e99" />
+                <Object Name="tOffDelay" ObjectId="ac8bdadc-60e8-464e-a14c-4673e90c3892" />
+                <Object Name="tOnDelay" ObjectId="6f7eaee8-1cc3-49d3-8f60-99156c7d43f6" />
+              </Object>
+              <Object Name="FB_DimmingLight" ObjectId="1826553c-b915-4833-a4c3-433f365bae95">
+                <Object Name="FB_init" ObjectId="6fff9f98-763b-4dab-851c-ffde17835f91" />
+                <Object Name="M_Off" ObjectId="98ed7e3c-c38e-4acd-9292-6a681780cf2c" />
+                <Object Name="M_On" ObjectId="01e14d7e-f4aa-464d-bede-b40eaf75570b" />
+                <Object Name="M_RecallMinLevel" ObjectId="decb0434-7eba-4297-945b-fbcd54b7ca8a" />
+                <Object Name="M_SetControlLevel" ObjectId="f9e80115-bd7a-4c33-afa5-10632bab5689" />
+                <Object Name="nControlLevel" ObjectId="f99dd978-4356-4da9-b103-7be88e005014" />
+                <Object Name="nMaxLevel" ObjectId="3ca97db3-ea5f-4f61-9ad7-8de6d43dc13d" />
+                <Object Name="nMinLevel" ObjectId="8f16db86-10f5-4940-90e8-e51b23fcd72f" />
+              </Object>
+              <Object Name="FB_Light" ObjectId="ac651da5-5748-4f92-a579-c38eff465f2e">
+                <Object Name="bControlLevel" ObjectId="8f0a6793-97a1-42fb-89c5-c7cbe36a5815" />
+                <Object Name="M_Off" ObjectId="cd28f873-04eb-42ed-b680-18b8c9700ed2" />
+                <Object Name="M_On" ObjectId="0b05d84c-3c99-44b7-a9f9-a9a6e37e56c6" />
+              </Object>
+              <Object Name="FB_RoomController" ObjectId="2a1caed4-34c2-498a-8559-6cd323df6366">
+                <Object Name="AllCallMinLevel" ObjectId="eedd4bb3-df7f-453f-aa98-49a21ff69834" />
+                <Object Name="AllOff" ObjectId="0bc130ba-4953-42b5-bf57-41bf935f62bd" />
+                <Object Name="AllOn" ObjectId="dfc7d4b2-0099-4f6c-a295-88426977e37d" />
+                <Object Name="Invoke" ObjectId="5a47645d-1d72-4853-8093-17343d748e59" />
+              </Object>
+            </Folder>
+            <Folder Name="Interfaces">
+              <Object Name="I_Delayable" ObjectId="4cf5cd6d-0a90-402c-a922-1728b3df66ca">
+                <Object Name="tOffDelay" ObjectId="912eb2b3-a8ae-4ae6-aa68-276a62e1b9cd" />
+                <Object Name="tOnDelay" ObjectId="a0e6d6b2-9ab9-4dfe-a1e0-f0f9023e7867" />
+              </Object>
+              <Object Name="I_Dimmable" ObjectId="b7492116-7ecc-429f-aca2-bf88e4725b00">
+                <Object Name="M_RecallMinLevel" ObjectId="36b8e14a-3d46-4770-9bea-53d6acf4f89b" />
+                <Object Name="M_SetControlLevel" ObjectId="193a878d-92d6-4792-b65a-bdf92939c23d" />
+                <Object Name="nControlLevel" ObjectId="9eb81d6f-aa2c-479d-80eb-70339adc4290" />
+                <Object Name="nMaxLevel" ObjectId="9ba1e131-5917-46f3-a92a-e210574144ca" />
+                <Object Name="nMinLevel" ObjectId="b8b863f9-435f-4235-ac3c-dbabdc47862c" />
+              </Object>
+              <Object Name="I_Light" ObjectId="f3ecb25a-63e6-4716-a3c6-1eb2ebf947db">
+                <Object Name="bControlLevel" ObjectId="7b5345f0-6fad-4363-b697-3d9103d3c488" />
+                <Object Name="M_Off" ObjectId="74e77dc4-0cd0-4641-a1e4-5afdd2d8d959" />
+                <Object Name="M_On" ObjectId="df632f07-6e29-4d5a-a7a4-c5c1b75c7618" />
+              </Object>
+            </Folder>
+            <Object Name="FB_MyLight" ObjectId="33a35145-5382-479d-a9b1-6eb7fce18066">
+              <Object Name="bControlLevel" ObjectId="96b0b6df-8322-4e4f-99c0-457b4109f5e8" />
+              <Object Name="M_Off" ObjectId="5b1ce345-de44-4d0b-88e0-a14878d08de9" />
+              <Object Name="M_On" ObjectId="56d8e560-4532-4c94-a8c5-df0ead0f6f60" />
+              <Object Name="M_RecallMinLevel" ObjectId="c19e5441-c893-4081-b829-c1d6d21901f0" />
+              <Object Name="M_SetControlLevel" ObjectId="60fb3e80-764a-428f-8949-1ee43d06f7c5" />
+              <Object Name="nControlLevel" ObjectId="066af10b-68de-4416-9be1-755d522e7223" />
+              <Object Name="nMaxLevel" ObjectId="9b8c23e4-3cff-4d6a-9a37-3c3378264c67" />
+              <Object Name="nMinLevel" ObjectId="5862ba08-3bde-467d-8b5f-63bfb6e5de66" />
+              <Object Name="tOffDelay" ObjectId="dbda5586-4de7-4a95-bf02-c9074b35f7f0" />
+              <Object Name="tOnDelay" ObjectId="49e3891b-4c4f-4e9e-b9e7-f05d4f1630de" />
+            </Object>
+          </Folder>
+          <Folder Name="Tests">
+            <Object Name="P_DelayedLight_Test_CFC" ObjectId="5095a31f-897b-4169-abe3-542905efb1ea" />
+            <Object Name="P_DelayedLight_Test_ST" ObjectId="e8ff1aaf-450c-4f38-a1b0-b04587cc28eb" />
+            <Object Name="P_DimmingLight_Test_CFC" ObjectId="19678740-a9f2-4c9d-a3af-951aff7688dc" />
+            <Object Name="P_DimmingLight_Test_ST" ObjectId="a0f539b5-31a1-424d-9748-dd8f15a48a5e" />
+            <Object Name="P_Light_Test_CFC" ObjectId="40eed654-30f9-4a77-ad89-5d5f035a4f47" />
+            <Object Name="P_Light_Test_ST" ObjectId="2dc43587-1fdb-406e-a556-9521154ef615" />
+            <Object Name="P_MyLight_Test_CFC" ObjectId="d3b75a9e-a061-47a8-b747-b803b819562c" />
+            <Object Name="P_MyLight_Test_ST" ObjectId="8d5c2de6-c612-4a36-8f71-3b8183571ca3" />
+            <Object Name="P_RoomController_Test_CFC" ObjectId="a6307abe-a1f8-4cf1-85d9-96120581b71f" />
+            <Object Name="P_RoomController_Test_ST" ObjectId="3554a96d-746a-4124-9b19-fada433b3760" />
+          </Folder>
+          <Object Name="_16_Interface_vs_Herencia" ObjectId="f91f7753-0f8e-42cd-b8fd-96db2bd303ab" />
+        </Folder>
+      </ProjectStructure>
+    </data>
+  </addData>
+</project>

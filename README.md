@@ -34,4 +34,4 @@
     - 🔗 [013 - OOP IEC 61131-3 PLC -- FB Abstract vs Interface](https://youtu.be/b-KRLmblh6g)
     - 🔗 [014 - OOP IEC 61131-3 PLC -- Interface Fluida](https://youtu.be/k_VFBLGBUKk)
     - 🔗 [015 - OOP IEC 61131-3 PLC -- Interface vs Herencia_1](https://youtu.be/etY-NtkZ85w)
-    - 🔗 [016 - OOP IEC 61131-3 PLC -- Interface vs Herencia_2]()
+    - 🔗 [016 - OOP IEC 61131-3 PLC -- Interface vs Herencia_2](https://youtu.be/gFJN7x_m4to)
