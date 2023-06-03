@@ -43,7 +43,3 @@
 - 🔗 [Further operators, infosys.beckhoff.com](https://infosys.beckhoff.com/english.php?content=../content/1033/tc3_plc_intro/3998094475.html&id=)
 - 🔗 [Others Operators, help.codesys.com](https://help.codesys.com/api-content/2/codesys/3.5.13.0/en/_cds_struct_reference_operators/#other-operators)
 - 🔗 [stefanhenneken.net,iec-61131-3-object-composition-with-the-help-of-interfaces](https://stefanhenneken.net/2014/02/18/iec-61131-3-object-composition-with-the-help-of-interfaces/)
-- 🔗 [20. TwinCAT 3: Structures: Alignment & dynamically created structures](https://www.youtube.com/watch?v=d0vkD-EVv7g)
-***
-### <span style="color:grey">Links Videos de Youtube 017:</span>
-- 🔗 [017 - OOP IEC 61131-3 PLC -- Otros Operadores]()
