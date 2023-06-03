@@ -9,7 +9,6 @@
 ### :link: [SSG Documentation OOP IC61131-3 PLC Italiano:](https://runtimevic.github.io/OOP-IEC61131-3--Curso-Youtube/it/)
 ### :link: [SSG Documentation OOP IC61131-3 PLC Portugues:](https://runtimevic.github.io/OOP-IEC61131-3--Curso-Youtube/pt/)
 ***
-***
 ### 📃 :es: [Documentacion en PDF Español](https://github.com/runtimevic/OOP-IEC61131-3--Curso-Youtube/blob/gh-pages/document-es.pdf)
 ### 📃 :uk: [Documentation en PDF English](https://github.com/runtimevic/OOP-IEC61131-3--Curso-Youtube/blob/gh-pages/document-en.pdf)
 ### 📃 :it: [Documentation en PDF Italiano](https://github.com/runtimevic/OOP-IEC61131-3--Curso-Youtube/blob/gh-pages/document-it.pdf)
