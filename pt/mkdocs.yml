@@ -1,4 +1,4 @@
-site_name: Programación Orientada a Objetos OOP IEC61131-3 Curso Youtube by Runtimevic
+site_name: Programação Orientada a Objeto OOP IEC61131-3 Curso no Youtube por Runtimevic
 docs_dir: '../../docs/pt'
 site_url: https://runtimevic.github.io/OOP-IEC61131-3--Curso-Youtube/pt/
 site_author: Kauê Koschitz Roratto
@@ -13,7 +13,7 @@ theme:
   name: material
 #  logo: imagenes/OOP_Logo2.png
   custom_dir: overrides
-  logo: imagenes/oop_logg.webp
+  logo: imagens/oop_logg.webp
   palette:
      # Palette toggle for light mode
     - scheme: default
