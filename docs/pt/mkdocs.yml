@@ -119,44 +119,44 @@ nav:
     - Introdução: index.md
     - Tipos de paradigmas: tipos de paradigmas.md
     - Conceitos anteriores:
-       - Tipos de Dados: Conceptos Previos/Tipos de datos.md       
-       - Tipos de variáveis ​​e variáveis ​​especiais: Conceptos Previos/Variable types and special variables.md
-       - Modificadores de acesso: Conceptos Previos/modificadores de acceso.md
-       - Tabela de Modificadores de acesso: Conceptos Previos/Tabla de Modificadores de acceso.md      
+       - Tipos de Dados: Conceitos anteriores/Tipos de datos.md       
+       - Tipos de variáveis ​​e variáveis ​​especiais: Conceitos anteriores/Variable types and special variables.md
+       - Modificadores de acesso: Conceitos anteriores/modificadores de acceso.md
+       - Tabela de Modificadores de acesso: Conceitos anteriores/Tabla de Modificadores de acceso.md      
     - Classes e Objetos:
-       - Classes e Objetos: Clases y Objetos/clases y objetos.md
+       - Classes e Objetos: Clases e Objetos/clases y objetos.md
        - Bloco de funções: 
-          - Bloco de funções: Clases y Objetos/Function Block.md
-          - Bloco de funções Modificadores de acesso:  Clases y Objetos/Function Block Modificadores de acceso.md
-          - Bloco de funções Declaração de variáveis: Clases y Objetos/Function Block Declaracion de variables.md
-          - Construtor e Destruidor: Clases y Objetos/Constructor y Destructor.md          
+          - Bloco de funções: Clases e Objetos/Function Block.md
+          - Bloco de funções Modificadores de acesso:  Clases e Objetos/Function Block Modificadores de acceso.md
+          - Bloco de funções Declaração de variáveis: Clases e Objetos/Function Block Declaracion de variables.md
+          - Construtor e Destruidor: Clases e Objetos/Constructor y Destructor.md          
        - Objeto Método: 
-          - Método: Clases y Objetos/metodo.md
-          - Método Modificadores de acesso: Clases y Objetos/Metodo Modificadores de acceso.md
-          - Método Declaração de variáveis: Clases y Objetos/Metodo Declaracion de variables.md
-          - Método tipos de variável de retorno: Clases y Objetos/Metodo Tipos de variables de retorno.md
-       - Objeto Propiedade: Clases y Objetos/propiedad.md
+          - Método: Clases e Objetos/metodo.md
+          - Método Modificadores de acesso: Clases e Objetos/Metodo Modificadores de acceso.md
+          - Método Declaração de variáveis: Clases e Objetos/Metodo Declaracion de variables.md
+          - Método tipos de variável de retorno: Clases e Objetos/Metodo Tipos de variables de retorno.md
+       - Objeto Propiedade: Clases e Objetos/propiedad.md
        - Herança:
-          - Herança Bloco de funções: Clases y Objetos/Herencia/Herencia Bloque de Funcion.md
-          - Herança Estrutura: Clases y Objetos/Herencia/Herencia Estructura.md
-          - Herança Interface: Clases y Objetos/Herencia/Herencia Interface.md
-       - THIS ponteiro: Clases y Objetos/THIS pointer.md
-       - SUPER ponteiro: Clases y Objetos/SUPER pointer.md
-       - Interface: Clases y Objetos/interface.md
-       - ponteiro e referência: Clases y Objetos/pointer and reference.md
-       - Palavra chave Abstrato: Clases y Objetos/Keyword_Abstract.md
-       - FB Abstrato vs Interface: Clases y Objetos/FB abstracto frente a interfaz.md
-       - Interface fluido: Clases y Objetos/Interfaz fluida.md
-       - Interface vs Herança: Clases y Objetos/Interface vs Herencia.md
-       - Outros Operadores: Clases y Objetos/Otros Operadores.md
+          - Herança Bloco de funções: Clases e Objetos/Herencia/Herencia Bloque de Funcion.md
+          - Herança Estrutura: Clases e Objetos/Herencia/Herencia Estructura.md
+          - Herança Interface: Clases e Objetos/Herencia/Herencia Interface.md
+       - THIS ponteiro: Clases e Objetos/THIS pointer.md
+       - SUPER ponteiro: Clases e Objetos/SUPER pointer.md
+       - Interface: Clases e Objetos/interface.md
+       - ponteiro e referência: Clases e Objetos/pointer and reference.md
+       - Palavra chave Abstrato: Clases e Objetos/Keyword_Abstract.md
+       - FB Abstrato vs Interface: Clases e Objetos/FB abstracto frente a interfaz.md
+       - Interface fluido: Clases e Objetos/Interfaz fluida.md
+       - Interface vs Herança: Clases e Objetos/Interface vs Herencia.md
+       - Outros Operadores: Clases e Objetos/Otros Operadores.md
     - ExST:
        - Texto Estruturado Estendido: Extended_Structured_Text.md
     - Começo OOP: 
-       - 4 Pilares: principios/_principios OOP.md
-       - Abstração: principios/abstraccion.md
-       - Encapsulamento: principios/encapsulamiento.md
-       - Herança: principios/herencia.md
-       - Polimorfismo: principios/polimorfismo.md    
+       - 4 Pilares: começo/_principios OOP.md
+       - Abstração: começo/abstraccion.md
+       - Encapsulamento: começo/encapsulamiento.md
+       - Herança: começo/herencia.md
+       - Polimorfismo: começo/polimorfismo.md    
     - SOLID: 
        - SOLID: solid/_SOLID.md
        - SRP - Princípio da Responsabilidade Individual: solid/Principio de Responsabilidad Unica.md
@@ -169,19 +169,19 @@ nav:
        - Class UML: UML/Class UML.md
        - Relações: UML/relaciones.md
        - StateChart UML: UML/Statechart UML.md
-    - Tipos de Design para programação de PLC: Tipos de Diseño para programacion de PLC.md
+    - Tipos de Design para programação de PLC: Tipos de Design para programação de PLC.md
     - Padrões de Design:
-       - Padrões de Design : Patrones de Diseño/_Patrones de Diseño.md
+       - Padrões de Design : Padrões de Design/_Patrones de Diseño.md
        - Padrões de Design Criacional:
-          - Padrão Método de fábrica: Patrones de Diseño/Factory Method Design Pattern.md
-          - Padrão Fábrica Abstrata: Patrones de Diseño/The Abstract Factory Pattern.md
+          - Padrão Método de fábrica: Padrões de Design/Factory Method Design Pattern.md
+          - Padrão Fábrica Abstrata: Padrões de Design/The Abstract Factory Pattern.md
        - Padrões de Design Estrutural:
-          - Padrão Decorador: Patrones de Diseño/Decorator Design Pattern.md
+          - Padrão Decorador: Padrões de Design/Decorator Design Pattern.md
        - Padrões de Design de Comportamento:
-          - Padrão de Estratégia: Patrones de Diseño/Strategy pattern.md
-          - Padrão Observador: Patrones de Diseño/Observer Design Pattern.md
-          - Padrão Visitante: Patrones de Diseño/The Visitor Design Pattern.md
-    - Livrarias : Librerias.md
+          - Padrão de Estratégia: Padrões de Design/Strategy pattern.md
+          - Padrão Observador: Padrões de Design/Observer Design Pattern.md
+          - Padrão Visitante: Padrões de Design/The Visitor Design Pattern.md
+    - Livrarias : Livrarias.md
     - Links OOP: links.md
     - TDD:
        - TDD - Desenvolvimento Orientado a Testes: TDD/Test Driven Development.md
