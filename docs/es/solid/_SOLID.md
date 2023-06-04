@@ -57,7 +57,7 @@ Todos estos principios tienen el objetivo común de mejorar la mantenibilidad y 
 
 Los principios SOLID no son reglas o leyes que deban seguirse estrictamente. Son pautas que pueden ayudarnos a mejorar nuestra calidad de código y habilidades de diseño. No están destinados a ser aplicados ciega o dogmáticamente. Están destinados a ser utilizados con sentido común y juicio.
 ***
-### <span style="color:grey">Links:</span>
+### <span style="color:grey">Links SOLID:</span>
 - 🔗 [Cómo explicar conceptos de programación orientada a objetos a un niño de 6 años](https://www.freecodecamp.org/news/object-oriented-programming-concepts-21bb035f7260/#:~:text=The%20four%20principles%20of%20object,abstraction%2C%20inheritance%2C%20and%20polymorphism.)
 
 - 🔗 [iec-61131-3-solid-five-principles-for-better-software,stefanhenneken.net](https://stefanhenneken.net/2021/07/25/iec-61131-3-solid-five-principles-for-better-software/#more-1892)
@@ -65,5 +65,7 @@ Los principios SOLID no son reglas o leyes que deban seguirse estrictamente. Son
 - 🔗 [Libro SOLID IEC61131-3 en Aleman de Stefanhenneken](https://www.bod.de/buchshop/anwendung-der-solid-prinzipien-mit-der-iec-61131-3-stefan-henneken-9783757870706)
 
 - 🔗 [kentcdodds.com,aha-programming](https://kentcdodds.com/blog/aha-programming)
+
+-  🔗 [Qué son los principios SOLID ? Por qué son tan importantes y verás que ya los aplicas sin saberlo !!](https://www.youtube.com/watch?v=EbpM-i6GZjs)
 
 

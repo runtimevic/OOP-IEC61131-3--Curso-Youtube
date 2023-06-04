@@ -89,6 +89,7 @@ Color := Mercedes.Color;
 
 - 🔗 [Object Oriented Industrial Programming (OOIP) -- March 2021 CODESYS Tech Talk](https://www.youtube.com/watch?v=vRGaW4L762k)
 
+- 🔗 [Clase de Programación Orientada a Objetos en una hora ! Cómo crear tus entidades, herencia y más](https://www.youtube.com/watch?v=2jfIfeY4lrQ)
 ***
 ### <span style="color:grey">Link al Video de Youtube 002:</span>
 - 🔗 [002 - OOP IEC 61131-3 PLC -- Clase y Objeto](https://youtu.be/3IudQIj1noo)
