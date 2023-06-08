@@ -143,3 +143,6 @@ Además de los Patrones de Diseño tenemos:
 - 🔗 [refactoring.guru/es/design-patterns](https://refactoring.guru/es/design-patterns)
 - 🔗 [0w8States/PLC-Design-Patterns](https://github.com/0w8States/PLC-Design-Patterns)
 - 🔗 [github.com/Aliazzzz/Applied-Design-Patterns-in-CODESYS-V3](https://github.com/Aliazzzz/Applied-Design-Patterns-in-CODESYS-V3)
+- 🔗 [sourcemaking.com/design_patterns](https://sourcemaking.com/design_patterns)
+***
+### <span style="color:grey">Link al Video de Youtube_NNN:</span>

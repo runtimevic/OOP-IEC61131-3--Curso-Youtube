@@ -31,7 +31,10 @@ El Desarrollo Dirigido por Pruebas significa pasar por tres fases. Una y otra ve
 Vamos a ver una lista de todas las implementaciones que he encontrado para conseguirlo:
 
 -
-
+***
 ### <span style="color:grey">Links Desarrollo Guiado por Pruebas:</span>
 
-- 🔗  [www.nimblework.com, desarrollo-dirigido-por-pruebas-tdd](https://www.nimblework.com/es/agile/desarrollo-dirigido-por-pruebas-tdd/)
+- 🔗 [www.nimblework.com, desarrollo-dirigido-por-pruebas-tdd](https://www.nimblework.com/es/agile/desarrollo-dirigido-por-pruebas-tdd/)
+- 🔗 [leanpub.com/tdd-ebook/read](https://leanpub.com/tdd-ebook/read)
+***
+### <span style="color:grey">Link al Video de Youtube_NNN:</span>
