@@ -1,0 +1,181 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<project xmlns="http://www.plcopen.org/xml/tc6_0200">
+  <fileHeader companyName="Beckhoff Automation GmbH" productName="TwinCAT PLC Control" productVersion="3.5.13.21" creationDateTime="2023-06-10T12:40:30.8169703" />
+  <contentHeader name="OOP_Curso" modificationDateTime="2023-06-10T12:40:30.8169703">
+    <coordinateInfo>
+      <fbd>
+        <scaling x="1" y="1" />
+      </fbd>
+      <ld>
+        <scaling x="1" y="1" />
+      </ld>
+      <sfc>
+        <scaling x="1" y="1" />
+      </sfc>
+    </coordinateInfo>
+    <addData>
+      <data name="http://www.3s-software.com/plcopenxml/projectinformation" handleUnknown="implementation">
+        <ProjectInformation />
+      </data>
+    </addData>
+  </contentHeader>
+  <types>
+    <dataTypes>
+      <dataType name="ST_Estructura">
+        <baseType>
+          <struct>
+            <variable name="dato1">
+              <type>
+                <LWORD />
+              </type>
+            </variable>
+            <variable name="dato2">
+              <type>
+                <DINT />
+              </type>
+            </variable>
+            <variable name="dato3">
+              <type>
+                <SINT />
+              </type>
+            </variable>
+          </struct>
+        </baseType>
+        <addData>
+          <data name="http://www.3s-software.com/plcopenxml/attributes" handleUnknown="implementation">
+            <Attributes>
+              <Attribute Name="enable_dynamic_creation" Value="" />
+            </Attributes>
+          </data>
+          <data name="http://www.3s-software.com/plcopenxml/interfaceasplaintext" handleUnknown="implementation">
+            <InterfaceAsPlainText>
+              <xhtml xmlns="http://www.w3.org/1999/xhtml">{attribute 'enable_dynamic_creation'}
+TYPE ST_Estructura :
+STRUCT
+	dato1 : LWORD;
+	dato2: DINT;
+	dato3: SINT;
+END_STRUCT
+END_TYPE
+</xhtml>
+            </InterfaceAsPlainText>
+          </data>
+          <data name="http://www.3s-software.com/plcopenxml/objectid" handleUnknown="discard">
+            <ObjectId>05004f40-b576-4e1d-b8ba-ed5c9fd309ac</ObjectId>
+          </data>
+        </addData>
+      </dataType>
+    </dataTypes>
+    <pous>
+      <pou name="_17_Otros_Operadores" pouType="program">
+        <interface>
+          <localVars>
+            <variable name="pEstructura">
+              <type>
+                <pointer>
+                  <baseType>
+                    <derived name="ST_Estructura" />
+                  </baseType>
+                </pointer>
+              </type>
+            </variable>
+            <variable name="struNew">
+              <type>
+                <BOOL />
+              </type>
+            </variable>
+            <variable name="pSTRING">
+              <type>
+                <pointer>
+                  <baseType>
+                    <string />
+                  </baseType>
+                </pointer>
+              </type>
+            </variable>
+            <variable name="bNew">
+              <type>
+                <BOOL />
+              </type>
+            </variable>
+          </localVars>
+          <localVars constant="true">
+            <variable name="cLength">
+              <type>
+                <UINT />
+              </type>
+              <initialValue>
+                <simpleValue value="150" />
+              </initialValue>
+            </variable>
+          </localVars>
+          <localVars>
+            <variable name="StruDelete">
+              <type>
+                <BOOL />
+              </type>
+            </variable>
+          </localVars>
+        </interface>
+        <body>
+          <ST>
+            <xhtml xmlns="http://www.w3.org/1999/xhtml">// Ejemplos de los Operadores __NEW y  __DELETE
+IF struNew AND (pEstructura = 0) THEN
+	pEstructura := __NEW(ST_Estructura);	
+	struNew := FALSE;
+END_IF
+
+IF bNew THEN
+    pSTRING := __NEW(BYTE, cLength);
+    bNew    := FALSE;
+END_IF
+
+IF StruDelete THEN
+	 __DELETE(pEstructura);	
+	 __DELETE(pSTRING);	
+	StruDelete := FALSE;
+END_IF</xhtml>
+          </ST>
+        </body>
+        <addData>
+          <data name="http://www.3s-software.com/plcopenxml/interfaceasplaintext" handleUnknown="implementation">
+            <InterfaceAsPlainText>
+              <xhtml xmlns="http://www.w3.org/1999/xhtml">PROGRAM _17_Otros_Operadores
+VAR
+	pEstructura : POINTER TO ST_Estructura;
+	struNew     : BOOL;
+END_VAR
+VAR
+	pSTRING  : POINTER TO STRING;
+	bNew     : BOOL;
+END_VAR	
+VAR CONSTANT
+	cLength  : UINT := 150;
+END_VAR
+VAR
+	StruDelete  : BOOL;
+END_VAR
+</xhtml>
+            </InterfaceAsPlainText>
+          </data>
+          <data name="http://www.3s-software.com/plcopenxml/objectid" handleUnknown="discard">
+            <ObjectId>cec54469-a796-4224-936c-ec59c1758dee</ObjectId>
+          </data>
+        </addData>
+      </pou>
+    </pous>
+  </types>
+  <instances>
+    <configurations />
+  </instances>
+  <addData>
+    <data name="http://www.3s-software.com/plcopenxml/projectstructure" handleUnknown="discard">
+      <ProjectStructure>
+        <Folder Name="17_Otros_Operadores">
+          <Object Name="ST_Estructura" ObjectId="05004f40-b576-4e1d-b8ba-ed5c9fd309ac" />
+          <Object Name="_17_Otros_Operadores" ObjectId="cec54469-a796-4224-936c-ec59c1758dee" />
+        </Folder>
+      </ProjectStructure>
+    </data>
+  </addData>
+</project>
