@@ -976,6 +976,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#test_and_set" class="md-nav__link">
+    TEST_AND_SET:
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#links-otros-operadores" class="md-nav__link">
     Links Otros Operadores:
   </a>
@@ -1792,6 +1799,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#test_and_set" class="md-nav__link">
+    TEST_AND_SET:
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#links-otros-operadores" class="md-nav__link">
     Links Otros Operadores:
   </a>
@@ -1826,53 +1840,169 @@
 <h3 id="otros-operadores"><span style="color:grey">Otros Operadores:</span></h3>
 <h3 id="__delete"><span style="color:grey">__DELETE:</span></h3>
 <ul>
-<li>🔗 <a href="https://infosys.beckhoff.com/content/1033/tc3_plc_intro/2529160331.html?id=2289870734872430416">__DELETE, infosys.beckhoff.com</a></li>
+<li>El operador es una extensión del estándar IEC 61131-3.</li>
+<li>El operador libera la memoria de instancias, que el operador __NEW generó dinámicamente. </li>
+<li>El operador DELETE no tiene valor de retorno y el operando se establece en 0 después de esta operación.
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1">//Syntax:</span>
+<span class="w"> </span><span class="nx">__DELETE</span><span class="w"> </span><span class="p">(</span><span class="o">&lt;</span><span class="nx">Pointer</span><span class="o">&gt;</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div></li>
+<li>
+<p>Si un puntero apunta a un bloque de funciones, TwinCAT llama al método correspondiente FB_exit antes de que el puntero se establezca en 0.</p>
+</li>
+<li>
+<p>🔗 <a href="https://infosys.beckhoff.com/content/1033/tc3_plc_intro/2529160331.html?id=2289870734872430416">__DELETE, infosys.beckhoff.com</a></p>
+</li>
 <li>🔗 <a href="https://help.codesys.com/api-content/2/codesys/3.5.12.0/en/_cds_operator_delete/">__DELETE, help.codesys.com</a></li>
 </ul>
 <hr />
 <h3 id="__isvalidref"><span style="color:grey">__ISVALIDREF:</span></h3>
 <ul>
+<li>El operador es una extensión del estándar IEC 61131-3.</li>
+<li>El operador se utiliza para comprobar si una referencia apunta a un valor. Por lo tanto, la verificación es comparable con una verificación de 'desigual a 0' en el caso de una variable de puntero.</li>
+<li>Puede encontrar una descripción de la aplicación y una muestra del uso del operador en la descripción del tipo de datos REFERENCE.</li>
+<li>El operador __ISVALIDREF solo se puede utilizar para operandos de tipo REFERENCE TO. Este operador no se puede utilizar para comprobar las variables de la interfaz. Para verificar si a una variable de interfaz ya se le asignó una instancia de bloque de funciones, puede verificar que la variable de interfaz no sea igual a 0 (IF iSample &lt;&gt; 0 THEN …).
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1">//Syntax: </span>
+<span class="o">&lt;</span><span class="nb">Boolean</span><span class="w"> </span><span class="nx">variable</span><span class="o">&gt;</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">__ISVALIDREF</span><span class="p">(</span><span class="o">&lt;</span><span class="kd">with</span><span class="w"> </span><span class="nx">REFERENCE</span><span class="w"> </span><span class="nx">TO</span><span class="w"> </span><span class="o">&lt;</span><span class="nx">data</span><span class="w"> </span><span class="nx">type</span><span class="o">&gt;</span><span class="w"> </span><span class="nx">declared</span><span class="w"> </span><span class="nx">identifier</span><span class="p">);</span>
+</code></pre></div></td></tr></table></div></li>
 <li>🔗 <a href="https://infosys.beckhoff.com/content/1033/tc3_plc_intro/2529165707.html?id=8190095739921439819">__ISVALIDREF, infosys.beckhoff.com</a></li>
 <li>🔗 <a href="https://help.codesys.com/api-content/2/codesys/3.5.14.0/en/_cds_operator_isvalidref/">__ISVALIDREF, help.codesys.com</a></li>
 </ul>
 <hr />
 <h3 id="__new"><span style="color:grey">__NEW:</span></h3>
 <ul>
+<li>El operador es una extensión del estándar IEC 61131-3.</li>
+<li>El operador __NEW asigna memoria para instancias de bloques de funciones o matrices de tipos de datos estándar. El operador devuelve un puntero con tipo adecuado al objeto. Si no utiliza el operador dentro de una asignación, TwinCAT emite un mensaje de error.</li>
+<li>Si falla el intento de asignación de memoria, __NEW devuelve el valor 0.</li>
+<li>La memoria dinámica se asigna desde el grupo de memoria del enrutador.</li>
+<li>Información de estado del enrutador TwinCAT :
+El bloque de funciones FB_GetRouterStatusInfo de la biblioteca Tc2_Utilities se puede utilizar para leer información de estado del enrutador TwinCAT, como la memoria del enrutador disponible, desde el PLC.
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1">//Syntax:</span>
+<span class="w"> </span><span class="nx">__NEW</span><span class="w"> </span><span class="p">(</span><span class="o">&lt;</span><span class="nx">Type</span><span class="o">&gt;</span><span class="p">,[</span><span class="o">&lt;</span><span class="nx">Length</span><span class="o">&gt;</span><span class="p">])</span>
+</code></pre></div></td></tr></table></div></li>
 <li>🔗 <a href="https://infosys.beckhoff.com/content/1033/tc3_plc_intro/2529171083.html?id=5409766235804740463">__NEW, infosys.beckhoff</a></li>
 <li>🔗 <a href="https://help.codesys.com/api-content/2/codesys/3.5.14.0/en/_cds_operator_new/">__NEW, help.codesys.com</a></li>
 </ul>
 <hr />
 <h3 id="__queryinterface"><span style="color:grey">__QUERYINTERFACE:</span></h3>
 <ul>
-<li>🔗 <a href="https://infosys.beckhoff.com/content/1033/tc3_plc_intro/2529176459.html?id=8921520647493442581">__QUERYINTERFACE, infosys.beckhoff.com</a></li>
-<li>🔗 <a href="https://help.codesys.com/api-content/2/codesys/3.5.13.0/en/_cds_operator_queryinterface/#d1ae1a1daa87f58c0a8640e0179dbc5-id-05c12751daa87f58c0a8640e010610d5">__QUERYINTERFACE, help.codesys.com</a></li>
+<li>El operador es una extensión del estándar IEC 61131-3.</li>
+<li>En tiempo de conversión, el operador realiza un tipo de referencia de interfaz a otra. El operador devuelve un resultado de tipo BOOL. TRUE significa que TwinCAT realizó la conversión con éxito.
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1">//Syntax: </span>
+<span class="nx">__QUERYINTERFACE</span><span class="p">(</span><span class="o">&lt;</span><span class="nx">ITF_Source</span><span class="o">&gt;</span><span class="p">,</span><span class="o">&lt;</span><span class="nx">ITF_Dest</span><span class="o">&gt;</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div></li>
+<li>1er operando: referencia de interfaz o instancia de FB.</li>
+<li>2.º operando: referencia de interfaz con los tipos de destino requeridos.</li>
 </ul>
+<p>Un requisito previo para la conversión explícita es que tanto ITF_Source como ITF_Dest sean derivados de __System.IQueryInterface. Esta interfaz está implícitamente disponible y no requiere biblioteca.
+- 🔗 <a href="https://infosys.beckhoff.com/content/1033/tc3_plc_intro/2529176459.html?id=8921520647493442581">__QUERYINTERFACE, infosys.beckhoff.com</a>
+- 🔗 <a href="https://help.codesys.com/api-content/2/codesys/3.5.13.0/en/_cds_operator_queryinterface/#d1ae1a1daa87f58c0a8640e0179dbc5-id-05c12751daa87f58c0a8640e010610d5">__QUERYINTERFACE, help.codesys.com</a></p>
 <hr />
 <h3 id="__querypointer"><span style="color:grey">__QUERYPOINTER:</span></h3>
 <ul>
+<li>El operador es una extensión de IEC61131-3.</li>
+<li>El operador habilita la conversión de tipo de una referencia de interfaz de un bloque de funciones a un puntero en tiempo de ejecución. El operador devuelve un resultado de tipo BOOL. TRUE significa que TwinCAT realizó la conversión con éxito.</li>
+<li>Por razones de compatibilidad, la definición del puntero a convertir debe ser una extensión de la interfaz básica __SYSTEM.IQueryInterface.
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1">//Syntax: </span>
+<span class="nx">__QUERYPOINTER</span><span class="w"> </span><span class="p">(</span><span class="o">&lt;</span><span class="nx">ITF_Source</span><span class="o">&gt;</span><span class="p">,</span><span class="w"> </span><span class="o">&lt;</span><span class="nx">Pointer_Dest</span><span class="o">&gt;</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div></li>
+<li>El primer operando asignado al operador es una referencia de interfaz o una instancia de FB con los tipos de destino deseados, el segundo operando es un puntero. Después de procesar __QUERYPOINTER, Pointer_Dest contiene el puntero a la referencia o instancia de un bloque de funciones, al que apunta actualmente la referencia de interfaz ITF_Source. Pointer_Dest no tiene tipo y se puede convertir a cualquier tipo. Asegúrese de que el tipo sea correcto. Por ejemplo, la interfaz podría ofrecer un método que devuelva un código de tipo.</li>
 <li>🔗 <a href="https://infosys.beckhoff.com/content/1033/tc3_plc_intro/2529181835.html?id=8665610409656000922">__QUERYPOINTER, infosys.beckhoff.com</a></li>
 <li>🔗 <a href="https://help.codesys.com/api-content/2/codesys/3.5.13.0/en/_cds_operator_querypointer/#a8ba732dbe7195dc0a8640e00227cc8-id-5fcc73e6dbe7195dc0a8640e0044a2da">__QUERYPOINTER, help.codesys.com</a></li>
 </ul>
 <hr />
 <h3 id="__try-__catch-__finally-__endtry"><span style="color:grey">__TRY, __CATCH, __FINALLY, __ENDTRY:</span></h3>
 <ul>
+<li>Los operadores son una extensión del estándar IEC 61131-3 y se utilizan para un manejo de excepciones específico en el código IEC.</li>
+<li>Disponible desde TC3.1 compilación 4024 para sistemas de tiempo de ejecución de 32 bits.</li>
+<li>Ahora también está disponible para sistemas de destino de 64 bits a partir de TwinCAT versión 3.1.4026
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1">//Syntax:</span>
+<span class="nx">__TRY</span>
+<span class="w">    </span><span class="o">&lt;</span><span class="nx">try_statements</span><span class="o">&gt;</span>
+
+<span class="nx">__CATCH</span><span class="p">(</span><span class="nx">exc</span><span class="p">)</span>
+<span class="w">    </span><span class="o">&lt;</span><span class="nx">catch_statements</span><span class="o">&gt;</span>
+
+<span class="nx">__FINALLY</span>
+<span class="w">    </span><span class="o">&lt;</span><span class="nx">finally_statements</span><span class="o">&gt;</span>
+
+<span class="nx">__ENDTRY</span>
+
+<span class="o">&lt;</span><span class="nx">further_statements</span><span class="o">&gt;</span>
+</code></pre></div></td></tr></table></div></li>
+<li>
+<p>Si una instrucción que aparece bajo el operador __Try genera una excepción, el programa del PLC no se detiene. En su lugar, ejecuta las instrucciones bajo _CATCH y, por lo tanto, inicia el manejo de excepciones. A continuación, se ejecutan las instrucciones bajo __FINALLY. El manejo de excepciones termina con __ENDTRY. A continuación, el programa de PLC ejecuta las instrucciones posteriores (instrucciones después de __ENDTRY).</p>
+</li>
+<li>
+<p>Las instrucciones del bloque _TRY, que se encuentran debajo de la instrucción que desencadena la excepción, ya no se ejecutan. Esto significa que tan pronto como se descarta la excepción, se cancela la ejecución posterior del bloque _TRY y se ejecutan las instrucciones bajo _CATCH.</p>
+</li>
+<li>
+<p>Las instrucciones bajo _FINALLY siempre se ejecutan, es decir, incluso si las instrucciones bajo _TRY no lanzan ninguna excepción.</p>
+</li>
+<li>
+<p>Una variable IEC para una excepción tiene el tipo de datos __SYSTEM.ExceptionCode.</p>
+</li>
 <li>🔗 <a href="https://help.codesys.com/api-content/2/codesys/3.5.13.0/en/_cds_operator_try_catch_finally_endtry/#b3e0448e303c0a8640e00979ff0-id-8af3ebb8d17883fcc0a8640e0068e281"> __TRY, __CATCH, __FINALLY, __ENDTRY, help.codesys.com</a></li>
-<li>
-<p>🔗 <a href="https://infosys.beckhoff.com/content/1033/tc3_plc_intro/2529187211.html?id=8164276621849278358"> __TRY, __CATCH, __FINALLY, __ENDTRY, infosys.beckhoff.com</a></p>
-</li>
-<li>
-<p>Ahora está disponible para sistemas de destino de 64 bits a partir de TwinCAT versión 3.1.4026</p>
-</li>
+<li>🔗 <a href="https://infosys.beckhoff.com/content/1033/tc3_plc_intro/2529187211.html?id=8164276621849278358"> __TRY, __CATCH, __FINALLY, __ENDTRY, infosys.beckhoff.com</a></li>
 </ul>
 <hr />
 <h3 id="__varinfo"><span style="color:grey">__VARINFO:</span></h3>
 <ul>
+<li>El operador es una extensión del estándar IEC 61131-3. </li>
+<li>El operador devuelve información sobre una variable. Puede guardar la información como una estructura de datos en una variable de tipo de datos __SYSTEM.VAR_INFO.
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1">//Syntax in the declaration:</span>
+<span class="o">&lt;</span><span class="nx">name</span><span class="w"> </span><span class="k">of</span><span class="w"> </span><span class="nx">the</span><span class="w"> </span><span class="nx">info</span><span class="w"> </span><span class="nx">variable</span><span class="o">&gt;</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="nx">__SYSTEM</span><span class="p">.</span><span class="nx">VAR_INFO</span><span class="p">;</span><span class="w"> </span><span class="c1">// Data structure for info variable</span>
+
+<span class="c1">//Syntax for the call:</span>
+<span class="o">&lt;</span><span class="nx">name</span><span class="w"> </span><span class="k">of</span><span class="w"> </span><span class="nx">the</span><span class="w"> </span><span class="nx">info</span><span class="w"> </span><span class="nx">variable</span><span class="o">&gt;</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">__VARINFO</span><span class="p">(</span><span class="w"> </span><span class="o">&lt;</span><span class="nx">variable</span><span class="w"> </span><span class="nx">name</span><span class="o">&gt;</span><span class="w"> </span><span class="p">);</span><span class="w"> </span><span class="c1">// Call of the operator</span>
+</code></pre></div></td></tr></table></div>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1">//Sample:</span>
+<span class="c1">//En tiempo de ejecución, la variable MyVarInfo contiene la información sobre la variable nVar.</span>
+
+<span class="nx">VAR</span>
+<span class="w">    </span><span class="nx">MyVarInfo</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="nx">__SYSTEM</span><span class="p">.</span><span class="nx">VAR_INFO</span><span class="p">;</span>
+<span class="w">    </span><span class="nx">nVar</span><span class="w">      </span><span class="o">:</span><span class="w"> </span><span class="nx">INT</span><span class="p">;</span>
+<span class="nx">END_VAR</span>
+<span class="nx">MyVarInfo</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">__VARINFO</span><span class="p">(</span><span class="nx">nVar</span><span class="p">);</span><span class="w">   </span>
+</code></pre></div></td></tr></table></div></li>
 <li>🔗 <a href="https://infosys.beckhoff.com/content/1033/tc3_plc_intro/3527777675.html?id=2730070918177533256">__VARINFO, infosys.beckhoff.com</a></li>
 <li>🔗 <a href="https://help.codesys.com/webapp/_cds_operator_varinfo;product=codesys;version=3.5.14.0">__VARINFO, help.codesys.com</a></li>
 </ul>
 <hr />
+<h3 id="test_and_set"><span style="color:grey">TEST_AND_SET:</span></h3>
+<ul>
+<li>Puede usar esta función para verificar y establecer una bandera. No hay opción para interrumpir el proceso. Esto permite sincronizar los accesos a los datos. El modo de operación de un semáforo se puede lograr con TestAndSet.</li>
+<li>Si la llamada a la función tiene éxito, la función devuelve VERDADERO y se puede acceder a los datos deseados. Si la llamada a la función no tiene éxito, la función devuelve FALSO y no se puede acceder a los datos deseados. En este caso, se debe prever un tratamiento alternativo.</li>
+</ul>
 <p>🔗 <a href="https://content.helpme-codesys.com/es/CODESYS%20Development%20System/_cds_operator_test_and_set.html">TEST_AND_SET, Codesys</a></p>
-<p>🔗 <a href="https://infosys.beckhoff.com/content/1033/tc3_plc_intro/31023115.html?id=6418824872038507808">TEST_AND_SET, TwinCAT</a></p>
+<p>🔗 <a href="https://infosys.beckhoff.com/content/1033/tc3_plc_intro/31023115.html?id=6418824872038507808">TESTANDSET, TwinCAT</a></p>
 <hr />
 <h3 id="links-otros-operadores"><span style="color:grey">Links Otros Operadores:</span></h3>
 <ul>
