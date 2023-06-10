@@ -34,6 +34,8 @@ En Codesys y en TwinCAT tendremos el diagrama:
 
 ***
 ### <span style="color:grey">Links UML:</span>
+- 🔗 [UML 📐 desde -10](https://www.youtube.com/playlist?list=PLOw7b-NX043ZalJyvLeCj_YIH8f0sU0iG)
+- 🔗 [Curso UML. Introducción. Vídeo 1](https://www.youtube.com/watch?v=KY81igoV8W0)
 - 🔗 [Tutorial UML en español](https://youtube.com/playlist?list=PLM-p96nOrGcaw5dhv8wOA5tVVWEmXtA2F)
 - 🔗 [www.plccoder.com, twincat-uml-class-diagram](https://www.plccoder.com/twincat-uml-class-diagram/)
 - 🔗 [content.helpme-codesys.com, uml_general](https://content.helpme-codesys.com/en/CODESYS%20UML/_uml_general.html)
