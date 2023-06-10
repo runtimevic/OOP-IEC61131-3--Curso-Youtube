@@ -3,7 +3,7 @@
   <POU Name="P_MyLight_Test_ST" Id="{8d5c2de6-c612-4a36-8f71-3b8183571ca3}" SpecialFunc="None">
     <Declaration><![CDATA[PROGRAM P_MyLight_Test_ST
 VAR
-	fbMyLight			:	FB_MyLight;
+	fbMyLight			:	FB_MyLight1;
 	bOn					:	BOOL;
 	bOff				:	BOOL;
 	bRecallMinLevel		:	BOOL;

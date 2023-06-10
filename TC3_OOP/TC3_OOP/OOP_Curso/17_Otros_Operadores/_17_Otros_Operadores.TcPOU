@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.12">
+  <POU Name="_17_Otros_Operadores" Id="{cec54469-a796-4224-936c-ec59c1758dee}" SpecialFunc="None">
+    <Declaration><![CDATA[PROGRAM _17_Otros_Operadores
+VAR
+	pEstructura : POINTER TO ST_Estructura;
+	struNew     : BOOL;
+END_VAR
+VAR
+	pSTRING  : POINTER TO STRING;
+	bNew     : BOOL;
+END_VAR	
+VAR CONSTANT
+	cLength  : UINT := 150;
+END_VAR
+VAR
+	StruDelete  : BOOL;
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[// Ejemplos de los Operadores __NEW y  __DELETE
+IF struNew AND (pEstructura = 0) THEN
+	pEstructura := __NEW(ST_Estructura);	
+	struNew := FALSE;
+END_IF
+
+IF bNew THEN
+    pSTRING := __NEW(BYTE, cLength);
+    bNew    := FALSE;
+END_IF
+
+IF StruDelete THEN
+	 __DELETE(pEstructura);	
+	 __DELETE(pSTRING);	
+	StruDelete := FALSE;
+END_IF]]></ST>
+    </Implementation>
+  </POU>
+</TcPlcObject>

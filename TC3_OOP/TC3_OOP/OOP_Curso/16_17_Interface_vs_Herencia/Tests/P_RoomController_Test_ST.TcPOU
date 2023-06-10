@@ -4,7 +4,7 @@
     <Declaration><![CDATA[PROGRAM P_RoomController_Test_ST
 VAR
 	fbRoomController	:	FB_RoomController;
-	fbMyLight			:	FB_MyLight;
+	fbMyLight			:	FB_MyLight1;
 	fbDelayedLight		:	FB_DelayedLight;
 	fbDimmingLight		:	FB_DimmingLight;
 	bAllOn				:	BOOL;

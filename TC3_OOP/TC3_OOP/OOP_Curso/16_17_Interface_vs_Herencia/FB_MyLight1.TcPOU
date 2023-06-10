@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.12">
-  <POU Name="FB_MyLight" Id="{33a35145-5382-479d-a9b1-6eb7fce18066}" SpecialFunc="None">
-    <Declaration><![CDATA[FUNCTION_BLOCK FB_MyLight EXTENDS FB_Light IMPLEMENTS I_Delayable, I_Dimmable
+  <POU Name="FB_MyLight1" Id="{33a35145-5382-479d-a9b1-6eb7fce18066}" SpecialFunc="None">
+    <Declaration><![CDATA[FUNCTION_BLOCK FB_MyLight1 EXTENDS FB_Light IMPLEMENTS I_Delayable, I_Dimmable
 VAR_INPUT
 	bRecallMinLevel			:	BOOL;
 	bSetControlLevel		:	BOOL;

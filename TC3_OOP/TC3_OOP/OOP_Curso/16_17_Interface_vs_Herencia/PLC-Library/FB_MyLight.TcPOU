@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.12">
-  <POU Name="FB_MyLight" Id="{33a35145-5382-479d-a9b1-6eb7fce18066}" SpecialFunc="None">
+  <POU Name="FB_MyLight" Id="{91716381-30ef-40c9-bfd0-b7f11b924739}" SpecialFunc="None">
     <Declaration><![CDATA[FUNCTION_BLOCK FB_MyLight EXTENDS FB_Light IMPLEMENTS I_Delayable, I_Dimmable
 VAR_INPUT
 	bRecallMinLevel			:	BOOL;
@@ -53,23 +53,23 @@ nControl := nControlLevel;
 
 ]]></ST>
     </Implementation>
-    <Property Name="bControlLevel" Id="{96b0b6df-8322-4e4f-99c0-457b4109f5e8}">
+    <Property Name="bControlLevel" Id="{6ef0bc61-6276-40a2-aea9-973d8e73888f}">
       <Declaration><![CDATA[PROPERTY bControlLevel : BOOL
 ]]></Declaration>
-      <Get Name="Get" Id="{71350168-4d79-4601-9532-e0d8800dd605}">
+      <Get Name="Get" Id="{716732d9-ee31-4511-bc6a-9cf2894cec73}">
         <Declaration><![CDATA[]]></Declaration>
         <Implementation>
           <ST><![CDATA[bControlLevel := _bControlLevel;]]></ST>
         </Implementation>
       </Get>
-      <Set Name="Set" Id="{124e884b-92d9-40f7-9533-f25efa40e2f0}">
+      <Set Name="Set" Id="{c60a13f0-adc8-4a3f-ac55-503d94e93b05}">
         <Declaration><![CDATA[]]></Declaration>
         <Implementation>
           <ST><![CDATA[]]></ST>
         </Implementation>
       </Set>
     </Property>
-    <Method Name="M_Off" Id="{5b1ce345-de44-4d0b-88e0-a14878d08de9}">
+    <Method Name="M_Off" Id="{49d62fec-fb78-498b-a383-c7bccf10f9d6}">
       <Declaration><![CDATA[METHOD M_Off
 ]]></Declaration>
       <Implementation>
@@ -78,7 +78,7 @@ fbDelayedLight.M_Off();
 ]]></ST>
       </Implementation>
     </Method>
-    <Method Name="M_On" Id="{56d8e560-4532-4c94-a8c5-df0ead0f6f60}">
+    <Method Name="M_On" Id="{f7296013-5dbb-4b9d-8d8a-4630ca64b3cf}">
       <Declaration><![CDATA[METHOD M_On
 ]]></Declaration>
       <Implementation>
@@ -87,7 +87,7 @@ fbDelayedLight.M_On();
 ]]></ST>
       </Implementation>
     </Method>
-    <Method Name="M_RecallMinLevel" Id="{c19e5441-c893-4081-b829-c1d6d21901f0}">
+    <Method Name="M_RecallMinLevel" Id="{d732a5af-5b3b-43b9-b5f5-121fbb15121e}">
       <Declaration><![CDATA[METHOD M_RecallMinLevel
 ]]></Declaration>
       <Implementation>
@@ -96,7 +96,7 @@ fbDelayedLight.M_On();
 ]]></ST>
       </Implementation>
     </Method>
-    <Method Name="M_SetControlLevel" Id="{60fb3e80-764a-428f-8949-1ee43d06f7c5}">
+    <Method Name="M_SetControlLevel" Id="{89fc163f-811e-490f-82ea-04b0e921bfc6}">
       <Declaration><![CDATA[METHOD M_SetControlLevel
 VAR_INPUT
 	nControlLevel: BYTE;
@@ -112,80 +112,80 @@ END_IF
 ]]></ST>
       </Implementation>
     </Method>
-    <Property Name="nControlLevel" Id="{066af10b-68de-4416-9be1-755d522e7223}">
+    <Property Name="nControlLevel" Id="{a5a7b3f5-b807-48ed-ba19-c6904f97f812}">
       <Declaration><![CDATA[PROPERTY nControlLevel : BYTE
 ]]></Declaration>
-      <Get Name="Get" Id="{d7a1c277-a38e-4611-869b-df3014db21fd}">
+      <Get Name="Get" Id="{d5b8d2e7-45ff-4393-af14-4260fb939afd}">
         <Declaration><![CDATA[]]></Declaration>
         <Implementation>
           <ST><![CDATA[nControlLevel := _nControlLevel;]]></ST>
         </Implementation>
       </Get>
-      <Set Name="Set" Id="{f34306bf-8079-4feb-8c01-0f5ea1f72cb9}">
+      <Set Name="Set" Id="{af729ec9-9301-4c91-b8eb-f42595faf99d}">
         <Declaration><![CDATA[]]></Declaration>
         <Implementation>
           <ST><![CDATA[]]></ST>
         </Implementation>
       </Set>
     </Property>
-    <Property Name="nMaxLevel" Id="{9b8c23e4-3cff-4d6a-9a37-3c3378264c67}">
+    <Property Name="nMaxLevel" Id="{747a3487-fe23-46f7-86fb-978b462d672e}">
       <Declaration><![CDATA[PROPERTY nMaxLevel : BYTE
 ]]></Declaration>
-      <Get Name="Get" Id="{6d354fba-f531-4316-ab39-5b8aa987458a}">
+      <Get Name="Get" Id="{f444ca51-861d-45ae-8f95-9d30364118ed}">
         <Declaration><![CDATA[]]></Declaration>
         <Implementation>
           <ST><![CDATA[nMaxLevel := THIS^.fbDimmingLight.nMaxLevel;]]></ST>
         </Implementation>
       </Get>
-      <Set Name="Set" Id="{bfb21d4f-29a9-4152-a6ea-d30562820d1f}">
+      <Set Name="Set" Id="{d24e26c6-f103-4cff-8ef4-509df0510187}">
         <Declaration><![CDATA[]]></Declaration>
         <Implementation>
           <ST><![CDATA[THIS^.fbDimmingLight.nMaxLevel := nMaxLevel;]]></ST>
         </Implementation>
       </Set>
     </Property>
-    <Property Name="nMinLevel" Id="{5862ba08-3bde-467d-8b5f-63bfb6e5de66}">
+    <Property Name="nMinLevel" Id="{222d53fb-92da-4470-bf45-7742a35d8950}">
       <Declaration><![CDATA[PROPERTY nMinLevel : BYTE
 ]]></Declaration>
-      <Get Name="Get" Id="{71bf16dc-efdb-4337-8642-967c346bce32}">
+      <Get Name="Get" Id="{685a75a1-b237-4a0f-b568-18cedb35368d}">
         <Declaration><![CDATA[]]></Declaration>
         <Implementation>
           <ST><![CDATA[nMinLevel := THIS^.fbDimmingLight.nMinLevel;]]></ST>
         </Implementation>
       </Get>
-      <Set Name="Set" Id="{987602ba-15b8-42fd-8bbb-5892c435afcb}">
+      <Set Name="Set" Id="{e03b9682-5679-42ea-9166-007e8e76ddd4}">
         <Declaration><![CDATA[]]></Declaration>
         <Implementation>
           <ST><![CDATA[THIS^.fbDimmingLight.nMaxLevel := nMaxLevel;]]></ST>
         </Implementation>
       </Set>
     </Property>
-    <Property Name="tOffDelay" Id="{dbda5586-4de7-4a95-bf02-c9074b35f7f0}">
+    <Property Name="tOffDelay" Id="{a4938e3b-9f76-4104-8b82-b55b08ca7427}">
       <Declaration><![CDATA[PROPERTY tOffDelay : TIME
 ]]></Declaration>
-      <Get Name="Get" Id="{b51bb5e0-9623-4fa2-bba5-59f988b044b3}">
+      <Get Name="Get" Id="{c7ee59d0-f6a0-4326-9005-9d4faa454cf4}">
         <Declaration><![CDATA[]]></Declaration>
         <Implementation>
           <ST><![CDATA[]]></ST>
         </Implementation>
       </Get>
-      <Set Name="Set" Id="{79c17e93-7b39-4447-b229-8fc63162d9e9}">
+      <Set Name="Set" Id="{eec9d3b3-7923-40c1-82c5-39b9e6c2ab42}">
         <Declaration><![CDATA[]]></Declaration>
         <Implementation>
           <ST><![CDATA[]]></ST>
         </Implementation>
       </Set>
     </Property>
-    <Property Name="tOnDelay" Id="{49e3891b-4c4f-4e9e-b9e7-f05d4f1630de}">
+    <Property Name="tOnDelay" Id="{ce4b76de-b856-4db1-84dd-03cc71f5b1a0}">
       <Declaration><![CDATA[PROPERTY tOnDelay : TIME
 ]]></Declaration>
-      <Get Name="Get" Id="{fd00348a-6e70-4718-b32f-660d1d93b604}">
+      <Get Name="Get" Id="{696be45d-289d-4de1-95c0-1af4f7a29656}">
         <Declaration><![CDATA[]]></Declaration>
         <Implementation>
           <ST><![CDATA[]]></ST>
         </Implementation>
       </Get>
-      <Set Name="Set" Id="{a89c1746-a66f-4ea4-965e-f6423ca2b976}">
+      <Set Name="Set" Id="{5b94386f-2ca3-46e7-b701-166d219ad583}">
         <Declaration><![CDATA[]]></Declaration>
         <Implementation>
           <ST><![CDATA[]]></ST>

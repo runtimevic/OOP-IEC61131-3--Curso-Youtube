@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.12">
+  <DUT Name="ST_Estructura" Id="{05004f40-b576-4e1d-b8ba-ed5c9fd309ac}">
+    <Declaration><![CDATA[{attribute 'enable_dynamic_creation'}
+TYPE ST_Estructura :
+STRUCT
+	dato1 : LWORD;
+	dato2: DINT;
+	dato3: SINT;
+END_STRUCT
+END_TYPE
+]]></Declaration>
+  </DUT>
+</TcPlcObject>

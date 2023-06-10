@@ -38,6 +38,10 @@ El bloque de funciones FB_GetRouterStatusInfo de la biblioteca Tc2_Utilities se 
 //Syntax:
  __NEW (<Type>,[<Length>])
 ```
+- Ningún cambio de tipo es posible a través del cambio en línea
+- Un módulo de función/DUT, que se puede crear con __NEW, ocupa un área de memoria fija. No puede cambiar su diseño de datos utilizando la función de cambio en línea. Esto significa que no se pueden agregar nuevas variables, no se pueden eliminar variables y no se pueden cambiar tipos. Esto garantiza que el puntero a este objeto siga siendo válido después del cambio en línea.
+- Por esta razón, el operador __NEW solo se puede aplicar a bloques de función/DUT de bibliotecas y a bloques de función/DUT con el atributo 'enable_dynamic_creation. Si se modifica la interfaz de un bloque de función/DUT de este tipo, TwinCAT emite un mensaje de error.
+
 - 🔗 [__NEW, infosys.beckhoff](https://infosys.beckhoff.com/content/1033/tc3_plc_intro/2529171083.html?id=5409766235804740463)
 - 🔗 [__NEW, help.codesys.com](https://help.codesys.com/api-content/2/codesys/3.5.14.0/en/_cds_operator_new/)
 ***
@@ -52,6 +56,7 @@ __QUERYINTERFACE(<ITF_Source>,<ITF_Dest>)
 - 2.º operando: referencia de interfaz con los tipos de destino requeridos.
 
 Un requisito previo para la conversión explícita es que tanto ITF_Source como ITF_Dest sean derivados de __System.IQueryInterface. Esta interfaz está implícitamente disponible y no requiere biblioteca.
+
 - 🔗 [__QUERYINTERFACE, infosys.beckhoff.com](https://infosys.beckhoff.com/content/1033/tc3_plc_intro/2529176459.html?id=8921520647493442581)
 - 🔗 [__QUERYINTERFACE, help.codesys.com](https://help.codesys.com/api-content/2/codesys/3.5.13.0/en/_cds_operator_queryinterface/#d1ae1a1daa87f58c0a8640e0179dbc5-id-05c12751daa87f58c0a8640e010610d5)
 ***
