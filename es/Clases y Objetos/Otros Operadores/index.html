@@ -1882,7 +1882,14 @@ El bloque de funciones FB_GetRouterStatusInfo de la biblioteca Tc2_Utilities se 
 <span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1">//Syntax:</span>
 <span class="w"> </span><span class="nx">__NEW</span><span class="w"> </span><span class="p">(</span><span class="o">&lt;</span><span class="nx">Type</span><span class="o">&gt;</span><span class="p">,[</span><span class="o">&lt;</span><span class="nx">Length</span><span class="o">&gt;</span><span class="p">])</span>
 </code></pre></div></td></tr></table></div></li>
-<li>🔗 <a href="https://infosys.beckhoff.com/content/1033/tc3_plc_intro/2529171083.html?id=5409766235804740463">__NEW, infosys.beckhoff</a></li>
+<li>Ningún cambio de tipo es posible a través del cambio en línea</li>
+<li>Un módulo de función/DUT, que se puede crear con __NEW, ocupa un área de memoria fija. No puede cambiar su diseño de datos utilizando la función de cambio en línea. Esto significa que no se pueden agregar nuevas variables, no se pueden eliminar variables y no se pueden cambiar tipos. Esto garantiza que el puntero a este objeto siga siendo válido después del cambio en línea.</li>
+<li>
+<p>Por esta razón, el operador __NEW solo se puede aplicar a bloques de función/DUT de bibliotecas y a bloques de función/DUT con el atributo 'enable_dynamic_creation. Si se modifica la interfaz de un bloque de función/DUT de este tipo, TwinCAT emite un mensaje de error.</p>
+</li>
+<li>
+<p>🔗 <a href="https://infosys.beckhoff.com/content/1033/tc3_plc_intro/2529171083.html?id=5409766235804740463">__NEW, infosys.beckhoff</a></p>
+</li>
 <li>🔗 <a href="https://help.codesys.com/api-content/2/codesys/3.5.14.0/en/_cds_operator_new/">__NEW, help.codesys.com</a></li>
 </ul>
 <hr />
@@ -1897,9 +1904,11 @@ El bloque de funciones FB_GetRouterStatusInfo de la biblioteca Tc2_Utilities se 
 <li>1er operando: referencia de interfaz o instancia de FB.</li>
 <li>2.º operando: referencia de interfaz con los tipos de destino requeridos.</li>
 </ul>
-<p>Un requisito previo para la conversión explícita es que tanto ITF_Source como ITF_Dest sean derivados de __System.IQueryInterface. Esta interfaz está implícitamente disponible y no requiere biblioteca.
-- 🔗 <a href="https://infosys.beckhoff.com/content/1033/tc3_plc_intro/2529176459.html?id=8921520647493442581">__QUERYINTERFACE, infosys.beckhoff.com</a>
-- 🔗 <a href="https://help.codesys.com/api-content/2/codesys/3.5.13.0/en/_cds_operator_queryinterface/#d1ae1a1daa87f58c0a8640e0179dbc5-id-05c12751daa87f58c0a8640e010610d5">__QUERYINTERFACE, help.codesys.com</a></p>
+<p>Un requisito previo para la conversión explícita es que tanto ITF_Source como ITF_Dest sean derivados de __System.IQueryInterface. Esta interfaz está implícitamente disponible y no requiere biblioteca.</p>
+<ul>
+<li>🔗 <a href="https://infosys.beckhoff.com/content/1033/tc3_plc_intro/2529176459.html?id=8921520647493442581">__QUERYINTERFACE, infosys.beckhoff.com</a></li>
+<li>🔗 <a href="https://help.codesys.com/api-content/2/codesys/3.5.13.0/en/_cds_operator_queryinterface/#d1ae1a1daa87f58c0a8640e0179dbc5-id-05c12751daa87f58c0a8640e010610d5">__QUERYINTERFACE, help.codesys.com</a></li>
+</ul>
 <hr />
 <h3 id="__querypointer"><span style="color:grey">__QUERYPOINTER:</span></h3>
 <ul>
