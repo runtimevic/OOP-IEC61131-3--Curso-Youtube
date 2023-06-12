@@ -15,7 +15,7 @@ theme:
   custom_dir: overrides
   logo: imagenes/oop_logg.webp
   palette:
-     # Palette toggle for light mode
+    # Palette toggle for light mode
     - scheme: default
       toggle:
         icon: material/brightness-7 
@@ -120,64 +120,64 @@ nav:
     - Introduction: index.md
     - Types of paradigms: tipos de paradigmas.md
     - Concepts Previous:
-       - Type of Data: Concepts Previous/Tipos de datos.md       
-       - Variable types and special variables: Concepts Previous/Variable types and special variables.md
-       - Access modifiers: Concepts Previous/access modifiers.md
-       - Access Modifiers Table: Concepts Previous/Tabla de Modificadores de acceso.md   
+      - Type of Data: Concepts Previous/Tipos de datos.md       
+      - Variable types and special variables: Concepts Previous/Variable types and special variables.md
+      - Access modifiers: Concepts Previous/access modifiers.md
+      - Access Modifiers Table: Concepts Previous/Tabla de Modificadores de acceso.md   
     - Classes and Objects:
-       - Classes and Objects: Clases y Objetos/clases y objetos.md
-       - Function Block: 
+      - Classes and Objects: Clases y Objetos/clases y objetos.md
+      - Function Block: 
           - Function Block: Clases y Objetos/Function Block.md
           - Function Block Access Modifiers:  Clases y Objetos/Function Block Modificadores de acceso.md
           - Function Block Declaration variables: Clases y Objetos/Function Block Declaracion de variables.md
           - Constructor and Destructor: Clases y Objetos/Constructor y Destructor.md          
-       - Object Method:
+      - Object Method:
           - Method: Clases y Objetos/metodo.md
           - Method access modifiers: Clases y Objetos/Metodo Modificadores de acceso.md
           - Method Declaration of variables: Clases y Objetos/Metodo Declaracion de variables.md
           - Method return variable types: Clases y Objetos/Metodo Tipos de variables de retorno.md      
-       - Object Property: Clases y Objetos/propiedad.md
-       - Inheritance:
+      - Object Property: Clases y Objetos/propiedad.md
+      - Inheritance:
           - Inheritance Function Block: Clases y Objetos/Inheritance/Inheritance Function Block.md
           - Inheritance Structure: Clases y Objetos/Inheritance/Inheritance Structure.md
           - Inheritance Interface: Clases y Objetos/Inheritance/Inheritance Interface.md
-       - THIS pointer: Clases y Objetos/THIS pointer.md
-       - SUPER pointer: Clases y Objetos/SUPER pointer.md    
-       - Interface: Clases y Objetos/interface.md
-       - pointer and reference: Clases y Objetos/pointer and reference.md
-       - Keyword Abstract: Clases y Objetos/Keyword_Abstract.md
-       - Abstract FB vs Interface: Clases y Objetos/FB abstracto frente a interfaz.md
-       - Fluent Interface: Clases y Objetos/Interfaz fluida.md
-       - Interface vs Inheritance: Clases y Objetos/Interface vs Inheritance.md
-       - Further operators: Clases y Objetos/Further operators.md
+      - THIS pointer: Clases y Objetos/THIS pointer.md
+      - SUPER pointer: Clases y Objetos/SUPER pointer.md    
+      - Interface: Clases y Objetos/interface.md
+      - pointer and reference: Clases y Objetos/pointer and reference.md
+      - Keyword Abstract: Clases y Objetos/Keyword_Abstract.md
+      - Abstract FB vs Interface: Clases y Objetos/FB abstracto frente a interfaz.md
+      - Fluent Interface: Clases y Objetos/Interfaz fluida.md
+      - Interface vs Inheritance: Clases y Objetos/Interface vs Inheritance.md
+      - Further operators: Clases y Objetos/Further operators.md
     - ExST:
-       - Extended Structured Text: Extended_Structured_Text.md   
+      - Extended Structured Text: Extended_Structured_Text.md   
     - OOP Principles: 
-       - 4 Pillars: principios/_principios OOP.md
-       - Abstraction: principios/abstraccion.md
-       - Encapsulation: principios/encapsulamiento.md
-       - Inheritance: principios/herencia.md
-       - Polymorphism: principios/polimorfismo.md    
+      - 4 Pillars: principios/_principios OOP.md
+      - Abstraction: principios/abstraccion.md
+      - Encapsulation: principios/encapsulamiento.md
+      - Inheritance: principios/herencia.md
+      - Polymorphism: principios/polimorfismo.md    
     - SOLID: 
-       - SOLID: solid/_SOLID.md
-       - SRP - Single Responsibility Principle: solid/Principio de Responsabilidad Única.md
-       - OCP - Open/Closed Principle: solid/Principio de Abierto_Cerrado.md
-       - LSP - Liskov Substitution Principle: solid/Principio de Sustitución de Liskov.md
-       - ISP - Interface Segregation Principle: solid/Principio de Segregación de Interfaz.md
-       - DIP - Dependency Inversion Principle: solid/Principio de Inversión de Dependencia.md
+      - SOLID: solid/_SOLID.md
+      - SRP - Single Responsibility Principle: solid/Principio de Responsabilidad Única.md
+      - OCP - Open/Closed Principle: solid/Principio de Abierto_Cerrado.md
+      - LSP - Liskov Substitution Principle: solid/Principio de Sustitución de Liskov.md
+      - ISP - Interface Segregation Principle: solid/Principio de Segregación de Interfaz.md
+      - DIP - Dependency Inversion Principle: solid/Principio de Inversión de Dependencia.md
     - UML: 
-       - UML: UML/UML.md
-       - Class UML: UML/Class UML.md
-       - Relations: UML/relations.md
-       - StateChart UML: UML/Statechart UML.md
-    - Types of Design for PLC programming: Tipos de Diseño para programacion de PLC.md
+      - UML: UML/UML.md
+      - Class UML: UML/Class UML.md
+      - Relations: UML/relations.md
+      - StateChart UML: UML/Statechart UML.md
+    - Types of Design for PLC programming: Types of Design for PLC programming.md
     - Design patterns:
-       - Design patterns: Patrones de Diseño/_Patrones de Diseño.md
-       - Strategy Pattern: Patrones de Diseño/Strategy pattern.md
-       - The Abstract Factory Pattern: Patrones de Diseño/The Abstract Factory Pattern.md
-       - The Visitor Design Pattern: Patrones de Diseño/The Visitor Design Pattern.md
+      - Design patterns: Patrones de Diseño/_Patrones de Diseño.md
+      - Strategy Pattern: Patrones de Diseño/Strategy pattern.md
+      - The Abstract Factory Pattern: Patrones de Diseño/The Abstract Factory Pattern.md
+      - The Visitor Design Pattern: Patrones de Diseño/The Visitor Design Pattern.md
     - Libraries : Libraries.md
     - Links OOP: links.md
     - TDD:
-       - TDD - Test Drive Development: TDD/Test Driven Development.md
-       - Units Test: TDD/Unit Test.md
+      - TDD - Test Drive Development: TDD/Test Driven Development.md
+      - Units Test: TDD/Unit Test.md
