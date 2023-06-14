@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.12">
-  <POU Name="_17_Otros_Operadores" Id="{cec54469-a796-4224-936c-ec59c1758dee}" SpecialFunc="None">
-    <Declaration><![CDATA[PROGRAM _17_Otros_Operadores
+  <POU Name="_17_Otros_Operadores1" Id="{cec54469-a796-4224-936c-ec59c1758dee}" SpecialFunc="None">
+    <Declaration><![CDATA[PROGRAM _17_Otros_Operadores1
 VAR
 	pEstructura : POINTER TO ST_Estructura;
 	struNew     : BOOL;

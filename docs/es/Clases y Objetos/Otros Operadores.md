@@ -132,6 +132,8 @@ MyVarInfo := __VARINFO(nVar);
 🔗 [TEST_AND_SET, Codesys](https://content.helpme-codesys.com/es/CODESYS%20Development%20System/_cds_operator_test_and_set.html)
 
 🔗 [TESTANDSET, TwinCAT](https://infosys.beckhoff.com/content/1033/tc3_plc_intro/31023115.html?id=6418824872038507808)
+
+- El bloque de funciones FB_IecCriticalSection ofrece la aplicación de secciones críticas como método Mutex alternativo.
 ***
 ### <span style="color:grey">Links Otros Operadores:</span>
 - 🔗 [Further operators, infosys.beckhoff.com](https://infosys.beckhoff.com/english.php?content=../content/1033/tc3_plc_intro/3998094475.html&id=)
@@ -141,4 +143,5 @@ MyVarInfo := __VARINFO(nVar);
 ***
 ### <span style="color:grey">Links Videos de Youtube 016 y 017:</span>
 - 🔗 [016 - OOP IEC 61131-3 PLC -- Interface vs Herencia_2](https://youtu.be/gFJN7x_m4to) 
-- 🔗 [017 - OOP IEC 61131-3 PLC -- Otros Operadores](https://youtu.be/uf7BIFNQmYE)
+- 🔗 [017 - OOP IEC 61131-3 PLC -- Otros Operadores1](https://youtu.be/uf7BIFNQmYE)
+- 🔗 [018 - OOP IEC 61131-3 PLC -- Otros Operadores2]()

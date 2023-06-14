@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.12">
+  <POU Name="TestAndSet1" Id="{1fbd48f8-947d-40cb-8a8d-f2473064570d}" SpecialFunc="None">
+    <Declaration><![CDATA[PROGRAM TestAndSet1
+VAR
+    nLocalBlockedCounter : DINT;
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[IF TestAndSet(GVL.bGlobalTestFlag) THEN
+    (* bGlobalTestFlag was FALSE, nobody was blocking, NOW
+    bGlobalTestFlag is set to TRUE and blocking others *)
+    
+    (* ... *)
+    
+    (* remove blocking by resetting the flag *) 
+    GVL.bGlobalTestFlag := FALSE;
+ELSE
+    (* bGlobalTestFlag was TRUE, somebody is blocking *)
+    nLocalBlockedCounter := nLocalBlockedCounter + 1;
+    
+    (* ... *)
+END_IF
+
+
+]]></ST>
+    </Implementation>
+  </POU>
+</TcPlcObject>

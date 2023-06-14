@@ -363,10 +363,45 @@
     <Compile Include="16_17_Interface_vs_Herencia\_16_Interface_vs_Herencia.TcPOU">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="17_Otros_Operadores\ST_Estructura.TcDUT">
+    <Compile Include="17_Otros_Operadores_1\ST_Estructura.TcDUT">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="17_Otros_Operadores\_17_Otros_Operadores.TcPOU">
+    <Compile Include="17_Otros_Operadores_1\_17_Otros_Operadores1.TcPOU">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="18_Otros_Operadores_2\TestAndSet\GVL.TcGVL">
+      <SubType>Code</SubType>
+      <LinkAlways>true</LinkAlways>
+    </Compile>
+    <Compile Include="18_Otros_Operadores_2\TestAndSet\TestAndSet1.TcPOU">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="18_Otros_Operadores_2\_18_Otros_Operadores2.TcPOU">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="18_Otros_Operadores_2\__QUERYPOINTER\FB_Variante.TcPOU">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="18_Otros_Operadores_2\__QUERYPOINTER\I_Base.TcIO">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="18_Otros_Operadores_2\__QUERYPOINTER\I_Derived.TcIO">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="18_Otros_Operadores_2\__QUERYPOINTER\QUERYPOINTER.TcPOU">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="18_Otros_Operadores_2\__TRY__CATCH\GVL_Exc.TcGVL">
+      <SubType>Code</SubType>
+      <LinkAlways>true</LinkAlways>
+    </Compile>
+    <Compile Include="18_Otros_Operadores_2\__TRY__CATCH\F_SaveExceptionCode.TcPOU">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="18_Otros_Operadores_2\__TRY__CATCH\TRY_CATCH.TcPOU">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="18_Otros_Operadores_2\__VARINFO\VARINFO.TcPOU">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="PlcTask.TcTTO">
@@ -410,7 +445,12 @@
     <Folder Include="16_17_Interface_vs_Herencia\PLC-Library\Clases" />
     <Folder Include="16_17_Interface_vs_Herencia\Tests" />
     <Folder Include="15_Interface_vs_Herencia" />
-    <Folder Include="17_Otros_Operadores" />
+    <Folder Include="17_Otros_Operadores_1" />
+    <Folder Include="18_Otros_Operadores_2" />
+    <Folder Include="18_Otros_Operadores_2\TestAndSet" />
+    <Folder Include="18_Otros_Operadores_2\__VARINFO" />
+    <Folder Include="18_Otros_Operadores_2\__TRY__CATCH" />
+    <Folder Include="18_Otros_Operadores_2\__QUERYPOINTER" />
     <Folder Include="_MAIN" />
   </ItemGroup>
   <ItemGroup>

@@ -1,0 +1,657 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<project xmlns="http://www.plcopen.org/xml/tc6_0200">
+  <fileHeader companyName="Beckhoff Automation GmbH" productName="TwinCAT PLC Control" productVersion="3.5.13.21" creationDateTime="2023-06-14T13:02:06.5620853" />
+  <contentHeader name="OOP_Curso" modificationDateTime="2023-06-14T13:02:06.5620853">
+    <coordinateInfo>
+      <fbd>
+        <scaling x="1" y="1" />
+      </fbd>
+      <ld>
+        <scaling x="1" y="1" />
+      </ld>
+      <sfc>
+        <scaling x="1" y="1" />
+      </sfc>
+    </coordinateInfo>
+    <addData>
+      <data name="http://www.3s-software.com/plcopenxml/projectinformation" handleUnknown="implementation">
+        <ProjectInformation />
+      </data>
+    </addData>
+  </contentHeader>
+  <types>
+    <dataTypes />
+    <pous>
+      <pou name="FB_Variante" pouType="functionBlock">
+        <interface>
+          <addData>
+            <data name="http://www.3s-software.com/plcopenxml/pouinheritance" handleUnknown="implementation">
+              <Inheritance>
+                <Implements>I_Derived</Implements>
+              </Inheritance>
+            </data>
+          </addData>
+        </interface>
+        <body>
+          <ST>
+            <xhtml xmlns="http://www.w3.org/1999/xhtml" />
+          </ST>
+        </body>
+        <addData>
+          <data name="http://www.3s-software.com/plcopenxml/method" handleUnknown="implementation">
+            <Method name="Base" ObjectId="8bc0bc5b-dac6-450a-88a6-2701749687ee">
+              <interface>
+                <returnType>
+                  <BOOL />
+                </returnType>
+              </interface>
+              <body>
+                <ST>
+                  <xhtml xmlns="http://www.w3.org/1999/xhtml" />
+                </ST>
+              </body>
+              <InterfaceAsPlainText>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">{warning 'add method implementation '}
+METHOD Base : BOOL
+</xhtml>
+              </InterfaceAsPlainText>
+              <addData />
+            </Method>
+          </data>
+          <data name="http://www.3s-software.com/plcopenxml/method" handleUnknown="implementation">
+            <Method name="Derived" ObjectId="bb0be15b-958a-4a61-9e22-3bbb210b7faf">
+              <interface>
+                <returnType>
+                  <BOOL />
+                </returnType>
+              </interface>
+              <body>
+                <ST>
+                  <xhtml xmlns="http://www.w3.org/1999/xhtml" />
+                </ST>
+              </body>
+              <InterfaceAsPlainText>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">{warning 'add method implementation '}
+METHOD Derived : BOOL
+</xhtml>
+              </InterfaceAsPlainText>
+              <addData />
+            </Method>
+          </data>
+          <data name="http://www.3s-software.com/plcopenxml/interfaceasplaintext" handleUnknown="implementation">
+            <InterfaceAsPlainText>
+              <xhtml xmlns="http://www.w3.org/1999/xhtml">FUNCTION_BLOCK FB_Variante IMPLEMENTS I_Derived
+VAR_INPUT
+END_VAR
+VAR_OUTPUT
+END_VAR
+VAR
+END_VAR
+</xhtml>
+            </InterfaceAsPlainText>
+          </data>
+          <data name="http://www.3s-software.com/plcopenxml/objectid" handleUnknown="discard">
+            <ObjectId>b96cac43-7242-4a32-9ec2-8d0f27d09c40</ObjectId>
+          </data>
+        </addData>
+      </pou>
+      <pou name="QUERYPOINTER" pouType="program">
+        <interface>
+          <localVars>
+            <variable name="iDerived">
+              <type>
+                <derived name="I_Derived" />
+              </type>
+            </variable>
+            <variable name="fbVariante">
+              <type>
+                <derived name="FB_Variante" />
+              </type>
+            </variable>
+            <variable name="bResult">
+              <type>
+                <BOOL />
+              </type>
+            </variable>
+            <variable name="bTest">
+              <type>
+                <BOOL />
+              </type>
+            </variable>
+            <variable name="pFB">
+              <type>
+                <pointer>
+                  <baseType>
+                    <derived name="FB_Variante" />
+                  </baseType>
+                </pointer>
+              </type>
+            </variable>
+          </localVars>
+        </interface>
+        <body>
+          <ST>
+            <xhtml xmlns="http://www.w3.org/1999/xhtml">//__QUERYPOINTER
+iDerived := fbVariante;
+bResult  := __QUERYPOINTER(iDerived, pFB);
+
+IF bResult THEN
+    bTest := pFB^.Derived();
+END_IF</xhtml>
+          </ST>
+        </body>
+        <addData>
+          <data name="http://www.3s-software.com/plcopenxml/interfaceasplaintext" handleUnknown="implementation">
+            <InterfaceAsPlainText>
+              <xhtml xmlns="http://www.w3.org/1999/xhtml">PROGRAM QUERYPOINTER
+//__QUERYPOINTER
+VAR
+    iDerived   : I_Derived;
+    fbVariante : FB_Variante;
+    bResult    : BOOL;
+    bTest      : BOOL;
+    pFB        : POINTER TO FB_Variante;
+END_VAR
+</xhtml>
+            </InterfaceAsPlainText>
+          </data>
+          <data name="http://www.3s-software.com/plcopenxml/objectid" handleUnknown="discard">
+            <ObjectId>9720a80e-d1de-4d43-aefa-ee7d76542c53</ObjectId>
+          </data>
+        </addData>
+      </pou>
+      <pou name="F_SaveExceptionCode" pouType="function">
+        <interface>
+          <returnType>
+            <BOOL />
+          </returnType>
+          <inputVars>
+            <variable name="excInput">
+              <type>
+                <derived name="__SYSTEM.ExceptionCode" />
+              </type>
+            </variable>
+          </inputVars>
+        </interface>
+        <body>
+          <ST>
+            <xhtml xmlns="http://www.w3.org/1999/xhtml">// Log the thrown exception into the global exception history array
+IF GVL_Exc.nExcIndex &lt;= GVL_Exc.cMaxExc THEN
+    GVL_Exc.aExceptionHistory[GVL_Exc.nExcIndex] := excInput;
+    GVL_Exc.nExcIndex := GVL_Exc.nExcIndex + 1;
+END_IF</xhtml>
+          </ST>
+        </body>
+        <addData>
+          <data name="http://www.3s-software.com/plcopenxml/interfaceasplaintext" handleUnknown="implementation">
+            <InterfaceAsPlainText>
+              <xhtml xmlns="http://www.w3.org/1999/xhtml">FUNCTION F_SaveExceptionCode : BOOL
+VAR_INPUT
+    excInput           : __SYSTEM.ExceptionCode;
+END_VAR
+</xhtml>
+            </InterfaceAsPlainText>
+          </data>
+          <data name="http://www.3s-software.com/plcopenxml/objectid" handleUnknown="discard">
+            <ObjectId>35710875-c0c5-4f62-80bb-1e1c205d6366</ObjectId>
+          </data>
+        </addData>
+      </pou>
+      <pou name="TRY_CATCH" pouType="program">
+        <interface>
+          <localVars>
+            <variable name="nCounter1">
+              <type>
+                <INT />
+              </type>
+            </variable>
+            <variable name="nCounter2">
+              <type>
+                <INT />
+              </type>
+            </variable>
+            <variable name="nCounter_TRY1">
+              <type>
+                <INT />
+              </type>
+            </variable>
+            <variable name="nCounter_TRY2">
+              <type>
+                <INT />
+              </type>
+            </variable>
+            <variable name="nCounter_CATCH">
+              <type>
+                <INT />
+              </type>
+            </variable>
+            <variable name="nCounter_FINALLY">
+              <type>
+                <INT />
+              </type>
+            </variable>
+            <variable name="exc">
+              <type>
+                <derived name="__SYSTEM.ExceptionCode" />
+              </type>
+            </variable>
+            <variable name="lastExc">
+              <type>
+                <derived name="__SYSTEM.ExceptionCode" />
+              </type>
+            </variable>
+            <variable name="pSample">
+              <type>
+                <pointer>
+                  <baseType>
+                    <BOOL />
+                  </baseType>
+                </pointer>
+              </type>
+            </variable>
+            <variable name="bVar">
+              <type>
+                <BOOL />
+              </type>
+            </variable>
+            <variable name="nSample">
+              <type>
+                <INT />
+              </type>
+              <initialValue>
+                <simpleValue value="100" />
+              </initialValue>
+            </variable>
+            <variable name="nDivisor">
+              <type>
+                <INT />
+              </type>
+            </variable>
+          </localVars>
+        </interface>
+        <body>
+          <ST>
+            <xhtml xmlns="http://www.w3.org/1999/xhtml">// -- !!! Available from TC3.1 build 4024 for 32-bit runtime systems !!!
+////__TRY, __CATCH, __FINALLY, __ENDTRY 
+//// Counter 1
+//nCounter1 := nCounter1 + 1;
+ 
+//// TRY-CATCH block
+//__TRY
+//    nCounter_TRY1 := nCounter_TRY1 + 1;
+//    pSample^      := TRUE;                // 1. cycle: null pointer access leads to "access violation" exception
+//    nSample       := nSample/nDivisor;    // 2. cycle: division by zero leads to "divide by zero" exception
+//    nCounter_TRY2 := nCounter_TRY2 + 1;
+ 
+//__CATCH(exc)
+//    nCounter_CATCH    := nCounter_CATCH + 1;
+ 
+//    // Exception logging
+//    lastExc := exc;
+//    F_SaveExceptionCode(excInput := exc);
+ 
+//    // Correct the faulty variable values
+//    IF (exc = __SYSTEM.ExceptionCode.RTSEXCPT_ACCESS_VIOLATION) AND (pSample = 0) THEN
+//        pSample  := ADR(bVar);
+// ELSIF ((exc = __SYSTEM.ExceptionCode.RTSEXCPT_DIVIDEBYZERO) OR (exc = __SYSTEM.ExceptionCode.RTSEXCPT_FPU_DIVIDEBYZERO)) AND (nDivisor = 0) THEN
+//        nDivisor := 1;
+//    END_IF
+ 
+//__FINALLY
+//    nCounter_FINALLY := nCounter_FINALLY + 1;
+ 
+//__ENDTRY
+ 
+//// Counter 2
+//nCounter2 := nCounter2 + 1;</xhtml>
+          </ST>
+        </body>
+        <addData>
+          <data name="http://www.3s-software.com/plcopenxml/interfaceasplaintext" handleUnknown="implementation">
+            <InterfaceAsPlainText>
+              <xhtml xmlns="http://www.w3.org/1999/xhtml">PROGRAM TRY_CATCH
+//__TRY, __CATCH, __FINALLY, __ENDTRY
+VAR
+    nCounter1          : INT;
+    nCounter2          : INT;
+    nCounter_TRY1      : INT;
+    nCounter_TRY2      : INT;
+    nCounter_CATCH     : INT;    
+    nCounter_FINALLY   : INT;
+ 
+    exc                : __SYSTEM.ExceptionCode;
+    lastExc            : __SYSTEM.ExceptionCode;
+ 
+    pSample            : POINTER TO BOOL;
+    bVar               : BOOL;
+    nSample            : INT := 100;
+    nDivisor           : INT;
+END_VAR
+</xhtml>
+            </InterfaceAsPlainText>
+          </data>
+          <data name="http://www.3s-software.com/plcopenxml/objectid" handleUnknown="discard">
+            <ObjectId>e46da25d-bbc8-442d-930a-15d5810667d5</ObjectId>
+          </data>
+        </addData>
+      </pou>
+      <pou name="VARINFO" pouType="program">
+        <interface>
+          <localVars>
+            <variable name="MyVarInfo">
+              <type>
+                <derived name="__SYSTEM.VAR_INFO" />
+              </type>
+            </variable>
+            <variable name="nVar">
+              <type>
+                <INT />
+              </type>
+            </variable>
+          </localVars>
+        </interface>
+        <body>
+          <ST>
+            <xhtml xmlns="http://www.w3.org/1999/xhtml">MyVarInfo := __VARINFO(nVar);</xhtml>
+          </ST>
+        </body>
+        <addData>
+          <data name="http://www.3s-software.com/plcopenxml/interfaceasplaintext" handleUnknown="implementation">
+            <InterfaceAsPlainText>
+              <xhtml xmlns="http://www.w3.org/1999/xhtml">PROGRAM VARINFO
+
+VAR
+    MyVarInfo : __SYSTEM.VAR_INFO;
+    nVar      : INT;
+END_VAR
+</xhtml>
+            </InterfaceAsPlainText>
+          </data>
+          <data name="http://www.3s-software.com/plcopenxml/objectid" handleUnknown="discard">
+            <ObjectId>dccb941f-2b41-458b-a0fe-fa3962edb20e</ObjectId>
+          </data>
+        </addData>
+      </pou>
+      <pou name="TestAndSet1" pouType="program">
+        <interface>
+          <localVars>
+            <variable name="nLocalBlockedCounter">
+              <type>
+                <DINT />
+              </type>
+            </variable>
+          </localVars>
+        </interface>
+        <body>
+          <ST>
+            <xhtml xmlns="http://www.w3.org/1999/xhtml">IF TestAndSet(GVL.bGlobalTestFlag) THEN
+    (* bGlobalTestFlag was FALSE, nobody was blocking, NOW
+    bGlobalTestFlag is set to TRUE and blocking others *)
+    
+    (* ... *)
+    
+    (* remove blocking by resetting the flag *) 
+    GVL.bGlobalTestFlag := FALSE;
+ELSE
+    (* bGlobalTestFlag was TRUE, somebody is blocking *)
+    nLocalBlockedCounter := nLocalBlockedCounter + 1;
+    
+    (* ... *)
+END_IF
+
+
+</xhtml>
+          </ST>
+        </body>
+        <addData>
+          <data name="http://www.3s-software.com/plcopenxml/interfaceasplaintext" handleUnknown="implementation">
+            <InterfaceAsPlainText>
+              <xhtml xmlns="http://www.w3.org/1999/xhtml">PROGRAM TestAndSet1
+VAR
+    nLocalBlockedCounter : DINT;
+END_VAR
+</xhtml>
+            </InterfaceAsPlainText>
+          </data>
+          <data name="http://www.3s-software.com/plcopenxml/objectid" handleUnknown="discard">
+            <ObjectId>1fbd48f8-947d-40cb-8a8d-f2473064570d</ObjectId>
+          </data>
+        </addData>
+      </pou>
+      <pou name="_18_Otros_Operadores2" pouType="program">
+        <interface />
+        <body>
+          <ST>
+            <xhtml xmlns="http://www.w3.org/1999/xhtml">
+QUERYPOINTER();
+TRY_CATCH();
+VARINFO();
+TestAndSet1();</xhtml>
+          </ST>
+        </body>
+        <addData>
+          <data name="http://www.3s-software.com/plcopenxml/interfaceasplaintext" handleUnknown="implementation">
+            <InterfaceAsPlainText>
+              <xhtml xmlns="http://www.w3.org/1999/xhtml">PROGRAM _18_Otros_Operadores2
+
+</xhtml>
+            </InterfaceAsPlainText>
+          </data>
+          <data name="http://www.3s-software.com/plcopenxml/objectid" handleUnknown="discard">
+            <ObjectId>00ab3834-d803-4525-b9eb-d217f66d4b14</ObjectId>
+          </data>
+        </addData>
+      </pou>
+    </pous>
+  </types>
+  <instances>
+    <configurations />
+  </instances>
+  <addData>
+    <data name="http://www.3s-software.com/plcopenxml/globalvars" handleUnknown="implementation">
+      <globalVars name="GVL_Exc" constant="true">
+        <variable name="cMaxExc">
+          <type>
+            <UINT />
+          </type>
+          <initialValue>
+            <simpleValue value="10" />
+          </initialValue>
+        </variable>
+        <variable name="nExcIndex">
+          <type>
+            <UINT />
+          </type>
+        </variable>
+        <variable name="aExceptionHistory">
+          <type>
+            <array>
+              <dimension lower="0" upper="cMaxExc" />
+              <baseType>
+                <derived name="__SYSTEM.ExceptionCode" />
+              </baseType>
+            </array>
+          </type>
+        </variable>
+        <addData>
+          <data name="http://www.3s-software.com/plcopenxml/attributes" handleUnknown="implementation">
+            <Attributes>
+              <Attribute Name="qualified_only" Value="" />
+            </Attributes>
+          </data>
+          <data name="http://www.3s-software.com/plcopenxml/buildproperties" handleUnknown="implementation">
+            <BuildProperties>
+              <LinkAlways>true</LinkAlways>
+            </BuildProperties>
+          </data>
+          <data name="http://www.3s-software.com/plcopenxml/interfaceasplaintext" handleUnknown="implementation">
+            <InterfaceAsPlainText>
+              <xhtml xmlns="http://www.w3.org/1999/xhtml">{attribute 'qualified_only'}
+VAR_GLOBAL CONSTANT
+    cMaxExc            : UINT := 10;
+END_VAR
+VAR_GLOBAL
+    nExcIndex          : UINT;
+    aExceptionHistory  : ARRAY[0..cMaxExc] OF __SYSTEM.ExceptionCode;
+END_VAR</xhtml>
+            </InterfaceAsPlainText>
+          </data>
+          <data name="http://www.3s-software.com/plcopenxml/objectid" handleUnknown="discard">
+            <ObjectId>3ee9550c-3c9a-431c-9fe7-6be85d90c705</ObjectId>
+          </data>
+          <data name="http://www.3s-software.com/plcopenxml/mixedattrsvarlist" handleUnknown="implementation">
+            <MixedAttrsVarList>
+              <globalVars name="GVL_Exc" constant="true">
+                <variable name="cMaxExc">
+                  <type>
+                    <UINT />
+                  </type>
+                  <initialValue>
+                    <simpleValue value="10" />
+                  </initialValue>
+                </variable>
+              </globalVars>
+              <globalVars name="GVL_Exc">
+                <variable name="nExcIndex">
+                  <type>
+                    <UINT />
+                  </type>
+                </variable>
+                <variable name="aExceptionHistory">
+                  <type>
+                    <array>
+                      <dimension lower="0" upper="cMaxExc" />
+                      <baseType>
+                        <derived name="__SYSTEM.ExceptionCode" />
+                      </baseType>
+                    </array>
+                  </type>
+                </variable>
+              </globalVars>
+            </MixedAttrsVarList>
+          </data>
+        </addData>
+      </globalVars>
+    </data>
+    <data name="http://www.3s-software.com/plcopenxml/globalvars" handleUnknown="implementation">
+      <globalVars name="GVL">
+        <variable name="bGlobalTestFlag">
+          <type>
+            <BOOL />
+          </type>
+        </variable>
+        <addData>
+          <data name="http://www.3s-software.com/plcopenxml/attributes" handleUnknown="implementation">
+            <Attributes>
+              <Attribute Name="qualified_only" Value="" />
+            </Attributes>
+          </data>
+          <data name="http://www.3s-software.com/plcopenxml/buildproperties" handleUnknown="implementation">
+            <BuildProperties>
+              <LinkAlways>true</LinkAlways>
+            </BuildProperties>
+          </data>
+          <data name="http://www.3s-software.com/plcopenxml/interfaceasplaintext" handleUnknown="implementation">
+            <InterfaceAsPlainText>
+              <xhtml xmlns="http://www.w3.org/1999/xhtml">{attribute 'qualified_only'}
+VAR_GLOBAL
+    bGlobalTestFlag : BOOL;
+END_VAR</xhtml>
+            </InterfaceAsPlainText>
+          </data>
+          <data name="http://www.3s-software.com/plcopenxml/objectid" handleUnknown="discard">
+            <ObjectId>7ed94512-0cbc-4669-8f56-0baad7f9b2a2</ObjectId>
+          </data>
+        </addData>
+      </globalVars>
+    </data>
+    <data name="http://www.3s-software.com/plcopenxml/interface" handleUnknown="implementation">
+      <Interface name="I_Base" ObjectId="737d8c2f-a30e-4e95-9295-d6a8108b5747">
+        <Methods>
+          <Method name="Base" ObjectId="87bdf4b9-4780-481f-938c-afb6ee294d86">
+            <interface>
+              <returnType>
+                <BOOL />
+              </returnType>
+            </interface>
+            <InterfaceAsPlainText>
+              <xhtml xmlns="http://www.w3.org/1999/xhtml">METHOD Base : BOOL
+VAR_INPUT
+END_VAR
+</xhtml>
+            </InterfaceAsPlainText>
+            <addData />
+          </Method>
+        </Methods>
+        <Inheritance>
+          <Extends>__SYSTEM.IQueryInterface</Extends>
+        </Inheritance>
+        <InterfaceAsPlainText>
+          <xhtml xmlns="http://www.w3.org/1999/xhtml">INTERFACE I_Base EXTENDS __SYSTEM.IQueryInterface
+</xhtml>
+        </InterfaceAsPlainText>
+        <addData />
+      </Interface>
+    </data>
+    <data name="http://www.3s-software.com/plcopenxml/interface" handleUnknown="implementation">
+      <Interface name="I_Derived" ObjectId="c3542b46-e56a-4beb-8f31-14f9b77c89b7">
+        <Methods>
+          <Method name="Derived" ObjectId="9e2a1c12-e644-468d-9b51-cab910afc185">
+            <interface>
+              <returnType>
+                <BOOL />
+              </returnType>
+            </interface>
+            <InterfaceAsPlainText>
+              <xhtml xmlns="http://www.w3.org/1999/xhtml">METHOD Derived : BOOL
+VAR_INPUT
+END_VAR
+</xhtml>
+            </InterfaceAsPlainText>
+            <addData />
+          </Method>
+        </Methods>
+        <Inheritance>
+          <Extends>I_Base</Extends>
+        </Inheritance>
+        <InterfaceAsPlainText>
+          <xhtml xmlns="http://www.w3.org/1999/xhtml">INTERFACE I_Derived EXTENDS I_Base
+</xhtml>
+        </InterfaceAsPlainText>
+        <addData />
+      </Interface>
+    </data>
+    <data name="http://www.3s-software.com/plcopenxml/projectstructure" handleUnknown="discard">
+      <ProjectStructure>
+        <Folder Name="18_Otros_Operadores_2">
+          <Object Name="_18_Otros_Operadores2" ObjectId="00ab3834-d803-4525-b9eb-d217f66d4b14" />
+          <Folder Name="__QUERYPOINTER">
+            <Object Name="FB_Variante" ObjectId="b96cac43-7242-4a32-9ec2-8d0f27d09c40">
+              <Object Name="Base" ObjectId="8bc0bc5b-dac6-450a-88a6-2701749687ee" />
+              <Object Name="Derived" ObjectId="bb0be15b-958a-4a61-9e22-3bbb210b7faf" />
+            </Object>
+            <Object Name="I_Base" ObjectId="737d8c2f-a30e-4e95-9295-d6a8108b5747">
+              <Object Name="Base" ObjectId="87bdf4b9-4780-481f-938c-afb6ee294d86" />
+            </Object>
+            <Object Name="I_Derived" ObjectId="c3542b46-e56a-4beb-8f31-14f9b77c89b7">
+              <Object Name="Derived" ObjectId="9e2a1c12-e644-468d-9b51-cab910afc185" />
+            </Object>
+            <Object Name="QUERYPOINTER" ObjectId="9720a80e-d1de-4d43-aefa-ee7d76542c53" />
+          </Folder>
+          <Folder Name="__TRY__CATCH">
+            <Object Name="GVL_Exc" ObjectId="3ee9550c-3c9a-431c-9fe7-6be85d90c705" />
+            <Object Name="F_SaveExceptionCode" ObjectId="35710875-c0c5-4f62-80bb-1e1c205d6366" />
+            <Object Name="TRY_CATCH" ObjectId="e46da25d-bbc8-442d-930a-15d5810667d5" />
+          </Folder>
+          <Folder Name="__VARINFO">
+            <Object Name="VARINFO" ObjectId="dccb941f-2b41-458b-a0fe-fa3962edb20e" />
+          </Folder>
+          <Folder Name="TestAndSet">
+            <Object Name="GVL" ObjectId="7ed94512-0cbc-4669-8f56-0baad7f9b2a2" />
+            <Object Name="TestAndSet1" ObjectId="1fbd48f8-947d-40cb-8a8d-f2473064570d" />
+          </Folder>
+        </Folder>
+      </ProjectStructure>
+    </data>
+  </addData>
+</project>

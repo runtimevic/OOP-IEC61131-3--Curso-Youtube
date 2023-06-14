@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.12">
+  <POU Name="QUERYPOINTER" Id="{9720a80e-d1de-4d43-aefa-ee7d76542c53}" SpecialFunc="None">
+    <Declaration><![CDATA[PROGRAM QUERYPOINTER
+//__QUERYPOINTER
+VAR
+    iDerived   : I_Derived;
+    fbVariante : FB_Variante;
+    bResult    : BOOL;
+    bTest      : BOOL;
+    pFB        : POINTER TO FB_Variante;
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[//__QUERYPOINTER
+iDerived := fbVariante;
+bResult  := __QUERYPOINTER(iDerived, pFB);
+
+IF bResult THEN
+    bTest := pFB^.Derived();
+END_IF]]></ST>
+    </Implementation>
+  </POU>
+</TcPlcObject>

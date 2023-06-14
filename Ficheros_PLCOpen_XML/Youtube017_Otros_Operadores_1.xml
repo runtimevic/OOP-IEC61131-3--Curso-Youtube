@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <project xmlns="http://www.plcopen.org/xml/tc6_0200">
-  <fileHeader companyName="Beckhoff Automation GmbH" productName="TwinCAT PLC Control" productVersion="3.5.13.21" creationDateTime="2023-06-10T12:40:30.8169703" />
-  <contentHeader name="OOP_Curso" modificationDateTime="2023-06-10T12:40:30.8169703">
+  <fileHeader companyName="Beckhoff Automation GmbH" productName="TwinCAT PLC Control" productVersion="3.5.13.21" creationDateTime="2023-06-14T13:01:31.385386" />
+  <contentHeader name="OOP_Curso" modificationDateTime="2023-06-14T13:01:31.3922176">
     <coordinateInfo>
       <fbd>
         <scaling x="1" y="1" />
@@ -67,7 +67,7 @@ END_TYPE
       </dataType>
     </dataTypes>
     <pous>
-      <pou name="_17_Otros_Operadores" pouType="program">
+      <pou name="_17_Otros_Operadores1" pouType="program">
         <interface>
           <localVars>
             <variable name="pEstructura">
@@ -134,13 +134,16 @@ IF StruDelete THEN
 	 __DELETE(pEstructura);	
 	 __DELETE(pSTRING);	
 	StruDelete := FALSE;
-END_IF</xhtml>
+END_IF
+
+
+</xhtml>
           </ST>
         </body>
         <addData>
           <data name="http://www.3s-software.com/plcopenxml/interfaceasplaintext" handleUnknown="implementation">
             <InterfaceAsPlainText>
-              <xhtml xmlns="http://www.w3.org/1999/xhtml">PROGRAM _17_Otros_Operadores
+              <xhtml xmlns="http://www.w3.org/1999/xhtml">PROGRAM _17_Otros_Operadores1
 VAR
 	pEstructura : POINTER TO ST_Estructura;
 	struNew     : BOOL;
@@ -171,9 +174,9 @@ END_VAR
   <addData>
     <data name="http://www.3s-software.com/plcopenxml/projectstructure" handleUnknown="discard">
       <ProjectStructure>
-        <Folder Name="17_Otros_Operadores">
+        <Folder Name="17_Otros_Operadores_1">
           <Object Name="ST_Estructura" ObjectId="05004f40-b576-4e1d-b8ba-ed5c9fd309ac" />
-          <Object Name="_17_Otros_Operadores" ObjectId="cec54469-a796-4224-936c-ec59c1758dee" />
+          <Object Name="_17_Otros_Operadores1" ObjectId="cec54469-a796-4224-936c-ec59c1758dee" />
         </Folder>
       </ProjectStructure>
     </data>

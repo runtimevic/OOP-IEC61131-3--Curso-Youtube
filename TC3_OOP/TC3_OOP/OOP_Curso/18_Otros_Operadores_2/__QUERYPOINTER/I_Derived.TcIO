@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.12">
+  <Itf Name="I_Derived" Id="{c3542b46-e56a-4beb-8f31-14f9b77c89b7}">
+    <Declaration><![CDATA[INTERFACE I_Derived EXTENDS I_Base
+]]></Declaration>
+    <Method Name="Derived" Id="{9e2a1c12-e644-468d-9b51-cab910afc185}">
+      <Declaration><![CDATA[METHOD Derived : BOOL
+VAR_INPUT
+END_VAR
+]]></Declaration>
+    </Method>
+  </Itf>
+</TcPlcObject>

@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.12">
+  <POU Name="F_SaveExceptionCode" Id="{35710875-c0c5-4f62-80bb-1e1c205d6366}" SpecialFunc="None">
+    <Declaration><![CDATA[FUNCTION F_SaveExceptionCode : BOOL
+VAR_INPUT
+    excInput           : __SYSTEM.ExceptionCode;
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[// Log the thrown exception into the global exception history array
+IF GVL_Exc.nExcIndex <= GVL_Exc.cMaxExc THEN
+    GVL_Exc.aExceptionHistory[GVL_Exc.nExcIndex] := excInput;
+    GVL_Exc.nExcIndex := GVL_Exc.nExcIndex + 1;
+END_IF]]></ST>
+    </Implementation>
+  </POU>
+</TcPlcObject>

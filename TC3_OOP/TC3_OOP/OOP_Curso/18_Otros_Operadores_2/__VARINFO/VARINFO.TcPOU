@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.12">
+  <POU Name="VARINFO" Id="{dccb941f-2b41-458b-a0fe-fa3962edb20e}" SpecialFunc="None">
+    <Declaration><![CDATA[PROGRAM VARINFO
+
+VAR
+    MyVarInfo : __SYSTEM.VAR_INFO;
+    nVar      : INT;
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[MyVarInfo := __VARINFO(nVar);]]></ST>
+    </Implementation>
+  </POU>
+</TcPlcObject>

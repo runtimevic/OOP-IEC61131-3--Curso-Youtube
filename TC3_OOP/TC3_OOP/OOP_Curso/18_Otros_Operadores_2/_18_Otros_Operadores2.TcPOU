@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.12">
+  <POU Name="_18_Otros_Operadores2" Id="{00ab3834-d803-4525-b9eb-d217f66d4b14}" SpecialFunc="None">
+    <Declaration><![CDATA[PROGRAM _18_Otros_Operadores2
+
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[
+QUERYPOINTER();
+TRY_CATCH();
+VARINFO();
+TestAndSet1();]]></ST>
+    </Implementation>
+  </POU>
+</TcPlcObject>

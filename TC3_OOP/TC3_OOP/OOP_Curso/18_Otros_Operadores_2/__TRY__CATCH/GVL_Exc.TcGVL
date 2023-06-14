@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.12">
+  <GVL Name="GVL_Exc" Id="{3ee9550c-3c9a-431c-9fe7-6be85d90c705}">
+    <Declaration><![CDATA[{attribute 'qualified_only'}
+VAR_GLOBAL CONSTANT
+    cMaxExc            : UINT := 10;
+END_VAR
+VAR_GLOBAL
+    nExcIndex          : UINT;
+    aExceptionHistory  : ARRAY[0..cMaxExc] OF __SYSTEM.ExceptionCode;
+END_VAR]]></Declaration>
+  </GVL>
+</TcPlcObject>

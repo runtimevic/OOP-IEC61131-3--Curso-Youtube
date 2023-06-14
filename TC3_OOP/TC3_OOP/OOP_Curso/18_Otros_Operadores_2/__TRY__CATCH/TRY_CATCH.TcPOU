@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.12">
+  <POU Name="TRY_CATCH" Id="{e46da25d-bbc8-442d-930a-15d5810667d5}" SpecialFunc="None">
+    <Declaration><![CDATA[PROGRAM TRY_CATCH
+//__TRY, __CATCH, __FINALLY, __ENDTRY
+VAR
+    nCounter1          : INT;
+    nCounter2          : INT;
+    nCounter_TRY1      : INT;
+    nCounter_TRY2      : INT;
+    nCounter_CATCH     : INT;    
+    nCounter_FINALLY   : INT;
+ 
+    exc                : __SYSTEM.ExceptionCode;
+    lastExc            : __SYSTEM.ExceptionCode;
+ 
+    pSample            : POINTER TO BOOL;
+    bVar               : BOOL;
+    nSample            : INT := 100;
+    nDivisor           : INT;
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[// -- !!! Available from TC3.1 build 4024 for 32-bit runtime systems !!!
+////__TRY, __CATCH, __FINALLY, __ENDTRY 
+//// Counter 1
+//nCounter1 := nCounter1 + 1;
+ 
+//// TRY-CATCH block
+//__TRY
+//    nCounter_TRY1 := nCounter_TRY1 + 1;
+//    pSample^      := TRUE;                // 1. cycle: null pointer access leads to "access violation" exception
+//    nSample       := nSample/nDivisor;    // 2. cycle: division by zero leads to "divide by zero" exception
+//    nCounter_TRY2 := nCounter_TRY2 + 1;
+ 
+//__CATCH(exc)
+//    nCounter_CATCH    := nCounter_CATCH + 1;
+ 
+//    // Exception logging
+//    lastExc := exc;
+//    F_SaveExceptionCode(excInput := exc);
+ 
+//    // Correct the faulty variable values
+//    IF (exc = __SYSTEM.ExceptionCode.RTSEXCPT_ACCESS_VIOLATION) AND (pSample = 0) THEN
+//        pSample  := ADR(bVar);
+// ELSIF ((exc = __SYSTEM.ExceptionCode.RTSEXCPT_DIVIDEBYZERO) OR (exc = __SYSTEM.ExceptionCode.RTSEXCPT_FPU_DIVIDEBYZERO)) AND (nDivisor = 0) THEN
+//        nDivisor := 1;
+//    END_IF
+ 
+//__FINALLY
+//    nCounter_FINALLY := nCounter_FINALLY + 1;
+ 
+//__ENDTRY
+ 
+//// Counter 2
+//nCounter2 := nCounter2 + 1;]]></ST>
+    </Implementation>
+  </POU>
+</TcPlcObject>

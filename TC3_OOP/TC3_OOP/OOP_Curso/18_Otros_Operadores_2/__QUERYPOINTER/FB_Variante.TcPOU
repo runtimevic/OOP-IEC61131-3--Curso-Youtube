@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.12">
+  <POU Name="FB_Variante" Id="{b96cac43-7242-4a32-9ec2-8d0f27d09c40}" SpecialFunc="None">
+    <Declaration><![CDATA[FUNCTION_BLOCK FB_Variante IMPLEMENTS I_Derived
+VAR_INPUT
+END_VAR
+VAR_OUTPUT
+END_VAR
+VAR
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[]]></ST>
+    </Implementation>
+    <Method Name="Base" Id="{8bc0bc5b-dac6-450a-88a6-2701749687ee}">
+      <Declaration><![CDATA[{warning 'add method implementation '}
+METHOD Base : BOOL
+]]></Declaration>
+      <Implementation>
+        <ST><![CDATA[]]></ST>
+      </Implementation>
+    </Method>
+    <Method Name="Derived" Id="{bb0be15b-958a-4a61-9e22-3bbb210b7faf}">
+      <Declaration><![CDATA[{warning 'add method implementation '}
+METHOD Derived : BOOL
+]]></Declaration>
+      <Implementation>
+        <ST><![CDATA[]]></ST>
+      </Implementation>
+    </Method>
+  </POU>
+</TcPlcObject>
