@@ -33,7 +33,10 @@ IF StruDelete THEN
 	 __DELETE(pEstructura);	
 	 __DELETE(pSTRING);	
 	StruDelete := FALSE;
-END_IF]]></ST>
+END_IF
+
+
+]]></ST>
     </Implementation>
   </POU>
 </TcPlcObject>
