@@ -117,6 +117,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#inheritance-function-block" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -354,7 +359,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../tipos%20de%20paradigmas/" class="md-nav__link">
+      <a href="../../../Types%20of%20Paradigms/" class="md-nav__link">
         Types of paradigms
       </a>
     </li>
@@ -733,9 +738,72 @@
       
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Inheritance Function Block
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         Inheritance Function Block
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#inheritance-function-block" class="md-nav__link">
+    Inheritance function block:
+  </a>
+  
+    <nav class="md-nav" aria-label="Inheritance function block:">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#access-specifiers" class="md-nav__link">
+    Access specifiers:
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#overwhelming-methods" class="md-nav__link">
+    Overwhelming methods:
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#inheritance-links-function-block" class="md-nav__link">
+    Inheritance Links Function Block:
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#link-to-the-youtube-video-007" class="md-nav__link">
+    Link to the Youtube Video 007:
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -1281,7 +1349,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Tipos%20de%20Dise%C3%B1o%20para%20programacion%20de%20PLC/" class="md-nav__link">
+      <a href="../../../Types%20of%20Design%20for%20PLC%20programming/" class="md-nav__link">
         Types of Design for PLC programming
       </a>
     </li>
@@ -1490,6 +1558,55 @@
   
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#inheritance-function-block" class="md-nav__link">
+    Inheritance function block:
+  </a>
+  
+    <nav class="md-nav" aria-label="Inheritance function block:">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#access-specifiers" class="md-nav__link">
+    Access specifiers:
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#overwhelming-methods" class="md-nav__link">
+    Overwhelming methods:
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#inheritance-links-function-block" class="md-nav__link">
+    Inheritance Links Function Block:
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#link-to-the-youtube-video-007" class="md-nav__link">
+    Link to the Youtube Video 007:
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -1506,7 +1623,88 @@
 
   <h1>Inheritance Function Block</h1>
 
+<h2 id="inheritance-function-block"><span style="color:grey">Inheritance function block:</span></h2>
+<p>The functions blocks are an excellent medium to maintain the sections of the program separated from each other.This improves the structure of the software and significantly simplifies reuse.Previously, expanding the functionality of an existing block of functions was always a delicate task.This meant modifying the code or programming a new block of functions around the existing block (that is, the existing functions block was effectively embedded within a new block of functions).In the last case, it was necessary to create all the input variables again and assign them to the input variables for the existing functions block.The same was required, in the opposite, for the output variables.</p>
+<p>Twincat 3 and Codesys (IEC61131-3) introduce the concept of inheritance.Inheritance is one of the fundamental principles of object -oriented programming.The inheritance implies deriving a new block of functions from an existing block of functions.Next, you can expand the new block.To the extent allowed by the access specifiers of the main functions block, the new block of functions inherits all the properties and methods of the main functions block.Each block of functions can have any number of blocks of secondary functions, but only a block of main functions.The derivation of a block of functions is produced in the new statement of the Functions Block.The name of the new block of functions is followed by the keyword extended followed by the name of the main functions block.For example:
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nx">FUNCTION_BLOCK</span><span class="w"> </span><span class="nx">PUBLIC</span><span class="w"> </span><span class="nx">FB_NewEngine</span><span class="w"> </span><span class="nx">EXTENDS</span><span class="w"> </span><span class="nx">FB_Engine</span>
+</code></pre></div></td></tr></table></div>
+The new block of derived functions ( FB_NewEngine ) He has all the properties and methods of his father ( FB_Engine ). However, the methods and properties are only inherited when the access specifier allows it.</p>
+<p>The secondary functions block also inherits all variables <strong>local</strong>, <strong>VAR_INPUT</strong> , <strong>VAR_OUTPUT</strong> y <strong>VAR_IN_OUT</strong> of the main functions block.This behavior cannot be modified by access specifiers.</p>
+<p>If the methods or properties of the main functions block have been declared as a protect, the secondary functions block (FB_Newengine) will be able to access them, but not from outside FB_NewEngine .</p>
+<p>The inheritance applies only to the Pou of type function_block.</p>
+<h3 id="access-specifiers"><span style="color:grey">Access specifiers:</span></h3>
+<p>Function_Block, Function or Program statements may include an access specifier.This restricts access and, where appropriate, the ability to inherit.</p>
+<ul>
+<li><span style="color:green">PUBLIC:</span></li>
+</ul>
+<p>Anyone can call or create an instance of the Pou.In addition, if the POU is a function_block, it can be used for inheritance.Restrictions are not applied.</p>
+<ul>
+<li><span style="color:green">INTERN:</span></li>
+</ul>
+<p>The Pou can only be used within its own name space.This allows the POU to be available only within a certain library, for example.</p>
+<ul>
+<li><span style="color:green">FINAL:</span></li>
+</ul>
+<p>The function_block cannot serve as a main block of functions.The methods and properties of this Pou cannot be inherited.Final is only allowed for pou of the type function_block.</p>
+<p>The default configuration where no access specifier is defined is public.Private and Protected Access Specifiers are not allowed in Pou's statements.</p>
+<p>If you plan to use the inheritance, the declaration of the Functions Block will have the following structure:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nx">FUNCTION_BLOCK</span><span class="w"> </span><span class="o">&lt;</span><span class="nx">Access</span><span class="w"> </span><span class="nx">specifier</span><span class="o">&gt;</span><span class="w"> </span><span class="o">&lt;</span><span class="nx">Name</span><span class="o">&gt;</span><span class="w"> </span><span class="nx">EXTENDS</span><span class="w"> </span><span class="o">&lt;</span><span class="nx">Name</span><span class="w"> </span><span class="nx">basic</span><span class="w"> </span><span class="kd">function</span><span class="w"> </span><span class="nx">block</span><span class="o">&gt;</span>
+</code></pre></div></td></tr></table></div>
+<h3 id="overwhelming-methods"><span style="color:grey">Overwhelming methods:</span></h3>
+<p>The new function_block FB_Newengine, which is derived from FB_ENGINE, may contain additional properties and methods.For example, we can add Gear property.This property can be used to consult and change the current march.It is necessary to configure getters and setters for this property.</p>
+<p>However, we must also ensure that the parameter NGear of the Start () method is passed to this property.Because the FB_Engine main functions block has no access to this new property, a new method must be created exactly the same parameters in FB_Newengine.We copy the existing code to the new method and add new code so that the NGEAR parameter passes to Gear Property.</p>
+<p><div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nx">METHOD</span><span class="w"> </span><span class="nx">PUBLIC</span><span class="w"> </span><span class="nx">Start</span>
+<span class="nx">VAR_INPUT</span>
+<span class="w">  </span><span class="nx">nGear</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="nx">INT</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="mf">2</span><span class="p">;</span>
+<span class="w">  </span><span class="nx">fVelocity</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="nx">LREAL</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="mf">8.0</span><span class="p">;</span>
+<span class="nx">END_VAR</span><span class="w"> </span>
 
+<span class="nx">IF</span><span class="w"> </span><span class="p">(</span><span class="nx">fVelocity</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="nx">MaxVelocity</span><span class="p">)</span><span class="w"> </span><span class="nx">THEN</span>
+<span class="w">  </span><span class="nx">velocityInternal</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">fVelocity</span><span class="p">;</span>
+<span class="nx">ELSE</span>
+<span class="w">  </span><span class="nx">velocityInternal</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">MaxVelocity</span><span class="p">;</span>
+<span class="nx">END_IF</span>
+<span class="nx">Gear</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">nGear</span><span class="p">;</span><span class="w"> </span><span class="c1">// new</span>
+</code></pre></div></td></tr></table></div>
+Line 12 copy the NGEAR parameter to the Gear Property.</p>
+<p>When a method or property that is already present in the main functions block is redefined within the secondary functions block, this is called overwhelming.The FB_Newengine Function Block overwrites the Start () method.</p>
+<p>Therefore, FB_Newengine has the new gear property and overwrites the Start () method.</p>
+<p><img alt="inheritance" src="../../../imagenes/herencia.PNG" /></p>
+<p><div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nx">fbNewEngine</span><span class="p">.</span><span class="nx">Start</span><span class="p">(</span><span class="mf">1</span><span class="p">,</span><span class="w"> </span><span class="mf">7.5</span><span class="p">);</span>
+</code></pre></div></td></tr></table></div>
+Call the Start () method in FB_Newengine, since this method has been redefined (overwhelming) in FB_Newengine.</p>
+<p>While:</p>
+<p><div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nx">fbNewEngine</span><span class="p">.</span><span class="nx">Stop</span><span class="p">();</span>
+</code></pre></div></td></tr></table></div>
+Call the stop () method from FB_Engine.The Stop () method has been inherited by FB_Newengine of FB_ENGINE.</p>
+<hr />
+<h3 id="inheritance-links-function-block"><span style="color:grey">Inheritance Links Function Block:</span></h3>
+<ul>
+<li>
+<p>🔗 <a href="https://stefanhenneken.net/2017/04/23/iec-61131-3-methods-properties-and-inheritance/">stefanhenneken.net,iec-61131-3-methods-properties-and-inheritance</a></p>
+</li>
+<li>
+<p>🔗 <a href="https://www.youtube.com/watch?v=ehwCe9C4gWQ">Simple Codesys OOP - Inheritance</a></p>
+</li>
+<li>
+<p>🔗 <a href="https://www.youtube.com/watch?v=rz-a5iM3-uM">TC11.Beckhoff TwinCAT3 Function Block Extend.JP</a></p>
+</li>
+</ul>
+<h3 id="link-to-the-youtube-video-007"><span style="color:grey">Link to the Youtube Video 007:</span></h3>
+<ul>
+<li>🔗 <a href="https://youtu.be/-twPN0jTrKA">007 - OOP IEC 61131-3 PLC -- Inheritance FB</a></li>
+</ul>
 
 
 
