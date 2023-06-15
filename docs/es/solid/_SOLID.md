@@ -66,6 +66,7 @@ Los principios SOLID no son reglas o leyes que deban seguirse estrictamente. Son
 
 - 🔗 [kentcdodds.com,aha-programming](https://kentcdodds.com/blog/aha-programming)
 
--  🔗 [Qué son los principios SOLID ? Por qué son tan importantes y verás que ya los aplicas sin saberlo !!](https://www.youtube.com/watch?v=EbpM-i6GZjs)
+- 🔗 [Qué son los principios SOLID ? Por qué son tan importantes y verás que ya los aplicas sin saberlo !!](https://www.youtube.com/watch?v=EbpM-i6GZjs)
+
 
 

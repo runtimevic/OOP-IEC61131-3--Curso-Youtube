@@ -54,6 +54,8 @@ by Runtimevic -- Víctor Durán Muñoz.
 
 - 🔗 [Why Object Oriented PLC Programming is Essential for Industrial Automation](https://twincontrols.com/community/lounge/why-object-oriented-plc-programming-is-essential-for-industrial-automation/)
 
+- 🔗 [cascadingsoft.com,object-oriented-programming-oop-concepts-benefit](https://cascadingsoft.com/object-oriented-programming-oop-concepts-benefit/)
+
 ***
 ### <span style="color:grey">Link al Video de Youtube 001:</span>
 - 🔗 [001 - OOP IEC 61131-3 PLC -- Introducción a la pagina de documentación SSG, repositorio...](https://www.youtube.com/watch?v=a7eNCefcjGM)
