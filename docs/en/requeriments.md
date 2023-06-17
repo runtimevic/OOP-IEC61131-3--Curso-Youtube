@@ -6,9 +6,9 @@ comments: true
 👨‍🎓 Requirements 👩‍🎓 :
 </font></span>
 
-![requirements](../en/imagenes/requisitos.png)
+![Requirements](../en/imagenes/requisitos.png)
 
-The necessary requirements to follow this course would be installed the following softwares:
+The necessary requirements to follow this course would be to install the following software:
 
 - 🔗 [Beckhoff TwinCAT 3 XAE](https://www.beckhoff.com/en-en/products/automation/twincat/texxxx-twincat-3-engineering/te1000.html) or the ide of 🔗 [Codesys.](https://store.codesys.com/de/)
 - Have a user account in 🔗 [GitHub.](https://github.com/)
@@ -28,7 +28,7 @@ The necessary requirements to follow this course would be installed the followin
 
 - We will find the following folders:
     - 🔗 [TC3_OOP:](https://github.com/runtimevic/OOP-IEC61131-3--Curso-Youtube/tree/master/TC3_OOP) Within this folder is the Twincat3 project, with everything that is explained in the YouTube videos...
-    - 🔗 [Ficheros_PLCOpen_XML:](https://github.com/runtimevic/OOP-IEC61131-3--Curso-Youtube/tree/master/Ficheros_PLCOpen_XML) Within this folder we will find the exported files in Plcopen XML format so that they can be imported on Twincat3 or in codesys of everything explained on YouTube, since being the standardized Plcopen format can be exported/imported in all brands ofPlcs that follow the standard Plcopen ..., but it is advisable to try to do what is explained from scratch to practice and assume the concepts explained ...
+    - 🔗 [Ficheros_PLCOpen_XML:](https://github.com/runtimevic/OOP-IEC61131-3--Curso-Youtube/tree/master/Ficheros_PLCOpen_XML) Within this folder we will find the exported files in Plcopen XML format so that they can be imported on Twincat3 or in codesys of everything explained on YouTube, since it is in the standardized Plcopen format it can be exported/imported into all brands of PLCs that follow the standard Plcopen format, but it is advisable to try to do what is explained from scratch and to practice and implament the concepts explained ...
     - The creation of this SSG website is also housed, (Static sites generator) which will be modified as we advance in this course of OOP IC-61131-3 PLC...
 
 ### <span style="color:grey">Link to the Youtube Video 001:</span>
