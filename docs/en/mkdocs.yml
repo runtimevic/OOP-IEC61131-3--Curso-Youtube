@@ -125,31 +125,31 @@ nav:
       - Access modifiers: Concepts Previous/access modifiers.md
       - Access Modifiers Table: Concepts Previous/Tabla de Modificadores de acceso.md   
     - Classes and Objects:
-      - Classes and Objects: Clases y Objetos/clases y objetos.md
+      - Classes and Objects: Classes and Objects/Classes and Objects.md
       - Function Block: 
-          - Function Block: Clases y Objetos/Function Block.md
-          - Function Block Access Modifiers:  Clases y Objetos/Function Block Modificadores de acceso.md
-          - Function Block Declaration variables: Clases y Objetos/Function Block Declaracion de variables.md
-          - Constructor and Destructor: Clases y Objetos/Constructor y Destructor.md          
+          - Function Block: Classes and Objects/Function Block.md
+          - Function Block Access Modifiers:  Classes and Objects/Function Block Modificadores de acceso.md
+          - Function Block Declaration variables: Classes and Objects/Function Block Declaracion de variables.md
+          - Constructor and Destructor: Classes and Objects/Constructor y Destructor.md          
       - Object Method:
-          - Method: Clases y Objetos/metodo.md
-          - Method access modifiers: Clases y Objetos/Metodo Modificadores de acceso.md
-          - Method Declaration of variables: Clases y Objetos/Metodo Declaracion de variables.md
-          - Method return variable types: Clases y Objetos/Metodo Tipos de variables de retorno.md      
-      - Object Property: Clases y Objetos/propiedad.md
+          - Method: Classes and Objects/metodo.md
+          - Method access modifiers: Classes and Objects/Metodo Modificadores de acceso.md
+          - Method Declaration of variables: Classes and Objects/Metodo Declaracion de variables.md
+          - Method return variable types: Classes and Objects/Metodo Tipos de variables de retorno.md      
+      - Object Property: Classes and Objects/propiedad.md
       - Inheritance:
-          - Inheritance Function Block: Clases y Objetos/Inheritance/Inheritance Function Block.md
-          - Inheritance Structure: Clases y Objetos/Inheritance/Inheritance Structure.md
-          - Inheritance Interface: Clases y Objetos/Inheritance/Inheritance Interface.md
-      - THIS pointer: Clases y Objetos/THIS pointer.md
-      - SUPER pointer: Clases y Objetos/SUPER pointer.md    
-      - Interface: Clases y Objetos/interface.md
-      - pointer and reference: Clases y Objetos/pointer and reference.md
-      - Keyword Abstract: Clases y Objetos/Keyword_Abstract.md
-      - Abstract FB vs Interface: Clases y Objetos/FB abstracto frente a interfaz.md
-      - Fluent Interface: Clases y Objetos/Interfaz fluida.md
-      - Interface vs Inheritance: Clases y Objetos/Interface vs Inheritance.md
-      - Further operators: Clases y Objetos/Further operators.md
+          - Inheritance Function Block: Classes and Objects/Inheritance/Inheritance Function Block.md
+          - Inheritance Structure: Classes and Objects/Inheritance/Inheritance Structure.md
+          - Inheritance Interface: Classes and Objects/Inheritance/Inheritance Interface.md
+      - THIS pointer: Classes and Objects/THIS pointer.md
+      - SUPER pointer: Classes and Objects/SUPER pointer.md    
+      - Interface: Classes and Objects/interface.md
+      - pointer and reference: Classes and Objects/pointer and reference.md
+      - Keyword Abstract: Classes and Objects/Keyword_Abstract.md
+      - Abstract FB vs Interface: Classes and Objects/FB abstracto frente a interfaz.md
+      - Fluent Interface: Classes and Objects/Interfaz fluida.md
+      - Interface vs Inheritance: Classes and Objects/Interface vs Inheritance.md
+      - Further operators: Classes and Objects/Further operators.md
     - ExST:
       - Extended Structured Text: Extended_Structured_Text.md   
     - OOP Principles: 
