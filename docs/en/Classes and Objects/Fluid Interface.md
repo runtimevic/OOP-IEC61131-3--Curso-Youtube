@@ -34,7 +34,7 @@ En esta técnica, cada método devuelve un objeto y puede encadenar todos los m�
 
 - veanse los links a los que se hace referencia, veremos un ejemplo en el cual implementaremos una interface fluida para realizar operaciones matematicas...
 
-![Fluid_Interface](../imagenes/Fluid_Interface.PNG)
+![Fluid_Interface](../images/Fluid_Interface.PNG)
 ***
 ### <span style="color:grey">Links Interface Fluida:</span>
 

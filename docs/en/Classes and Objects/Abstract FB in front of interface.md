@@ -62,13 +62,13 @@ The functions blocks must be designed for employee data management.A distinction
 We will solve it in 3 different ways:
 
 - ### 1. Solution Approach: Abstract FB
-![13.1_Abstract](../imagenes/13.1_Abstract.png)
+![13.1_Abstract](../images/13.1_Abstract.png)
 
 - ### 2. Solution Approach: Interface
-![13.2_Interface](../imagenes/13.2_Interface.png)
+![13.2_Interface](../images/13.2_Interface.png)
 
 - ### 3. Solution Approach: Combination of abstract and interface FB
-![13.3_Combination](../imagenes/13.3_Combination.png)
+![13.3_Combination](../images/13.3_Combination.png)
 ### <span style="color:grey">Resumen, Conclusiones:</span>
 - If the user should not create an instance of the FB (Because this does not seem to be useful), then abstract FBs or interfaces are useful.
 - If you want to have the possibility to generalize in more than one basic type, an interface should be used.

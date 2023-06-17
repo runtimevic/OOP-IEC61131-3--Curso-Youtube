@@ -11,9 +11,9 @@ edit_uri: ""
 
 theme:
   name: material
-#  logo: imagenes/OOP_Logo2.png
+#  logo: images/OOP_Logo2.png
   custom_dir: overrides
-  logo: imagenes/oop_logg.webp
+  logo: images/oop_logg.webp
   palette:
     # Palette toggle for light mode
     - scheme: default
@@ -52,7 +52,7 @@ plugins:
   - search:
       lang: en
   - with-pdf:
-      copyright: Copyright &copy; 2023 Víctor Durán.
+      copyright: Copyright & copy; 2023 Víctor Durán.
       cover_subtitle: Object Oriented Programming OOP IEC61131-3 PLC Youtube Course by Runtimevic.
       output_path: ../document-en.pdf
   - pdf-export:
@@ -92,8 +92,8 @@ markdown_extensions:
   - attr_list
   - md_in_html  
   - pymdownx.emoji:
-      emoji_index: !!python/name:materialx.emoji.twemoji
-      emoji_generator: !!python/name:materialx.emoji.to_svg
+      emoji_index: tag:yaml.org,2002:python/name:materialx.emoji.twemoji
+      emoji_generator: tag:yaml.org,2002:python/name:materialx.emoji.to_svg
   - pymdownx.highlight:
       linenums: true      
   - pymdownx.critic
@@ -112,7 +112,7 @@ markdown_extensions:
       custom_fences:
         - name: mermaid
           class: mermaid
-          format: !!python/name:pymdownx.superfences.fence_code_format
+          format: tag:yaml.org,2002:python/name:pymdownx.superfences.fence_code_format
   - meta          
 
 nav:
@@ -120,10 +120,10 @@ nav:
     - Introduction: index.md
     - Types of paradigms: Types of Paradigms.md
     - Concepts Previous:
-      - Type of Data: Concepts Previous/Tipos de datos.md       
+      - Type of Data: Concepts Previous/Declaration of a Variable.md       
       - Variable types and special variables: Concepts Previous/Variable types and special variables.md
       - Access modifiers: Concepts Previous/access modifiers.md
-      - Access Modifiers Table: Concepts Previous/Tabla de Modificadores de acceso.md   
+      - Access Modifiers Table: Concepts Previous/Access Modifiers Table.md   
     - Classes and Objects:
       - Classes and Objects: Classes and Objects/Classes and Objects.md
       - Function Block: 
@@ -132,10 +132,10 @@ nav:
           - Function Block Declaration variables: Classes and Objects/Function Block/Types of variables allowed in a function block.md
           - Constructor and Destructor: Classes and Objects/Function Block/Constructor and Destructor.md          
       - Object Method:
-          - Method: Classes and Objects/Object Method/metodo.md
-          - Method access modifiers: Classes and Objects/Object Method/Metodo Modificadores de acceso.md
-          - Method Declaration of variables: Classes and Objects/Object Method/Metodo Declaracion de variables.md
-          - Method return variable types: Classes and Objects/Object Method/Metodo Tipos de variables de retorno.md      
+          - Method: Classes and Objects/Object Method/Method.md
+          - Method access modifiers: Classes and Objects/Object Method/Access specifiers for methods.md
+          - Method Declaration of variables: Classes and Objects/Object Method/Types of variables allowed in a method.md
+          - Method return variable types: Classes and Objects/Object Method/Types of return variables.md      
       - Object Property: Classes and Objects/Properties.md
       - Inheritance:
           - Inheritance Function Block: Classes and Objects/Inheritance/Inheritance Function Block.md
@@ -153,18 +153,18 @@ nav:
     - ExST:
       - Extended Structured Text: Extended_Structured_Text.md   
     - OOP Principles: 
-      - 4 Pillars: principios/_principios OOP.md
-      - Abstraction: principios/abstraccion.md
-      - Encapsulation: principios/encapsulamiento.md
-      - Inheritance: principios/herencia.md
-      - Polymorphism: principios/polimorfismo.md    
+      - 4 Pillars: Principles/_Principles OOP.md
+      - Abstraction: Principles/abstraction.md
+      - Encapsulation: Principles/encapsulation.md
+      - Inheritance: Principles/inheritance.md
+      - Polymorphism: Principles/polymorphism.md    
     - SOLID: 
       - SOLID: solid/_SOLID.md
-      - SRP - Single Responsibility Principle: solid/Principio de Responsabilidad Única.md
-      - OCP - Open/Closed Principle: solid/Principio de Abierto_Cerrado.md
-      - LSP - Liskov Substitution Principle: solid/Principio de Sustitución de Liskov.md
-      - ISP - Interface Segregation Principle: solid/Principio de Segregación de Interfaz.md
-      - DIP - Dependency Inversion Principle: solid/Principio de Inversión de Dependencia.md
+      - SRP - Single Responsibility Principle: solid/Single Responsibility Principle.md
+      - OCP - Open/Closed Principle: solid/Open_Closed Principle.md
+      - LSP - Liskov Substitution Principle: solid/Liskov Substitution Principle.md
+      - ISP - Interface Segregation Principle: solid/Interface Segregation Principle.md
+      - DIP - Dependency Inversion Principle: solid/Dependency Inversion Principle.md
     - UML: 
       - UML: UML/UML.md
       - Class UML: UML/Class UML.md
@@ -172,10 +172,10 @@ nav:
       - StateChart UML: UML/Statechart UML.md
     - Types of Design for PLC programming: Types of Design for PLC programming.md
     - Design patterns:
-      - Design patterns: Patrones de Diseño/_Patrones de Diseño.md
-      - Strategy Pattern: Patrones de Diseño/Strategy pattern.md
-      - The Abstract Factory Pattern: Patrones de Diseño/The Abstract Factory Pattern.md
-      - The Visitor Design Pattern: Patrones de Diseño/The Visitor Design Pattern.md
+      - Design patterns: Design Patterns/_Design Patterns.md
+      - Strategy Pattern: Design Patterns/Strategy pattern.md
+      - The Abstract Factory Pattern: Design Patterns/The Abstract Factory Pattern.md
+      - The Visitor Design Pattern: Design Patterns/The Visitor Design Pattern.md
     - Libraries : Libraries.md
     - Links OOP: links.md
     - TDD:

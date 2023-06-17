@@ -3,7 +3,7 @@
 - A class is a **template**.
 - An object is the **instance of a class**.
 
-![ClaseyObjetos1](../imagenes/OOP-Class-and-Object.jpg)
+![ClaseyObjetos1](../images/OOP-Class-and-Object.jpg)
 
 ```text
 In this example we find the car class,

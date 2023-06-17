@@ -60,7 +60,7 @@ When a method or property that is already present in the main function block is 
 
 Therefore, FB_Newengine has the new gear property and overwrites the Start () method.
 
-![inheritance](../../imagenes/herencia.PNG)
+![inheritance](../../images/herencia.PNG)
 
 ```javascript
 fbNewEngine.Start(1, 7.5);

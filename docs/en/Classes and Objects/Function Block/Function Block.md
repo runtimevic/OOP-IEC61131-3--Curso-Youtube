@@ -4,7 +4,7 @@ FUNCTION_BLOCK <access specifier> <function block> | EXTENDS <function block> | 
 ```
 ### <span style="color:grey">Implementación Bloque de Funciones:</span> 
 
-![Function_Block](../imagenes/Function_Block_Coche.png)
+![Function_Block](../images/Function_Block_Coche.png)
 
 
 

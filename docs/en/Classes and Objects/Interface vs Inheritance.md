@@ -18,7 +18,7 @@
 ***
 Las Interfaces y la Herencia pueden trabajar de la mano, utilizarse a la vez cogiendo de cada una lo mejor posible:
 
-![Interface_vs_Herencia](../imagenes/Interface_vs_Herencia.png)
+![Interface_vs_Herencia](../images/Interface_vs_Herencia.png)
 
 ***
 ### <span style="color:grey">Links Interface vs Herencia:</span>

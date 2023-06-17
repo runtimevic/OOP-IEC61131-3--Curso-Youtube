@@ -2,7 +2,7 @@
 📖 Object -oriented programming course YouTube - OOP:
 </font></span>
 
-![Oop_title](./imagenes/oop.png)
+![Oop_title](./images/oop.png)
 <span style="color:green"><font size="3">
 by Runtimevic -- Víctor Durán Muñoz.
 </font></span>

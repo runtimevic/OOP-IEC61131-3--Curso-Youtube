@@ -12,7 +12,7 @@ Procedural programming or procedure programming is a programming paradigm. Many 
     - Most global data -> No protection.
     - The procedures can usually be independent -> bad reuse of the code.
 
-![Procedural programming](./imagenes/programacion_procedimental.png)
+![Procedural programming](./images/programacion_procedimental.png)
 
 - <span style="color:orange"><font size="4"> Object -oriented </font></span> -- Build ** objects based on objects**.
 ```text
@@ -22,7 +22,7 @@ Based on the concept of "objects", which can contain data and code.
 The data is in the form of fields and the code is in the form of procedures.
 ```
 
-![ADVANTAGES of PROGRAMMING with OOP](./imagenes/programacionoop.png)
+![ADVANTAGES of PROGRAMMING with OOP](./images/programacionoop.png)
 ### <span style="color:grey"> ADVANTAGES OF PROGRAMMING with OOP:</span>
 - routines and data are combined in an object -> encapsulation.
 - Methods/Properties -> Interface defined for calls and data access.

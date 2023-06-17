@@ -16,7 +16,7 @@ If necessary, you must implement FB_EXIT explicitly.If this method is present, i
 ***
 ### <span style="color:grey">Links:</span>
 
-![constructor_destuctor](../imagenes/constructor&destructor.png)
+![constructor_destuctor](../images/constructor&destructor.png)
 ***
 - 🔗 [Métodos FB_init, FB_reinit and FB_exit, Infosys Beckhoff](https://infosys.beckhoff.com/content/1033/tc3_plc_intro/5044757003.html?id=6463352332511266504)
 
