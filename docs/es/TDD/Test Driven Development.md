@@ -36,5 +36,6 @@ Vamos a ver una lista de todas las implementaciones que he encontrado para conse
 
 - 🔗 [www.nimblework.com, desarrollo-dirigido-por-pruebas-tdd](https://www.nimblework.com/es/agile/desarrollo-dirigido-por-pruebas-tdd/)
 - 🔗 [leanpub.com/tdd-ebook/read](https://leanpub.com/tdd-ebook/read)
+- 🔗 [Pruebas unitarias y Test-Driven Development | Ejemplo desde cero](https://www.youtube.com/watch?v=YuRdaR6wwWU)
 ***
 ### <span style="color:grey">Link al Video de Youtube_NNN:</span>

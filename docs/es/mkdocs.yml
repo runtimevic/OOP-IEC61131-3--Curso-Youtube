@@ -183,7 +183,9 @@ nav:
           - Patron Visitante: Patrones de Diseño/The Visitor Design Pattern.md
     - Librerias : Librerias.md
     - Links OOP: links.md
-    - TDD:
-       - TDD - Desarrollo guiado por pruebas: TDD/Test Driven Development.md
-       - Pruebas Unitarias: TDD/Unit Test.md
+    - CI/CD:
+       - CI/CD - Integración y entrega continua: CI_CD/Integracion y entrega continua.md
+       - TDD:
+          - TDD - Desarrollo guiado por pruebas: TDD/Test Driven Development.md
+          - Pruebas Unitarias: TDD/Unit Test.md
  

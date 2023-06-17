@@ -44,5 +44,7 @@ En Codesys y en TwinCAT tendremos el diagrama:
 - 🔗 [online.visual-paradigm.com](https://online.visual-paradigm.com/diagrams/solutions/free-class-diagram-tool/)
 - 🔗 [www.eclipse.org/papyrus](https://www.eclipse.org/papyrus/)
 - 🔗 [sourcemaking.com/uml](https://sourcemaking.com/uml)
+- 🔗 [UML y Enterprise Architect desde cero](https://www.youtube.com/watch?v=CDBOLxknUww)
+- 🔗 [Tutorial sobre UML y herramientas CASE](https://www.youtube.com/watch?v=O_4ATZQrVpw)
 ***
 ### <span style="color:grey">Link al Video de Youtube_NNN:</span>
