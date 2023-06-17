@@ -3,7 +3,7 @@
 Development engineering for OOP programming
 - Component design, unit, device, object...
     - Objects are the basic object -oriented programming units.
-    - A component provides services, while an object provides operations and methods.A component can be understood by all, while an object can only be understood by developers.
+    - A component provides services, while an object provides operations and methods. A component can be understood by all, while an object can only be understood by developers.
     - The units are the smallest code groups that can be maintained and executed independently
 - Design for unit tests.
 - UML design.
@@ -16,9 +16,9 @@ Units: (Example of units):
 - I_Run:(M_Start, M_Stop)
 
 
--FBTimer
--FCAnalogSensor
--FBGenericUnit
+- FBTimer
+- FCAnalogSensor
+- FBGenericUnit
 
 !!! points that can be included in the course!!!:
 - Objects composition (Composition of objects)

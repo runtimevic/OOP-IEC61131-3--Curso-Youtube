@@ -1,9 +1,9 @@
 ### <span style="color:grey"> Libraries:</span>
-When you develop a project, what do you do when you want to reuse the same program for another project?Probably the most common is to copy and paste.This is fine for small projects, but as the application grows, libraries allow us to administer the functions and functions blocks that we have created.
+When you develop a project, what do you do when you want to reuse the same program for another project? Probably the most common is to copy and paste. This is fine for small projects, but as the application grows, libraries allow us to administer the functions and function blocks that we have created.
 
-Through the use of libraries, we can administer the software that we have created in multiple projects.First, it is a fact that different devices will have different functions, but still, there will always be common parts.In the world of software development, that concept of library management is quite common.
+Through the use of libraries, we can administer the software that we have created in multiple projects. First, it is a fact that different devices will have different functions, but still, there will always be common parts. In the world of software development, that concept of library management is quite common.
 
-### <span style="color:grey">What are the advantages of using the library?</span>
+### <span style="color:grey">What are the advantages of using a library?</span>
 
 - The software is modular, for example, if I have cylinder software, I can use the cylinder library, and if I have registration software, I can use the registration library.
 - Each library is tested independently.
