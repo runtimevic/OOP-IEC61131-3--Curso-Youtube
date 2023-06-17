@@ -6,7 +6,7 @@
 - <span style="color:blue"><font size="4">Declarative --</font></span> (Se ** focuses on the problem ** to solve).
 - <span style="color:blue"><font size="4">Structured --</font></span> (The solution to a problem follows ** a sequence from start to finish **).
 - <span style="color:blue"><font size="4">Functional --</font></span> (Divide the problem into various solutions that will be executed by the ** declared functions **).
-Procedural programming or procedure programming is a programming paradigm.Many times it is applicable both in low -level programming languages and in high -level languages.In the event that this technique is applied in high -level languages, it will receive the name of functional programming.
+Procedural programming or procedure programming is a programming paradigm. Many times it is applicable both in low -level programming languages and in high -level languages. In the event that this technique is applied in high -level languages, it will receive the name of functional programming.
 
     - They are called separate routines from the main program
     - Most global data -> No protection.
