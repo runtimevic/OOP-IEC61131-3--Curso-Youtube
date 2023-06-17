@@ -127,16 +127,16 @@ nav:
     - Classes and Objects:
       - Classes and Objects: Classes and Objects/Classes and Objects.md
       - Function Block: 
-          - Function Block: Classes and Objects/Function Block.md
-          - Function Block Access Modifiers:  Classes and Objects/Function Block Modificadores de acceso.md
-          - Function Block Declaration variables: Classes and Objects/Function Block Declaracion de variables.md
-          - Constructor and Destructor: Classes and Objects/Constructor y Destructor.md          
+          - Function Block: Classes and Objects/Function Block/Function Block.md
+          - Function Block Access Modifiers:  Classes and Objects/Function Block/Access modifiers Function block.md
+          - Function Block Declaration variables: Classes and Objects/Function Block/Types of variables allowed in a function block.md
+          - Constructor and Destructor: Classes and Objects/Function Block/Constructor and Destructor.md          
       - Object Method:
-          - Method: Classes and Objects/metodo.md
-          - Method access modifiers: Classes and Objects/Metodo Modificadores de acceso.md
-          - Method Declaration of variables: Classes and Objects/Metodo Declaracion de variables.md
-          - Method return variable types: Classes and Objects/Metodo Tipos de variables de retorno.md      
-      - Object Property: Classes and Objects/propiedad.md
+          - Method: Classes and Objects/Object Method/metodo.md
+          - Method access modifiers: Classes and Objects/Object Method/Metodo Modificadores de acceso.md
+          - Method Declaration of variables: Classes and Objects/Object Method/Metodo Declaracion de variables.md
+          - Method return variable types: Classes and Objects/Object Method/Metodo Tipos de variables de retorno.md      
+      - Object Property: Classes and Objects/Properties.md
       - Inheritance:
           - Inheritance Function Block: Classes and Objects/Inheritance/Inheritance Function Block.md
           - Inheritance Structure: Classes and Objects/Inheritance/Inheritance Structure.md
@@ -146,10 +146,10 @@ nav:
       - Interface: Classes and Objects/interface.md
       - pointer and reference: Classes and Objects/pointer and reference.md
       - Keyword Abstract: Classes and Objects/Keyword_Abstract.md
-      - Abstract FB vs Interface: Classes and Objects/FB abstracto frente a interfaz.md
-      - Fluent Interface: Classes and Objects/Interfaz fluida.md
+      - Abstract FB vs Interface: Classes and Objects/Abstract FB in front of interface.md
+      - Fluent Interface: Classes and Objects/Fluid Interface.md
       - Interface vs Inheritance: Classes and Objects/Interface vs Inheritance.md
-      - Further operators: Classes and Objects/Further operators.md
+      - Further operators: Classes and Objects/Other Operators.md
     - ExST:
       - Extended Structured Text: Extended_Structured_Text.md   
     - OOP Principles: 
