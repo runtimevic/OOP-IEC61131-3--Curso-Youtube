@@ -7,26 +7,26 @@
 by Runtimevic -- Víctor Durán Muñoz.
 </font></span>
 ***
-### <span style="color:grey">What is Oop?</span>
+### <span style="color:grey">What is OOP?</span>
 
 - It is a paradigm that makes use of objects for software construction.
 
     . What is a paradigm?
     
-    - It has different interpretations, it can be a **model**, **example** o **pattern.**
-    - Is a **form** o o **style** to program.
-- It seeks to capture reality towards the code.
+    - It has different interpretations, it can be a **model**, **example** or **pattern.**
+    - Is a **form** or **style** of programing.
+- It seeks to capture reality in the code.
 
 ### <span style="color:grey">How to think about objects?</span>
 
-- To focus on **Something of reality.**
-- Details its **attributes, (properties)**
+- To focus on **Something from reality.**
+- Details its **attributes, (PROPERTIES)**
 - Details its **behaviors (METHODS)**
 
 ```text
 📱 Example: (Mobile-Smartphone Telephone)
 
-. What attributes (Properties) We recognize? 
+. What attributes (PROPERTIES) We recognize? 
     - color.
     - brand.
 . What can be done? (METHODS)
@@ -35,14 +35,14 @@ by Runtimevic -- Víctor Durán Muñoz.
 ```
 
 ```text
-🚗 Example: (Coach)
+🚗 Example: (Car)
 
-. What attributes (Properties) We recognize? 
+. What attributes (PROPERTIES) We recognize? 
     - color.
     - brand.
-. What can be done? (Metodos)
+. What can be done? (METHODS)
     - drive.
-    - curb. 
+    - Park. 
     - speed up.
 ```
 ***
