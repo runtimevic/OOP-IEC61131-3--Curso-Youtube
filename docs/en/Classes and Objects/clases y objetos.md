@@ -1,4 +1,4 @@
-### <span style="color:grey">Classes and objects:</span>
+### <span style="color:grey">Classes and Objects:</span>
 
 - A class is a **template**.
 - An object is the **instance of a class**.
