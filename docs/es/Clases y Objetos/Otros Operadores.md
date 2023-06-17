@@ -141,7 +141,7 @@ MyVarInfo := __VARINFO(nVar);
 - 🔗 [stefanhenneken.net,iec-61131-3-object-composition-with-the-help-of-interfaces](https://stefanhenneken.net/2014/02/18/iec-61131-3-object-composition-with-the-help-of-interfaces/)
 - 🔗 [20. TwinCAT 3: Structures: Alignment & dynamically created structures](https://www.youtube.com/watch?v=d0vkD-EVv7g)
 ***
-### <span style="color:grey">Links Videos de Youtube 016 y 017:</span>
+### <span style="color:grey">Links Videos de Youtube 016, 017 y 018:</span>
 - 🔗 [016 - OOP IEC 61131-3 PLC -- Interface vs Herencia_2](https://youtu.be/gFJN7x_m4to) 
 - 🔗 [017 - OOP IEC 61131-3 PLC -- Otros Operadores1](https://youtu.be/uf7BIFNQmYE)
-- 🔗 [018 - OOP IEC 61131-3 PLC -- Otros Operadores2]()
+- 🔗 [018 - OOP IEC 61131-3 PLC -- Otros Operadores2](https://youtu.be/rJUqVwoA2d8)

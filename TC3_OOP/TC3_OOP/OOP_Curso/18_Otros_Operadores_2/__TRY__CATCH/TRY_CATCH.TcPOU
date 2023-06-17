@@ -21,7 +21,7 @@ VAR
 END_VAR
 ]]></Declaration>
     <Implementation>
-      <ST><![CDATA[// -- !!! Available from TC3.1 build 4024 for 32-bit runtime systems !!!
+      <ST><![CDATA[//// -- !!! Available FROM TC3.1 build 4024 FOR 32-BIT runtime systems !!!
 ////__TRY, __CATCH, __FINALLY, __ENDTRY 
 //// Counter 1
 //nCounter1 := nCounter1 + 1;

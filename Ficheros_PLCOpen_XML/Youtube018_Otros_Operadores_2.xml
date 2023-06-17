@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <project xmlns="http://www.plcopen.org/xml/tc6_0200">
-  <fileHeader companyName="Beckhoff Automation GmbH" productName="TwinCAT PLC Control" productVersion="3.5.13.21" creationDateTime="2023-06-14T13:02:06.5620853" />
-  <contentHeader name="OOP_Curso" modificationDateTime="2023-06-14T13:02:06.5620853">
+  <fileHeader companyName="Beckhoff Automation GmbH" productName="TwinCAT PLC Control" productVersion="3.5.13.21" creationDateTime="2023-06-17T13:41:47.8199657" />
+  <contentHeader name="OOP_Curso" modificationDateTime="2023-06-17T13:41:47.8199657">
     <coordinateInfo>
       <fbd>
         <scaling x="1" y="1" />
@@ -271,7 +271,7 @@ END_VAR
         </interface>
         <body>
           <ST>
-            <xhtml xmlns="http://www.w3.org/1999/xhtml">// -- !!! Available from TC3.1 build 4024 for 32-bit runtime systems !!!
+            <xhtml xmlns="http://www.w3.org/1999/xhtml">//// -- !!! Available FROM TC3.1 build 4024 FOR 32-BIT runtime systems !!!
 ////__TRY, __CATCH, __FINALLY, __ENDTRY 
 //// Counter 1
 //nCounter1 := nCounter1 + 1;
@@ -624,6 +624,10 @@ END_VAR
     <data name="http://www.3s-software.com/plcopenxml/projectstructure" handleUnknown="discard">
       <ProjectStructure>
         <Folder Name="18_Otros_Operadores_2">
+          <Folder Name="TestAndSet">
+            <Object Name="GVL" ObjectId="7ed94512-0cbc-4669-8f56-0baad7f9b2a2" />
+            <Object Name="TestAndSet1" ObjectId="1fbd48f8-947d-40cb-8a8d-f2473064570d" />
+          </Folder>
           <Object Name="_18_Otros_Operadores2" ObjectId="00ab3834-d803-4525-b9eb-d217f66d4b14" />
           <Folder Name="__QUERYPOINTER">
             <Object Name="FB_Variante" ObjectId="b96cac43-7242-4a32-9ec2-8d0f27d09c40">
@@ -645,10 +649,6 @@ END_VAR
           </Folder>
           <Folder Name="__VARINFO">
             <Object Name="VARINFO" ObjectId="dccb941f-2b41-458b-a0fe-fa3962edb20e" />
-          </Folder>
-          <Folder Name="TestAndSet">
-            <Object Name="GVL" ObjectId="7ed94512-0cbc-4669-8f56-0baad7f9b2a2" />
-            <Object Name="TestAndSet1" ObjectId="1fbd48f8-947d-40cb-8a8d-f2473064570d" />
           </Folder>
         </Folder>
       </ProjectStructure>
