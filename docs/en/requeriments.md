@@ -6,7 +6,7 @@ comments: true
 👨‍🎓 Requirements 👩‍🎓 :
 </font></span>
 
-![requirements](../imagenes/requisitos.png)
+![requirements](../en/imagenes/requisitos.png)
 
 The necessary requirements to follow this course would be installed the following softwares:
 
