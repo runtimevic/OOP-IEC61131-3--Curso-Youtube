@@ -1,22 +1,22 @@
-### <span style="color:grey">this^ Pointer:</span>
+### <span style="color:grey">THIS^ Pointer:</span>
 
-El puntero THIS^ se utiliza para referenciar la instancia actual de una clase en un programa orientado a objetos.
-En otras palabras, cuando se crea un objeto de una clase, el puntero THIS^ se utiliza para acceder a los atributos y métodos de ese objeto específico. Por ejemplo, si tenemos una clase llamada "Motor" con un atributo "velocidad" y un método "acelerar", al crear un objeto de la clase Motor, podemos utilizar el puntero THIS^ para hacer referencia a ese objeto y modificar su velocidad o acelerar.
+The pointer THIS^ It is used to reference the current instance of a class in an object -oriented program.
+In other words, when an object of a class is created, the pointer THIS^ It is used to access the attributes and methods of that specific object.For example, if we have a class called "motor" with an "speed" attribute and a "accelerate" method, when creating an object of the motor class, we can use the so pointer^ to refer to that object and modify its speed orspeed up.
 
-El puntero **THIS^** está disponible para todos los bloques de funciones y apunta a la instancia de bloque de funciones actual. 
-Este puntero es necesario siempre que un método contenga una variable local que oculte una variable en el bloque de funciones.
+The pointer **THIS^** It is available for all functions blocks and points to the current Function Block instance.
+This pointer is necessary that a method contains a local variable that hides a variable in the functions block.
 
-Una declaración de asignación dentro del método establece el valor de la variable local. 
-Si queremos que el método establezca el valor de la variable local en el bloque de funciones, necesitamos usar el puntero THIS^ para acceder a él.
+A declaration of allocation within the method establishes the value of the local variable.
+If we want the method to establish the value of the local variable in the functions block, we need to use the pointer THIS^ To access him.
 
-Al igual que con el puntero SUPER, el puntero THIS también debe estar siempre en mayúsculas.
+As with the super pointer, the pointer THIS It must also be capitalized.
 
 ```javascript
 THIS^.METH_DoIt();
 ```
-### <span style="color:grey">Ejemplos:</span>
+### <span style="color:grey">Examples:</span>
 
-- La variable del bloque de funciones nVarB se establece aunque nVarB está oculta.
+- The NVARB Function Block variable is established although NVARB is hidden.
 
 ```javascript
 FUNCTION_BLOCK FB_A
@@ -41,8 +41,8 @@ VAR
     nVarB : INT;
 END_VAR
 
-nVarB := 22; // Se establece la variable local nVarB.
-THIS^.nVarB := 222; // La variable del bloque de funciones nVarB se establece aunque nVarB está oculta.
+nVarB := 22; // The nVarB local variable is established.
+THIS^.nVarB := 222; // The variable of the block NVARB offunctions is established although Nvvarb is hidden.
 
 PROGRAM MAIN
 VAR
@@ -53,7 +53,7 @@ fbMyfbB(nVarA:=0, nVarB:= 0);
 fbMyfbB.DoIt();
 ```
 
-- Una llamada de función necesita la referencia a la propia instancia de FB.
+- A function call needs the reference to the FB instance.
 
 ```javascript
 FUNCTION F_FunA : INT
@@ -83,8 +83,8 @@ VAR
     nVarB: INT;
 END_VAR
 
-nVarB := 22;  //Se establece la variable local nVarB.
-F_FunA(fbMyFbA := THIS^);  //F_FunA es llamado via THIS^.
+nVarB := 22;  // The Nvvarb local variable is established.
+F_FunA(fbMyFbA := THIS^);  // f_funa is called via This^.
 
 PROGRAM MAIN
 VAR
@@ -104,5 +104,5 @@ fbMyFbB.DoIt();
 - 🔗 [stefanhenneken.net,iec-61131-3-methods-properties-and-inheritance](https://stefanhenneken.net/2017/04/23/iec-61131-3-methods-properties-and-inheritance/)
 
 ***
-### <span style="color:grey">Link al Video de Youtube 009:</span>
-- 🔗 [009 - OOP IEC 61131-3 PLC -- Punteros THIS^ y SUPER^](https://youtu.be/S3YdAHyBc6I)
+### <span style="color:grey">Link to the Youtube Video 009:</span>
+- 🔗 [009 - OOP IEC 61131-3 PLC -- Pointers THIS^ and SUPER^](https://youtu.be/S3YdAHyBc6I)

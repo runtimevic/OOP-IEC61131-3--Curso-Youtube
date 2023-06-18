@@ -1,9 +1,9 @@
 ### <span style="color:grey">encapsulation:</span>
 
-La encapsulación se utiliza para agrupar datos con los métodos que operan en ellos y para ocultar datos en su interior.
-una clase, evitando que personas no autorizadas accedan directamente a ella. Reduce la complejidad del código y
-aumenta la reutilización. La separación del código permite la creación de rutinas que pueden ser reutilizadas
-en lugar de copiar y pegar código, reduciendo la complejidad del programa principal.
+The encapsulation is used to group data with the methods that operate in them and to hide data inside.
+A class, preventing unauthorized people directly accessing it.Reduces the complexity of the code and
+Increase reuse.The separation of the code allows the creation of routines that can be reused
+Instead of copying and pasteing code, reducing the complexity of the main program.
 ***
-### <span style="color:grey">Links Encapsulacion:</span>
+### <span style="color:grey">Links encapsulacion:</span>
 - 🔗  [www.plccoder.com,encapsulation](https://www.plccoder.com/encapsulation/)

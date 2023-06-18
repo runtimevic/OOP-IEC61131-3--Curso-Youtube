@@ -1,50 +1,50 @@
-### <span style="color:grey"> Polimorfismo:</span>
+### <span style="color:grey"> Polymorphism:</span>
 
-El concepto de polimorfismo se deriva de la combinación de dos palabras: Poly (Muchos) y Morfismo (Forma).
-Refactoriza casos de cambio/declaraciones de casos feos y complejos.
-El polimorfismo permite que un objeto cambie su apariencia y desempeño dependiendo de la
-situación práctica para poder realizar una determinada tarea. 
-Puede ser estático o dinámico:
+The concept of polymorphism is derived from the combination of two words: poly (many) and morphism (form).
+Refactor cases of change/statements of ugly and complex cases.
+Polymorphism allows an object to change its appearance and performance depending on the
+Practical situation to be able to perform a certain task.
+It can be static or dynamic:
 
-- El polimorfismo estático ocurre cuando el compilador define el tipo de objeto;
-- El polimorfismo dinámico se produce cuando el tipo se determina durante el tiempo de ejecución, lo que hace posible
-para que una misma variable acceda a diferentes objetos mientras el programa se está ejecutando.
-Un buen ejemplo para explicar el polimorfismo es una navaja suiza.
-Una navaja suiza es una herramienta única que incluye un montón de recursos que se pueden utilizar para resolver
-problemas diferentes. Al seleccionar la herramienta adecuada, se puede utilizar una navaja suiza para
-realizar un determinado conjunto de tareas valiosas. De la manera dual, un bloque sumador simple que se adapta
-para hacer frente a, por ejemplo, los tipos de datos int, float, string y time es un ejemplo de un polimórfico
-recurso de programación.
+- Static polymorphism occurs when the compiler defines the type of object;
+- Dynamic polymorphism occurs when the type is determined during the execution time, which makes possible
+For the same variable to access different objects while the program is running.
+A good example to explain polymorphism is a Swiss razor.
+A Swiss razor is a unique tool that includes a lot of resources that can be used to solve
+different problems.When selecting the right tool, you can use a Swiss razor to
+Make a certain set of valuable tasks.In the dual way, a simple summer that adapts
+To deal with, for example, the types of INT, Float, String and Time data is an example of a polymorphic
+programming resource.
 ***
 
-### <span style="color:grey">¿Como conseguir el Polimorfismo?</span>
+### <span style="color:grey">How to get polymorphism?</span>
 
-El polimorfismo se puede obtener gracias a las Interfaces y/o las Clases Abstractas.
+Polymorphism can be obtained thanks to interfaces and/or abstract classes.
 
 - <span style="color:orange"><font size="4">Interface: (INTERFACE)</font></span>
 
-    - Son un **contrato que obliga** a una clase a **implementar** las **propiedades** y/o **métodos** definidos.
-    - Son una plantilla (sin lógica).
+    - They are a **contract that obliges** to a class A **implement** the **properties** y/o **methods** defined.
+    - They are a template (without logic).
 
-- <span style="color:orange"><font size="4">Clases Abstractas: (ABSTRACT)</font></span>
+- <span style="color:orange"><font size="4">Abstract classes: (ABSTRACT)</font></span>
 
-    - Son Clases que no se pueden instanciar, solo pueden ser implementadas a través de la herencia.
+    - They are classes that cannot be instantized, they can only be implemented through inheritance.
 
-- <span style="color:orange"><font size="4">Diferencias:</font></span>
+- <span style="color:orange"><font size="4">Differences:</font></span>
 
-    | Clases abstractas | Interfaces | 
+    | Abstract classes | Interfaces | 
     | :--- | :--- |     
-    | 1.- Limitadas a una sola implementación.   | 1. No tiene limitación de implementación.     | 
-    | 2.- Pueden definir comportamiento base.     | 2. Expone propiedades y métodos abstractos (sin lógica).
+    | 1.- Limited to a single implementation.   | 1. It has no implementation limitation.     | 
+    | 2.- They can define base behavior.     | 2. It exposes abstract properties and methods (without logic).
     
-Tambien se puede conseguir el Polimorfismo por Referencia y/o por Punteros:
+You can also get polymorphism by reference and/or pointers:
 
-- <span style="color:orange"><font size="4">Referencia: (REFERENCE)</font></span>
+- <span style="color:orange"><font size="4">Reference: (REFERENCE)</font></span>
 
-- <span style="color:orange"><font size="4">Puntero: (POINTER)</font></span>
+- <span style="color:orange"><font size="4">Pointer: (POINTER)</font></span>
 
 ***    
-### <span style="color:grey">Links Polimorfismo:</span>
+### <span style="color:grey">Links Polymorphism:</span>
 
 - 🔗 [polymorphism, www.plccoder.com](https://www.plccoder.com/polymorphism/)
 

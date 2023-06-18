@@ -1,35 +1,35 @@
-### <span style="color:grey">abstraccion:</span>
+### <span style="color:grey">abstraction:</span>
 
-La Abstracción es el proceso de ocultar información importante, mostrando solo lo información más esencial. 
-Reduce la complejidad del código y aísla el impacto de los cambios.
-La abstracción se puede entender a partir de un ejemplo de la vida real: encender un televisor solo debe
-requieren hacer clic en un botón, ya que las personas no necesitan saber el proceso por el que pasa.
-Aunque ese proceso puede ser complejo e importante, no es necesario que el usuario sepa
-cómo se implementa. La información importante que no se requiere está oculta para el usuario,
-reduciendo la complejidad del código, mejorando la ocultación de datos y la reutilización, haciendo así que los Bloques de Funciones
-sean más fáciles de implementar y modificar.
+Abstraction is the process of hiding important information, showing only the most essential information.
+It reduces the complexity of the code and isolates the impact of the changes.
+Abstraction can be understood from an example of real life: turning on a television should only
+They require clicking on a button, since people do not need to know the process that passes.
+Although this process can be complex and important, it is not necessary for the user to know
+how it is implemented.The important information that is not required is hidden for the user,
+reducing the complexity of the code, improving the concealment of data and reuse, thus making the functions blocks
+Be easier to implement and modify.
 
-La palabra clave ABSTRACT está disponible para bloques de funciones, métodos y propiedades. Permite la implementación de un proyecto PLC con niveles de abstracción.
+The key word ABSTRACT It is available for blocks of functions, methods and properties.It allows the implementation of a PLC project with levels of abstraction.
 
-La abstracción es un concepto clave de la programación orientada a objetos. Los diferentes niveles de abstracción contienen aspectos de implementación generales o específicos.
+Abstraction is a key concept of object -oriented programming.Different levels of abstraction contain aspects of general or specific implementation.
 
-### <span style="color:grey">Aplicación de la abstracción:</span>
-Es útil implementar funciones básicas o puntos en común de diferentes clases en una clase básica abstracta. Se implementan aspectos específicos en subclases no abstractas.
-El principio es similar al uso de una interfaz. Las interfaces corresponden a clases puramente abstractas que contienen sólo métodos y propiedades abstractas. Una clase abstracta también puede contener métodos y propiedades no abstractos.
+### <span style="color:grey">Application of abstraction:</span>
+It is useful to implement basic or common functions of different classes in an abstract basic class.Specific aspects are implemented in non -abstract subclasses.
+The principle is similar to the use of an interface.The interfaces correspond to purely abstract classes that contain only abstract methods and properties.An abstract class can also contain non -abstract methods and properties.
 
-Reglas para el uso de la palabra clave ABSTRACT:
+Rules for the use of the keyword ABSTRACT:
 
-- No se pueden instanciar bloques de funciones abstractas.
-- Los bloques de funciones abstractas pueden contener métodos y propiedades abstractos y no abstractos.
-- Los métodos abstractos o las propiedades no contienen ninguna implementación (sólo la declaración).
-- Si un bloque de función contiene un método o propiedad abstracta, debe ser abstracto.
-- Los bloques de funciones abstractas deben extenderse para poder implementar los métodos o propiedades abstractos.
-- Por lo tanto: un FB derivado debe implementar los métodos/propiedades de su FB básico o también debe definirse como abstracto.
+- You cannot instantize blocks of abstract functions.
+- Blocks of abstract functions can contain abstract and non -abstract methods and properties.
+- Abstract methods or properties do not contain any implementation (only the declaration).
+- If a function block contains an abstract method or property, it must be abstract.
+- The blocks of abstract functions must be extended to be able to implement abstract methods or properties.
+- Therefore: a derivative FB must implement the methods/properties of its basic FB or must also be defined as abstract.
 
-### <span style="color:grey">Conclusión:</span>
-La encapsulación es uno de los 4 pilares de OOP. La encapsulación consiste en agrupar métodos y propiedades en un bloque de funciones y ocultar y proteger datos que no son necesarios para el usuario. Esto nos ayuda a escribir código SÓLIDO y reutilizable. 
+### <span style="color:grey">Conclusion:</span>
+Encapsulation is one of the 4 pillars of OOP.The encapsulation consists of grouping methods and properties in a block of functions and hiding and protecting data that are not necessary for the user.This helps us write solid and reusable code.
 ***
-### <span style="color:grey">Links Abstracción:</span>
+### <span style="color:grey">Links Abstraction:</span>
 - 🔗 [ABSTRACT,www.plccoder.com](https://www.plccoder.com/abstract/)
 
 - 🔗 [ABSTRACION Concepto, Infosys Beckhoff](https://infosys.beckhoff.com/content/1033/tc3_plc_intro/6413748235.html?id=2638086927809860687)

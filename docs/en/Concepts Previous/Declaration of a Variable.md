@@ -2,11 +2,11 @@
 
 The Declaration of Variables in codesys or TwinCAT will include:
 - A variable name
-- Dos puntos
-- Un tipo de dato
-- Un valor inicial opcional
-- Un punto y coma
-- Un comentario opcional
+- Two points
+- A type of data
+- An optional initial value
+- A point and coma
+- An optional comment
 
 ```javascript
 ( <pragma> )*
@@ -25,23 +25,22 @@ VAR
 END_VAR
 ```
 ***
-### <span style="color:grey">🔗 [Tipos de Datos:](https://infosys.beckhoff.com/content/1033/tc3_plc_intro/2529388939.html?id=3451082169760117126)</span>
+### <span style="color:grey">🔗 [Type of data:](https://infosys.beckhoff.com/content/1033/tc3_plc_intro/2529388939.html?id=3451082169760117126)</span>
 
-### Las ventajas de las estructuras de datos.
-- La principal aportación de las estructuras de datos y los tipos de datos 
-creados por el usuario es la claridad y el orden del código resultante.
+### The advantages of data structures.
+- The main contribution of data structures and data types
+created by the user is the clarity and order of the resulting code.
 
 ***
 
-###  Estructuras de datos: (STRUCT)
+###  Data structures: (STRUCT)
 
 - 🔗 [19. TwinCAT 3: Structures](https://www.youtube.com/watch?v=KzZ73qAevlU)
 - 🔗 [Extender una Estructura, Infosys Beckhoff](https://infosys.beckhoff.com/content/1033/tc3_plc_intro/3468091787.html?id=592001323464924565)
 
-###  Datos de usuario:UDT (User Data Type):
-Los UDT (User Data Type) son tipos de datos que el usuario crea a su medida, 
-según las necesidades de cada proyecto.
-
+###  User Data:UDT (User Data Type):
+The UDT (User Data Type) are types of data that the user creates to their measure,
+according to the needs of each project.
 ***
 When programming in TwinCAT, you can use different data types or instances of function blocks. You assign a data type to each identifier. The data type determines how much memory space is allocated and how these values are interpreted.
 
@@ -104,10 +103,10 @@ https://infosys.beckhoff.com/english.php?content=../content/1033/tc3_plc_intro/2
 
 - 🔗 [Special data types XINT, UXINT, XWORD and PVOID](https://infosys.beckhoff.com/english.php?content=../content/1033/tc3_plc_intro/2529448075.html&id=)
 ***
-### <span style="color:grey">Links Tipos de Datos:</span>
+### <span style="color:grey">Links Type of data:</span>
 - 🔗 [12. TwinCAT 3: Standard data types](https://www.youtube.com/watch?v=qh2cC6eOhKw)
 
-- 🔗 [help.codesys.com, Tipos de datos](https://help.codesys.com/api-content/2/codesys/3.5.14.0/en/_cds_struct_reference_datatypes/#c2bdb4ccec0a8640e0157fbed-id-b8c8a0ca2bdb4ccdc0a8640e00e8ce32)
+- 🔗 [help.codesys.com, Type of data](https://help.codesys.com/api-content/2/codesys/3.5.14.0/en/_cds_struct_reference_datatypes/#c2bdb4ccec0a8640e0157fbed-id-b8c8a0ca2bdb4ccdc0a8640e00e8ce32)
 
 - 🔗 [www.infoplc.net, codesys-variables](https://www.infoplc.net/descargas/42-codesys/3418-codesys-variables-globales-persistentes)
 

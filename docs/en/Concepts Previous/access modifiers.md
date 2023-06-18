@@ -1,16 +1,16 @@
 ### Access modifiers: 
 - <span style="color:orange">PUBLIC:</span> 
-    - Son accesibles luego de instanciar la clase.
-    - Corresponde a la especificación de modificador sin restricción de acceso.
+    - They are accessible after instantaging the class.
+    - It corresponds to the modifier specification without access restriction.
 - <span style="color:orange">PRIVATE:</span> 
-    - Son accesibles solo dentro de la clase.
-    - El acceso está restringido al bloque de funciones Heredado y en el programa MAIN, respectivamente.
+    - They are accessible only within the class.
+    - Access is restricted to the inherited functions block and in the MAIN program, respectively.
 - <span style="color:orange">PROTECTED:</span> 
-    - Son accesibles dentro de la clase.
-    - Son accesibles a través de la herencia.
-    - El acceso está restringido, no se puede acceder desde el programa principal, desde el MAIN.
+    - They are accessible within the class.
+    - They are accessible through inheritance.
+    - Access is restricted, it cannot be accessed from the main program, from the MAIN.
 - <span style="color:orange">INTERNAL:</span>
-    - El acceso está limitado al espacio de nombres (la biblioteca).  
+    - Access is limited to name space (the library).
 - <span style="color:orange">FINAL:</span>
-    - No se permite sobrescribir, en un derivado del bloque de funciones. 
-    - Esto significa que no se puede sobrescribir/extender en una subclase posiblemente existente.
+    - It is not allowed to overwrite, in a derivative of the functions block. 
+    - This means that it cannot be overwritten/extend in a possibly existing subclass.

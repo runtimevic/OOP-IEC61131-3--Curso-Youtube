@@ -1,148 +1,146 @@
 ### <span style="color:grey">DESIGN PATTERNS:</span>
 
-![Designpatterns](../imagenes/DesignPatterns.PNG)
+![Design Patterns](../imagenes/DesignPatterns.PNG)
 
-Los patrones de diseño son soluciones generales y reutilizables para problemas comunes que se encuentran en la programación de software. En la programación orientada a objetos, existen muchos patrones de diseño que se pueden aplicar para mejorar la modularidad, la flexibilidad y el mantenimiento del código.
-Algunos ejemplos de patrones de diseño que se pueden aplicar en la programación de PLCs incluyen el patrón Singleton, el patrón Factory Method, el patrón Observer y el patrón Strategy.
-Por ejemplo, el patrón Singleton se utiliza para garantizar que solo exista una instancia de una clase determinada en todo el programa. Esto puede ser útil en la programación de PLCs cuando se quiere asegurar que solo hay una instancia activa del objeto que controla un determinado proceso o dispositivo.
-El patrón Factory Method se utiliza para crear instancias de objetos sin especificar explícitamente la clase concreta a instanciar. Esto puede ser útil en la programación de PLCs cuando se quiere crear objetos según las necesidades específicas del programa.
-El patrón Observer se utiliza para establecer una relación uno a muchos entre objetos, de manera que cuando un objeto cambia su estado, todos los objetos relacionados son notificados automáticamente. Este patrón puede ser muy útil en la programación de PLCs para establecer relaciones entre diferentes componentes del sistema, como sensores y actuadores. El patrón Strategy se utiliza para definir un conjunto de algoritmos intercambiables, y luego encapsular cada uno como un objeto. Este patrón puede ser útil en la programación de PLCs cuando se desea cambiar dinámicamente el comportamiento del sistema según las condiciones del entorno.
-En resumen, los patrones de diseño son una herramienta muy útil para mejorar la calidad del código en la programación de PLCs y se pueden aplicar con éxito en la programación orientada a objetos para PLCs.
+Design patterns are general and reusable solutions for common problems found in software programming.In object -oriented programming, there are many design patterns that can be applied to improve the modularity, flexibility and maintenance of the code.
+Some examples of design patterns that can be applied in the PLCs programming include the Singleton pattern, the pattern Factory Method, the observer pattern and the Strategy pattern.
+For example, the Singleton pattern is used to ensure that there is only an instance of a specific class throughout the program.This can be useful in PLCs programming when you want to ensure that there is only one active instance of the object that controls a certain process or device.
+The Factory Method pattern is used to create instances of objects without explicitly specifying the specific class to be instant.This can be useful in PLCs programming when you want to create objects according to the specific needs of the program.
+The Observer pattern is used to establish a relationship one to many between objects, so that when an object changes its state, all related objects are automatically notified.This pattern can be very useful in PLCs programming to establish relationships between different system components, such as sensors and actuators.The Strategy pattern is used to define a set of interchangeable algorithms, and then encapsulate each as an object.This pattern can be useful in PLCs programming when you want to dynamically change the behavior of the system according to environmental conditions.
+In summary, design patterns are a very useful tool to improve code quality in PLCs programming and can be successfully applied in object -oriented programming for PLCs.
 
-```text
-“Los patrones de diseño son 
-descripciones de objetos y clases 
-conectadas que se personalizan para 
-resolver un problema de diseño 
-general en un contexto particular”. 
-- Gang of Four 
+``` text
+"Design patterns are
+descriptions of objects and classes
+connected to
+solve a design problem
+general in a particular context ”.
+- Gang of Four
 ```
 
-![Patrones_de_Diseño_Creacional](../imagenes/Patrones_de_Diseno_Creacional.PNG)
+![Patrones_de_Diseño_Creacional](../images/Patrones_de_Dise%C3%B1o_Creacional.PNG)
 
-![Patrones_de_Diseño_Estructural](../imagenes/Patrones_de_Diseno_Estructural.PNG)
+![Patrones_de_Diseño_Estructural](../images/Patrones_de_Dise%C3%B1o_Estructural.PNG)
 
-![Patrones_de_Diseño_de_Comportamiento](../imagenes/Patrones_de_Diseno_de_Comportamiento.PNG)
+![Patrones_de_Diseño_de_Comportamiento](../images/Patrones_de_Dise%C3%B1o_de_Comportamiento.PNG)
 
-![Design_patterns](../imagenes/Design_patterns.jpg)
+![Design_patterns](../images/Design_patterns.jpg)
 
-![Design_patterns_15](../imagenes/OOP__Design_Patterns_15.PNG)
+![Design_patterns_15](../images/Design_Patterns.PNG)
 
-![Design_Patterns_Use_Cases_6](../imagenes/OOP__Design_Patterns_Use_Cases_6.PNG)
+![Design_Patterns_Use_Cases_6](../images/)
 
-Clasificación según su propósito: 
-Los patrones de diseño se clasificaron originalmente en tres grupos: 
+Classification according to its purpose:
+Design patterns were originally classified into three groups:
 
-- Creacionales. 
-- Estructurales. 
-- De comportamiento. 
+- Creatives.
+- Structural.
+- Behavior.
 
-Clasificación según su ámbito:
+Classification according to its scope:
 
--	De clase: Basados en la herencia de clases. 
--	De objeto: Basados en la utilización dinámica de objetos. 
+- Class: based on the inheritance of classes.
+- Object: Based on the dynamic use of objects.
 
+### Creative patterns:
 
-### Patrones Creacionales:
+- Creation patterns abstract how objects are created, so that it allows classes to be created genericly by moving the decision of what classes to create or how to create them.
+But design patterns are directly applicable concepts in software production, any abstraction does not remain in the air as an entelechy that only serves to give speeches, like this:
+Depending on where this decision is displaced, there is talk of class patterns (it uses inheritance to determine the creation of the instances, that is, in the constructors of the classes) or object patterns (it is in methods of the created objects where theclass)
 
-- Los patrones de Creación abstraen la forma en que se crean los objetos, de forma que permite tratar las clases a crear de forma genérica apartando la decisión de qué clases crear o como crearlas. 
-Pero los Patrones de Diseño son conceptos aplicables directamente en la producción de software, cualquier abstracción no se queda en el aire como una entelequia que solo sirve para dar discursos, así:
-Según a donde quede desplazada dicha decisión se habla de Patrones de Clase (utiliza la herencia para determinar la creación de las instancias, es decir en los constructores de las clases) o Patrones de Objeto (es en métodos de los objetos creados donde se modifica la clase) 
-
--	Patrones de Creación de Clase:
-    -	Factoría Abstracta 
-    -	Builder 
--	Patrones de Creación de Objeto: 
-    -	Método Factoría 
-    -	Prototipo 
-    -	Singleton 
-    -	Object Pool 
+-	Class creation patterns:
+    - Abstract factory
+    - Builder
+- Object creation patterns:
+    - Factory method
+    -	Prototype
+    - Singleton
+    - Object pool
 
 
 - Builder*
 - Singleton *
-- Dependency Injection 
-- Service Locator 
+- Dependency Injection
+- Service Locator
 - Abstract Factory*
 - Factory Method *
 
-### Patrones Estructurales:
-Tratan la relación entre clases, la combinación clases y la formación de estructuras de mayor complejidad. 
-- Adapter
-- Data Access Object (DAO)  
-- Query Object 
-- Decorator 
-- Bridge 
+### Structural patterns:
+They deal with the relationship between classes, the classes combination and the formation of structures of greater complexity.
+- Adapt
+- Data Access Object (DAO)
+- Query Object
+- Decorator
+- Bridge
 
-### Patrones de Comportamiento:
-Los patrones de comportamiento hablan de como interaccionan entre si los objetos para conseguir ciertos resultados. 
-Los principales patrones de comportamiento son: 
+### Behavior patterns:
+Behavior patterns talk about how they interact with each other to achieve certain results.
+The main behavior patterns are:
 
 - Command
-- Chain of Responsibility 
+- Chain of Responsibility
 - Strategy
-- Template Method 
-- Interpreter
-- Observer 
-- State 
-- Visitor 
+- Template Method
+- Interpret
+- Observe
+- State
+- Visitor
 - Iterator
 ***
-Los patrones de diseño son soluciones reutilizables para problemas comunes de diseño de software. Proporcionan una forma para que los desarrolladores de software resuelvan problemas comunes de manera consistente y eficiente, sin tener que reinventar la rueda cada vez.
+Design patterns are reusable solutions for common software design problems.They provide a way for software developers to solve common and efficient problems, without having to reinvent the wheel every time.
 
-Beneficios de usar Patrones de Diseño =>
+Benefits of using design patterns =>
 
-• Reusabilidad: Evite reinventar la rueda cada vez.
+• Reusability: Avoid reinventing the wheel every time.
 
-• Escalabilidad: Diseño de software flexible y adaptable.
+• Scalability: flexible and adaptable software design.
 
-• Capacidad de mantenimiento: Código más fácil de modificar y depurar.
+• Maintenance capacity: Code easier to modify and purify.
 
-• Estandarización: Vocabulario común y estructura a través de diferentes proyectos.
+• Standardization: Common vocabulary and structure through different projects.
 
-• Colaboración: más fácil para varios desarrolladores trabajar en el mismo código base.
+• Collaboration: easier for several developers to work in the same base code.
 
 
-Algunos patrones de diseño de uso común =>
+Some design patterns for common use =>
 
-• Patrón de estrategia: el patrón de estrategia se utiliza para definir una familia de algoritmos, encapsular cada uno y hacerlos intercambiables.
+• Strategy pattern: The strategy pattern is used to define a family of algorithms, encapsulate each and make them interchangeable.
 
-Por ejemplo, imagina que tienes un juego con diferentes tipos de personajes, cada uno con sus propias habilidades únicas. El patrón de estrategia le permitiría definir un conjunto de estrategias (es decir, algoritmos) para cada tipo de personaje y luego cambiar fácilmente entre ellas según sea necesario.
+For example, imagine that you have a game with different types of characters, each with their own unique skills.The strategy pattern would allow you to define a set of strategies (that is, algorithms) for each type of character and then easily change between them as necessary.
 
-• Patrón de observador: el patrón de observador se utiliza para notificar a los objetos cuando hay un cambio en otro objeto.
+• Observer pattern: The observer pattern is used to notify objects when there is a change in another object.
 
-Por ejemplo, imagine que tiene una aplicación meteorológica que necesita notificar a sus usuarios cuando cambia la temperatura. El patrón de observador le permitiría definir un conjunto de observadores (es decir, los usuarios) y luego notificarles cuando cambie la temperatura.
+For example, imagine that you have a weather application that needs to notify its users when the temperature changes.The observer pattern would allow you to define a set of observers (that is, users) and then notify them when the temperature changes.
 
-• Patrón de decorador: el patrón de decorador se utiliza para agregar funcionalidad a un objeto de forma dinámica, sin cambiar su estructura original.
+• Decorator pattern: The decorator pattern is used to add functionality to an object dynamically, without changing its original structure.
 
-Por ejemplo, imagine que tiene un automóvil y desea agregarle un sistema de navegación GPS. El patrón decorador le permitiría agregar el sistema GPS sin tener que modificar el propio automóvil.
+For example, imagine you have a car and want to add a GPS navigation system.The decorator pattern would allow you to add the GPS system without having to modify the car itself.
 
-• Patrón de comando: el patrón de comando se usa para encapsular una solicitud como un objeto, lo que permite que se almacene, pase y ejecute en un momento posterior.
+• Command pattern: The command pattern is used to encapsulate an application as an object, which allows to store, pass and run at a later time.
 
-Por ejemplo, imagina que tienes un sistema de automatización del hogar que te permite controlar las luces, el termostato y otros dispositivos. El patrón de comando le permitiría encapsular cada comando (por ejemplo, encender las luces), almacenarlo como un objeto y ejecutarlo más tarde.
+For example, imagine that you have a home automation system that allows you to control lights, thermostat and other devices.The command pattern would allow you to encapsulate each command (for example, turn on the lights), store it as an object and execute it later.
 
-• Patrón de fábrica: el patrón de fábrica se utiliza para crear objetos sin exponer la lógica de creación al cliente.
+• Factory pattern: the factory pattern is used to create objects without exposing the logic of customer creation.
 
-Por ejemplo, imagina que tienes un juego con diferentes niveles, cada uno con su propio conjunto de enemigos. El patrón de fábrica te permitiría crear enemigos para cada nivel sin exponer la lógica de creación al cliente.
+For example, imagine that you have a game with different levels, each with its own set of enemies.The factory pattern would allow you to create enemies for each level without exposing the logic of customer creation.
 
-• Patrón compuesto: el patrón compuesto se utiliza para crear una estructura de objetos en forma de árbol, donde los objetos individuales y los grupos de objetos se tratan de la misma manera.
+• Composite pattern: The compound pattern is used to create a tree -shaped object structure, where individual objects and objects of objects are treated in the same way.
 
-Por ejemplo, imagine que tiene un sistema de archivos, donde los archivos y los directorios se tratan de la misma manera. El patrón compuesto le permitiría tratar archivos y directorios individuales como el mismo tipo de objeto y crear una estructura similar a un árbol de todo el sistema de archivos.
+For example, imagine that you have a file system, where files and directories are treated in the same way.The compound pattern would allow you to treat individual archives and directories such as the same type of object and create a structure similar to a tree of the entire file system.
 ***
-Además de los Patrones de Diseño tenemos:
+In addition to the design patterns we have:
 
--	Patrones de Arquitectura. Formas de descomponer, conectar y relacionar sistemas, trata conceptos como: niveles, tuberías y filtros. Es un nivel de abstracción mayor que el de los Patrones de Diseño. 
--	Patrones de Programación (Idioms Patterns). Patrones de bajo nivel acerca de un lenguaje de programación concreto, describen como implementar cuestiones concretas. 
--	Patrones de Analisis. Conjunto de reglas que permiten modelar un sistema de forma satisfactoria. 
--	Patrones de Organizacionales. Describen como organizar grupos humanos, generalmente relacionados con el software. 
--	Otros Patrones de Software. Se puede hablar de patrones de Programación concurrente, de Interfaz Gráfica, de Organización de Código, de Optimización de Código, de Robustez de Código, de Fase de Prueba. 
-
+- Architecture patterns.Ways to break down, connect and relate systems, treat concepts such as: levels, pipes and filters.It is a level of abstraction greater than that of design patterns.
+- Programming patterns (idioms patterns).Low level patterns about a specific programming language describe how to implement concrete issues.
+- Analysis patterns.Set of rules that allow modeling a system satisfactorily.
+- Organizational patterns.They describe how to organize human groups, generally related to software.
+- Other software patterns.You can talk about concurrent programming patterns, graphic interface, code organization, code optimization, code robustness, test phase.
 ***
-### <span style="color:grey">Links de Patrones de Diseño:</span>
+### <span style="color:grey">Links of design patterns:</span>
 
 - 🔗 [refactoring.guru/es/design-patterns](https://refactoring.guru/es/design-patterns)
 - 🔗 [0w8States/PLC-Design-Patterns](https://github.com/0w8States/PLC-Design-Patterns)
 - 🔗 [github.com/Aliazzzz/Applied-Design-Patterns-in-CODESYS-V3](https://github.com/Aliazzzz/Applied-Design-Patterns-in-CODESYS-V3)
 - 🔗 [sourcemaking.com/design_patterns](https://sourcemaking.com/design_patterns)
 ***
-### <span style="color:grey">Link al Video de Youtube_NNN:</span>
+### <span style="color:grey">Link to the Youtube Video_NNN:</span>
