@@ -1,65 +1,65 @@
 ### <span style="color:grey"> Abstract keyword:</span>
 
-### <span style="color:grey"> Concepto ABSTRACTO:</span>
-La palabra clave ABSTRACT está disponible para bloques de funciones, métodos y propiedades. Permite la implementación de un proyecto PLC con niveles de abstracción.
-La abstracción es un concepto clave de la programación orientada a objetos. Los diferentes niveles de abstracción contienen aspectos de implementación generales o específicos.
+### <span style="color:grey"> Abstract concept:</span>
+The abstract key word is available for blocks of functions, methods and properties.It allows the implementation of a PLC project with levels of abstraction.
+Abstraction is a key concept of object -oriented programming.Different levels of abstraction contain aspects of general or specific implementation.
 
-### <span style="color:grey">Disponibilidad ABSTRACTO:</span>
-Ya estaba disponible en CODESYS, pero con el lanzamiento de TwinCAT 4024 ahora también está disponible en TwinCAT: la palabra clave ABSTRACT. (Disponible en TC3.1 Build 4024).
+### <span style="color:grey">Abstract availability:</span>
+It was already available in Codesys, but with the launch of Twincat 4024 it is now also available on Twincat: the keyword abstract. (Available in TC3.1 Build 4024).
 
-### <span style="color:grey">Aplicación de la abstracción:</span>
-Es útil implementar funciones básicas o puntos en común de diferentes clases en una clase básica abstracta. Se implementan aspectos específicos en subclases no abstractas.
-El principio es similar al uso de una interfaz. Las interfaces corresponden a clases puramente abstractas que contienen sólo métodos y propiedades abstractas.
-Una clase abstracta también puede contener métodos y propiedades no abstractos.
+### <span style="color:grey">Application of abstraction:</span>
+It is useful to implement basic or common functions of different classes in an abstract basic class.Specific aspects are implemented in non -abstract subclasses.
+The principle is similar to the use of an interface.The interfaces correspond to purely abstract classes that contain only abstract methods and properties.
+An abstract class can also contain non -abstract methods and properties.
 
-La abstracción y el uso de la palabra clave abstract es una práctica común en OOP y muchos lenguajes de nivel superior como C# lo admiten. A menudo se considera como el cuarto pilar de la programación orientada a objetos. 
+The abstraction and use of the abstract keyword is a common practice in OOP and many higher level languages such as C# admit it.It is often considered the fourth pillar of object -oriented programming. 
 
-### <span style="color:grey">¿Por qué necesitamos la abstracción?</span>
-Para comprender por qué la abstracción es tan importante en la programación orientada a objetos, volvamos rápidamente a la definición de abstracción. La abstracción consiste en ocultar al usuario detalles de implementación innecesarios y centrarse en la funcionalidad.
+### <span style="color:grey">Why do we need abstraction?</span>
+To understand why abstraction is so important in object -oriented programming, let's go back to the definition of abstraction.Abstraction consists of hiding unnecessary implementation details and focusing on functionality.
 
-Considere un bloque de funciones que implementa una funcionalidad básica de celda de carga. Para usar esto, todo lo que necesitamos saber es que necesita una señal de entrada sin procesar y un factor de escala, y nos proporcionará un valor de salida en Newton. No necesitamos saber cómo se convierte, filtra y escala el valor de salida. Deja que alguien más se preocupe por eso. No es de influencia en nuestro programa. Solo trabajaremos con una interfaz simple de una celda de carga.
+Consider a block of functions that implements a basic functionality of load cell.To use this, all we need to know is that you need an unprocessed input signal and a scale factor, and will provide us with a output value in Newton.We do not need to know how the output value is converted and scale.Let someone else worry about that.It is not influenced in our program.We will only work with a simple interface of a load cell.
 
-Es bueno saber que el uso de abstracciones está estrechamente relacionado con el principio de inversión de dependencia,  uno de los principios SOLID . Esto se vuelve especialmente importante cuando comienzas a trabajar con pruebas unitarias.
+It is good to know that the use of abstractions is closely related to the principle of dependency investment, one of the solid principles.This becomes especially important when you start working with unit tests.
 
-### <span style="color:grey">Reglas para el uso de la palabra clave ABSTRACT:</span>
+### <span style="color:grey">Rules for the use of the abstract keyword:</span>
 
-- Los bloques de funciones abstractas no se pueden instanciar.
-- Los bloques de funciones abstractas pueden contener métodos y propiedades abstractos y no abstractos.
-- Los métodos abstractos o las propiedades no contienen ninguna implementación (solo la declaración).
-- Si un bloque de funciones contiene un método o propiedad abstracta, debe ser abstracta.
-- Los bloques de funciones abstractas deben extenderse para poder implementar los métodos o propiedades abstractas.
-Por lo tanto: Un FB derivado debe implementar los métodos / propiedades de su FB básico o también debe definirse como abstracto.
-Muestra
-Clase básica abstracta:
+- Abstract functions blocks cannot be instantized.
+- Blocks of abstract functions can contain abstract and non -abstract methods and properties.
+- Abstract methods or properties do not contain any implementation (only the declaration).
+- If a block of functions contains an abstract method or property, it must be abstract.
+- The blocks of abstract functions must be extended to be able to implement abstract methods or properties.
+Therefore: a derivative FB must implement the methods / properties of its basic FB or must also be defined as abstract.
+Sample
+Abstract basic class:
 ```javascript
 FUNCTION_BLOCK ABSTRACT FB_System_Base
 ```
-Los puntos en común de todos los módulos del sistema se implementan en esta clase básica abstracta. Contiene la propiedad no abstracta "nSystemID" y el método abstracto "Execute" para esto:
+Common points of all system modules are implemented in this abstract basic class.It contains the non -abstract property "nsystemid" and the "Execute" abstract method for this:
 ```javascript
 PROPERTY nSystemID : UINT
 ```
 ```javascript
 METHOD ABSTRACT Execute
 ```
-mientras que la implementación de "nSystemID" es la misma para todos los sistemas, la implementación del método "Execute" difiere para los sistemas individuales.
+While the implementation of "nsystemid" is the same for all systems, the implementation of the "Execute" method differs for individual systems.
 
 Subclase no abstracta:
 ```javascript
 FUNCTION_BLOCK FB_StackSystem EXTENDS FB_System_Base
 ```
-Las clases no abstractas que se derivan de la clase básica se implementan para los sistemas específicos. Esta subclase representa una pila. Dado que no es abstracto, debe implementar el método "Execute" que define la ejecución específica de la pila:
+Non -abstract classes derived from the basic class are implemented for specific systems.This subclass represents a battery.Since it is not abstract, you must implement the "Execute" method that defines the specific execution of the pile:
 ```javascript
 METHOD Execute
 ```
-### <span style="color:grey">Ejemplo de Demostracion de la palabra clave ABSTRACT en TwinCAT:</span>
+### <span style="color:grey">Example of demonstration of the keyword abstract in TwinCAT:</span>
 
 - 🔗 [The ABSTRACT keyword, www.plccoder.com ](https://www.plccoder.com/abstract/)
 
-### <span style="color:grey">Links de ABSTRACT:</span>
+### <span style="color:grey">Links abstract:</span>
 
 - 🔗 [ABSTRACT concept, infosys.beckhoff.com](https://infosys.beckhoff.com/content/1033/tc3_plc_intro/6413748235.html?id=2638086927809860687)
 - 🔗 [The ABSTRACT keyword, www.plccoder.com ](https://www.plccoder.com/abstract/)
 
 ***
-### <span style="color:grey">Link al Video de Youtube 012:</span>
+### <span style="color:grey">Link to the Youtube Video 012:</span>
 - 🔗 [012 - OOP IEC 61131-3 PLC -- Abstract](https://youtu.be/-Jq0jg0foo4)

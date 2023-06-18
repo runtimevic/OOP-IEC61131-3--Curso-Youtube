@@ -1,27 +1,27 @@
 ### <span style="color:grey">Interface:</span>
 
-En la programación orientada a objetos (OOP) en PLCs, una interfaz es un tipo de estructura que define un conjunto de métodos y propiedades que una clase debe implementar. En otras palabras, una interfaz define un contrato entre diferentes partes del código para asegurar que se cumplan ciertos requisitos y se mantenga una estructura coherente. En términos prácticos, esto significa que cuando se crea una clase que implementa una interfaz, esa clase debe proporcionar los métodos y propiedades definidos en la interfaz. Esto permite que diferentes clases compartan un conjunto común de métodos y propiedades y se comuniquen entre sí de manera coherente. Por ejemplo, si tienes una interfaz **"I_Sensor"** con los **métodos:** **"LeerValor"**,**"Calibrar"** y **"Descalibrar"** y las **Propiedades:** **"Temperatura"**, **"Consigna"** y **"Calibrado"** cualquier clase que implemente esa interfaz debe proporcionar esos tres métodos y las tres propiedades. Esto asegura que cualquier otra parte del código que trabaje con esa clase pueda confiar en que esos métodos y propiedades estarán disponibles.
+In object -oriented programming (OOP) in PLCS, an interface is a type of structure that defines a set of methods and properties that a class must implement.In other words, an interface defines a contract between different parts of the code to ensure that certain requirements are met and a coherent structure is maintained.In practical terms, this means that when a class is created that implements an interface, that class must provide the methods and properties defined in the interface.This allows different classes to share a common set of methods and properties and communicate with each other in a coherent way.For example, if you have an interface **"I_Sensor"** with the **methods:** **"readValue"**,**"Calibrate"** and **"Decalibrate"** and the **Properties:** **"Temperature"**, **"Consigna"** and **"Calibrated"** Any class that implements that interface must provide these three methods and the three properties.This ensures that any other part of the code that works with that class can trust that these methods and properties will be available.
 
 ![Interface](../images/I_Sensor.png)
 
-- Una interfaz es una clase que contiene métodos y propiedades sin implementación. 
-- La interfaz se puede implementar en cualquier clase, pero esa clase debe implementar todos sus métodos.
-y propiedades.
-- Si bien la herencia es una relación "es un", las interfaces se pueden describir como "se comporta como" o
-“tiene una” relación.
-- Las interfaces son objetos que permiten que varias clases diferentes tengan algo en común con
-menos dependencias. Las clases y los bloques de funciones pueden implementar varias interfaces diferentes.
-Uno puede pensar en los métodos y propiedades de la interfaz como acciones que significan cosas diferentes
-dependiendo de quién los esté ejecutando. Por ejemplo, la palabra "Correr" significa "mover a una velocidad
-más rápido que un paseo” para un ser humano, pero significa “ejecutar” para las computadoras.
-- Las clases o bloques de funciones que no comparten similitudes pueden implementar la misma interfaz. En este
-caso, la implementación de los métodos en cada clase puede ser totalmente diferente. Esto abre
-muchos enfoques de programación poderosos:
-- Las POU pueden llamar a una interfaz para ejecutar un método o acceder a una propiedad, sin saber cuál
-clase o FB con el que se trata o cómo va a ejecutar la operación. 
-La interfaz luego apunta a una clase o bloque de función que implementa la interfaz y la operación
-que es ejecutado.
-- Los programadores pueden crear cajas de interruptores fácilmente personalizables usando polimorfismo.
+- An interface is a class that contains methods and properties without implementation.
+- The interface can be implemented in any kind, but that class must implement all its methods.
+and properties.
+- While inheritance is a "is a" relationship, interfaces can be described as "it behaves as" or
+"have a relationship.
+- Interfaces are objects that allow several different kinds to have something in common with
+Less dependencies.Classes and functions blocks can implement several different interfaces.
+One can think about the methods and properties of the interface as actions that mean different things
+depending on who is executing them.For example, the word "run" means "to move at a speed
+Faster than a walk "for a human being, but means" executing "for computers.
+- The classes or blocks of functions that do not share similarities can implement the same interface.In this
+Case, the implementation of the methods in each class can be totally different.This opens
+Many powerful programming approaches:
+- Pou can call an interface to execute a method or access a property, without knowing which
+class or FB with which it is or how the operation will execute.
+The interface then points to a class or function block that implements the interface and the operation
+That is executed.
+- Programmers can create easily customizable switch boxes using polymorphism.
 ***
 ### <span style="color:grey">Links Interface:</span>
 
@@ -42,5 +42,5 @@ que es ejecutado.
 - 🔗 [TC09.Beckhoff TwinCAT3 Function Block-Part4 Interface.JP](https://www.youtube.com/watch?v=SAGchtGi3-o)
 
 ***
-### <span style="color:grey">Link al Video de Youtube 010:</span>
+### <span style="color:grey">Link to the Youtube Video 010:</span>
 - 🔗 [010 - OOP IEC 61131-3 PLC -- Interface](https://youtu.be/ix0Amyg9RcU)

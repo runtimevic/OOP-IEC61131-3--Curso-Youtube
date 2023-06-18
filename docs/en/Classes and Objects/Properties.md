@@ -1,63 +1,63 @@
 ### <span style="color:grey">Properties:</span>
 
 ***
-Las propiedades son las principales variables de una clase. Se pueden utilizar como una alternativa a la clase regular o
-E/S del bloque de funciones.
-Las propiedades tienen métodos Get "Obtener" y Set "Establecer" que permiten acceder y/o cambiar las variables:
+Properties are the main variables of a class.They can be used as an alternative to the regular class or
+E/S of the Function Block.
+The properties have "obtain" and set methods "establish" that allow access and/or change the variables:
 
-- Get - Método que devuelve el valor de una variable.
-- Set - Método que establece el valor de una variable.
+- GET - Method that returns the value of a variable.
+- Set - Method that establishes the value of a variable.
 
-Al eliminar el método "Obtener" o "Establecer", un programador puede hacer que las propiedades sean "de solo escritura" o
-“solo lectura”, respectivamente.
-Dado que estos son métodos, significa que las propiedades pueden:
+By eliminating the "obtain" or "establish" method, a programmer can make the properties "of writing" or
+"Reading only", respectively.
+Since these are methods, it means that the properties can:
 
-- Tener sus propias variables internas.
-- Realizar operaciones antes de devolver su valor.
-- No es necesario adjuntar la variable devuelta a una entrada o salida en particular (o
-variable interna) de la POU, puede devolver un valor basado en una determinada combinación de sus
-variables.
-- Ser accedido por evento en lugar de ser verificado en cada ciclo de ejecución.
+- Have your own internal variables.
+- Perform operations before returning its value.
+- It is not necessary to attach the variable returned to a entry or exit in particular (or
+internal variable) of the POU, can return a value based on a certain combination of its
+Variables
+- Be accessed by event instead of being verified in each execution cycle.
 
 ***
-### Propiedades: Getters & Setters:
+### Properties: getters & Setters:
 
-para modificar directamente nuestras propiedades lo que se busca es que se haga a través de los metodos Getters y Setters, el cual varía la escritura según el lenguaje pero el concepto es el mismo.
+To directly modify our properties, what is sought is to be done through the getters and setters, which varies writing according to the language but the concept is the same.
 ***
-Por lo tanto, una declaración de propiedad tiene la siguiente estructura:
+Therefore, a property statement has the following structure:
 
 ```typescript
 PROPERTY <Access specifier> <Name> : <Datatype>
 ```
-En el Objeto Propiedad es obligatorio que retorne un valor.
+In the property object it is mandatory that returns a value.
 ***
-### <span style="color:grey">Especificadores de acceso:</span>
-Al igual que con los métodos, las propiedades también pueden tomar los siguientes especificadores de acceso: **PUBLIC , PRIVATE , PROTECTED , INTERNAL y FINAL** . Cuando no se define ningún especificador de acceso, la propiedad es **PUBLIC** . Además, también se puede especificar un especificador de acceso para cada setter y getter. Esto tiene prioridad sobre el propio especificador de acceso de la propiedad.
+### <span style="color:grey">Access specifiers:</span>
+As with the methods, the properties can also take the following access specifiers: **PUBLIC , PRIVATE , PROTECTED , INTERNAL and FINAL** . When no access specifier is defined, the property is **PUBLIC** . In addition, you can also specify an access specifier for each setter and getter.This has priority over the property access specifier itself.
 
-Las propiedades son reconocibles por las siguientes características:
+The properties are recognizable by the following characteristics:
 
-Especificador de acceso:
+Access specifier:
 
 - <span style="color:orange">PUBLIC:</span> 
-    - Corresponde a la especificación de modificador sin acceso.
+    - It corresponds to the modifier specification without access.
 - <span style="color:orange">PRIVATE:</span> 
-    - El acceso a la propiedad está limitado solo dentro de su propia Clase (Bloque de Funciones).
+    - Access to property is limited only within its own class (FUNCTION BLOCK).
 - <span style="color:orange">PROTECTED:</span>
-    - El acceso está restringido,no se puede acceder desde el programa principal, desde el MAIN.
+    - Access is restricted, it cannot be accessed from the main program, From the MAIN.
 - <span style="color:orange">INTERNAL:</span>
-    - El acceso a la propiedad está limitado al espacio de nombres, es decir, a la biblioteca.
+    - Access to property is limited to name space, that is, to the library.
 - <span style="color:orange">FINAL:</span> 
-    - No se permite sobrescribir la propiedad en un derivado del bloque de funciones. Esto significa que la propiedad no se puede sobrescribir ni extender en una subclase posiblemente existente.
-    - Las propiedades pueden ser abstractas, lo que significa que una propiedad no tiene una implementación inicial y que la implementación real se proporciona en el bloque de funciones derivado.
+    - The property is not allowed to overwritten in a derivative of the functions block.This means that property cannot be overwritten or extended in a possibly existing subclass.
+    - The properties can be abstract, which means that a property does not have an initial implementation and that the real implementation is provided in the derived functions block.
 
-Los pragmas son muy útiles para monitorear propiedades en modo en línea. Para esto, escríbalos en la parte superior de las declaraciones de propiedades (attribute 'monitoring'):
+Pragmas are very useful for monitoring properties in online mode.For this, write them at the top of the properties statements (Attribute 'monitoring'):
 
-**{attribute 'monitoring := 'variable'}**:  Al acceder a una propiedad, TwinCAT almacena el valor real en una variable y muestra el valor de esta última. Este valor puede volverse obsoleto si el código ya no accede a la propiedad.
+**{attribute 'monitoring := 'variable'}**:  When accessing a property, Twincat stores the real value in a variable and shows the value of the latter.This value can become obsolete if the code no longer access the property.
 
-**{attribute 'monitoring' := 'call'}**:  Cada vez que se muestra el valor, TwinCAT llama al código del descriptor de acceso Get. Cualquier efecto secundario, provocado por ese código, puede aparecer en el seguimiento.
+**{attribute 'monitoring' := 'call'}**:  Every time the value is shown, Twincat calls the GET access descriptor code.Any side effect, caused by that code, may appear in the follow -up.
 
 ***
-### <span style="color:grey">Links del Objeto Propiedad:</span>
+### <span style="color:grey">Object Links Property:</span>
 
 - 🔗 [Documentación de Codesys del Objeto propiedad](https://help.codesys.com/api-content/2/codesys/3.5.12.0/en/_cds_obj_property/#b08bdbd0d86c0a8640e00400511-id-5dbd3039bdbd0d85c0a8640e003d7982)
 
@@ -70,5 +70,5 @@ Los pragmas son muy útiles para monitorear propiedades en modo en línea. Para 
 - 🔗 [TC07.Beckhoff TwinCAT3 Function Block-Part2 Property.JP- DUT](https://www.youtube.com/watch?v=zbnb8K15YdI)
 
 ***
-### <span style="color:grey">Link al Video de Youtube 006:</span>
+### <span style="color:grey">Link to the Youtube Video 006:</span>
 - 🔗 [006 - OOP IEC 61131-3 PLC -- Objeto Propiedad](https://youtu.be/Ci7FExNF7vQ)

@@ -8,7 +8,7 @@
 - 🔗 [Temporary Variable - VAR_TEMP](https://infosys.beckhoff.com/content/1033/tc3_plc_intro/2528781963.html)
 - 🔗 [Static Variables - VAR_STAT](https://infosys.beckhoff.com/content/1033/tc3_plc_intro/2528787339.html)
 - 🔗 [External Variables - VAR_EXTERNAL](https://infosys.beckhoff.com/content/1033/tc3_plc_intro/2528792715.html)
-- 🔗 [~~Instance Variables - VAR_INST~~](https://infosys.beckhoff.com/content/1033/tc3_plc_intro/2528798091.html)
+- 🔗 [Instance Variables - VAR_INST](https://infosys.beckhoff.com/content/1033/tc3_plc_intro/2528798091.html)
 - 🔗 [Remanent Variables - PERSISTENT, RETAIN](https://infosys.beckhoff.com/content/1033/tc3_plc_intro/2528803467.html)
 - 🔗 [SUPER](https://infosys.beckhoff.com/content/1033/tc3_plc_intro/2528837771.html)
 - 🔗 [THIS](https://infosys.beckhoff.com/content/1033/tc3_plc_intro/2528843147.html)
@@ -17,12 +17,12 @@
     - 🔗 [PERSISTENT: for remanent variables of type PERSISTENT](https://infosys.beckhoff.com/content/1033/tc3_plc_intro/2528803467.html)
     - 🔗 [CONSTANT: for constants](https://infosys.beckhoff.com/content/1033/tc3_plc_intro/2529284235.html#2529371275)
 
-- Todos estos tipos de variables que se pueden declarar dentro del FB se pueden repetir los mismos tipos de variables dentro del FB,
-esto podria valer para diferenciar variables del mismo tipo en la zona de declaración, sería meramente indicativo...
+- All these types of variables that can be declared within the FB can repeat the same types of variables within the FB,
+This could be worth to differentiate variables of the same type in the declaration zone, it would be merely indicative...
 
-- Ejemplo de declaración de variables en un **FUNCTION_BLOCK**:
+- Example of declaration of variables in a **FUNCTION_BLOCK**:
 ```javascript
-FUNCTION_BLOCK fb_tipos_de_datos
+FUNCTION_BLOCK fb_type_of_data
 VAR_INPUT
 	binput : BOOL;
 END_VAR
@@ -62,5 +62,5 @@ VAR CONSTANT
 END_VAR
 ```
 ***
-### <span style="color:grey">Link al Video de Youtube 004:</span>
+### <span style="color:grey">Link to the Youtube Video 004:</span>
 - 🔗 [004 - OOP IEC 61131-3 PLC -- Clase y Objeto](https://youtu.be/jGtGV9icvO0) 

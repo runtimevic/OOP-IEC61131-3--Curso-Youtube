@@ -1,238 +1,238 @@
-### <span style="color:grey">Puntero y Referencia:</span>
-En la programación orientada a objetos (OOP) en PLC IEC 61131-3, los punteros y las referencias son dos conceptos importantes que se utilizan para acceder a los datos y métodos de un objeto. 
-Un puntero es una variable que almacena la dirección de memoria de otra variable. 
-Una referencia es una variable que se utiliza para acceder a otra variable sin tener que conocer su dirección de memoria.
-### <span style="color:grey">. ¿Qué es un puntero?</span>
+### <span style="color:grey">Pointer and reference:</span>
+In object-oriented programming (OOP) in PLC IEC 61131-3, pointers and references are two important concepts that are used to access the data and methods of an object.
+A pointer is a variable that stores the memory address of another variable.
+A reference is a variable that is used to access another variable without having to know your memory address.
+### <span style="color:grey">What is a pointer?</span>
 
-- Es un dato que apunta o señala hacia una dirección de memoria.
-- Es una variable que contiene la dirección de memoria donde “vive” la variable.
-- Con el empleo de punteros se accede a la memoria de forma directa,por lo que es una buena técnica para reducir el tiempo de ejecución de un programa y otras muchas más funcionalidades.
-### <span style="color:grey">. Tipos de Punteros:</span>
+- It is a fact that points or points towards a memory direction.
+- It is a variable that contains the memory address where the variable "lives".
+- With the use of pointers, memory is accessed directly, so it is a good technique to reduce the execution time of one program and many other more functionalities.
+### <span style="color:grey">Types of pointers:</span>
 
-- Hay un tipo de puntero para cada tipo de dato, programa, Function Block, funciones, etc. 
-- Según sea el “objeto” al que se desea acceder se necesita un puntero de un tipo u otro.
+- There is a type of pointer for each type of data, program, block function, functions, etc.
+- Depending on the “object” to which you want to access, a pointer of one type or another is needed.
 
-### <span style="color:grey">. Declaración de punteros:</span>
+### <span style="color:grey">Declaration of pointers:</span>
 
-El compilador necesita conocer todos los punteros que se vayan a emplear en el proyecto,
-por lo que hay que declararlos, como cualquier otra variable. 
-En el código se muestra el script necesario para la declaración de varios tipos de punteros:
+The compiler needs to know all the pointers to be used in the project,
+So you have to declare them, like any other variable.
+The code shows the necessary script for the declaration of various types of pointers:
 
 ```javascript
-// Un puntero no deja de ser una variable, la diferencia está en que su contenido no es un valor determinado sino que es la dirección 
-// de memoria donde se ubica la variable de la que se quiere leer o escribir su valor. Y al igual que hay que declarar todas las
-// variables del tipo correspondiente. también hay que declarar todas las variables -punteros- que contendrán esas direcciones de 
-// memoria y su correspondiente tipo.
+// A pointer is still a variable, the difference is that its content is not a certain value but is the address
+// of memory where the variable of which you want to read or write its value is located.And just as all the
+// Variables of the corresponding type.You also have to declare all the variables -punteros- that will contain those directions of
+// Memory and its corresponding type.
 VAR
-    stTest1 : stTipo1; //Declara una estructura de datos del tipo stTipo1.
+    stTest1 : stTipo1; // Declare a STTIPO1 type data structure.
 
-    pin01 : POINTER TO INT; //Declara un puntero para acceder a variables del tipo INT.
-    ps20  : POINTER TO STRING[20]; //Declara un puntero para acceder a variables del tipo STRING de 20 caracteres.
-    pa20 : POINTER TO ARRAY [1..20] OF INT; //Declara un puntero para acceder a variables del tipo ARRAY de 20 elementos del tipo INT.
-    pDword : POINTER TO DWORD; //Declara un puntero para acceder a variables del tipo DWORD.
-    past1  : POINTER TO stTipo1; //Declara un puntero para acceder a variables del tipo stTipo1.
-    pReal  : POINTER TO REAL; //Declara un puntero para acceder a variables del tipo REAL.
+    pin01 : POINTER TO INT; // Declare a pointer to access Variables of the type int.
+    ps20  : POINTER TO STRING[20]; // Declare a pointer to access variables of the string type of 20 characters.
+    pa20 : POINTER TO ARRAY [1..20] OF INT; // Declare a pointer to access array type variables of 20 elements of the int.
+    pDword : POINTER TO DWORD; // Declare a pointer to access Dword type variables.
+    past1  : POINTER TO stTipo1; // Declare a pointer to access Sttype1 type variables.
+    pReal  : POINTER TO REAL; // Declare a pointer to access real type variables.
 END_VAR
 ```
-### <span style="color:grey">. Como saber qué dirección asignar al puntero:</span>
+### <span style="color:grey">.How to know what address assign to the pointer:</span>
 
-- Para poder acceder a una variable mediante un puntero se necesita conocer su dirección de memoria, 
-Para ello se dispone de un operador llamado **ADR** que asigna la dirección de la variable deseada, al puntero.
-- Es conveniente verificar que el valor del puntero no es cero, antes de utilizarlo.
-Por otra parte, para poder leer / escribir el valor de la variable, a la que señala el puntero, 
-se dispone del operador de contenido **^**. Cuando se hace referencia al contenido, de la dirección de memoria apuntada, se habla de desreferenciar el puntero. En el siguiente código se muestra un ejemplo:
+- In order to access a variable through a pointer, you need to know your memory address,
+For this, an operator called **ADR** which assigns the direction of the desired variable, to the pointer.
+- It is convenient to verify that the value of the pointer is not zero, before using it.
+On the other hand, to be able to read / write the value of the variable, to which the pointer indicates,
+The content operator is available **^**. When reference is made to the content, the point of memory pointed out, there is talk of desectioning the pointer.An example is shown in the following code:
 
 ```javascript
 PROGRAM SR_Main_02
 VAR
-    in01    : INT; //Declaración de la variable in01 de tipo entero.
-    in02    : INT := 123; //Declaración e inicialización de la variable in02 de tipo entero.
-    in03    : INT; //Declaración de la variable in03 de tipo entero.
+    in01    : INT; // declaration of the in01 variable of the whole type.
+    in02    : INT := 123; // Declaration and initialization of the entire in02 variable.
+    in03    : INT; // declaration of the entire in03 variable.
 
-    pint    : POINTER TO INT; //Declaración de un puntero para acceder a variables del tipo entero.
+    pint    : POINTER TO INT; // Declaration of a pointer to access variables of the entire type.
 END_VAR
 
-// Ejemplo de uso básico de los operadores ADR y del operador de contenido ^
-// Se muestra como asignar a un puntero la dirección de memoria de una variable y como leer/escribir
-// así como un ejemplo de acceso a variables locales de otros programas.
+// Example of basic use of ADR operators and content operator ^
+// shows how to assign the memory address of a variable to a pointer and how to read/write
+// as well as an example of access to local variables from other programs.
 
-pint := ADR(in01); //Asignamos al puntero la dirección de memoria donde se ubica la variable in01.
-pint^ := 44;     //A la posición de memoria indicada por el puntero, le asignamos el valor 44
-                 //Por tanto a la variable in01 se le ha escrito el valor 44.
+pint := ADR(in01); // We assign to the pointer the direction of memory where the variable in01 is located.
+pint^ := 44;     // To the memory position indicated by the pointer, we assign the value 44
+                // Therefore, the in01 variable has been written the value 44.
 
-in02 := in01; // in02 será igual a 44.
+in02 := in01; // In02 will be equal to 44.
 
-pint := ADR(in02); //Cambiamos la dirección para acceder a la dirección de la variable in02.
-in03 := pint^; // in03 tomara el valor del contenido de la posición de memoria contenida en el
-               // que hemos asignado la dirección de in02, por tanto in03= 123.
+pint := ADR(in02); // We change the address to access the direction of the Variable in02.
+in03 := pint^; // in03 will take the value of the content of the memory position contained in the
+               // that we have assigned the IN02 address, therefore in03 = 123.
 
-pint := ADR(SR_Main_01.inLocalAway); //Cargamos la dirección de memoria de una variable local de 
-                                     // otro programa, la que sería inaccesible por otros medios.
-pint^ := 240 ; // La varible local del programa SR_Main_01.inLocalAway tomará el valor 240                                                
+pint := ADR(SR_Main_01.inLocalAway); // We load the memory address of a local variable of
+                                     // Another program, which would be inaccessible by other means.
+pint^ := 240 ; // The local variable of the SR_Main_01.inlocalaway program will take the value 240                                                
 ```
 
-### <span style="color:grey">. ¿Qué es un acceso indirecto?</span>
+### <span style="color:grey">What is indirect access?</span>
 
-Lo primero, decir que no tiene nada que ver con un puntero.
-Un acceso indirecto permite elegir un número de elemento dentro de un array, hay una variable, llamada índice, que contiene el número del elemento del array al que se desea acceder. En este caso no se puede acceder a ninguna otra variable más allá de los elementos del array, insisto en que no tiene nada que ver con los punteros.
-Con un puntero se puede acceder a cualquier dato u objeto que esté en la memoria del control. Con un acceso indirecto solo se puede acceder a los elementos de un array.
-En el siguiente código se muestra unos ejemplos de acceso indirecto a un array:
+The first thing, to say that it has nothing to do with a pointer.
+Indirect access allows you to choose an element number within an array, there is a variable, called index, which contains the number of the array element you want to access.In this case, no other variable can be accessed beyond the elements of Array, I insist that it has nothing to do with the pointers.
+With a pointer you can access any data or object that is in the control memory.With indirect access you can only access the elements of an array.
+The following code shows some examples of indirect access to an array:
 
 ```javascript
 PROGRAM SR_Main_01
 VAR
-    aR20: ARRAY[1..20] OF REAL; //Declara un array de 20 elementos del tipo REAL.
-    inIndex: INT; //Declara la variable de indice del array para el acceso indirecto
-    xNewVal: BOOL; //Indica que hay una nueva lectura del sensor de fuerza.
-    rFuerza: REAL; //Valor de fuerza del sensor.
+    aR20: ARRAY[1..20] OF REAL; // Declare an array of 20 real elements.
+    inIndex: INT; // Declare the array index variable for indirect access
+    xNewVal: BOOL; // Indicates that there is a new reading sensor reading.
+    rFuerza: REAL; // Sensor strength value.
 END_VAR
 
-// Ejemplo01: Se asigna valores del 1 al 20 a cada elemento del array mediante un bucle.
-FOR inIndex:=1 TO 20 BY 1 DO  // Se empieza por el valor de la variable indice a 1, hasta 20
-    aR20[inIndex] := inIndex; // Al elemento aR20[inIndex] se le asigna el valor de inIndex
-END_FOR;                      // Se incrementa inIndex y se repite el proceso.
+// Example01: values from 1 to 20 are assigned to each element of the array by means of a loop.
+FOR inIndex:=1 TO 20 BY 1 DO  // Starts by the value of the index variable to 1, up to 20
+    aR20[inIndex] := inIndex; // The AR20 [Inindex] element is assigned the value of Inindex
+END_FOR;                      // Inindex increases and the process is repeated.
 
-// Ejemplo02: Creamos un FIFO en el que guardamos un valor analógico de fuera a cada impulso de la señal xNewVal.
-IF xNewVal THEN                // Si hay un nuevo valor de fuerza realizamos el codigo.
-    xNewVal := FALSE;          // Reset de la señal xNewVal.
+// Example02: We create a Fifo in which we keep an analog value from outside each impulse of the XNewval signal.
+IF xNewVal THEN                // If there is a new force value we perform the code.
+    xNewVal := FALSE;          // XNewval signal reset.
 
-    FOR inIndex:=20 TO 2 BY -1 DO // Variable indice a 20, hasta 2.
-        aR20[inIndex] := aR20[inIndex-1]; //Desplazamiento de los valores en el FIFO --->
-    END_FOR;                             // Se decrementa inIndex y se repite el proceso.
+    FOR inIndex:=20 TO 2 BY -1 DO // Index variable at 20, up to 2.
+        aR20[inIndex] := aR20[inIndex-1]; // Displacement of values in the FIFO --->
+    END_FOR;                             // Inindex is decreasing and the process is repeated.
 
-    aR20[1] := rFuerza; // Entrada del valor de fuerza en el primer elemento del FIFO.
+    aR20[1] := rFuerza; // Strength value entry into the first element of FIFO.
 END_IF
 ```
-A este mismo array se puede acceder empleando un puntero, como se verá más adelante, lo que resulta más rápido en tiempo de ejecución, 
-pero no tan claro para quien no suele usar los punteros. 
+To this same array can be accessed using a pointer, as will be seen later, which is faster in execution time,
+But not so clear for those who do not usually use the pointers.
 
-### <span style="color:grey">. Acceso a una estructura de datos mediante punteros:</span>
+### <span style="color:grey">Access to a data structure through pointers:</span>
 
-El proceso es el mismo que ya se ha visto para acceder a una variable del tipo INT, pero se tendrá que declarar un puntero del tipo adecuado, que coincida con el tipo de estructura a la que se desea acceder, veámoslo en el siguiente código:
+The process is the same that has already been seen to access a variable of the INT type, but you will have to declare a pointer of the appropriate type, which matches the type of structure you want to access, let's see it in the following code:
 
 ```javascript
 PROGRAM SR_Main_03
 VAR
-    stMotor_01 : stMotorCtrl; // Estructura de control del motor 1
-    stMotor_02 : stMotorCtrl; // Estructura de control del motor 2
-    stMotor_03 : stMotorCtrl; // Estructura de control del motor 3
-    pstMotorCtrl : POINTER TO stMotorCtrl; // Puntero para acceder a estructuras del tipo stMotorCtrl.
-    xMarcha : BOOL; // Pulsador marcha motores.
+    stMotor_01 : stMotorCtrl; // Motor control structure 1
+    stMotor_02 : stMotorCtrl; // Motor control structure 2
+    stMotor_03 : stMotorCtrl; // Motor control structure 3
+    pstMotorCtrl : POINTER TO stMotorCtrl; // Pointer to access Stmotorctrl type structures.
+    xMarcha : BOOL; // Stockfill button.
 END_VAR
 
-// Ejemplo básico de como acceder a estructuras de datos mediante punteros.
-// La estructura de datos empleada es una llamada a stMotorCtrl, que coincide un bit de marcha, otro de paro y
-// valores de velocidad en Rpms y tiempo de aceleración/deceleración.
+// Basic example of how to access data structures through pointers.
+// The data structure used is a call to Stmotorctrl, which matches a march bit, another unemployment and
+// RPMS speed values and acceleration/deceleration time.
 
-// Asignamos valores a la estructura para el control del motor 1.
+// We assign values to the structure for motor control 1.
 
-stMotor_01.rTpoAcelDecel := 5.4; // Tiempo para acelerar/decelerar hasta alcanazar la velocidad.
-stMotor_01.rVelRpm := 1436.2; // Velocidad en RPM.
-stMotor_01.xMotorOff := TRUE; // Bit de paro ON.
-stMotor_01.xMotorOn := FALSE   ; // Bit de marcha OFF.
+stMotor_01.rTpoAcelDecel := 5.4; // time to accelerate/decelerate until reaching speed.
+stMotor_01.rVelRpm := 1436.2; // RPM speed.
+stMotor_01.xMotorOff := TRUE; // Bit to turn Motor OFF.
+stMotor_01.xMotorOn := FALSE   ; // Bit to turn Motor ON.
 
-pstMotorCtrl := ADR(stMotor_01); // Cargamos la dirección de memoria de la estructura del motor 1
-stMotor_02 := pstMotorCtrl^; // Copia el contenido de la zona de memoria apuntada a la
-                             // estructura del motor 2, en este caso el resultado es el mismo
-                             // que se obtendría con stMotor_02:= stMotor_01;
+pstMotorCtrl := ADR(stMotor_01); // We load the memory direction of the motor structure 1
+stMotor_02 := pstMotorCtrl^; // Copy the content of the memory zone pointed to the
+                            // Motor structure 2, in this case the result is the same
+                            // that would be obtained with Stmotor_02: = Stmotor_01;
 
-stMotor_03 := stMotor_02; // Copia los mismos valores al motor 3;
+stMotor_03 := stMotor_02; // copy the same values to the motor 3;
 
-IF xMarcha THEN         // Si se pulsa marcha máquina
-    pstMotorCtrl^.xMotorOn := TRUE; // Se activa el bit de marcha al que apunta el puntero (stMotor_01).
-    pstMotorCtrl^.xMotorOff := FALSE; // Se desactiva el bit de paro al que apunta el puntero (stMotor_01)
+IF xMarcha THEN         // If you press Machine
+    pstMotorCtrl^.xMotorOn := TRUE; // The march bit to which the pointer points (Stmotor_01) is activated.
+    pstMotorCtrl^.xMotorOff := FALSE; // The unemployment bit to which the pointer points (Stmotor_01) is deactivated
 END_IF
 ```
 
-### <span style="color:grey">. Acceso a un array mediante punteros:</span>
-El proceso es el mismo que ya se ha visto para acceder a una variable del tipo INT, pero se tendrá que declarar un puntero a un array del número de elementos y tipo de datos adecuados, 
-veámoslo en el siguiente código:
+### <span style="color:grey">Access to an array through pointers:</span>
+The process is the same that has already been seen to access a variable of the INT type, but you will have to declare a pointer to an array of the number of elements and type of appropriate data,
+Let's see it in the following code:
 
 ```javascript
 PROGRAM SR_Main_03
 VAR
-    aintFIFO    : ARRAY[1..20] OF INT; // Array de 20 enteros.
-    aintFIFO2   : ARRAY[1..20] OF INT; // Array de 20 enteros.
-    paint       : POINTER TO ARRAY[1..20] OF INT; // Puntero al array.
-    pint        : POINTER TO INT; // Puntero a un entero.
+    aintFIFO    : ARRAY[1..20] OF INT; // Array of 20 integers.
+    aintFIFO2   : ARRAY[1..20] OF INT; // Array of 20 integers.
+    paint       : POINTER TO ARRAY[1..20] OF INT; // Pointer al Array.
+    pint        : POINTER TO INT; // Pointer to an integer.
 END_VAR
 
-// Ejemplo basico de como acceder a arrays mediante punteros:
-paint := ADR(aintFIFO); // _Asignamos la dirección del array al puntero.
-paint^[3] := 4; // Dentro del array podemos acceder a un elemento en concreto
-aintFIFO2 := paint^; // O copiar el array apuntado entero, sobre otro array
-pint := paint + (4 * SIZEOF (INT)); // Tambien se puede crear un puntero a un INT para acceder a uno de los
-                                    // elementos del array. Tomamos la dirección inicial del array y le
-                                    // sumampos un offeset de tantos bytes como se necesitan para el tipo de 
-                                    // datos INT y lo multiplicamos por el indice del array al que queremos
-                                    // acceder. SIZEOF (TYPE) retorna el número de bytes según el tipo de datos.
+// Basic example of how to access arrays through pointers:
+paint := ADR(aintFIFO); // _Asign the direction of the array to the pointer.
+paint^[3] := 4; // Inside the array we can access a specific element
+aintFIFO2 := paint^; // or copy the entire entrey, on another array
+pint := paint + (4 * SIZEOF (INT)); // You can also create an INT pointer to access one of the
+                                    // Elements of Array.We take the initial direction of Array and
+                                    // We add an offset of as many bytes as needed for the type of
+                                    // Int data and we multiply it by the array index to which we want
+                                    // to access.SIZEOF (TYPE) Returns the number of bytes according to the type of data.
 
-pint^ := 5;                         // Asignamos el valor de 5, aintFIFO[5]:=5 sería lo mismo. 
+pint^ := 5;                         // We assign the value of 5, aintFIFO [5]: = 5 would be the same. 
 ```
-### <span style="color:grey">. Acceso a datos por referencias:</span>
-El acceso por referencia no deja de ser un acceso por puntero, pero en este caso la dirección de una referencia es la misma que la del objeto al que apunta. Un puntero tiene su propia dirección y esta contiene la dirección del objeto al que se quiere hacer referencia. 
-Las referencias se inicializan al principio del programa y no pueden cambiar durante su ejecución. 
-A un puntero se le puede cambiar su dirección tanto como sea necesario durante la ejecución del programa.
-Otra forma de entender las referencias es como si fuesen otra manera de referirse a un mismo objeto/variable, como si fuese un alias.
-Frente a los punteros, las referencias presentan las siguientes ventajas:
+### <span style="color:grey">Access to data by references:</span>
+Access by reference is still an access by pointer, but in this case the address of a reference is the same as that of the object to which it points.A pointer has its own direction and it contains the direction of the object to which you want to refer.
+References are initialized at the beginning of the program and cannot change during their execution.
+A pointer can be changed as much as necessary during the execution of the program.
+Another way of understanding references is as if they were another way of referring to the same object/variable, as if it were an alias.
+In front of the pointers, the references have the following advantages:
 
-- 1) Facilidad de uso.
-- 2) Sintaxis más sencilla a la hora de pasar parámetros a funciones.
-- 3) Minimiza errores en la escritura del código.
+- 1) Ease of use.
+- 2) Simple syntax when passing parameters to functions.
+- 3) Minimize errors in the writing of the code.
 
-El resumen de todo esto, que se puede prestar a mucha confusión, es que, como se verá más adelante, el gran valor de las referencias es a la hora de pasar grandes 
-cantidades de datos como parámetros de entrada a funciones.
+The summary of all this, which can be given to a lot of confusion, is that, as will be seen later, the great value of the references is when it comes to passing great
+quantities of data as input parameters to functions.
 
-### <span style="color:grey">. Diversas formas de pase de parámetros a funciones:</span>
+### <span style="color:grey">Various forms of parameter pass to functions:</span>
 
-Normalmente una función realiza unas operaciones con unos parámetros de entrada y retorna un valor - o varios - como resultado. 
-En el ejemplo que veremos seguidamente se trata de una función para calcular el área de un rectángulo, a la que le pasaremos los valores del lado A y el lado B para que nos retorne el resultado del área. 
+Normally a function performs operations with input parameters and returns a value - or several - as a result.
+In the example that we will see then it is a function to calculate the area of a rectangle, to which we will pass the values of side A and side B to return the result of the area.
 
-Lo primero definiremos un tipo de dato [stRectángulo] que contendrá el lado A, el B y el área. 
+The first will define a type of data [strectangle] that will contain side A, B and the area.
 
-Crearemos tres rectángulos, [stRectangulo01], [stRectangulo02] y [stRectangulo03]. 
+We will create three rectangles, [strectum01], [stretestulo02] and [Stregangle03].
 
-Junto con tres variantes de la función para el cálculo del área:
+Together with three variants of the function for the calculation of the area:
 
-- [Fc_AreaCalcVal] - pase por valores - 
-- [Fc_AreaCalcPoint] - pase por puntero - 
-- [Fc_AreaCalcRef] - pase por referencia –
+- [fc_areacalcval] - Pass for values -
+- [fc_areacalcpoint] - Pass by pointer -
+- [fc_areacalcref] - pass by reference -
 
-A continuación, el código de las tres funciones:
+Next, the code of the three functions:
 
-### Pase de valores:
+### Securities pass:
 ```javascript
-// Función para calcular el area de un Rectangulo, pasando los valores de los lados del Rectangulo
-// la función retorna el resultado del area calculado
+// Function to calculate the area of a rectangle, passing the values on the sides of the rectangle
+// The function returns the result of the calculated area
 
-FUNCTION Fc_AreaCalcVal : REAL // La función retona un número real
+FUNCTION Fc_AreaCalcVal : REAL // The function retains a real number
 VAR_INPUT
-    i_rASide    : REAL; // Parámetro de entrada que contiene el lado A del rectangulo.
-    i_rBSide    : REAL; // Parámetro de entrada que contiene el lado B del rectangulo.
+    i_rASide    : REAL; // Input parameter containing side A of the rectangle.
+    i_rBSide    : REAL; // Input parameter containing side B of the rectangle.
 END_VAR
 
-Fc_AreaCalcVal := i_rASide * i_rBSide; // Retorna el resultado de multiplicar el lado A por el lado B.
+Fc_AreaCalcVal := i_rASide * i_rBSide; // Returns the result of multiplying side A on side B.
 ```
-### Pase por puntero:
+### Pass by pointer:
 ```javascript
-// Función para calcular el area de un Rectangulo, con los valores contenidos en una estructura de datos del tipo stRectangulo
-// La estructura se pasa mediante un puntero a la estructura stRectangulo deseada y la función retorna el resultado a la 
-// misma estructura.
+// Function to calculate a rectangle are
+// The structure is passed by a pointer to the desired strectante structure and the function returns the result to the
+// Same structure.
 
 FUNCTION Fc_AreaCalcPoint : REAL
 VAR_INPUT
-    i_ptstRect : POINTER TO st_Rectangulo; // Puntero de entrada con la dirección de la estructura.
+    i_ptstRect : POINTER TO st_Rectangulo; // Entrance pointer with the direction of the structure.
 END_VAR
 
-// El valor del area, de la estructura indicada por la dirección del puntero es igual al
-// valor del lado A de la estructura indicada por la dirección del puntero por
-// el valor del lado B de la estructura indicada por la dirección del puntero
+// The value of the area, of the structure indicated by the address of the pointer is equal to the
+// Side A value of the structure indicated by the address of the pointer by
+// The value of side B of the structure indicated by the address of the pointer
 i_ptstRect^.rArea := i_ptstRect^.rASide * i_ptstRect^.rBSide;
 ```
-### Pase por Referencia:
+### Pass by reference:
 ```javascript
-// Función para calcular el area de un Rectangulo, con los valores contenidos en una estructura de datos del tipo stRectangulo
-// La estructura se pasa por referencia.
+// Function to calculate a rectangle are
+// The structure is passed by reference.
 
 FUNCTION Fc_AreaCalcRef : REAL
 VAR_INPUT
@@ -241,79 +241,78 @@ END_VAR
 
 i_Ref.rArea := i_Ref.rASide * i_Ref.rBSide;
 ```
-### Ejemplo de código de llamadas a las funciones:
+### Example of call code to functions:
 ```javascript
 PROGRAM SR_Main_01
 VAR
-    inLocalAway : INT; // Variable integer local de SR_Main_01 para ser accedida externamente
-    stRectangulo1 : st_Rectangulo; // Estructura que contiene los datos del rectangulo1 A, B y su area
-    stRectangulo2 : st_Rectangulo; // Estructura que contiene los datos del rectangulo2 A, B y su area
-    stRectangulo3 : st_Rectangulo; // Estructura que contiene los datos del rectangulo3 A, B y su area
+    inLocalAway : INT; // Variable Local Integer of Mr_Main_01 to be externally accessed
+    stRectangulo1 : st_Rectangulo; // Structure containing rectangle data1 A, B and its area
+    stRectangulo2 : st_Rectangulo; // Structure containing rectangle2 A, B and its area
+    stRectangulo3 : st_Rectangulo; // Structure containing rectangle data3 A, B and its area
 
-    refRectangulo : REFERENCE TO st_Rectangulo := stRectangulo3; // Hace Referencia a stRectangulo3   
+    refRectangulo : REFERENCE TO st_Rectangulo := stRectangulo3; // Refers to Stretengle3   
 END_VAR
 
-// Asignación de valores a los lados de los tres rectángulos.
+// Assignment of values to the sides of the three rectangles.
 
-// Asignación de valores de los lados del rectángulo 1
-stRectangulo1.rAside := 44; //Valor del lado A.
-stRectangulo1.rBside := 32; //Valor del lado B.
+// Assignment of values of the rectangle 1 sides
+stRectangulo1.rAside := 44; // Side value A.
+stRectangulo1.rBside := 32; // side of side B.
 
-// Asignación de valores de los lados del rectángulo 2
-stRectangulo2.rAside := 12.8; //Valor del lado A.
-stRectangulo2.rBside := 320.4; //Valor del lado B.
+// Assignment of values of the rectangle 2 sides
+stRectangulo2.rAside := 12.8; // Side value A.
+stRectangulo2.rBside := 320.4; // side of side B.
 
-// Asignación de valores de los lados del rectángulo 3
-stRectangulo3.rAside := 1024.2; //Valor del lado A.
-stRectangulo3.rBside := 2048.4; //Valor del lado B.
+// Assignment of values on the sides of the rectangle 3
+stRectangulo3.rAside := 1024.2; // Side value A.
+stRectangulo3.rBside := 2048.4; // side of side B.
 
-// Cálculo del área del rectángulo pasando valores a la función
+// Calculation of the rectangle area passing values to the function
 stRectangulo1.rArea := Fc_AreaCalcVal(i_rAside:=stRectangulo1.rAside, i_rBside:= stRectangulo1.rBside);
 
-// Cálculo del área del rectángulo pasando un puntero a la función
+// Calculation of the rectangle area passing a pointer to the function
 Fc_AreaCalcPoint(ADR(stRectangulo2));
 
-// Cálculo del área del rectángulo pasando una referencia a la función
+// Calculation of the rectangle area by passing a reference to the function
 Fc_AreaCalcRef(refRectangulo);
 ```
-En este caso puede que las diferencias pueden parecer insignificantes, puesto que la cantidad de datos que se le pasan a la función son pocos. Pero seguidamente veremos un ejemplo con mayor número de parámetros de entrada para poder apreciar las ventajas del pase de parámetros por, especialmente, referencia y también por puntero.
+In this case, the differences may seem insignificant, since the amount of data that is passed to the function are few.But then we will see an example with a greater number of input parameters to be able to appreciate the advantages of the parameter pass by, especially, reference and also for pointer.
+### <span style="color:grey">Case pass from large amounts of data to functions:</span>
+When it is necessary to pass structures with a large amount of data to functions or to FB´s, the parameter pass per securities is not the most appropriate method since a large amount of input parameters are required, each parameter implies creating a new local variable ofThe function, or of the FB, which involves an expense of memory and execution time to copy the data.Case of data structures of several kbytes, or arrays of hundreds or thousands of elements, this method is unthinkable.
+In the case of having to pass large amounts of data, the solution is the use of pointers, or better yet, the data pass by reference.
+Then an example of a function is shown to calculate the average value of an array of 20 elements, passing the values to the function and
+passing the values through a reference.
 
-### <span style="color:grey">.Caso de pase de grandes cantidades de datos a funciones:</span>
-Cuando se precisa pasar estructuras con gran cantidad de datos a funciones ó a FB´s, el pase de parámetros por valores no es el método más adecuado puesto que se requieren gran cantidad de parámetros de entrada, cada parámetro implica crear una nueva variable local de la función, o del FB, lo que supone gasto de memoria y tiempo de ejecución en copiar los datos. Caso de estructuras de datos de varios Kbytes, o arrays de centenares o miles de elementos, este método es impensable. 
-En el caso de tener que pasar grandes cantidades de datos, la solución es el empleo de punteros, o mejor aún, el pase de datos por referencia. 
-Seguidamente se muestra un ejemplo de una función para calcular el valor promedio de un array de 20 elementos, pasando los valores a la función y 
-pasando los valores mediante una referencia.
-
-### Código de la función Fc_AverageValues para pase de valores:
+### FC_Averagevalues function code for values pass:
 ```javascript
-// Esta función calcula la media de un buffer de 20 elementos. Solo a modo de ejemplo comparativo
-// no sería una forma muy adecuada de hacerlo así
+// This function calculates the average of a 20 -elements buffer.Only as comparative example
+// would not be a very adequate way to do so
 
 FUNCTION Fc_AverageValues : REAL
 VAR_INPUT
-    i_REALV1  : REAL; //Valor posición 1
-    i_REALV2  : REAL; //Valor posición 2
-    i_REALV3  : REAL; //Valor posición 3
-    i_REALV4  : REAL; //Valor posición 4
-    i_REALV5  : REAL; //Valor posición 5
-    i_REALV6  : REAL; //Valor posición 6
-    i_REALV7  : REAL; //Valor posición 7
-    i_REALV8  : REAL; //Valor posición 8
-    i_REALV9  : REAL; //Valor posición 9
-    i_REALV10 : REAL; //Valor posición 10
-    i_REALV11 : REAL; //Valor posición 11
-    i_REALV12 : REAL; //Valor posición 12
-    i_REALV13 : REAL; //Valor posición 13
-    i_REALV14 : REAL; //Valor posición 14
-    i_REALV15 : REAL; //Valor posición 15
-    i_REALV16 : REAL; //Valor posición 16
-    i_REALV17 : REAL; //Valor posición 17
-    i_REALV18 : REAL; //Valor posición 18
-    i_REALV19 : REAL; //Valor posición 19
-    i_REALV20 : REAL; //Valor posición 20
+    i_REALV1  : REAL; // Position Value 1
+    i_REALV2  : REAL; // Position value 2
+    i_REALV3  : REAL; // Position value3
+    i_REALV4  : REAL; // Position value 4
+    i_REALV5  : REAL; // position value 5
+    i_REALV6  : REAL; // Position value 6
+    i_REALV7  : REAL; // Position value 7
+    i_REALV8  : REAL; // Position Value 8
+    i_REALV9  : REAL; // Position Value 9
+    i_REALV10 : REAL; // Position Value 10 
+    i_REALV11 : REAL; // Position Value 11
+    i_REALV12 : REAL; // position value 12
+    i_REALV13 : REAL; // Position value 13
+    i_REALV14 : REAL; // position value 14
+    i_REALV15 : REAL; // Position value 15
+    i_REALV16 : REAL; // Position value 16
+    i_REALV17 : REAL; // Position Value 17
+    i_REALV18 : REAL; // Position Value 18
+    i_REALV19 : REAL; // position value 19
+    i_REALV20 : REAL; // Position Value 20
 END_VAR
 
-//Retorna la suma de todos los valores dividida del número de valores que son 20.
+// Returns the sum of all divided values of the number of values that are 20.
 
 Fc_AverageValues := (i_REALV1 + i_REALV2 + i_REALV3 + i_REALV4 + i_REALV5 + i_REALV6 + i_REALV7 + 
                     i_REALV8 + i_REALV9 + i_REALV10 + i_REALV11 + i_REALV12 + i_REALV13 + 
@@ -321,10 +320,10 @@ Fc_AverageValues := (i_REALV1 + i_REALV2 + i_REALV3 + i_REALV4 + i_REALV5 + i_RE
                     i_REALV19 + i_REALV20) / 20.0 ;
 
 ```
-### Código de la función Fc_AverageReferencia para pase por referencia:
+### Code of function FC_averagereference for Save by Reference:
 ```javascript
-// Esta función calcula la media de un buffer de 20 elementos. Solo a modo de ejemplo comparativo
-// pasando valores por referencia.
+// This function calculates the average of a 20 -elements buffer.Only as comparative example
+// passing values by reference.
 
 FUNCTION Fc_AverageReferencia : REAL
 
@@ -332,51 +331,51 @@ VAR_INPUT
  i_Ref : REFERENCE TO ARRAY[1..20] OF REAL;
 END_VAR
 VAR
- intIdx : INT;      // Variable indice para el bucle.
- rVAcum : REAL:=0; // Valor acumulado.
+ intIdx : INT;      // Variable Index for the loop.
+ rVAcum : REAL:=0; // Accumulated value.
 END_VAR
 
-// Retorna la suma de todos los valores divida del número de valores que son 20.
+// Returns the sum of all divided values of the number of values that are 20.
 
 FOR intIdx:=1 TO 20 BY 1 DO
  rVAcum := rVAcum + i_Ref[intIdx];
 END_FOR;
 Fc_AverageReferencia := rVAcum / 20.0;
 ```
-### Código de ejemplo de llamada a ambas funciones:
+### Call example code to both functions:
 ```javascript
 PROGRAM SR_Main_04
 VAR
- arFIFO  : ARRAY[1..20] OF REAL; // FIFO con los valores de fuerza registrados.
- intIdx  : INT;                  // Variable de indice.
- rIncAng : REAL;                 // Valor de incremento angular para generación de senoide.
- rValAng : REAL;                 // Valor actual de angulo.
- rValSin : REAL;                 // Amplitud de la senoide superpuesta.
- rVMed   : REAL;                 // Resultado del cálculo.
+ arFIFO  : ARRAY[1..20] OF REAL; // FIFO with the registered force values.
+ intIdx  : INT;                  // Index variable.
+ rIncAng : REAL;                 // Angular increase value for sine generation.
+ rValAng : REAL;                 // Current angle value.
+ rValSin : REAL;                 // Amplitude of the sinusoid superimposed.
+ rVMed   : REAL;                 // Calculation result.
 
- refFIFO : REFERENCE TO ARRAY[1..20] OF REAL := arFIFO; // Crea una referencia y la asigna a arFIFO
- rMedRef : REAL;           // Resultado del cálculo para el ejemplo de pase de valores por Ref.
+ refFIFO : REFERENCE TO ARRAY[1..20] OF REAL := arFIFO; // Create a reference and assign it to Arfifo
+ rMedRef : REAL;           // CALCULATION RESULT FOR THE EXAMPLE OF VALUE PASS BY REF.
 END_VAR
 
-// Ejemplo de como realizar el cálculo del valor medio de las lecturas de fuerza contenidas en arFIFO
-// mediante la función Fc_AverageValues (Pase de parámetros por valores) y Fc_AverageReferencia (Pase de
-// parámetros por referencia)
-// Lo que se pretende es ver las ventajas del pase por referencia
+// Example of how to calculate the average value of the force readings contained in Arfifo
+// through the FC_AveRagevalues function (Parameter pass by values) and FcAveraageReference (Pass of
+// Parameters by reference)
+// What is intended is to see the advantages of the pass by reference
 
-// Asignación de valores para llenar el FIFO a efectos de tener algunos valores para el cálculo de la media
-// al valor 124 le superpone una variación senoidal de amplitud 6
+// Assignment of values to fill the FIFO in order to have some values for the calculation of the average
+// At 124 value it overlaps a sinusoidal variation of amplitude 6
 
-rIncAng := (2 * 3.14159) / 20.0; // 2 * PI Radianes dividido entre 20 puntos.
-rValAng := 0.0;                   // Valor inicial del angulo.
+rIncAng := (2 * 3.14159) / 20.0; // 2 * Pi Radianes divided by 20 points.
+rValAng := 0.0;                  // Initial angle value.
 
 FOR intIdx :=1 TO 20 BY 1 DO
- rValSin := SIN(rValAng) * 6;         // Valor del seno para una amplitud de 6
- arFIFO[intIdx] := 124.0 + rValSin;  // A un nivel de 124.0 se superpone un seno de amplitud 6.
- rValAng := rValAng + rIncAng;       // Próximo valor angular. 
+ rValSin := SIN(rValAng) * 6;    // Breast value for an amplitude of 6
+ arFIFO[intIdx] := 124.0 + rValSin;  // At a level of 124.0 an amplitude breast is superimposed 6.
+ rValAng := rValAng + rIncAng;       // next angular value.
 END_FOR;
 
-// Con el FIFO de valores llamaremos a la función para el cálculo de la media pasando valores.
-// Lo que no sería para nada adecuado por tratarse de muchos parámetros.
+// With the FIFO of Securities we will call the function for the calculation of the mean passing values.
+// What would not be right at all because they are many parameters.
 
 rVMed:= Fc_AverageValues( i_REALV1  := arFIFO[1],
                           i_REALV2  := arFIFO[2],
@@ -399,47 +398,47 @@ rVMed:= Fc_AverageValues( i_REALV1  := arFIFO[1],
                           i_REALV19 := arFIFO[19],
                           i_REALV20 := arFIFO[20]);
 
-// Con el FIFO lleno de valores llamaremos a la función para el cálculo de la media pasando valores por referencia
-// para ver lo sencillo que resulta en este caso.
+// With the FIFO full of values we will call the function for the calculation of the mean passing values by reference
+// To see how simple it results in this case.
 
 rMedRef := Fc_AverageReferencia(i_Ref:=refFIFO);
 ```
-Claramente la llamada a la función pasando los valores por referencia es la mejor.
-Y en este ejemplo se ha supuesto un ejemplo con solo 20 datos de entrada,
-pero lo normal es encontrar aplicaciones con estructuras de datos de varios Kbytes.
+Clearly the call to the function passing the values by reference is the best.
+And in this example an example has been supposed with only 20 input data,
+But the normal thing is to find applications with data structures from several kbytes.
 ***
-- Un puntero de tipo T apunta a un objeto de tipo T (T = tipo de datos básico o definido por el usuario)
-- Un puntero contiene la dirección del objeto al que apunta.
-- La operación fundamental con un puntero se llama "desreferenciar". La desreferenciación en CODESYS se realiza con el símbolo "^"
-- Un puntero puede apuntar a un objeto diferente en un momento diferente.
-- Antes de desreferenciar un puntero y asignarle un valor, siempre debe verificar si un puntero apunta a un objeto. (puntero = 0)?
-- Una referencia del tipo T "apunta" a un objeto del tipo T (T = tipo de datos básico o definido por el usuario).
-- Una referencia debe ser inicializada con un objeto y su "apuntando" a este objeto a través del programa.
-- Una referencia no debe ser desreferenciada como un puntero y puede usarse con la misma sintaxis que el objeto.
-- Otra palabra de referencia es "Alias" (otro nombre) un seudónimo para el objeto.
-- La referencia no tiene dirección propia y un puntero sí. La dirección de la referencia es la misma que la del objeto "puntiagudo".
-- No hay referencia 0, por lo que nunca debe llamar a la referencia si no está inicializada.
-- Debe verificar si tiene una referencia válida con la palabra clave integrada CODESYS "__ISVALIDREF".
+- A T -TYPE POINTER POINTS TO AN OBJECT OF TYPE T (T = BASIC OR USER -DEFINED DATA)
+- A Pointer Contains The Direction of the Object To Which It Points.
+- The fundamental operation with a pointer is strased "display" .DERECTIONING IN CODESYS IS DONE WITH THE "^" SYmbol
+- A Pointer Can Point to a Different Object at a Different Time.
+- Before Disputeing A Pointer and Assigning A Value, You Must Always Verify If a Pointer Points to an Object. (Pointer = 0)?
+- A reference of the T type "points" to an object of type T (t = basic or defined data type).
+- A reference must be initialized with an object and its "pointing" to this object through the program.
+- A reference should not be desefted as a pointer and can be used with the same syntax as the object.
+- Another reference word is "Alias" (another name) a pseudonym for the object.
+- The reference has no self -direction and a pointer yes.The reference address is the same as that of the "pointed" object.
+- There is no reference 0, so you should never call the reference if it is not initialized.
+- You must verify if you have a valid reference with the integrated keyword CODESYS "__ISVALIDREF".
 
-El mejor uso de punteros y referencias es cuando desea pasar o devolver un objeto de algún tipo a una función o bloque de funciones por "referencia" porque el objeto es demasiado grande o desea manipular el objeto pasado dentro de la función/bloque de función. Asegúrese de que el lector de su código sepa que va a cambiar el valor del objeto dentro de la función/bloque de funciones si esto es lo que pretende hacer cuando lo pasa como argumento.
+The best use of pointers and references is when you want to pass or return an object of some kind to a function or block of functions by "reference" because the object is too large or wishes to manipulate the past object within the function/function block.Make sure the reader of your code knows that you will change the value of the object within the function/block of functions if this is what it intends to do when it happens as an argument.
 
-### <span style="color:grey">.Resumen / Conclusiones:</span>
+### <span style="color:grey">.Summary / Conclusions:</span>
 
-- **La memoria contiene** miles y hasta millones de celdas o byte, en las que se ubica el código del programa y todos los datos/variables. Cada celda tiene su número, al que se llama dirección de memoria y que se suele expresar en hexadecimal 16#FA1204 -como ejemplo-
-- **Un puntero es una variable**, que en lugar de contener un valor contiene una dirección de memoria, en la que “vive” la variable a la que realmente queremos acceder. 
-- Al igual que cualquier otra variable, **hay que declarar los punteros** para que el compilador pueda ubicarlos en la memoria. 
-Recordemos que un puntero es una variable, pero que su contenido es una dirección de memoria.
-- **Para cada tipo de variable** se precisa el correspondiente **tipo de puntero**. 
-No se puede acceder a una variable INT con un puntero pensado para acceder a una estructura de datos.
-- Nada tiene que ver el **acceso indirecto** a un array mediante una variable de índice, con un puntero. 
-En este caso el acceso está limitado al propio array, con el puntero se puede acceder a cualquier dirección de memoria.
-- **Con punteros se puede acceder a todo tipo de datos**, en una simple línea de código se puede copiar una estructura entera de varios Kbytes de datos. Lo que resulta mucho más rápido.
-- Una referencia se parece mucho a un puntero, para simplificar podríamos decir que es un “alias” de un objeto y que es algo menos crítico que los punteros, su principal utilidad es la de pasar gran cantidad de parámetros a funciones, de forma muy simple y rápida.
-- **El pase de parámetros a una función** se puede realizar de diversas formas, por valores, por punteros o por referencia, el programador deberá elegir el más adecuado para cada aplicación.
-- Cuando se trata de **grandes cantidades de datos** el pase de parámetros por referencia o por punteros, serán los adecuados
+- **Memory contains** thousands and up to millions of cells or byte, in which the program code and all data/variables are located.Each cell has its number, which is called memory address and is usually expressed in Hexadecimal 16#FA1204 -As Example-
+- **A pointer is a variable**, That instead of containing a value it contains a memory address, in which "lives" the variable we really want to access. 
+- Like any other variable, **You have to declare the pointers** so that the compiler can locate them in memory.
+Recall that a pointer is a variable, but that its content is a memory address.
+- **For each type of variable** the corresponding one is required **Type of pointer**. 
+You cannot access an INT variable with a pointer designed to access a data structure.
+- Nothing has to do with **indirect access** to an array through an index variable, with a pointer.
+In this case, access is limited to Array itself, with the pointer you can access any memory address.
+- **With pointers you can access all types of data**, In a simple line of code you can copy an entire structure of several data kbytes.Which is much faster.
+- A reference is very similar to a pointer, to simplify we could say that it is a “alias” of an object and that it is somewhat less critical than the pointers, its main utility is to pass a large amount of parameters to functions, very simplelyand fast.
+- **The parameter pass to a function** It can be done in various ways, for values, by pointers or by reference, the programmer must choose the most appropriate for each application.
+- When it comes to **Large amounts of data** The parameter pass by reference or pointers will be adequate
 
 ***
-### <span style="color:grey">Links de Puntero y Referencia:</span>
+### <span style="color:grey">Pointer and reference links:</span>
 - 🔗 [Perre Garriga,Pointer&Reference](https://www.infoplc.net/blogs-automatizacion/item/112457-punteros-programacion-plcs-basico-que-hay-que-saber)
 
 - 🔗 [Control and use of Pointers In Codesys](https://www.youtube.com/watch?v=I_wdSAyJ6LE)
@@ -451,5 +450,5 @@ En este caso el acceso está limitado al propio array, con el puntero se puede a
 - 🔗 [AT&U, CODESYS -Differente between pass by vale and pass by Reference](https://www.youtube.com/watch?v=rUfDD5FTgE0)
 
 ***
-### <span style="color:grey">Link al Video de Youtube 011:</span>
+### <span style="color:grey">Link to the Youtube Video 011:</span>
 - 🔗 [011 - OOP IEC 61131-3 PLC -- Puntero vs Referencia](https://youtu.be/AnJZmwQWaYQ)
