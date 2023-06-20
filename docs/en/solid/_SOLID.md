@@ -1,61 +1,61 @@
-![SOLID](../imagenes/SOLID.png)
+![SOLID](../images/SOLID.png)
 
-- Propuesta por **Robert C.Martin** en el 2000.
-- Son **recomendaciones** para escribir un código **sostenible,mantenible,escalable y robusto**.
-- Beneficios:
+- Proposed by **Robert C.Martin** in 2000.
+- His **recommendations** Were to write a code **sustainable, maintainable, scalable and robust**.
+- Benefits:
 
-    - Alta **Cohesión**. Colaboracion entre clases.
-    - Bajo **Acoplamiento**. Evitar que una clase dependa fuertemente de otra clase.
+    - High **Cohesion**. Collaboration between classes.
+    - Low **Coupling**. Prevent a class from depending strongly on another class.
 
 
-- <span style="color:orange">Principio de Responsabilidad Única:</span> Una clase debe tener **una razón** para existir mas no para cambiar.
-- <span style="color:orange">Principio de Abierto/Cerrado:</span> Las piezas del software deben estar **abiertas para la extensión** pero **cerradas para la modificación**.
-- <span style="color:orange">Principio de Sustitución de Liskov:</span> Las **clases subtipos** deberían ser reemplazables por sus **clases padres**.
-- <span style="color:orange">Principio de Segregación de Interfaz:</span> Varias **interfaces** funcionan **mejor que una sola**.
-- <span style="color:orange">Principio de Inversión de Dependencia:</span> Clases de **alto nivel** no deben depender de las clases **bajo nivel**.
+- <span style="color:orange">Single Responsibility Principle:</span> A class must have **a reason** To exist but not to change.
+- <span style="color:orange">Open/closed principle:</span> The software parts must be **open for extension** but **closed for modification**.
+- <span style="color:orange">Liskov replacement principle:</span> The **Subtypes classes** should be replaced by their **parents classes**.
+- <span style="color:orange">Interface segregation principle:</span> Several **interfaces** work **better than a single**.
+- <span style="color:orange">Dependency investment principle:</span> Classes of **high level** should not depend on **Low level** classes.
 ***
-Los principios SOLID son una parte esencial del desarrollo de software orientado a objetos y han demostrado ser herramientas valiosas para desarrollar código limpio, mantenible y extensible. En la tecnología de automatización industrial, especialmente en la programación de controladores con IEC 61131-3, es de particular importancia desarrollar sistemas robustos y confiables.
+Solid principles are an essential part of object -oriented software development and have proven to be valuable tools to develop clean, maintainable and extensible code.In industrial automation technology, especially in the programming of controllers with IEC 61131-3, it is of particular importance to develop robust and reliable systems.
 
-![OOP__7_Concepts](../imagenes/OOP__7_Concepts.PNG)
+![OOP__7_Concepts](../images/OOP__7_Concepts.PNG)
 
-Además de los principios SOLID, existen otros principios como:
+In addition to solid principles, there are other principles such as:
 
-![3_Simple_Golden_Principles In_Software_Development](../imagenes/3_Simple_Golden_Principles_In_Software_Development.PNG)
+![3_Simple_Golden_Principles In_Software_Development](../images/3_Simple_Golden_Principles_In_Software_Development.PNG)
 
 ### Keep It Simple, Stupid (KISS).
 ```
-" Mantenlo Simple, Estúpido "
+"Keep it simple, stupid"
 ```
-- Evite la complejidad innecesaria en su código, use soluciones simples para resolver problemas.
+- Avoid unnecessary complexity in your code, use simple solutions to solve problems.
 
-- **Ejemplo:** En lugar de escribir un algoritmo personalizado para generar un número aleatorio dentro de un rango, use el generador de números aleatorios incorporado en su lenguaje de programación.
+- **Example:** Instead of writing a personalized algorithm to generate a random number within a range, use the random numbers generator incorporated into its programming language.
 
-### Don't Repeat Yourself (DRY).
+### don't Repeat Yourself (DRY).
 ```
-" No te repitas "
+"Do not repeat yourself"
 ```
-- Cada pieza de conocimiento debe tener una representación única, inequívoca y autorizada dentro de un sistema.
-- Evite la duplicación de código y mantenga su base de código lo más mantenible y escalable posible.
-- **Ejemplo:** En lugar de copiar y pegar el mismo bloque de código en varios lugares, cree una función o módulo que se pueda reutilizar.
+- Each piece of knowledge must have a unique, unequivocal and authorized representation within a system.
+- Avoid duplication of code and maintain your code base as maintenance and scalable as possible.
+- **Example:** Instead of copying and pasteing the same block of code into several places, create a function or module that can be reused.
 
-### Law Of Demeter (LOD).
+### Law Of demeter (LOD).
 ```
-" Habla Solo con tus amigos inmediatos "
+"Speak only with your immediate friends"
 ```
-- La Ley de Demeter (LOD) en programación es un principio que establece que un objeto debe tener acceso limitado a los objetos relacionados con él y solo interactuar con los objetos más cercanos a él. En resumen, un objeto no debe conocer la estructura interna de otros objetos y solo debe comunicarse con ellos a través de una interfaz limitada.
-- **Ejemplo:** Si tienes una clase "Persona" que tiene un método "getNombre()" y otra clase "Empresa" que tiene un método "getPersona()". En lugar de acceder directamente al nombre de la persona desde la clase Empresa, se debería llamar al método "getNombre()" de la clase Persona desde fuera de la clase Empresa, para evitar una dependencia innecesaria y mantener una comunicación limitada entre objetos.
+- Demeter's Law (LOD) in programming is a principle that establishes that an object must have limited access to objects related to it and only interact with the objects closest to it.In summary, an object should not know the internal structure of other objects and should only communicate with them through a limited interface.
+- **Example:** If you have a "person" class that has a "Getname ()" method and another "company" class that has a "Getpersone ()" method.Instead of directly accessing the name of the person from the company class, the "Getname ()" Method of the person person from outside the company class should be called, to avoid unnecessary dependence and maintain limited communication between objects.
 ### You Ain't Gonna Need It (YAGNI).
 ```
-" No lo vas a necesitar "
+"You will not need it"
 ```
-- No agregue funcionalidad a su código hasta que realmente lo necesite.
+- Do not add functionality to your code until you really need it.
 
-- **Ejemplo:** No agregue una función a su aplicación que permita a los usuarios cambiar el color de la fuente si no es parte de los requisitos principales.
+- **Example:** Do not add a function to its application that allows users to change the color of the source if it is not part of the main requirements.
 
 
-Todos estos principios tienen el objetivo común de mejorar la mantenibilidad y la reutilización del software.
+All these principles have the common objective of improving the maintainability and reuse of the software.
 
-Los principios SOLID no son reglas o leyes que deban seguirse estrictamente. Son pautas que pueden ayudarnos a mejorar nuestra calidad de código y habilidades de diseño. No están destinados a ser aplicados ciega o dogmáticamente. Están destinados a ser utilizados con sentido común y juicio.
+The principles SOLID They are not rules or laws that must be followed strictly.They are guidelines that can help us improve our code quality and design skills.They are not destined to be applied blind or dogmatically.They are destined to be used with common sense and judgment.
 ***
 ### <span style="color:grey">Links SOLID:</span>
 - 🔗 [Cómo explicar conceptos de programación orientada a objetos a un niño de 6 años](https://www.freecodecamp.org/news/object-oriented-programming-concepts-21bb035f7260/#:~:text=The%20four%20principles%20of%20object,abstraction%2C%20inheritance%2C%20and%20polymorphism.)

@@ -1,41 +1,41 @@
-### <span style="color:grey"> Principio de Inversión de Dependencia -- (Dependency Inversion Principle) DIP :</span>
+### <span style="color:grey"> Dependency investment principle -- (Dependency Inversion Principle) DIP :</span>
 
-El principio de inversión de dependencia establece que los módulos de nivel superior no deben depender de los módulos de nivel inferior, sino que ambos deben depender de abstracciones.
+The dependency investment principle establishes that the higher level modules should not depend on the lower level modules, but that both must depend on abstractions.
 
-### <span style="color:grey">Ejemplo:</span>
+### <span style="color:grey">Example:</span>
 
 ```javascript
-INTERFACE IConexion
-// interfaz para la conexión
+INTERFACE iConnection
+// Connection interface
 METHODS
-    EstablecerConexion : BOOL; // método para establecer la conexión
+     : BOOL; // Method to establish connection
 END_INTERFACE
 
-FUNCTION_BLOCK ConexionSerial IMPLEMENTS IConexion // implementa la interfaz IConexion
-// implementación para la conexión serial
+FUNCTION_BLOCK ConnectionSerial IMPLEMENTS IConnection // Implement the iconexion interface
+// Implementation for serial connection
 END_FUNCTION_BLOCK
 
-FUNCTION_BLOCK ConexionEthernet IMPLEMENTS IConexion // implementa la interfaz IConexion
-// implementación para la conexión ethernet
+FUNCTION_BLOCK ConnectionEthernet IMPLEMENTS IConnection // Implement the iconexion interface
+// Implementation for Ethernet connection
 END_FUNCTION_BLOCK
 
-FUNCTION_BLOCK Dispositivo
+FUNCTION_BLOCK Device
 VAR_INPUT
-    conexion : IConexion; // interfaz IConexion
+    Connection : IConnection; // Interface IConnection
 END_VAR
 
 // constructor
-Dispositivo(conexion);
+Device(Connection);
 
-// método para establecer la conexión
-establecerConexion();
+// Method to establish connection
+establish Connection();
 
 END_FUNCTION_BLOCK
 ```
 
-Esto permite que se pueda pasar cualquier objeto que implemente la interfaz `IConexion`, lo que cumple con el principio de inversión de dependencias.
+This allows any object that implements the interface can be passed `IConnection`, which meets the principle of dependencies investment.
 
-Además, se utiliza el método `EstablecerConexion` definido en la interfaz `IConexion`, lo que demuestra cómo se puede utilizar una abstracción (la interfaz) para trabajar con diferentes implementaciones concretas de manera uniforme.
+In addition, the method is used `EstablishConnection` defined in the interface `IConnection`, which demonstrates how an abstraction (the interface) can be used to work with different concrete implementations evenly.
 
 ***
 ### <span style="color:grey">Links:</span>
