@@ -1,58 +1,58 @@
-### <span style="color:grey"> Principio de Sustitución de Liskov -- (Liskov Substitution Principle) LSP :</span>
+### <span style="color:grey"> Liskov Substitution Principle -- LSP :</span>
 
-El principio de sustitución de Liskov establece que una instancia de una subclase debe poder ser utilizada en cualquier lugar donde se espera una instancia de la clase base, sin afectar el comportamiento del programa.
+The Liskov replacement principle establishes that an instance of a subclass must be used anywhere where an instance of the base class is expected, without affecting the behavior of the program.
 
-### <span style="color:grey">Ejemplo:</span>
+### <span style="color:grey">Example:</span>
 
 ```javascript
 INTERFACE I_mover
 METHODS
-    Mover : BOOL; // método para mover el vehículo
+    Mover : BOOL; // Method for moving the vehicle
 END_INTERFACE
 
-FUNCTION_BLOCK Vehiculo IMPLEMENTS I_mover
-// clase base para los vehículos
+FUNCTION_BLOCK Vehicle IMPLEMENTS I_mover
+// Base class for vehicles
 VAR_INPUT
-    velocidad : REAL;
+    speed : REAL;
 END_VAR
 
 METHODS
-    Mover : BOOL; // método para mover el vehículo
+    Mover : BOOL; // Method for moving the vehicle
 END_FUNCTION_BLOCK
 
-FUNCTION_BLOCK Coche EXTENDS Vehiculo
-// subclase para los coches
+FUNCTION_BLOCK Cars EXTENDS Vehicle
+// subclass for cars
 VAR_INPUT
-    velocidadMaxima : REAL;
+    MaxSpeed : REAL;
 END_VAR
 
 METHODS
     Mover : BOOL; // método para mover el coche
 END_FUNCTION_BLOCK
 
-FUNCTION_BLOCK Moto EXTENDS Vehiculo
-// subclase para las motos
+FUNCTION_BLOCK Motorcycles EXTENDS Vehicle
+// Subclass for motorcycles
 VAR_INPUT
-    tiempoAceleracion : TIME;
+    TimeAceleracion : TIME;
 END_VAR
 
 METHODS
-    Mover : BOOL; // método para mover la moto
+    Mover : BOOL; // METHOD TO MOVE THE MOTORCYCLE
 END_FUNCTION_BLOCK
 
 FUNCTION_BLOCK Conductor
 VAR_INPUT
-    vehiculo : REFERENCE TO Vehiculo; // referencia a la clase base Vehiculo
+    vehicle : REFERENCE TO Vehicle; // Reference to the Base Class
 END_VAR
 
-// método para mover el vehículo a la velocidad especificada
-vehiculo.MoverAVelocidad(velocidad);
+// Method to move the vehicle at the specified speed
+vehicle.Mover Avelocity(speed);
 
 END_FUNCTION_BLOCK
 ```
-En este ejemplo, se utiliza la subclase `Coche` y `Moto` como instancias de la clase base `Vehiculo`, lo que cumple con el principio de sustitución de Liskov. Esto significa que se puede utilizar cualquier instancia de `Coche` o `Moto` donde se espera una instancia de `Vehiculo`, sin afectar el comportamiento del programa.
+In this example, the subclass is used `Car` y `Motorcycles` as instances of the base class `Vehicle`, which meets the Liskov replacement principle.This means that any instance of `Car` o `Motorcycles` where an instance of `Vehicle`, without affecting the behavior of the program.
 
-Además, cada subclase tiene un método `Mover` que se utiliza para mover el vehículo, lo que demuestra cómo se puede utilizar la misma interfaz `I_Mover` (el mismo nombre de método) para diferentes implementaciones concretas.
+In addition, each subclass has a method `Mover` which is used to move the vehicle, which shows how the same interface can be used `I_Mover` (The same method name) For different concrete implementations.
 ***
 ### <span style="color:grey">Links:</span>
 - 🔗 [stefanhenneken.net,iec-61131-3-solid-the-liskov-substitution-principle](https://stefanhenneken.net/2022/09/27/iec-61131-3-solid-the-liskov-substitution-principle/)

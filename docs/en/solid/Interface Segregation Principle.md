@@ -1,63 +1,63 @@
-### <span style="color:grey"> Principio de Segregación de Interfaz -- (Interface Segregation Principle) ISP :</span>
+### <span style="color:grey"> Interface segregation principle --  ISP :</span>
 
-El principio de segregación de interfaz establece que una clase no debe implementar interfaces que no utilice y que debe dividirse en interfaces más pequeñas y específicas.
+The interface segregation principle establishes that a class should not implement interfaces that do not use and must be divided into smaller and specific interfaces.
 
-### <span style="color:grey">Ejemplo:</span>
+### <span style="color:grey">Example:</span>
 
 ```javascript
-INTERFACE IAveVoladora
-// interfaz para las aves voladoras
+INTERFACE IFlyingBirds
+// interface for flying birds
 METHODS
-    Volar : BOOL; // método para volar
+    Flying : BOOL; // Method for flying
 END_INTERFACE
 
-INTERFACE IAveNadadora
-// interfaz para las aves nadadoras
+INTERFACE ISwimmingBirds
+// interface for swimming birds
 METHODS
-    Nadar : BOOL; // método para nadar
+    Swiming : BOOL; // Method for swimming
 END_INTERFACE
 
-INTERFACE IAveCorredora
-// interfaz para las aves corredoras
+INTERFACE IRunningBirds
+// Interface for running birds
 METHODS
-    Correr : BOOL; // método para correr
+    Running : BOOL; // running method
 END_INTERFACE
 
-FUNCTION_BLOCK Pato IMPLEMENTS IAveVoladora, IAveNadadora // implementa las interfaces IAveVoladora e IAveNadadora
+FUNCTION_BLOCK Duck IMPLEMENTS IFlyingBirds, ISwimmingBirds // Implement the IFlyingBirds and ISwimmingBirds interfaces
 VAR_INPUT
-    velocidad : REAL;
-    alturaMaxima : REAL;
-    tiempoBuceo : TIME;
+    speed : REAL;
+    maximumaltatude : REAL;
+    Timepobuceo : TIME;
 END_VAR
 
-// implementación para el pato
-// métodos para volar y nadar
+// Implementation for the duck
+// Methods to fly and swim
 
 END_FUNCTION_BLOCK
 
-FUNCTION_BLOCK Aguila IMPLEMENTS IAveVoladora // implementa la interfaz IAveVoladora solamente
+FUNCTION_BLOCK Eagle IMPLEMENTS IFlyingBirds // Implement the IFlyingBirds interface only
 VAR_INPUT
-    velocidad : REAL;
-    alturaMaxima : REAL;
+    speed : REAL;
+    maximumaltatude : REAL;
 END_VAR
 
-// implementación para el águila
-// método para volar
+// Implementation for the Eagle
+// Flying method
 
 END_FUNCTION_BLOCK
 
-FUNCTION_BLOCK Avestruz IMPLEMENTS IAveCorredora // implementa la interfaz IAveCorredora solamente
+FUNCTION_BLOCK Ostrich IMPLEMENTS IRunningBirds // Implement the IrunningBirds interface only
 VAR_INPUT
-    velocidad : REAL;
+    speed : REAL;
     tiempoCorriendo : TIME;
 END_VAR
 
-// implementación para el avestruz
-// método para correr
+// Implementation for ostrich
+// Running method
 
 END_FUNCTION_BLOCK
 ```
-De esta manera, cada clase tiene solo los métodos necesarios y se divide en interfaces más pequeñas y específicas. Además, se utilizan interfaces en lugar de function blocks para implementar el principio de segregación de interfaz. Esto permite una mayor flexibilidad y evita la necesidad de implementar métodos innecesarios en una clase.
+In this way, each class has only the necessary methods and is divided into smaller and specific interfaces.In addition, interfaces are used instead of function blocks to implement the interface segregation principle.This allows greater flexibility and avoids the need to implement unnecessary methods in a class.
 ***
 ### <span style="color:grey">Links:</span>
 - 🔗 [stefanhenneken.net,iec-61131-3-solid-the-interface-segregation-principle](https://stefanhenneken.net/2023/02/25/iec-61131-3-solid-the-interface-segregation-principle/)
