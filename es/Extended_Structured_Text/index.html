@@ -1830,14 +1830,37 @@
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nx">myVar</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">myVar1</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">myVar2</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mf">26</span><span class="w"> </span><span class="p">;</span><span class="w"> </span><span class="c1">// asignación extendida </span>
 </code></pre></div></td></tr></table></div>
 - En este ejemplo, las variables myVar y myVar1 reciben el valor de la variable myVar2 sumado a 26.</p>
-<p>Tabla de Ejemplos:
-| <strong>Ejemplo</strong>  | <strong>Comentario</strong>  |
-|:------------- |:----------------|
-| int_var1 := int_var2 := int_var3 + 9;         | (<em> int_var1 y int_var2 recibe el valor de int_var3 + 9 </em>) |
-| real_var1 := real_var2 := int_var;       | (<em> real_var1 y real_var2 recibe el valor de int_var </em>) |
-| int_var := real_var1 := int_var;          | (<em> asignación incorrecta, ¡los tipos de datos no corresponden! </em>) |
-| IF b := (i = 1) THEN i := i + 1; END_IF     | | 
-|</p>
+<p>Tabla de Ejemplos:</p>
+<table>
+<thead>
+<tr>
+<th align="left"><strong>Ejemplo</strong></th>
+<th align="left"><strong>Comentario</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">int_var1 := int_var2 := int_var3 + 9;</td>
+<td align="left">(<em> int_var1 y int_var2 recibe el valor de int_var3 + 9 </em>)</td>
+</tr>
+<tr>
+<td align="left">real_var1 := real_var2 := int_var;</td>
+<td align="left">(<em> real_var1 y real_var2 recibe el valor de int_var </em>)</td>
+</tr>
+<tr>
+<td align="left">int_var := real_var1 := int_var;</td>
+<td align="left">(<em> asignación incorrecta, ¡los tipos de datos no corresponden! </em>)</td>
+</tr>
+<tr>
+<td align="left">IF b := (i = 1) THEN i := i + 1; END_IF</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="left"></td>
+</tr>
+</tbody>
+</table>
 <ul>
 <li>Hasta ahora, la asignación siempre se ha hecho con "<strong>:=</strong>" El valor del lado derecho se asigna a la variable del lado izquierdo.</li>
 </ul>
@@ -1854,7 +1877,7 @@
 Ejemplo:
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nx">bVar1</span><span class="w"> </span><span class="nx">S</span><span class="o">=</span><span class="w"> </span><span class="nx">bVar2</span><span class="p">;</span>
 </code></pre></div></td></tr></table></div>
-bVar1 obtiene el valor de bVar2. Una vez que bVar1 se ha establecido en TRUE, bVar1 permanece TRUE aunque vuelva bVar2 a ser FALSE.</p>
+- bVar1 obtiene el valor de bVar2. Una vez que bVar1 se ha establecido en TRUE, bVar1 permanece TRUE aunque vuelva bVar2 a ser FALSE.</p>
 <hr />
 <h3 id="r"><span style="color:grey">R=</span></h3>
 <ul>
@@ -1867,20 +1890,28 @@ bVar1 obtiene el valor de bVar2. Una vez que bVar1 se ha establecido en TRUE, bV
 </code></pre></div></td></tr></table></div>
 Ejemplo:
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nx">bVar1</span><span class="w"> </span><span class="nx">R</span><span class="o">=</span><span class="w"> </span><span class="nx">bVar2</span><span class="p">;</span>
-</code></pre></div></td></tr></table></div>
-- bVar1 obtiene el valor de bVar2. Una vez que bVar1 se ha establecido en FALSE, bVar1 permanece FALSE aunque vuelva bVar2 a ser TRUE.</p>
+</code></pre></div></td></tr></table></div></p>
+<ul>
+<li>bVar1 obtiene el valor de bVar2. Una vez que bVar1 se ha establecido en FALSE, bVar1 permanece FALSE aunque vuelva bVar2 a ser TRUE.</li>
+</ul>
 <p>El uso de "<strong>S=</strong>" y "<strong>R=</strong>" en una concatenación es interesante. Si aplica el operador Set a una variable y el operador Reset a otra en una línea, la referencia siempre es al último elemento de la serie de asignación.</p>
 <p>Ejemplo:
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nx">bVar1</span><span class="w"> </span><span class="nx">S</span><span class="o">=</span><span class="w"> </span><span class="nx">bVar2</span><span class="w"> </span><span class="nx">R</span><span class="o">=</span><span class="w"> </span><span class="nx">F_Fun1</span><span class="p">(</span><span class="nx">nPar1</span><span class="p">,</span><span class="w"> </span><span class="nx">nPar2</span><span class="p">);</span>
-</code></pre></div></td></tr></table></div>
-- Todas las asignaciones de configuración y restablecimiento siempre hacen referencia al último elemento de la asignación.
+</code></pre></div></td></tr></table></div></p>
+<ul>
+<li>
+<p>Todas las asignaciones de configuración y restablecimiento siempre hacen referencia al último elemento de la asignación.
 Ejemplo: En este caso, bVar2 obtiene la salida de F_Fun1 resultante del reinicio, pero:
 bVar1 no obtiene el resultado del conjunto de bVar2, sino el resultado del conjunto de F_Fun1!
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nx">bMyVar1</span><span class="w"> </span><span class="nx">S</span><span class="o">=</span><span class="w"> </span><span class="nx">bMyVar2</span><span class="w"> </span><span class="nx">R</span><span class="o">=</span><span class="w"> </span><span class="nx">myTimer</span><span class="w"> </span><span class="p">.</span><span class="w"> </span><span class="nx">Q</span><span class="p">;</span>
-</code></pre></div></td></tr></table></div>
-- Aquí bMyVar2 se restablece cuando el tiempo establecido en el módulo temporizador ha expirado.</p>
-<ul>
-<li><strong>¡¡Atención!!</strong> La variable bMyVar1 ahora no se establece si bMyVar2 tiene el valor TRUE, pero los operadores de asignación siempre actúan en el bloque del temporizador.</li>
+</code></pre></div></td></tr></table></div></p>
+</li>
+<li>
+<p>Aquí bMyVar2 se restablece cuando el tiempo establecido en el módulo temporizador ha expirado.</p>
+</li>
+<li>
+<p><strong>¡¡Atención!!</strong> La variable bMyVar1 ahora no se establece si bMyVar2 tiene el valor TRUE, pero los operadores de asignación siempre actúan en el bloque del temporizador.</p>
+</li>
 </ul>
 <hr />
 <h3 id="links-exst"><span style="color:grey">Links ExST:</span></h3>
