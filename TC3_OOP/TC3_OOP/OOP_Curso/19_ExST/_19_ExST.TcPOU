@@ -7,6 +7,11 @@ VAR
 	myVar1: INT;
 	myVar2: INT;
 	
+	b: BOOL;
+	i: INT;	
+	btrig : F_TRIG;
+	counter: INT;
+	
 	bVar1: BOOL;
 	bVar2: BOOL;
 	
@@ -31,6 +36,14 @@ END_VAR
 ]]></Declaration>
     <Implementation>
       <ST><![CDATA[myVar := myVar1 := myVar2 + 26 ; 
+
+IF b := (i = 1) THEN i := i + 1; END_IF	
+
+btrig(CLK:=b);
+
+IF btrig.Q THEN
+	counter := counter + 1;
+END_IF
 
 bVar1 S= bVar2;
 

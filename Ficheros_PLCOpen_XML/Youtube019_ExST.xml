@@ -1,0 +1,217 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<project xmlns="http://www.plcopen.org/xml/tc6_0200">
+  <fileHeader companyName="Beckhoff Automation GmbH" productName="TwinCAT PLC Control" productVersion="3.5.13.21" creationDateTime="2023-06-23T16:27:20.9848655" />
+  <contentHeader name="OOP_Curso" modificationDateTime="2023-06-23T16:27:20.9848655">
+    <coordinateInfo>
+      <fbd>
+        <scaling x="1" y="1" />
+      </fbd>
+      <ld>
+        <scaling x="1" y="1" />
+      </ld>
+      <sfc>
+        <scaling x="1" y="1" />
+      </sfc>
+    </coordinateInfo>
+    <addData>
+      <data name="http://www.3s-software.com/plcopenxml/projectinformation" handleUnknown="implementation">
+        <ProjectInformation />
+      </data>
+    </addData>
+  </contentHeader>
+  <types>
+    <dataTypes />
+    <pous>
+      <pou name="_19_ExST" pouType="program">
+        <interface>
+          <localVars>
+            <variable name="myVar">
+              <type>
+                <INT />
+              </type>
+            </variable>
+            <variable name="myVar1">
+              <type>
+                <INT />
+              </type>
+            </variable>
+            <variable name="myVar2">
+              <type>
+                <INT />
+              </type>
+            </variable>
+            <variable name="b">
+              <type>
+                <BOOL />
+              </type>
+            </variable>
+            <variable name="i">
+              <type>
+                <INT />
+              </type>
+            </variable>
+            <variable name="btrig">
+              <type>
+                <derived name="F_TRIG" />
+              </type>
+            </variable>
+            <variable name="counter">
+              <type>
+                <INT />
+              </type>
+            </variable>
+            <variable name="bVar1">
+              <type>
+                <BOOL />
+              </type>
+            </variable>
+            <variable name="bVar2">
+              <type>
+                <BOOL />
+              </type>
+            </variable>
+            <variable name="bVar11">
+              <type>
+                <BOOL />
+              </type>
+            </variable>
+            <variable name="bVar22">
+              <type>
+                <BOOL />
+              </type>
+            </variable>
+            <variable name="bVar">
+              <type>
+                <BOOL />
+              </type>
+            </variable>
+            <variable name="bVarS">
+              <type>
+                <BOOL />
+              </type>
+            </variable>
+            <variable name="bVarR">
+              <type>
+                <BOOL />
+              </type>
+            </variable>
+            <variable name="bVara">
+              <type>
+                <BOOL />
+              </type>
+            </variable>
+            <variable name="bVarb">
+              <type>
+                <BOOL />
+              </type>
+            </variable>
+            <variable name="bVarc">
+              <type>
+                <BOOL />
+              </type>
+            </variable>
+            <variable name="bMyVar1">
+              <type>
+                <BOOL />
+              </type>
+            </variable>
+            <variable name="bMyVar2">
+              <type>
+                <BOOL />
+              </type>
+            </variable>
+            <variable name="bmyTimer">
+              <type>
+                <BOOL />
+              </type>
+            </variable>
+            <variable name="myTimer">
+              <type>
+                <derived name="TON" />
+              </type>
+            </variable>
+          </localVars>
+        </interface>
+        <body>
+          <ST>
+            <xhtml xmlns="http://www.w3.org/1999/xhtml">myVar := myVar1 := myVar2 + 26 ; 
+
+IF b := (i = 1) THEN i := i + 1; END_IF	
+
+btrig(CLK:=b);
+
+IF btrig.Q THEN
+	counter := counter + 1;
+END_IF
+
+bVar1 S= bVar2;
+
+bVar11 R= bVar22;
+
+bVar S= bVarS R= bVarR;
+
+bVara R= bVarb S= bVarc;
+
+myTimer(IN:= bmyTimer , PT:= T#2S );
+
+bMyVar1 S= bMyVar2 R= myTimer.Q;</xhtml>
+          </ST>
+        </body>
+        <addData>
+          <data name="http://www.3s-software.com/plcopenxml/interfaceasplaintext" handleUnknown="implementation">
+            <InterfaceAsPlainText>
+              <xhtml xmlns="http://www.w3.org/1999/xhtml">PROGRAM _19_ExST
+VAR
+	myVar: INT;
+	myVar1: INT;
+	myVar2: INT;
+	
+	b: BOOL;
+	i: INT;	
+	btrig : F_TRIG;
+	counter: INT;
+	
+	bVar1: BOOL;
+	bVar2: BOOL;
+	
+	bVar11: BOOL;
+	bVar22: BOOL;
+	
+	bVar: BOOL;
+	bVarS: BOOL;
+	bVarR: BOOL;
+	
+	bVara: BOOL;
+	bVarb: BOOL;
+	bVarc: BOOL;
+	
+	bMyVar1: BOOL;
+	bMyVar2: BOOL;
+	bmyTimer : BOOL;
+	myTimer : TON;
+	
+
+END_VAR
+</xhtml>
+            </InterfaceAsPlainText>
+          </data>
+          <data name="http://www.3s-software.com/plcopenxml/objectid" handleUnknown="discard">
+            <ObjectId>294bf7b2-badd-4366-bb09-176e3b487d5d</ObjectId>
+          </data>
+        </addData>
+      </pou>
+    </pous>
+  </types>
+  <instances>
+    <configurations />
+  </instances>
+  <addData>
+    <data name="http://www.3s-software.com/plcopenxml/projectstructure" handleUnknown="discard">
+      <ProjectStructure>
+        <Folder Name="19_ExST">
+          <Object Name="_19_ExST" ObjectId="294bf7b2-badd-4366-bb09-176e3b487d5d" />
+        </Folder>
+      </ProjectStructure>
+    </data>
+  </addData>
+</project>
