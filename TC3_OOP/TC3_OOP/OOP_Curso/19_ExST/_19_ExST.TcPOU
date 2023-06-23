@@ -3,10 +3,46 @@
   <POU Name="_19_ExST" Id="{294bf7b2-badd-4366-bb09-176e3b487d5d}" SpecialFunc="None">
     <Declaration><![CDATA[PROGRAM _19_ExST
 VAR
+	myVar: INT;
+	myVar1: INT;
+	myVar2: INT;
+	
+	bVar1: BOOL;
+	bVar2: BOOL;
+	
+	bVar11: BOOL;
+	bVar22: BOOL;
+	
+	bVar: BOOL;
+	bVarS: BOOL;
+	bVarR: BOOL;
+	
+	bVara: BOOL;
+	bVarb: BOOL;
+	bVarc: BOOL;
+	
+	bMyVar1: BOOL;
+	bMyVar2: BOOL;
+	bmyTimer : BOOL;
+	myTimer : TON;
+	
+
 END_VAR
 ]]></Declaration>
     <Implementation>
-      <ST><![CDATA[]]></ST>
+      <ST><![CDATA[myVar := myVar1 := myVar2 + 26 ; 
+
+bVar1 S= bVar2;
+
+bVar11 R= bVar22;
+
+bVar S= bVarS R= bVarR;
+
+bVara R= bVarb S= bVarc;
+
+myTimer(IN:= bmyTimer , PT:= T#2S );
+
+bMyVar1 S= bMyVar2 R= myTimer.Q;]]></ST>
     </Implementation>
   </POU>
 </TcPlcObject>

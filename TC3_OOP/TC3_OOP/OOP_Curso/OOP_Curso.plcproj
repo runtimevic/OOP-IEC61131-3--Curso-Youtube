@@ -404,6 +404,9 @@
     <Compile Include="18_Otros_Operadores_2\__VARINFO\VARINFO.TcPOU">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="19_ExST\_19_ExST.TcPOU">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="PlcTask.TcTTO">
       <SubType>Code</SubType>
     </Compile>
@@ -451,6 +454,7 @@
     <Folder Include="18_Otros_Operadores_2\__VARINFO" />
     <Folder Include="18_Otros_Operadores_2\__TRY__CATCH" />
     <Folder Include="18_Otros_Operadores_2\__QUERYPOINTER" />
+    <Folder Include="19_ExST" />
     <Folder Include="_MAIN" />
   </ItemGroup>
   <ItemGroup>
