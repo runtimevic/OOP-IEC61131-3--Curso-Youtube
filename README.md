@@ -37,3 +37,4 @@
     - 🔗 [016 - OOP IEC 61131-3 PLC -- Interface vs Herencia_2](https://youtu.be/gFJN7x_m4to)
     - 🔗 [017 - OOP IEC 61131-3 PLC -- Otros Operadores1](https://youtu.be/uf7BIFNQmYE)
     - 🔗 [018 - OOP IEC 61131-3 PLC -- Otros Operadores2](https://youtu.be/rJUqVwoA2d8)
+    - 🔗 [019 - OOP IEC 61131-3 PLC -- ExST Texto Estructurado Extendido]()
