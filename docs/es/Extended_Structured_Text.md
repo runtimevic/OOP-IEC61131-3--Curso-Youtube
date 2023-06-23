@@ -13,6 +13,7 @@ myVar := myVar1 := myVar2 + 26 ; // asignación extendida
 - En este ejemplo, las variables myVar y myVar1 reciben el valor de la variable myVar2 sumado a 26.
 
 Tabla de Ejemplos:
+
 | **Ejemplo**  | **Comentario**  |
 |:------------- |:----------------|
 | int_var1 := int_var2 := int_var3 + 9;         | (* int_var1 y int_var2 recibe el valor de int_var3 + 9 *) |
@@ -36,7 +37,7 @@ Ejemplo:
 ```javascript	
 bVar1 S= bVar2;
 ```
-bVar1 obtiene el valor de bVar2. Una vez que bVar1 se ha establecido en TRUE, bVar1 permanece TRUE aunque vuelva bVar2 a ser FALSE.
+- bVar1 obtiene el valor de bVar2. Una vez que bVar1 se ha establecido en TRUE, bVar1 permanece TRUE aunque vuelva bVar2 a ser FALSE.
 ***
 ### <span style="color:grey">R=</span>
 - El operador de asignación "**R=**" es el opuesto de "**S=**".
@@ -51,6 +52,7 @@ Ejemplo:
 ```javascript
 bVar1 R= bVar2;
 ```
+
 - bVar1 obtiene el valor de bVar2. Una vez que bVar1 se ha establecido en FALSE, bVar1 permanece FALSE aunque vuelva bVar2 a ser TRUE.
 
 El uso de "**S=**" y "**R=**" en una concatenación es interesante. Si aplica el operador Set a una variable y el operador Reset a otra en una línea, la referencia siempre es al último elemento de la serie de asignación.
@@ -59,12 +61,14 @@ Ejemplo:
 ```javascript
 bVar1 S= bVar2 R= F_Fun1(nPar1, nPar2);
 ```
+
 - Todas las asignaciones de configuración y restablecimiento siempre hacen referencia al último elemento de la asignación.
 Ejemplo: En este caso, bVar2 obtiene la salida de F_Fun1 resultante del reinicio, pero:
 bVar1 no obtiene el resultado del conjunto de bVar2, sino el resultado del conjunto de F_Fun1!
 ```javascript	
 bMyVar1 S= bMyVar2 R= myTimer . Q;
 ```
+
 - Aquí bMyVar2 se restablece cuando el tiempo establecido en el módulo temporizador ha expirado.
 
 - **¡¡Atención!!** La variable bMyVar1 ahora no se establece si bMyVar2 tiene el valor TRUE, pero los operadores de asignación siempre actúan en el bloque del temporizador.
