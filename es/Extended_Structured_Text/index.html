@@ -1828,8 +1828,10 @@
 </ul>
 <p>Ejemplo:
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nx">myVar</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">myVar1</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">myVar2</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mf">26</span><span class="w"> </span><span class="p">;</span><span class="w"> </span><span class="c1">// asignación extendida </span>
-</code></pre></div></td></tr></table></div>
-- En este ejemplo, las variables myVar y myVar1 reciben el valor de la variable myVar2 sumado a 26.</p>
+</code></pre></div></td></tr></table></div></p>
+<ul>
+<li>En este ejemplo, las variables myVar y myVar1 reciben el valor de la variable myVar2 sumado a 26.</li>
+</ul>
 <p>Tabla de Ejemplos:</p>
 <table>
 <thead>
@@ -1855,10 +1857,6 @@
 <td align="left">IF b := (i = 1) THEN i := i + 1; END_IF</td>
 <td align="left"></td>
 </tr>
-<tr>
-<td align="left"></td>
-<td align="left"></td>
-</tr>
 </tbody>
 </table>
 <ul>
@@ -1876,8 +1874,10 @@
 </code></pre></div></td></tr></table></div>
 Ejemplo:
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nx">bVar1</span><span class="w"> </span><span class="nx">S</span><span class="o">=</span><span class="w"> </span><span class="nx">bVar2</span><span class="p">;</span>
-</code></pre></div></td></tr></table></div>
-- bVar1 obtiene el valor de bVar2. Una vez que bVar1 se ha establecido en TRUE, bVar1 permanece TRUE aunque vuelva bVar2 a ser FALSE.</p>
+</code></pre></div></td></tr></table></div></p>
+<ul>
+<li>bVar1 obtiene el valor de bVar2. Una vez que bVar1 se ha establecido en TRUE, bVar1 permanece TRUE aunque vuelva bVar2 a ser FALSE.</li>
+</ul>
 <hr />
 <h3 id="r"><span style="color:grey">R=</span></h3>
 <ul>
@@ -1889,23 +1889,23 @@ Ejemplo:
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="o">&lt;</span><span class="nx">variable1</span><span class="o">&gt;</span><span class="w"> </span><span class="nx">R</span><span class="o">=</span><span class="w"> </span><span class="o">&lt;</span><span class="nx">variable2</span><span class="o">&gt;</span><span class="p">;</span>
 </code></pre></div></td></tr></table></div>
 Ejemplo:
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nx">bVar1</span><span class="w"> </span><span class="nx">R</span><span class="o">=</span><span class="w"> </span><span class="nx">bVar2</span><span class="p">;</span>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nx">bVar11</span><span class="w"> </span><span class="nx">R</span><span class="o">=</span><span class="w"> </span><span class="nx">bVar22</span><span class="p">;</span>
 </code></pre></div></td></tr></table></div></p>
 <ul>
-<li>bVar1 obtiene el valor de bVar2. Una vez que bVar1 se ha establecido en FALSE, bVar1 permanece FALSE aunque vuelva bVar2 a ser TRUE.</li>
+<li>bVar11 obtiene el valor de bVar22. Una vez que bVar11 se ha establecido en FALSE, bVar11 permanece FALSE aunque vuelva bVar22 a ser TRUE.</li>
 </ul>
 <p>El uso de "<strong>S=</strong>" y "<strong>R=</strong>" en una concatenación es interesante. Si aplica el operador Set a una variable y el operador Reset a otra en una línea, la referencia siempre es al último elemento de la serie de asignación.</p>
 <p>Ejemplo:
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nx">bVar1</span><span class="w"> </span><span class="nx">S</span><span class="o">=</span><span class="w"> </span><span class="nx">bVar2</span><span class="w"> </span><span class="nx">R</span><span class="o">=</span><span class="w"> </span><span class="nx">F_Fun1</span><span class="p">(</span><span class="nx">nPar1</span><span class="p">,</span><span class="w"> </span><span class="nx">nPar2</span><span class="p">);</span>
 </code></pre></div></td></tr></table></div></p>
 <ul>
-<li>
-<p>Todas las asignaciones de configuración y restablecimiento siempre hacen referencia al último elemento de la asignación.
+<li>Todas las asignaciones de configuración y restablecimiento siempre hacen referencia al último elemento de la asignación.
 Ejemplo: En este caso, bVar2 obtiene la salida de F_Fun1 resultante del reinicio, pero:
-bVar1 no obtiene el resultado del conjunto de bVar2, sino el resultado del conjunto de F_Fun1!
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nx">bMyVar1</span><span class="w"> </span><span class="nx">S</span><span class="o">=</span><span class="w"> </span><span class="nx">bMyVar2</span><span class="w"> </span><span class="nx">R</span><span class="o">=</span><span class="w"> </span><span class="nx">myTimer</span><span class="w"> </span><span class="p">.</span><span class="w"> </span><span class="nx">Q</span><span class="p">;</span>
-</code></pre></div></td></tr></table></div></p>
-</li>
+bVar1 no obtiene el resultado del conjunto de bVar2, sino el resultado del conjunto de F_Fun1!</li>
+</ul>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nx">bMyVar1</span><span class="w"> </span><span class="nx">S</span><span class="o">=</span><span class="w"> </span><span class="nx">bMyVar2</span><span class="w"> </span><span class="nx">R</span><span class="o">=</span><span class="w"> </span><span class="nx">myTimer</span><span class="p">.</span><span class="nx">Q</span><span class="p">;</span>
+</code></pre></div></td></tr></table></div>
+<ul>
 <li>
 <p>Aquí bMyVar2 se restablece cuando el tiempo establecido en el módulo temporizador ha expirado.</p>
 </li>
