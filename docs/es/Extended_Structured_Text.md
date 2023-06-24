@@ -84,4 +84,4 @@ bMyVar1 S= bMyVar2 R= myTimer.Q;
 -  🔗 [www.codesys-blog.com, ExST](https://www.codesys-blog.com/programmiersprachen/exst-erweiterter-strukturierter-text/)
 ***
 ## <span style="color:grey">Links Video de Youtube 019 :</span>
-- 🔗 [019 - OOP IEC 61131-3 PLC -- ExST Texto Estructurado Extendido]()
+- 🔗 [019 - OOP IEC 61131-3 PLC -- ExST Texto Estructurado Extendido](https://youtu.be/W-eTB0hzIZQ)
