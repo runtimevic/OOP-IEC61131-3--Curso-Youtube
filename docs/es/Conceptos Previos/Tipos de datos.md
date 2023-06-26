@@ -61,6 +61,7 @@ TwinCAT supports all data types described in the IEC 61131-3 standard.
 ### Extensions of the IEC 61131-3 standard
 - BIT
 - ANY and ANY_<type>
+ - http://soup01.com/ja/2023/06/13/post-8579/
 - Special data types XINT, UXINT, XWORD and PVOID
 - REFERENCE
 - UNION
@@ -91,6 +92,7 @@ User-defined data types that you create as DUT object in the TwinCAT PLC project
 - WSTRING
 - Time, date and time data types
 - ANY and ANY_<type>
+ - http://soup01.com/ja/2023/06/13/post-8579/
 - Special data types XINT, UXINT, XWORD and PVOID
 - POINTER
 - Data type __SYSTEM.ExceptionCode
