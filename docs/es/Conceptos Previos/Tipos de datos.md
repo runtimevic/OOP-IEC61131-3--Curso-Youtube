@@ -61,12 +61,18 @@ TwinCAT supports all data types described in the IEC 61131-3 standard.
 ### Extensions of the IEC 61131-3 standard
 - BIT
 - ANY and ANY_<type>
+
  - http://soup01.com/ja/2023/06/13/post-8579/
+
 - Special data types XINT, UXINT, XWORD and PVOID
 - REFERENCE
 - UNION
 - POINTER
 - Data type __SYSTEM.ExceptionCode
+
+- T_ARG
+ - https://infosys.beckhoff.com/content/1033/tcplclib_tc2_utilities/35376139.html?id=4303460770811510149
+ - http://soup01.com/ja/2023/06/23/post-8605/
 ### User-defined data types
 	
 Note the recommendations for naming objects.
