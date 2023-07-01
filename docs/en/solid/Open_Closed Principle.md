@@ -1,62 +1,61 @@
-### <span style="color:grey"> Open/closed principle --  (Open/Closed Principle) OCP :</span>
+### <span style="color:grey"> Open/closed principle -- OCP :</span>
 
-La definición del principio abierto/cerrado
-El Principio Abierto/Cerrado (OCP) fue formulado por Bertrand Meyer en 1988 y establece:
+The definition of the open/closed principle
+The open/closed principle (OCP) was formulated by Bertrand Meyer in 1988 and establishes:
 
-Una entidad de software debe estar abierta a extensiones, pero al mismo tiempo cerrada a modificaciones.
-Entidad de software: Esto significa una clase, bloque de función, módulo, método, servicio, ...
+A software entity must be open to extensions, but at the same time closed to modifications.
+Software entity: This means a class, function block, module, method, service, ...
+**Open:** The behavior of software modules should be extensible.
 
-**Abierto:** el comportamiento de los módulos de software debe ser extensible.
+**Closed:** The expansion capacity should not be achieved by changing the existing software.
 
-**Cerrado:** la capacidad de expansión no debe lograrse cambiando el software existente.
+When Bertrand Meyer defined the open/closed principle (OCP) At the end of the 1980s, attention focused on C ++ programming language.He used inheritance, well known in the object -oriented world.The discipline of object orientation, which was still young at that time, promised great improvements in reuse and maintainability by allowing specific classes to be used as base classes for new classes.
 
-Cuando Bertrand Meyer definió el Principio Abierto/Cerrado (OCP) a fines de la década de 1980, la atención se centró en el lenguaje de programación C++. Usaba herencia, bien conocida en el mundo orientado a objetos. La disciplina de la orientación a objetos, que aún era joven en ese momento, prometía grandes mejoras en la reutilización y la mantenibilidad al permitir que clases concretas se usaran como clases base para nuevas clases.
+When Robert C. Martin took over the Bertrand Meyer principle in the 1990s, he technically implemented it differently.C ++ allows the use of multiple inheritance, while multiple inheritance is rarely found in the newest programming languages.For this reason, Robert C. Martin focused on the use of interfaces.You can find more information about it in the book (Amazon advertising link *) [Arquitectura limpia: el manual práctico para el diseño de software profesional.](https://www.amazon.de/gp/product/395845724X/ref=as_li_tl?ie=UTF8&camp=1638&creative=6742&creativeASIN=395845724X&linkCode=as2&tag=0101e3-21&linkId=77473018891c27120a9cebe02be17c27)
 
-Cuando Robert C. Martin se hizo cargo del principio de Bertrand Meyer en la década de 1990, lo implementó técnicamente de manera diferente. C ++ permite el uso de herencia múltiple, mientras que la herencia múltiple rara vez se encuentra en los lenguajes de programación más nuevos. Por este motivo, Robert C. Martin se centró en el uso de interfaces. Se puede encontrar más información al respecto en el libro (enlace publicitario de Amazon *) [Arquitectura limpia: el manual práctico para el diseño de software profesional.](https://www.amazon.de/gp/product/395845724X/ref=as_li_tl?ie=UTF8&camp=1638&creative=6742&creativeASIN=395845724X&linkCode=as2&tag=0101e3-21&linkId=77473018891c27120a9cebe02be17c27)
+### <span style="color:grey">Summary:</span>
+However, adhering to the open/closed principle (OCP) entails the risk of excess engineering.The extensions option should only be implemented where it is specifically necessary.The software cannot be designed in such a way that all imaginable extensions can be implemented without making adjustments in the source code.
 
-### <span style="color:grey">Resumen:</span>
-Sin embargo, adherirse al principio abierto/cerrado (OCP) conlleva el riesgo de un exceso de ingeniería. La opción de extensiones solo debe implementarse donde sea específicamente necesario. El software no puede diseñarse de tal manera que todas las extensiones imaginables puedan implementarse sin realizar ajustes en el código fuente.
-
-### <span style="color:grey">Ejemplo:</span>
+### <span style="color:grey">Example:</span>
 
 ```javascript
-FUNCTION_BLOCK Vehiculo
+FUNCTION_BLOCK Vehicle
 VAR_INPUT
-    velocidad : REAL;
+    speed : REAL;
 END_VAR
 
-// método para obtener la velocidad
-getVelocidad() : REAL;
+// Method to obtain speed
+getSpeed() : REAL;
 
 END_FUNCTION_BLOCK
 
-FUNCTION_BLOCK Coche EXTENDS Vehiculo // extiende la función Vehiculo
+FUNCTION_BLOCK Car EXTENDS Vehicle // extiende la vehicle function
 VAR_INPUT
-    velocidadMaxima : REAL;
+    MaxSpeed : REAL;
 END_VAR
 
 // constructor
-Coche(velocidad, velocidadMaxima);
+Car(getSpeed, MaxSpeed);
 
-// método para obtener la velocidad máxima
-getVelocidadMaxima() : REAL;
+// method for obtaining the maximum speed 
+getMaximumSpeed() : REAL;
 
 END_FUNCTION_BLOCK
 
-FUNCTION_BLOCK Moto EXTENDS Vehiculo // extiende la función Vehiculo
+FUNCTION_BLOCK moto EXTENDS Vehicle // Extend the vehicle function
 VAR_INPUT
-    aceleracion : REAL;
+    acceleration : REAL;
 END_VAR
 
 // constructor
-Moto(velocidad, aceleracion);
+Moto(speed, acceleration);
 
-// método para obtener la aceleración
-getAceleracion() : REAL;
+// Method to obtain acceleration
+getAcceleration() : REAL;
 
 END_FUNCTION_BLOCK
 ```
-De esta manera, la clase "Vehiculo" está cerrada para modificaciones directas y abierta para extensiones a través de las nuevas clases "Coche" y "Moto". Cada nueva clase agrega funcionalidades específicas sin modificar directamente la clase original.
+In this way, the "vehicle" class is closed for direct and open modifications for extensions through the new "car" and "motorcycle" classes.Each new class adds specific functionalities without directly modifying the original class.
 ***
 ### <span style="color:grey">Links:</span>
 

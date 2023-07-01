@@ -1,51 +1,51 @@
-### <span style="color:grey"> Principio de Responsabilidad Única -- (Single Responsibility Principle) SRP :</span>
+### <span style="color:grey"> Single responsibility principle -- SRP :</span>
 
-El principio de responsabilidad única establece que una clase debe tener una sola responsabilidad en un programa.
+The unique responsibility principle establishes that a class must have a single responsibility in a program.
 
-### <span style="color:grey"> Ejemplo :</span>
-Por ejemplo, en lugar de tener una clase "Empleado" que maneje tanto la información personal como el registro de tiempo, se deben crear dos clases separadas: "Empleado" para la información personal y "RegistroDeTiempo" para el registro de tiempo. De esta manera, cada clase se enfoca en una sola tarea y es más fácil de mantener y modificar.
+### <span style="color:grey"> Example :</span>
+For example, instead of having a "employee" class that manages both personal information and the time registration, two separate classes must be created: "employee" for personal information and "registry" for the time record.In this way, each class focuses on a single task and is easier to maintain and modify.
 
-En lugar de tener una Clase que maneje todo, creamos dos Clases separadas:
+Instead of having a class that manages everything, we create two separate classes:
 
 ```javascript
-FUNCTION_BLOCK Empleado
+FUNCTION_BLOCK Employee
 VAR_INPUT
-    nombre : STRING;
-    apellido : STRING;
-    correoElectronico : STRING;
+    name : STRING;
+    lastname : STRING;
+    email : STRING;
 END_VAR
 
 // constructor
-Empleado(nombre, apellido, correoElectronico);
+Employee(name, lastname, email);
 
-// getters y setters
-nombre();
-apellido();
-correoElectronico();
+// Getters and Setters
+name();
+lastname();
+email();
 
 END_FUNCTION_BLOCK
 ```
 
 ```javascript
-FUNCTION_BLOCK RegistroDeTiempo
+FUNCTION_BLOCK REGISTRATION
 VAR_INPUT
-    empleado : Empleado; // instancia de la función Empleado
-    horaEntrada : DATE_AND_TIME;
-    horaSalida : DATE_AND_TIME;
+    employee : Employee; // instance of the function used
+    startTime : DATE_AND_TIME;
+    stopTime : DATE_AND_TIME;
 END_VAR
 
 // constructor
-RegistroDeTiempo(empleado, horaEntrada, horaSalida);
+REGISTRATION(employee, startTime, stopTime);
 
-// getters y setters
-empleado();
-horaEntrada();
-horaSalida();
+// getters and setters
+employee();
+startTime();
+stopTime();
 
 END_FUNCTION_BLOCK
 ```
 
-De esta manera, la Clase "Empleado" solo maneja la información personal del empleado y la Clase "RegistroDeTiempo" solo maneja el registro de tiempo. Cada Clase tiene una sola responsabilidad y es más fácil de mantener y modificar en el futuro.
+In this way, the "employee" class only handles the personal information of the employee and the "Registry" class only handles the registration of time.Each class has only one responsibility and is easier to maintain and modify in the future.
 
 ***
 ### <span style="color:grey">Links:</span>
