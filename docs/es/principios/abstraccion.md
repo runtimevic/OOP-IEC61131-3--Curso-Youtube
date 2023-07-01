@@ -25,12 +25,13 @@ Reglas para el uso de la palabra clave ABSTRACT:
 - Si un bloque de función contiene un método o propiedad abstracta, debe ser abstracto.
 - Los bloques de funciones abstractas deben extenderse para poder implementar los métodos o propiedades abstractos.
 - Por lo tanto: un FB derivado debe implementar los métodos/propiedades de su FB básico o también debe definirse como abstracto.
-
-### <span style="color:grey">Conclusión:</span>
-La encapsulación es uno de los 4 pilares de OOP. La encapsulación consiste en agrupar métodos y propiedades en un bloque de funciones y ocultar y proteger datos que no son necesarios para el usuario. Esto nos ayuda a escribir código SÓLIDO y reutilizable. 
 ***
+
 ### <span style="color:grey">Links Abstracción:</span>
 - 🔗 [ABSTRACT,www.plccoder.com](https://www.plccoder.com/abstract/)
 
 - 🔗 [ABSTRACION Concepto, Infosys Beckhoff](https://infosys.beckhoff.com/content/1033/tc3_plc_intro/6413748235.html?id=2638086927809860687)
+***
+### <span style="color:grey">Link al Video de Youtube 020:</span>
+- 🔗 [020 - OOP IEC 61131-3 PLC -- 4 Pilares OOP - Abstracción](https://youtu.be/uUZbgOKnSx4)
 
