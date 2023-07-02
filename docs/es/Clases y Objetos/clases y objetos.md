@@ -91,6 +91,8 @@ Color := Mercedes.Color;
 
 - 🔗 [Clase de Programación Orientada a Objetos en una hora ! Cómo crear tus entidades, herencia y más](https://www.youtube.com/watch?v=2jfIfeY4lrQ)
 
+- 🔗 [Object Oriented Programming (OOP) in Java Course](https://www.youtube.com/playlist?list=PL9gnSGHSqcno1G3XjUbwzXHL8_EttOuKk)
+
 ***
 ### <span style="color:grey">Link al Video de Youtube 002:</span>
 - 🔗 [002 - OOP IEC 61131-3 PLC -- Clase y Objeto](https://youtu.be/3IudQIj1noo)
