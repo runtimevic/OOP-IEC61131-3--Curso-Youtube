@@ -60,6 +60,9 @@ plugins:
                
 # Customization
 extra:
+  analytics:
+    provider: google
+    property: G-42EY64EE3Z
   social:
     - icon: fontawesome/brands/linkedin
       link: https://www.linkedin.com/in/v%C3%ADctor-dur%C3%A1n-mu%C3%B1oz-2879a913/
