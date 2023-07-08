@@ -9,12 +9,16 @@ Puede ser estático o dinámico:
 - El polimorfismo estático ocurre cuando el compilador define el tipo de objeto;
 - El polimorfismo dinámico se produce cuando el tipo se determina durante el tiempo de ejecución, lo que hace posible
 para que una misma variable acceda a diferentes objetos mientras el programa se está ejecutando.
-Un buen ejemplo para explicar el polimorfismo es una navaja suiza.
+
+### <span style="color:grey"> Ejemplos de Polimorfismo:</span>
+
+- Un buen ejemplo para explicar el polimorfismo es una navaja suiza.
 Una navaja suiza es una herramienta única que incluye un montón de recursos que se pueden utilizar para resolver
 problemas diferentes. Al seleccionar la herramienta adecuada, se puede utilizar una navaja suiza para
-realizar un determinado conjunto de tareas valiosas. De la manera dual, un bloque sumador simple que se adapta
-para hacer frente a, por ejemplo, los tipos de datos int, float, string y time es un ejemplo de un polimórfico
-recurso de programación.
+realizar un determinado conjunto de tareas valiosas.
+
+- De la manera dual, otro ejemplo podria ser un bloque sumador simple que se adapta para hacer frente a, 
+por ejemplo, los tipos de datos int, float, string y time es un ejemplo de un polimórfico recurso de programación.
 ***
 
 ### <span style="color:grey">¿Como conseguir el Polimorfismo?</span>
@@ -55,3 +59,6 @@ Tambien se puede conseguir el Polimorfismo por Referencia y/o por Punteros:
 - 🔗 [AT&U, CODESYS - Runtime polymorphism using inheritance (OOP)](https://www.youtube.com/watch?v=oxwkeLggtnM)
 
 - 🔗 [AT&U,CODESYS - Runtime polymorphism using an ITF (OOP)](https://www.youtube.com/watch?v=dcSW0X4gM98)
+***
+### <span style="color:grey">Link al Video de Youtube 022:</span>
+- 🔗 [022 - OOP IEC 61131-3 PLC -- 4 Pilares OOP - Polimorfismo]()
