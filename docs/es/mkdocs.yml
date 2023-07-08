@@ -57,10 +57,12 @@ plugins:
       output_path: ../document-es.pdf
   - pdf-export:
       combined: true
-  - git-revision-date-localized:
-      enable_creation_date: true                 
-      type: datetime    
-  - git-authors
+  - git-committers:
+      repository: runtimevic/OOP-IEC61131-3--Curso-Youtube
+  # - git-revision-date-localized:
+  #     enable_creation_date: true                 
+  #     type: datetime    
+  # - git-authors
 
 # Customization
 extra:

@@ -31,6 +31,9 @@ jobs:
       - name: install 📦️
         run: pip install mkdocs-git-authors-plugin
 
+      - name: install 📦️
+        run: pip install mkdocs-git-committers-plugin-2
+
       - name: Build 🔧
         run: bash ./scripts/build-docs.sh
 
