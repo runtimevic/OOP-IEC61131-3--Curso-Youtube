@@ -59,10 +59,10 @@ plugins:
       combined: true
   - git-revision-date-localized:
       enable_creation_date: true                 
-      type: iso_datetime:timeago
+      type: iso_date
   - git-committers:
       repository: runtimevic/OOP-IEC61131-3--Curso-Youtube
-         
+
 # Customization
 extra:
   analytics:
