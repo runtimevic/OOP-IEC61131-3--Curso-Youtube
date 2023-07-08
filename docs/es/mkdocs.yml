@@ -59,8 +59,7 @@ plugins:
       combined: true
   - git-revision-date-localized:
       enable_creation_date: true                 
-      type: datetime
-  - search     
+      type: datetime    
   - git-authors
 
 # Customization
