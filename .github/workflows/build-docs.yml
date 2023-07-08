@@ -25,6 +25,9 @@ jobs:
       - name: pdf2 📦️
         run: pip install mkdocs-pdf-export-plugin
 
+      - name: install 📦️
+        run: pip install mkdocs-git-revision-date-localized-plugin
+
       - name: Build 🔧
         run: bash ./scripts/build-docs.sh
 
