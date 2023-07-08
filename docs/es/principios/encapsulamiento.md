@@ -23,7 +23,8 @@ En Codesys y TwinCAT podemos usar un bloque de funciones para construir el proye
 La Encapsulación es uno de los 4 pilares de OOP. La encapsulación consiste en agrupar métodos y propiedades en un bloque de funciones y ocultar y proteger datos que no son necesarios para el usuario. Esto nos ayuda a escribir código SÓLIDO y reutilizable. 
 ***
 ### <span style="color:grey">Links Encapsulacion:</span>
-- 🔗  [www.plccoder.com,encapsulation](https://www.plccoder.com/encapsulation/)
+- 🔗  [www.plccoder.com, Encapsulation](https://www.plccoder.com/encapsulation/)
+- 🔗  [es.wikipedia.org, Encapsulamiento](https://es.wikipedia.org/wiki/Encapsulamiento_(inform%C3%A1tica))
 ***
 ### <span style="color:grey">Link al Video de Youtube 021:</span>
-- 🔗 [021 - OOP IEC 61131-3 PLC -- 4 Pilares OOP - Encapsulamiento]()
+- 🔗 [021 - OOP IEC 61131-3 PLC -- 4 Pilares OOP - Encapsulamiento y Herencia](https://youtu.be/g-QWxy-CsOY)

@@ -39,4 +39,4 @@
     - 🔗 [018 - OOP IEC 61131-3 PLC -- Otros Operadores2](https://youtu.be/rJUqVwoA2d8)
     - 🔗 [019 - OOP IEC 61131-3 PLC -- ExST Texto Estructurado Extendido](https://youtu.be/W-eTB0hzIZQ)
     - 🔗 [020 - OOP IEC 61131-3 PLC -- 4 Pilares OOP - Abstracción](https://youtu.be/uUZbgOKnSx4)
-    - 🔗 [021 - OOP IEC 61131-3 PLC -- 4 Pilares OOP - Encapsulamiento]()
+    - 🔗 [021 - OOP IEC 61131-3 PLC -- 4 Pilares OOP - Encapsulamiento y Herencia](https://youtu.be/g-QWxy-CsOY)

@@ -25,3 +25,4 @@ definir.
 - 🔗 [stefanhenneken.net,iec-61131-3-methods-properties-and-inheritance](https://stefanhenneken.net/2017/04/23/)
 ***
 ### <span style="color:grey">Link al Video de Youtube 021:</span>
+- 🔗 [021 - OOP IEC 61131-3 PLC -- 4 Pilares OOP - Encapsulamiento y Herencia](https://youtu.be/g-QWxy-CsOY)
