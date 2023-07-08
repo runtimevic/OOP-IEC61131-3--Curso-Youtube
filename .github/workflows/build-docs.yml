@@ -29,7 +29,7 @@ jobs:
         run: pip install mkdocs-git-revision-date-localized-plugin
 
       - name: install 📦️
-        run: pip install mkdocs-git-committers-plugin-2
+        run: pip install mkdocs-git-authors-plugin
 
       - name: Build 🔧
         run: bash ./scripts/build-docs.sh
