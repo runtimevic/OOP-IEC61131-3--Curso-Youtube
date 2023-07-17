@@ -58,9 +58,8 @@ plugins:
   - pdf-export:
       combined: true
   # - git-committers:
-  #     repository: runtimevic/OOP-IEC61131-3--Curso-Youtube
-  #     branch: master
-  #     docs_path: /docs/es
+  #     repository: 'runtimevic/OOP-IEC61131-3--Curso-Youtube'
+  #     docs_path: '../docs/es'
   - git-revision-date-localized:
       enable_creation_date: true                 
       type: datetime    
