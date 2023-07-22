@@ -61,4 +61,4 @@ Tambien se puede conseguir el Polimorfismo por Referencia y/o por Punteros:
 - 🔗 [AT&U,CODESYS - Runtime polymorphism using an ITF (OOP)](https://www.youtube.com/watch?v=dcSW0X4gM98)
 ***
 ### <span style="color:grey">Link al Video de Youtube 022:</span>
-- 🔗 [022 - OOP IEC 61131-3 PLC -- 4 Pilares OOP - Polimorfismo]()
+- 🔗 [022 - OOP IEC 61131-3 PLC -- 4 Pilares OOP - Polimorfismo](https://youtu.be/KIU-Vm11CEc)
