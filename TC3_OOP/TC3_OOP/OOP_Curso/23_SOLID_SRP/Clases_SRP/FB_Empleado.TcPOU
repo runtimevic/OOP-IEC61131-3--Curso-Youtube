@@ -1,0 +1,104 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.12">
+  <POU Name="FB_Empleado" Id="{c9fd69cc-780b-4a7a-a81b-af4317d13695}" SpecialFunc="None">
+    <Declaration><![CDATA[FUNCTION_BLOCK FB_Empleado
+VAR_INPUT
+	stEmpleado :ST_Empleado;
+END_VAR
+VAR_OUTPUT
+END_VAR
+VAR
+	_Empleado : ST_Empleado;
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[]]></ST>
+    </Implementation>
+    <Property Name="Apellido" Id="{85706286-c597-4857-bdc8-6d087f1f29cf}">
+      <Declaration><![CDATA[PROPERTY Apellido : STRING]]></Declaration>
+      <Get Name="Get" Id="{45b57335-d209-4f38-af38-4791567ee3ee}">
+        <Declaration><![CDATA[VAR
+END_VAR
+]]></Declaration>
+        <Implementation>
+          <ST><![CDATA[Apellido := _Empleado.Apellido;]]></ST>
+        </Implementation>
+      </Get>
+      <Set Name="Set" Id="{4d076d00-5585-41bb-80ae-8ea9360956af}">
+        <Declaration><![CDATA[VAR
+END_VAR
+]]></Declaration>
+        <Implementation>
+          <ST><![CDATA[_Empleado.Apellido := Apellido;]]></ST>
+        </Implementation>
+      </Set>
+    </Property>
+    <Property Name="CorreoElectronico" Id="{8257975b-dcfb-4072-a80e-c0f8eb6026c8}">
+      <Declaration><![CDATA[PROPERTY CorreoElectronico : STRING]]></Declaration>
+      <Get Name="Get" Id="{517e03be-b975-40a6-9d03-7c6fc7b5b0ec}">
+        <Declaration><![CDATA[VAR
+END_VAR
+]]></Declaration>
+        <Implementation>
+          <ST><![CDATA[CorreoElectronico := _Empleado.CorreoElectronico;]]></ST>
+        </Implementation>
+      </Get>
+      <Set Name="Set" Id="{c6ba564a-f30c-4647-82a9-c98740b45dbc}">
+        <Declaration><![CDATA[VAR
+END_VAR
+]]></Declaration>
+        <Implementation>
+          <ST><![CDATA[ _Empleado.CorreoElectronico := CorreoElectronico;]]></ST>
+        </Implementation>
+      </Set>
+    </Property>
+    <Method Name="FB_init" Id="{9d71571a-656c-457b-9264-3ac55785932d}">
+      <Declaration><![CDATA[METHOD FB_init : BOOL
+VAR_INPUT
+	bInitRetains : BOOL; // if TRUE, the retain variables are initialized (warm start / cold start)
+	bInCopyCode : BOOL;  // if TRUE, the instance afterwards gets moved into the copy code (online change)
+	Empleado : ST_Empleado;
+END_VAR
+]]></Declaration>
+      <Implementation>
+        <ST><![CDATA[_Empleado := Empleado;]]></ST>
+      </Implementation>
+    </Method>
+    <Property Name="Nombre" Id="{4b908c39-db30-4c4c-b242-536d051266a4}">
+      <Declaration><![CDATA[PROPERTY Nombre : STRING]]></Declaration>
+      <Get Name="Get" Id="{7bf5646e-0e4b-4e19-a0ee-a53cf0b22ea3}">
+        <Declaration><![CDATA[VAR
+END_VAR
+]]></Declaration>
+        <Implementation>
+          <ST><![CDATA[Nombre := _Empleado.Nombre;]]></ST>
+        </Implementation>
+      </Get>
+      <Set Name="Set" Id="{7bc25f2e-1d63-4610-80a8-c90608bdc659}">
+        <Declaration><![CDATA[VAR
+END_VAR
+]]></Declaration>
+        <Implementation>
+          <ST><![CDATA[_Empleado.Nombre := Nombre;]]></ST>
+        </Implementation>
+      </Set>
+    </Property>
+    <ObjectProperties>
+      <XmlArchive>
+        <Data>
+          <o xml:space="preserve" t="UMLStereoTypeContainerObject">
+            <v n="IsType" t="UMLType">BaseArea</v>
+            <v n="Stereotype">""</v>
+            <d n="Stereotypes" t="Hashtable" />
+          </o>
+        </Data>
+        <TypeList>
+          <Type n="Hashtable">System.Collections.Hashtable</Type>
+          <Type n="String">System.String</Type>
+          <Type n="UMLStereoTypeContainerObject">{30250973-b110-4e31-b562-c102e042dca4}</Type>
+          <Type n="UMLType">{0197b136-405a-42ee-bb27-fd08b621d0cf}</Type>
+        </TypeList>
+      </XmlArchive>
+    </ObjectProperties>
+  </POU>
+</TcPlcObject>

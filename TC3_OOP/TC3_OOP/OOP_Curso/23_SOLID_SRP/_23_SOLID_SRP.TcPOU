@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.12">
+  <POU Name="_23_SOLID_SRP" Id="{8ea427aa-5e25-4215-ad6a-08ea58394af1}" SpecialFunc="None">
+    <Declaration><![CDATA[PROGRAM _23_SOLID_SRP
+VAR
+	stRaul 						: ST_Empleado := (Nombre:= 'Raul', Apellido:= 'Gonzalez', CorreoElectronico:= 'micorreo@correo.com');
+	Empleado_1 					: FB_Empleado(stRaul);
+	
+	stHorario_Raul 				: ST_Horario := (HoraEntrada := DT#2023-1-1-8:0:0, HoraSalida := DT#2023-1-1-17:0:0);
+	stRegistroDeTiempoEmpleado 	: ST_RegistroDeTiempoEmpleado := (stEmpleado:= stRaul, stHorario:= stHorario_Raul);
+	RegistroDeTiempoEmpleado_1 : FB_RegistroDeTiempo(stRegistroDeTiempoEmpleado);
+	
+	
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[]]></ST>
+    </Implementation>
+  </POU>
+</TcPlcObject>

@@ -1,0 +1,105 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.12">
+  <POU Name="FB_RegistroDeTiempo" Id="{1d7594a7-13bf-43a9-86ea-be1da9c4295d}" SpecialFunc="None">
+    <Declaration><![CDATA[FUNCTION_BLOCK FB_RegistroDeTiempo
+VAR_INPUT
+	stEmpleado : ST_Empleado; // instancia de la función Empleado
+    stHorario  : ST_Horario;
+END_VAR
+VAR_OUTPUT
+END_VAR
+VAR
+	_RegistroDeTiempo : ST_RegistroDeTiempoEmpleado;
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[]]></ST>
+    </Implementation>
+    <Property Name="Empleado" Id="{aed96031-9146-4a51-91d6-18908bb8512c}">
+      <Declaration><![CDATA[PROPERTY Empleado : ST_Empleado;]]></Declaration>
+      <Get Name="Get" Id="{87da9a1d-5714-4715-b7dc-5b1273407b29}">
+        <Declaration><![CDATA[VAR
+END_VAR
+]]></Declaration>
+        <Implementation>
+          <ST><![CDATA[]]></ST>
+        </Implementation>
+      </Get>
+      <Set Name="Set" Id="{901dfa6f-f175-476b-9ea3-fcb7bda21133}">
+        <Declaration><![CDATA[VAR
+END_VAR
+]]></Declaration>
+        <Implementation>
+          <ST><![CDATA[]]></ST>
+        </Implementation>
+      </Set>
+    </Property>
+    <Method Name="FB_init" Id="{f9c6275a-8b3c-471d-91ac-e331d0134062}">
+      <Declaration><![CDATA[METHOD FB_init : BOOL
+VAR_INPUT
+	bInitRetains : BOOL; // if TRUE, the retain variables are initialized (warm start / cold start)
+	bInCopyCode : BOOL;  // if TRUE, the instance afterwards gets moved into the copy code (online change)
+	RegistroDeTiempo : ST_RegistroDeTiempoEmpleado;
+END_VAR
+]]></Declaration>
+      <Implementation>
+        <ST><![CDATA[_RegistroDeTiempo := RegistroDeTiempo;]]></ST>
+      </Implementation>
+    </Method>
+    <Property Name="HoraEntrada" Id="{003bf0fe-b303-4a5e-aa40-e9718b214ae5}">
+      <Declaration><![CDATA[PROPERTY HoraEntrada : DATE_AND_TIME]]></Declaration>
+      <Get Name="Get" Id="{3229d2c0-6514-4f99-8ade-89ee509f8a1c}">
+        <Declaration><![CDATA[VAR
+END_VAR
+]]></Declaration>
+        <Implementation>
+          <ST><![CDATA[]]></ST>
+        </Implementation>
+      </Get>
+      <Set Name="Set" Id="{8dd37463-1b91-47e9-94d2-272bc61e0e86}">
+        <Declaration><![CDATA[VAR
+END_VAR
+]]></Declaration>
+        <Implementation>
+          <ST><![CDATA[]]></ST>
+        </Implementation>
+      </Set>
+    </Property>
+    <Property Name="HoraSalida" Id="{9c9f97c6-c913-4d75-a941-b09502d80db7}">
+      <Declaration><![CDATA[PROPERTY HoraSalida : DATE_AND_TIME]]></Declaration>
+      <Get Name="Get" Id="{a2c23117-5998-4e2e-8f8f-dc95fdbb73f5}">
+        <Declaration><![CDATA[VAR
+END_VAR
+]]></Declaration>
+        <Implementation>
+          <ST><![CDATA[]]></ST>
+        </Implementation>
+      </Get>
+      <Set Name="Set" Id="{362f64bb-07a0-414c-8238-2ab7c524b442}">
+        <Declaration><![CDATA[VAR
+END_VAR
+]]></Declaration>
+        <Implementation>
+          <ST><![CDATA[]]></ST>
+        </Implementation>
+      </Set>
+    </Property>
+    <ObjectProperties>
+      <XmlArchive>
+        <Data>
+          <o xml:space="preserve" t="UMLStereoTypeContainerObject">
+            <v n="IsType" t="UMLType">BaseArea</v>
+            <v n="Stereotype">""</v>
+            <d n="Stereotypes" t="Hashtable" />
+          </o>
+        </Data>
+        <TypeList>
+          <Type n="Hashtable">System.Collections.Hashtable</Type>
+          <Type n="String">System.String</Type>
+          <Type n="UMLStereoTypeContainerObject">{30250973-b110-4e31-b562-c102e042dca4}</Type>
+          <Type n="UMLType">{0197b136-405a-42ee-bb27-fd08b621d0cf}</Type>
+        </TypeList>
+      </XmlArchive>
+    </ObjectProperties>
+  </POU>
+</TcPlcObject>

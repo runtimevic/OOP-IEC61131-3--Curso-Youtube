@@ -44,9 +44,13 @@ horaSalida();
 
 END_FUNCTION_BLOCK
 ```
+![ClaseyObjetos1](../imagenes/SOLID_SRP.PNG)
 
 De esta manera, la Clase "Empleado" solo maneja la información personal del empleado y la Clase "RegistroDeTiempo" solo maneja el registro de tiempo. Cada Clase tiene una sola responsabilidad y es más fácil de mantener y modificar en el futuro.
 
 ***
 ### <span style="color:grey">Links:</span>
 - 🔗 [stefanhenneken.net,iec-61131-3-solid-the-single-responsibility-principle](https://stefanhenneken.net/2022/03/10/iec-61131-3-solid-the-single-responsibility-principle/)
+***
+### <span style="color:grey">Link al Video de Youtube 023:</span>
+- 🔗 [023 - OOP IEC 61131-3 PLC -- SOLID - SRP]()

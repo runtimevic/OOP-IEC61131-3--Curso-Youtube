@@ -407,6 +407,27 @@
     <Compile Include="19_ExST\_19_ExST.TcPOU">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="23_SOLID_SRP\Clases_SRP\FB_Empleado.TcPOU">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="23_SOLID_SRP\Clases_SRP\FB_RegistroDeTiempo.TcPOU">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="23_SOLID_SRP\Class Diagram_SOLID_SRP.TcCD">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="23_SOLID_SRP\Estructuras_SRP\ST_Empleado.TcDUT">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="23_SOLID_SRP\Estructuras_SRP\ST_Horario.TcDUT">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="23_SOLID_SRP\Estructuras_SRP\ST_RegistroDeTiempoEmpleado.TcDUT">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="23_SOLID_SRP\_23_SOLID_SRP.TcPOU">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="PlcTask.TcTTO">
       <SubType>Code</SubType>
     </Compile>
@@ -455,6 +476,9 @@
     <Folder Include="18_Otros_Operadores_2\__TRY__CATCH" />
     <Folder Include="18_Otros_Operadores_2\__QUERYPOINTER" />
     <Folder Include="19_ExST" />
+    <Folder Include="23_SOLID_SRP" />
+    <Folder Include="23_SOLID_SRP\Estructuras_SRP" />
+    <Folder Include="23_SOLID_SRP\Clases_SRP" />
     <Folder Include="_MAIN" />
   </ItemGroup>
   <ItemGroup>
