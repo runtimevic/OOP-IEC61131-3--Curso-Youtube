@@ -17,3 +17,7 @@ Mediante el uso de bibliotecas, podemos administrar el software que hemos creado
 - 🔗 [help.codesys.com,_tm_test_action_libraries_addlibrary](https://help.codesys.com/webapp/_tm_test_action_libraries_addlibrary;product=codesys_test_manager;version=4.3.1.0)
 - 🔗 [CODESYS Webinar Library Management Basics](https://www.youtube.com/watch?v=A4lQGWAUTgs)
 - 🔗 [CoDeSys - How to add libraries and more with Machine Control Studio.](https://www.youtube.com/watch?v=8OGPvyo99p8&t=351s)
+- 🔗 [SPT Application Framework Documentation](https://beckhoff-usa-community.github.io/SPT-Libraries/index.html)
+- 🔗 [Beckhoff.SPT Framework Tutorial Part1.EN](https://www.youtube.com/watch?v=oK4KR1jhLEg)
+***
+### <span style="color:grey">Link al Video de Youtube xxx:</span>
