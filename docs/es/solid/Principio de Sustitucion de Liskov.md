@@ -56,3 +56,6 @@ Además, cada subclase tiene un método `Mover` que se utiliza para mover el veh
 ***
 ### <span style="color:grey">Links:</span>
 - 🔗 [stefanhenneken.net,iec-61131-3-solid-the-liskov-substitution-principle](https://stefanhenneken.net/2022/09/27/iec-61131-3-solid-the-liskov-substitution-principle/)
+***
+### <span style="color:grey">Link al Video de Youtube 026:</span>
+- 🔗 [026 - OOP IEC 61131-3 PLC -- SOLID - LSP]()

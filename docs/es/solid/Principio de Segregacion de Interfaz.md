@@ -65,3 +65,6 @@ De esta manera, cada clase tiene solo los métodos necesarios y se divide en int
 - 🔗 [IEC 61131-3: SOLID – The Interface Segregation Principle](https://stefanhenneken.net/2023/02/25/iec-61131-3-solid-the-interface-segregation-principle/#more-2505)
 
 -  🔗 [🤓¡PATRONES de DISEÑO de Typescript que te AYUDARÁN! Guía + Interface Segregation Principle | PT 1.](https://www.youtube.com/watch?v=Ph7kXNmski8)
+***
+### <span style="color:grey">Link al Video de Youtube 027:</span>
+- 🔗 [027 - OOP IEC 61131-3 PLC -- SOLID - ISP]()
