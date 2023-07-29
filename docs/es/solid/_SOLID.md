@@ -26,6 +26,7 @@ Además de los principios SOLID, existen otros principios como:
 ```
 " Mantenlo Simple, Estúpido "
 ```
+
 - Evite la complejidad innecesaria en su código, use soluciones simples para resolver problemas.
 
 - **Ejemplo:** En lugar de escribir un algoritmo personalizado para generar un número aleatorio dentro de un rango, use el generador de números aleatorios incorporado en su lenguaje de programación.
@@ -34,6 +35,7 @@ Además de los principios SOLID, existen otros principios como:
 ```
 " No te repitas "
 ```
+
 - Cada pieza de conocimiento debe tener una representación única, inequívoca y autorizada dentro de un sistema.
 
 - Evite la duplicación de código y mantenga su base de código lo más mantenible y escalable posible.
@@ -44,6 +46,7 @@ Además de los principios SOLID, existen otros principios como:
 ```
 " Habla Solo con tus amigos inmediatos "
 ```
+
 - La Ley de Demeter (LOD) en programación es un principio que establece que un objeto debe tener acceso limitado a los objetos relacionados con él y solo interactuar con los objetos más cercanos a él. En resumen, un objeto no debe conocer la estructura interna de otros objetos y solo debe comunicarse con ellos a través de una interfaz limitada.
 
 - **Ejemplo:** Si tienes una clase "Persona" que tiene un método "getNombre()" y otra clase "Empresa" que tiene un método "getPersona()". En lugar de acceder directamente al nombre de la persona desde la clase Empresa, se debería llamar al método "getNombre()" de la clase Persona desde fuera de la clase Empresa, para evitar una dependencia innecesaria y mantener una comunicación limitada entre objetos.
@@ -51,6 +54,7 @@ Además de los principios SOLID, existen otros principios como:
 ```
 " No lo vas a necesitar "
 ```
+
 - No agregue funcionalidad a su código hasta que realmente lo necesite.
 
 - **Ejemplo:** No agregue una función a su aplicación que permita a los usuarios cambiar el color de la fuente si no es parte de los requisitos principales.
