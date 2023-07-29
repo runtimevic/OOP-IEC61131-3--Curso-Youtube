@@ -1835,13 +1835,13 @@
 <span class="normal">15</span>
 <span class="normal">16</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nx">FUNCTION_BLOCK</span><span class="w"> </span><span class="nx">Empleado</span>
 <span class="nx">VAR_INPUT</span>
-<span class="w">    </span><span class="nx">nombre</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="nx">STRING</span><span class="p">;</span>
-<span class="w">    </span><span class="nx">apellido</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="nx">STRING</span><span class="p">;</span>
-<span class="w">    </span><span class="nx">correoElectronico</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="nx">STRING</span><span class="p">;</span>
+<span class="w">    </span><span class="nx">Nombre</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="nx">STRING</span><span class="p">;</span>
+<span class="w">    </span><span class="nx">Apellido</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="nx">STRING</span><span class="p">;</span>
+<span class="w">    </span><span class="nx">CorreoElectronico</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="nx">STRING</span><span class="p">;</span>
 <span class="nx">END_VAR</span>
 
 <span class="c1">// constructor</span>
-<span class="nx">Empleado</span><span class="p">(</span><span class="nx">nombre</span><span class="p">,</span><span class="w"> </span><span class="nx">apellido</span><span class="p">,</span><span class="w"> </span><span class="nx">correoElectronico</span><span class="p">);</span>
+<span class="nx">Empleado</span><span class="p">(</span><span class="nx">ST_Empleado</span><span class="p">);</span>
 
 <span class="c1">// getters y setters</span>
 <span class="nx">nombre</span><span class="p">();</span>
@@ -1867,13 +1867,13 @@
 <span class="normal">15</span>
 <span class="normal">16</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nx">FUNCTION_BLOCK</span><span class="w"> </span><span class="nx">RegistroDeTiempo</span>
 <span class="nx">VAR_INPUT</span>
-<span class="w">    </span><span class="nx">empleado</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="nx">Empleado</span><span class="p">;</span><span class="w"> </span><span class="c1">// instancia de la función Empleado</span>
+<span class="w">    </span><span class="nx">empleado</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="nx">ST_Empleado</span><span class="p">;</span><span class="w"> </span><span class="c1">// instancia de la función Empleado</span>
 <span class="w">    </span><span class="nx">horaEntrada</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="nx">DATE_AND_TIME</span><span class="p">;</span>
 <span class="w">    </span><span class="nx">horaSalida</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="nx">DATE_AND_TIME</span><span class="p">;</span>
 <span class="nx">END_VAR</span>
 
 <span class="c1">// constructor</span>
-<span class="nx">RegistroDeTiempo</span><span class="p">(</span><span class="nx">empleado</span><span class="p">,</span><span class="w"> </span><span class="nx">horaEntrada</span><span class="p">,</span><span class="w"> </span><span class="nx">horaSalida</span><span class="p">);</span>
+<span class="nx">RegistroDeTiempo</span><span class="p">(</span><span class="nx">ST_RegistroDeTiempoEmpleado</span><span class="p">);</span>
 
 <span class="c1">// getters y setters</span>
 <span class="nx">empleado</span><span class="p">();</span>
@@ -1900,11 +1900,11 @@
   <small>
     
       Última actualización:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">July 29, 2023 09:17:51</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">July 29, 2023 09:45:23</span>
       
         <br>
         Creado:
-        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">July 29, 2023 09:17:51</span>
+        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">July 29, 2023 09:45:23</span>
       
     
   </small>
