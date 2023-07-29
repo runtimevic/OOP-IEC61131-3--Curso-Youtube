@@ -61,3 +61,6 @@ De esta manera, la clase "Vehiculo" está cerrada para modificaciones directas y
 ### <span style="color:grey">Links:</span>
 
 - 🔗 [stefanhenneken.net, EC 61131-3: SOLID – The Open/Closed Principle](https://stefanhenneken.net/2023/04/06/iec-61131-3-solid-the-open-closed-principle/)
+***
+### <span style="color:grey">Link al Video de Youtube 025:</span>
+- 🔗 [025 - OOP IEC 61131-3 PLC -- SOLID - OCP]()

@@ -10,13 +10,13 @@ En lugar de tener una Clase que maneje todo, creamos dos Clases separadas:
 ```javascript
 FUNCTION_BLOCK Empleado
 VAR_INPUT
-    nombre : STRING;
-    apellido : STRING;
-    correoElectronico : STRING;
+    Nombre : STRING;
+    Apellido : STRING;
+    CorreoElectronico : STRING;
 END_VAR
 
 // constructor
-Empleado(nombre, apellido, correoElectronico);
+Empleado(ST_Empleado);
 
 // getters y setters
 nombre();
@@ -29,13 +29,13 @@ END_FUNCTION_BLOCK
 ```javascript
 FUNCTION_BLOCK RegistroDeTiempo
 VAR_INPUT
-    empleado : Empleado; // instancia de la función Empleado
+    empleado : ST_Empleado; // instancia de la función Empleado
     horaEntrada : DATE_AND_TIME;
     horaSalida : DATE_AND_TIME;
 END_VAR
 
 // constructor
-RegistroDeTiempo(empleado, horaEntrada, horaSalida);
+RegistroDeTiempo(ST_RegistroDeTiempoEmpleado);
 
 // getters y setters
 empleado();
