@@ -1,0 +1,1 @@
+- 🔗 [Patrón de diseño Adapter en C#](https://www.youtube.com/watch?v=ZRysA46J8OE)
