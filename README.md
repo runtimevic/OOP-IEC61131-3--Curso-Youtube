@@ -42,7 +42,7 @@
     - 🔗 [021 - OOP IEC 61131-3 PLC -- 4 Pilares OOP - Encapsulamiento y Herencia](https://youtu.be/g-QWxy-CsOY)
     - 🔗 [022 - OOP IEC 61131-3 PLC -- 4 Pilares OOP - Polimorfismo](https://youtu.be/KIU-Vm11CEc)
     - 🔗 [023 - OOP IEC 61131-3 PLC -- SOLID](https://youtu.be/biuO9x512Zs)
-    - 🔗 [024 - OOP IEC 61131-3 PLC -- SOLID - SRP]()
+    - 🔗 [024 - OOP IEC 61131-3 PLC -- SOLID - SRP](https://youtu.be/bJgXdnHDmrk)
     - 🔗 [025 - OOP IEC 61131-3 PLC -- SOLID - OCP]()
     - 🔗 [026 - OOP IEC 61131-3 PLC -- SOLID - LSP]()
     - 🔗 [027 - OOP IEC 61131-3 PLC -- SOLID - ISP]()

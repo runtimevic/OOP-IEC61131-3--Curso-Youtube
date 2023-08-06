@@ -53,4 +53,4 @@ De esta manera, la Clase "Empleado" solo maneja la información personal del emp
 - 🔗 [stefanhenneken.net,iec-61131-3-solid-the-single-responsibility-principle](https://stefanhenneken.net/2022/03/10/iec-61131-3-solid-the-single-responsibility-principle/)
 ***
 ### <span style="color:grey">Link al Video de Youtube 024:</span>
-- 🔗 [024 - OOP IEC 61131-3 PLC -- SOLID - SRP]()
+- 🔗 [024 - OOP IEC 61131-3 PLC -- SOLID - SRP](https://youtu.be/bJgXdnHDmrk)

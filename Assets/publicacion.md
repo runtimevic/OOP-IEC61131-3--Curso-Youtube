@@ -2,10 +2,10 @@
 
 Hola,
 Seguimos con el curso de 👩‍💻 OOP IEC 61131-3 PLC 👨‍💻,
-ya esta disponible el Video numero 23 de Youtube:
-en este video veremos la explicación de SOLID.
+ya esta disponible el Video numero 24 de Youtube:
+en este video veremos la explicación de SOLID - SRP - Principio de Responsabilidad Unica.
 
-👉 https://youtu.be/biuO9x512Zs
+👉 https://youtu.be/bJgXdnHDmrk
 
 🐙 Repositorio de GitHub:
 - 👉 https://lnkd.in/d4EmXRaT
@@ -40,6 +40,7 @@ https://youtube.com/playlist?list=PLEfi_hUmmSjFpfdJ6yw3B9yj7dWHYkHmQ
 - 021 - https://youtu.be/g-QWxy-CsOY
 - 022 - https://youtu.be/KIU-Vm11CEc
 - 023 - https://youtu.be/biuO9x512Zs
+- 024 - https://youtu.be/bJgXdnHDmrk
 
 Se busca colaborador para la traducción de la documentación al idioma que desee... 👀
 
