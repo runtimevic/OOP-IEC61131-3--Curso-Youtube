@@ -1170,6 +1170,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#la-definicion-del-principio-abiertocerrado" class="md-nav__link">
+    La definición del principio abierto/cerrado:
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#resumen" class="md-nav__link">
     Resumen:
   </a>
@@ -1796,6 +1803,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#la-definicion-del-principio-abiertocerrado" class="md-nav__link">
+    La definición del principio abierto/cerrado:
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#resumen" class="md-nav__link">
     Resumen:
   </a>
@@ -1842,10 +1856,10 @@
   <h1>OCP - Principio de Abierto/Cerrado</h1>
 
 <h3 id="principio-de-abiertocerrado-openclosed-principle-ocp"><span style="color:grey"> Principio de Abierto/Cerrado --  (Open/Closed Principle) OCP :</span></h3>
-<p>La definición del principio abierto/cerrado
-El Principio Abierto/Cerrado (OCP) fue formulado por Bertrand Meyer en 1988 y establece:</p>
-<p>Una entidad de software debe estar abierta a extensiones, pero al mismo tiempo cerrada a modificaciones.
-Entidad de software: Esto significa una clase, bloque de función, módulo, método, servicio, ...</p>
+<h3 id="la-definicion-del-principio-abiertocerrado"><span style="color:grey">La definición del principio abierto/cerrado:</span></h3>
+<p>El Principio Abierto/Cerrado (OCP) fue formulado por Bertrand Meyer en 1988 y establece:</p>
+<p>Una entidad de software debe estar <strong>abierta a extensiones</strong>, pero al mismo tiempo <strong>cerrada a modificaciones</strong>.
+Entidad de software: Esto significa una clase, bloque de función, módulo, método, servicio, etc...</p>
 <p><strong>Abierto:</strong> el comportamiento de los módulos de software debe ser extensible.</p>
 <p><strong>Cerrado:</strong> la capacidad de expansión no debe lograrse cambiando el software existente.</p>
 <p>Cuando Bertrand Meyer definió el Principio Abierto/Cerrado (OCP) a fines de la década de 1980, la atención se centró en el lenguaje de programación C++. Usaba herencia, bien conocida en el mundo orientado a objetos. La disciplina de la orientación a objetos, que aún era joven en ese momento, prometía grandes mejoras en la reutilización y la mantenibilidad al permitir que clases concretas se usaran como clases base para nuevas clases.</p>
@@ -1878,23 +1892,13 @@ Entidad de software: Esto significa una clase, bloque de función, módulo, mét
 <span class="normal">23</span>
 <span class="normal">24</span>
 <span class="normal">25</span>
-<span class="normal">26</span>
-<span class="normal">27</span>
-<span class="normal">28</span>
-<span class="normal">29</span>
-<span class="normal">30</span>
-<span class="normal">31</span>
-<span class="normal">32</span>
-<span class="normal">33</span>
-<span class="normal">34</span>
-<span class="normal">35</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nx">FUNCTION_BLOCK</span><span class="w"> </span><span class="nx">Vehiculo</span>
+<span class="normal">26</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nx">FUNCTION_BLOCK</span><span class="w"> </span><span class="nx">Vehiculo</span>
 <span class="nx">VAR_INPUT</span>
 <span class="w">    </span><span class="nx">velocidad</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="nx">REAL</span><span class="p">;</span>
 <span class="nx">END_VAR</span>
 
 <span class="c1">// método para obtener la velocidad</span>
 <span class="nx">getVelocidad</span><span class="p">()</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="nx">REAL</span><span class="p">;</span>
-
 <span class="nx">END_FUNCTION_BLOCK</span>
 
 <span class="nx">FUNCTION_BLOCK</span><span class="w"> </span><span class="nx">Coche</span><span class="w"> </span><span class="nx">EXTENDS</span><span class="w"> </span><span class="nx">Vehiculo</span><span class="w"> </span><span class="c1">// extiende la función Vehiculo</span>
@@ -1902,12 +1906,8 @@ Entidad de software: Esto significa una clase, bloque de función, módulo, mét
 <span class="w">    </span><span class="nx">velocidadMaxima</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="nx">REAL</span><span class="p">;</span>
 <span class="nx">END_VAR</span>
 
-<span class="c1">// constructor</span>
-<span class="nx">Coche</span><span class="p">(</span><span class="nx">velocidad</span><span class="p">,</span><span class="w"> </span><span class="nx">velocidadMaxima</span><span class="p">);</span>
-
 <span class="c1">// método para obtener la velocidad máxima</span>
 <span class="nx">getVelocidadMaxima</span><span class="p">()</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="nx">REAL</span><span class="p">;</span>
-
 <span class="nx">END_FUNCTION_BLOCK</span>
 
 <span class="nx">FUNCTION_BLOCK</span><span class="w"> </span><span class="nx">Moto</span><span class="w"> </span><span class="nx">EXTENDS</span><span class="w"> </span><span class="nx">Vehiculo</span><span class="w"> </span><span class="c1">// extiende la función Vehiculo</span>
@@ -1915,15 +1915,12 @@ Entidad de software: Esto significa una clase, bloque de función, módulo, mét
 <span class="w">    </span><span class="nx">aceleracion</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="nx">REAL</span><span class="p">;</span>
 <span class="nx">END_VAR</span>
 
-<span class="c1">// constructor</span>
-<span class="nx">Moto</span><span class="p">(</span><span class="nx">velocidad</span><span class="p">,</span><span class="w"> </span><span class="nx">aceleracion</span><span class="p">);</span>
-
 <span class="c1">// método para obtener la aceleración</span>
 <span class="nx">getAceleracion</span><span class="p">()</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="nx">REAL</span><span class="p">;</span>
-
 <span class="nx">END_FUNCTION_BLOCK</span>
 </code></pre></div></td></tr></table></div>
-De esta manera, la clase "Vehiculo" está cerrada para modificaciones directas y abierta para extensiones a través de las nuevas clases "Coche" y "Moto". Cada nueva clase agrega funcionalidades específicas sin modificar directamente la clase original.</p>
+<img alt="SOLID_OCP" src="../../imagenes/SOLID_OCP.PNG" /></p>
+<p>De esta manera, la clase "Vehiculo" está cerrada para modificaciones directas y abierta para extensiones a través de las nuevas clases "Coche" y "Moto". Cada nueva clase agrega funcionalidades específicas sin modificar directamente la clase original.</p>
 <hr />
 <h3 id="links"><span style="color:grey">Links:</span></h3>
 <ul>
@@ -1940,11 +1937,11 @@ De esta manera, la clase "Vehiculo" está cerrada para modificaciones directas y
   <small>
     
       Última actualización:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">August 6, 2023 10:53:52</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">August 7, 2023 17:35:01</span>
       
         <br>
         Creado:
-        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">August 6, 2023 10:53:52</span>
+        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">August 7, 2023 17:35:01</span>
       
     
   </small>
