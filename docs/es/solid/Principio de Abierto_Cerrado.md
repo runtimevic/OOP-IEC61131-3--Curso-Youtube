@@ -1,10 +1,10 @@
 ### <span style="color:grey"> Principio de Abierto/Cerrado --  (Open/Closed Principle) OCP :</span>
 
-La definición del principio abierto/cerrado
+### <span style="color:grey">La definición del principio abierto/cerrado:</span>
 El Principio Abierto/Cerrado (OCP) fue formulado por Bertrand Meyer en 1988 y establece:
 
-Una entidad de software debe estar abierta a extensiones, pero al mismo tiempo cerrada a modificaciones.
-Entidad de software: Esto significa una clase, bloque de función, módulo, método, servicio, ...
+Una entidad de software debe estar **abierta a extensiones**, pero al mismo tiempo **cerrada a modificaciones**.
+Entidad de software: Esto significa una clase, bloque de función, módulo, método, servicio, etc...
 
 **Abierto:** el comportamiento de los módulos de software debe ser extensible.
 
@@ -27,7 +27,6 @@ END_VAR
 
 // método para obtener la velocidad
 getVelocidad() : REAL;
-
 END_FUNCTION_BLOCK
 
 FUNCTION_BLOCK Coche EXTENDS Vehiculo // extiende la función Vehiculo
@@ -35,12 +34,8 @@ VAR_INPUT
     velocidadMaxima : REAL;
 END_VAR
 
-// constructor
-Coche(velocidad, velocidadMaxima);
-
 // método para obtener la velocidad máxima
 getVelocidadMaxima() : REAL;
-
 END_FUNCTION_BLOCK
 
 FUNCTION_BLOCK Moto EXTENDS Vehiculo // extiende la función Vehiculo
@@ -48,14 +43,12 @@ VAR_INPUT
     aceleracion : REAL;
 END_VAR
 
-// constructor
-Moto(velocidad, aceleracion);
-
 // método para obtener la aceleración
 getAceleracion() : REAL;
-
 END_FUNCTION_BLOCK
 ```
+![SOLID_OCP](../imagenes/SOLID_OCP.PNG)
+
 De esta manera, la clase "Vehiculo" está cerrada para modificaciones directas y abierta para extensiones a través de las nuevas clases "Coche" y "Moto". Cada nueva clase agrega funcionalidades específicas sin modificar directamente la clase original.
 ***
 ### <span style="color:grey">Links:</span>

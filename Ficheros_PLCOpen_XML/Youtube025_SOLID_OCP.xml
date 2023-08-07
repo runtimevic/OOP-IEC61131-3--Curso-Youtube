@@ -1,0 +1,302 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<project xmlns="http://www.plcopen.org/xml/tc6_0200">
+  <fileHeader companyName="Beckhoff Automation GmbH" productName="TwinCAT PLC Control" productVersion="3.5.13.21" creationDateTime="2023-08-07T09:41:19.4338283" />
+  <contentHeader name="OOP_Curso" modificationDateTime="2023-08-07T09:41:19.4377308">
+    <coordinateInfo>
+      <fbd>
+        <scaling x="1" y="1" />
+      </fbd>
+      <ld>
+        <scaling x="1" y="1" />
+      </ld>
+      <sfc>
+        <scaling x="1" y="1" />
+      </sfc>
+    </coordinateInfo>
+    <addData>
+      <data name="http://www.3s-software.com/plcopenxml/projectinformation" handleUnknown="implementation">
+        <ProjectInformation />
+      </data>
+    </addData>
+  </contentHeader>
+  <types>
+    <dataTypes />
+    <pous>
+      <pou name="FB_Coche" pouType="functionBlock">
+        <interface>
+          <inputVars>
+            <variable name="velocidadMaxima">
+              <type>
+                <REAL />
+              </type>
+            </variable>
+          </inputVars>
+          <addData>
+            <data name="http://www.3s-software.com/plcopenxml/pouinheritance" handleUnknown="implementation">
+              <Inheritance>
+                <Extends>FB_Vehiculo</Extends>
+              </Inheritance>
+            </data>
+          </addData>
+        </interface>
+        <body>
+          <ST>
+            <xhtml xmlns="http://www.w3.org/1999/xhtml" />
+          </ST>
+        </body>
+        <addData>
+          <data name="http://www.3s-software.com/plcopenxml/method" handleUnknown="implementation">
+            <Method name="getVelocidadMaxima" ObjectId="4aeecc75-7896-4a31-a0db-277b1fbade77">
+              <interface>
+                <returnType>
+                  <REAL />
+                </returnType>
+              </interface>
+              <body>
+                <ST>
+                  <xhtml xmlns="http://www.w3.org/1999/xhtml">getVelocidadMaxima := velocidadMaxima;</xhtml>
+                </ST>
+              </body>
+              <InterfaceAsPlainText>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">METHOD getVelocidadMaxima : REAL
+VAR_INPUT
+END_VAR
+</xhtml>
+              </InterfaceAsPlainText>
+              <addData />
+            </Method>
+          </data>
+          <data name="http://www.3s-software.com/plcopenxml/interfaceasplaintext" handleUnknown="implementation">
+            <InterfaceAsPlainText>
+              <xhtml xmlns="http://www.w3.org/1999/xhtml">FUNCTION_BLOCK FB_Coche EXTENDS FB_Vehiculo
+VAR_INPUT
+	velocidadMaxima : REAL;
+END_VAR
+VAR_OUTPUT
+END_VAR
+VAR
+END_VAR
+</xhtml>
+            </InterfaceAsPlainText>
+          </data>
+          <data name="http://www.3s-software.com/plcopenxml/objectid" handleUnknown="discard">
+            <ObjectId>e23fc4b7-6214-4b36-a282-d7ecb2ef8288</ObjectId>
+          </data>
+        </addData>
+      </pou>
+      <pou name="FB_Moto" pouType="functionBlock">
+        <interface>
+          <inputVars>
+            <variable name="aceleracion">
+              <type>
+                <REAL />
+              </type>
+            </variable>
+          </inputVars>
+          <addData>
+            <data name="http://www.3s-software.com/plcopenxml/pouinheritance" handleUnknown="implementation">
+              <Inheritance>
+                <Extends>FB_Vehiculo</Extends>
+              </Inheritance>
+            </data>
+          </addData>
+        </interface>
+        <body>
+          <ST>
+            <xhtml xmlns="http://www.w3.org/1999/xhtml" />
+          </ST>
+        </body>
+        <addData>
+          <data name="http://www.3s-software.com/plcopenxml/method" handleUnknown="implementation">
+            <Method name="getAceleracion" ObjectId="8234eae8-cfda-499b-9f77-a929ee25ba05">
+              <interface>
+                <returnType>
+                  <REAL />
+                </returnType>
+              </interface>
+              <body>
+                <ST>
+                  <xhtml xmlns="http://www.w3.org/1999/xhtml">getAceleracion := aceleracion;</xhtml>
+                </ST>
+              </body>
+              <InterfaceAsPlainText>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">METHOD getAceleracion : REAL
+VAR_INPUT
+END_VAR
+</xhtml>
+              </InterfaceAsPlainText>
+              <addData />
+            </Method>
+          </data>
+          <data name="http://www.3s-software.com/plcopenxml/interfaceasplaintext" handleUnknown="implementation">
+            <InterfaceAsPlainText>
+              <xhtml xmlns="http://www.w3.org/1999/xhtml">FUNCTION_BLOCK FB_Moto EXTENDS FB_Vehiculo
+VAR_INPUT
+	aceleracion : REAL;
+END_VAR
+VAR_OUTPUT
+END_VAR
+VAR
+END_VAR
+</xhtml>
+            </InterfaceAsPlainText>
+          </data>
+          <data name="http://www.3s-software.com/plcopenxml/objectid" handleUnknown="discard">
+            <ObjectId>2cd26c6e-3eb4-49c2-aa2c-988956508106</ObjectId>
+          </data>
+        </addData>
+      </pou>
+      <pou name="FB_Vehiculo" pouType="functionBlock">
+        <interface>
+          <inputVars>
+            <variable name="velocidad">
+              <type>
+                <REAL />
+              </type>
+            </variable>
+          </inputVars>
+        </interface>
+        <body>
+          <ST>
+            <xhtml xmlns="http://www.w3.org/1999/xhtml" />
+          </ST>
+        </body>
+        <addData>
+          <data name="http://www.3s-software.com/plcopenxml/method" handleUnknown="implementation">
+            <Method name="getVelocidad" ObjectId="eecfef92-45e0-446c-90fd-ee4f150246fb">
+              <interface>
+                <returnType>
+                  <REAL />
+                </returnType>
+              </interface>
+              <body>
+                <ST>
+                  <xhtml xmlns="http://www.w3.org/1999/xhtml">getVelocidad := velocidad;</xhtml>
+                </ST>
+              </body>
+              <InterfaceAsPlainText>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">METHOD getVelocidad : REAL
+VAR_INPUT
+END_VAR
+</xhtml>
+              </InterfaceAsPlainText>
+              <addData />
+            </Method>
+          </data>
+          <data name="http://www.3s-software.com/plcopenxml/interfaceasplaintext" handleUnknown="implementation">
+            <InterfaceAsPlainText>
+              <xhtml xmlns="http://www.w3.org/1999/xhtml">FUNCTION_BLOCK FB_Vehiculo
+VAR_INPUT
+	velocidad : REAL;
+END_VAR
+VAR_OUTPUT
+END_VAR
+VAR
+END_VAR
+</xhtml>
+            </InterfaceAsPlainText>
+          </data>
+          <data name="http://www.3s-software.com/plcopenxml/objectid" handleUnknown="discard">
+            <ObjectId>bebaaf0e-1adc-4bbd-8b5c-f9bacc7f4ae8</ObjectId>
+          </data>
+        </addData>
+      </pou>
+      <pou name="_25_SOLID_OCP" pouType="program">
+        <interface>
+          <localVars>
+            <variable name="Audi_A8">
+              <type>
+                <derived name="FB_Coche" />
+              </type>
+            </variable>
+            <variable name="Audi_A8_Velocidad">
+              <type>
+                <REAL />
+              </type>
+            </variable>
+            <variable name="Audi_A8_VelocidadMaxima">
+              <type>
+                <REAL />
+              </type>
+            </variable>
+            <variable name="Suzuki_Ninja">
+              <type>
+                <derived name="FB_Moto" />
+              </type>
+            </variable>
+            <variable name="Suzuki_Ninja_Velocidad">
+              <type>
+                <REAL />
+              </type>
+            </variable>
+            <variable name="Suzuki_Ninja_Aceleracion">
+              <type>
+                <REAL />
+              </type>
+            </variable>
+          </localVars>
+        </interface>
+        <body>
+          <ST>
+            <xhtml xmlns="http://www.w3.org/1999/xhtml">//Llamada al objeto Audi_A8.
+Audi_A8();
+//Este metodo es heredado de la clase Vehiculo.
+Audi_A8_Velocidad := Audi_A8.getVelocidad(); 
+//Este método es propio de la clase Coche.
+Audi_A8_VelocidadMaxima := Audi_A8.getVelocidadMaxima();
+
+//Llamada al objeto Suzuki Ninja.
+Suzuki_Ninja();
+//Este metodo es heredado de la clase Vehiculo
+Suzuki_Ninja_Velocidad := Suzuki_Ninja.getVelocidad();
+//Este método es propio de la clase Moto.
+Suzuki_Ninja_Aceleracion := Suzuki_Ninja.getAceleracion();</xhtml>
+          </ST>
+        </body>
+        <addData>
+          <data name="http://www.3s-software.com/plcopenxml/interfaceasplaintext" handleUnknown="implementation">
+            <InterfaceAsPlainText>
+              <xhtml xmlns="http://www.w3.org/1999/xhtml">PROGRAM _25_SOLID_OCP
+VAR
+	Audi_A8 : FB_Coche;
+	Audi_A8_Velocidad :REAL;
+	Audi_A8_VelocidadMaxima : REAL;
+	
+	Suzuki_Ninja : FB_Moto;
+	Suzuki_Ninja_Velocidad :REAL;
+	Suzuki_Ninja_Aceleracion :REAL;
+END_VAR
+</xhtml>
+            </InterfaceAsPlainText>
+          </data>
+          <data name="http://www.3s-software.com/plcopenxml/objectid" handleUnknown="discard">
+            <ObjectId>2426870d-65e6-4bfc-b986-68c5fd02a8bb</ObjectId>
+          </data>
+        </addData>
+      </pou>
+    </pous>
+  </types>
+  <instances>
+    <configurations />
+  </instances>
+  <addData>
+    <data name="http://www.3s-software.com/plcopenxml/projectstructure" handleUnknown="discard">
+      <ProjectStructure>
+        <Folder Name="25_SOLID_OCP">
+          <Folder Name="Clases_OCP">
+            <Object Name="FB_Coche" ObjectId="e23fc4b7-6214-4b36-a282-d7ecb2ef8288">
+              <Object Name="getVelocidadMaxima" ObjectId="4aeecc75-7896-4a31-a0db-277b1fbade77" />
+            </Object>
+            <Object Name="FB_Moto" ObjectId="2cd26c6e-3eb4-49c2-aa2c-988956508106">
+              <Object Name="getAceleracion" ObjectId="8234eae8-cfda-499b-9f77-a929ee25ba05" />
+            </Object>
+            <Object Name="FB_Vehiculo" ObjectId="bebaaf0e-1adc-4bbd-8b5c-f9bacc7f4ae8">
+              <Object Name="getVelocidad" ObjectId="eecfef92-45e0-446c-90fd-ee4f150246fb" />
+            </Object>
+          </Folder>
+          <Object Name="_25_SOLID_OCP" ObjectId="2426870d-65e6-4bfc-b986-68c5fd02a8bb" />
+        </Folder>
+      </ProjectStructure>
+    </data>
+  </addData>
+</project>

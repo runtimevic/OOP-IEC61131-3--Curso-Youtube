@@ -62,8 +62,11 @@ _18_Otros_Operadores2();
 // Video de Youtube 19:
 _19_ExST();
 
-// Video de Youtube 23
-_24_SOLID_SRP();]]></ST>
+// Video de Youtube 24
+_24_SOLID_SRP();
+
+// Video de Youtube 25
+_25_SOLID_OCP();]]></ST>
     </Implementation>
   </POU>
 </TcPlcObject>

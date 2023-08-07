@@ -428,6 +428,21 @@
     <Compile Include="24_SOLID_SRP\_24_SOLID_SRP.TcPOU">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="25_SOLID_OCP\Clases_OCP\FB_Coche.TcPOU">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="25_SOLID_OCP\Clases_OCP\FB_Moto.TcPOU">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="25_SOLID_OCP\Clases_OCP\FB_Vehiculo.TcPOU">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="25_SOLID_OCP\Class Diagram_SOLID_OCP.TcCD">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="25_SOLID_OCP\_25_SOLID_OCP.TcPOU">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="PlcTask.TcTTO">
       <SubType>Code</SubType>
     </Compile>
@@ -479,6 +494,8 @@
     <Folder Include="24_SOLID_SRP" />
     <Folder Include="24_SOLID_SRP\Estructuras_SRP" />
     <Folder Include="24_SOLID_SRP\Clases_SRP" />
+    <Folder Include="25_SOLID_OCP" />
+    <Folder Include="25_SOLID_OCP\Clases_OCP" />
     <Folder Include="_MAIN" />
   </ItemGroup>
   <ItemGroup>

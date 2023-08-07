@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.12">
+  <POU Name="_25_SOLID_OCP" Id="{2426870d-65e6-4bfc-b986-68c5fd02a8bb}" SpecialFunc="None">
+    <Declaration><![CDATA[PROGRAM _25_SOLID_OCP
+VAR
+	Audi_A8 : FB_Coche;
+	Audi_A8_Velocidad :REAL;
+	Audi_A8_VelocidadMaxima : REAL;
+	
+	Suzuki_Ninja : FB_Moto;
+	Suzuki_Ninja_Velocidad :REAL;
+	Suzuki_Ninja_Aceleracion :REAL;
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[//Llamada al objeto Audi_A8.
+Audi_A8();
+//Este metodo es heredado de la clase Vehiculo.
+Audi_A8_Velocidad := Audi_A8.getVelocidad(); 
+//Este método es propio de la clase Coche.
+Audi_A8_VelocidadMaxima := Audi_A8.getVelocidadMaxima();
+
+//Llamada al objeto Suzuki Ninja.
+Suzuki_Ninja();
+//Este metodo es heredado de la clase Vehiculo
+Suzuki_Ninja_Velocidad := Suzuki_Ninja.getVelocidad();
+//Este método es propio de la clase Moto.
+Suzuki_Ninja_Aceleracion := Suzuki_Ninja.getAceleracion();]]></ST>
+    </Implementation>
+  </POU>
+</TcPlcObject>
