@@ -74,6 +74,8 @@ Los principios SOLID no son reglas o leyes que deban seguirse estrictamente. Son
 - 🔗 [kentcdodds.com,aha-programming](https://kentcdodds.com/blog/aha-programming)
 
 - 🔗 [Qué son los principios SOLID ? Por qué son tan importantes y verás que ya los aplicas sin saberlo !!](https://www.youtube.com/watch?v=EbpM-i6GZjs)
+
+- 🔗 [Los Principios SOLID explicados ¡Con ejemplos! 100% PRÁCTICO](https://www.youtube.com/watch?v=lUPvI-Kv9UI)
 ***
 ### <span style="color:grey">Link al Video de Youtube 023:</span>
 - 🔗 [023 - OOP IEC 61131-3 PLC -- SOLID](https://youtu.be/biuO9x512Zs)

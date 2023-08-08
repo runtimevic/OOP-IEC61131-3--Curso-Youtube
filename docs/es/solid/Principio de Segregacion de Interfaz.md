@@ -64,7 +64,15 @@ De esta manera, cada clase tiene solo los métodos necesarios y se divide en int
 
 - 🔗 [IEC 61131-3: SOLID – The Interface Segregation Principle](https://stefanhenneken.net/2023/02/25/iec-61131-3-solid-the-interface-segregation-principle/#more-2505)
 
--  🔗 [🤓¡PATRONES de DISEÑO de Typescript que te AYUDARÁN! Guía + Interface Segregation Principle | PT 1.](https://www.youtube.com/watch?v=Ph7kXNmski8)
+- 🔗 [🤓¡PATRONES de DISEÑO de Typescript que te AYUDARÁN! Guía + Interface Segregation Principle | PT 1.](https://www.youtube.com/watch?v=Ph7kXNmski8)
+
+- 🔗 [CodelyTV - Redescubre la programación, Principio de Segregación de Interfaces - SOLID](https://www.youtube.com/watch?v=EzUIbMdxJTk)
+
+- 🔗 [CodelyTV - Redescubre la programación, Errores comunes al diseñar Interfaces - #SOLID - ISP](https://www.youtube.com/watch?v=mDAQLkdNGHU)
+
+- 🔗 [hdeleon.net, Principios SOLID: Principio de Segregación de Interfaces ISP](https://www.youtube.com/watch?v=4741GhnZmOk)
+
+- 🔗 [DevExpert - Formación Android & Kotlin, Principio de SEGREGACIÓN de INTERFACES ⚠ Estás usando mal las interfaces [SOLID] 🟡](https://www.youtube.com/watch?v=BrPeEdtlDPE)
 ***
 ### <span style="color:grey">Link al Video de Youtube 027:</span>
 - 🔗 [027 - OOP IEC 61131-3 PLC -- SOLID - ISP]()
