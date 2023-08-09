@@ -21,3 +21,9 @@ Mediante el uso de bibliotecas, podemos administrar el software que hemos creado
 - 🔗 [Beckhoff.SPT Framework Tutorial Part1.EN](https://www.youtube.com/watch?v=oK4KR1jhLEg)
 ***
 ### <span style="color:grey">Link al Video de Youtube xxx:</span>
+
+***
+```
+!!! mirar este video por ejemplo para empezar a realizar las librerias!!!
+```
+- 🔗 [Beckhoff & PLC - OOP Properties| TWINCAT3](https://www.youtube.com/watch?v=0pJFQtXVPVY)

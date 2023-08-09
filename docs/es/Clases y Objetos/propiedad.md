@@ -69,6 +69,8 @@ Los pragmas son muy útiles para monitorear propiedades en modo en línea. Para 
 
 - 🔗 [TC07.Beckhoff TwinCAT3 Function Block-Part2 Property.JP- DUT](https://www.youtube.com/watch?v=zbnb8K15YdI)
 
+- 🔗 [Beckhoff & PLC - OOP Properties| TWINCAT3](https://www.youtube.com/watch?v=0pJFQtXVPVY)
+
 ***
 ### <span style="color:grey">Link al Video de Youtube 006:</span>
 - 🔗 [006 - OOP IEC 61131-3 PLC -- Objeto Propiedad](https://youtu.be/Ci7FExNF7vQ)
