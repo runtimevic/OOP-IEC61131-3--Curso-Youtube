@@ -24,6 +24,6 @@ Mediante el uso de bibliotecas, podemos administrar el software que hemos creado
 
 ***
 ```
-!!! mirar este video por ejemplo para empezar a realizar las librerias!!!
+!!! mirar este video por ejemplo para empezar como concepto a realizar las librerias!!!
 ```
-- 🔗 [Beckhoff & PLC - OOP Properties| TWINCAT3](https://www.youtube.com/watch?v=0pJFQtXVPVY)
+- 🔗 [Nguyễn Vỹ, Beckhoff & PLC - OOP Properties| TWINCAT3](https://www.youtube.com/watch?v=0pJFQtXVPVY)
