@@ -82,6 +82,7 @@ bMyVar1 S= bMyVar2 R= myTimer.Q;
 -  🔗 [infosys.beckhoff.com, ExST](https://infosys.beckhoff.com/english.php?content=../content/1033/tc3_plc_intro/2528243339.html&id=)
 -  🔗 [help.codesys.com, ExST](https://help.codesys.com/api-content/2/codesys/3.5.13.0/en/_cds_f_programming_language_st/)
 -  🔗 [www.codesys-blog.com, ExST](https://www.codesys-blog.com/programmiersprachen/exst-erweiterter-strukturierter-text/)
+- 🔗 [Texto estructurado (ST), Texto estructurado extendido (ExST)](https://content.helpme-codesys.com/en/CODESYS%20Development%20System/_cds_f_programming_language_st.html)
 ***
 ## <span style="color:grey">Links Video de Youtube 019 :</span>
 - 🔗 [019 - OOP IEC 61131-3 PLC -- ExST Texto Estructurado Extendido](https://youtu.be/W-eTB0hzIZQ)

@@ -1,1 +1,1 @@
-- http://soup01.com/en/2022/03/13/beckhofflets-try-source-control-with-git-2/
+- [soup01.com, beckhofflets-try-source-control-with-git-2](http://soup01.com/en/2022/03/13/beckhofflets-try-source-control-with-git-2/)
