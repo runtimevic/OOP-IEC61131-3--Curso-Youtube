@@ -4,6 +4,7 @@
 El Principio Abierto/Cerrado (OCP) fue formulado por Bertrand Meyer en 1988 y establece:
 
 Una entidad de software debe estar **abierta a extensiones**, pero al mismo tiempo **cerrada a modificaciones**.
+
 Entidad de software: Esto significa una clase, bloque de función, módulo, método, servicio, etc...
 
 **Abierto:** el comportamiento de los módulos de software debe ser extensible.
