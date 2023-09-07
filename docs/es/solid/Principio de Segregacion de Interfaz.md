@@ -1,6 +1,7 @@
 ### <span style="color:grey"> Principio de Segregación de Interfaz -- (Interface Segregation Principle) ISP :</span>
 
-El principio de segregación de interfaz establece que una clase no debe implementar interfaces que no utilice y que debe dividirse en interfaces más pequeñas y específicas.
+- El principio de segregación de interfaz establece que una clase no debe implementar interfaces que no utilice y que debe dividirse en interfaces más pequeñas y específicas.
+- El principio de segregación de interfaz se debe de mirar desde el lado de los clientes que implementan las interfaces que no tengan metodos y/o propiedades que no tengan sentido para ese cliente.
 
 ### <span style="color:grey">Ejemplo:</span>
 

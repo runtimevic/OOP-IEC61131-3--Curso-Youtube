@@ -443,6 +443,27 @@
     <Compile Include="25_SOLID_OCP\_25_SOLID_OCP.TcPOU">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="26_SOLID_LSP\Clases_LSP\Coche1.TcPOU">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="26_SOLID_LSP\Clases_LSP\Conductor.TcPOU">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="26_SOLID_LSP\Clases_LSP\Moto1.TcPOU">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="26_SOLID_LSP\Clases_LSP\Vehiculo.TcPOU">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="26_SOLID_LSP\Class Diagram_SOLID_LSP.TcCD">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="26_SOLID_LSP\Interfaces_LSP\I_Mover.TcIO">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="26_SOLID_LSP\_26_SOLID_LSP.TcPOU">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="PlcTask.TcTTO">
       <SubType>Code</SubType>
     </Compile>
@@ -496,6 +517,9 @@
     <Folder Include="24_SOLID_SRP\Clases_SRP" />
     <Folder Include="25_SOLID_OCP" />
     <Folder Include="25_SOLID_OCP\Clases_OCP" />
+    <Folder Include="26_SOLID_LSP" />
+    <Folder Include="26_SOLID_LSP\Clases_LSP" />
+    <Folder Include="26_SOLID_LSP\Interfaces_LSP" />
     <Folder Include="_MAIN" />
   </ItemGroup>
   <ItemGroup>

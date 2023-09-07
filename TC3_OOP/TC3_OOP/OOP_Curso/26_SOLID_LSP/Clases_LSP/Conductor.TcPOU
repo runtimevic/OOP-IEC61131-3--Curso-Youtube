@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.12">
+  <POU Name="Conductor" Id="{41072200-a029-4fd9-9fad-1cc968b7eeb8}" SpecialFunc="None">
+    <Declaration><![CDATA[FUNCTION_BLOCK Conductor
+VAR_INPUT
+	vehiculo : REFERENCE TO Vehiculo(THIS^); // referencia a la clase base Vehiculo
+END_VAR
+VAR_OUTPUT
+END_VAR
+VAR
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[]]></ST>
+    </Implementation>
+    <Method Name="Mover" Id="{47f83305-8310-414d-b4ea-8f95c575c437}">
+      <Declaration><![CDATA[METHOD Mover : REAL
+VAR_INPUT
+	Velocidad_Deseada : REAL;
+END_VAR
+]]></Declaration>
+      <Implementation>
+        <ST><![CDATA[Mover := THIS^.vehiculo.Mover(Velocidad_Deseada);
+]]></ST>
+      </Implementation>
+    </Method>
+    <ObjectProperties>
+      <XmlArchive>
+        <Data>
+          <o xml:space="preserve" t="UMLStereoTypeContainerObject">
+            <v n="IsType" t="UMLType">BaseArea</v>
+            <v n="Stereotype">""</v>
+            <d n="Stereotypes" t="Hashtable" />
+          </o>
+        </Data>
+        <TypeList>
+          <Type n="Hashtable">System.Collections.Hashtable</Type>
+          <Type n="String">System.String</Type>
+          <Type n="UMLStereoTypeContainerObject">{30250973-b110-4e31-b562-c102e042dca4}</Type>
+          <Type n="UMLType">{0197b136-405a-42ee-bb27-fd08b621d0cf}</Type>
+        </TypeList>
+      </XmlArchive>
+    </ObjectProperties>
+  </POU>
+</TcPlcObject>

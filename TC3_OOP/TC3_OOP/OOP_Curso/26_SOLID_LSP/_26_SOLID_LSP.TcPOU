@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.12">
+  <POU Name="_26_SOLID_LSP" Id="{bd3209cf-bcbf-459f-baa8-ce56147f2bc8}" SpecialFunc="None">
+    <Declaration><![CDATA[PROGRAM _26_SOLID_LSP
+VAR
+	Audi_A8 : Coche1;
+	Audi_A8_Velocidad_Desada :REAL;
+	Audi_A8_Velocidad :REAL;
+	
+	Suzuki_Ninja: Moto1;
+	Suzuki_Ninja_Velocidad_Deseada :REAL;
+	Suzuki_Ninja_Velocidad :REAL;
+	
+	Conductor_Juan : Conductor;
+	Conductor_Juan_Velocidad_Deseada :REAL;
+	Conductor_Juan_Velocidad : REAL;
+	Vehiculo_Seleccionado_Audi_A8 : BOOL;
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[Audi_A8_Velocidad := Audi_A8.Mover(Audi_A8_Velocidad_Desada);
+
+Suzuki_Ninja_Velocidad := Suzuki_Ninja.Mover(Suzuki_Ninja_Velocidad_Deseada);
+
+IF Vehiculo_Seleccionado_Audi_A8 = TRUE THEN
+	Conductor_Juan(vehiculo:= Audi_A8);
+ELSE
+	Conductor_Juan(vehiculo:= Suzuki_Ninja);
+END_IF
+
+Conductor_Juan_Velocidad := Conductor_Juan.Mover(Conductor_Juan_Velocidad_Deseada);]]></ST>
+    </Implementation>
+  </POU>
+</TcPlcObject>
