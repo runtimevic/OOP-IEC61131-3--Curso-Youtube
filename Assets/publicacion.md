@@ -2,10 +2,10 @@
 
 Hola,
 Seguimos con el curso de 👩‍💻 OOP IEC 61131-3 PLC 👨‍💻,
-ya esta disponible el Video numero 24 de Youtube:
-en este video veremos la explicación de SOLID - SRP - Principio de Responsabilidad Unica.
+ya esta disponible el Video numero 25 de Youtube:
+en este video veremos la explicación de SOLID - OCP - Principio de Abierto/Cerrado.
 
-👉 https://youtu.be/bJgXdnHDmrk
+👉 https://youtu.be/75WajVrs6Wo
 
 🐙 Repositorio de GitHub:
 - 👉 https://lnkd.in/d4EmXRaT
@@ -41,6 +41,7 @@ https://youtube.com/playlist?list=PLEfi_hUmmSjFpfdJ6yw3B9yj7dWHYkHmQ
 - 022 - https://youtu.be/KIU-Vm11CEc
 - 023 - https://youtu.be/biuO9x512Zs
 - 024 - https://youtu.be/bJgXdnHDmrk
+- 025 - https://youtu.be/75WajVrs6Wo
 
 Se busca colaborador para la traducción de la documentación al idioma que desee... 👀
 
