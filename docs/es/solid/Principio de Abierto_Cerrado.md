@@ -61,4 +61,4 @@ De esta manera, la clase "Vehiculo" está cerrada para modificaciones directas y
 - 🔗 [El Camino Dev, El Principio Abierto Cerrado con C# | Principios SOLID](https://www.youtube.com/watch?v=D7gaQOgZ4Qs)
 ***
 ### <span style="color:grey">Link al Video de Youtube 025:</span>
-- 🔗 [025 - OOP IEC 61131-3 PLC -- SOLID - OCP]()
+- 🔗 [025 - OOP IEC 61131-3 PLC -- SOLID - OCP](https://youtu.be/75WajVrs6Wo)

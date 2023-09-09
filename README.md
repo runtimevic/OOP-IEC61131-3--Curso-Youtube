@@ -43,7 +43,7 @@
     - 🔗 [022 - OOP IEC 61131-3 PLC -- 4 Pilares OOP - Polimorfismo](https://youtu.be/KIU-Vm11CEc)
     - 🔗 [023 - OOP IEC 61131-3 PLC -- SOLID](https://youtu.be/biuO9x512Zs)
     - 🔗 [024 - OOP IEC 61131-3 PLC -- SOLID - SRP](https://youtu.be/bJgXdnHDmrk)
-    - 🔗 [025 - OOP IEC 61131-3 PLC -- SOLID - OCP]()
+    - 🔗 [025 - OOP IEC 61131-3 PLC -- SOLID - OCP](https://youtu.be/75WajVrs6Wo)
     - 🔗 [026 - OOP IEC 61131-3 PLC -- SOLID - LSP]()
     - 🔗 [027 - OOP IEC 61131-3 PLC -- SOLID - ISP]()
     - 🔗 [028 - OOP IEC 61131-3 PLC -- SOLID - DIP]()
