@@ -77,11 +77,13 @@ bMyVar1 S= bMyVar2 R= myTimer.Q;
 - **¡¡Atención!!** La variable bMyVar1 ahora no se establece si bMyVar2 tiene el valor TRUE, pero los operadores de asignación siempre actúan en el bloque del temporizador.
 ***
 ### <span style="color:grey">Links ExST:</span>
-- 🔗 [Structured Text and Extended Structured Text (ExST), infosys.beckhoff.com](https://infosys.beckhoff.com/content/1033/tc3_plc_intro/2528221835.html?id=6103164662326938961)
 
--  🔗 [infosys.beckhoff.com, ExST](https://infosys.beckhoff.com/english.php?content=../content/1033/tc3_plc_intro/2528243339.html&id=)
--  🔗 [help.codesys.com, ExST](https://help.codesys.com/api-content/2/codesys/3.5.13.0/en/_cds_f_programming_language_st/)
--  🔗 [www.codesys-blog.com, ExST](https://www.codesys-blog.com/programmiersprachen/exst-erweiterter-strukturierter-text/)
+- 🔗 [Threes Soup01, Beckhoff.Tutorial About TwinCAT3 ExST](https://www.youtube.com/watch?v=TomuktM5f8A)
+- 🔗 [Threes Soup01, Beckhoff.TwinCAT ExST 使ってみよう](https://www.youtube.com/watch?v=JTmzfCI9Sk8&t=14s)
+- 🔗 [Structured Text and Extended Structured Text (ExST), infosys.beckhoff.com](https://infosys.beckhoff.com/content/1033/tc3_plc_intro/2528221835.html?id=6103164662326938961)
+- 🔗 [infosys.beckhoff.com, ExST](https://infosys.beckhoff.com/english.php?content=../content/1033/tc3_plc_intro/2528243339.html&id=)
+- 🔗 [help.codesys.com, ExST](https://help.codesys.com/api-content/2/codesys/3.5.13.0/en/_cds_f_programming_language_st/)
+- 🔗 [www.codesys-blog.com, ExST](https://www.codesys-blog.com/programmiersprachen/exst-erweiterter-strukturierter-text/)
 - 🔗 [Texto estructurado (ST), Texto estructurado extendido (ExST)](https://content.helpme-codesys.com/en/CODESYS%20Development%20System/_cds_f_programming_language_st.html)
 ***
 ## <span style="color:grey">Links Video de Youtube 019 :</span>
