@@ -55,9 +55,13 @@ END_FUNCTION_BLOCK
 - Además, cada subclase tiene un método `Mover` que se utiliza para mover el vehículo, lo que demuestra cómo se puede utilizar la misma interfaz `I_Mover` (el mismo nombre de método) para diferentes implementaciones concretas, mediante la sobreescritura del metodo mover que tiene la clase `Vehiculo`.
 ***
 ### <span style="color:grey">Links:</span>
+
 - 🔗 [stefanhenneken.net,iec-61131-3-solid-the-liskov-substitution-principle](https://stefanhenneken.net/2022/09/27/iec-61131-3-solid-the-liskov-substitution-principle/)
 
 - 🔗 [hdeleon.net, Principios SOLID: Principio de Sustitución de Liskov LSP](https://www.youtube.com/watch?v=JwtpU_rH1LE)
+
+- 🔗 [
+makigas: aprende a programar, SOLID: Principio de Sustitución de Liskov (LSP)](https://www.youtube.com/watch?v=JQX7wrCzxFA&list=PLTd5ehIj0goO1JFIfukh3UtU9e0BeFM9K&index=3)
 ***
 ### <span style="color:grey">Link al Video de Youtube 026:</span>
 - 🔗 [026 - OOP IEC 61131-3 PLC -- SOLID - LSP]()

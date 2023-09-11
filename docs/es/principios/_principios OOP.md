@@ -15,6 +15,7 @@ Principios OOP: (4 pilares)
 ***
 ### <span style="color:grey">Links de Principios OOP:</span>
 - 🔗 [github.com/Aliazzzz/OOP-Concept-Examples-in-CODESYS-V3](https://github.com/Aliazzzz/OOP-Concept-Examples-in-CODESYS-V3)
+- 🔗 [4 PRINCIPIOS de la PROGRAMACIÓN ORIENTADA A OBJETOS](https://www.youtube.com/watch?v=tTPeP5dVuA4)
 ***
 ### <span style="color:grey">Link al Video de Youtube 020:</span>
 - 🔗 [020 - OOP IEC 61131-3 PLC -- 4 Pilares OOP - Abstracción](https://youtu.be/uUZbgOKnSx4)

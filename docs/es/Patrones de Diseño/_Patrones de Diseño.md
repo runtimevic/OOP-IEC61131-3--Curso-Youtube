@@ -144,5 +144,7 @@ Además de los Patrones de Diseño tenemos:
 - 🔗 [0w8States/PLC-Design-Patterns](https://github.com/0w8States/PLC-Design-Patterns)
 - 🔗 [github.com/Aliazzzz/Applied-Design-Patterns-in-CODESYS-V3](https://github.com/Aliazzzz/Applied-Design-Patterns-in-CODESYS-V3)
 - 🔗 [sourcemaking.com/design_patterns](https://sourcemaking.com/design_patterns)
+- 🔗 [Coding Together ES, Patrones de Diseño](https://www.youtube.com/playlist?list=PLAjsCEoMYsgVOD6YfwISbIo9XCDrLGxYC)
+
 ***
 ### <span style="color:grey">Link al Video de Youtube_NNN:</span>

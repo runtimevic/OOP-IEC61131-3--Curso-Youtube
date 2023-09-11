@@ -76,6 +76,10 @@ Los principios SOLID no son reglas o leyes que deban seguirse estrictamente. Son
 - 🔗 [Qué son los principios SOLID ? Por qué son tan importantes y verás que ya los aplicas sin saberlo !!](https://www.youtube.com/watch?v=EbpM-i6GZjs)
 
 - 🔗 [Los Principios SOLID explicados ¡Con ejemplos! 100% PRÁCTICO](https://www.youtube.com/watch?v=lUPvI-Kv9UI)
+
+- 🔗 [Cómo implementar los principios SOLID en JAVA](https://www.youtube.com/watch?v=DHq0XvVhhY8)
+
+- 🔗 [Principios de programación SOLID (#Shorts)](https://www.youtube.com/playlist?list=PLTd5ehIj0goPxe8LLVhxZBiOygPk8Aqp8)
 ***
 ### <span style="color:grey">Link al Video de Youtube 023:</span>
 - 🔗 [023 - OOP IEC 61131-3 PLC -- SOLID](https://youtu.be/biuO9x512Zs)
