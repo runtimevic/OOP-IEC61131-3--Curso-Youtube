@@ -32,11 +32,24 @@ Una buena herramienta para describir la jerarquía de herencia de bloques de fun
 
 Los diagramas UML se pueden crear directamente en TwinCAT 3. Los cambios en el diagrama UML tienen un efecto directo en las POU. Por lo tanto, los bloques de funciones se pueden modificar y modificar a través del diagrama UML.
 
-las flechas muestran las relaciones entre las clases y siempre apuntan hacia el bloque de funciones principal.
 ***
 Los Modificadores de acceso de los metodos y las propiedades se veran segun la simbologia:(Disponible a partir de la versión de TwinCAT 3.1.4026)
 
 ![UML_ClassDiagram Access Modifier](../imagenes/UML_Acces_Modifier_Methods_and_properties_are_displayed_TwinCAT_3.1.4026.PNG)
+
+### <span style="color:grey">¿Qué es la asociación?:</span>
+- La Asociación entre clases se utiliza para representar relaciones entre diferentes clases. Esta relación significa que una clase conoce a otra y tiene una referencia a ella.
+
+### <span style="color:grey">¿Cómo se representa?:</span>
+- La asociación se representa con una línea que conecta dos clases en un diagrama de clases.
+- Se suele leer como "tiene..."
+- Tipo: Adicionalmente se le puede indicar un verbo para especificar el tipo de asociación.
+- Direccionalidad: Paréntesis angulares se colocan junto al verbo para indicar direccionalidad
+- Multiplicidad: Adicionalmente se pueden utilizar números o rangos que indican cuántas instancias de una clase están asociadas con una instancia de la otra clase.
+
+![UML_Class_Diagram_Asociones](../imagenes/ClassDiagram_Asociaciones.PNG)
+
+***
 ### <span style="color:grey">Links UML listado de referencias:</span>
 
 - 🔗 [stefanhenneken.net, UML Class](https://stefanhenneken.net/2017/04/23/iec-61131-3-methods-properties-and-inheritance/)
@@ -57,3 +70,5 @@ Los Modificadores de acceso de los metodos y las propiedades se veran segun la s
 - 🔗 [Tutorial - Diagrama de Clases UML](https://www.youtube.com/watch?v=Z0yLerU0g-Q)
 
 - 🔗 [Curso UML. Diagrama de clases I. Vídeo 9](https://www.youtube.com/watch?v=r75NwLxR_iU)
+
+- 🔗 [Curso UML. Diagrama de clases II. Vídeo 10](https://www.youtube.com/watch?v=rWgQxHdunsw)
