@@ -60,8 +60,7 @@ END_FUNCTION_BLOCK
 
 - 🔗 [hdeleon.net, Principios SOLID: Principio de Sustitución de Liskov LSP](https://www.youtube.com/watch?v=JwtpU_rH1LE)
 
-- 🔗 [
-makigas: aprende a programar, SOLID: Principio de Sustitución de Liskov (LSP)](https://www.youtube.com/watch?v=JQX7wrCzxFA&list=PLTd5ehIj0goO1JFIfukh3UtU9e0BeFM9K&index=3)
+- 🔗 [makigas: aprende a programar, SOLID: Principio de Sustitución de Liskov (LSP)](https://www.youtube.com/watch?v=JQX7wrCzxFA&list=PLTd5ehIj0goO1JFIfukh3UtU9e0BeFM9K&index=3)
 ***
 ### <span style="color:grey">Link al Video de Youtube 026:</span>
 - 🔗 [026 - OOP IEC 61131-3 PLC -- SOLID - LSP](https://youtu.be/tnghQbIPHs0)
