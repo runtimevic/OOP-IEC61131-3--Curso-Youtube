@@ -1,6 +1,6 @@
 ### <span style="color:grey"> Principio de Inversión de Dependencia -- (Dependency Inversion Principle) DIP :</span>
 
-El principio de inversión de dependencia establece que los módulos de nivel superior no deben depender de los módulos de nivel inferior, sino que ambos deben depender de abstracciones.
+El principio de inversión de dependencia establece que los módulos de **nivel superior** no deben depender de los módulos de **nivel inferior**, sino que ambos deben depender de abstracciones.
 
 ### <span style="color:grey">Ejemplo:</span>
 
@@ -33,9 +33,9 @@ establecerConexion();
 END_FUNCTION_BLOCK
 ```
 
-Esto permite que se pueda pasar cualquier objeto que implemente la interfaz `IConexion`, lo que cumple con el principio de inversión de dependencias.
+- Esto permite que se pueda pasar cualquier objeto que implemente la interfaz `IConexion`, lo que cumple con el principio de inversión de dependencias.
 
-Además, se utiliza el método `EstablecerConexion` definido en la interfaz `IConexion`, lo que demuestra cómo se puede utilizar una abstracción (la interfaz) para trabajar con diferentes implementaciones concretas de manera uniforme.
+- Además, se utiliza el método `EstablecerConexion` definido en la interfaz `IConexion`, lo que demuestra cómo se puede utilizar una abstracción (la interfaz) para trabajar con diferentes implementaciones concretas de manera uniforme.
 
 ***
 ### <span style="color:grey">Links:</span>

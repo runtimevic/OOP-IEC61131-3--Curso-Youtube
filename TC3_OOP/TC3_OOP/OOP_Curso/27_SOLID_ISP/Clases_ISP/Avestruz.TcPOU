@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.12">
+  <POU Name="Avestruz" Id="{a11a740d-3e87-4b3a-bb09-55f808b82ec4}" SpecialFunc="None">
+    <Declaration><![CDATA[FUNCTION_BLOCK Avestruz IMPLEMENTS I_AveCorredora
+VAR_INPUT
+    velocidad : REAL;
+    tiempoCorriendo : TIME;
+END_VAR
+VAR
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[]]></ST>
+    </Implementation>
+    <Method Name="Correr" Id="{e66da694-4037-4e5e-9913-2c6f351524b5}">
+      <Declaration><![CDATA[
+METHOD Correr : BOOL
+]]></Declaration>
+      <Implementation>
+        <ST><![CDATA[Correr := TRUE;]]></ST>
+      </Implementation>
+    </Method>
+  </POU>
+</TcPlcObject>

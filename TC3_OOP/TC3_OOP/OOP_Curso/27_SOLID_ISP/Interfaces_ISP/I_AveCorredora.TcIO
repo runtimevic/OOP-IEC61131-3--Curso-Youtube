@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.12">
+  <Itf Name="I_AveCorredora" Id="{50283ac5-eda6-4d5d-b3cb-87fde271d92b}">
+    <Declaration><![CDATA[INTERFACE I_AveCorredora
+]]></Declaration>
+    <Method Name="Correr" Id="{7cc4fb4f-861b-42ff-bd9c-5aa1137519b6}">
+      <Declaration><![CDATA[METHOD Correr : BOOL
+
+]]></Declaration>
+    </Method>
+  </Itf>
+</TcPlcObject>

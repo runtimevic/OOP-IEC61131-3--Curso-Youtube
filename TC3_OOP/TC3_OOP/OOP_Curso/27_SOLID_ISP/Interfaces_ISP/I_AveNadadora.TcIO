@@ -3,6 +3,11 @@
   <Itf Name="I_AveNadadora" Id="{599ea192-3695-4ff2-97e1-c2a8a2bf0546}">
     <Declaration><![CDATA[INTERFACE I_AveNadadora
 ]]></Declaration>
+    <Method Name="Nadar" Id="{f369f598-b475-4d74-b2ef-83bee3645e7e}">
+      <Declaration><![CDATA[METHOD Nadar : BOOL
+
+]]></Declaration>
+    </Method>
     <ObjectProperties>
       <XmlArchive>
         <Data>

@@ -3,6 +3,10 @@
   <Itf Name="I_AveVoladora" Id="{d21195ed-9f61-45e8-b1b1-886005619c2c}">
     <Declaration><![CDATA[INTERFACE I_AveVoladora
 ]]></Declaration>
+    <Method Name="Volar" Id="{0f6efcde-7d54-47a5-8d48-e1503159f06e}">
+      <Declaration><![CDATA[METHOD Volar : BOOL
+]]></Declaration>
+    </Method>
     <ObjectProperties>
       <XmlArchive>
         <Data>

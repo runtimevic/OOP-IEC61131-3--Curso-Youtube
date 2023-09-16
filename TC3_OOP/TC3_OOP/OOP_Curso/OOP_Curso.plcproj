@@ -464,7 +464,19 @@
     <Compile Include="26_SOLID_LSP\_26_SOLID_LSP.TcPOU">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="27_SOLID_ISP\Clases_ISP\Aguila.TcPOU">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="27_SOLID_ISP\Clases_ISP\Avestruz.TcPOU">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="27_SOLID_ISP\Clases_ISP\Pato.TcPOU">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="27_SOLID_ISP\Class Diagram_SOLID_ISP.TcCD">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="27_SOLID_ISP\Interfaces_ISP\I_AveCorredora.TcIO">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="27_SOLID_ISP\Interfaces_ISP\I_AveNadadora.TcIO">

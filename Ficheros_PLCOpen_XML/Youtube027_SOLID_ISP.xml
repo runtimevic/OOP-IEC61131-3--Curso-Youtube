@@ -1,0 +1,403 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<project xmlns="http://www.plcopen.org/xml/tc6_0200">
+  <fileHeader companyName="Beckhoff Automation GmbH" productName="TwinCAT PLC Control" productVersion="3.5.13.21" creationDateTime="2023-09-16T13:26:48.8044251" />
+  <contentHeader name="OOP_Curso" modificationDateTime="2023-09-16T13:26:48.8083286">
+    <coordinateInfo>
+      <fbd>
+        <scaling x="1" y="1" />
+      </fbd>
+      <ld>
+        <scaling x="1" y="1" />
+      </ld>
+      <sfc>
+        <scaling x="1" y="1" />
+      </sfc>
+    </coordinateInfo>
+    <addData>
+      <data name="http://www.3s-software.com/plcopenxml/projectinformation" handleUnknown="implementation">
+        <ProjectInformation />
+      </data>
+    </addData>
+  </contentHeader>
+  <types>
+    <dataTypes />
+    <pous>
+      <pou name="Aguila" pouType="functionBlock">
+        <interface>
+          <inputVars>
+            <variable name="velocidad">
+              <type>
+                <REAL />
+              </type>
+            </variable>
+            <variable name="alturaMaxima">
+              <type>
+                <REAL />
+              </type>
+            </variable>
+          </inputVars>
+          <addData>
+            <data name="http://www.3s-software.com/plcopenxml/pouinheritance" handleUnknown="implementation">
+              <Inheritance>
+                <Implements>I_AveVoladora</Implements>
+              </Inheritance>
+            </data>
+          </addData>
+        </interface>
+        <body>
+          <ST>
+            <xhtml xmlns="http://www.w3.org/1999/xhtml" />
+          </ST>
+        </body>
+        <addData>
+          <data name="http://www.3s-software.com/plcopenxml/method" handleUnknown="implementation">
+            <Method name="Volar" ObjectId="9c75935f-3c28-41cb-8df6-ec6b0de9ffab">
+              <interface>
+                <returnType>
+                  <BOOL />
+                </returnType>
+              </interface>
+              <body>
+                <ST>
+                  <xhtml xmlns="http://www.w3.org/1999/xhtml">Volar:= TRUE;</xhtml>
+                </ST>
+              </body>
+              <InterfaceAsPlainText>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">
+METHOD Volar : BOOL
+</xhtml>
+              </InterfaceAsPlainText>
+              <addData />
+            </Method>
+          </data>
+          <data name="http://www.3s-software.com/plcopenxml/interfaceasplaintext" handleUnknown="implementation">
+            <InterfaceAsPlainText>
+              <xhtml xmlns="http://www.w3.org/1999/xhtml">FUNCTION_BLOCK Aguila IMPLEMENTS I_AveVoladora
+VAR_INPUT
+    velocidad : REAL;
+    alturaMaxima : REAL;
+END_VAR
+VAR
+END_VAR
+</xhtml>
+            </InterfaceAsPlainText>
+          </data>
+          <data name="http://www.3s-software.com/plcopenxml/objectid" handleUnknown="discard">
+            <ObjectId>6910a7ef-35b8-4bab-b02d-061ddfbf462e</ObjectId>
+          </data>
+        </addData>
+      </pou>
+      <pou name="Avestruz" pouType="functionBlock">
+        <interface>
+          <inputVars>
+            <variable name="velocidad">
+              <type>
+                <REAL />
+              </type>
+            </variable>
+            <variable name="tiempoCorriendo">
+              <type>
+                <TIME />
+              </type>
+            </variable>
+          </inputVars>
+          <addData>
+            <data name="http://www.3s-software.com/plcopenxml/pouinheritance" handleUnknown="implementation">
+              <Inheritance>
+                <Implements>I_AveCorredora</Implements>
+              </Inheritance>
+            </data>
+          </addData>
+        </interface>
+        <body>
+          <ST>
+            <xhtml xmlns="http://www.w3.org/1999/xhtml" />
+          </ST>
+        </body>
+        <addData>
+          <data name="http://www.3s-software.com/plcopenxml/method" handleUnknown="implementation">
+            <Method name="Correr" ObjectId="e66da694-4037-4e5e-9913-2c6f351524b5">
+              <interface>
+                <returnType>
+                  <BOOL />
+                </returnType>
+              </interface>
+              <body>
+                <ST>
+                  <xhtml xmlns="http://www.w3.org/1999/xhtml">Correr := TRUE;</xhtml>
+                </ST>
+              </body>
+              <InterfaceAsPlainText>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">
+METHOD Correr : BOOL
+</xhtml>
+              </InterfaceAsPlainText>
+              <addData />
+            </Method>
+          </data>
+          <data name="http://www.3s-software.com/plcopenxml/interfaceasplaintext" handleUnknown="implementation">
+            <InterfaceAsPlainText>
+              <xhtml xmlns="http://www.w3.org/1999/xhtml">FUNCTION_BLOCK Avestruz IMPLEMENTS I_AveCorredora
+VAR_INPUT
+    velocidad : REAL;
+    tiempoCorriendo : TIME;
+END_VAR
+VAR
+END_VAR
+</xhtml>
+            </InterfaceAsPlainText>
+          </data>
+          <data name="http://www.3s-software.com/plcopenxml/objectid" handleUnknown="discard">
+            <ObjectId>a11a740d-3e87-4b3a-bb09-55f808b82ec4</ObjectId>
+          </data>
+        </addData>
+      </pou>
+      <pou name="Pato" pouType="functionBlock">
+        <interface>
+          <inputVars>
+            <variable name="velocidad">
+              <type>
+                <REAL />
+              </type>
+            </variable>
+            <variable name="alturaMaxima">
+              <type>
+                <REAL />
+              </type>
+            </variable>
+            <variable name="tiempoBuceo">
+              <type>
+                <TIME />
+              </type>
+            </variable>
+          </inputVars>
+          <addData>
+            <data name="http://www.3s-software.com/plcopenxml/pouinheritance" handleUnknown="implementation">
+              <Inheritance>
+                <Implements>I_AveVoladora</Implements>
+                <Implements>I_AveNadadora</Implements>
+              </Inheritance>
+            </data>
+          </addData>
+        </interface>
+        <body>
+          <ST>
+            <xhtml xmlns="http://www.w3.org/1999/xhtml" />
+          </ST>
+        </body>
+        <addData>
+          <data name="http://www.3s-software.com/plcopenxml/method" handleUnknown="implementation">
+            <Method name="Volar" ObjectId="4d4e674f-b9bd-4df3-9340-a8aeee463f30">
+              <interface>
+                <returnType>
+                  <BOOL />
+                </returnType>
+              </interface>
+              <body>
+                <ST>
+                  <xhtml xmlns="http://www.w3.org/1999/xhtml">Volar := true;</xhtml>
+                </ST>
+              </body>
+              <InterfaceAsPlainText>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">
+METHOD Volar : BOOL
+</xhtml>
+              </InterfaceAsPlainText>
+              <addData />
+            </Method>
+          </data>
+          <data name="http://www.3s-software.com/plcopenxml/method" handleUnknown="implementation">
+            <Method name="Nadar" ObjectId="3eb04696-5ac5-4f2e-a2e8-2f94fa5b5f7d">
+              <interface>
+                <returnType>
+                  <BOOL />
+                </returnType>
+              </interface>
+              <body>
+                <ST>
+                  <xhtml xmlns="http://www.w3.org/1999/xhtml">Nadar := TRUE;</xhtml>
+                </ST>
+              </body>
+              <InterfaceAsPlainText>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">
+METHOD Nadar : BOOL
+</xhtml>
+              </InterfaceAsPlainText>
+              <addData />
+            </Method>
+          </data>
+          <data name="http://www.3s-software.com/plcopenxml/interfaceasplaintext" handleUnknown="implementation">
+            <InterfaceAsPlainText>
+              <xhtml xmlns="http://www.w3.org/1999/xhtml">FUNCTION_BLOCK Pato IMPLEMENTS I_AveVoladora, I_AveNadadora
+VAR_INPUT
+    velocidad : REAL;
+    alturaMaxima : REAL;
+    tiempoBuceo : TIME;
+END_VAR
+VAR
+END_VAR
+</xhtml>
+            </InterfaceAsPlainText>
+          </data>
+          <data name="http://www.3s-software.com/plcopenxml/objectid" handleUnknown="discard">
+            <ObjectId>53750461-4c20-4932-892c-560a881fa5db</ObjectId>
+          </data>
+        </addData>
+      </pou>
+      <pou name="_27_SOLID_ISP" pouType="program">
+        <interface>
+          <localVars>
+            <variable name="Patito_feo">
+              <type>
+                <derived name="Pato" />
+              </type>
+            </variable>
+            <variable name="Aguila_imperial">
+              <type>
+                <derived name="Aguila" />
+              </type>
+            </variable>
+            <variable name="Avestruz_de_cuello_azul">
+              <type>
+                <derived name="Avestruz" />
+              </type>
+            </variable>
+          </localVars>
+        </interface>
+        <body>
+          <ST>
+            <xhtml xmlns="http://www.w3.org/1999/xhtml">Patito_feo.Nadar();
+Patito_feo.Volar();
+
+Aguila_imperial.Volar();
+
+Avestruz_de_cuello_azul.Correr();
+</xhtml>
+          </ST>
+        </body>
+        <addData>
+          <data name="http://www.3s-software.com/plcopenxml/interfaceasplaintext" handleUnknown="implementation">
+            <InterfaceAsPlainText>
+              <xhtml xmlns="http://www.w3.org/1999/xhtml">PROGRAM _27_SOLID_ISP
+VAR
+	Patito_feo : Pato;
+	Aguila_imperial : Aguila;
+	Avestruz_de_cuello_azul : Avestruz;
+END_VAR
+</xhtml>
+            </InterfaceAsPlainText>
+          </data>
+          <data name="http://www.3s-software.com/plcopenxml/objectid" handleUnknown="discard">
+            <ObjectId>f7c89670-3872-4535-98ac-59febddcaf08</ObjectId>
+          </data>
+        </addData>
+      </pou>
+    </pous>
+  </types>
+  <instances>
+    <configurations />
+  </instances>
+  <addData>
+    <data name="http://www.3s-software.com/plcopenxml/interface" handleUnknown="implementation">
+      <Interface name="I_AveCorredora" ObjectId="50283ac5-eda6-4d5d-b3cb-87fde271d92b">
+        <Methods>
+          <Method name="Correr" ObjectId="7cc4fb4f-861b-42ff-bd9c-5aa1137519b6">
+            <interface>
+              <returnType>
+                <BOOL />
+              </returnType>
+            </interface>
+            <InterfaceAsPlainText>
+              <xhtml xmlns="http://www.w3.org/1999/xhtml">METHOD Correr : BOOL
+
+</xhtml>
+            </InterfaceAsPlainText>
+            <addData />
+          </Method>
+        </Methods>
+        <InterfaceAsPlainText>
+          <xhtml xmlns="http://www.w3.org/1999/xhtml">INTERFACE I_AveCorredora
+</xhtml>
+        </InterfaceAsPlainText>
+        <addData />
+      </Interface>
+    </data>
+    <data name="http://www.3s-software.com/plcopenxml/interface" handleUnknown="implementation">
+      <Interface name="I_AveNadadora" ObjectId="599ea192-3695-4ff2-97e1-c2a8a2bf0546">
+        <Methods>
+          <Method name="Nadar" ObjectId="f369f598-b475-4d74-b2ef-83bee3645e7e">
+            <interface>
+              <returnType>
+                <BOOL />
+              </returnType>
+            </interface>
+            <InterfaceAsPlainText>
+              <xhtml xmlns="http://www.w3.org/1999/xhtml">METHOD Nadar : BOOL
+
+</xhtml>
+            </InterfaceAsPlainText>
+            <addData />
+          </Method>
+        </Methods>
+        <InterfaceAsPlainText>
+          <xhtml xmlns="http://www.w3.org/1999/xhtml">INTERFACE I_AveNadadora
+</xhtml>
+        </InterfaceAsPlainText>
+        <addData />
+      </Interface>
+    </data>
+    <data name="http://www.3s-software.com/plcopenxml/interface" handleUnknown="implementation">
+      <Interface name="I_AveVoladora" ObjectId="d21195ed-9f61-45e8-b1b1-886005619c2c">
+        <Methods>
+          <Method name="Volar" ObjectId="0f6efcde-7d54-47a5-8d48-e1503159f06e">
+            <interface>
+              <returnType>
+                <BOOL />
+              </returnType>
+            </interface>
+            <InterfaceAsPlainText>
+              <xhtml xmlns="http://www.w3.org/1999/xhtml">METHOD Volar : BOOL
+</xhtml>
+            </InterfaceAsPlainText>
+            <addData />
+          </Method>
+        </Methods>
+        <InterfaceAsPlainText>
+          <xhtml xmlns="http://www.w3.org/1999/xhtml">INTERFACE I_AveVoladora
+</xhtml>
+        </InterfaceAsPlainText>
+        <addData />
+      </Interface>
+    </data>
+    <data name="http://www.3s-software.com/plcopenxml/projectstructure" handleUnknown="discard">
+      <ProjectStructure>
+        <Folder Name="27_SOLID_ISP">
+          <Folder Name="Interfaces_ISP">
+            <Object Name="I_AveNadadora" ObjectId="599ea192-3695-4ff2-97e1-c2a8a2bf0546">
+              <Object Name="Nadar" ObjectId="f369f598-b475-4d74-b2ef-83bee3645e7e" />
+            </Object>
+            <Object Name="I_AveVoladora" ObjectId="d21195ed-9f61-45e8-b1b1-886005619c2c">
+              <Object Name="Volar" ObjectId="0f6efcde-7d54-47a5-8d48-e1503159f06e" />
+            </Object>
+            <Object Name="I_AveCorredora" ObjectId="50283ac5-eda6-4d5d-b3cb-87fde271d92b">
+              <Object Name="Correr" ObjectId="7cc4fb4f-861b-42ff-bd9c-5aa1137519b6" />
+            </Object>
+          </Folder>
+          <Object Name="_27_SOLID_ISP" ObjectId="f7c89670-3872-4535-98ac-59febddcaf08" />
+          <Folder Name="Clases_ISP">
+            <Object Name="Pato" ObjectId="53750461-4c20-4932-892c-560a881fa5db">
+              <Object Name="Volar" ObjectId="4d4e674f-b9bd-4df3-9340-a8aeee463f30" />
+              <Object Name="Nadar" ObjectId="3eb04696-5ac5-4f2e-a2e8-2f94fa5b5f7d" />
+            </Object>
+            <Object Name="Aguila" ObjectId="6910a7ef-35b8-4bab-b02d-061ddfbf462e">
+              <Object Name="Volar" ObjectId="9c75935f-3c28-41cb-8df6-ec6b0de9ffab" />
+            </Object>
+            <Object Name="Avestruz" ObjectId="a11a740d-3e87-4b3a-bb09-55f808b82ec4">
+              <Object Name="Correr" ObjectId="e66da694-4037-4e5e-9913-2c6f351524b5" />
+            </Object>
+          </Folder>
+        </Folder>
+      </ProjectStructure>
+    </data>
+  </addData>
+</project>

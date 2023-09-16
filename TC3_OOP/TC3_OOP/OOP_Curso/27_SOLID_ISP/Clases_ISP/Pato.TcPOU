@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.12">
+  <POU Name="Pato" Id="{53750461-4c20-4932-892c-560a881fa5db}" SpecialFunc="None">
+    <Declaration><![CDATA[FUNCTION_BLOCK Pato IMPLEMENTS I_AveVoladora, I_AveNadadora
+VAR_INPUT
+    velocidad : REAL;
+    alturaMaxima : REAL;
+    tiempoBuceo : TIME;
+END_VAR
+VAR
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[]]></ST>
+    </Implementation>
+    <Method Name="Nadar" Id="{3eb04696-5ac5-4f2e-a2e8-2f94fa5b5f7d}">
+      <Declaration><![CDATA[
+METHOD Nadar : BOOL
+]]></Declaration>
+      <Implementation>
+        <ST><![CDATA[Nadar := TRUE;]]></ST>
+      </Implementation>
+    </Method>
+    <Method Name="Volar" Id="{4d4e674f-b9bd-4df3-9340-a8aeee463f30}">
+      <Declaration><![CDATA[
+METHOD Volar : BOOL
+]]></Declaration>
+      <Implementation>
+        <ST><![CDATA[Volar := true;]]></ST>
+      </Implementation>
+    </Method>
+  </POU>
+</TcPlcObject>

@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.12">
+  <POU Name="Aguila" Id="{6910a7ef-35b8-4bab-b02d-061ddfbf462e}" SpecialFunc="None">
+    <Declaration><![CDATA[FUNCTION_BLOCK Aguila IMPLEMENTS I_AveVoladora
+VAR_INPUT
+    velocidad : REAL;
+    alturaMaxima : REAL;
+END_VAR
+VAR
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[]]></ST>
+    </Implementation>
+    <Method Name="Volar" Id="{9c75935f-3c28-41cb-8df6-ec6b0de9ffab}">
+      <Declaration><![CDATA[
+METHOD Volar : BOOL
+]]></Declaration>
+      <Implementation>
+        <ST><![CDATA[Volar:= TRUE;]]></ST>
+      </Implementation>
+    </Method>
+  </POU>
+</TcPlcObject>

@@ -6,25 +6,26 @@
 ### <span style="color:grey">Ejemplo:</span>
 
 ```javascript
-INTERFACE IAveVoladora
+INTERFACE I_AveVoladora
 // interfaz para las aves voladoras
-METHODS
-    Volar : BOOL; // método para volar
+    METHODS
+        Volar : BOOL; // método para volar
 END_INTERFACE
 
-INTERFACE IAveNadadora
+INTERFACE I_AveNadadora
 // interfaz para las aves nadadoras
-METHODS
-    Nadar : BOOL; // método para nadar
+    METHODS
+        Nadar : BOOL; // método para nadar
 END_INTERFACE
 
-INTERFACE IAveCorredora
+INTERFACE I_AveCorredora
 // interfaz para las aves corredoras
-METHODS
-    Correr : BOOL; // método para correr
+    METHODS
+        Correr : BOOL; // método para correr
 END_INTERFACE
 
-FUNCTION_BLOCK Pato IMPLEMENTS IAveVoladora, IAveNadadora // implementa las interfaces IAveVoladora e IAveNadadora
+FUNCTION_BLOCK Pato IMPLEMENTS I_AveVoladora, I_AveNadadora
+// implementa las interfaces I_AveVoladora e I_AveNadadora
 VAR_INPUT
     velocidad : REAL;
     alturaMaxima : REAL;
@@ -36,7 +37,8 @@ END_VAR
 
 END_FUNCTION_BLOCK
 
-FUNCTION_BLOCK Aguila IMPLEMENTS IAveVoladora // implementa la interfaz IAveVoladora solamente
+FUNCTION_BLOCK Aguila IMPLEMENTS I_AveVoladora
+// implementa la interfaz I_AveVoladora solamente
 VAR_INPUT
     velocidad : REAL;
     alturaMaxima : REAL;
@@ -47,7 +49,8 @@ END_VAR
 
 END_FUNCTION_BLOCK
 
-FUNCTION_BLOCK Avestruz IMPLEMENTS IAveCorredora // implementa la interfaz IAveCorredora solamente
+FUNCTION_BLOCK Avestruz IMPLEMENTS I_AveCorredora
+// implementa la interfaz I_AveCorredora solamente
 VAR_INPUT
     velocidad : REAL;
     tiempoCorriendo : TIME;
@@ -58,6 +61,8 @@ END_VAR
 
 END_FUNCTION_BLOCK
 ```
+![SOLID_ISP](../imagenes/SOLID_ISP.PNG)
+
 De esta manera, cada clase tiene solo los métodos necesarios y se divide en interfaces más pequeñas y específicas. Además, se utilizan interfaces en lugar de function blocks para implementar el principio de segregación de interfaz. Esto permite una mayor flexibilidad y evita la necesidad de implementar métodos innecesarios en una clase.
 ***
 ### <span style="color:grey">Links:</span>
