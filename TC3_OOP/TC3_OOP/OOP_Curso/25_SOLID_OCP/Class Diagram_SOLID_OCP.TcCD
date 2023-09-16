@@ -31,7 +31,7 @@
                   <v n="AttributeConstraint">""</v>
                   <v n="AttributeReturnType">"REAL"</v>
                   <v n="AttributeParent">{2cd26c6e-3eb4-49c2-aa2c-988956508106}</v>
-                  <v n="AttributeObjectGuid">{1ef4ed02-3167-473c-bb2b-80d1887b0202}</v>
+                  <v n="AttributeObjectGuid">{46f8e55a-d8f1-4b24-8315-f9d47d49c52a}</v>
                   <v n="AttributeStereotype">""</v>
                 </o>
               </l>
@@ -65,9 +65,9 @@
                 <v n="IsElementVisible">true</v>
                 <v n="TopPosition">240</v>
                 <v n="LeftPosition">620</v>
-                <v n="WidthValue">161</v>
+                <v n="WidthValue">224</v>
                 <v n="MinWidthValue">0</v>
-                <v n="Height">71</v>
+                <v n="Height">92</v>
                 <v n="MinHeight">0</v>
                 <v n="AutomaticLayout">true</v>
                 <d n="DockingPoints" t="Hashtable" />
@@ -119,7 +119,7 @@
                   <v n="AttributeConstraint">""</v>
                   <v n="AttributeReturnType">"REAL"</v>
                   <v n="AttributeParent">{bebaaf0e-1adc-4bbd-8b5c-f9bacc7f4ae8}</v>
-                  <v n="AttributeObjectGuid">{5c099199-a9d2-4115-9c7e-a7d4e17f7612}</v>
+                  <v n="AttributeObjectGuid">{14d7c8c4-2ee8-4a28-b86b-7731907f3fd1}</v>
                   <v n="AttributeStereotype">""</v>
                 </o>
               </l>
@@ -153,9 +153,9 @@
                 <v n="IsElementVisible">true</v>
                 <v n="TopPosition">70</v>
                 <v n="LeftPosition">430</v>
-                <v n="WidthValue">151</v>
+                <v n="WidthValue">209</v>
                 <v n="MinWidthValue">0</v>
-                <v n="Height">71</v>
+                <v n="Height">92</v>
                 <v n="MinHeight">0</v>
                 <v n="AutomaticLayout">true</v>
                 <d n="DockingPoints" t="Hashtable" />
@@ -207,7 +207,7 @@
                   <v n="AttributeConstraint">""</v>
                   <v n="AttributeReturnType">"REAL"</v>
                   <v n="AttributeParent">{e23fc4b7-6214-4b36-a282-d7ecb2ef8288}</v>
-                  <v n="AttributeObjectGuid">{cf23ba1f-5dae-45f0-9165-cfffd2f799db}</v>
+                  <v n="AttributeObjectGuid">{54bcb39e-90c0-4337-9f89-95f2ab7b4fba}</v>
                   <v n="AttributeStereotype">""</v>
                 </o>
               </l>
@@ -241,9 +241,9 @@
                 <v n="IsElementVisible">true</v>
                 <v n="TopPosition">240</v>
                 <v n="LeftPosition">210</v>
-                <v n="WidthValue">190</v>
+                <v n="WidthValue">267</v>
                 <v n="MinWidthValue">0</v>
-                <v n="Height">71</v>
+                <v n="Height">92</v>
                 <v n="MinHeight">0</v>
                 <v n="AutomaticLayout">true</v>
                 <d n="DockingPoints" t="Hashtable" />
@@ -316,7 +316,7 @@
                 <o n="EndAnchor" t="UMLAnchorPoint">
                   <v n="AnchorID">3</v>
                   <v n="AnchorLeftPosition">433</v>
-                  <v n="AnchorTopPosition">136</v>
+                  <v n="AnchorTopPosition">157</v>
                   <v n="AnchorRelationID">{aaf43f84-d03b-458d-9d2a-8a7c45c535de}</v>
                   <v n="StartAnchor">false</v>
                   <v n="EndAnchor">true</v>
@@ -415,7 +415,7 @@
                 <o n="EndAnchor" t="UMLAnchorPoint">
                   <v n="AnchorID">3</v>
                   <v n="AnchorLeftPosition">545</v>
-                  <v n="AnchorTopPosition">136</v>
+                  <v n="AnchorTopPosition">157</v>
                   <v n="AnchorRelationID">{ed3ea0e7-dd52-49ab-a7a9-a1b643953f42}</v>
                   <v n="StartAnchor">false</v>
                   <v n="EndAnchor">true</v>

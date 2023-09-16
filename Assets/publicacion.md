@@ -2,10 +2,10 @@
 
 Hola,
 Seguimos con el curso de 👩‍💻 OOP IEC 61131-3 PLC 👨‍💻,
-ya esta disponible el Video numero 25 de Youtube:
-en este video veremos la explicación de SOLID - OCP - Principio de Abierto/Cerrado.
+ya esta disponible el Video numero 26 de Youtube:
+en este video veremos la explicación de SOLID - LSP - Principio de Sustitución de Liskov.
 
-👉 https://youtu.be/75WajVrs6Wo
+👉 https://youtu.be/tnghQbIPHs0
 
 🐙 Repositorio de GitHub:
 - 👉 https://lnkd.in/d4EmXRaT
@@ -42,6 +42,7 @@ https://youtube.com/playlist?list=PLEfi_hUmmSjFpfdJ6yw3B9yj7dWHYkHmQ
 - 023 - https://youtu.be/biuO9x512Zs
 - 024 - https://youtu.be/bJgXdnHDmrk
 - 025 - https://youtu.be/75WajVrs6Wo
+- 026 - https://youtu.be/tnghQbIPHs0 
 
 Se busca colaborador para la traducción de la documentación al idioma que desee... 👀
 
