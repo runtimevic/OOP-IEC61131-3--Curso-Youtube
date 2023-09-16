@@ -72,3 +72,7 @@ Los Modificadores de acceso de los metodos y las propiedades se veran segun la s
 - 🔗 [Curso UML. Diagrama de clases I. Vídeo 9](https://www.youtube.com/watch?v=r75NwLxR_iU)
 
 - 🔗 [Curso UML. Diagrama de clases II. Vídeo 10](https://www.youtube.com/watch?v=rWgQxHdunsw)
+
+***
+### <span style="color:grey">Link al Video de Youtube_NNN:</span>
+- 🔗

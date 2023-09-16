@@ -48,3 +48,4 @@ En Codesys y en TwinCAT tendremos el diagrama:
 - 🔗 [Tutorial sobre UML y herramientas CASE](https://www.youtube.com/watch?v=O_4ATZQrVpw)
 ***
 ### <span style="color:grey">Link al Video de Youtube_NNN:</span>
+- 🔗
