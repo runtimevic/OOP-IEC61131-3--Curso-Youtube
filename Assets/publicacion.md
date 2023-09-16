@@ -16,7 +16,8 @@ en este video veremos la explicación de SOLID - LSP - Principio de Sustitución
 
 🎬 Youtube:
 Lista de Videos del Curso OOP Programación Orientada a Objetos IEC61131-3 PLC:
-https://youtube.com/playlist?list=PLEfi_hUmmSjFpfdJ6yw3B9yj7dWHYkHmQ
+
+- https://youtube.com/playlist?list=PLEfi_hUmmSjFpfdJ6yw3B9yj7dWHYkHmQ
 - 001 - https://lnkd.in/dg94jJrP?...
 - 002 - https://lnkd.in/d5XRXGnP
 - 003 - https://lnkd.in/dGP_ybUu
@@ -46,7 +47,8 @@ https://youtube.com/playlist?list=PLEfi_hUmmSjFpfdJ6yw3B9yj7dWHYkHmQ
 
 Se busca colaborador para la traducción de la documentación al idioma que desee... 👀
 
-pongo el link del libro que enseño en el video 015:
-https://www.bod.de/buchshop/anwendung-der-solid-prinzipien-mit-der-iec-61131-3-stefan-henneken-9783734746857
+- [pongo el link del libro que enseño en el video 015:](https://www.bod.de/buchshop/anwendung-der-solid-prinzipien-mit-der-iec-61131-3-stefan-henneken-9783734746857)
+
+- 👉 [Ayudame siendo Patrocinador](https://github.com/sponsors/runtimevic)
 ***
 CodeSys,IEC61131,OOP,TwinCAT,IEC61131-3,Object Oriented Programming,PLC, UML, Desing Patterns
