@@ -2314,7 +2314,7 @@
   <h1>DIP - Principio de Inversión de Dependencia</h1>
 
 <h3 id="principio-de-inversion-de-dependencia-dependency-inversion-principle-dip"><span style="color:grey"> Principio de Inversión de Dependencia -- (Dependency Inversion Principle) DIP :</span></h3>
-<p>El principio de inversión de dependencia establece que los módulos de nivel superior no deben depender de los módulos de nivel inferior, sino que ambos deben depender de abstracciones.</p>
+<p>El principio de inversión de dependencia establece que los módulos de <strong>nivel superior</strong> no deben depender de los módulos de <strong>nivel inferior</strong>, sino que ambos deben depender de abstracciones.</p>
 <h3 id="ejemplo"><span style="color:grey">Ejemplo:</span></h3>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
@@ -2368,8 +2368,14 @@
 
 <span class="nx">END_FUNCTION_BLOCK</span>
 </code></pre></div></td></tr></table></div>
+<ul>
+<li>
 <p>Esto permite que se pueda pasar cualquier objeto que implemente la interfaz <code>IConexion</code>, lo que cumple con el principio de inversión de dependencias.</p>
+</li>
+<li>
 <p>Además, se utiliza el método <code>EstablecerConexion</code> definido en la interfaz <code>IConexion</code>, lo que demuestra cómo se puede utilizar una abstracción (la interfaz) para trabajar con diferentes implementaciones concretas de manera uniforme.</p>
+</li>
+</ul>
 <hr />
 <h3 id="links"><span style="color:grey">Links:</span></h3>
 <ul>
@@ -2391,11 +2397,11 @@
   <small>
     
       Última actualización:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">September 16, 2023 10:31:59</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">September 16, 2023 11:37:26</span>
       
         <br>
         Creado:
-        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">September 16, 2023 10:31:59</span>
+        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">September 16, 2023 11:37:26</span>
       
     
   </small>
