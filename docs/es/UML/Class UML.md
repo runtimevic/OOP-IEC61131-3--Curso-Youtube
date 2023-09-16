@@ -47,7 +47,7 @@ Los Modificadores de acceso de los metodos y las propiedades se veran segun la s
 - Direccionalidad: Paréntesis angulares se colocan junto al verbo para indicar direccionalidad
 - Multiplicidad: Adicionalmente se pueden utilizar números o rangos que indican cuántas instancias de una clase están asociadas con una instancia de la otra clase.
 
-![UML_Class_Diagram_Asociaciones](../imagenes/ClassDiagram_Asociaciones.PNG)
+![UMLClassDiagramAsociaciones](../imagenes/ClassDiagramAsociaciones.PNG)
 
 ***
 ### <span style="color:grey">Links UML listado de referencias:</span>
