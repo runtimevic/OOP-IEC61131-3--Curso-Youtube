@@ -84,6 +84,7 @@ De esta manera, cada clase tiene solo los métodos necesarios y se divide en int
 
 - 🔗 [makigas: aprende a programar, SOLID: Principio de Segregación de Interfaz (ISP)](https://www.youtube.com/watch?v=FIiNB9rv1P0&list=PLTd5ehIj0goO1JFIfukh3UtU9e0BeFM9K&index=4)
 
+- 🔗 [tech.tribalyte.eu, blog-principios-solid-interface-segregation](https://tech.tribalyte.eu/blog-principios-solid-interface-segregation)
 ***
 ### <span style="color:grey">Link al Video de Youtube 027:</span>
 - 🔗 [027 - OOP IEC 61131-3 PLC -- SOLID - ISP]()
