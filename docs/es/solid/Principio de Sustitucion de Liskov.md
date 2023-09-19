@@ -1,6 +1,8 @@
 ### <span style="color:grey"> Principio de Sustitución de Liskov -- (Liskov Substitution Principle) LSP :</span>
 
-El principio de sustitución de Liskov establece que una instancia de una subclase debe poder ser utilizada en cualquier lugar donde se espera una instancia de la clase base, sin afectar el comportamiento del programa.
+- Este principio de la programación orientada a objetos debe su nombre a Barbara Liskov, reconocida ingeniera de software que fue la primera mujer de los Estados Unidos en conseguir un doctorado en Ciencias de la Computación, ganadora de un premio Turing y nombrada doctora honoris causa por la UPM.
+
+- El principio de sustitución de Liskov establece que una instancia de una subclase debe poder ser utilizada en cualquier lugar donde se espera una instancia de la clase base, sin afectar el comportamiento del programa.
 
 ### <span style="color:grey">Ejemplo:</span>
 
@@ -61,6 +63,8 @@ END_FUNCTION_BLOCK
 - 🔗 [hdeleon.net, Principios SOLID: Principio de Sustitución de Liskov LSP](https://www.youtube.com/watch?v=JwtpU_rH1LE)
 
 - 🔗 [makigas: aprende a programar, SOLID: Principio de Sustitución de Liskov (LSP)](https://www.youtube.com/watch?v=JQX7wrCzxFA&list=PLTd5ehIj0goO1JFIfukh3UtU9e0BeFM9K&index=3)
+
+- 🔗 [tech.tribalyte.eu, blog-principio-solid-liskov](https://tech.tribalyte.eu/blog-principio-solid-liskov)
 ***
 ### <span style="color:grey">Link al Video de Youtube 026:</span>
 - 🔗 [026 - OOP IEC 61131-3 PLC -- SOLID - LSP](https://youtu.be/tnghQbIPHs0)

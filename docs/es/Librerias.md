@@ -27,3 +27,5 @@ Mediante el uso de bibliotecas, podemos administrar el software que hemos creado
 !!! mirar este video por ejemplo para empezar como concepto a realizar las librerias!!!
 ```
 - 🔗 [Nguyễn Vỹ, Beckhoff & PLC - OOP Properties| TWINCAT3](https://www.youtube.com/watch?v=0pJFQtXVPVY)
+
+- 🔗 [The Benefits of OOP in PLC Programming: A Case Study with a Conveyor System](https://www.linkedin.com/pulse/benefits-oop-plc-programming-case-study-conveyor-system-zhou-gong%3FtrackingId=9ZY5A6ECss6Eb1w64xLmJQ%253D%253D/?trackingId=9ZY5A6ECss6Eb1w64xLmJQ%3D%3D)
