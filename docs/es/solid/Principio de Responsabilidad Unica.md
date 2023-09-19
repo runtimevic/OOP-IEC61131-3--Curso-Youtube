@@ -57,9 +57,9 @@ De esta manera, la Clase "Empleado" solo maneja la información personal del emp
 
 - 🔗 [El Camino Dev, Principio de Responsabilidad Única en C# | Principios SOLID](https://www.youtube.com/watch?v=_SKIi1ooFcQ)
 
-- 🔗 [
-makigas: aprende a programar, SOLID: Principio de Responsabilidad Única (SRP)](https://www.youtube.com/watch?v=73IBjmyjDX0)
+- 🔗 [makigas: aprende a programar, SOLID: Principio de Responsabilidad Única (SRP)](https://www.youtube.com/watch?v=73IBjmyjDX0)
 
+- 🔗 [tech.tribalyte.eu, blog-solid-single-responsability](https://tech.tribalyte.eu/blog-solid-single-responsability)
 ***
 ### <span style="color:grey">Link al Video de Youtube 024:</span>
 - 🔗 [024 - OOP IEC 61131-3 PLC -- SOLID - SRP](https://youtu.be/bJgXdnHDmrk)
