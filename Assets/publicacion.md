@@ -46,6 +46,7 @@ Lista de Videos del Curso OOP Programación Orientada a Objetos IEC61131-3 PLC:
 - 026 - https://youtu.be/tnghQbIPHs0
 - 027 - https://youtu.be/LnHT4FySEuc
 - 028 -
+- 029 -
 
 Se busca colaborador para la traducción de la documentación al idioma que desee... 👀
 
