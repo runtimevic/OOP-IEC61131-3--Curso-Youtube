@@ -5,24 +5,21 @@ El principio de inversión de dependencia establece que los módulos de **nivel 
 ### <span style="color:grey">Ejemplo:</span>
 
 ```javascript
-INTERFACE IConexion
+INTERFACE I_Conexion
 // interfaz para la conexión
 METHODS
     EstablecerConexion : BOOL; // método para establecer la conexión
 END_INTERFACE
 
-FUNCTION_BLOCK ConexionSerial IMPLEMENTS IConexion // implementa la interfaz IConexion
+FUNCTION_BLOCK ConexionSerial IMPLEMENTS I_Conexion // implementa la interfaz I_Conexion
 // implementación para la conexión serial
 END_FUNCTION_BLOCK
 
-FUNCTION_BLOCK ConexionEthernet IMPLEMENTS IConexion // implementa la interfaz IConexion
+FUNCTION_BLOCK ConexionEthernet IMPLEMENTS I_Conexion // implementa la interfaz I_Conexion
 // implementación para la conexión ethernet
 END_FUNCTION_BLOCK
 
 FUNCTION_BLOCK Dispositivo
-VAR_INPUT
-    conexion : IConexion; // interfaz IConexion
-END_VAR
 
 // constructor
 Dispositivo(conexion);
@@ -33,9 +30,11 @@ establecerConexion();
 END_FUNCTION_BLOCK
 ```
 
-- Esto permite que se pueda pasar cualquier objeto que implemente la interfaz `IConexion`, lo que cumple con el principio de inversión de dependencias.
+![SOLID_DIP](../imagenes/SOLID_DIP.PNG)
 
-- Además, se utiliza el método `EstablecerConexion` definido en la interfaz `IConexion`, lo que demuestra cómo se puede utilizar una abstracción (la interfaz) para trabajar con diferentes implementaciones concretas de manera uniforme.
+- Esto permite que se pueda pasar cualquier objeto que implemente la interfaz `I_Conexion`, lo que cumple con el principio de inversión de dependencias.
+
+- Además, se utiliza el método `EstablecerConexion` definido en la interfaz `I_Conexion`, lo que demuestra cómo se puede utilizar una abstracción (la interfaz) para trabajar con diferentes implementaciones concretas de manera uniforme.
 
 ***
 ### <span style="color:grey">Links:</span>

@@ -72,7 +72,10 @@ _25_SOLID_OCP();
 _26_SOLID_LSP();
 
 // Video de Youtube 27
-_27_SOLID_ISP();]]></ST>
+_27_SOLID_ISP();
+
+// Video de Youtube 28
+_28_SOLID_DIP();]]></ST>
     </Implementation>
   </POU>
 </TcPlcObject>

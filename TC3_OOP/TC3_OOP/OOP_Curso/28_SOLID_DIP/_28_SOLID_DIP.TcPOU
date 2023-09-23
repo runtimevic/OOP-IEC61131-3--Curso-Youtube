@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.12">
+  <POU Name="_28_SOLID_DIP" Id="{9ba2c3a5-4f03-456d-91fe-ddb8c63f9c7c}" SpecialFunc="None">
+    <Declaration><![CDATA[PROGRAM _28_SOLID_DIP
+VAR
+	Conexion_por_Serial : BOOL;
+	Serial: ConexionSerial;
+	Conexion_Serial : Dispositivo(conexion:= Serial);
+	
+	Conexion_por_Ethernet : BOOL;
+	Ethernet : ConexionEthernet;
+	Conexion_Ethernet : Dispositivo(conexion:= Ethernet);
+END_VAR
+
+
+
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[
+IF Conexion_por_Serial THEN 
+ Conexion_Serial.establecerConexion();
+ Conexion_por_Serial:= FALSE;
+END_IF
+
+IF Conexion_por_Ethernet THEN 
+ Conexion_Ethernet.establecerConexion();
+ Conexion_por_Ethernet:= FALSE;
+END_IF
+
+]]></ST>
+    </Implementation>
+  </POU>
+</TcPlcObject>

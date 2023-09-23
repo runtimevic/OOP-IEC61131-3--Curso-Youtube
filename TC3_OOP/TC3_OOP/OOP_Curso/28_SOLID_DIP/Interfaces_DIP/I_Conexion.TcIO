@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.12">
+  <Itf Name="I_Conexion" Id="{768cbc09-99c5-4675-a36b-5351285e5ae5}">
+    <Declaration><![CDATA[INTERFACE I_Conexion
+]]></Declaration>
+    <Method Name="EstablecerConexion" Id="{778a6dc2-3cc8-4763-99cf-3cef36abdc49}">
+      <Declaration><![CDATA[METHOD EstablecerConexion : BOOL
+VAR_INPUT
+END_VAR
+]]></Declaration>
+    </Method>
+  </Itf>
+</TcPlcObject>

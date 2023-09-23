@@ -488,6 +488,24 @@
     <Compile Include="27_SOLID_ISP\_27_SOLID_ISP.TcPOU">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="28_SOLID_DIP\Clases_DIP\ConexionEthernet.TcPOU">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="28_SOLID_DIP\Clases_DIP\ConexionSerial.TcPOU">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="28_SOLID_DIP\Clases_DIP\Dispositivo.TcPOU">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="28_SOLID_DIP\ClassDiagram_SOLID_DIP.TcCD">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="28_SOLID_DIP\Interfaces_DIP\I_Conexion.TcIO">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="28_SOLID_DIP\_28_SOLID_DIP.TcPOU">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="PlcTask.TcTTO">
       <SubType>Code</SubType>
     </Compile>
@@ -547,6 +565,9 @@
     <Folder Include="27_SOLID_ISP" />
     <Folder Include="27_SOLID_ISP\Interfaces_ISP" />
     <Folder Include="27_SOLID_ISP\Clases_ISP" />
+    <Folder Include="28_SOLID_DIP" />
+    <Folder Include="28_SOLID_DIP\Clases_DIP" />
+    <Folder Include="28_SOLID_DIP\Interfaces_DIP" />
     <Folder Include="_MAIN" />
   </ItemGroup>
   <ItemGroup>

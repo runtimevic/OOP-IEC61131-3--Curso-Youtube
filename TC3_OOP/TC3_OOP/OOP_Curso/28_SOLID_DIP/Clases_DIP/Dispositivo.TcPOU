@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.12">
+  <POU Name="Dispositivo" Id="{473cbefa-2816-40a9-8a53-8ae3f5bd6201}" SpecialFunc="None">
+    <Declaration><![CDATA[FUNCTION_BLOCK Dispositivo
+VAR
+	_conexion : I_Conexion;
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[]]></ST>
+    </Implementation>
+    <Method Name="establecerConexion" Id="{d8dd92d6-a6fc-45c7-922e-c50c39ef05e5}">
+      <Declaration><![CDATA[METHOD establecerConexion 
+VAR_INPUT
+END_VAR
+]]></Declaration>
+      <Implementation>
+        <ST><![CDATA[_conexion.EstablecerConexion();]]></ST>
+      </Implementation>
+    </Method>
+    <Method Name="FB_init" Id="{f22fe6c4-dede-48bc-a7d2-e9cefd03731f}">
+      <Declaration><![CDATA[METHOD FB_init : BOOL
+VAR_INPUT
+	bInitRetains : BOOL; // if TRUE, the retain variables are initialized (warm start / cold start)
+	bInCopyCode : BOOL;  // if TRUE, the instance afterwards gets moved into the copy code (online change)
+	conexion : I_Conexion;
+END_VAR
+]]></Declaration>
+      <Implementation>
+        <ST><![CDATA[THIS^._conexion := conexion;]]></ST>
+      </Implementation>
+    </Method>
+  </POU>
+</TcPlcObject>

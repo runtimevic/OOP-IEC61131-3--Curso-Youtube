@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.12">
+  <POU Name="ConexionEthernet" Id="{f1b3daed-ef99-475d-a42a-a1fa58efccc1}" SpecialFunc="None">
+    <Declaration><![CDATA[FUNCTION_BLOCK ConexionEthernet IMPLEMENTS I_Conexion
+
+VAR
+//    rtMessageOutput: R_TRIG; (* Declaration *)
+//    bFeedTooHigh: BOOL;
+    udiAdsLogRes: UDINT;
+END_VAR]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[]]></ST>
+    </Implementation>
+    <Method Name="EstablecerConexion" Id="{30ebfe30-4904-4613-8b60-ac39ab4d8fff}">
+      <Declaration><![CDATA[
+METHOD EstablecerConexion : BOOL
+]]></Declaration>
+      <Implementation>
+        <ST><![CDATA[//rtMessageOutput(CLK := bFeedTooHigh);
+//IF rtMessageOutput.Q THEN 
+    UdiAdsLogRes := ADSLOGDINT( msgCtrlMask := ADSLOG_MSGTYPE_HINT OR ADSLOG_MSGTYPE_MSGBOX, 
+                    msgFmtStr := 'PLC Mensaje: estamos realizando una conexión por Ethernet: %d', dintArg:= 1);
+//END_IF]]></ST>
+      </Implementation>
+    </Method>
+  </POU>
+</TcPlcObject>

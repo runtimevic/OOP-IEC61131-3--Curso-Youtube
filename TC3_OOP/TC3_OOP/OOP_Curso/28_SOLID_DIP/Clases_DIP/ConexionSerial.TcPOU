@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.12">
+  <POU Name="ConexionSerial" Id="{6c1277ce-b871-4ba2-a8de-cddf5f906e8e}" SpecialFunc="None">
+    <Declaration><![CDATA[FUNCTION_BLOCK ConexionSerial IMPLEMENTS I_Conexion
+
+VAR
+ //   rtMessageOutput: R_TRIG; (* Declaration *)
+ //   bFeedTooHigh: BOOL;
+    udiAdsLogRes: UDINT;
+END_VAR]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[]]></ST>
+    </Implementation>
+    <Method Name="EstablecerConexion" Id="{88822674-bc04-469b-bad0-d37d7bdc3e59}">
+      <Declaration><![CDATA[
+METHOD EstablecerConexion : BOOL
+]]></Declaration>
+      <Implementation>
+        <ST><![CDATA[//rtMessageOutput(CLK := bFeedTooHigh);
+//IF rtMessageOutput.Q THEN 
+    UdiAdsLogRes := ADSLOGDINT( msgCtrlMask := ADSLOG_MSGTYPE_HINT OR ADSLOG_MSGTYPE_MSGBOX, 
+                    msgFmtStr := 'PLC Mensaje: estamos realizando una conexión por Serial: %d', dintArg:= 1);
+//END_IF]]></ST>
+      </Implementation>
+    </Method>
+  </POU>
+</TcPlcObject>

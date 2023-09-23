@@ -63,7 +63,8 @@ END_FUNCTION_BLOCK
 ```
 ![SOLID_ISP](../imagenes/SOLID_ISP.PNG)
 
-De esta manera, cada clase tiene solo los métodos necesarios y se divide en interfaces más pequeñas y específicas. Además, se utilizan interfaces en lugar de function blocks para implementar el principio de segregación de interfaz. Esto permite una mayor flexibilidad y evita la necesidad de implementar métodos innecesarios en una clase.
+- De esta manera, cada clase tiene solo los métodos necesarios y se divide en interfaces más pequeñas y específicas. Además, se utilizan interfaces en lugar de function blocks para implementar el principio de segregación de interfaz. 
+- Esto permite una mayor flexibilidad y evita la necesidad de implementar métodos innecesarios en una clase.
 ***
 ### <span style="color:grey">Links:</span>
 - 🔗 [stefanhenneken.net,iec-61131-3-solid-the-interface-segregation-principle](https://stefanhenneken.net/2023/02/25/iec-61131-3-solid-the-interface-segregation-principle/)
@@ -87,4 +88,4 @@ De esta manera, cada clase tiene solo los métodos necesarios y se divide en int
 - 🔗 [tech.tribalyte.eu, blog-principios-solid-interface-segregation](https://tech.tribalyte.eu/blog-principios-solid-interface-segregation)
 ***
 ### <span style="color:grey">Link al Video de Youtube 027:</span>
-- 🔗 [027 - OOP IEC 61131-3 PLC -- SOLID - ISP]()
+- 🔗 [027 - OOP IEC 61131-3 PLC -- SOLID - ISP](https://youtu.be/LnHT4FySEuc)
