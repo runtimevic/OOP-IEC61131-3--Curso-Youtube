@@ -8,20 +8,20 @@ en este video veremos la explicación de SOLID - ISP - Principio de Segregación
 👉 https://youtu.be/LnHT4FySEuc
 
 🐙 Repositorio de GitHub:
-- 👉 https://lnkd.in/d4EmXRaT
+- 👉 https://github.com/runtimevic/OOP-IEC61131-3--Curso-Youtube
 
 📖 Documentación:
-- 👉 https://lnkd.in/de6E_Rbs
-- 👉 https://lnkd.in/d2JUdq-6
+- 👉 https://runtimevic.github.io/OOP-IEC61131-3--Curso-Youtube/es/
+- 👉 https://runtimevic.github.io/OOP-IEC61131-3--Curso-Youtube/en/
 
 🎬 Youtube:
 Lista de Videos del Curso OOP Programación Orientada a Objetos IEC61131-3 PLC:
 
 - https://youtube.com/playlist?list=PLEfi_hUmmSjFpfdJ6yw3B9yj7dWHYkHmQ
-- 001 - https://lnkd.in/dg94jJrP?...
-- 002 - https://lnkd.in/d5XRXGnP
-- 003 - https://lnkd.in/dGP_ybUu
-- 004 - https://lnkd.in/d6xpZW-H
+- 001 - https://youtube.com/live/a7eNCefcjGM
+- 002 - https://youtu.be/3IudQIj1noo
+- 003 - https://youtu.be/lchxx28wwXM
+- 004 - https://youtu.be/jGtGV9icvO0
 - 005 - https://youtu.be/fa0tUTICVF0
 - 006 - https://youtu.be/Ci7FExNF7vQ
 - 007 - https://youtu.be/-twPN0jTrKA
