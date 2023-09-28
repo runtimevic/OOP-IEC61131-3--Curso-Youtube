@@ -7,3 +7,5 @@
 - 🔗
 - 🔗
 - 🔗
+- 🔗 [C#: Desarrollo Test Driven](https://www.linkedin.com/learning/c-sharp-desarrollo-test-driven)
+- 🔗 [Visual Studio: Unit Tests esencial](https://www.linkedin.com/learning/visual-studio-unit-tests-esencial)
