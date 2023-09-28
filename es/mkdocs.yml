@@ -200,7 +200,6 @@ nav:
           - Patron Observador: Patrones de Diseño/Observer Design Pattern.md
           - Patron Visitante: Patrones de Diseño/The Visitor Design Pattern.md
     - Librerias : Librerias.md
-    - Links OOP: links.md
     - CI/CD:
        - CI/CD - Integración y entrega continua: CI_CD/Integracion y entrega continua.md
        - Git: CI_CD/Git.md
@@ -208,4 +207,5 @@ nav:
           - TDD - Desarrollo guiado por pruebas: TDD/Test Driven Development.md
           - Pruebas Unitarias: TDD/Unit Test.md
           - Pruebas Integracion: TDD/Integration Test.md
+    - Links OOP: links.md          
  
