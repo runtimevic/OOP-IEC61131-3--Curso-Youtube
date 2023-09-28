@@ -1,6 +1,6 @@
 
 
-
+!!!! poner lo que he estado viendo en el curso de C# OOP de Noemi..!!!
 .Relaciones:
 
 Vamos a ver 2 tipos de relaciones:
