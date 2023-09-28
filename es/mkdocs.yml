@@ -207,5 +207,7 @@ nav:
           - TDD - Desarrollo guiado por pruebas: TDD/Test Driven Development.md
           - Pruebas Unitarias: TDD/Unit Test.md
           - Pruebas Integracion: TDD/Integration Test.md
+       - Simulacion:
+          - Simulacion: CI/CD/Simulacion.md
     - Links OOP: links.md          
  
