@@ -1,5 +1,7 @@
 ### <span style="color:grey">Tipos de Diseño para programacion de PLC:</span>
 
+!!! explicar lo del curso de C# de OOP de Nemí !!!!.
+***
 🚀 𝗪𝗵𝗮𝘁'𝘀 𝗮 𝗦𝗼𝗳𝘁𝘄𝗮𝗿𝗲 𝗨𝗻𝗶𝘁 ?
  
 In software development, understanding what is a "Software Unit" is essential, but it's not always as straightforward as it may seem. What are the challenges and solutions of defining this critical building block according to ISO 26262?
