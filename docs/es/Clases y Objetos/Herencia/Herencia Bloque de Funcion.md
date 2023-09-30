@@ -74,7 +74,17 @@ Mientras que:
 fbNewEngine.Stop();
 ```
 llama al método Stop() desde FB_Engine . El método Stop() ha sido heredado por FB_NewEngine de FB_Engine .
-
+***
+### <span style="color:grey">Clasificación de Tipos de Herencia:</span>
+- Existen 2 Tipos de Herencia: (Clasificación segun la forma en como hereda una Clase):
+  - Herencia Simple:
+    - Es cuando una clase Hereda únicamente de una Clase.
+    - Se pueden establecer niveles de Herencia.
+    - La Herencia Simple Si se admite en el IEC61131-3, en Codesys y en TwinCAT.
+  - Herencia Multiple: 
+    - Es cuando una clase puede Heredar de 2 clases ó más al mismo tiempo.
+    - No importando los niveles de Herencia.
+    - La Herencia Multiple No se admite en el IEC61131-3, no se admite ni en Codesys ni en TwinCAT.
 ***
 ### <span style="color:grey">Links Herencia Bloque de Funcion:</span>
 

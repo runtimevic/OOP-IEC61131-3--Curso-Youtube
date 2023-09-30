@@ -46,8 +46,16 @@ Tambien se puede conseguir el Polimorfismo por Referencia y/o por Punteros:
 - <span style="color:orange"><font size="4">Referencia: (REFERENCE)</font></span>
 
 - <span style="color:orange"><font size="4">Puntero: (POINTER)</font></span>
+***
+### <span style="color:grey">Tipos de Polimorfismo:</span>
+- <span style="color:orange">Paramétrico:</span>  
+    - El Polimorfismo **Paramétrico** va ocurrir cuando definamos en una clase varios metodos que van a tener el mismo nombre pero diferentes parametros. La cantidad y tipos de parametros es la diferencia.
+     
+- <span style="color:orange">Sobrecarga:</span>
+    - El Polimorfismo por **Sobrecarga** va a haber un comportamiento diferente dependiendo de los parametros que se han recibido. Lo vamos a encontrar cuando distintas clases contienen metodos con el mismo nombre pero con un comportamiento diferente.
 
-***    
+- Como Novedad En TwinCAT build 3.1.4026, y en Codesys 3.5 SP16 se pueden declarar parametros de entrada con inicialización con esto no sera obligario al llamar al objeto que instancia dicha clase poner dicho pametro de entrada en la llamada se puede obviar, con esto no conseguimos totalmente un polimorfismo paramétrico ya que no podemos tener el mismo nombre de metodo pero con diferentes parametros, pero al menos es un pequeño avance...
+***     
 ### <span style="color:grey">Links Polimorfismo:</span>
 
 - 🔗 [polymorphism, www.plccoder.com](https://www.plccoder.com/polymorphism/)

@@ -1,7 +1,7 @@
 
 ### <span style="color:grey">UML (Unified Modeling Language) o “Lenguaje Unificado de Modelado”:</span>
 ### <span style="color:grey">Descripción general:</span>
-UML (Lenguaje de modelado unificado) es un lenguaje gráfico para la especificación, diseño y documentación de software orientado a objetos. Proporciona una base universalmente comprensible para la discusión entre la programación y otros departamentos dentro del desarrollo del sistema.
+La siglas UML significan (Lenguaje de Modelado Unificado) es un lenguaje gráfico para la especificación, diseño y documentación de software orientado a objetos. Proporciona una base universalmente comprensible para la discusión entre la programación y otros departamentos dentro del desarrollo del sistema.
 
 El lenguaje de modelado unificado en sí mismo define 14 tipos de diagramas diferentes de dos categorías principales: 
 
