@@ -77,11 +77,11 @@ llama al método Stop() desde FB_Engine . El método Stop() ha sido heredado por
 ***
 ### <span style="color:grey">Clasificación de Tipos de Herencia:</span>
 - Existen 2 Tipos de Herencia: (Clasificación segun la forma en como hereda una Clase):
-  - Herencia Simple:
+  - <span style="color:orange">Herencia Simple:</span>
     - Es cuando una clase Hereda únicamente de una Clase.
     - Se pueden establecer niveles de Herencia.
     - La Herencia Simple Si se admite en el IEC61131-3, en Codesys y en TwinCAT.
-  - Herencia Multiple: 
+  - <span style="color:orange">Herencia Multiple:</span> 
     - Es cuando una clase puede Heredar de 2 clases ó más al mismo tiempo.
     - No importando los niveles de Herencia.
     - La Herencia Multiple No se admite en el IEC61131-3, no se admite ni en Codesys ni en TwinCAT.
