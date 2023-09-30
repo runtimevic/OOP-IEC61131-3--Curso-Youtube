@@ -1,24 +1,37 @@
 ### <span style="color:grey">Tipos de Diseño para programacion de PLC:</span>
+### <span style="color:grey">Análisis y Diseño de un sistema orientado a objetos:</span>
 
+- Durante el desarrollo de un sistema se recomienda seguir la siguiente fases:
 
+### <span style="color:grey">Proceso de Desarrollo:</span>
 
-Análisis y Diseño de un sistema orientado a objetos:
-Durante el desarrollo de un sistema se recomienda seguir la siguiente fases:
-Proceso de Desarrollo:
 - <span style="color:orange">Análisis:</span>
     - Vamos a pensar en el problema y vamos a identificar los elementos con los cuales vamos a trabajar a lo largo del desarrollo. Una vez que hemos identificado estos elementos de manera superficial pasamos a la siguiente fase.
+
 - <span style="color:orange">Diseño:</span>
+
     - Durante esta fase vamos ya a definir cual va a ser el comportamiento de cada uno de los elementos que habiamos definido en la fase de analisis, tambien estableceremos las relaciones entre elementos.
-    - Para esta fase de diseño podemos utlizar los Diagramas UML, mediante estos diagramas vamos a poder modelar lo que va a ser finalmente el sistema.esta fase se puede optar por no hacerla pero si se esta diseñando un sistema mediano a gran tamaño y/ó con cierta complejidad se recomienda no saltarse este paso. 
-    - Los Diagrams UML mas utilizados son:   
-        - Diagrama de Clases: 
+
+    - Para esta fase de diseño podemos utlizar los Diagramas UML, mediante estos diagramas vamos a poder modelar lo que va a ser finalmente el sistema.esta fase se puede optar por no hacerla pero si se esta diseñando un sistema mediano a gran tamaño y/ó con cierta complejidad se recomienda no saltarse este paso.
+
+    - Los Diagrams UML mas utilizados son:
+
+        - Diagrama de Clases:
+
             - Representar cada una de las clases de nuestro sistema y sus relaciones entre ellas, tambien representaremos dentro de cada clase los atributos, propiedades y metodos que va a contener cada clase.
+
         - Diagrama de Casos de uso:
+
             - Sirve basicamente para modelar el comportamiento de un sistema, subsistema o una clase. Este sistema también va a incluir a los usuarios y su interacción con las funciones del sistema.
+
         - Diagrama de Secuencia:
+
             - El diagrama de Secuencia es un tipo de diagrama usado para modelar interacción entre objetos en un sistema según UML.
-            - Los diagramas de Secuencia son una solución de modelado dinámico popular en UML porque se centran específicamente en líneas de vida o en los procesos y objetos que coexisten simultáneamente, y los mensajes intercambiados entre ellos para ejecutar una función antes de que la línea de vida termine
+
+            - Los diagramas de Secuencia son una solución de modelado dinámico popular en UML porque se centran específicamente en líneas de vida o en los procesos y objetos que coexisten simultáneamente, y los mensajes intercambiados entre ellos para ejecutar una función antes de que la línea de vida termine.
+
 - <span style="color:orange">Codificación:</span>
+
     - En esta fase escribiremos el codigo que va a dar vida a lo que hemos analizado y diseñado previamente.
 
 ***
