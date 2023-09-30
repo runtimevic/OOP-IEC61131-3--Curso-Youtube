@@ -45,4 +45,4 @@ END_FUNCTION_BLOCK
 - 🔗 [tech.tribalyte.eu, blog-principios-solid-dependency](https://tech.tribalyte.eu/blog-principios-solid-dependency)
 ***
 ### <span style="color:grey">Link al Video de Youtube 028:</span>
-- 🔗 [028 - OOP IEC 61131-3 PLC -- SOLID - DIP]()
+- 🔗 [028 - OOP IEC 61131-3 PLC -- SOLID - DIP](https://youtu.be/Bh-9GLcksPQ)
