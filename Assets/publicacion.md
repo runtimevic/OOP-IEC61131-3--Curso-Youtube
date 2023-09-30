@@ -2,10 +2,10 @@
 
 Hola,
 Seguimos con el curso de 👩‍💻 OOP IEC 61131-3 PLC 👨‍💻,
-ya esta disponible el Video numero 27 de Youtube:
-en este video veremos la explicación de SOLID - ISP - Principio de Segregación de Interfaz.
+ya esta disponible el Video numero 28 de Youtube:
+en este video veremos la explicación de SOLID - DIP - Principio de Inversión de Dependencia.
 
-👉 https://youtu.be/LnHT4FySEuc
+👉 https://youtu.be/Bh-9GLcksPQ
 
 🐙 Repositorio de GitHub:
 - 👉 https://github.com/runtimevic/OOP-IEC61131-3--Curso-Youtube
@@ -45,7 +45,7 @@ Lista de Videos del Curso OOP Programación Orientada a Objetos IEC61131-3 PLC:
 - 025 - https://youtu.be/75WajVrs6Wo
 - 026 - https://youtu.be/tnghQbIPHs0
 - 027 - https://youtu.be/LnHT4FySEuc
-- 028 -
+- 028 - https://youtu.be/Bh-9GLcksPQ
 - 029 -
 
 Se busca colaborador para la traducción de la documentación al idioma que desee... 👀
@@ -53,5 +53,8 @@ Se busca colaborador para la traducción de la documentación al idioma que dese
 - [pongo el link del libro que enseño en el video 015:](https://www.bod.de/buchshop/anwendung-der-solid-prinzipien-mit-der-iec-61131-3-stefan-henneken-9783734746857)
 
 - 👉 [Ayudame siendo Patrocinador](https://github.com/sponsors/runtimevic)
+
+
+
 ***
 CodeSys,IEC61131,OOP,TwinCAT,IEC61131-3,Object Oriented Programming,PLC, UML, Desing Patterns

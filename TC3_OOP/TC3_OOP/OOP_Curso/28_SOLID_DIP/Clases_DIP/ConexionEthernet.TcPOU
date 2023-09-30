@@ -4,9 +4,7 @@
     <Declaration><![CDATA[FUNCTION_BLOCK ConexionEthernet IMPLEMENTS I_Conexion
 
 VAR
-//    rtMessageOutput: R_TRIG; (* Declaration *)
-//    bFeedTooHigh: BOOL;
-    udiAdsLogRes: UDINT;
+    udiAdsLogRes: DINT;
 END_VAR]]></Declaration>
     <Implementation>
       <ST><![CDATA[]]></ST>
@@ -16,11 +14,10 @@ END_VAR]]></Declaration>
 METHOD EstablecerConexion : BOOL
 ]]></Declaration>
       <Implementation>
-        <ST><![CDATA[//rtMessageOutput(CLK := bFeedTooHigh);
-//IF rtMessageOutput.Q THEN 
-    UdiAdsLogRes := ADSLOGDINT( msgCtrlMask := ADSLOG_MSGTYPE_HINT OR ADSLOG_MSGTYPE_MSGBOX, 
-                    msgFmtStr := 'PLC Mensaje: estamos realizando una conexión por Ethernet: %d', dintArg:= 1);
-//END_IF]]></ST>
+        <ST><![CDATA[
+UdiAdsLogRes := ADSLOGDINT( msgCtrlMask := ADSLOG_MSGTYPE_HINT OR ADSLOG_MSGTYPE_MSGBOX, 
+                            msgFmtStr := 'PLC Mensaje: estamos realizando una conexión por Ethernet: %d', dintArg:= 1);
+]]></ST>
       </Implementation>
     </Method>
   </POU>

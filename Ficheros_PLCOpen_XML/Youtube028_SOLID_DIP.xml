@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <project xmlns="http://www.plcopen.org/xml/tc6_0200">
-  <fileHeader companyName="Beckhoff Automation GmbH" productName="TwinCAT PLC Control" productVersion="3.5.13.21" creationDateTime="2023-09-23T11:43:14.2417075" />
-  <contentHeader name="OOP_Curso" modificationDateTime="2023-09-23T11:43:14.2511046">
+  <fileHeader companyName="Beckhoff Automation GmbH" productName="TwinCAT PLC Control" productVersion="3.5.13.21" creationDateTime="2023-09-30T10:24:14.1676134" />
+  <contentHeader name="OOP_Curso" modificationDateTime="2023-09-30T10:24:14.1754261">
     <coordinateInfo>
       <fbd>
         <scaling x="1" y="1" />
@@ -27,12 +27,8 @@
           <localVars>
             <variable name="udiAdsLogRes">
               <type>
-                <UDINT />
+                <DINT />
               </type>
-              <documentation>
-                <xhtml xmlns="http://www.w3.org/1999/xhtml">    rtMessageOutput: R_TRIG; (* Declaration *)
-    bFeedTooHigh: BOOL;</xhtml>
-              </documentation>
             </variable>
           </localVars>
           <addData>
@@ -58,11 +54,10 @@
               </interface>
               <body>
                 <ST>
-                  <xhtml xmlns="http://www.w3.org/1999/xhtml">//rtMessageOutput(CLK := bFeedTooHigh);
-//IF rtMessageOutput.Q THEN 
-    UdiAdsLogRes := ADSLOGDINT( msgCtrlMask := ADSLOG_MSGTYPE_HINT OR ADSLOG_MSGTYPE_MSGBOX, 
-                    msgFmtStr := 'PLC Mensaje: estamos realizando una conexión por Ethernet: %d', dintArg:= 1);
-//END_IF</xhtml>
+                  <xhtml xmlns="http://www.w3.org/1999/xhtml">
+UdiAdsLogRes := ADSLOGDINT( msgCtrlMask := ADSLOG_MSGTYPE_HINT OR ADSLOG_MSGTYPE_MSGBOX, 
+                            msgFmtStr := 'PLC Mensaje: estamos realizando una conexión por Ethernet: %d', dintArg:= 1);
+</xhtml>
                 </ST>
               </body>
               <InterfaceAsPlainText>
@@ -78,9 +73,7 @@ METHOD EstablecerConexion : BOOL
               <xhtml xmlns="http://www.w3.org/1999/xhtml">FUNCTION_BLOCK ConexionEthernet IMPLEMENTS I_Conexion
 
 VAR
-//    rtMessageOutput: R_TRIG; (* Declaration *)
-//    bFeedTooHigh: BOOL;
-    udiAdsLogRes: UDINT;
+    udiAdsLogRes: DINT;
 END_VAR</xhtml>
             </InterfaceAsPlainText>
           </data>
@@ -94,12 +87,8 @@ END_VAR</xhtml>
           <localVars>
             <variable name="udiAdsLogRes">
               <type>
-                <UDINT />
+                <DINT />
               </type>
-              <documentation>
-                <xhtml xmlns="http://www.w3.org/1999/xhtml">   rtMessageOutput: R_TRIG; (* Declaration *)
-   bFeedTooHigh: BOOL;</xhtml>
-              </documentation>
             </variable>
           </localVars>
           <addData>
@@ -125,11 +114,10 @@ END_VAR</xhtml>
               </interface>
               <body>
                 <ST>
-                  <xhtml xmlns="http://www.w3.org/1999/xhtml">//rtMessageOutput(CLK := bFeedTooHigh);
-//IF rtMessageOutput.Q THEN 
-    UdiAdsLogRes := ADSLOGDINT( msgCtrlMask := ADSLOG_MSGTYPE_HINT OR ADSLOG_MSGTYPE_MSGBOX, 
-                    msgFmtStr := 'PLC Mensaje: estamos realizando una conexión por Serial: %d', dintArg:= 1);
-//END_IF</xhtml>
+                  <xhtml xmlns="http://www.w3.org/1999/xhtml">
+UdiAdsLogRes := ADSLOGDINT( msgCtrlMask := ADSLOG_MSGTYPE_HINT OR ADSLOG_MSGTYPE_MSGBOX, 
+                            msgFmtStr := 'PLC Mensaje: estamos realizando una conexión por Serial: %d', dintArg:= 1);
+</xhtml>
                 </ST>
               </body>
               <InterfaceAsPlainText>
@@ -145,9 +133,7 @@ METHOD EstablecerConexion : BOOL
               <xhtml xmlns="http://www.w3.org/1999/xhtml">FUNCTION_BLOCK ConexionSerial IMPLEMENTS I_Conexion
 
 VAR
- //   rtMessageOutput: R_TRIG; (* Declaration *)
- //   bFeedTooHigh: BOOL;
-    udiAdsLogRes: UDINT;
+    udiAdsLogRes: DINT;
 END_VAR</xhtml>
             </InterfaceAsPlainText>
           </data>
@@ -390,11 +376,11 @@ END_VAR
       <ProjectStructure>
         <Folder Name="28_SOLID_DIP">
           <Folder Name="Clases_DIP">
-            <Object Name="ConexionSerial" ObjectId="6c1277ce-b871-4ba2-a8de-cddf5f906e8e">
-              <Object Name="EstablecerConexion" ObjectId="88822674-bc04-469b-bad0-d37d7bdc3e59" />
-            </Object>
             <Object Name="ConexionEthernet" ObjectId="f1b3daed-ef99-475d-a42a-a1fa58efccc1">
               <Object Name="EstablecerConexion" ObjectId="30ebfe30-4904-4613-8b60-ac39ab4d8fff" />
+            </Object>
+            <Object Name="ConexionSerial" ObjectId="6c1277ce-b871-4ba2-a8de-cddf5f906e8e">
+              <Object Name="EstablecerConexion" ObjectId="88822674-bc04-469b-bad0-d37d7bdc3e59" />
             </Object>
             <Object Name="Dispositivo" ObjectId="473cbefa-2816-40a9-8a53-8ae3f5bd6201">
               <Object Name="establecerConexion" ObjectId="d8dd92d6-a6fc-45c7-922e-c50c39ef05e5" />
