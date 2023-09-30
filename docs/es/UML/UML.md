@@ -25,8 +25,8 @@ En Codesys y en TwinCAT tendremos el diagrama:
 ### <span style="color:grey">¿La programación orientada a objetos (OOP) y UML siempre tienen que usarse juntos?:</span>
 
  - El uso combinado de OOP y UML ofrece muchos beneficios, aunque no es obligatorio usarlo. La programación de aplicaciones orientada a objetos también es posible sin utilizar UML.  Asimismo, UML también se puede utilizar en proyectos de PLC, que no se basan en la programación orientada a objetos (UML Statechart).
-
- ### <span style="color:grey">¿Cuáles son los beneficios de usar POO y UML juntos?:</span>
+ 
+### <span style="color:grey">¿Cuáles son los beneficios de usar POO y UML juntos?:</span>
 
  - Para aprovechar al máximo la programación orientada a objetos, la estructura de un software orientado a objetos debe diseñarse y crearse antes de la implementación (por ejemplo, qué clases están disponibles, cuál es su relación, qué funcionalidades ofrecen, etc.).  Antes, durante y después de la programación, la documentación ayuda a comprender, analizar y mantener el software.
 
