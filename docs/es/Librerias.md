@@ -19,6 +19,11 @@ Mediante el uso de bibliotecas, podemos administrar el software que hemos creado
 - 🔗 [CoDeSys - How to add libraries and more with Machine Control Studio.](https://www.youtube.com/watch?v=8OGPvyo99p8&t=351s)
 - 🔗 [SPT Application Framework Documentation](https://beckhoff-usa-community.github.io/SPT-Libraries/index.html)
 - 🔗 [Beckhoff.SPT Framework Tutorial Part1.EN](https://www.youtube.com/watch?v=oK4KR1jhLEg)
+
+- 🔗 [Tutorial #17: Eigene CoDeSys Bibliotheken erstellen](https://www.youtube.com/watch?v=vxOG8gydUwU)
+
+- 🔗 [CoDeSys Library Management & Creation](https://www.youtube.com/watch?v=zjzT96DIIKQ)
+- 🔗 [shaswatraj.com, codesys-library-management-step-by-step-guide](https://www.shaswatraj.com/post/codesys-library-management-step-by-step-guide)
 ***
 ### <span style="color:grey">Link al Video de Youtube xxx:</span>
 
@@ -29,3 +34,4 @@ Mediante el uso de bibliotecas, podemos administrar el software que hemos creado
 - 🔗 [Nguyễn Vỹ, Beckhoff & PLC - OOP Properties| TWINCAT3](https://www.youtube.com/watch?v=0pJFQtXVPVY)
 
 - 🔗 [The Benefits of OOP in PLC Programming: A Case Study with a Conveyor System](https://www.linkedin.com/pulse/benefits-oop-plc-programming-case-study-conveyor-system-zhou-gong%3FtrackingId=9ZY5A6ECss6Eb1w64xLmJQ%253D%253D/?trackingId=9ZY5A6ECss6Eb1w64xLmJQ%3D%3D)
+
