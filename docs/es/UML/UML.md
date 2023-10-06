@@ -11,7 +11,7 @@ Los diagramas de estructura representan esquemáticamente la arquitectura del so
 
 En Codesys y en TwinCAT tendremos el diagrama:
 
-- Diagrama de clase UML (tipo: diagrama de estructura)
+- <span style="color:orange">Diagrama de clase UML</span> (tipo: diagrama de estructura)
 
 ### <span style="color:grey">Diagramas de Comportamiento:</span>
 
@@ -19,7 +19,7 @@ Los diagramas de comportamiento son modelos ejecutables con sintaxis y semántic
 
 En Codesys y en TwinCAT tendremos el diagrama:
 
-- UML Statechart (tipo: diagrama de comportamiento)
+- <span style="color:orange">UML Statechart</span> (tipo: diagrama de comportamiento)
 
 ### <span style="color:grey">OOP y UML:</span>
 ### <span style="color:grey">¿La programación orientada a objetos (OOP) y UML siempre tienen que usarse juntos?:</span>
