@@ -41,6 +41,8 @@ que es ejecutado.
 
 - 🔗 [TC09.Beckhoff TwinCAT3 Function Block-Part4 Interface.JP](https://www.youtube.com/watch?v=SAGchtGi3-o)
 
+- 🔗 [Tutorial #20: Einstieg in die objektorientiert Programmierung mit CoDeSys - Teil 3: Interfaces](https://www.youtube.com/watch?v=dKkBzZReIBg)
+
 ***
 ### <span style="color:grey">Link al Video de Youtube 010:</span>
 - 🔗 [010 - OOP IEC 61131-3 PLC -- Interface](https://youtu.be/ix0Amyg9RcU)
