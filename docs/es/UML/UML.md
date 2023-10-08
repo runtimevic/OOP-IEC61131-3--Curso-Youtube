@@ -52,4 +52,4 @@ En Codesys y en TwinCAT tendremos el diagrama:
 - 🔗 [Tutorial sobre UML y herramientas CASE](https://www.youtube.com/watch?v=O_4ATZQrVpw)
 ***
 ### <span style="color:grey">Link al Video de Youtube_29:</span>
-- 🔗 [029 - OOP IEC 61131-3 PLC -- UML - Descripción]()
+- 🔗 [029 - OOP IEC 61131-3 PLC -- UML - Descripción](https://youtu.be/vKxAeP34hGI)

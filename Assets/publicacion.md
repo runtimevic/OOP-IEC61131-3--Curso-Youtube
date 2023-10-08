@@ -2,10 +2,10 @@
 
 Hola,
 Seguimos con el curso de 👩‍💻 OOP IEC 61131-3 PLC 👨‍💻,
-ya esta disponible el Video numero 28 de Youtube:
-en este video veremos la explicación de SOLID - DIP - Principio de Inversión de Dependencia.
+ya esta disponible el Video numero 29 de Youtube:
+en este video veremos la explicación de UML - Lenguaje de Modelado Unificado. (Introducción)
 
-👉 https://youtu.be/Bh-9GLcksPQ
+👉 https://youtu.be/vKxAeP34hGI
 
 🐙 Repositorio de GitHub:
 - 👉 https://github.com/runtimevic/OOP-IEC61131-3--Curso-Youtube
@@ -46,7 +46,8 @@ Lista de Videos del Curso OOP Programación Orientada a Objetos IEC61131-3 PLC:
 - 026 - https://youtu.be/tnghQbIPHs0
 - 027 - https://youtu.be/LnHT4FySEuc
 - 028 - https://youtu.be/Bh-9GLcksPQ
-- 029 -
+- 029 - https://youtu.be/vKxAeP34hGI
+- 030 -
 
 Se busca colaborador para la traducción de la documentación al idioma que desee... 👀
 

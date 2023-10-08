@@ -47,4 +47,5 @@
     - 🔗 [026 - OOP IEC 61131-3 PLC -- SOLID - LSP](https://youtu.be/tnghQbIPHs0)
     - 🔗 [027 - OOP IEC 61131-3 PLC -- SOLID - ISP](https://youtu.be/LnHT4FySEuc)
     - 🔗 [028 - OOP IEC 61131-3 PLC -- SOLID - DIP](https://youtu.be/Bh-9GLcksPQ)
-    - 🔗 [029 - OOP IEC 61131-3 PLC -- UML - Descripción]()
+    - 🔗 [029 - OOP IEC 61131-3 PLC -- UML - Descripción](https://youtu.be/vKxAeP34hGI)
+    - 🔗 [030 - OOP IEC 61131-3 PLC -- UML - Diagrama de Clases]()
