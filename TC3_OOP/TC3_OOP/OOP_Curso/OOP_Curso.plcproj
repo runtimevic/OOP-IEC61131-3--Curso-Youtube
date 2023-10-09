@@ -568,6 +568,7 @@
     <Folder Include="28_SOLID_DIP" />
     <Folder Include="28_SOLID_DIP\Clases_DIP" />
     <Folder Include="28_SOLID_DIP\Interfaces_DIP" />
+    <Folder Include="30_UML_ClassDiagram" />
     <Folder Include="_MAIN" />
   </ItemGroup>
   <ItemGroup>
