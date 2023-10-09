@@ -30,7 +30,7 @@ El lenguaje de modelado unificado (UML) es el estándar establecido en esta áre
 
 Una buena herramienta para describir la jerarquía de herencia de bloques de funciones es el diagrama de clases.
 
-Los diagramas UML se pueden crear directamente en TwinCAT 3. Los cambios en el diagrama UML tienen un efecto directo en las POU. Por lo tanto, los bloques de funciones se pueden modificar y modificar a través del diagrama UML.
+Los diagramas UML se pueden crear directamente en TwinCAT 3. Los cambios en el diagrama UML tienen un efecto directo en las POU. Por lo tanto, los bloques de funciones se pueden modificar a través del diagrama UML.
 
 ***
 Los Modificadores de acceso de los metodos y las propiedades se veran segun la simbologia:(Disponible a partir de la versión de TwinCAT 3.1.4026)
@@ -43,9 +43,9 @@ Los Modificadores de acceso de los metodos y las propiedades se veran segun la s
 ### <span style="color:grey">¿Cómo se representa?:</span>
 - La asociación se representa con una línea que conecta dos clases en un diagrama de clases.
 - Se suele leer como "tiene..."
-- Tipo: Adicionalmente se le puede indicar un verbo para especificar el tipo de asociación.
-- Direccionalidad: Paréntesis angulares se colocan junto al verbo para indicar direccionalidad
-- Multiplicidad: Adicionalmente se pueden utilizar números o rangos que indican cuántas instancias de una clase están asociadas con una instancia de la otra clase.
+- <span style="color:orange">Tipo:</span> Adicionalmente se le puede indicar un verbo para especificar el tipo de asociación.
+- <span style="color:orange">Direccionalidad:</span> Paréntesis angulares se colocan junto al verbo para indicar direccionalidad
+- <span style="color:orange">Multiplicidad:</span> Adicionalmente se pueden utilizar números o rangos que indican cuántas instancias de una clase están asociadas con una instancia de la otra clase.
 
 ![UMLClassDiagramAsociaciones](../imagenes/ClassDiagramAsociaciones.PNG)
 
@@ -76,5 +76,5 @@ Los Modificadores de acceso de los metodos y las propiedades se veran segun la s
 - 🔗 [Curso UML. Diagramas de clases III. Traslado a código I. Vídeo 11](https://www.youtube.com/watch?v=PGZGCT3c23g)
 
 ***
-### <span style="color:grey">Link al Video de Youtube_NNN:</span>
-- 🔗
+### <span style="color:grey">Link al Video de Youtube_30:</span>
+- 🔗 [030 - OOP IEC 61131-3 PLC -- UML - Diagrama de Clases]()
