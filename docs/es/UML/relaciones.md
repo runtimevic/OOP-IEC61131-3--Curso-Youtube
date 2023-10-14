@@ -43,5 +43,5 @@
     - La colaboración se da **a través de una referencia de una clase** con el fin de **lograr un cometido**.
 
 ***
-### <span style="color:grey">Link al Video de Youtube_NNN:</span>
-- 🔗
+### <span style="color:grey">Link al Video de Youtube_31:</span>
+- 🔗 [031 - OOP IEC 61131-3 PLC -- UML - Diagrama de Clases - Relaciones]()

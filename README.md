@@ -49,4 +49,4 @@
     - 🔗 [028 - OOP IEC 61131-3 PLC -- SOLID - DIP](https://youtu.be/Bh-9GLcksPQ)
     - 🔗 [029 - OOP IEC 61131-3 PLC -- UML - Descripción](https://youtu.be/vKxAeP34hGI)
     - 🔗 [030 - OOP IEC 61131-3 PLC -- UML - Diagrama de Clases](https://youtu.be/s2NV8Yt_rdY)
-    - 🔗 [031 - OOP IEC 61131-3 PLC -- UML - Diagrama de Clases Relaciones]()
+    - 🔗 [031 - OOP IEC 61131-3 PLC -- UML - Diagrama de Clases - Relaciones]()
