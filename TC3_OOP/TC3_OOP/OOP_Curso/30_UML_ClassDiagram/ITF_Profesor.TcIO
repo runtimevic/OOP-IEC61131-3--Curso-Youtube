@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.12">
+  <Itf Name="ITF_Profesor" Id="{d32aaf3e-2863-41a1-bb8f-9a6473fe3062}">
+    <Declaration><![CDATA[INTERFACE ITF_Profesor
+]]></Declaration>
+    <Method Name="Fichar" Id="{8fe518c4-ebed-43e7-b643-f2551c6349ce}">
+      <Declaration><![CDATA[METHOD Fichar
+VAR_INPUT
+END_VAR
+]]></Declaration>
+    </Method>
+    <Property Name="Salida" Id="{65cc4ccd-9a72-4d03-be97-7d5471bf5883}">
+      <Declaration><![CDATA[PROPERTY Salida : int]]></Declaration>
+      <Get Name="Get" Id="{0eaf41a3-232c-4d1a-bab1-51134fe50d76}">
+        <Declaration><![CDATA[]]></Declaration>
+      </Get>
+      <Set Name="Set" Id="{df6507f7-5fd9-46a0-aa3d-017dbf527f02}">
+        <Declaration><![CDATA[]]></Declaration>
+      </Set>
+    </Property>
+    <ObjectProperties>
+      <XmlArchive>
+        <Data>
+          <o xml:space="preserve" t="UMLStereoTypeContainerObject">
+            <v n="IsType" t="UMLType">BaseArea</v>
+            <v n="Stereotype">""</v>
+            <d n="Stereotypes" t="Hashtable" />
+          </o>
+        </Data>
+        <TypeList>
+          <Type n="Hashtable">System.Collections.Hashtable</Type>
+          <Type n="String">System.String</Type>
+          <Type n="UMLStereoTypeContainerObject">{30250973-b110-4e31-b562-c102e042dca4}</Type>
+          <Type n="UMLType">{0197b136-405a-42ee-bb27-fd08b621d0cf}</Type>
+        </TypeList>
+      </XmlArchive>
+    </ObjectProperties>
+  </Itf>
+</TcPlcObject>

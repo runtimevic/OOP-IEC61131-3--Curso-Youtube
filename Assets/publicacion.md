@@ -2,10 +2,10 @@
 
 Hola,
 Seguimos con el curso de 👩‍💻 OOP IEC 61131-3 PLC 👨‍💻,
-ya esta disponible el Video numero 29 de Youtube:
-en este video veremos la explicación de UML - Lenguaje de Modelado Unificado. (Introducción)
+ya esta disponible el Video numero 30 de Youtube:
+en este video veremos la explicación de UML - Class Diagram. (Diagrama de Clases)
 
-👉 https://youtu.be/vKxAeP34hGI
+👉 https://youtu.be/s2NV8Yt_rdY
 
 🐙 Repositorio de GitHub:
 - 👉 https://github.com/runtimevic/OOP-IEC61131-3--Curso-Youtube
@@ -47,7 +47,7 @@ Lista de Videos del Curso OOP Programación Orientada a Objetos IEC61131-3 PLC:
 - 027 - https://youtu.be/LnHT4FySEuc
 - 028 - https://youtu.be/Bh-9GLcksPQ
 - 029 - https://youtu.be/vKxAeP34hGI
-- 030 -
+- 030 - https://youtu.be/s2NV8Yt_rdY
 
 Se busca colaborador para la traducción de la documentación al idioma que desee... 👀
 

@@ -77,4 +77,4 @@ Los Modificadores de acceso de los metodos y las propiedades se veran segun la s
 
 ***
 ### <span style="color:grey">Link al Video de Youtube_30:</span>
-- 🔗 [030 - OOP IEC 61131-3 PLC -- UML - Diagrama de Clases]()
+- 🔗 [030 - OOP IEC 61131-3 PLC -- UML - Diagrama de Clases](https://youtu.be/s2NV8Yt_rdY)
