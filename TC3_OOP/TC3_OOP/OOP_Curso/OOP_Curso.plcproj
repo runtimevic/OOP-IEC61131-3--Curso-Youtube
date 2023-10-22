@@ -521,13 +521,22 @@
     <Compile Include="30_UML_ClassDiagram\Profesor.TcPOU">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="31_UML_relaciones\Animal.TcPOU">
-      <SubType>Code</SubType>
-    </Compile>
     <Compile Include="31_UML_relaciones\Ave.TcPOU">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="31_UML_relaciones\ClassDiagram_UML_Relaciones.TcCD">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="31_UML_relaciones\colibri.TcPOU">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="31_UML_relaciones\ITF_Ave.TcIO">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="31_UML_relaciones\paloma.TcPOU">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="31_UML_relaciones\POU.TcPOU">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="PlcTask.TcTTO">
