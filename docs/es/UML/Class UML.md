@@ -3,6 +3,10 @@
 - El diagrama de clases es un diagrama que muestra **"cómo"** se organiza y estructura un sistema.
 - Se enfoca en la estructura interna del sistema y muestra cómo está organizado en términos de clases y objetos.
 - Describe cómo se implementará el sistema desde una perpectiva orientada a objetos.
+
+<span style="color:orange">Esta imagen es un Ejemplo en Codesys de Diagrama de Clases:</span>
+![UML Class Diagram Codesys.PNG](../imagenes/UML_Codesys_ClassDiagram.JPG)
+
 ### <span style="color:grey">¿Para qué sirve?:</span>
 - Representar la estructura del sistema
 - Visualizar relaciones
