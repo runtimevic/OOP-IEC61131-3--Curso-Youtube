@@ -521,6 +521,15 @@
     <Compile Include="30_UML_ClassDiagram\Profesor.TcPOU">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="31_UML_relaciones\Animal.TcPOU">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="31_UML_relaciones\Ave.TcPOU">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="31_UML_relaciones\ClassDiagram_UML_Relaciones.TcCD">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="PlcTask.TcTTO">
       <SubType>Code</SubType>
     </Compile>
@@ -584,7 +593,8 @@
     <Folder Include="28_SOLID_DIP\Clases_DIP" />
     <Folder Include="28_SOLID_DIP\Interfaces_DIP" />
     <Folder Include="30_UML_ClassDiagram" />
-    <Folder Include="31_UML_StateChart" />
+    <Folder Include="32_UML_StateChart" />
+    <Folder Include="31_UML_relaciones" />
     <Folder Include="_MAIN" />
   </ItemGroup>
   <ItemGroup>

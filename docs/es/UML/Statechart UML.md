@@ -20,6 +20,13 @@ Durante la fase de diseño del software, ya puede utilizar el editor de gráfico
 
 - Definir el comportamiento en caso de error.
 ***
+Diagrama de Estado:
+Un diagrama de estado es un formalismo gráfico con el que se puede programar gráficamente una máquina de estados finitos. Una máquina de estados es un sistema que se encuentra continuamente en uno de un número finito de estados en tiempo de ejecución. Las acciones se pueden ejecutar en cada estado. Cuando ocurre un evento, se produce una transición al siguiente estado. También se pueden realizar acciones durante la transición.
+
+En CODESYS , un diagrama de estado es una POU que se crea en el lenguaje de implementación de Statechart . Este tipo de POU se identifica por el_uml_icon_statechart.pngsímbolo en la vista POU o en la vista Dispositivos . Puede crear programas, bloques de funciones, funciones, métodos, acciones o propiedades como diagramas de estado. El editor proporciona elementos para estados, pseudoestados y transiciones.
+
+Tanto los estados como las transiciones pueden llamar métodos o acciones. Los pseudoestados son elementos de control que se utilizan para controlar el proceso, pero no invocan ninguna acción ni método.
+***
 - En TwinCAT para utilizar UML State Chart, se podra utilizar con el TF1910, el cual tendra un coste de licencia segun el Performance Level (PL)
 ***
 ### <span style="color:grey">Links UML State Chart:</span>

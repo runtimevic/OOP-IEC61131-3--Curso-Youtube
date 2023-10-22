@@ -21,6 +21,7 @@
 - Relación estrecha entre clases.
 - Componentes forman un todo.
 - Todo formado por sus componentes. Si todo se elemina, también se eliminan sus componentes.
+- La dependencia entre clases por composición se consigue añadiendo dentro de una clase otra clase en la zona de declaracion de variables (**VAR END_VAR**)
 - Representación en UML: 
     - Se representa por un rombo relleno.
 
@@ -29,6 +30,7 @@
 - A un todo se le agregran componentes.
 - El todo puede existir aunque no existan sus componentes.
 - Los componentes pueden pertenecer a otros todos.
+- La dependencia entre clases por agregación se puede conseguir por la implementacion de interfaces (**IMPLEMENTS**) en una clase y tambien por la Herencia con una clase (**EXTENDS**)
 - Representación en UMl:
     - Se representa por un rombo blanco o sin relleno.    
 
