@@ -111,7 +111,7 @@
                   <v n="AttributeConstraint">""</v>
                   <v n="AttributeReturnType">"REAL"</v>
                   <v n="AttributeParent">{3ad43376-49ab-444b-a93a-f983711d4a1e}</v>
-                  <v n="AttributeObjectGuid">{5aa036ef-874e-45b4-9d31-53b918d06582}</v>
+                  <v n="AttributeObjectGuid">{1d3e4420-9cb7-400d-91fd-828e69d87218}</v>
                   <v n="AttributeStereotype">""</v>
                 </o>
               </l>
@@ -206,7 +206,7 @@
                   <v n="AttributeConstraint">""</v>
                   <v n="AttributeReturnType">"REFERENCE TO Vehiculo"</v>
                   <v n="AttributeParent">{41072200-a029-4fd9-9fad-1cc968b7eeb8}</v>
-                  <v n="AttributeObjectGuid">{5cc080b0-0a8c-4c13-9dc8-2528612c0a33}</v>
+                  <v n="AttributeObjectGuid">{d58f4a23-f4d8-4a2e-a6e9-b47ef252c7ba}</v>
                   <v n="AttributeStereotype">""</v>
                 </o>
               </l>
@@ -301,7 +301,7 @@
                   <v n="AttributeConstraint">""</v>
                   <v n="AttributeReturnType">"REAL"</v>
                   <v n="AttributeParent">{cc8ecd1f-0cd7-4903-9c1f-7a7af02f9dfa}</v>
-                  <v n="AttributeObjectGuid">{0eab82c0-7dfe-45f4-ad54-86b7ebf952dd}</v>
+                  <v n="AttributeObjectGuid">{57a89b20-53c8-4395-854c-027bcbae4b77}</v>
                   <v n="AttributeStereotype">""</v>
                 </o>
               </l>

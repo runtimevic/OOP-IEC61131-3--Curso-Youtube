@@ -31,7 +31,7 @@
                   <v n="AttributeConstraint">""</v>
                   <v n="AttributeReturnType">"BOOL"</v>
                   <v n="AttributeParent">{3b3328bf-e8d6-4166-bc97-3be05e2d34a6}</v>
-                  <v n="AttributeObjectGuid">{6685d75f-ddf3-4882-91eb-c2b7f3da24d4}</v>
+                  <v n="AttributeObjectGuid">{fa4daed7-871b-43d6-a72a-d5453168a4d6}</v>
                   <v n="AttributeStereotype">""</v>
                 </o>
                 <o>
@@ -45,7 +45,7 @@
                   <v n="AttributeConstraint">""</v>
                   <v n="AttributeReturnType">"INT"</v>
                   <v n="AttributeParent">{3b3328bf-e8d6-4166-bc97-3be05e2d34a6}</v>
-                  <v n="AttributeObjectGuid">{ae468dde-42a4-4b10-b05f-f0af2c2fbfb1}</v>
+                  <v n="AttributeObjectGuid">{f24bc3d4-ace5-4013-8718-99747e3f14ef}</v>
                   <v n="AttributeStereotype">""</v>
                 </o>
               </l>
@@ -120,7 +120,7 @@
                   <v n="AttributeConstraint">""</v>
                   <v n="AttributeReturnType">"STRING"</v>
                   <v n="AttributeParent">{b7884ec5-07e8-4a6e-9269-8fa6a6554ecf}</v>
-                  <v n="AttributeObjectGuid">{aff10b2a-fa61-46f4-aaa9-7a45ecee4cd7}</v>
+                  <v n="AttributeObjectGuid">{48cadc1d-4b53-4149-b6eb-236bbd3362cf}</v>
                   <v n="AttributeStereotype">""</v>
                 </o>
                 <o>

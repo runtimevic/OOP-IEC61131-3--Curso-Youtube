@@ -104,7 +104,7 @@
                   <v n="AttributeConstraint">""</v>
                   <v n="AttributeReturnType">"REAL"</v>
                   <v n="AttributeParent">{53750461-4c20-4932-892c-560a881fa5db}</v>
-                  <v n="AttributeObjectGuid">{ce47def8-1143-4a94-846d-e971399fe0d2}</v>
+                  <v n="AttributeObjectGuid">{a3bf54b7-8304-447b-8ebb-03dce2d77899}</v>
                   <v n="AttributeStereotype">""</v>
                 </o>
                 <o>
@@ -118,7 +118,7 @@
                   <v n="AttributeConstraint">""</v>
                   <v n="AttributeReturnType">"REAL"</v>
                   <v n="AttributeParent">{53750461-4c20-4932-892c-560a881fa5db}</v>
-                  <v n="AttributeObjectGuid">{a72089ee-807f-4254-a217-1973ca0c10e0}</v>
+                  <v n="AttributeObjectGuid">{754f2d8a-8824-45dc-afd4-e837e7d783c9}</v>
                   <v n="AttributeStereotype">""</v>
                 </o>
                 <o>
@@ -132,7 +132,7 @@
                   <v n="AttributeConstraint">""</v>
                   <v n="AttributeReturnType">"TIME"</v>
                   <v n="AttributeParent">{53750461-4c20-4932-892c-560a881fa5db}</v>
-                  <v n="AttributeObjectGuid">{4d0057dc-ee6a-46df-92fc-b353afbf6eb8}</v>
+                  <v n="AttributeObjectGuid">{83c5b564-3ddf-4782-a35d-e18bc09e70e0}</v>
                   <v n="AttributeStereotype">""</v>
                 </o>
               </l>
@@ -305,7 +305,7 @@
                   <v n="AttributeConstraint">""</v>
                   <v n="AttributeReturnType">"REAL"</v>
                   <v n="AttributeParent">{6910a7ef-35b8-4bab-b02d-061ddfbf462e}</v>
-                  <v n="AttributeObjectGuid">{fc90d9be-1684-4d1f-9095-be80c9e0277c}</v>
+                  <v n="AttributeObjectGuid">{71796ea1-1b3b-4df1-9d49-60d223f188bb}</v>
                   <v n="AttributeStereotype">""</v>
                 </o>
                 <o>
@@ -319,7 +319,7 @@
                   <v n="AttributeConstraint">""</v>
                   <v n="AttributeReturnType">"REAL"</v>
                   <v n="AttributeParent">{6910a7ef-35b8-4bab-b02d-061ddfbf462e}</v>
-                  <v n="AttributeObjectGuid">{d52ac666-303d-4b89-927d-3e6a00e8d560}</v>
+                  <v n="AttributeObjectGuid">{73ed21ac-23a5-4395-8f81-6efed9e96805}</v>
                   <v n="AttributeStereotype">""</v>
                 </o>
               </l>
@@ -407,7 +407,7 @@
                   <v n="AttributeConstraint">""</v>
                   <v n="AttributeReturnType">"REAL"</v>
                   <v n="AttributeParent">{a11a740d-3e87-4b3a-bb09-55f808b82ec4}</v>
-                  <v n="AttributeObjectGuid">{b093a954-e640-4719-b51d-2ac9d010461c}</v>
+                  <v n="AttributeObjectGuid">{ea496ec9-7f99-4a0d-ba70-c7bf99a2dc1d}</v>
                   <v n="AttributeStereotype">""</v>
                 </o>
                 <o>
@@ -421,7 +421,7 @@
                   <v n="AttributeConstraint">""</v>
                   <v n="AttributeReturnType">"TIME"</v>
                   <v n="AttributeParent">{a11a740d-3e87-4b3a-bb09-55f808b82ec4}</v>
-                  <v n="AttributeObjectGuid">{f6ff4e34-01f5-4d00-87bb-7461b2afbf1f}</v>
+                  <v n="AttributeObjectGuid">{014fa136-7a3d-4daa-a9dd-6678b5910bfc}</v>
                   <v n="AttributeStereotype">""</v>
                 </o>
               </l>

@@ -93,4 +93,4 @@ los tres denotan una relación entre objetos y solo difieren en su fuerza, tambi
 - 🔗 [Los 5 mejores libros y cursos de UML para que programadores de Java aprendan diseño de software en 2023](https://medium.com/javarevisited/5-best-uml-books-and-courses-for-java-programmers-13c551a9235d)
 ***
 ### <span style="color:grey">Link al Video de Youtube_31:</span>
-- 🔗 [031 - OOP IEC 61131-3 PLC -- UML - Diagrama de Clases - Relaciones]()
+- 🔗 [031 - OOP IEC 61131-3 PLC -- UML - Diagrama de Clases - Relaciones](https://youtu.be/2cPa-f8-BFY)

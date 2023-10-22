@@ -37,4 +37,4 @@ Tanto los estados como las transiciones pueden llamar métodos o acciones. Los p
 - 🔗 [www.infoplc.net, el-nuevo-uml-state-chart-en](https://www.infoplc.net/descargas/42-codesys/2080-lenguajes-de-programaci%C3%B3n-de-codesys-incluido-el-nuevo-uml-state-chart-en)
 ***
 ### <span style="color:grey">Link al Video de Youtube_NNN:</span>
-- 🔗
+- 🔗 [032 - OOP IEC 61131-3 PLC -- UML - Diagrama de Estado - StateChart]()

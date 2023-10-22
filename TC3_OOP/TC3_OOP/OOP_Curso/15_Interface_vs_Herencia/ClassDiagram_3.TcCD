@@ -131,7 +131,7 @@
                   <v n="AttributeConstraint">""</v>
                   <v n="AttributeReturnType">"INT"</v>
                   <v n="AttributeParent">{0c319140-eb32-41e5-927e-020d0f519e22}</v>
-                  <v n="AttributeObjectGuid">{6a889fde-72ec-4e29-9887-8489255daa71}</v>
+                  <v n="AttributeObjectGuid">{0f6d8111-8688-4b07-acb5-c82d4044c1b2}</v>
                   <v n="AttributeStereotype">""</v>
                 </o>
                 <o>
@@ -145,7 +145,7 @@
                   <v n="AttributeConstraint">""</v>
                   <v n="AttributeReturnType">"INT"</v>
                   <v n="AttributeParent">{0c319140-eb32-41e5-927e-020d0f519e22}</v>
-                  <v n="AttributeObjectGuid">{2577a2f6-04c3-4402-a552-e5a940bfa60f}</v>
+                  <v n="AttributeObjectGuid">{ecad5351-7efd-4096-b34d-989449799555}</v>
                   <v n="AttributeStereotype">""</v>
                 </o>
                 <o>
@@ -159,7 +159,7 @@
                   <v n="AttributeConstraint">""</v>
                   <v n="AttributeReturnType">"INT"</v>
                   <v n="AttributeParent">{0c319140-eb32-41e5-927e-020d0f519e22}</v>
-                  <v n="AttributeObjectGuid">{4d8212c8-5041-481e-978d-ff72af72d131}</v>
+                  <v n="AttributeObjectGuid">{a79613c4-fbb0-4f8c-beb9-0296a40259e9}</v>
                   <v n="AttributeStereotype">""</v>
                 </o>
                 <o>
@@ -537,7 +537,7 @@
                   <v n="AttributeConstraint">""</v>
                   <v n="AttributeReturnType">"BOOL"</v>
                   <v n="AttributeParent">{ffc6ba41-6e19-4d67-9484-e64f63cbe576}</v>
-                  <v n="AttributeObjectGuid">{2add535c-9ff8-4e67-9913-883cd41b0a19}</v>
+                  <v n="AttributeObjectGuid">{c1ff2269-af49-493f-928d-5291683a8c56}</v>
                   <v n="AttributeStereotype">""</v>
                 </o>
                 <o>
@@ -551,7 +551,7 @@
                   <v n="AttributeConstraint">""</v>
                   <v n="AttributeReturnType">"INT"</v>
                   <v n="AttributeParent">{ffc6ba41-6e19-4d67-9484-e64f63cbe576}</v>
-                  <v n="AttributeObjectGuid">{afb417a3-b2c2-4219-8d09-bb5034722c20}</v>
+                  <v n="AttributeObjectGuid">{423f2c1f-5f8e-42a5-9156-ca25f6819a01}</v>
                   <v n="AttributeStereotype">""</v>
                 </o>
                 <o>
@@ -565,7 +565,7 @@
                   <v n="AttributeConstraint">""</v>
                   <v n="AttributeReturnType">"INT"</v>
                   <v n="AttributeParent">{ffc6ba41-6e19-4d67-9484-e64f63cbe576}</v>
-                  <v n="AttributeObjectGuid">{4860efd6-112c-4e17-8bbf-c12728ff44c2}</v>
+                  <v n="AttributeObjectGuid">{2577c381-4010-4c23-8e14-f9327ac16bc7}</v>
                   <v n="AttributeStereotype">""</v>
                 </o>
                 <o>
@@ -589,11 +589,11 @@
                   <v n="isInoutVar">false</v>
                   <v n="isLocalVar">false</v>
                   <v n="bIsMethod">true</v>
-                  <v n="AttribtueName">"ScaledAnalog"</v>
+                  <v n="AttribtueName">"Coil"</v>
                   <v n="AttributeConstraint">""</v>
-                  <v n="AttributeReturnType">"INT"</v>
+                  <v n="AttributeReturnType">"BOOL"</v>
                   <v n="AttributeParent">{ffc6ba41-6e19-4d67-9484-e64f63cbe576}</v>
-                  <v n="AttributeObjectGuid">{8d0b6189-b7fa-4f1d-a6a2-351ed9cdcc53}</v>
+                  <v n="AttributeObjectGuid">{fa8eb037-d6ab-4377-bff6-cc9476d5c0df}</v>
                   <v n="AttributeStereotype">"Property"</v>
                 </o>
                 <o>
@@ -603,11 +603,11 @@
                   <v n="isInoutVar">false</v>
                   <v n="isLocalVar">false</v>
                   <v n="bIsMethod">true</v>
-                  <v n="AttribtueName">"Coil"</v>
+                  <v n="AttribtueName">"ScaledAnalog"</v>
                   <v n="AttributeConstraint">""</v>
-                  <v n="AttributeReturnType">"BOOL"</v>
+                  <v n="AttributeReturnType">"INT"</v>
                   <v n="AttributeParent">{ffc6ba41-6e19-4d67-9484-e64f63cbe576}</v>
-                  <v n="AttributeObjectGuid">{fa8eb037-d6ab-4377-bff6-cc9476d5c0df}</v>
+                  <v n="AttributeObjectGuid">{8d0b6189-b7fa-4f1d-a6a2-351ed9cdcc53}</v>
                   <v n="AttributeStereotype">"Property"</v>
                 </o>
               </l>

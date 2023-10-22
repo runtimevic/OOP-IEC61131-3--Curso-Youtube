@@ -31,7 +31,7 @@
                   <v n="AttributeConstraint">""</v>
                   <v n="AttributeReturnType">"ST_RegistroDeTiempoEmpleado"</v>
                   <v n="AttributeParent">{1d7594a7-13bf-43a9-86ea-be1da9c4295d}</v>
-                  <v n="AttributeObjectGuid">{cc16a4ed-0945-46e8-a559-76f594dbd1cf}</v>
+                  <v n="AttributeObjectGuid">{95d3991f-8dc8-446c-b9c2-6f770f19e99b}</v>
                   <v n="AttributeStereotype">""</v>
                 </o>
                 <o>
@@ -45,7 +45,7 @@
                   <v n="AttributeConstraint">""</v>
                   <v n="AttributeReturnType">"ST_Empleado"</v>
                   <v n="AttributeParent">{1d7594a7-13bf-43a9-86ea-be1da9c4295d}</v>
-                  <v n="AttributeObjectGuid">{32018722-2336-43e5-a70a-f8a52c7eba1c}</v>
+                  <v n="AttributeObjectGuid">{abf5b7c5-e4c5-4b7f-a8f2-bc800ea170f6}</v>
                   <v n="AttributeStereotype">""</v>
                 </o>
                 <o>
@@ -59,7 +59,7 @@
                   <v n="AttributeConstraint">""</v>
                   <v n="AttributeReturnType">"ST_Horario"</v>
                   <v n="AttributeParent">{1d7594a7-13bf-43a9-86ea-be1da9c4295d}</v>
-                  <v n="AttributeObjectGuid">{1f9ddc83-9678-4476-8ecc-1f3dd80c3924}</v>
+                  <v n="AttributeObjectGuid">{73d2a667-029f-4178-a9f8-16e5fca0a638}</v>
                   <v n="AttributeStereotype">""</v>
                 </o>
                 <o>
@@ -208,7 +208,7 @@
                   <v n="AttributeConstraint">""</v>
                   <v n="AttributeReturnType">"STRING"</v>
                   <v n="AttributeParent">{70311c9f-0831-4fd9-b187-c603d6d25d14}</v>
-                  <v n="AttributeObjectGuid">{6d56aa50-7668-4b7d-8a87-9e242477e8b6}</v>
+                  <v n="AttributeObjectGuid">{874bc0d1-fb07-4d54-b559-e49c90794abb}</v>
                   <v n="AttributeStereotype">""</v>
                 </o>
                 <o>
@@ -222,7 +222,7 @@
                   <v n="AttributeConstraint">""</v>
                   <v n="AttributeReturnType">"STRING"</v>
                   <v n="AttributeParent">{70311c9f-0831-4fd9-b187-c603d6d25d14}</v>
-                  <v n="AttributeObjectGuid">{cd79689c-fb80-473a-8aa7-526656e53694}</v>
+                  <v n="AttributeObjectGuid">{a31a6e7d-59b7-4501-a053-d59b44853912}</v>
                   <v n="AttributeStereotype">""</v>
                 </o>
                 <o>
@@ -236,7 +236,7 @@
                   <v n="AttributeConstraint">""</v>
                   <v n="AttributeReturnType">"STRING"</v>
                   <v n="AttributeParent">{70311c9f-0831-4fd9-b187-c603d6d25d14}</v>
-                  <v n="AttributeObjectGuid">{e89a2931-a57c-4ad9-9432-065dd8c8f829}</v>
+                  <v n="AttributeObjectGuid">{ce3f5678-b39e-4d32-b140-4f5a09c0d494}</v>
                   <v n="AttributeStereotype">""</v>
                 </o>
               </l>
@@ -311,7 +311,7 @@
                   <v n="AttributeConstraint">""</v>
                   <v n="AttributeReturnType">"ST_Empleado"</v>
                   <v n="AttributeParent">{9f446250-ab40-4559-9646-3742b9b855d1}</v>
-                  <v n="AttributeObjectGuid">{7937dfdc-ef85-479a-ae65-b425fa0b118b}</v>
+                  <v n="AttributeObjectGuid">{5ba33a3e-d00d-4dec-8dfc-c4bc5abab394}</v>
                   <v n="AttributeStereotype">""</v>
                 </o>
                 <o>
@@ -325,7 +325,7 @@
                   <v n="AttributeConstraint">""</v>
                   <v n="AttributeReturnType">"ST_Horario"</v>
                   <v n="AttributeParent">{9f446250-ab40-4559-9646-3742b9b855d1}</v>
-                  <v n="AttributeObjectGuid">{8232ed6d-2d4a-4483-b987-99c7ec9b9766}</v>
+                  <v n="AttributeObjectGuid">{b42b554f-ed79-4940-9d8a-1ba44eeac90d}</v>
                   <v n="AttributeStereotype">""</v>
                 </o>
               </l>
@@ -400,7 +400,7 @@
                   <v n="AttributeConstraint">""</v>
                   <v n="AttributeReturnType">"ST_Empleado"</v>
                   <v n="AttributeParent">{c9fd69cc-780b-4a7a-a81b-af4317d13695}</v>
-                  <v n="AttributeObjectGuid">{3b39a9d7-a17b-44d7-8e41-6f2269773c9b}</v>
+                  <v n="AttributeObjectGuid">{486d236d-9b57-4273-8bb1-300cf8d2a1d5}</v>
                   <v n="AttributeStereotype">""</v>
                 </o>
                 <o>
@@ -414,7 +414,7 @@
                   <v n="AttributeConstraint">""</v>
                   <v n="AttributeReturnType">"ST_Empleado"</v>
                   <v n="AttributeParent">{c9fd69cc-780b-4a7a-a81b-af4317d13695}</v>
-                  <v n="AttributeObjectGuid">{28a08424-e954-49d0-8867-840e951b17ce}</v>
+                  <v n="AttributeObjectGuid">{837e6cba-06a6-483e-a4d5-73c60c452ef0}</v>
                   <v n="AttributeStereotype">""</v>
                 </o>
                 <o>
@@ -563,7 +563,7 @@
                   <v n="AttributeConstraint">""</v>
                   <v n="AttributeReturnType">"DATE_AND_TIME"</v>
                   <v n="AttributeParent">{ee93e72c-752a-438b-ba32-482fab7926b6}</v>
-                  <v n="AttributeObjectGuid">{f6a026be-cfc4-4149-92de-42c8e41bc040}</v>
+                  <v n="AttributeObjectGuid">{8a579e61-3506-431d-a3c3-b52ae960e65d}</v>
                   <v n="AttributeStereotype">""</v>
                 </o>
                 <o>
@@ -577,7 +577,7 @@
                   <v n="AttributeConstraint">""</v>
                   <v n="AttributeReturnType">"DATE_AND_TIME"</v>
                   <v n="AttributeParent">{ee93e72c-752a-438b-ba32-482fab7926b6}</v>
-                  <v n="AttributeObjectGuid">{18061942-524c-4238-94b5-79ce054ffe1b}</v>
+                  <v n="AttributeObjectGuid">{6d7b6d37-8c04-43cf-82f7-c403afead247}</v>
                   <v n="AttributeStereotype">""</v>
                 </o>
               </l>

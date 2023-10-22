@@ -31,7 +31,7 @@
                   <v n="AttributeConstraint">""</v>
                   <v n="AttributeReturnType">"I_Conexion"</v>
                   <v n="AttributeParent">{473cbefa-2816-40a9-8a53-8ae3f5bd6201}</v>
-                  <v n="AttributeObjectGuid">{e25fb366-f776-41eb-bc8c-d43d04f45399}</v>
+                  <v n="AttributeObjectGuid">{95c2aa8e-66b6-4131-a5a4-79462ad2ab8b}</v>
                   <v n="AttributeStereotype">""</v>
                 </o>
               </l>
@@ -150,7 +150,7 @@
                   <v n="AttributeConstraint">""</v>
                   <v n="AttributeReturnType">"DINT"</v>
                   <v n="AttributeParent">{6c1277ce-b871-4ba2-a8de-cddf5f906e8e}</v>
-                  <v n="AttributeObjectGuid">{d8eced44-6d89-41df-93c6-cfba2aed3f8f}</v>
+                  <v n="AttributeObjectGuid">{2e8dfb4d-7fcf-4352-a2dd-58eec52affc8}</v>
                   <v n="AttributeStereotype">""</v>
                 </o>
               </l>
@@ -311,7 +311,7 @@
                   <v n="AttributeConstraint">""</v>
                   <v n="AttributeReturnType">"DINT"</v>
                   <v n="AttributeParent">{f1b3daed-ef99-475d-a42a-a1fa58efccc1}</v>
-                  <v n="AttributeObjectGuid">{e1f92936-736d-4950-8aa2-71ee918c25ba}</v>
+                  <v n="AttributeObjectGuid">{e7f4af05-9246-4c40-993f-37b4dae0c7c3}</v>
                   <v n="AttributeStereotype">""</v>
                 </o>
               </l>

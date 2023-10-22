@@ -1,0 +1,302 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<project xmlns="http://www.plcopen.org/xml/tc6_0200">
+  <fileHeader companyName="Beckhoff Automation GmbH" productName="TwinCAT PLC Control" productVersion="3.5.13.21" creationDateTime="2023-10-22T17:41:31.5511473" />
+  <contentHeader name="OOP_Curso" modificationDateTime="2023-10-22T17:41:31.557005">
+    <coordinateInfo>
+      <fbd>
+        <scaling x="1" y="1" />
+      </fbd>
+      <ld>
+        <scaling x="1" y="1" />
+      </ld>
+      <sfc>
+        <scaling x="1" y="1" />
+      </sfc>
+    </coordinateInfo>
+    <addData>
+      <data name="http://www.3s-software.com/plcopenxml/projectinformation" handleUnknown="implementation">
+        <ProjectInformation />
+      </data>
+    </addData>
+  </contentHeader>
+  <types>
+    <dataTypes />
+    <pous>
+      <pou name="Corazon" pouType="functionBlock">
+        <interface>
+          <localVars>
+            <variable name="VarHumano">
+              <type>
+                <derived name="Humano" />
+              </type>
+            </variable>
+            <variable name="pHumano">
+              <type>
+                <pointer>
+                  <baseType>
+                    <derived name="Humano" />
+                  </baseType>
+                </pointer>
+              </type>
+            </variable>
+            <variable name="pHumano16">
+              <type>
+                <derived name="REFERENCE TO Humano" />
+              </type>
+            </variable>
+          </localVars>
+        </interface>
+        <body>
+          <ST>
+            <xhtml xmlns="http://www.w3.org/1999/xhtml" />
+          </ST>
+        </body>
+        <addData>
+          <data name="http://www.3s-software.com/plcopenxml/interfaceasplaintext" handleUnknown="implementation">
+            <InterfaceAsPlainText>
+              <xhtml xmlns="http://www.w3.org/1999/xhtml">FUNCTION_BLOCK Corazon
+VAR_INPUT
+END_VAR
+VAR_OUTPUT
+END_VAR
+VAR
+	VarHumano: Humano;
+	pHumano: POINTER TO Humano;
+	pHumano16: REFERENCE TO Humano;
+END_VAR
+</xhtml>
+            </InterfaceAsPlainText>
+          </data>
+          <data name="http://www.3s-software.com/plcopenxml/objectid" handleUnknown="discard">
+            <ObjectId>2ac7dfa3-56a7-4936-b4e8-6ace6572c042</ObjectId>
+          </data>
+        </addData>
+      </pou>
+      <pou name="Hombre" pouType="functionBlock">
+        <interface>
+          <addData>
+            <data name="http://www.3s-software.com/plcopenxml/pouinheritance" handleUnknown="implementation">
+              <Inheritance>
+                <Extends>Humano</Extends>
+              </Inheritance>
+            </data>
+          </addData>
+        </interface>
+        <body>
+          <ST>
+            <xhtml xmlns="http://www.w3.org/1999/xhtml" />
+          </ST>
+        </body>
+        <addData>
+          <data name="http://www.3s-software.com/plcopenxml/interfaceasplaintext" handleUnknown="implementation">
+            <InterfaceAsPlainText>
+              <xhtml xmlns="http://www.w3.org/1999/xhtml">FUNCTION_BLOCK Hombre EXTENDS Humano
+VAR_INPUT
+END_VAR
+VAR_OUTPUT
+END_VAR
+VAR
+END_VAR
+</xhtml>
+            </InterfaceAsPlainText>
+          </data>
+          <data name="http://www.3s-software.com/plcopenxml/objectid" handleUnknown="discard">
+            <ObjectId>35c1169d-1d2d-4a32-a7f1-2fe90d2d2b2c</ObjectId>
+          </data>
+        </addData>
+      </pou>
+      <pou name="Humano" pouType="functionBlock">
+        <interface>
+          <addData>
+            <data name="http://www.3s-software.com/plcopenxml/pouinheritance" handleUnknown="implementation">
+              <Inheritance>
+                <Implements>I_Humano</Implements>
+              </Inheritance>
+            </data>
+          </addData>
+        </interface>
+        <body>
+          <ST>
+            <xhtml xmlns="http://www.w3.org/1999/xhtml" />
+          </ST>
+        </body>
+        <addData>
+          <data name="http://www.3s-software.com/plcopenxml/method" handleUnknown="implementation">
+            <Method name="Correr" ObjectId="ab751311-0c3f-42a9-aced-90d53b2c17b9">
+              <interface />
+              <body>
+                <ST>
+                  <xhtml xmlns="http://www.w3.org/1999/xhtml" />
+                </ST>
+              </body>
+              <InterfaceAsPlainText>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">{warning 'Agregar implementación de método'}
+METHOD Correr
+</xhtml>
+              </InterfaceAsPlainText>
+              <addData />
+            </Method>
+          </data>
+          <data name="http://www.3s-software.com/plcopenxml/property" handleUnknown="implementation">
+            <Property name="Nombre" ObjectId="e40449f4-a3e0-409c-92f6-4841bff99f06">
+              <interface>
+                <returnType>
+                  <string />
+                </returnType>
+              </interface>
+              <GetAccessor>
+                <interface />
+                <body>
+                  <ST>
+                    <xhtml xmlns="http://www.w3.org/1999/xhtml" />
+                  </ST>
+                </body>
+                <InterfaceAsPlainText>
+                  <xhtml xmlns="http://www.w3.org/1999/xhtml">VAR
+END_VAR
+</xhtml>
+                </InterfaceAsPlainText>
+                <addData />
+              </GetAccessor>
+              <SetAccessor>
+                <interface />
+                <body>
+                  <ST>
+                    <xhtml xmlns="http://www.w3.org/1999/xhtml" />
+                  </ST>
+                </body>
+                <InterfaceAsPlainText>
+                  <xhtml xmlns="http://www.w3.org/1999/xhtml">VAR
+END_VAR
+</xhtml>
+                </InterfaceAsPlainText>
+                <addData />
+              </SetAccessor>
+              <InterfaceAsPlainText>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">{warning 'Agregar implementación de propiedad'}
+PROPERTY Nombre : STRING
+</xhtml>
+              </InterfaceAsPlainText>
+              <addData />
+            </Property>
+          </data>
+          <data name="http://www.3s-software.com/plcopenxml/interfaceasplaintext" handleUnknown="implementation">
+            <InterfaceAsPlainText>
+              <xhtml xmlns="http://www.w3.org/1999/xhtml">FUNCTION_BLOCK Humano IMPLEMENTS I_Humano
+VAR_INPUT
+END_VAR
+VAR_OUTPUT
+END_VAR
+VAR
+END_VAR
+</xhtml>
+            </InterfaceAsPlainText>
+          </data>
+          <data name="http://www.3s-software.com/plcopenxml/objectid" handleUnknown="discard">
+            <ObjectId>d4a32384-1ff2-4dfd-8276-2238a328a67c</ObjectId>
+          </data>
+        </addData>
+      </pou>
+      <pou name="Sangre" pouType="functionBlock">
+        <interface>
+          <localVars>
+            <variable name="VarHumano">
+              <type>
+                <derived name="Humano" />
+              </type>
+            </variable>
+          </localVars>
+        </interface>
+        <body>
+          <ST>
+            <xhtml xmlns="http://www.w3.org/1999/xhtml" />
+          </ST>
+        </body>
+        <addData>
+          <data name="http://www.3s-software.com/plcopenxml/interfaceasplaintext" handleUnknown="implementation">
+            <InterfaceAsPlainText>
+              <xhtml xmlns="http://www.w3.org/1999/xhtml">FUNCTION_BLOCK Sangre
+VAR_INPUT
+END_VAR
+VAR_OUTPUT
+END_VAR
+VAR
+	VarHumano: Humano;
+END_VAR
+</xhtml>
+            </InterfaceAsPlainText>
+          </data>
+          <data name="http://www.3s-software.com/plcopenxml/objectid" handleUnknown="discard">
+            <ObjectId>6d88db65-9f35-4676-beca-8e0c4ab5fbac</ObjectId>
+          </data>
+        </addData>
+      </pou>
+    </pous>
+  </types>
+  <instances>
+    <configurations />
+  </instances>
+  <addData>
+    <data name="http://www.3s-software.com/plcopenxml/interface" handleUnknown="implementation">
+      <Interface name="I_Humano" ObjectId="98075f32-8b2f-4edb-a073-71d3efcc29ac">
+        <Methods>
+          <Method name="Correr" ObjectId="4cc6fa0e-9db5-4ae9-a122-04ea480348ac">
+            <interface />
+            <InterfaceAsPlainText>
+              <xhtml xmlns="http://www.w3.org/1999/xhtml">METHOD Correr
+VAR_INPUT
+END_VAR
+</xhtml>
+            </InterfaceAsPlainText>
+            <addData />
+          </Method>
+        </Methods>
+        <Properties>
+          <Property name="Nombre" ObjectId="89534d93-73f5-46a3-8e7f-76e7fc424d65">
+            <interface>
+              <returnType>
+                <string />
+              </returnType>
+            </interface>
+            <SetAccessor>
+              <InterfaceAsPlainText>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml" />
+              </InterfaceAsPlainText>
+            </SetAccessor>
+            <GetAccessor>
+              <InterfaceAsPlainText>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml" />
+              </InterfaceAsPlainText>
+            </GetAccessor>
+            <InterfaceAsPlainText>
+              <xhtml xmlns="http://www.w3.org/1999/xhtml">PROPERTY Nombre : STRING</xhtml>
+            </InterfaceAsPlainText>
+            <addData />
+          </Property>
+        </Properties>
+        <InterfaceAsPlainText>
+          <xhtml xmlns="http://www.w3.org/1999/xhtml">INTERFACE I_Humano
+</xhtml>
+        </InterfaceAsPlainText>
+        <addData />
+      </Interface>
+    </data>
+    <data name="http://www.3s-software.com/plcopenxml/projectstructure" handleUnknown="discard">
+      <ProjectStructure>
+        <Folder Name="31_UML_relaciones">
+          <Object Name="Humano" ObjectId="d4a32384-1ff2-4dfd-8276-2238a328a67c">
+            <Object Name="Nombre" ObjectId="e40449f4-a3e0-409c-92f6-4841bff99f06" />
+            <Object Name="Correr" ObjectId="ab751311-0c3f-42a9-aced-90d53b2c17b9" />
+          </Object>
+          <Object Name="Corazon" ObjectId="2ac7dfa3-56a7-4936-b4e8-6ace6572c042" />
+          <Object Name="Sangre" ObjectId="6d88db65-9f35-4676-beca-8e0c4ab5fbac" />
+          <Object Name="I_Humano" ObjectId="98075f32-8b2f-4edb-a073-71d3efcc29ac">
+            <Object Name="Nombre" ObjectId="89534d93-73f5-46a3-8e7f-76e7fc424d65" />
+            <Object Name="Correr" ObjectId="4cc6fa0e-9db5-4ae9-a122-04ea480348ac" />
+          </Object>
+          <Object Name="Hombre" ObjectId="35c1169d-1d2d-4a32-a7f1-2fe90d2d2b2c" />
+        </Folder>
+      </ProjectStructure>
+    </data>
+  </addData>
+</project>

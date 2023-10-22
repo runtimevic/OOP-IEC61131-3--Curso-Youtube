@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.12">
+  <Itf Name="I_Humano" Id="{98075f32-8b2f-4edb-a073-71d3efcc29ac}">
+    <Declaration><![CDATA[INTERFACE I_Humano
+]]></Declaration>
+    <Method Name="Correr" Id="{4cc6fa0e-9db5-4ae9-a122-04ea480348ac}">
+      <Declaration><![CDATA[METHOD Correr
+VAR_INPUT
+END_VAR
+]]></Declaration>
+    </Method>
+    <Property Name="Nombre" Id="{89534d93-73f5-46a3-8e7f-76e7fc424d65}">
+      <Declaration><![CDATA[PROPERTY Nombre : STRING]]></Declaration>
+      <Get Name="Get" Id="{299b0a8d-6f62-4b1d-aba1-1f8f526f17d4}">
+        <Declaration><![CDATA[]]></Declaration>
+      </Get>
+      <Set Name="Set" Id="{81c806db-db62-4cce-84aa-677c40aa1d1a}">
+        <Declaration><![CDATA[]]></Declaration>
+      </Set>
+    </Property>
+    <ObjectProperties>
+      <XmlArchive>
+        <Data>
+          <o xml:space="preserve" t="UMLStereoTypeContainerObject">
+            <v n="IsType" t="UMLType">BaseArea</v>
+            <v n="Stereotype">""</v>
+            <d n="Stereotypes" t="Hashtable" />
+          </o>
+        </Data>
+        <TypeList>
+          <Type n="Hashtable">System.Collections.Hashtable</Type>
+          <Type n="String">System.String</Type>
+          <Type n="UMLStereoTypeContainerObject">{30250973-b110-4e31-b562-c102e042dca4}</Type>
+          <Type n="UMLType">{0197b136-405a-42ee-bb27-fd08b621d0cf}</Type>
+        </TypeList>
+      </XmlArchive>
+    </ObjectProperties>
+  </Itf>
+</TcPlcObject>
