@@ -9,8 +9,8 @@ En la programación orientada a objetos, un objeto se relaciona con otro para ut
 
 Aquí hay notaciones UML para un tipo diferente de dependencia entre las dos clases.
 
-![UML_Notations1](../imagenes/UML_Notations.png)
-![UML_Notations2](../imagenes/UML_Notations.jpg)
+![UML_Notations1](../imagenes/UML_Notations_1.png)
+![UML_Notations2](../imagenes/UML_Notations_2.JPG)
 
 ### <span style="color:grey">Clasificación según la Dependencia entre Clases:</span>
 
@@ -21,19 +21,21 @@ Aquí hay notaciones UML para un tipo diferente de dependencia entre las dos cla
 - Una relación de asociación entre dos clases es una relación **"tiene un"**. 
 
 - Ejemplos:
+
+    - Un libro tiene Paginas.
   
-  - Un Humano tiene corazón y sangre.(Composición)
+    - Un Humano tiene corazón y sangre.(Composición)
 
-  Por ejemplo, la clase Humano es una composición de varias partes del cuerpo, incluidas la  mano , la pierna  y el corazón y la sangre . Cuando un objeto humano muere, todas las partes de su cuerpo dejan de existir de manera significativa, este es un ejemplo de Composición.
+        - Por ejemplo, la clase Humano es una composición de varias partes del cuerpo, incluidas la  mano , la pierna  y el corazón y la sangre . Cuando un objeto humano muere, todas las partes de su cuerpo dejan de existir de manera significativa, este es un ejemplo de Composición.
 
-  - Un coche tiene un motor y estructura (Agregación ó Composición)
 
-  Un ejemplo de agregación podria ser el automóvil y sus partes, por ejemplo, motores, ruedas, etc. Las partes individuales del automóvil pueden existir cuando el automovil deja de funcionar.
+    - Un coche tiene un motor y estructura (Agregación ó Composición)
+
+        - Un ejemplo de agregación podria ser el automóvil y sus partes, por ejemplo, motores, ruedas, etc. Las partes individuales del automóvil pueden existir cuando el automovil deja de funcionar.
   Este ejemplo se podria confundir visto desde otra perpectiva podria ser composición el automóvil y sus partes. Las partes individuales del automóvil no pueden funcionar cuando se destruye..
 
   Otro ejemplo, incluir objetos que pueden existir sin ser parte del objeto principal como un Jugador que es parte de un Equipo, puede existir sin un equipo y también puede formar parte de otros equipos.
 
-  - Un libro tiene Paginas.
 
 ![UML_aggregation_vs_composition](../imagenes/UML_aggregation_vs_composition.JPG)
 
