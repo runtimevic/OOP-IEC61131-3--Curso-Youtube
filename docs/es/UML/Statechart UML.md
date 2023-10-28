@@ -42,11 +42,11 @@ Durante la fase de diseño del software, ya puede utilizar el editor de gráfico
 
 <span style="color:orange">Imagen UML TwinCAT StateChart:</span>
 
-![UML TwinCAT Statechart](../imagenes/UML_TwinCAT_Statechart.JPG)
+![UML TwinCAT Statechart](../imagenes/UML_TwinCAT_StateChart.JPG)
 
 ***
-- En TwinCAT para utilizar UML State Chart, se podra utilizar con el TF1910, el cual tendra un coste de licencia segun el Performance Level (PL)
-- En Codesys para utilizar UML State Chart, se podra utilizar con el ide Codesys Professional Developer Edition,segun el informe de caracteristicas realizado en otoño de 2023 (pongo link mas abajo) UML State Chart sera discontinuadom en el Q1 2024 (minuto del video 35:09), desde mi punto de vista es un gran error ya que no se deden de perder las diferentes posibilidades de programación si no todo lo contrario se deben de mantener y añadir nuevos lenguajes y formas de programar para que sea el usuario el que decida...
+- En TwinCAT para utilizar UML State Chart, se podra utilizar con el TF1910, el cual tendra un coste de licencia según el Performance Level (PL)
+- En Codesys para utilizar UML State Chart, se podra utilizar con el ide Codesys Professional Developer Edition, según el informe de caracteristicas realizado en otoño de 2023 (pongo link mas abajo) UML State Chart sera discontinuado en el Q1 2024 (minuto del video 35:09), desde mi punto de vista es un gran error ya que no se deben de perder las diferentes posibilidades de programación si no todo lo contrario se deben de mantener y añadir nuevos lenguajes y formas de programar para que sea el usuario el que decida que utilizar...
 
 ***
 ### <span style="color:grey">Links UML State Chart:</span>
@@ -57,5 +57,5 @@ Durante la fase de diseño del software, ya puede utilizar el editor de gráfico
 - 🔗 [www.infoplc.net, el-nuevo-uml-state-chart-en](https://www.infoplc.net/descargas/42-codesys/2080-lenguajes-de-programaci%C3%B3n-de-codesys-incluido-el-nuevo-uml-state-chart-en)
 - 🔗 [CODESYS Feature Briefing - Fall 2023](https://www.youtube.com/watch?v=ND4TQQNxXQg)
 ***
-### <span style="color:grey">Link al Video de Youtube_NNN:</span>
+### <span style="color:grey">Link al Video de Youtube_32:</span>
 - 🔗 [032 - OOP IEC 61131-3 PLC -- UML - Diagrama de Estado - StateChart]()
