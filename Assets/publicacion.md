@@ -2,10 +2,10 @@
 
 Hola,
 Seguimos con el curso de 👩‍💻 OOP IEC 61131-3 PLC 👨‍💻,
-ya esta disponible el Video numero 31 de Youtube:
-en este video veremos la explicación de UML - Diagrama de Clases Relaciones
+ya esta disponible el Video numero 32 de Youtube:
+en este video veremos la explicación de UML - Diagrama de Estado - State Chart
 
-👉 https://youtu.be/2cPa-f8-BFY
+👉 https://youtu.be/Gq_wvuDBgZ4
 
 🐙 Repositorio de GitHub:
 - 👉 https://github.com/runtimevic/OOP-IEC61131-3--Curso-Youtube
@@ -49,7 +49,8 @@ Lista de Videos del Curso OOP Programación Orientada a Objetos IEC61131-3 PLC:
 - 029 - https://youtu.be/vKxAeP34hGI
 - 030 - https://youtu.be/s2NV8Yt_rdY
 - 031 - https://youtu.be/2cPa-f8-BFY
-- 032 -
+- 032 - https://youtu.be/Gq_wvuDBgZ4
+- 033 -
 
 Se busca colaborador para la traducción de la documentación al idioma que desee... 👀
 

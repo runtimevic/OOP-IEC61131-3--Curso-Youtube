@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <project xmlns="http://www.plcopen.org/xml/tc6_0200">
-  <fileHeader companyName="Beckhoff Automation GmbH" productName="TwinCAT PLC Control" productVersion="3.5.13.21" creationDateTime="2023-10-22T21:56:08.9317514" />
-  <contentHeader name="OOP_Curso" modificationDateTime="2023-10-22T21:56:08.9404979">
+  <fileHeader companyName="Beckhoff Automation GmbH" productName="TwinCAT PLC Control" productVersion="3.5.13.21" creationDateTime="2023-10-28T13:22:48.2872608" />
+  <contentHeader name="OOP_Curso" modificationDateTime="2023-10-28T13:22:48.2970201">
     <coordinateInfo>
       <fbd>
         <scaling x="1" y="1" />
@@ -22,6 +22,66 @@
   <types>
     <dataTypes />
     <pous>
+      <pou name="_32_MAIN" pouType="program">
+        <interface>
+          <localVars>
+            <variable name="fbUmlSC">
+              <type>
+                <derived name="FB_UML_SC" />
+              </type>
+            </variable>
+          </localVars>
+          <documentation>
+            <xhtml xmlns="http://www.w3.org/1999/xhtml">
+### This sample project contains the following elements.
+
+- FB_UML_SC:		This FB represents a simulation to save a text as XML or text format, and to publish it afterwards to a client and to a master.
+					The underlying state machine is implemented with the help of UML State Chart.
+					
+					The behavior is not really programmed.
+					Only the wrapper/basic structure of the state machine is implemented. 
+						
+					Each time, when an ENTRY/DO/EXIT action is called, a correspondent counter variable is increased.
+
+- Visualization:	The visu shows the state of the counters, so that you can see how often an ENTRY/DO/EXIT action has been called. 
+					You can use the buttons to switch between the states.
+</xhtml>
+          </documentation>
+        </interface>
+        <body>
+          <ST>
+            <xhtml xmlns="http://www.w3.org/1999/xhtml">fbUmlSC();</xhtml>
+          </ST>
+        </body>
+        <addData>
+          <data name="http://www.3s-software.com/plcopenxml/interfaceasplaintext" handleUnknown="implementation">
+            <InterfaceAsPlainText>
+              <xhtml xmlns="http://www.w3.org/1999/xhtml">(*
+### This sample project contains the following elements.
+
+- FB_UML_SC:		This FB represents a simulation to save a text as XML or text format, and to publish it afterwards to a client and to a master.
+					The underlying state machine is implemented with the help of UML State Chart.
+					
+					The behavior is not really programmed.
+					Only the wrapper/basic structure of the state machine is implemented. 
+						
+					Each time, when an ENTRY/DO/EXIT action is called, a correspondent counter variable is increased.
+
+- Visualization:	The visu shows the state of the counters, so that you can see how often an ENTRY/DO/EXIT action has been called. 
+					You can use the buttons to switch between the states.
+*)
+PROGRAM _32_MAIN
+VAR
+	fbUmlSC	: FB_UML_SC;
+END_VAR
+</xhtml>
+            </InterfaceAsPlainText>
+          </data>
+          <data name="http://www.3s-software.com/plcopenxml/objectid" handleUnknown="discard">
+            <ObjectId>2925790c-2510-456f-9526-75c747cefdba</ObjectId>
+          </data>
+        </addData>
+      </pou>
       <pou name="FB_UML_SC" pouType="functionBlock">
         <interface>
           <localVars>
@@ -484,66 +544,6 @@ END_VAR</xhtml>
           </data>
         </addData>
       </pou>
-      <pou name="_32_MAIN" pouType="program">
-        <interface>
-          <localVars>
-            <variable name="fbUmlSC">
-              <type>
-                <derived name="FB_UML_SC" />
-              </type>
-            </variable>
-          </localVars>
-          <documentation>
-            <xhtml xmlns="http://www.w3.org/1999/xhtml">
-### This sample project contains the following elements.
-
-- FB_UML_SC:		This FB represents a simulation to save a text as XML or text format, and to publish it afterwards to a client and to a master.
-					The underlying state machine is implemented with the help of UML State Chart.
-					
-					The behavior is not really programmed.
-					Only the wrapper/basic structure of the state machine is implemented. 
-						
-					Each time, when an ENTRY/DO/EXIT action is called, a correspondent counter variable is increased.
-
-- Visualization:	The visu shows the state of the counters, so that you can see how often an ENTRY/DO/EXIT action has been called. 
-					You can use the buttons to switch between the states.
-</xhtml>
-          </documentation>
-        </interface>
-        <body>
-          <ST>
-            <xhtml xmlns="http://www.w3.org/1999/xhtml">fbUmlSC();</xhtml>
-          </ST>
-        </body>
-        <addData>
-          <data name="http://www.3s-software.com/plcopenxml/interfaceasplaintext" handleUnknown="implementation">
-            <InterfaceAsPlainText>
-              <xhtml xmlns="http://www.w3.org/1999/xhtml">(*
-### This sample project contains the following elements.
-
-- FB_UML_SC:		This FB represents a simulation to save a text as XML or text format, and to publish it afterwards to a client and to a master.
-					The underlying state machine is implemented with the help of UML State Chart.
-					
-					The behavior is not really programmed.
-					Only the wrapper/basic structure of the state machine is implemented. 
-						
-					Each time, when an ENTRY/DO/EXIT action is called, a correspondent counter variable is increased.
-
-- Visualization:	The visu shows the state of the counters, so that you can see how often an ENTRY/DO/EXIT action has been called. 
-					You can use the buttons to switch between the states.
-*)
-PROGRAM _32_MAIN
-VAR
-	fbUmlSC	: FB_UML_SC;
-END_VAR
-</xhtml>
-            </InterfaceAsPlainText>
-          </data>
-          <data name="http://www.3s-software.com/plcopenxml/objectid" handleUnknown="discard">
-            <ObjectId>2925790c-2510-456f-9526-75c747cefdba</ObjectId>
-          </data>
-        </addData>
-      </pou>
       <pou name="Kaffemaschine" pouType="program">
         <interface>
           <localVars>
@@ -630,6 +630,18 @@ END_VAR
           </addData>
         </interface>
         <actions>
+          <action name="ActDo">
+            <body>
+              <ST>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">nGrind := nGrind + 10;</xhtml>
+              </ST>
+            </body>
+            <addData>
+              <data name="http://www.3s-software.com/plcopenxml/objectid" handleUnknown="discard">
+                <ObjectId>2b93c7e8-b8ff-4186-9c45-38d385f21193</ObjectId>
+              </data>
+            </addData>
+          </action>
           <action name="ActEntry">
             <body>
               <ST>
@@ -639,6 +651,30 @@ END_VAR
             <addData>
               <data name="http://www.3s-software.com/plcopenxml/objectid" handleUnknown="discard">
                 <ObjectId>469d6e6b-6804-4513-8413-36e267dcf356</ObjectId>
+              </data>
+            </addData>
+          </action>
+          <action name="ActFoam">
+            <body>
+              <ST>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">nFoam := nFoam + 5;</xhtml>
+              </ST>
+            </body>
+            <addData>
+              <data name="http://www.3s-software.com/plcopenxml/objectid" handleUnknown="discard">
+                <ObjectId>5985ddd0-b5a4-4058-9e50-43bea0605035</ObjectId>
+              </data>
+            </addData>
+          </action>
+          <action name="ActHeat">
+            <body>
+              <ST>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml" />
+              </ST>
+            </body>
+            <addData>
+              <data name="http://www.3s-software.com/plcopenxml/objectid" handleUnknown="discard">
+                <ObjectId>9e3c3d30-f6c8-4991-be9f-932f948dff00</ObjectId>
               </data>
             </addData>
           </action>
@@ -667,42 +703,6 @@ nFoam := 0;</xhtml>
             <addData>
               <data name="http://www.3s-software.com/plcopenxml/objectid" handleUnknown="discard">
                 <ObjectId>f87049c0-8714-4b66-bea9-9269392d29ba</ObjectId>
-              </data>
-            </addData>
-          </action>
-          <action name="ActDo">
-            <body>
-              <ST>
-                <xhtml xmlns="http://www.w3.org/1999/xhtml">nGrind := nGrind + 10;</xhtml>
-              </ST>
-            </body>
-            <addData>
-              <data name="http://www.3s-software.com/plcopenxml/objectid" handleUnknown="discard">
-                <ObjectId>2b93c7e8-b8ff-4186-9c45-38d385f21193</ObjectId>
-              </data>
-            </addData>
-          </action>
-          <action name="ActHeat">
-            <body>
-              <ST>
-                <xhtml xmlns="http://www.w3.org/1999/xhtml" />
-              </ST>
-            </body>
-            <addData>
-              <data name="http://www.3s-software.com/plcopenxml/objectid" handleUnknown="discard">
-                <ObjectId>9e3c3d30-f6c8-4991-be9f-932f948dff00</ObjectId>
-              </data>
-            </addData>
-          </action>
-          <action name="ActFoam">
-            <body>
-              <ST>
-                <xhtml xmlns="http://www.w3.org/1999/xhtml">nFoam := nFoam + 5;</xhtml>
-              </ST>
-            </body>
-            <addData>
-              <data name="http://www.3s-software.com/plcopenxml/objectid" handleUnknown="discard">
-                <ObjectId>5985ddd0-b5a4-4058-9e50-43bea0605035</ObjectId>
               </data>
             </addData>
           </action>
@@ -748,12 +748,12 @@ END_VAR
       <ProjectStructure>
         <Folder Name="32_UML_StateChart">
           <Object Name="Kaffemaschine" ObjectId="7cc42eb0-dc6d-4e02-ab5b-1296bec80ed6">
+            <Object Name="ActDo" ObjectId="2b93c7e8-b8ff-4186-9c45-38d385f21193" />
             <Object Name="ActEntry" ObjectId="469d6e6b-6804-4513-8413-36e267dcf356" />
+            <Object Name="ActFoam" ObjectId="5985ddd0-b5a4-4058-9e50-43bea0605035" />
+            <Object Name="ActHeat" ObjectId="9e3c3d30-f6c8-4991-be9f-932f948dff00" />
             <Object Name="ActShutdown" ObjectId="6bc0da1a-cc39-486c-a6b3-357f9df974be" />
             <Object Name="CoffeeReady" ObjectId="f87049c0-8714-4b66-bea9-9269392d29ba" />
-            <Object Name="ActDo" ObjectId="2b93c7e8-b8ff-4186-9c45-38d385f21193" />
-            <Object Name="ActHeat" ObjectId="9e3c3d30-f6c8-4991-be9f-932f948dff00" />
-            <Object Name="ActFoam" ObjectId="5985ddd0-b5a4-4058-9e50-43bea0605035" />
           </Object>
           <Folder Name="32_POUs">
             <Object Name="FB_UML_SC" ObjectId="94bc9ba2-99d4-44d6-a994-09cf55f5519b">

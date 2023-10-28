@@ -50,4 +50,4 @@
     - 🔗 [029 - OOP IEC 61131-3 PLC -- UML - Descripción](https://youtu.be/vKxAeP34hGI)
     - 🔗 [030 - OOP IEC 61131-3 PLC -- UML - Diagrama de Clases](https://youtu.be/s2NV8Yt_rdY)
     - 🔗 [031 - OOP IEC 61131-3 PLC -- UML - Diagrama de Clases - Relaciones](https://youtu.be/2cPa-f8-BFY)
-    - 🔗 [032 - OOP IEC 61131-3 PLC -- UML - Diagrama de Estado - StateChart]()
+    - 🔗 [032 - OOP IEC 61131-3 PLC -- UML - Diagrama de Estado - StateChart](https://youtu.be/Gq_wvuDBgZ4)

@@ -1,7 +1,7 @@
 ### <span style="color:grey">UML State Chart:</span>
 
 - Un diagrama de estado es una máquina que cambia de un estado a otro en tiempo de ejecución. 
-Los estados están unidos por transiciones, cada una de las cuales tiene una condición de guardia. Se pueden llamar acciones o métodos tanto en estados como en transiciones. Cuando una condición de guardia obtiene el valor TRUE(evento), se activará la transición. Esto ejecuta las acciones o métodos que pertenecen a la transición y luego cambia al siguiente estado. Las condiciones de guardia son simplemente variables booleanas que reflejan eventos o son una expresión. Los eventos son entradas del usuario de una visualización/interfaz de usuario, E/S, eventos de tiempo o eventos del sistema. Otro evento que a menudo se requiere es el evento de finalización que ocurre cuando se completan las acciones o métodos de un estado.
+- Los estados están unidos por transiciones, cada una de las cuales tiene una condición de guardia. Se pueden llamar acciones o métodos tanto en estados como en transiciones. Cuando una condición de guardia obtiene el valor TRUE(evento), se activará la transición. Esto ejecuta las acciones o métodos que pertenecen a la transición y luego cambia al siguiente estado. Las condiciones de guardia son simplemente variables booleanas que reflejan eventos o son una expresión. Los eventos son entradas del usuario de una visualización/interfaz de usuario, E/S, eventos de tiempo o eventos del sistema. Otro evento que a menudo se requiere es el evento de finalización que ocurre cuando se completan las acciones o métodos de un estado.
 
 - Inserta todos los estados requeridos en el editor de diagrama de estado e implementa el control de flujo. Para hacer esto, codifique las condiciones de protección para las transiciones especificando una variable booleana o una expresión ST. Implementas la funcionalidad real del diagrama de estado en las acciones y métodos que se llaman en los estados o durante las transiciones.
 
@@ -58,4 +58,4 @@ Durante la fase de diseño del software, ya puede utilizar el editor de gráfico
 - 🔗 [CODESYS Feature Briefing - Fall 2023](https://www.youtube.com/watch?v=ND4TQQNxXQg)
 ***
 ### <span style="color:grey">Link al Video de Youtube_32:</span>
-- 🔗 [032 - OOP IEC 61131-3 PLC -- UML - Diagrama de Estado - StateChart]()
+- 🔗 [032 - OOP IEC 61131-3 PLC -- UML - Diagrama de Estado - StateChart](https://youtu.be/Gq_wvuDBgZ4)
