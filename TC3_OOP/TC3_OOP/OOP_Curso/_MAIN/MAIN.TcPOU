@@ -75,7 +75,10 @@ _26_SOLID_LSP();
 _27_SOLID_ISP();
 
 // Video de Youtube 28
-_28_SOLID_DIP();]]></ST>
+_28_SOLID_DIP();
+
+// Video de Youtube 32
+_32_MAIN();]]></ST>
     </Implementation>
   </POU>
 </TcPlcObject>

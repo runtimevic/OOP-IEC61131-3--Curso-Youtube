@@ -1,0 +1,779 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<project xmlns="http://www.plcopen.org/xml/tc6_0200">
+  <fileHeader companyName="Beckhoff Automation GmbH" productName="TwinCAT PLC Control" productVersion="3.5.13.21" creationDateTime="2023-10-22T21:56:08.9317514" />
+  <contentHeader name="OOP_Curso" modificationDateTime="2023-10-22T21:56:08.9404979">
+    <coordinateInfo>
+      <fbd>
+        <scaling x="1" y="1" />
+      </fbd>
+      <ld>
+        <scaling x="1" y="1" />
+      </ld>
+      <sfc>
+        <scaling x="1" y="1" />
+      </sfc>
+    </coordinateInfo>
+    <addData>
+      <data name="http://www.3s-software.com/plcopenxml/projectinformation" handleUnknown="implementation">
+        <ProjectInformation />
+      </data>
+    </addData>
+  </contentHeader>
+  <types>
+    <dataTypes />
+    <pous>
+      <pou name="FB_UML_SC" pouType="functionBlock">
+        <interface>
+          <localVars>
+            <variable name="bInitFinished">
+              <type>
+                <BOOL />
+              </type>
+              <documentation>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml"> Transition condition</xhtml>
+              </documentation>
+            </variable>
+            <variable name="bUseXmlFormat">
+              <type>
+                <BOOL />
+              </type>
+            </variable>
+            <variable name="bAllInfoCopiedToFile">
+              <type>
+                <BOOL />
+              </type>
+            </variable>
+            <variable name="bSendToMasterFinished">
+              <type>
+                <BOOL />
+              </type>
+            </variable>
+            <variable name="bSendToClientFinished">
+              <type>
+                <BOOL />
+              </type>
+            </variable>
+            <variable name="nCounterInit">
+              <type>
+                <INT />
+              </type>
+              <documentation>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml"> Counters</xhtml>
+              </documentation>
+            </variable>
+            <variable name="nCounterSaveInitSettings">
+              <type>
+                <INT />
+              </type>
+            </variable>
+            <variable name="nCounterClearXml">
+              <type>
+                <INT />
+              </type>
+            </variable>
+            <variable name="nCounterFillXml">
+              <type>
+                <INT />
+              </type>
+            </variable>
+            <variable name="nCounterSaveXml">
+              <type>
+                <INT />
+              </type>
+            </variable>
+            <variable name="nCounterClearText">
+              <type>
+                <INT />
+              </type>
+            </variable>
+            <variable name="nCounterFillText">
+              <type>
+                <INT />
+              </type>
+            </variable>
+            <variable name="nCounterSaveText">
+              <type>
+                <INT />
+              </type>
+            </variable>
+            <variable name="nCounterGetMasterID">
+              <type>
+                <INT />
+              </type>
+            </variable>
+            <variable name="nCounterGetClientID">
+              <type>
+                <INT />
+              </type>
+            </variable>
+            <variable name="nCounterSendToMaster">
+              <type>
+                <INT />
+              </type>
+            </variable>
+            <variable name="nCounterSendToClient">
+              <type>
+                <INT />
+              </type>
+            </variable>
+            <variable name="bMasterFirst">
+              <type>
+                <BOOL />
+              </type>
+              <documentation>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml"> Debugging</xhtml>
+              </documentation>
+            </variable>
+            <variable name="bClientFirst">
+              <type>
+                <BOOL />
+              </type>
+            </variable>
+            <variable name="UML_SC_FB_UML_SC">
+              <type>
+                <derived name="_UML_SC_94bc9ba299d444d6a99409cf55f5519b" />
+              </type>
+              <addData>
+                <data name="http://www.3s-software.com/plcopenxml/attributes" handleUnknown="implementation">
+                  <Attributes>
+                    <Attribute Name="implicit_state_chart_struct" Value="" />
+                  </Attributes>
+                </data>
+              </addData>
+            </variable>
+          </localVars>
+          <addData>
+            <data name="http://www.3s-software.com/plcopenxml/attributes" handleUnknown="implementation">
+              <Attributes>
+                <Attribute Name="no-analysis" Value="" />
+                <Attribute Name="reduced_bp_set" Value="" />
+              </Attributes>
+            </data>
+          </addData>
+        </interface>
+        <body>
+          <ST>
+            <xhtml xmlns="http://www.w3.org/1999/xhtml" />
+          </ST>
+        </body>
+        <addData>
+          <data name="http://www.3s-software.com/plcopenxml/method" handleUnknown="implementation">
+            <Method name="ClearTextFile" ObjectId="eeadfa1a-8f3e-409c-821b-99021356a54f">
+              <interface>
+                <addData>
+                  <data name="http://www.3s-software.com/plcopenxml/accessmodifiers" handleUnknown="implementation">
+                    <AccessModifiers Protected="true" />
+                  </data>
+                </addData>
+              </interface>
+              <body>
+                <ST>
+                  <xhtml xmlns="http://www.w3.org/1999/xhtml">nCounterClearText := nCounterClearText + 1;</xhtml>
+                </ST>
+              </body>
+              <InterfaceAsPlainText>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">METHOD PROTECTED ClearTextFile
+VAR_INPUT
+END_VAR
+</xhtml>
+              </InterfaceAsPlainText>
+              <addData />
+            </Method>
+          </data>
+          <data name="http://www.3s-software.com/plcopenxml/method" handleUnknown="implementation">
+            <Method name="ClearXmlFile" ObjectId="f8f23fcf-54cf-4de2-a6bf-21ea7d0b73a5">
+              <interface>
+                <addData>
+                  <data name="http://www.3s-software.com/plcopenxml/accessmodifiers" handleUnknown="implementation">
+                    <AccessModifiers Protected="true" />
+                  </data>
+                </addData>
+              </interface>
+              <body>
+                <ST>
+                  <xhtml xmlns="http://www.w3.org/1999/xhtml">nCounterClearXml := nCounterClearXml + 1;</xhtml>
+                </ST>
+              </body>
+              <InterfaceAsPlainText>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">METHOD PROTECTED ClearXmlFile
+VAR_INPUT
+END_VAR
+</xhtml>
+              </InterfaceAsPlainText>
+              <addData />
+            </Method>
+          </data>
+          <data name="http://www.3s-software.com/plcopenxml/method" handleUnknown="implementation">
+            <Method name="FillTextFile" ObjectId="8e04a295-480a-485c-95c5-43fbc530c30f">
+              <interface>
+                <addData>
+                  <data name="http://www.3s-software.com/plcopenxml/accessmodifiers" handleUnknown="implementation">
+                    <AccessModifiers Protected="true" />
+                  </data>
+                </addData>
+              </interface>
+              <body>
+                <ST>
+                  <xhtml xmlns="http://www.w3.org/1999/xhtml">nCounterFillText := nCounterFillText + 1;</xhtml>
+                </ST>
+              </body>
+              <InterfaceAsPlainText>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">METHOD PROTECTED FillTextFile
+VAR_INPUT
+END_VAR
+</xhtml>
+              </InterfaceAsPlainText>
+              <addData />
+            </Method>
+          </data>
+          <data name="http://www.3s-software.com/plcopenxml/method" handleUnknown="implementation">
+            <Method name="FillXmlFile" ObjectId="414f740d-8f18-48da-80b3-7ea980956d61">
+              <interface>
+                <addData>
+                  <data name="http://www.3s-software.com/plcopenxml/accessmodifiers" handleUnknown="implementation">
+                    <AccessModifiers Protected="true" />
+                  </data>
+                </addData>
+              </interface>
+              <body>
+                <ST>
+                  <xhtml xmlns="http://www.w3.org/1999/xhtml">nCounterFillXml := nCounterFillXml + 1;</xhtml>
+                </ST>
+              </body>
+              <InterfaceAsPlainText>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">METHOD PROTECTED FillXmlFile
+VAR_INPUT
+END_VAR
+</xhtml>
+              </InterfaceAsPlainText>
+              <addData />
+            </Method>
+          </data>
+          <data name="http://www.3s-software.com/plcopenxml/method" handleUnknown="implementation">
+            <Method name="GetClientID" ObjectId="44e9e658-ee86-4494-b16a-b41b020447f1">
+              <interface>
+                <addData>
+                  <data name="http://www.3s-software.com/plcopenxml/accessmodifiers" handleUnknown="implementation">
+                    <AccessModifiers Protected="true" />
+                  </data>
+                </addData>
+              </interface>
+              <body>
+                <ST>
+                  <xhtml xmlns="http://www.w3.org/1999/xhtml">nCounterGetClientID := nCounterGetClientID + 1;
+
+IF NOT bMasterFirst THEN
+	bClientFirst := TRUE;
+END_IF</xhtml>
+                </ST>
+              </body>
+              <InterfaceAsPlainText>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">METHOD PROTECTED GetClientID
+VAR_INPUT
+END_VAR
+</xhtml>
+              </InterfaceAsPlainText>
+              <addData />
+            </Method>
+          </data>
+          <data name="http://www.3s-software.com/plcopenxml/method" handleUnknown="implementation">
+            <Method name="GetMasterID" ObjectId="7eaab2ed-ff02-4343-af44-fa07d4b58265">
+              <interface>
+                <addData>
+                  <data name="http://www.3s-software.com/plcopenxml/accessmodifiers" handleUnknown="implementation">
+                    <AccessModifiers Protected="true" />
+                  </data>
+                </addData>
+              </interface>
+              <body>
+                <ST>
+                  <xhtml xmlns="http://www.w3.org/1999/xhtml">nCounterGetMasterID := nCounterGetMasterID + 1;
+
+IF NOT bClientFirst THEN
+	bMasterFirst := TRUE;
+END_IF</xhtml>
+                </ST>
+              </body>
+              <InterfaceAsPlainText>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">METHOD PROTECTED GetMasterID
+VAR_INPUT
+END_VAR
+</xhtml>
+              </InterfaceAsPlainText>
+              <addData />
+            </Method>
+          </data>
+          <data name="http://www.3s-software.com/plcopenxml/method" handleUnknown="implementation">
+            <Method name="Init" ObjectId="d0ad6e03-56a4-40f3-af43-3842eefeae86">
+              <interface>
+                <addData>
+                  <data name="http://www.3s-software.com/plcopenxml/accessmodifiers" handleUnknown="implementation">
+                    <AccessModifiers Protected="true" />
+                  </data>
+                </addData>
+              </interface>
+              <body>
+                <ST>
+                  <xhtml xmlns="http://www.w3.org/1999/xhtml">nCounterInit := nCounterInit + 1;</xhtml>
+                </ST>
+              </body>
+              <InterfaceAsPlainText>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">METHOD PROTECTED Init
+VAR_INPUT
+END_VAR
+</xhtml>
+              </InterfaceAsPlainText>
+              <addData />
+            </Method>
+          </data>
+          <data name="http://www.3s-software.com/plcopenxml/method" handleUnknown="implementation">
+            <Method name="SaveInitSettings" ObjectId="a9fa5c00-a88c-49ee-a68d-e225192550e9">
+              <interface>
+                <addData>
+                  <data name="http://www.3s-software.com/plcopenxml/accessmodifiers" handleUnknown="implementation">
+                    <AccessModifiers Protected="true" />
+                  </data>
+                </addData>
+              </interface>
+              <body>
+                <ST>
+                  <xhtml xmlns="http://www.w3.org/1999/xhtml">nCounterSaveInitSettings := nCounterSaveInitSettings + 1;
+
+bInitFinished 			:= FALSE;
+bAllInfoCopiedToFile 	:= FALSE;
+bSendToClientFinished 	:= FALSE;
+bSendToMasterFinished	:= FALSE;
+bMasterFirst			:= FALSE;
+bClientFirst			:= FALSE;</xhtml>
+                </ST>
+              </body>
+              <InterfaceAsPlainText>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">METHOD PROTECTED SaveInitSettings
+VAR_INPUT
+END_VAR
+</xhtml>
+              </InterfaceAsPlainText>
+              <addData />
+            </Method>
+          </data>
+          <data name="http://www.3s-software.com/plcopenxml/method" handleUnknown="implementation">
+            <Method name="SaveTextFile" ObjectId="219e5281-819e-448b-8b19-3e98bf2a2af0">
+              <interface>
+                <addData>
+                  <data name="http://www.3s-software.com/plcopenxml/accessmodifiers" handleUnknown="implementation">
+                    <AccessModifiers Protected="true" />
+                  </data>
+                </addData>
+              </interface>
+              <body>
+                <ST>
+                  <xhtml xmlns="http://www.w3.org/1999/xhtml">nCounterSaveText := nCounterSaveText + 1;</xhtml>
+                </ST>
+              </body>
+              <InterfaceAsPlainText>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">METHOD PROTECTED SaveTextFile
+VAR_INPUT
+END_VAR
+</xhtml>
+              </InterfaceAsPlainText>
+              <addData />
+            </Method>
+          </data>
+          <data name="http://www.3s-software.com/plcopenxml/method" handleUnknown="implementation">
+            <Method name="SaveXmlFile" ObjectId="03a23303-469c-4aa1-811c-347cee96a6ae">
+              <interface>
+                <addData>
+                  <data name="http://www.3s-software.com/plcopenxml/accessmodifiers" handleUnknown="implementation">
+                    <AccessModifiers Protected="true" />
+                  </data>
+                </addData>
+              </interface>
+              <body>
+                <ST>
+                  <xhtml xmlns="http://www.w3.org/1999/xhtml">nCounterSaveXml := nCounterSaveXml + 1;</xhtml>
+                </ST>
+              </body>
+              <InterfaceAsPlainText>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">METHOD PROTECTED SaveXmlFile
+VAR_INPUT
+END_VAR
+</xhtml>
+              </InterfaceAsPlainText>
+              <addData />
+            </Method>
+          </data>
+          <data name="http://www.3s-software.com/plcopenxml/method" handleUnknown="implementation">
+            <Method name="SendFileToClient" ObjectId="f85a10a5-2d11-4ea8-a2ff-5eb2dc2ad2e9">
+              <interface>
+                <addData>
+                  <data name="http://www.3s-software.com/plcopenxml/accessmodifiers" handleUnknown="implementation">
+                    <AccessModifiers Protected="true" />
+                  </data>
+                </addData>
+              </interface>
+              <body>
+                <ST>
+                  <xhtml xmlns="http://www.w3.org/1999/xhtml">nCounterSendToClient := nCounterSendToClient + 1;</xhtml>
+                </ST>
+              </body>
+              <InterfaceAsPlainText>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">METHOD PROTECTED SendFileToClient
+VAR_INPUT
+END_VAR
+</xhtml>
+              </InterfaceAsPlainText>
+              <addData />
+            </Method>
+          </data>
+          <data name="http://www.3s-software.com/plcopenxml/method" handleUnknown="implementation">
+            <Method name="SendFileToMaster" ObjectId="2b74f887-17a5-4007-b86e-e2a7c00823a7">
+              <interface>
+                <addData>
+                  <data name="http://www.3s-software.com/plcopenxml/accessmodifiers" handleUnknown="implementation">
+                    <AccessModifiers Protected="true" />
+                  </data>
+                </addData>
+              </interface>
+              <body>
+                <ST>
+                  <xhtml xmlns="http://www.w3.org/1999/xhtml">nCounterSendToMaster := nCounterSendToMaster + 1;</xhtml>
+                </ST>
+              </body>
+              <InterfaceAsPlainText>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">METHOD PROTECTED SendFileToMaster
+VAR_INPUT
+END_VAR
+</xhtml>
+              </InterfaceAsPlainText>
+              <addData />
+            </Method>
+          </data>
+          <data name="http://www.3s-software.com/plcopenxml/interfaceasplaintext" handleUnknown="implementation">
+            <InterfaceAsPlainText>
+              <xhtml xmlns="http://www.w3.org/1999/xhtml">FUNCTION_BLOCK FB_UML_SC
+VAR
+	// Transition condition
+	bInitFinished				: BOOL;
+	bUseXmlFormat				: BOOL;
+	bAllInfoCopiedToFile		: BOOL;
+	bSendToMasterFinished		: BOOL;
+	bSendToClientFinished		: BOOL;
+	
+	// Counters
+	nCounterInit				: INT;
+	nCounterSaveInitSettings	: INT;
+	nCounterClearXml			: INT;
+	nCounterFillXml				: INT;
+	nCounterSaveXml				: INT;
+	nCounterClearText			: INT;
+	nCounterFillText			: INT;
+	nCounterSaveText			: INT;
+	nCounterGetMasterID			: INT;
+	nCounterGetClientID			: INT;
+	nCounterSendToMaster		: INT;
+	nCounterSendToClient		: INT;
+	
+	// Debugging
+	bMasterFirst				: BOOL;
+	bClientFirst				: BOOL;
+END_VAR</xhtml>
+            </InterfaceAsPlainText>
+          </data>
+          <data name="http://www.3s-software.com/plcopenxml/objectid" handleUnknown="discard">
+            <ObjectId>94bc9ba2-99d4-44d6-a994-09cf55f5519b</ObjectId>
+          </data>
+        </addData>
+      </pou>
+      <pou name="_32_MAIN" pouType="program">
+        <interface>
+          <localVars>
+            <variable name="fbUmlSC">
+              <type>
+                <derived name="FB_UML_SC" />
+              </type>
+            </variable>
+          </localVars>
+          <documentation>
+            <xhtml xmlns="http://www.w3.org/1999/xhtml">
+### This sample project contains the following elements.
+
+- FB_UML_SC:		This FB represents a simulation to save a text as XML or text format, and to publish it afterwards to a client and to a master.
+					The underlying state machine is implemented with the help of UML State Chart.
+					
+					The behavior is not really programmed.
+					Only the wrapper/basic structure of the state machine is implemented. 
+						
+					Each time, when an ENTRY/DO/EXIT action is called, a correspondent counter variable is increased.
+
+- Visualization:	The visu shows the state of the counters, so that you can see how often an ENTRY/DO/EXIT action has been called. 
+					You can use the buttons to switch between the states.
+</xhtml>
+          </documentation>
+        </interface>
+        <body>
+          <ST>
+            <xhtml xmlns="http://www.w3.org/1999/xhtml">fbUmlSC();</xhtml>
+          </ST>
+        </body>
+        <addData>
+          <data name="http://www.3s-software.com/plcopenxml/interfaceasplaintext" handleUnknown="implementation">
+            <InterfaceAsPlainText>
+              <xhtml xmlns="http://www.w3.org/1999/xhtml">(*
+### This sample project contains the following elements.
+
+- FB_UML_SC:		This FB represents a simulation to save a text as XML or text format, and to publish it afterwards to a client and to a master.
+					The underlying state machine is implemented with the help of UML State Chart.
+					
+					The behavior is not really programmed.
+					Only the wrapper/basic structure of the state machine is implemented. 
+						
+					Each time, when an ENTRY/DO/EXIT action is called, a correspondent counter variable is increased.
+
+- Visualization:	The visu shows the state of the counters, so that you can see how often an ENTRY/DO/EXIT action has been called. 
+					You can use the buttons to switch between the states.
+*)
+PROGRAM _32_MAIN
+VAR
+	fbUmlSC	: FB_UML_SC;
+END_VAR
+</xhtml>
+            </InterfaceAsPlainText>
+          </data>
+          <data name="http://www.3s-software.com/plcopenxml/objectid" handleUnknown="discard">
+            <ObjectId>2925790c-2510-456f-9526-75c747cefdba</ObjectId>
+          </data>
+        </addData>
+      </pou>
+      <pou name="Kaffemaschine" pouType="program">
+        <interface>
+          <localVars>
+            <variable name="bMakeCoffee">
+              <type>
+                <BOOL />
+              </type>
+              <initialValue>
+                <simpleValue value="FALSE" />
+              </initialValue>
+            </variable>
+            <variable name="bShutDown">
+              <type>
+                <BOOL />
+              </type>
+              <initialValue>
+                <simpleValue value="FALSE" />
+              </initialValue>
+            </variable>
+            <variable name="bPowerUp">
+              <type>
+                <BOOL />
+              </type>
+              <initialValue>
+                <simpleValue value="FALSE" />
+              </initialValue>
+            </variable>
+            <variable name="nGrind">
+              <type>
+                <INT />
+              </type>
+              <initialValue>
+                <simpleValue value="0" />
+              </initialValue>
+            </variable>
+            <variable name="nHeat">
+              <type>
+                <INT />
+              </type>
+              <initialValue>
+                <simpleValue value="20" />
+              </initialValue>
+            </variable>
+            <variable name="nFoam">
+              <type>
+                <INT />
+              </type>
+              <initialValue>
+                <simpleValue value="0" />
+              </initialValue>
+            </variable>
+            <variable name="UML_SC_Kaffemaschine">
+              <type>
+                <derived name="_UML_SC_7cc42eb0dc6d4e02ab5b1296bec80ed6" />
+              </type>
+              <addData>
+                <data name="http://www.3s-software.com/plcopenxml/attributes" handleUnknown="implementation">
+                  <Attributes>
+                    <Attribute Name="implicit_state_chart_struct" Value="" />
+                  </Attributes>
+                </data>
+              </addData>
+            </variable>
+            <variable name="UML_SC_ActHeat">
+              <type>
+                <derived name="_UML_SC_9e3c3d30f6c84991be9f932f948dff00" />
+              </type>
+              <addData>
+                <data name="http://www.3s-software.com/plcopenxml/attributes" handleUnknown="implementation">
+                  <Attributes>
+                    <Attribute Name="implicit_state_chart_struct" Value="" />
+                  </Attributes>
+                </data>
+              </addData>
+            </variable>
+          </localVars>
+          <addData>
+            <data name="http://www.3s-software.com/plcopenxml/attributes" handleUnknown="implementation">
+              <Attributes>
+                <Attribute Name="no-analysis" Value="" />
+                <Attribute Name="reduced_bp_set" Value="" />
+              </Attributes>
+            </data>
+          </addData>
+        </interface>
+        <actions>
+          <action name="ActEntry">
+            <body>
+              <ST>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml" />
+              </ST>
+            </body>
+            <addData>
+              <data name="http://www.3s-software.com/plcopenxml/objectid" handleUnknown="discard">
+                <ObjectId>469d6e6b-6804-4513-8413-36e267dcf356</ObjectId>
+              </data>
+            </addData>
+          </action>
+          <action name="ActShutdown">
+            <body>
+              <ST>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">bShutDown := FALSE;
+bPowerUp := FALSE;</xhtml>
+              </ST>
+            </body>
+            <addData>
+              <data name="http://www.3s-software.com/plcopenxml/objectid" handleUnknown="discard">
+                <ObjectId>6bc0da1a-cc39-486c-a6b3-357f9df974be</ObjectId>
+              </data>
+            </addData>
+          </action>
+          <action name="CoffeeReady">
+            <body>
+              <ST>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">bMakeCoffee := FALSE;
+nGrind := 0;
+nHeat := 20;
+nFoam := 0;</xhtml>
+              </ST>
+            </body>
+            <addData>
+              <data name="http://www.3s-software.com/plcopenxml/objectid" handleUnknown="discard">
+                <ObjectId>f87049c0-8714-4b66-bea9-9269392d29ba</ObjectId>
+              </data>
+            </addData>
+          </action>
+          <action name="ActDo">
+            <body>
+              <ST>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">nGrind := nGrind + 10;</xhtml>
+              </ST>
+            </body>
+            <addData>
+              <data name="http://www.3s-software.com/plcopenxml/objectid" handleUnknown="discard">
+                <ObjectId>2b93c7e8-b8ff-4186-9c45-38d385f21193</ObjectId>
+              </data>
+            </addData>
+          </action>
+          <action name="ActHeat">
+            <body>
+              <ST>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml" />
+              </ST>
+            </body>
+            <addData>
+              <data name="http://www.3s-software.com/plcopenxml/objectid" handleUnknown="discard">
+                <ObjectId>9e3c3d30-f6c8-4991-be9f-932f948dff00</ObjectId>
+              </data>
+            </addData>
+          </action>
+          <action name="ActFoam">
+            <body>
+              <ST>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">nFoam := nFoam + 5;</xhtml>
+              </ST>
+            </body>
+            <addData>
+              <data name="http://www.3s-software.com/plcopenxml/objectid" handleUnknown="discard">
+                <ObjectId>5985ddd0-b5a4-4058-9e50-43bea0605035</ObjectId>
+              </data>
+            </addData>
+          </action>
+        </actions>
+        <body>
+          <ST>
+            <xhtml xmlns="http://www.w3.org/1999/xhtml" />
+          </ST>
+        </body>
+        <addData>
+          <data name="http://www.3s-software.com/plcopenxml/interfaceasplaintext" handleUnknown="implementation">
+            <InterfaceAsPlainText>
+              <xhtml xmlns="http://www.w3.org/1999/xhtml">{attribute 'no-analysis' := ''}
+{attribute 'reduced_bp_set' := ''}
+PROGRAM Kaffemaschine
+VAR
+	bMakeCoffee: BOOL := FALSE;
+	bShutDown: BOOL := FALSE;
+	bPowerUp: BOOL := FALSE;
+	nGrind: INT := 0;
+	nHeat: INT := 20;
+	nFoam: INT := 0;
+	{attribute 'implicit_state_chart_struct' := ''}
+	UML_SC_Kaffemaschine: _UML_SC_7cc42eb0dc6d4e02ab5b1296bec80ed6;
+	{attribute 'implicit_state_chart_struct' := ''}
+	UML_SC_ActHeat: _UML_SC_9e3c3d30f6c84991be9f932f948dff00;
+END_VAR
+</xhtml>
+            </InterfaceAsPlainText>
+          </data>
+          <data name="http://www.3s-software.com/plcopenxml/objectid" handleUnknown="discard">
+            <ObjectId>7cc42eb0-dc6d-4e02-ab5b-1296bec80ed6</ObjectId>
+          </data>
+        </addData>
+      </pou>
+    </pous>
+  </types>
+  <instances>
+    <configurations />
+  </instances>
+  <addData>
+    <data name="http://www.3s-software.com/plcopenxml/projectstructure" handleUnknown="discard">
+      <ProjectStructure>
+        <Folder Name="32_UML_StateChart">
+          <Object Name="Kaffemaschine" ObjectId="7cc42eb0-dc6d-4e02-ab5b-1296bec80ed6">
+            <Object Name="ActEntry" ObjectId="469d6e6b-6804-4513-8413-36e267dcf356" />
+            <Object Name="ActShutdown" ObjectId="6bc0da1a-cc39-486c-a6b3-357f9df974be" />
+            <Object Name="CoffeeReady" ObjectId="f87049c0-8714-4b66-bea9-9269392d29ba" />
+            <Object Name="ActDo" ObjectId="2b93c7e8-b8ff-4186-9c45-38d385f21193" />
+            <Object Name="ActHeat" ObjectId="9e3c3d30-f6c8-4991-be9f-932f948dff00" />
+            <Object Name="ActFoam" ObjectId="5985ddd0-b5a4-4058-9e50-43bea0605035" />
+          </Object>
+          <Folder Name="32_POUs">
+            <Object Name="FB_UML_SC" ObjectId="94bc9ba2-99d4-44d6-a994-09cf55f5519b">
+              <Object Name="ClearTextFile" ObjectId="eeadfa1a-8f3e-409c-821b-99021356a54f" />
+              <Object Name="ClearXmlFile" ObjectId="f8f23fcf-54cf-4de2-a6bf-21ea7d0b73a5" />
+              <Object Name="FillTextFile" ObjectId="8e04a295-480a-485c-95c5-43fbc530c30f" />
+              <Object Name="FillXmlFile" ObjectId="414f740d-8f18-48da-80b3-7ea980956d61" />
+              <Object Name="GetClientID" ObjectId="44e9e658-ee86-4494-b16a-b41b020447f1" />
+              <Object Name="GetMasterID" ObjectId="7eaab2ed-ff02-4343-af44-fa07d4b58265" />
+              <Object Name="Init" ObjectId="d0ad6e03-56a4-40f3-af43-3842eefeae86" />
+              <Object Name="SaveInitSettings" ObjectId="a9fa5c00-a88c-49ee-a68d-e225192550e9" />
+              <Object Name="SaveTextFile" ObjectId="219e5281-819e-448b-8b19-3e98bf2a2af0" />
+              <Object Name="SaveXmlFile" ObjectId="03a23303-469c-4aa1-811c-347cee96a6ae" />
+              <Object Name="SendFileToClient" ObjectId="f85a10a5-2d11-4ea8-a2ff-5eb2dc2ad2e9" />
+              <Object Name="SendFileToMaster" ObjectId="2b74f887-17a5-4007-b86e-e2a7c00823a7" />
+            </Object>
+            <Object Name="_32_MAIN" ObjectId="2925790c-2510-456f-9526-75c747cefdba" />
+          </Folder>
+        </Folder>
+      </ProjectStructure>
+    </data>
+  </addData>
+</project>

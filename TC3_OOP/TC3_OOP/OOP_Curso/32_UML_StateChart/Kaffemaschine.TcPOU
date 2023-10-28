@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.12">
+  <POU Name="Kaffemaschine" Id="{7cc42eb0-dc6d-4e02-ab5b-1296bec80ed6}" SpecialFunc="None">
+    <Declaration><![CDATA[{attribute 'no-analysis' := ''}
+{attribute 'reduced_bp_set' := ''}
+PROGRAM Kaffemaschine
+VAR
+	bMakeCoffee: BOOL := FALSE;
+	bShutDown: BOOL := FALSE;
+	bPowerUp: BOOL := FALSE;
+	nGrind: INT := 0;
+	nHeat: INT := 20;
+	nFoam: INT := 0;
+	{attribute 'implicit_state_chart_struct' := ''}
+	UML_SC_Kaffemaschine: _UML_SC_7cc42eb0dc6d4e02ab5b1296bec80ed6;
+	{attribute 'implicit_state_chart_struct' := ''}
+	UML_SC_ActHeat: _UML_SC_9e3c3d30f6c84991be9f932f948dff00;
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[]]></ST>
+    </Implementation>
+    <Action Name="ActDo" Id="{2b93c7e8-b8ff-4186-9c45-38d385f21193}">
+      <Implementation>
+        <ST><![CDATA[nGrind := nGrind + 10;]]></ST>
+      </Implementation>
+    </Action>
+    <Action Name="ActEntry" Id="{469d6e6b-6804-4513-8413-36e267dcf356}">
+      <Implementation>
+        <ST><![CDATA[]]></ST>
+      </Implementation>
+    </Action>
+    <Action Name="ActFoam" Id="{5985ddd0-b5a4-4058-9e50-43bea0605035}">
+      <Implementation>
+        <ST><![CDATA[nFoam := nFoam + 5;]]></ST>
+      </Implementation>
+    </Action>
+    <Action Name="ActHeat" Id="{9e3c3d30-f6c8-4991-be9f-932f948dff00}">
+      <Implementation>
+        <ST><![CDATA[]]></ST>
+      </Implementation>
+    </Action>
+    <Action Name="ActShutdown" Id="{6bc0da1a-cc39-486c-a6b3-357f9df974be}">
+      <Implementation>
+        <ST><![CDATA[bShutDown := FALSE;
+bPowerUp := FALSE;]]></ST>
+      </Implementation>
+    </Action>
+    <Action Name="CoffeeReady" Id="{f87049c0-8714-4b66-bea9-9269392d29ba}">
+      <Implementation>
+        <ST><![CDATA[bMakeCoffee := FALSE;
+nGrind := 0;
+nHeat := 20;
+nFoam := 0;]]></ST>
+      </Implementation>
+    </Action>
+  </POU>
+</TcPlcObject>

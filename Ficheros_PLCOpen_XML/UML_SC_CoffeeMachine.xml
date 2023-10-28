@@ -1,0 +1,218 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<project xmlns="http://www.plcopen.org/xml/tc6_0200">
+  <fileHeader companyName="" productName="CODESYS" productVersion="CODESYS V3.5 SP18 Patch 4" creationDateTime="2023-10-22T20:37:55.9701005" />
+  <contentHeader name="UML_SC_CoffeeMachine.project" modificationDateTime="2021-04-08T20:07:10">
+    <coordinateInfo>
+      <fbd>
+        <scaling x="1" y="1" />
+      </fbd>
+      <ld>
+        <scaling x="1" y="1" />
+      </ld>
+      <sfc>
+        <scaling x="1" y="1" />
+      </sfc>
+    </coordinateInfo>
+    <addData>
+      <data name="http://www.3s-software.com/plcopenxml/projectinformation" handleUnknown="implementation">
+        <ProjectInformation />
+      </data>
+    </addData>
+  </contentHeader>
+  <types>
+    <dataTypes />
+    <pous>
+      <pou name="Kaffemaschine" pouType="program">
+        <interface>
+          <localVars>
+            <variable name="bMakeCoffee">
+              <type>
+                <BOOL />
+              </type>
+              <initialValue>
+                <simpleValue value="FALSE" />
+              </initialValue>
+            </variable>
+            <variable name="bShutDown">
+              <type>
+                <BOOL />
+              </type>
+              <initialValue>
+                <simpleValue value="FALSE" />
+              </initialValue>
+            </variable>
+            <variable name="bPowerUp">
+              <type>
+                <BOOL />
+              </type>
+              <initialValue>
+                <simpleValue value="FALSE" />
+              </initialValue>
+            </variable>
+            <variable name="nGrind">
+              <type>
+                <INT />
+              </type>
+              <initialValue>
+                <simpleValue value="0" />
+              </initialValue>
+            </variable>
+            <variable name="nHeat">
+              <type>
+                <INT />
+              </type>
+              <initialValue>
+                <simpleValue value="20" />
+              </initialValue>
+            </variable>
+            <variable name="nFoam">
+              <type>
+                <INT />
+              </type>
+              <initialValue>
+                <simpleValue value="0" />
+              </initialValue>
+            </variable>
+            <variable name="UML_SC_Kaffemaschine">
+              <type>
+                <derived name="_UML_SC_7cc42eb0dc6d4e02ab5b1296bec80ed6" />
+              </type>
+              <addData>
+                <data name="http://www.3s-software.com/plcopenxml/attributes" handleUnknown="implementation">
+                  <Attributes>
+                    <Attribute Name="implicit_state_chart_struct" Value="" />
+                  </Attributes>
+                </data>
+              </addData>
+            </variable>
+            <variable name="UML_SC_ActHeat">
+              <type>
+                <derived name="_UML_SC_9e3c3d30f6c84991be9f932f948dff00" />
+              </type>
+              <addData>
+                <data name="http://www.3s-software.com/plcopenxml/attributes" handleUnknown="implementation">
+                  <Attributes>
+                    <Attribute Name="implicit_state_chart_struct" Value="" />
+                  </Attributes>
+                </data>
+              </addData>
+            </variable>
+          </localVars>
+          <addData>
+            <data name="http://www.3s-software.com/plcopenxml/attributes" handleUnknown="implementation">
+              <Attributes>
+                <Attribute Name="no-analysis" Value="" />
+                <Attribute Name="reduced_bp_set" Value="" />
+              </Attributes>
+            </data>
+          </addData>
+        </interface>
+        <actions>
+          <action name="ActEntry">
+            <body>
+              <ST>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml" />
+              </ST>
+            </body>
+            <addData>
+              <data name="http://www.3s-software.com/plcopenxml/objectid" handleUnknown="discard">
+                <ObjectId>469d6e6b-6804-4513-8413-36e267dcf356</ObjectId>
+              </data>
+            </addData>
+          </action>
+          <action name="ActShutdown">
+            <body>
+              <ST>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">bShutDown := FALSE;
+bPowerUp := FALSE;</xhtml>
+              </ST>
+            </body>
+            <addData>
+              <data name="http://www.3s-software.com/plcopenxml/objectid" handleUnknown="discard">
+                <ObjectId>6bc0da1a-cc39-486c-a6b3-357f9df974be</ObjectId>
+              </data>
+            </addData>
+          </action>
+          <action name="CoffeeReady">
+            <body>
+              <ST>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">bMakeCoffee := FALSE;
+nGrind := 0;
+nHeat := 20;
+nFoam := 0;</xhtml>
+              </ST>
+            </body>
+            <addData>
+              <data name="http://www.3s-software.com/plcopenxml/objectid" handleUnknown="discard">
+                <ObjectId>f87049c0-8714-4b66-bea9-9269392d29ba</ObjectId>
+              </data>
+            </addData>
+          </action>
+          <action name="ActDo">
+            <body>
+              <ST>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">nGrind := nGrind + 10;</xhtml>
+              </ST>
+            </body>
+            <addData>
+              <data name="http://www.3s-software.com/plcopenxml/objectid" handleUnknown="discard">
+                <ObjectId>2b93c7e8-b8ff-4186-9c45-38d385f21193</ObjectId>
+              </data>
+            </addData>
+          </action>
+          <action name="ActHeat">
+            <body>
+              <ST>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml" />
+              </ST>
+            </body>
+            <addData>
+              <data name="http://www.3s-software.com/plcopenxml/objectid" handleUnknown="discard">
+                <ObjectId>9e3c3d30-f6c8-4991-be9f-932f948dff00</ObjectId>
+              </data>
+            </addData>
+          </action>
+          <action name="ActFoam">
+            <body>
+              <ST>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">nFoam := nFoam + 5;</xhtml>
+              </ST>
+            </body>
+            <addData>
+              <data name="http://www.3s-software.com/plcopenxml/objectid" handleUnknown="discard">
+                <ObjectId>5985ddd0-b5a4-4058-9e50-43bea0605035</ObjectId>
+              </data>
+            </addData>
+          </action>
+        </actions>
+        <body>
+          <ST>
+            <xhtml xmlns="http://www.w3.org/1999/xhtml" />
+          </ST>
+        </body>
+        <addData>
+          <data name="http://www.3s-software.com/plcopenxml/objectid" handleUnknown="discard">
+            <ObjectId>7cc42eb0-dc6d-4e02-ab5b-1296bec80ed6</ObjectId>
+          </data>
+        </addData>
+      </pou>
+    </pous>
+  </types>
+  <instances>
+    <configurations />
+  </instances>
+  <addData>
+    <data name="http://www.3s-software.com/plcopenxml/projectstructure" handleUnknown="discard">
+      <ProjectStructure>
+        <Object Name="Kaffemaschine" ObjectId="7cc42eb0-dc6d-4e02-ab5b-1296bec80ed6">
+          <Object Name="ActEntry" ObjectId="469d6e6b-6804-4513-8413-36e267dcf356" />
+          <Object Name="ActShutdown" ObjectId="6bc0da1a-cc39-486c-a6b3-357f9df974be" />
+          <Object Name="CoffeeReady" ObjectId="f87049c0-8714-4b66-bea9-9269392d29ba" />
+          <Object Name="ActDo" ObjectId="2b93c7e8-b8ff-4186-9c45-38d385f21193" />
+          <Object Name="ActHeat" ObjectId="9e3c3d30-f6c8-4991-be9f-932f948dff00" />
+          <Object Name="ActFoam" ObjectId="5985ddd0-b5a4-4058-9e50-43bea0605035" />
+        </Object>
+      </ProjectStructure>
+    </data>
+  </addData>
+</project>

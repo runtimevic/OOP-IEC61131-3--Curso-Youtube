@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.12">
+  <POU Name="_32_MAIN" Id="{2925790c-2510-456f-9526-75c747cefdba}" SpecialFunc="None">
+    <Declaration><![CDATA[(*
+### This sample project contains the following elements.
+
+- FB_UML_SC:		This FB represents a simulation to save a text as XML or text format, and to publish it afterwards to a client and to a master.
+					The underlying state machine is implemented with the help of UML State Chart.
+					
+					The behavior is not really programmed.
+					Only the wrapper/basic structure of the state machine is implemented. 
+						
+					Each time, when an ENTRY/DO/EXIT action is called, a correspondent counter variable is increased.
+
+- Visualization:	The visu shows the state of the counters, so that you can see how often an ENTRY/DO/EXIT action has been called. 
+					You can use the buttons to switch between the states.
+*)
+PROGRAM _32_MAIN
+VAR
+	fbUmlSC	: FB_UML_SC;
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[fbUmlSC();]]></ST>
+    </Implementation>
+  </POU>
+</TcPlcObject>
