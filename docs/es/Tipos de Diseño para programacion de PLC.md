@@ -78,6 +78,7 @@ En el panorama del software en constante evolución, comprender los desafíos qu
 - Diseño en UML.
 
 Units: (Ejemplo de Unidades):
+
 - I_InputDigital(p_On, p_Off)
 - I_OutputDigital(M_ON, M_OFF)
 - I_InputAnalog
@@ -89,7 +90,7 @@ Units: (Ejemplo de Unidades):
 - FBGenericUnit
 
 
-- Objects composition (Composicion de Objetos).
+- Objects Composition (Composicion de Objetos).
 
 - Conceptos básicos del lenguaje de programación de texto estructurado (ST).
 - UDT (estructuras).
