@@ -35,44 +35,45 @@
     - En esta fase escribiremos el codigo que va a dar vida a lo que hemos analizado y diseñado previamente.
 
 ***
-🚀 𝗪𝗵𝗮𝘁'𝘀 𝗮 𝗦𝗼𝗳𝘁𝘄𝗮𝗿𝗲 𝗨𝗻𝗶𝘁 ?
+### 🚀 <span style="color:grey">¿ Qué es una Unidad de Software ?</span>
  
-In software development, understanding what is a "Software Unit" is essential, but it's not always as straightforward as it may seem. What are the challenges and solutions of defining this critical building block according to ISO 26262?
+En el desarrollo de software, comprender qué es una **"Unidad de software"** es esencial, pero no siempre es tan sencillo como parece. ¿Cuáles son los desafíos y las soluciones para definir este componente crítico?
  
-🧩 𝗜𝗦𝗢 𝟮𝟲𝟮𝟲𝟮 𝗱𝗲𝗳𝗶𝗻𝗶𝘁𝗶𝗼𝗻
+### 🧩 <span style="color:grey">D𝗲𝗳𝗶𝗻𝗶c𝗶ó𝗻:</span>
 
-A software unit is the atomic level of a software component, eligible for standalone testing. It encapsulates specific functionalities and is designed for independent development and testing. Several software units collectively form a software component.
+Una unidad de software es el nivel atómico de un componente de software, elegible para pruebas independientes. Encapsula funcionalidades específicas y está diseñado para desarrollo y pruebas independientes. Varias unidades de software forman colectivamente un componente de software.
+
+### 🎯 <span style="color:grey">Caracteristicas de la Unidad de Software:</span>
+
+1️⃣ <span style="color:orange">**Indepencia:**</span> Puede diseñarse, implementarse y probarse por separado, lo que lo hace fácil de usar para los desarrolladores.
+
+2️⃣ <span style="color:orange">**Enfoque de Requisitos:**</span> Cumple de forma exhaustiva un conjunto de requisitos bien definidos, asegurando la trazabilidad.
+
+3️⃣ <span style="color:orange">**Auto-𝗖𝗼𝗵𝗲𝘀𝗶𝗼𝗻:**</span> Es altamente atómico y se centra en una única funcionalidad con dependencias mínimas.
+
+4️⃣ <span style="color:orange">**Reutilización:**</span> Está diseñado para ser reutilizado si es necesario en múltiples aplicaciones de software para una mayor eficiencia.
  
-🎯 𝗖𝗵𝗮𝗿𝗮𝗰𝘁𝗲𝗿𝗶𝘀𝘁𝗶𝗰𝘀 𝗼𝗳 𝗮 𝗦𝗼𝗳𝘁𝘄𝗮𝗿𝗲 𝗨𝗻𝗶𝘁
+### 📐 <span style="color:grey">Tamaño y Complejidad:</span>
 
-1️⃣ 𝗜𝗻𝗱𝗲𝗽𝗲𝗻𝗱𝗲𝗻𝗰𝗲: It can be designed, implemented, and tested separately, making it developer-friendly.
+Aquí está el principal desafío: definir el tamaño ideal y gestionar la complejidad. No existe una ciencia exacta, pero se pueden proporcionar pautas que incluyen: 
 
-2️⃣ 𝗥𝗲𝗾𝘂𝗶𝗿𝗲𝗺𝗲𝗻𝘁𝘀 𝗙𝗼𝗰𝘂𝘀: It exhaustively fulfills a set of well-defined requirements, ensuring traceability.
+1️⃣ <span style="color:orange">**Analizabilidad:**</span> Garantizar que el tamaño de la unidad permita un fácil análisis y comprensión de los requisitos asignados.
 
-3️⃣ 𝗦𝗲𝗹𝗳-𝗖𝗼𝗵𝗲𝘀𝗶𝗼𝗻: It's highly atomic, focusing on a single functionality with minimal dependencies.
+2️⃣ <span style="color:orange">**Consideración de funcionalidad:**</span> Elegir el algoritmo correcto teniendo en cuenta las desventajas limitaciones del software integrado (por ejemplo, recursos de hardware disponibles)
 
-4️⃣ 𝗥𝗲𝘂𝘀𝗮𝗯𝗶𝗹𝗶𝘁𝘆: It's designed to be reused if necessary across multiple software applications for more efficiency.
+3️⃣ <span style="color:orange">**Acoplamiento Inteligente:**</span> Agrupar funcionalidades altamente dependientes dentro de una unidad mientras se separan funciones desacopladas en diferentes unidades.
+
+4️⃣ <span style="color:orange">**Criterios Técnico:**</span> Uso de métricas, herramientas de análisis de complejidad, límites de recursos y técnicas de partición para guiar el diseño de la unidad de software.
  
-📐 𝗦𝗶𝘇𝗲 𝗮𝗻𝗱 𝗖𝗼𝗺𝗽𝗹𝗲𝘅𝗶𝘁𝘆
-
-Here's the main challenge: defining the ideal size and managing complexity. There’s no exact science but ISO 26262 provides guidelines which include:
-1️⃣ 𝗔𝗻𝗮𝗹𝘆𝘇𝗮𝗯𝗶𝗹𝗶𝘁𝘆: Ensuring the unit's size allows easy analysis and comprehension of allocated requirements.
-
-2️⃣ 𝗙𝘂𝗻𝗰𝘁𝗶𝗼𝗻𝗮𝗹𝗶𝘁𝘆 𝗖𝗼𝗻𝘀𝗶𝗱𝗲𝗿𝗮𝘁𝗶𝗼𝗻: Choosing the right algorithm considering the constraints of embedded software (e.g. available hardware ressources)
-
-3️⃣ 𝗦𝗺𝗮𝗿𝘁 𝗖𝗼𝘂𝗽𝗹𝗶𝗻𝗴: Grouping highly dependent functionalities within a unit while separating decoupled features into different units.
-
-4️⃣ 𝗧𝗲𝗰𝗵𝗻𝗶𝗰𝗮𝗹 𝗖𝗿𝗶𝘁𝗲𝗿𝗶𝗮: Using metrics, complexity analysis tools, resource limits, and partitioning techniques to guide the software unit design.
- 
-In the constantly evolving software landscape, understanding the challenges of defining software units is fondamental to create robust, efficient, and scalable software systems. For more details about software unit creation in model-based software development, here’s an interesting blog article: https://lnkd.in/eRipc_MQ
-
+En el panorama del software en constante evolución, comprender los desafíos que plantea la definición de unidades de software es fundamental para crear sistemas de software robustos, eficientes y escalables.
 
 ***
-Ingenieria de desarrollo para la programación OOP:
-- Diseño por Componente, Unidad, Dispositivo, Objeto...
+### <span style="color:grey">Ingenieria de desarrollo para la programación OOP:</span>
+- Diseño por Unidad,Componente,Dispositivo, Objeto...
     - Los objetos son las unidades básicas de la programación orientada a objetos.
-    - Un componente proporciona servicios, mientras que un objeto proporciona operaciones y métodos. Un componente puede ser entendido por todos, mientras que un objeto solo puede ser entendido por los desarrolladores.
-    - Las unidades son los grupos de código más pequeños que se pueden mantener y ejecutar de forma independiente
+    - Un componente proporciona servicios, mientras que un objeto proporciona operaciones y métodos. 
+    - Un componente puede ser entendido por todos, mientras que un objeto solo puede ser entendido por los desarrolladores.
+    - Las unidades son los grupos de código más pequeños que se pueden mantener y ejecutar de forma independiente.
 - Diseño por Pruebas Unitarias.
 - Diseño en UML.
 
@@ -83,23 +84,26 @@ Units: (Ejemplo de Unidades):
 - I_OutputAnalog
 - I_Run:(M_Start, M_Stop)
 
+- FBTimer
+- FCAnalogSensor
+- FBGenericUnit
 
--FBTimer
--FCAnalogSensor
--FBGenericUnit
 
-!!! puntos que se pueden incluir en el curso!!!:
-- Objects composition (Composicion de Objetos)
+- Objects composition (Composicion de Objetos).
 
-- Basic of Structured Text programming Language
-- UDT (estructuras)
-- Modular Design
-- Polymorphism
+- Conceptos básicos del lenguaje de programación de texto estructurado (ST).
+- UDT (estructuras).
+- Diseño Modular.
+- Polimorfismo.
 
-- Advanced State Pattern
-- Wrappers and Features
-- Layered Design
-- Final Project covering a real-world problem to be solved using OOP
+- Patrones de Diseño: Patron de estado Avanzado.
+- Envoltorios y caracteristicas.
+- Diseño en Capas.
+- Objetivo Proyecto final que cubre un problema del mundo real a resolver utilizando programación orientada a objetos OOP
 
 ***
-- [www.btc-embedded.com, component-based-architecture-in-simulink-for-efficient-unit-and-integration-test](https://www.btc-embedded.com/component-based-architecture-in-simulink-for-efficient-unit-and-integration-test/)
+### <span style="color:grey">Links ipos de Diseño para programación de PLC:</span>
+- 🔗 [www.btc-embedded.com, component-based-architecture-in-simulink-for-efficient-unit-and-integration-test](https://www.btc-embedded.com/component-based-architecture-in-simulink-for-efficient-unit-and-integration-test/)
+***
+### <span style="color:grey">Link al Video de Youtube_33:</span>
+- 🔗 [033 - OOP IEC 61131-3 PLC -- Tipos de Diseño para programación de PLC]()
