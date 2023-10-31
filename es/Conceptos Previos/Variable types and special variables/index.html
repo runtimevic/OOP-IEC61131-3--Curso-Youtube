@@ -2447,13 +2447,20 @@
 <li>También observe aquí la regla SA0102 del Análisis Estático, que determina el acceso a las variables locales para la lectura desde el exterior.</li>
 </ul>
 </li>
-<li><a href="https://infosys.beckhoff.com/content/1033/tc3_plc_intro/2528760459.html">Input Variables - VAR_INPUT</a><ul>
+<li>
+<p><a href="https://infosys.beckhoff.com/content/1033/tc3_plc_intro/2528760459.html">Input Variables - VAR_INPUT</a></p>
+<ul>
 <li>Las variables de entrada son variables de entrada para un bloque de funciones.</li>
 <li>VAR_INPUT variables se declaran en la parte de declaración de los objetos de programación entre las palabras clave VAR_INPUT y END_VAR.</li>
 <li>Puede ampliar las variables de entrada con una palabra clave de atributo.</li>
+<li>En TwinCAT build 4026 existe la sobrecarga de las VAR_INPUT, en su declaración se podrán incializar las variables declaradas de esta forma al llamar al FB, FC, metodo, etc..., no es obligatorio incluirla en la llamada ya que tendrán el valor por defecto si no se llama en su modulo correspondiente.</li>
 </ul>
+<p><img alt="TwinCAT_build_4026_overload_input1" src="../../imagenes/OOP_Override_01.JPG" /></p>
+<p><img alt="TwinCAT_build_4026_overload_input2" src="../../imagenes/OOP_Override_02.JPG" /></p>
 </li>
-<li><a href="https://infosys.beckhoff.com/content/1033/tc3_plc_intro/2528765835.html">Output Variables - VAR_OUTPUT</a><ul>
+<li>
+<p><a href="https://infosys.beckhoff.com/content/1033/tc3_plc_intro/2528765835.html">Output Variables - VAR_OUTPUT</a></p>
+<ul>
 <li>Las variables de salida son variables de salida de un bloque de funciones.</li>
 <li>VAR_OUTPUT variables se declaran en la parte de declaración de los objetos de programación entre las palabras clave VAR_OUTPUT y END_VAR. TwinCAT devuelve los valores de estas variables al bloque de función de llamada. Allí puede consultar los valores y continuar usándolos.</li>
 <li>Puede ampliar las variables de salida con una palabra clave de atributo.    </li>
@@ -2592,11 +2599,11 @@ Si declara una variable local en una función como RETAIN, esto no tiene efecto.
   <small>
     
       Última actualización:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">October 29, 2023 11:47:58</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">October 31, 2023 11:05:43</span>
       
         <br>
         Creado:
-        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">October 29, 2023 11:47:58</span>
+        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">October 31, 2023 11:05:43</span>
       
     
   </small>
