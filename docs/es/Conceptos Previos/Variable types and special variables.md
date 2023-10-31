@@ -14,6 +14,12 @@ The variable type defines how and where you can use the variable. The variable t
     - Las variables de entrada son variables de entrada para un bloque de funciones.
     - VAR_INPUT variables se declaran en la parte de declaración de los objetos de programación entre las palabras clave VAR_INPUT y END_VAR.
     - Puede ampliar las variables de entrada con una palabra clave de atributo.
+    - En TwinCAT build 4026 existe la sobrecarga de las VAR_INPUT, en su declaración se podrán incializar las variables declaradas de esta forma al llamar al FB, FC, metodo, etc..., no es obligatorio incluirla en la llamada ya que tendrán el valor por defecto si no se llama en su modulo correspondiente.
+
+    ![TwinCAT_build_4026_overload_input1](../imagenes/OOP_Override_01.JPG)
+
+    ![TwinCAT_build_4026_overload_input2](../imagenes/OOP_Override_02.JPG)
+
 - [Output Variables - VAR_OUTPUT](https://infosys.beckhoff.com/content/1033/tc3_plc_intro/2528765835.html)
     - Las variables de salida son variables de salida de un bloque de funciones.
     - VAR_OUTPUT variables se declaran en la parte de declaración de los objetos de programación entre las palabras clave VAR_OUTPUT y END_VAR. TwinCAT devuelve los valores de estas variables al bloque de función de llamada. Allí puede consultar los valores y continuar usándolos.
