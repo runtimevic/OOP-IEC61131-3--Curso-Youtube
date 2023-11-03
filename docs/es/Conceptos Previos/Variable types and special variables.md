@@ -100,6 +100,9 @@ El grado de retención de las variables RETAIN se incluye automáticamente en el
     - [RETAIN: for remanent variables of type RETAIN](https://infosys.beckhoff.com/content/1033/tc3_plc_intro/2528803467.html)
     - [PERSISTENT: for remanent variables of type PERSISTENT](https://infosys.beckhoff.com/content/1033/tc3_plc_intro/2528803467.html)
     - [CONSTANT: for constants](https://infosys.beckhoff.com/content/1033/tc3_plc_intro/2529284235.html#2529371275)
+    - [VAR_GENERIC CONSTANT](https://content.helpme-codesys.com/en/CODESYS%20Development%20System/_cds_vartypes_var_generic_constant.html#:~:text=A%20generic%20constant%20is%20a,function%20block%20instance%20is%20assigned.)
+    - En la versión de TwinCAT build 4026: podremos declarar VAR_GENERIC CONSTANT ver imagen adjunta:
+![TwinCAT_build_4026_var_generic_constant](../imagenes/TwinCAT_build_4026_var_generic_constant.JPG) 
 
 ***
 ### <span style="color:grey">Links:</span>
