@@ -103,7 +103,7 @@ Units: (Ejemplo de Unidades):
 - Objetivo Proyecto final que cubre un problema del mundo real a resolver utilizando programación orientada a objetos OOP
 
 ***
-### <span style="color:grey">Links ipos de Diseño para programación de PLC:</span>
+### <span style="color:grey">Links Tipos de Diseño para programación de PLC:</span>
 - 🔗 [www.btc-embedded.com, component-based-architecture-in-simulink-for-efficient-unit-and-integration-test](https://www.btc-embedded.com/component-based-architecture-in-simulink-for-efficient-unit-and-integration-test/)
 ***
 ### <span style="color:grey">Link al Video de Youtube_33:</span>
