@@ -1,4 +1,4 @@
-### <span style="color:grey">Tipos de Diseño para programacion de PLC:</span>
+
 ### <span style="color:grey">Análisis y Diseño de un sistema orientado a objetos:</span>
 
 - Durante el desarrollo de un sistema se recomienda seguir la siguiente fases:
@@ -12,7 +12,7 @@
 
     - Durante esta fase vamos ya a definir cual va a ser el comportamiento de cada uno de los elementos que habiamos definido en la fase de analisis, tambien estableceremos las relaciones entre elementos.
 
-    - Para esta fase de diseño podemos utlizar los Diagramas UML, mediante estos diagramas vamos a poder modelar lo que va a ser finalmente el sistema.esta fase se puede optar por no hacerla pero si se esta diseñando un sistema mediano a gran tamaño y/ó con cierta complejidad se recomienda no saltarse este paso.
+    - Para esta fase de diseño podemos utilizar los Diagramas UML, mediante estos diagramas vamos a poder modelar lo que va a ser finalmente el sistema. Esta fase se puede optar por no hacerla pero si se esta diseñando un sistema mediano a gran tamaño y/ó con cierta complejidad se recomienda no saltarse este paso.
 
     - Los Diagrams UML mas utilizados son:
 
@@ -37,7 +37,7 @@
 ***
 ### 🚀 <span style="color:grey">¿ Qué es una Unidad de Software ?</span>
  
-En el desarrollo de software, comprender qué es una **"Unidad de software"** es esencial, pero no siempre es tan sencillo como parece. ¿Cuáles son los desafíos y las soluciones para definir este componente crítico?
+En el desarrollo de software, comprender qué es una **"Unidad de Software"** es esencial, pero no siempre es tan sencillo como parece. ¿Cuáles son los desafíos y las soluciones para definir este componente crítico?
  
 ### 🧩 <span style="color:grey">D𝗲𝗳𝗶𝗻𝗶c𝗶ó𝗻:</span>
 
@@ -107,4 +107,4 @@ Units: (Ejemplo de Unidades):
 - 🔗 [www.btc-embedded.com, component-based-architecture-in-simulink-for-efficient-unit-and-integration-test](https://www.btc-embedded.com/component-based-architecture-in-simulink-for-efficient-unit-and-integration-test/)
 ***
 ### <span style="color:grey">Link al Video de Youtube_33:</span>
-- 🔗 [033 - OOP IEC 61131-3 PLC -- Tipos de Diseño para programación OOP]()
+- 🔗 [033 - OOP IEC 61131-3 PLC -- Tipos de Diseño para programación OOP]( https://youtu.be/k2PBfaXRzoI)

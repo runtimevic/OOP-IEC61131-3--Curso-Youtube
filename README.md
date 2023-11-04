@@ -51,4 +51,5 @@
     - 🔗 [030 - OOP IEC 61131-3 PLC -- UML - Diagrama de Clases](https://youtu.be/s2NV8Yt_rdY)
     - 🔗 [031 - OOP IEC 61131-3 PLC -- UML - Diagrama de Clases - Relaciones](https://youtu.be/2cPa-f8-BFY)
     - 🔗 [032 - OOP IEC 61131-3 PLC -- UML - Diagrama de Estado - StateChart](https://youtu.be/Gq_wvuDBgZ4)
-    - 🔗 [033 - OOP IEC 61131-3 PLC -- Tipos de Diseño para programación OOP]()
+    - 🔗 [033 - OOP IEC 61131-3 PLC -- Tipos de Diseño para programación OOP](https://youtu.be/k2PBfaXRzoI)
+    - 🔗 [034 - OOP IEC 61131-3 PLC -- Patrones de Diseño]()

@@ -3,9 +3,9 @@
 Hola,
 Seguimos con el curso de 👩‍💻 OOP IEC 61131-3 PLC 👨‍💻,
 ya esta disponible el Video numero 33 de Youtube:
-en este video veremos Tipos de Diseño para programación OOP.
+en este video veremos: Tipos de Diseño para programación OOP.
 
-👉 
+👉 https://youtu.be/k2PBfaXRzoI
 
 🐙 Repositorio de GitHub:
 - 👉 https://github.com/runtimevic/OOP-IEC61131-3--Curso-Youtube
@@ -50,16 +50,18 @@ Lista de Videos del Curso OOP Programación Orientada a Objetos IEC61131-3 PLC:
 - 030 - https://youtu.be/s2NV8Yt_rdY
 - 031 - https://youtu.be/2cPa-f8-BFY
 - 032 - https://youtu.be/Gq_wvuDBgZ4
-- 033 -
+- 033 - https://youtu.be/k2PBfaXRzoI
+- 034 -
 
 Se busca colaborador para la traducción de la documentación al idioma que desee... 👀
 
 - [libro disponible en ingles: Use of the SOLID principles with the IEC 61131-3](https://www.bod.de/buchshop/use-of-the-solid-principles-with-the-iec-61131-3-stefan-henneken-9783757892227)
 
-- [pongo el link del libro que enseño en el video 015, en aleman:](https://www.bod.de/buchshop/anwendung-der-solid-prinzipien-mit-der-iec-61131-3-stefan-henneken-9783734746857)
+- [libro disponible en ingles: tambien esta disponible en amazon](https://www.amazon.es/Use-SOLID-principles-61131-3-Object-Oriented/dp/3757892224/ref=sr_1_2?__mk_es_ES=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=259YTE8GIY65K&keywords=SOLID+IEC+61131-3&qid=1699097833&sprefix=solid+iec+61131-3%2Caps%2C88&sr=8-2)
+
+- [pongo el link del libro que enseño en el video 015, version en aleman:](https://www.bod.de/buchshop/anwendung-der-solid-prinzipien-mit-der-iec-61131-3-stefan-henneken-9783734746857)
 
 - 👉 [Ayudame siendo Patrocinador](https://github.com/sponsors/runtimevic)
-
 
 
 ***
