@@ -2,10 +2,10 @@
 
 Hola,
 Seguimos con el curso de 👩‍💻 OOP IEC 61131-3 PLC 👨‍💻,
-ya esta disponible el Video numero 32 de Youtube:
-en este video veremos la explicación de UML - Diagrama de Estado - State Chart
+ya esta disponible el Video numero 33 de Youtube:
+en este video veremos Tipos de Diseño para programación OOP.
 
-👉 https://youtu.be/Gq_wvuDBgZ4
+👉 
 
 🐙 Repositorio de GitHub:
 - 👉 https://github.com/runtimevic/OOP-IEC61131-3--Curso-Youtube
@@ -54,7 +54,9 @@ Lista de Videos del Curso OOP Programación Orientada a Objetos IEC61131-3 PLC:
 
 Se busca colaborador para la traducción de la documentación al idioma que desee... 👀
 
-- [pongo el link del libro que enseño en el video 015:](https://www.bod.de/buchshop/anwendung-der-solid-prinzipien-mit-der-iec-61131-3-stefan-henneken-9783734746857)
+- [libro disponible en ingles: Use of the SOLID principles with the IEC 61131-3](https://www.bod.de/buchshop/use-of-the-solid-principles-with-the-iec-61131-3-stefan-henneken-9783757892227)
+
+- [pongo el link del libro que enseño en el video 015, en aleman:](https://www.bod.de/buchshop/anwendung-der-solid-prinzipien-mit-der-iec-61131-3-stefan-henneken-9783734746857)
 
 - 👉 [Ayudame siendo Patrocinador](https://github.com/sponsors/runtimevic)
 

@@ -107,4 +107,4 @@ Units: (Ejemplo de Unidades):
 - 🔗 [www.btc-embedded.com, component-based-architecture-in-simulink-for-efficient-unit-and-integration-test](https://www.btc-embedded.com/component-based-architecture-in-simulink-for-efficient-unit-and-integration-test/)
 ***
 ### <span style="color:grey">Link al Video de Youtube_33:</span>
-- 🔗 [033 - OOP IEC 61131-3 PLC -- Tipos de Diseño para programación de PLC]()
+- 🔗 [033 - OOP IEC 61131-3 PLC -- Tipos de Diseño para programación OOP]()
