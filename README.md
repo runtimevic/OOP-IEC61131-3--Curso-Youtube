@@ -14,8 +14,9 @@
 ### 📃 :it: [Documentation en PDF Italiano](https://github.com/runtimevic/OOP-IEC61131-3--Curso-Youtube/blob/gh-pages/document-it.pdf)
 ### 📃 :portugal: [Documentation en PDF Portugues](https://github.com/runtimevic/OOP-IEC61131-3--Curso-Youtube/blob/gh-pages/document-pt.pdf)
 ***
-### :woman_student:[ Proyecto de TwinCAT](https://github.com/runtimevic/OOP-IEC61131-3--Curso-Youtube/tree/master/TC3_OOP)
-### :man_student:[ Ficheros PLCOpen XML](https://github.com/runtimevic/OOP-IEC61131-3--Curso-Youtube/tree/master/Ficheros_PLCOpen_XML)
+### :woman_student: 👉[ Proyecto de TwinCAT OOP](https://github.com/runtimevic/OOP-IEC61131-3--Curso-Youtube/tree/master/TC3_OOP)
+### :man_student: 👉[ Ficheros PLCOpen XML](https://github.com/runtimevic/OOP-IEC61131-3--Curso-Youtube/tree/master/Ficheros_PLCOpen_XML)
+### 📚 👉 [Proyecto TwinCAT Patrones de Diseño](https://github.com/runtimevic/OOP-IEC61131-3--Curso-Youtube/tree/master/TC3_Design_Patterns)
 ***
 ### Lista de Videos de Youtube:
 - :link: [Lista Completa de Videos Curso:](https://youtube.com/playlist?list=PLEfi_hUmmSjFpfdJ6yw3B9yj7dWHYkHmQ)

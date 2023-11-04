@@ -1,5 +1,8 @@
 ### <span style="color:grey">PATRONES DE DISEÑO:</span>
+El proyecto con todos los patrones de Diseño lo podremos encontrar en:
+### 📚 👉 [Proyecto TwinCAT Patrones de Diseño](https://github.com/runtimevic/OOP-IEC61131-3--Curso-Youtube/tree/master/TC3_Design_Patterns)
 
+Imagen de los patrones de Diseño:
 ![Designpatterns](../imagenes/DesignPatterns.PNG)
 
 Los patrones de diseño son soluciones generales y reutilizables para problemas comunes que se encuentran en la programación de software. En la programación orientada a objetos, existen muchos patrones de diseño que se pueden aplicar para mejorar la modularidad, la flexibilidad y el mantenimiento del código.
