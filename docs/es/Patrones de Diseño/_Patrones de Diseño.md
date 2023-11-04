@@ -1,7 +1,7 @@
 
 El proyecto con todos los patrones de Diseño lo podremos encontrar en:
 ### 📚 👉 [Proyecto TwinCAT Patrones de Diseño](https://github.com/runtimevic/OOP-IEC61131-3--Curso-Youtube/tree/master/TC3_Design_Patterns)
-## 📚 👉 [Ficheros PLCOpen XML Patrones de Diseño]()
+### 📚 👉 [Ficheros PLCOpen XML Patrones de Diseño](https://github.com/runtimevic/OOP-IEC61131-3--Curso-Youtube/tree/master/Ficheros_PLCOpen_XML_Design_Patterns)
 
 Imagen de los patrones de Diseño:
 ![Designpatterns](../imagenes/DesignPatterns.PNG)
@@ -151,4 +151,5 @@ Además de los Patrones de Diseño tenemos:
 - 🔗 [Coding Together ES, Patrones de Diseño](https://www.youtube.com/playlist?list=PLAjsCEoMYsgVOD6YfwISbIo9XCDrLGxYC)
 
 ***
-### <span style="color:grey">Link al Video de Youtube_NNN:</span>
+### <span style="color:grey">Link al Video de Youtube_34:</span>
+- 🔗 [034 - OOP IEC 61131-3 PLC -- Patrones de Diseño - Introducción]()

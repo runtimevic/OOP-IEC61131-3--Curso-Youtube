@@ -14,9 +14,10 @@
 ### 📃 :it: [Documentation en PDF Italiano](https://github.com/runtimevic/OOP-IEC61131-3--Curso-Youtube/blob/gh-pages/document-it.pdf)
 ### 📃 :portugal: [Documentation en PDF Portugues](https://github.com/runtimevic/OOP-IEC61131-3--Curso-Youtube/blob/gh-pages/document-pt.pdf)
 ***
-### :woman_student: 👉[ Proyecto de TwinCAT OOP](https://github.com/runtimevic/OOP-IEC61131-3--Curso-Youtube/tree/master/TC3_OOP)
-### :man_student: 👉[ Ficheros PLCOpen XML](https://github.com/runtimevic/OOP-IEC61131-3--Curso-Youtube/tree/master/Ficheros_PLCOpen_XML)
+### :woman_student: 👉[Proyecto de TwinCAT OOP](https://github.com/runtimevic/OOP-IEC61131-3--Curso-Youtube/tree/master/TC3_OOP)
+### :man_student: 👉[Ficheros PLCOpen XML OOP](https://github.com/runtimevic/OOP-IEC61131-3--Curso-Youtube/tree/master/Ficheros_PLCOpen_XML)
 ### 📚 👉 [Proyecto TwinCAT Patrones de Diseño](https://github.com/runtimevic/OOP-IEC61131-3--Curso-Youtube/tree/master/TC3_Design_Patterns)
+### 📚 👉 [Ficheros PLCOpen XML Patrones de Diseño](https://github.com/runtimevic/OOP-IEC61131-3--Curso-Youtube/tree/master/Ficheros_PLCOpen_XML_Design_Patterns)
 ***
 ### Lista de Videos de Youtube:
 - :link: [Lista Completa de Videos Curso:](https://youtube.com/playlist?list=PLEfi_hUmmSjFpfdJ6yw3B9yj7dWHYkHmQ)
@@ -53,4 +54,10 @@
     - 🔗 [031 - OOP IEC 61131-3 PLC -- UML - Diagrama de Clases - Relaciones](https://youtu.be/2cPa-f8-BFY)
     - 🔗 [032 - OOP IEC 61131-3 PLC -- UML - Diagrama de Estado - StateChart](https://youtu.be/Gq_wvuDBgZ4)
     - 🔗 [033 - OOP IEC 61131-3 PLC -- Tipos de Diseño para programación OOP](https://youtu.be/k2PBfaXRzoI)
-    - 🔗 [034 - OOP IEC 61131-3 PLC -- Patrones de Diseño]()
+    - 🔗 [034 - OOP IEC 61131-3 PLC -- Patrones de Diseño - Introducción]()
+    - 🔗 [035 - OOP IEC 61131-3 PLC -- Patrones de Diseño - Creacional - Metodo de Patrón de Fábrica]()
+    - 🔗 [036 - OOP IEC 61131-3 PLC -- Patrones de Diseño - Creacional - ]()
+    - 🔗 [037 - OOP IEC 61131-3 PLC -- Patrones de Diseño -]()
+    - 🔗 [038 - OOP IEC 61131-3 PLC -- Patrones de Diseño -]()
+    - 🔗 [039 - OOP IEC 61131-3 PLC -- Patrones de Diseño -]()
+    - 🔗 [040 - OOP IEC 61131-3 PLC -- Patrones de Diseño -]()
