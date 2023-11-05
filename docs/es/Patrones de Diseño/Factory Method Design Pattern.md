@@ -1,4 +1,7 @@
-![Factoy Method Design Pattern](../imagenes/Design_Pattern__Creational_Factory_Method.JPG)
+
+![Factoy Method Design Pattern0](../imagenes/Design_Pattern__Creational_Factory_Method_0.JPG)
+
+![Factoy Method Design Pattern1](../imagenes/Design_Pattern__Creational_Factory_Method.JPG)
 
 ***
 ### <span style="color:grey">Links de Patrones de Diseño:</span>
