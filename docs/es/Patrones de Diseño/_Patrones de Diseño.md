@@ -154,4 +154,4 @@ Por ejemplo, imagine que tiene un sistema de archivos, donde los archivos y los 
 
 ***
 ### <span style="color:grey">Link al Video de Youtube_34:</span>
-- 🔗 [034 - OOP IEC 61131-3 PLC -- Patrones de Diseño - Introducción]()
+- 🔗 [034 - OOP IEC 61131-3 PLC -- Patrones de Diseño - Introducción](https://youtu.be/vjWoPhHb6K0)

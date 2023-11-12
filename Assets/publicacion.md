@@ -3,9 +3,9 @@
 Hola,
 Seguimos con el curso de 👩‍💻 OOP IEC 61131-3 PLC 👨‍💻,
 ya esta disponible el Video numero 33 de Youtube:
-en este video veremos: Tipos de Diseño para programación OOP.
+en este video veremos: Patrones de Diseño (Design Patterns)- Introducción.
 
-👉 https://youtu.be/k2PBfaXRzoI
+👉 https://youtu.be/vjWoPhHb6K0
 
 🐙 Repositorio de GitHub:
 - 👉 https://github.com/runtimevic/OOP-IEC61131-3--Curso-Youtube
@@ -51,7 +51,8 @@ Lista de Videos del Curso OOP Programación Orientada a Objetos IEC61131-3 PLC:
 - 031 - https://youtu.be/2cPa-f8-BFY
 - 032 - https://youtu.be/Gq_wvuDBgZ4
 - 033 - https://youtu.be/k2PBfaXRzoI
-- 034 -
+- 034 - https://youtu.be/vjWoPhHb6K0
+- 035 -
 
 Se busca colaborador para la traducción de la documentación al idioma que desee... 👀
 
