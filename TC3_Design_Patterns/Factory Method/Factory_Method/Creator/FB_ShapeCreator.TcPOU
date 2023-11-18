@@ -18,7 +18,12 @@ VAR
 END_VAR
 ]]></Declaration>
     <Implementation>
-      <ST><![CDATA[]]></ST>
+      <ST><![CDATA[//Hemos declarado punteros a cada bloque de función de forma correspondiente, 
+//lo que nos permitiría crear una instancia dinámica del bloque de función de forma solicitado y ahorrar espacio en la memoria. 
+//Si los hubiéramos declarado como fbCircle : FB_Circle en su lugar y asumiéramos que nunca necesitaríamos dibujar Circle, 
+//aún ocuparíamos el espacio de memoria en este bloque de funciones. 
+
+//En el programa principal, el usuario proporcionará una entrada para la forma deseada y 'M_GetShapeObject' decidirá qué bloque de función de forma crear una instancia y lo devolverá. ]]></ST>
     </Implementation>
     <Method Name="FB_exit" Id="{04cc5c87-0c94-4120-8b1e-6cc6bd1cff4e}">
       <Declaration><![CDATA[METHOD FB_exit : BOOL

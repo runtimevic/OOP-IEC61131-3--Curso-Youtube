@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <project xmlns="http://www.plcopen.org/xml/tc6_0200">
-  <fileHeader companyName="Beckhoff Automation GmbH" productName="TwinCAT PLC Control" productVersion="3.5.13.21" creationDateTime="2023-11-04T21:31:27.3124982" />
-  <contentHeader name="Untitled1" modificationDateTime="2023-11-04T21:31:27.3193295">
+  <fileHeader companyName="Beckhoff Automation GmbH" productName="TwinCAT PLC Control" productVersion="3.5.13.21" creationDateTime="2023-11-18T11:54:06.5386523" />
+  <contentHeader name="Untitled1" modificationDateTime="2023-11-18T11:54:06.545484">
     <coordinateInfo>
       <fbd>
         <scaling x="1" y="1" />
@@ -234,7 +234,12 @@ END_VAR
               </interface>
               <body>
                 <ST>
-                  <xhtml xmlns="http://www.w3.org/1999/xhtml" />
+                  <xhtml xmlns="http://www.w3.org/1999/xhtml">//Hemos declarado punteros a cada bloque de función de forma correspondiente, 
+//lo que nos permitiría crear una instancia dinámica del bloque de función de forma solicitado y ahorrar espacio en la memoria. 
+//Si los hubiéramos declarado como fbCircle : FB_Circle en su lugar y asumiéramos que nunca necesitaríamos dibujar Circle, 
+//aún ocuparíamos el espacio de memoria en este bloque de funciones. 
+
+//En el programa principal, el usuario proporcionará una entrada para la forma deseada y 'M_GetShapeObject' decidirá qué bloque de función de forma crear una instancia y lo devolverá. </xhtml>
                 </ST>
               </body>
               <addData>
@@ -564,7 +569,7 @@ END_VAR
                       <derived name="FB_ShapeCreatorEX" />
                     </type>
                     <documentation>
-                      <xhtml xmlns="http://www.w3.org/1999/xhtml">fbShapeCreator : FB_ShapeCreator;</xhtml>
+                      <xhtml xmlns="http://www.w3.org/1999/xhtml">	fbShapeCreator : FB_ShapeCreator;</xhtml>
                     </documentation>
                   </variable>
                   <variable name="eShape">
@@ -643,18 +648,17 @@ END_CASE</xhtml>
                   <InterfaceAsPlainText>
                     <xhtml xmlns="http://www.w3.org/1999/xhtml">PROGRAM MAIN
 VAR
-	//fbShapeCreator : FB_ShapeCreator;
+//	fbShapeCreator : FB_ShapeCreator;
 	fbShapeCreator : FB_ShapeCreatorEX;
 	eShape : E_Shape := E_Shape.init;
 	
 	iShape : I_Shape;
 END_VAR
-
 </xhtml>
                   </InterfaceAsPlainText>
                 </data>
                 <data name="http://www.3s-software.com/plcopenxml/objectid" handleUnknown="discard">
-                  <ObjectId>e743ebf7-0ea0-42cc-acbe-7bd5d8ba5726</ObjectId>
+                  <ObjectId>22bdc30a-ab8b-4bc2-aef4-e8dd30a50934</ObjectId>
                 </data>
               </addData>
             </pou>
@@ -677,7 +681,8 @@ END_VAR
               </interface>
               <body>
                 <ST>
-                  <xhtml xmlns="http://www.w3.org/1999/xhtml" />
+                  <xhtml xmlns="http://www.w3.org/1999/xhtml">//Agregue el {atributo 'enable_dynamic_creation'} en la parte superior de la sección de declaración de cada bloque de funciones. 
+//Esto nos permitirá crear una instancia de cada bloque de funciones dinámicamente usando el operador _NEW en el bloque de funciones FB_ShapeCreator. </xhtml>
                 </ST>
               </body>
               <addData>
@@ -1046,21 +1051,21 @@ END_VAR
               <Library Name="#Tc3_Module" Namespace="Tc3_Module" HideWhenReferencedAsDependency="false" PublishSymbolsInContainer="false" SystemLibrary="false" LinkAllContent="false" DefaultResolution="Tc3_Module, * (Beckhoff Automation GmbH)" />
               <addData>
                 <data name="http://www.3s-software.com/plcopenxml/objectid" handleUnknown="discard">
-                  <ObjectId>dbf95de5-c45c-47d5-b54c-a64e35188db9</ObjectId>
+                  <ObjectId>2e33b86d-8e08-4d8b-91b6-a2cde3723152</ObjectId>
                 </data>
               </addData>
             </Libraries>
           </data>
           <data name="http://www.3s-software.com/plcopenxml/objectid" handleUnknown="discard">
-            <ObjectId>4fd7d53c-98fe-4b6e-8815-b9ebfee26441</ObjectId>
+            <ObjectId>7f87bbfb-35be-44d8-92e3-afc32d93712a</ObjectId>
           </data>
         </addData>
       </resource>
     </data>
     <data name="http://www.3s-software.com/plcopenxml/projectstructure" handleUnknown="discard">
       <ProjectStructure>
-        <Object Name="Untitled1" ObjectId="4fd7d53c-98fe-4b6e-8815-b9ebfee26441">
-          <Object Name="Administrador de bibliotecas" ObjectId="dbf95de5-c45c-47d5-b54c-a64e35188db9" />
+        <Object Name="Untitled1" ObjectId="7f87bbfb-35be-44d8-92e3-afc32d93712a">
+          <Object Name="Administrador de bibliotecas" ObjectId="2e33b86d-8e08-4d8b-91b6-a2cde3723152" />
           <Folder Name="Creator">
             <Object Name="FB_ShapeCreator" ObjectId="38889ccb-1e4b-44e7-87d8-f31d0e5d3ff4">
               <Object Name="FB_exit" ObjectId="04cc5c87-0c94-4120-8b1e-6cc6bd1cff4e" />
@@ -1081,7 +1086,7 @@ END_VAR
           </Folder>
           <Object Name="PlcTask" ObjectId="2a523a9d-d34e-439e-94aa-397a245387d6" />
           <Folder Name="POUs">
-            <Object Name="MAIN" ObjectId="e743ebf7-0ea0-42cc-acbe-7bd5d8ba5726" />
+            <Object Name="MAIN" ObjectId="22bdc30a-ab8b-4bc2-aef4-e8dd30a50934" />
           </Folder>
           <Folder Name="Shapes">
             <Object Name="FB_Circle" ObjectId="b0f1baba-fd54-439d-972f-c8b3bbe19832">

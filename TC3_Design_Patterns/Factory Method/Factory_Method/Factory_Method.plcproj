@@ -7,7 +7,7 @@
     <DownloadApplicationInfo>true</DownloadApplicationInfo>
     <WriteProductVersion>true</WriteProductVersion>
     <GenerateTpy>false</GenerateTpy>
-    <Name>Untitled1</Name>
+    <Name>Factory_Method</Name>
     <ProgramVersion>3.1.4023.0</ProgramVersion>
     <Application>{7f87bbfb-35be-44d8-92e3-afc32d93712a}</Application>
     <TypeSystem>{98cafeeb-80d0-48c2-8b8d-3eaad15acc1c}</TypeSystem>
@@ -92,7 +92,7 @@
     <SubObject Include="I_Shape.M_Draw" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Untitled1.tmc">
+    <None Include="Factory_Method.tmc">
       <SubType>Content</SubType>
     </None>
   </ItemGroup>

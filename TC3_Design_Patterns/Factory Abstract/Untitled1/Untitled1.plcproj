@@ -1,0 +1,135 @@
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <FileVersion>1.0.0.0</FileVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{90199a90-06d9-4d32-81e6-adf031ac89f7}</ProjectGuid>
+    <SubObjectsSortedByName>True</SubObjectsSortedByName>
+    <DownloadApplicationInfo>true</DownloadApplicationInfo>
+    <WriteProductVersion>true</WriteProductVersion>
+    <GenerateTpy>false</GenerateTpy>
+    <Name>Untitled1</Name>
+    <ProgramVersion>3.1.4023.0</ProgramVersion>
+    <Application>{231c46fd-600c-4225-8da1-d9217a995163}</Application>
+    <TypeSystem>{bfb3e72d-2b5c-49df-b132-2ebe7d69ee10}</TypeSystem>
+    <Implicit_Task_Info>{97b17750-1cb1-4c34-9554-73d2b5aa6e78}</Implicit_Task_Info>
+    <Implicit_KindOfTask>{87b6b74b-8541-45ba-8bd2-e1934d0ced22}</Implicit_KindOfTask>
+    <Implicit_Jitter_Distribution>{f720b125-33b9-45c2-a738-86cbdd0a1dfc}</Implicit_Jitter_Distribution>
+    <LibraryReferences>{2d0e8171-a78c-4d4a-bb64-38aa17b15799}</LibraryReferences>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="Abstract Factory\FB_AbstractFactory.TcPOU">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ClassDiagram.TcCD">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Colors\FB_Black.TcPOU">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Colors\FB_Red.TcPOU">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Colors\FB_Yellow.TcPOU">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Creator\FB_ShapeCreator.TcPOU">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Creator\FB_ShapeCreatorEX.TcPOU">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Creator\FB_ColorCreator.TcPOU">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DUTs\E_Color.TcDUT">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DUTs\E_Factory.TcDUT">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DUTs\E_Shape.TcDUT">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Factory Producer\FB_FactoryProducer.TcPOU">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Interfaces\I_Color.TcIO">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Interfaces\I_Shape.TcIO">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PlcTask.TcTTO">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="POUs\MAIN.TcPOU">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Shapes\FB_Circle.TcPOU">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Shapes\FB_CustomShape.TcPOU">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Shapes\FB_Rectangle.TcPOU">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Shapes\FB_Square.TcPOU">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Shapes\FB_Star.TcPOU">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Shapes\FB_Triangle.TcPOU">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Creator" />
+    <Folder Include="DUTs" />
+    <Folder Include="GVLs" />
+    <Folder Include="Interfaces" />
+    <Folder Include="Colors" />
+    <Folder Include="Abstract Factory" />
+    <Folder Include="Factory Producer" />
+    <Folder Include="Shapes" />
+    <Folder Include="POUs" />
+  </ItemGroup>
+  <ItemGroup>
+    <PlaceholderReference Include="Tc2_Standard">
+      <DefaultResolution>Tc2_Standard, * (Beckhoff Automation GmbH)</DefaultResolution>
+      <Namespace>Tc2_Standard</Namespace>
+    </PlaceholderReference>
+    <PlaceholderReference Include="Tc2_System">
+      <DefaultResolution>Tc2_System, * (Beckhoff Automation GmbH)</DefaultResolution>
+      <Namespace>Tc2_System</Namespace>
+    </PlaceholderReference>
+    <PlaceholderReference Include="Tc3_Module">
+      <DefaultResolution>Tc3_Module, * (Beckhoff Automation GmbH)</DefaultResolution>
+      <Namespace>Tc3_Module</Namespace>
+    </PlaceholderReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Untitled1.tmc">
+      <SubType>Content</SubType>
+    </None>
+  </ItemGroup>
+  <ProjectExtensions>
+    <PlcProjectOptions>
+      <XmlArchive>
+        <Data>
+          <o xml:space="preserve" t="OptionKey">
+      <v n="Name">"&lt;ProjectRoot&gt;"</v>
+      <d n="SubKeys" t="Hashtable" />
+      <d n="Values" t="Hashtable" />
+    </o>
+        </Data>
+        <TypeList>
+          <Type n="Hashtable">System.Collections.Hashtable</Type>
+          <Type n="OptionKey">{54dd0eac-a6d8-46f2-8c27-2f43c7e49861}</Type>
+          <Type n="String">System.String</Type>
+        </TypeList>
+      </XmlArchive>
+    </PlcProjectOptions>
+  </ProjectExtensions>
+</Project>

@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <TcSmProject xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.beckhoff.com/schemas/2012/07/TcSmProject" TcSmVersion="1.0" TcVersion="3.1.4024.35">
-	<Project ProjectGUID="{6C8F4EB4-8438-45C6-9DD7-0A17A3EFEB19}" Target64Bit="true" ShowHideConfigurations="#x3c7">
+	<Project ProjectGUID="{1CEB9DA1-FB2C-4ECD-B127-AAB55761D846}" Target64Bit="true" ShowHideConfigurations="#x3c7">
 		<System>
 			<Settings MaxCpus="8" NonWinCpus="2">
 				<Cpu CpuId="6"/>
@@ -12,9 +12,9 @@
 			</Tasks>
 		</System>
 		<Plc>
-			<Project GUID="{D391FBAB-246B-43DD-B43D-417621E09086}" Name="Factory_Method" PrjFilePath="Factory_Method\Factory_Method.plcproj" TmcFilePath="Factory_Method\Factory_Method.tmc" ReloadTmc="true" AmsPort="851" FileArchiveSettings="#x000e" SymbolicMapping="true">
-				<Instance Id="#x08502000" TcSmClass="TComPlcObjDef" KeepUnrestoredLinks="2" TmcPath="Untitled1\Untitled1.tmc" TmcHash="{385BB8BB-DAC3-F7FD-C141-1093E9AE2DB0}">
-					<Name>Factory_Method Instance</Name>
+			<Project GUID="{90199A90-06D9-4D32-81E6-ADF031AC89F7}" Name="Untitled1_1" PrjFilePath="Untitled1_1\Untitled1_1.plcproj" TmcFilePath="Untitled1_1\Untitled1_1.tmc" ReloadTmc="true" AmsPort="851" FileArchiveSettings="#x000e" SymbolicMapping="true">
+				<Instance Id="#x08502000" TcSmClass="TComPlcObjDef" KeepUnrestoredLinks="2" TmcPath="Untitled1_1\Untitled1_1.tmc" TmcHash="{25CA52D8-9C39-FE4A-3FA3-AADB4941BB4D}">
+					<Name>Untitled1_1 Instance</Name>
 					<CLSID ClassFactory="TcPlc30">{08500001-0000-0000-F000-000000000064}</CLSID>
 					<Contexts>
 						<Context>

@@ -3,8 +3,8 @@
   <POU Name="MAIN" Id="{22bdc30a-ab8b-4bc2-aef4-e8dd30a50934}" SpecialFunc="None">
     <Declaration><![CDATA[PROGRAM MAIN
 VAR
-	fbShapeCreator : FB_ShapeCreator;
-//	fbShapeCreator : FB_ShapeCreatorEX;
+//	fbShapeCreator : FB_ShapeCreator;
+	fbShapeCreator : FB_ShapeCreatorEX;
 	eShape : E_Shape := E_Shape.init;
 	
 	iShape : I_Shape;
