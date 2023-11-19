@@ -16,6 +16,7 @@
     <Implicit_KindOfTask>{87b6b74b-8541-45ba-8bd2-e1934d0ced22}</Implicit_KindOfTask>
     <Implicit_Jitter_Distribution>{f720b125-33b9-45c2-a738-86cbdd0a1dfc}</Implicit_Jitter_Distribution>
     <LibraryReferences>{2d0e8171-a78c-4d4a-bb64-38aa17b15799}</LibraryReferences>
+    <Released>false</Released>
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="Abstract Factory\FB_AbstractFactory.TcPOU">

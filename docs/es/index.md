@@ -61,6 +61,8 @@ by Runtimevic -- Víctor Durán Muñoz.
 - 🔗 [The Benefits of OOP in PLC Programming: A Case Study with a Conveyor System](https://www.linkedin.com/pulse/benefits-oop-plc-programming-case-study-conveyor-system-zhou-gong/?utm_source=share&utm_medium=member_android&utm_campaign=share_via)
 
 - 🔗 [Fundamental Concepts of Object Oriented Programming](https://www.youtube.com/watch?v=m_MQYyJpIjg)
+
+- 🔗 [www.genbeta.com, programacion-orientada-a-objetos-principales-conceptos-explicados-para-todos-publicos](https://www.genbeta.com/a-fondo/que-programacion-orientada-a-objetos-principales-conceptos-explicados-para-todos-publicos)
 ***
 ### <span style="color:grey">Link al Video de Youtube 001:</span>
 - 🔗 [001 - OOP IEC 61131-3 PLC -- Introducción a la pagina de documentación SSG, repositorio...](https://www.youtube.com/watch?v=a7eNCefcjGM)

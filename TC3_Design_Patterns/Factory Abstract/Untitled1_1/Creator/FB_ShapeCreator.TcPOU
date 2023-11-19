@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.12">
-  <POU Name="FB_ShapeCreator" Id="{38889ccb-1e4b-44e7-87d8-f31d0e5d3ff4}" SpecialFunc="None">
+  <POU Name="FB_ShapeCreator" Id="{54fca42c-4fe0-4907-9486-763b9701f91b}" SpecialFunc="None">
     <Declaration><![CDATA[{attribute 'hide_all_locals'}
 {attribute 'enable_dynamic_creation'}
 FUNCTION_BLOCK FB_ShapeCreator  EXTENDS FB_AbstractFactory
@@ -20,7 +20,7 @@ END_VAR
     <Implementation>
       <ST><![CDATA[]]></ST>
     </Implementation>
-    <Method Name="FB_exit" Id="{04cc5c87-0c94-4120-8b1e-6cc6bd1cff4e}">
+    <Method Name="FB_exit" Id="{cb977582-9888-4ce3-981b-67b2b727f525}">
       <Declaration><![CDATA[METHOD FB_exit : BOOL
 VAR_INPUT
 	bInCopyCode : BOOL; // if TRUE, the exit method is called for exiting an instance that is copied afterwards (online change).
@@ -53,7 +53,7 @@ IF (pTriangle <> 0) THEN
 END_IF]]></ST>
       </Implementation>
     </Method>
-    <Method Name="M_GetShapeObject" Id="{f67cc88a-9fa5-48ef-9b2e-9b85267ac841}">
+    <Method Name="M_GetShapeObject" Id="{be126036-b314-4968-ac3b-33ff3962266f}">
       <Declaration><![CDATA[METHOD M_GetShapeObject : I_shape
 VAR_INPUT
 	eShape : E_Shape;
@@ -146,7 +146,7 @@ END_VAR
 END_CASE]]></ST>
       </Implementation>
     </Method>
-    <Method Name="M_ReleaseMemory" Id="{ba1ccfd5-7476-4b6c-b571-74ee4a73809b}">
+    <Method Name="M_ReleaseMemory" Id="{6e326109-079b-4b95-9c22-3c9f3b81cb07}">
       <Declaration><![CDATA[METHOD M_ReleaseMemory : BOOL
 VAR_INPUT
 END_VAR

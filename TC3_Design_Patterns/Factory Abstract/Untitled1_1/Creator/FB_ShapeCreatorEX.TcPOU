@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.12">
-  <POU Name="FB_ShapeCreatorEX" Id="{50cbff52-7e2f-4d3e-ad76-ee4014257011}" SpecialFunc="None">
+  <POU Name="FB_ShapeCreatorEX" Id="{93f27fe8-d1f0-42c5-bf70-f6fa273e98d5}" SpecialFunc="None">
     <Declaration><![CDATA[FUNCTION_BLOCK FB_ShapeCreatorEX EXTENDS FB_ShapeCreator
 VAR_INPUT
 END_VAR
@@ -13,7 +13,7 @@ END_VAR
     <Implementation>
       <ST><![CDATA[]]></ST>
     </Implementation>
-    <Method Name="M_GetShapeObject" Id="{1a8a6fe2-94ff-4408-9581-9645aebf1956}">
+    <Method Name="M_GetShapeObject" Id="{c401e67d-4bf3-4a6d-87a8-2f37fb7f54ac}">
       <Declaration><![CDATA[METHOD M_GetShapeObject : I_shape
 VAR_INPUT
 END_VAR

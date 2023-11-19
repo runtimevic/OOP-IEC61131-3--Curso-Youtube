@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.12">
-  <POU Name="FB_Triangle" Id="{403f8519-01bd-4209-8852-680b192dfa86}" SpecialFunc="None">
+  <POU Name="FB_Triangle" Id="{2edf1aa3-0e4d-4a4e-8b70-2fd8e2fb2a4f}" SpecialFunc="None">
     <Declaration><![CDATA[{attribute 'enable_dynamic_creation'}
 FUNCTION_BLOCK FB_Triangle IMPLEMENTS I_Shape
 VAR_INPUT
@@ -13,7 +13,7 @@ END_VAR
     <Implementation>
       <ST><![CDATA[]]></ST>
     </Implementation>
-    <Method Name="M_Draw" Id="{8c84d3d1-c73d-4420-801b-fc04289a6255}">
+    <Method Name="M_Draw" Id="{0e549d57-17d0-4a5b-b18f-4fb7f8cc88de}">
       <Declaration><![CDATA[{warning 'Agregar implementación de método'}
 METHOD M_Draw : BOOL
 ]]></Declaration>

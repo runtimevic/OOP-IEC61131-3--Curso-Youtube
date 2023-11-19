@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.12">
-  <POU Name="FB_CustomShape" Id="{043835f9-50bb-4934-a8b5-7b0e8a602ef0}" SpecialFunc="None">
+  <POU Name="FB_CustomShape" Id="{15f198ef-d7e5-4b39-ba33-155e75a80fa1}" SpecialFunc="None">
     <Declaration><![CDATA[{attribute 'enable_dynamic_creation'} 
 FUNCTION_BLOCK FB_CustomShape IMPLEMENTS I_Shape
 VAR_INPUT
@@ -13,7 +13,7 @@ END_VAR
     <Implementation>
       <ST><![CDATA[]]></ST>
     </Implementation>
-    <Method Name="M_Draw" Id="{58c546e4-cf3f-45eb-84af-b5c009232210}">
+    <Method Name="M_Draw" Id="{162a5a28-7a78-4f3d-8f00-c95d475f840e}">
       <Declaration><![CDATA[{warning 'Agregar implementación de método'}
 METHOD M_Draw : BOOL
 ]]></Declaration>

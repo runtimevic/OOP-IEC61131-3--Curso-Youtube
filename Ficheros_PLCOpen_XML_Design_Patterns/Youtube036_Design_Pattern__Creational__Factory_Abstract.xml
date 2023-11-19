@@ -1,0 +1,1998 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<project xmlns="http://www.plcopen.org/xml/tc6_0200">
+  <fileHeader companyName="Beckhoff Automation GmbH" productName="TwinCAT PLC Control" productVersion="3.5.13.21" creationDateTime="2023-11-18T15:04:41.1911295" />
+  <contentHeader name="Untitled1_1" modificationDateTime="2023-11-18T15:04:41.1950334">
+    <coordinateInfo>
+      <fbd>
+        <scaling x="1" y="1" />
+      </fbd>
+      <ld>
+        <scaling x="1" y="1" />
+      </ld>
+      <sfc>
+        <scaling x="1" y="1" />
+      </sfc>
+    </coordinateInfo>
+    <addData>
+      <data name="http://www.3s-software.com/plcopenxml/projectinformation" handleUnknown="implementation">
+        <ProjectInformation />
+      </data>
+    </addData>
+  </contentHeader>
+  <types>
+    <dataTypes />
+    <pous />
+  </types>
+  <instances>
+    <configurations />
+  </instances>
+  <addData>
+    <data name="http://www.3s-software.com/plcopenxml/application" handleUnknown="implementation">
+      <resource name="Untitled1_1">
+        <task name="PlcTask" interval="PT0S" priority="20">
+          <pouInstance name="MAIN" typeName="">
+            <documentation>
+              <xhtml xmlns="http://www.w3.org/1999/xhtml" />
+            </documentation>
+          </pouInstance>
+          <addData>
+            <data name="http://www.3s-software.com/plcopenxml/tasksettings" handleUnknown="implementation">
+              <TaskSettings KindOfTask="Cyclic" Interval="10000" IntervalUnit="us">
+                <Watchdog Enabled="false" TimeUnit="ms" />
+              </TaskSettings>
+            </data>
+            <data name="http://www.3s-software.com/plcopenxml/objectid" handleUnknown="discard">
+              <ObjectId>09c639ea-15ff-479e-bc88-dce18a20a0a5</ObjectId>
+            </data>
+          </addData>
+        </task>
+        <addData>
+          <data name="http://www.3s-software.com/plcopenxml/datatype" handleUnknown="implementation">
+            <dataType name="E_Color">
+              <baseType>
+                <enum>
+                  <values>
+                    <value name="init" value="0" />
+                    <value name="Black" />
+                    <value name="Red" />
+                    <value name="Yellow" />
+                    <value name="end" />
+                  </values>
+                </enum>
+              </baseType>
+              <addData>
+                <data name="http://www.3s-software.com/plcopenxml/attributes" handleUnknown="implementation">
+                  <Attributes>
+                    <Attribute Name="qualified_only" Value="" />
+                    <Attribute Name="strict" Value="" />
+                  </Attributes>
+                </data>
+                <data name="http://www.3s-software.com/plcopenxml/interfaceasplaintext" handleUnknown="implementation">
+                  <InterfaceAsPlainText>
+                    <xhtml xmlns="http://www.w3.org/1999/xhtml">{attribute 'qualified_only'}
+{attribute 'strict'}
+TYPE E_Color :
+(
+	init :=0,
+	Black ,
+	Red,
+	Yellow,
+	end
+);
+END_TYPE
+</xhtml>
+                  </InterfaceAsPlainText>
+                </data>
+                <data name="http://www.3s-software.com/plcopenxml/objectid" handleUnknown="discard">
+                  <ObjectId>f3e7cfd5-a5a2-43c5-bb14-5760c99b6686</ObjectId>
+                </data>
+              </addData>
+            </dataType>
+          </data>
+          <data name="http://www.3s-software.com/plcopenxml/datatype" handleUnknown="implementation">
+            <dataType name="E_Factory">
+              <baseType>
+                <enum>
+                  <values>
+                    <value name="init" value="0" />
+                    <value name="Shape" />
+                    <value name="Color" />
+                    <value name="end" />
+                  </values>
+                </enum>
+              </baseType>
+              <addData>
+                <data name="http://www.3s-software.com/plcopenxml/attributes" handleUnknown="implementation">
+                  <Attributes>
+                    <Attribute Name="qualified_only" Value="" />
+                    <Attribute Name="strict" Value="" />
+                  </Attributes>
+                </data>
+                <data name="http://www.3s-software.com/plcopenxml/interfaceasplaintext" handleUnknown="implementation">
+                  <InterfaceAsPlainText>
+                    <xhtml xmlns="http://www.w3.org/1999/xhtml">{attribute 'qualified_only'}
+{attribute 'strict'}
+TYPE E_Factory :
+(
+	init := 0,
+	Shape,
+	Color,
+	end
+);
+END_TYPE
+</xhtml>
+                  </InterfaceAsPlainText>
+                </data>
+                <data name="http://www.3s-software.com/plcopenxml/objectid" handleUnknown="discard">
+                  <ObjectId>e8225ab9-6d10-4e62-847c-87c982845f7e</ObjectId>
+                </data>
+              </addData>
+            </dataType>
+          </data>
+          <data name="http://www.3s-software.com/plcopenxml/datatype" handleUnknown="implementation">
+            <dataType name="E_Shape">
+              <baseType>
+                <enum>
+                  <values>
+                    <value name="init" value="0" />
+                    <value name="Circle" />
+                    <value name="Rectangle" />
+                    <value name="Sqaure" />
+                    <value name="Star" />
+                    <value name="Triangle" />
+                    <value name="end" />
+                    <value name="Custom" />
+                  </values>
+                </enum>
+              </baseType>
+              <addData>
+                <data name="http://www.3s-software.com/plcopenxml/attributes" handleUnknown="implementation">
+                  <Attributes>
+                    <Attribute Name="qualified_only" Value="" />
+                    <Attribute Name="strict" Value="" />
+                  </Attributes>
+                </data>
+                <data name="http://www.3s-software.com/plcopenxml/interfaceasplaintext" handleUnknown="implementation">
+                  <InterfaceAsPlainText>
+                    <xhtml xmlns="http://www.w3.org/1999/xhtml">{attribute 'qualified_only'}
+{attribute 'strict'}
+TYPE E_Shape :
+(
+	init := 0,
+	Circle,
+	Rectangle,
+	Sqaure,
+	Star,
+	Triangle,
+	end,
+	Custom
+);
+END_TYPE
+</xhtml>
+                  </InterfaceAsPlainText>
+                </data>
+                <data name="http://www.3s-software.com/plcopenxml/objectid" handleUnknown="discard">
+                  <ObjectId>11ea4c08-a4d8-4a5f-bb5c-00fd67836667</ObjectId>
+                </data>
+              </addData>
+            </dataType>
+          </data>
+          <data name="http://www.3s-software.com/plcopenxml/interface" handleUnknown="implementation">
+            <Interface name="I_Color" ObjectId="5c158fde-0479-4e0d-8bed-0812c766e8db">
+              <Methods>
+                <Method name="M_Fill" ObjectId="b5d0011c-4148-42c3-bb9e-200daf9bc97a">
+                  <interface>
+                    <returnType>
+                      <BOOL />
+                    </returnType>
+                  </interface>
+                  <InterfaceAsPlainText>
+                    <xhtml xmlns="http://www.w3.org/1999/xhtml">METHOD M_Fill : BOOL
+VAR_INPUT
+END_VAR
+</xhtml>
+                  </InterfaceAsPlainText>
+                  <addData />
+                </Method>
+              </Methods>
+              <InterfaceAsPlainText>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">INTERFACE I_Color
+</xhtml>
+              </InterfaceAsPlainText>
+              <addData />
+            </Interface>
+          </data>
+          <data name="http://www.3s-software.com/plcopenxml/interface" handleUnknown="implementation">
+            <Interface name="I_Shape" ObjectId="7b3b1058-ac0f-43b4-b54c-0f6fc0841a42">
+              <Methods>
+                <Method name="M_Draw" ObjectId="d305a8c0-7ee6-49fd-8238-eb0e99a1c35d">
+                  <interface>
+                    <returnType>
+                      <BOOL />
+                    </returnType>
+                  </interface>
+                  <InterfaceAsPlainText>
+                    <xhtml xmlns="http://www.w3.org/1999/xhtml">METHOD M_Draw : BOOL
+VAR_INPUT
+END_VAR
+</xhtml>
+                  </InterfaceAsPlainText>
+                  <addData />
+                </Method>
+              </Methods>
+              <InterfaceAsPlainText>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">INTERFACE I_Shape
+</xhtml>
+              </InterfaceAsPlainText>
+              <addData />
+            </Interface>
+          </data>
+          <data name="http://www.3s-software.com/plcopenxml/pou" handleUnknown="implementation">
+            <pou name="FB_AbstractFactory" pouType="functionBlock">
+              <interface />
+              <body>
+                <ST>
+                  <xhtml xmlns="http://www.w3.org/1999/xhtml" />
+                </ST>
+              </body>
+              <addData>
+                <data name="http://www.3s-software.com/plcopenxml/method" handleUnknown="implementation">
+                  <Method name="M_GetColorObject" ObjectId="abc3931d-e852-4cd4-922d-47dd607a3800">
+                    <interface>
+                      <returnType>
+                        <derived name="I_Color" />
+                      </returnType>
+                      <inputVars>
+                        <variable name="eColor">
+                          <type>
+                            <derived name="E_Color" />
+                          </type>
+                        </variable>
+                      </inputVars>
+                    </interface>
+                    <body>
+                      <ST>
+                        <xhtml xmlns="http://www.w3.org/1999/xhtml" />
+                      </ST>
+                    </body>
+                    <InterfaceAsPlainText>
+                      <xhtml xmlns="http://www.w3.org/1999/xhtml">METHOD M_GetColorObject : I_Color
+VAR_INPUT
+	eColor : E_Color;
+END_VAR
+</xhtml>
+                    </InterfaceAsPlainText>
+                    <addData />
+                  </Method>
+                </data>
+                <data name="http://www.3s-software.com/plcopenxml/method" handleUnknown="implementation">
+                  <Method name="M_GetShapeObject" ObjectId="6bb60273-72dc-4375-937e-760f79af1d76">
+                    <interface>
+                      <returnType>
+                        <derived name="I_Shape" />
+                      </returnType>
+                      <inputVars>
+                        <variable name="eShape">
+                          <type>
+                            <derived name="E_Shape" />
+                          </type>
+                        </variable>
+                      </inputVars>
+                    </interface>
+                    <body>
+                      <ST>
+                        <xhtml xmlns="http://www.w3.org/1999/xhtml" />
+                      </ST>
+                    </body>
+                    <InterfaceAsPlainText>
+                      <xhtml xmlns="http://www.w3.org/1999/xhtml">METHOD M_GetShapeObject : I_Shape
+VAR_INPUT
+	eShape : E_Shape;
+END_VAR
+</xhtml>
+                    </InterfaceAsPlainText>
+                    <addData />
+                  </Method>
+                </data>
+                <data name="http://www.3s-software.com/plcopenxml/method" handleUnknown="implementation">
+                  <Method name="M_ReleaseMemory" ObjectId="00a9ec82-33e2-42b7-be4b-78d65ff64f1e">
+                    <interface>
+                      <returnType>
+                        <BOOL />
+                      </returnType>
+                    </interface>
+                    <body>
+                      <ST>
+                        <xhtml xmlns="http://www.w3.org/1999/xhtml" />
+                      </ST>
+                    </body>
+                    <InterfaceAsPlainText>
+                      <xhtml xmlns="http://www.w3.org/1999/xhtml">METHOD ABSTRACT M_ReleaseMemory : BOOL
+VAR_INPUT
+END_VAR
+</xhtml>
+                    </InterfaceAsPlainText>
+                    <addData />
+                  </Method>
+                </data>
+                <data name="http://www.3s-software.com/plcopenxml/interfaceasplaintext" handleUnknown="implementation">
+                  <InterfaceAsPlainText>
+                    <xhtml xmlns="http://www.w3.org/1999/xhtml">FUNCTION_BLOCK ABSTRACT FB_AbstractFactory
+VAR_INPUT
+END_VAR
+VAR_OUTPUT
+END_VAR
+VAR
+END_VAR
+</xhtml>
+                  </InterfaceAsPlainText>
+                </data>
+                <data name="http://www.3s-software.com/plcopenxml/objectid" handleUnknown="discard">
+                  <ObjectId>7b35da90-6f2d-440c-8e0a-c1cc878589e6</ObjectId>
+                </data>
+              </addData>
+            </pou>
+          </data>
+          <data name="http://www.3s-software.com/plcopenxml/pou" handleUnknown="implementation">
+            <pou name="FB_Black" pouType="functionBlock">
+              <interface>
+                <addData>
+                  <data name="http://www.3s-software.com/plcopenxml/pouinheritance" handleUnknown="implementation">
+                    <Inheritance>
+                      <Implements>I_Color</Implements>
+                    </Inheritance>
+                  </data>
+                  <data name="http://www.3s-software.com/plcopenxml/attributes" handleUnknown="implementation">
+                    <Attributes>
+                      <Attribute Name="enable_dynamic_creation" Value="" />
+                    </Attributes>
+                  </data>
+                </addData>
+              </interface>
+              <body>
+                <ST>
+                  <xhtml xmlns="http://www.w3.org/1999/xhtml" />
+                </ST>
+              </body>
+              <addData>
+                <data name="http://www.3s-software.com/plcopenxml/method" handleUnknown="implementation">
+                  <Method name="M_Fill" ObjectId="97774111-632e-441e-8ba9-2c360709bf52">
+                    <interface>
+                      <returnType>
+                        <BOOL />
+                      </returnType>
+                    </interface>
+                    <body>
+                      <ST>
+                        <xhtml xmlns="http://www.w3.org/1999/xhtml">ADSLOGSTR(ADSLOG_MSGTYPE_HINT, 'Paint Black', '');
+M_Fill := TRUE;</xhtml>
+                      </ST>
+                    </body>
+                    <InterfaceAsPlainText>
+                      <xhtml xmlns="http://www.w3.org/1999/xhtml">
+METHOD M_Fill : BOOL
+</xhtml>
+                    </InterfaceAsPlainText>
+                    <addData />
+                  </Method>
+                </data>
+                <data name="http://www.3s-software.com/plcopenxml/interfaceasplaintext" handleUnknown="implementation">
+                  <InterfaceAsPlainText>
+                    <xhtml xmlns="http://www.w3.org/1999/xhtml">{attribute 'enable_dynamic_creation'}
+FUNCTION_BLOCK FB_Black IMPLEMENTS I_Color
+VAR_INPUT
+END_VAR
+VAR_OUTPUT
+END_VAR
+VAR
+END_VAR
+</xhtml>
+                  </InterfaceAsPlainText>
+                </data>
+                <data name="http://www.3s-software.com/plcopenxml/objectid" handleUnknown="discard">
+                  <ObjectId>25133850-c5b4-4409-ae57-f1dbf04be7a4</ObjectId>
+                </data>
+              </addData>
+            </pou>
+          </data>
+          <data name="http://www.3s-software.com/plcopenxml/pou" handleUnknown="implementation">
+            <pou name="FB_Red" pouType="functionBlock">
+              <interface>
+                <addData>
+                  <data name="http://www.3s-software.com/plcopenxml/pouinheritance" handleUnknown="implementation">
+                    <Inheritance>
+                      <Implements>I_Color</Implements>
+                    </Inheritance>
+                  </data>
+                  <data name="http://www.3s-software.com/plcopenxml/attributes" handleUnknown="implementation">
+                    <Attributes>
+                      <Attribute Name="enable_dynamic_creation" Value="" />
+                    </Attributes>
+                  </data>
+                </addData>
+              </interface>
+              <body>
+                <ST>
+                  <xhtml xmlns="http://www.w3.org/1999/xhtml" />
+                </ST>
+              </body>
+              <addData>
+                <data name="http://www.3s-software.com/plcopenxml/method" handleUnknown="implementation">
+                  <Method name="M_Fill" ObjectId="69db6a5a-b341-4515-9fd5-68d949a4e314">
+                    <interface>
+                      <returnType>
+                        <BOOL />
+                      </returnType>
+                    </interface>
+                    <body>
+                      <ST>
+                        <xhtml xmlns="http://www.w3.org/1999/xhtml">ADSLOGSTR(ADSLOG_MSGTYPE_HINT, 'Paint Red', '');
+M_Fill := TRUE;</xhtml>
+                      </ST>
+                    </body>
+                    <InterfaceAsPlainText>
+                      <xhtml xmlns="http://www.w3.org/1999/xhtml">
+METHOD M_Fill : BOOL
+</xhtml>
+                    </InterfaceAsPlainText>
+                    <addData />
+                  </Method>
+                </data>
+                <data name="http://www.3s-software.com/plcopenxml/interfaceasplaintext" handleUnknown="implementation">
+                  <InterfaceAsPlainText>
+                    <xhtml xmlns="http://www.w3.org/1999/xhtml">{attribute 'enable_dynamic_creation'}
+FUNCTION_BLOCK FB_Red IMPLEMENTS I_Color
+VAR_INPUT
+END_VAR
+VAR_OUTPUT
+END_VAR
+VAR
+END_VAR
+</xhtml>
+                  </InterfaceAsPlainText>
+                </data>
+                <data name="http://www.3s-software.com/plcopenxml/objectid" handleUnknown="discard">
+                  <ObjectId>3af52522-8a45-41d6-940a-4988b9b31cf6</ObjectId>
+                </data>
+              </addData>
+            </pou>
+          </data>
+          <data name="http://www.3s-software.com/plcopenxml/pou" handleUnknown="implementation">
+            <pou name="FB_Yellow" pouType="functionBlock">
+              <interface>
+                <addData>
+                  <data name="http://www.3s-software.com/plcopenxml/pouinheritance" handleUnknown="implementation">
+                    <Inheritance>
+                      <Implements>I_Color</Implements>
+                    </Inheritance>
+                  </data>
+                  <data name="http://www.3s-software.com/plcopenxml/attributes" handleUnknown="implementation">
+                    <Attributes>
+                      <Attribute Name="enable_dynamic_creation" Value="" />
+                    </Attributes>
+                  </data>
+                </addData>
+              </interface>
+              <body>
+                <ST>
+                  <xhtml xmlns="http://www.w3.org/1999/xhtml" />
+                </ST>
+              </body>
+              <addData>
+                <data name="http://www.3s-software.com/plcopenxml/method" handleUnknown="implementation">
+                  <Method name="M_Fill" ObjectId="6ad1cfcd-39e4-49fd-b1dc-eea5f3951bdf">
+                    <interface>
+                      <returnType>
+                        <BOOL />
+                      </returnType>
+                    </interface>
+                    <body>
+                      <ST>
+                        <xhtml xmlns="http://www.w3.org/1999/xhtml">ADSLOGSTR(ADSLOG_MSGTYPE_HINT, 'Paint Yellow', '');
+M_Fill := TRUE;</xhtml>
+                      </ST>
+                    </body>
+                    <InterfaceAsPlainText>
+                      <xhtml xmlns="http://www.w3.org/1999/xhtml">
+METHOD M_Fill : BOOL
+</xhtml>
+                    </InterfaceAsPlainText>
+                    <addData />
+                  </Method>
+                </data>
+                <data name="http://www.3s-software.com/plcopenxml/interfaceasplaintext" handleUnknown="implementation">
+                  <InterfaceAsPlainText>
+                    <xhtml xmlns="http://www.w3.org/1999/xhtml">{attribute 'enable_dynamic_creation'}
+FUNCTION_BLOCK FB_Yellow IMPLEMENTS I_Color
+VAR_INPUT
+END_VAR
+VAR_OUTPUT
+END_VAR
+VAR
+END_VAR
+</xhtml>
+                  </InterfaceAsPlainText>
+                </data>
+                <data name="http://www.3s-software.com/plcopenxml/objectid" handleUnknown="discard">
+                  <ObjectId>0f08c85f-8c65-4f2b-8312-1a34a6ee00f4</ObjectId>
+                </data>
+              </addData>
+            </pou>
+          </data>
+          <data name="http://www.3s-software.com/plcopenxml/pou" handleUnknown="implementation">
+            <pou name="FB_ShapeCreator" pouType="functionBlock">
+              <interface>
+                <localVars>
+                  <variable name="pCircle">
+                    <type>
+                      <pointer>
+                        <baseType>
+                          <derived name="FB_Circle" />
+                        </baseType>
+                      </pointer>
+                    </type>
+                    <addData>
+                      <data name="http://www.3s-software.com/plcopenxml/attributes" handleUnknown="implementation">
+                        <Attributes>
+                          <Attribute Name="hide" Value="" />
+                        </Attributes>
+                      </data>
+                    </addData>
+                  </variable>
+                  <variable name="pRectangle">
+                    <type>
+                      <pointer>
+                        <baseType>
+                          <derived name="FB_Rectangle" />
+                        </baseType>
+                      </pointer>
+                    </type>
+                    <addData>
+                      <data name="http://www.3s-software.com/plcopenxml/attributes" handleUnknown="implementation">
+                        <Attributes>
+                          <Attribute Name="hide" Value="" />
+                        </Attributes>
+                      </data>
+                    </addData>
+                  </variable>
+                  <variable name="pSquare">
+                    <type>
+                      <pointer>
+                        <baseType>
+                          <derived name="FB_Square" />
+                        </baseType>
+                      </pointer>
+                    </type>
+                    <addData>
+                      <data name="http://www.3s-software.com/plcopenxml/attributes" handleUnknown="implementation">
+                        <Attributes>
+                          <Attribute Name="hide" Value="" />
+                        </Attributes>
+                      </data>
+                    </addData>
+                  </variable>
+                  <variable name="pStar">
+                    <type>
+                      <pointer>
+                        <baseType>
+                          <derived name="FB_Star" />
+                        </baseType>
+                      </pointer>
+                    </type>
+                    <addData>
+                      <data name="http://www.3s-software.com/plcopenxml/attributes" handleUnknown="implementation">
+                        <Attributes>
+                          <Attribute Name="hide" Value="" />
+                        </Attributes>
+                      </data>
+                    </addData>
+                  </variable>
+                  <variable name="pTriangle">
+                    <type>
+                      <pointer>
+                        <baseType>
+                          <derived name="FB_Triangle" />
+                        </baseType>
+                      </pointer>
+                    </type>
+                    <addData>
+                      <data name="http://www.3s-software.com/plcopenxml/attributes" handleUnknown="implementation">
+                        <Attributes>
+                          <Attribute Name="hide" Value="" />
+                        </Attributes>
+                      </data>
+                    </addData>
+                  </variable>
+                  <variable name="iShape">
+                    <type>
+                      <derived name="I_Shape" />
+                    </type>
+                    <addData>
+                      <data name="http://www.3s-software.com/plcopenxml/attributes" handleUnknown="implementation">
+                        <Attributes>
+                          <Attribute Name="hide" Value="" />
+                        </Attributes>
+                      </data>
+                    </addData>
+                  </variable>
+                </localVars>
+                <addData>
+                  <data name="http://www.3s-software.com/plcopenxml/pouinheritance" handleUnknown="implementation">
+                    <Inheritance>
+                      <Extends>FB_AbstractFactory</Extends>
+                    </Inheritance>
+                  </data>
+                  <data name="http://www.3s-software.com/plcopenxml/attributes" handleUnknown="implementation">
+                    <Attributes>
+                      <Attribute Name="hide_all_locals" Value="" />
+                      <Attribute Name="enable_dynamic_creation" Value="" />
+                    </Attributes>
+                  </data>
+                </addData>
+              </interface>
+              <body>
+                <ST>
+                  <xhtml xmlns="http://www.w3.org/1999/xhtml" />
+                </ST>
+              </body>
+              <addData>
+                <data name="http://www.3s-software.com/plcopenxml/method" handleUnknown="implementation">
+                  <Method name="FB_exit" ObjectId="ed323082-1a7f-4583-81a7-b24f724cca92">
+                    <interface>
+                      <returnType>
+                        <BOOL />
+                      </returnType>
+                      <inputVars>
+                        <variable name="bInCopyCode">
+                          <type>
+                            <BOOL />
+                          </type>
+                          <documentation>
+                            <xhtml xmlns="http://www.w3.org/1999/xhtml"> if TRUE, the exit method is called for exiting an instance that is copied afterwards (online change).</xhtml>
+                          </documentation>
+                        </variable>
+                      </inputVars>
+                    </interface>
+                    <body>
+                      <ST>
+                        <xhtml xmlns="http://www.w3.org/1999/xhtml">IF (pCircle &lt;&gt; 0) THEN
+  __DELETE(pCircle);
+  pCircle := 0;
+END_IF
+
+IF (pRectangle &lt;&gt; 0) THEN
+  __DELETE(pRectangle);
+  pRectangle := 0;
+END_IF
+
+IF (pSquare &lt;&gt; 0) THEN
+  __DELETE(pSquare);
+  pSquare := 0;
+END_IF
+
+IF (pStar &lt;&gt; 0) THEN
+  __DELETE(pStar);
+  pStar := 0;
+END_IF
+
+IF (pTriangle &lt;&gt; 0) THEN
+  __DELETE(pTriangle);
+  pTriangle := 0;
+END_IF</xhtml>
+                      </ST>
+                    </body>
+                    <InterfaceAsPlainText>
+                      <xhtml xmlns="http://www.w3.org/1999/xhtml">METHOD FB_exit : BOOL
+VAR_INPUT
+	bInCopyCode : BOOL; // if TRUE, the exit method is called for exiting an instance that is copied afterwards (online change).
+END_VAR
+</xhtml>
+                    </InterfaceAsPlainText>
+                    <addData />
+                  </Method>
+                </data>
+                <data name="http://www.3s-software.com/plcopenxml/method" handleUnknown="implementation">
+                  <Method name="M_GetShapeObject" ObjectId="99b9d4dd-8640-4376-8d63-447532883747">
+                    <interface>
+                      <returnType>
+                        <derived name="I_shape" />
+                      </returnType>
+                      <inputVars>
+                        <variable name="eShape">
+                          <type>
+                            <derived name="E_Shape" />
+                          </type>
+                        </variable>
+                      </inputVars>
+                    </interface>
+                    <body>
+                      <ST>
+                        <xhtml xmlns="http://www.w3.org/1999/xhtml">CASE eShape OF
+	E_Shape.Circle:
+		
+		//Dynamic instantiation  
+		pCircle := __NEW(FB_Circle);
+		iShape := pCircle^;
+		
+		//Return the object
+		IF iShape &lt;&gt; 0 THEN
+			M_GetShapeObject := iShape;
+		END_IF
+		
+		//Release the memory
+		IF (pCircle &lt;&gt; 0) THEN
+			__DELETE(pCircle);
+			pCircle := 0;
+		END_IF
+		
+		eShape := E_Shape.init;
+	
+	E_Shape.Rectangle:
+		pRectangle := __NEW(FB_Rectangle);
+		iShape := pRectangle^;
+		
+		//Return the object
+		IF iShape &lt;&gt; 0 THEN
+			M_GetShapeObject := iShape;
+		END_IF
+		
+		IF (pRectangle &lt;&gt; 0) THEN
+			__DELETE(pRectangle);
+			pRectangle := 0;
+		END_IF
+		
+		eShape := E_Shape.init;	
+		
+	E_Shape.Sqaure:
+		pSquare := __NEW(FB_Square);
+		iShape := pSquare^;
+		
+		//Return the object
+		IF iShape &lt;&gt; 0 THEN
+			M_GetShapeObject := iShape;
+		END_IF
+		
+		IF (pSquare &lt;&gt; 0) THEN
+			__DELETE(pSquare);
+			pSquare := 0;
+		END_IF
+		
+		eShape := E_Shape.init;	
+
+	E_Shape.Star:
+		pStar := __NEW(FB_Star);
+		iShape := pStar^;
+		
+		//Return the object
+		IF iShape &lt;&gt; 0 THEN
+			M_GetShapeObject := iShape;
+		END_IF
+		
+		IF (pStar &lt;&gt; 0) THEN
+			__DELETE(pStar);
+			pStar := 0;
+		END_IF
+		
+		eShape := E_Shape.init;	
+	
+	E_Shape.Triangle:
+		pTriangle := __NEW(FB_Triangle);
+		iShape := pTriangle^;
+		
+		//Return the object
+		IF iShape &lt;&gt; 0 THEN
+			M_GetShapeObject := iShape;
+		END_IF
+		
+		IF (pTriangle &lt;&gt; 0) THEN
+			__DELETE(pTriangle);
+			pTriangle := 0;
+		END_IF
+		
+		eShape := E_Shape.init;	
+END_CASE</xhtml>
+                      </ST>
+                    </body>
+                    <InterfaceAsPlainText>
+                      <xhtml xmlns="http://www.w3.org/1999/xhtml">METHOD M_GetShapeObject : I_shape
+VAR_INPUT
+	eShape : E_Shape;
+END_VAR
+</xhtml>
+                    </InterfaceAsPlainText>
+                    <addData />
+                  </Method>
+                </data>
+                <data name="http://www.3s-software.com/plcopenxml/method" handleUnknown="implementation">
+                  <Method name="M_ReleaseMemory" ObjectId="97eb114a-0ec8-4914-84bb-55fc5e92c667">
+                    <interface>
+                      <returnType>
+                        <BOOL />
+                      </returnType>
+                    </interface>
+                    <body>
+                      <ST>
+                        <xhtml xmlns="http://www.w3.org/1999/xhtml">IF (pCircle &lt;&gt; 0) THEN
+  __DELETE(pCircle);
+  pCircle := 0;
+END_IF
+
+IF (pRectangle &lt;&gt; 0) THEN
+  __DELETE(pRectangle);
+  pRectangle := 0;
+END_IF
+
+IF (pSquare &lt;&gt; 0) THEN
+  __DELETE(pSquare);
+  pSquare := 0;
+END_IF
+
+IF (pStar &lt;&gt; 0) THEN
+  __DELETE(pStar);
+  pStar := 0;
+END_IF
+
+IF (pTriangle &lt;&gt; 0) THEN
+  __DELETE(pTriangle);
+  pTriangle := 0;
+END_IF</xhtml>
+                      </ST>
+                    </body>
+                    <InterfaceAsPlainText>
+                      <xhtml xmlns="http://www.w3.org/1999/xhtml">METHOD M_ReleaseMemory : BOOL
+VAR_INPUT
+END_VAR
+</xhtml>
+                    </InterfaceAsPlainText>
+                    <addData />
+                  </Method>
+                </data>
+                <data name="http://www.3s-software.com/plcopenxml/interfaceasplaintext" handleUnknown="implementation">
+                  <InterfaceAsPlainText>
+                    <xhtml xmlns="http://www.w3.org/1999/xhtml">{attribute 'hide_all_locals'}
+{attribute 'enable_dynamic_creation'}
+FUNCTION_BLOCK FB_ShapeCreator  EXTENDS FB_AbstractFactory
+VAR_INPUT
+END_VAR
+VAR_OUTPUT
+END_VAR
+VAR
+      pCircle    : POINTER TO FB_Circle;
+      pRectangle : POINTER TO FB_Rectangle;
+      pSquare    : POINTER TO FB_Square;
+      pStar      : POINTER TO FB_Star;
+      pTriangle  : POINTER TO FB_Triangle;
+      iShape 	 : I_Shape;
+END_VAR
+</xhtml>
+                  </InterfaceAsPlainText>
+                </data>
+                <data name="http://www.3s-software.com/plcopenxml/objectid" handleUnknown="discard">
+                  <ObjectId>24b74a5e-ed10-48ad-b0b2-ab244f770370</ObjectId>
+                </data>
+              </addData>
+            </pou>
+          </data>
+          <data name="http://www.3s-software.com/plcopenxml/pou" handleUnknown="implementation">
+            <pou name="FB_ShapeCreatorEX" pouType="functionBlock">
+              <interface>
+                <localVars>
+                  <variable name="pCustomShape">
+                    <type>
+                      <pointer>
+                        <baseType>
+                          <derived name="FB_CustomShape" />
+                        </baseType>
+                      </pointer>
+                    </type>
+                  </variable>
+                </localVars>
+                <addData>
+                  <data name="http://www.3s-software.com/plcopenxml/pouinheritance" handleUnknown="implementation">
+                    <Inheritance>
+                      <Extends>FB_ShapeCreator</Extends>
+                    </Inheritance>
+                  </data>
+                </addData>
+              </interface>
+              <body>
+                <ST>
+                  <xhtml xmlns="http://www.w3.org/1999/xhtml" />
+                </ST>
+              </body>
+              <addData>
+                <data name="http://www.3s-software.com/plcopenxml/method" handleUnknown="implementation">
+                  <Method name="M_GetShapeObject" ObjectId="2e6ad99e-f383-43ee-8211-69fea926c0b5">
+                    <interface>
+                      <returnType>
+                        <derived name="I_shape" />
+                      </returnType>
+                    </interface>
+                    <body>
+                      <ST>
+                        <xhtml xmlns="http://www.w3.org/1999/xhtml">IF eShape = E_Shape.Custom THEN
+	
+	//Dynamic instantiation  
+	pCustomShape := __NEW(FB_CustomShape);
+	iShape := pCustomShape^;
+	
+	//Return the object
+	IF iShape &lt;&gt; 0 THEN
+		M_GetShapeObject := iShape;
+	END_IF
+	
+	//Release the memory
+	IF (pCustomShape &lt;&gt; 0) THEN
+		__DELETE(pCustomShape);
+		pCustomShape := 0;
+	END_IF
+	
+	eShape := E_Shape.init;
+ELSE
+	M_GetShapeObject := SUPER^.M_GetShapeObject();
+END_IF</xhtml>
+                      </ST>
+                    </body>
+                    <InterfaceAsPlainText>
+                      <xhtml xmlns="http://www.w3.org/1999/xhtml">METHOD M_GetShapeObject : I_shape
+VAR_INPUT
+END_VAR
+</xhtml>
+                    </InterfaceAsPlainText>
+                    <addData />
+                  </Method>
+                </data>
+                <data name="http://www.3s-software.com/plcopenxml/interfaceasplaintext" handleUnknown="implementation">
+                  <InterfaceAsPlainText>
+                    <xhtml xmlns="http://www.w3.org/1999/xhtml">FUNCTION_BLOCK FB_ShapeCreatorEX EXTENDS FB_ShapeCreator
+VAR_INPUT
+END_VAR
+VAR_OUTPUT
+END_VAR
+VAR
+	pCustomShape : POINTER TO FB_CustomShape;
+END_VAR
+</xhtml>
+                  </InterfaceAsPlainText>
+                </data>
+                <data name="http://www.3s-software.com/plcopenxml/objectid" handleUnknown="discard">
+                  <ObjectId>27b4edc3-f3ac-4ed7-8f03-939a64f7c01a</ObjectId>
+                </data>
+              </addData>
+            </pou>
+          </data>
+          <data name="http://www.3s-software.com/plcopenxml/pou" handleUnknown="implementation">
+            <pou name="FB_ColorCreator" pouType="functionBlock">
+              <interface>
+                <localVars>
+                  <variable name="pBlack">
+                    <type>
+                      <pointer>
+                        <baseType>
+                          <derived name="FB_Black" />
+                        </baseType>
+                      </pointer>
+                    </type>
+                    <addData>
+                      <data name="http://www.3s-software.com/plcopenxml/attributes" handleUnknown="implementation">
+                        <Attributes>
+                          <Attribute Name="hide" Value="" />
+                        </Attributes>
+                      </data>
+                    </addData>
+                  </variable>
+                  <variable name="pRed">
+                    <type>
+                      <pointer>
+                        <baseType>
+                          <derived name="FB_Red" />
+                        </baseType>
+                      </pointer>
+                    </type>
+                    <addData>
+                      <data name="http://www.3s-software.com/plcopenxml/attributes" handleUnknown="implementation">
+                        <Attributes>
+                          <Attribute Name="hide" Value="" />
+                        </Attributes>
+                      </data>
+                    </addData>
+                  </variable>
+                  <variable name="pYellow">
+                    <type>
+                      <pointer>
+                        <baseType>
+                          <derived name="FB_Yellow" />
+                        </baseType>
+                      </pointer>
+                    </type>
+                    <addData>
+                      <data name="http://www.3s-software.com/plcopenxml/attributes" handleUnknown="implementation">
+                        <Attributes>
+                          <Attribute Name="hide" Value="" />
+                        </Attributes>
+                      </data>
+                    </addData>
+                  </variable>
+                  <variable name="iColor">
+                    <type>
+                      <derived name="I_Color" />
+                    </type>
+                    <addData>
+                      <data name="http://www.3s-software.com/plcopenxml/attributes" handleUnknown="implementation">
+                        <Attributes>
+                          <Attribute Name="hide" Value="" />
+                        </Attributes>
+                      </data>
+                    </addData>
+                  </variable>
+                </localVars>
+                <addData>
+                  <data name="http://www.3s-software.com/plcopenxml/pouinheritance" handleUnknown="implementation">
+                    <Inheritance>
+                      <Extends>FB_AbstractFactory</Extends>
+                    </Inheritance>
+                  </data>
+                  <data name="http://www.3s-software.com/plcopenxml/attributes" handleUnknown="implementation">
+                    <Attributes>
+                      <Attribute Name="hide_all_locals" Value="" />
+                      <Attribute Name="enable_dynamic_creation" Value="" />
+                    </Attributes>
+                  </data>
+                </addData>
+              </interface>
+              <body>
+                <ST>
+                  <xhtml xmlns="http://www.w3.org/1999/xhtml" />
+                </ST>
+              </body>
+              <addData>
+                <data name="http://www.3s-software.com/plcopenxml/method" handleUnknown="implementation">
+                  <Method name="FB_exit" ObjectId="d15df574-1582-4f38-8be2-5e77cae1395d">
+                    <interface>
+                      <returnType>
+                        <BOOL />
+                      </returnType>
+                      <inputVars>
+                        <variable name="bInCopyCode">
+                          <type>
+                            <BOOL />
+                          </type>
+                          <documentation>
+                            <xhtml xmlns="http://www.w3.org/1999/xhtml"> if TRUE, the exit method is called for exiting an instance that is copied afterwards (online change).</xhtml>
+                          </documentation>
+                        </variable>
+                      </inputVars>
+                    </interface>
+                    <body>
+                      <ST>
+                        <xhtml xmlns="http://www.w3.org/1999/xhtml">//Release the memory
+IF (pBlack &lt;&gt; 0) THEN
+	__DELETE(pBlack);
+	pBlack := 0;
+END_IF
+
+//Release the memory
+IF (pRed &lt;&gt; 0) THEN
+	__DELETE(pRed);
+	pRed := 0;
+END_IF
+
+//Release the memory
+IF (pYellow &lt;&gt; 0) THEN
+	__DELETE(pYellow);
+	pYellow := 0;
+END_IF</xhtml>
+                      </ST>
+                    </body>
+                    <InterfaceAsPlainText>
+                      <xhtml xmlns="http://www.w3.org/1999/xhtml">METHOD FB_exit : BOOL
+VAR_INPUT
+	bInCopyCode : BOOL; // if TRUE, the exit method is called for exiting an instance that is copied afterwards (online change).
+END_VAR
+</xhtml>
+                    </InterfaceAsPlainText>
+                    <addData />
+                  </Method>
+                </data>
+                <data name="http://www.3s-software.com/plcopenxml/method" handleUnknown="implementation">
+                  <Method name="M_GetColorObject" ObjectId="413ea5be-751a-4cf9-bf54-eeac7348be59">
+                    <interface>
+                      <returnType>
+                        <derived name="I_Color" />
+                      </returnType>
+                      <inputVars>
+                        <variable name="eColor">
+                          <type>
+                            <derived name="E_Color" />
+                          </type>
+                        </variable>
+                      </inputVars>
+                    </interface>
+                    <body>
+                      <ST>
+                        <xhtml xmlns="http://www.w3.org/1999/xhtml">CASE eColor OF
+	E_Color.Black:
+		
+		//Dynamic instantiation  
+		pBlack := __NEW(FB_Black);
+		iColor := pBlack^;
+		
+		//Return the object
+		IF iColor &lt;&gt; 0 THEN
+			M_GetColorObject := iColor;
+		END_IF
+		
+		eColor := E_Color.init;
+	
+		
+	E_Color.Red:
+		
+		//Dynamic instantiation  
+		pRed := __NEW(FB_Red);
+		iColor := pRed^;
+		
+		//Return the object
+		IF iColor &lt;&gt; 0 THEN
+			M_GetColorObject := iColor;
+		END_IF
+
+		eColor := E_Color.init;
+	
+	E_Color.Yellow:
+		
+		//Dynamic instantiation  
+		pYellow := __NEW(FB_Yellow);
+		iColor := pYellow^;
+		
+		//Return the object
+		IF iColor &lt;&gt; 0 THEN
+			M_GetColorObject := iColor;
+		END_IF
+
+		eColor := E_Color.init;	
+		
+END_CASE</xhtml>
+                      </ST>
+                    </body>
+                    <InterfaceAsPlainText>
+                      <xhtml xmlns="http://www.w3.org/1999/xhtml">METHOD M_GetColorObject : I_Color
+VAR_INPUT
+	eColor : E_Color;
+END_VAR
+</xhtml>
+                    </InterfaceAsPlainText>
+                    <addData />
+                  </Method>
+                </data>
+                <data name="http://www.3s-software.com/plcopenxml/method" handleUnknown="implementation">
+                  <Method name="M_ReleaseMemory" ObjectId="f8f074b1-ba57-48f8-b9ee-035dbb43d332">
+                    <interface>
+                      <returnType>
+                        <BOOL />
+                      </returnType>
+                    </interface>
+                    <body>
+                      <ST>
+                        <xhtml xmlns="http://www.w3.org/1999/xhtml">//Release the memory
+IF (pBlack &lt;&gt; 0) THEN
+	__DELETE(pBlack);
+	pBlack := 0;
+END_IF
+
+//Release the memory
+IF (pRed &lt;&gt; 0) THEN
+	__DELETE(pRed);
+	pRed := 0;
+END_IF
+
+//Release the memory
+IF (pYellow &lt;&gt; 0) THEN
+	__DELETE(pYellow);
+	pYellow := 0;
+END_IF</xhtml>
+                      </ST>
+                    </body>
+                    <InterfaceAsPlainText>
+                      <xhtml xmlns="http://www.w3.org/1999/xhtml">METHOD M_ReleaseMemory : BOOL
+VAR_INPUT
+END_VAR
+</xhtml>
+                    </InterfaceAsPlainText>
+                    <addData />
+                  </Method>
+                </data>
+                <data name="http://www.3s-software.com/plcopenxml/interfaceasplaintext" handleUnknown="implementation">
+                  <InterfaceAsPlainText>
+                    <xhtml xmlns="http://www.w3.org/1999/xhtml">{attribute 'hide_all_locals'}
+{attribute 'enable_dynamic_creation'}
+FUNCTION_BLOCK FB_ColorCreator  EXTENDS FB_AbstractFactory
+VAR_INPUT
+END_VAR
+VAR_OUTPUT
+END_VAR
+VAR
+	pBlack    	: POINTER TO FB_Black;
+    pRed 		: POINTER TO FB_Red;
+    pYellow 	: POINTER TO FB_Yellow;
+    iColor 		: I_Color;
+END_VAR
+</xhtml>
+                  </InterfaceAsPlainText>
+                </data>
+                <data name="http://www.3s-software.com/plcopenxml/objectid" handleUnknown="discard">
+                  <ObjectId>640015f4-bf7e-4686-8039-a93211b72856</ObjectId>
+                </data>
+              </addData>
+            </pou>
+          </data>
+          <data name="http://www.3s-software.com/plcopenxml/pou" handleUnknown="implementation">
+            <pou name="FB_FactoryProducer" pouType="functionBlock">
+              <interface>
+                <localVars>
+                  <variable name="pColorFactoy">
+                    <type>
+                      <pointer>
+                        <baseType>
+                          <derived name="FB_ColorCreator" />
+                        </baseType>
+                      </pointer>
+                    </type>
+                  </variable>
+                  <variable name="pShapeFactory">
+                    <type>
+                      <pointer>
+                        <baseType>
+                          <derived name="FB_ShapeCreator" />
+                        </baseType>
+                      </pointer>
+                    </type>
+                  </variable>
+                </localVars>
+              </interface>
+              <body>
+                <ST>
+                  <xhtml xmlns="http://www.w3.org/1999/xhtml" />
+                </ST>
+              </body>
+              <addData>
+                <data name="http://www.3s-software.com/plcopenxml/method" handleUnknown="implementation">
+                  <Method name="FB_exit" ObjectId="912cb74f-1bb8-40f6-9934-b5b6bb6ddf0f">
+                    <interface>
+                      <returnType>
+                        <BOOL />
+                      </returnType>
+                      <inputVars>
+                        <variable name="bInCopyCode">
+                          <type>
+                            <BOOL />
+                          </type>
+                          <documentation>
+                            <xhtml xmlns="http://www.w3.org/1999/xhtml"> if TRUE, the exit method is called for exiting an instance that is copied afterwards (online change).</xhtml>
+                          </documentation>
+                        </variable>
+                      </inputVars>
+                    </interface>
+                    <body>
+                      <ST>
+                        <xhtml xmlns="http://www.w3.org/1999/xhtml">IF pColorFactoy &lt;&gt; 0 THEN
+	__DELETE(pColorFactoy);
+	pColorFactoy := 0;
+END_IF
+
+IF pShapeFactory &lt;&gt; 0 THEN
+	__DELETE(pShapeFactory);
+	pShapeFactory := 0;
+END_IF</xhtml>
+                      </ST>
+                    </body>
+                    <InterfaceAsPlainText>
+                      <xhtml xmlns="http://www.w3.org/1999/xhtml">METHOD FB_exit : BOOL
+VAR_INPUT
+	bInCopyCode : BOOL; // if TRUE, the exit method is called for exiting an instance that is copied afterwards (online change).
+END_VAR
+</xhtml>
+                    </InterfaceAsPlainText>
+                    <addData />
+                  </Method>
+                </data>
+                <data name="http://www.3s-software.com/plcopenxml/method" handleUnknown="implementation">
+                  <Method name="M_GetFactory" ObjectId="9ffd77b8-38b9-4d21-8973-e7b32d42f7f1">
+                    <interface>
+                      <returnType>
+                        <derived name="REFERENCE TO FB_AbstractFactory" />
+                      </returnType>
+                      <inputVars>
+                        <variable name="eFactory">
+                          <type>
+                            <derived name="E_Factory" />
+                          </type>
+                        </variable>
+                      </inputVars>
+                    </interface>
+                    <body>
+                      <ST>
+                        <xhtml xmlns="http://www.w3.org/1999/xhtml">CASE eFactory OF
+	E_Factory.Color:
+	
+		pColorFactoy := __NEW(FB_ColorCreator);
+		IF pColorFactoy &lt;&gt; 0 THEN
+			M_GetFactory REF= (pColorFactoy^);
+		END_IF
+	
+		eFactory := E_Factory.init;
+	
+	E_Factory.Shape:
+	
+		pShapeFactory := __NEW(FB_ShapeCreator);
+		IF pShapeFactory &lt;&gt; 0 THEN
+			M_GetFactory REF= (pShapeFactory^);
+		END_IF
+
+		eFactory := E_Factory.init;
+	
+END_CASE</xhtml>
+                      </ST>
+                    </body>
+                    <InterfaceAsPlainText>
+                      <xhtml xmlns="http://www.w3.org/1999/xhtml">METHOD M_GetFactory : REFERENCE TO FB_AbstractFactory
+VAR_INPUT
+	eFactory : E_Factory;
+END_VAR
+</xhtml>
+                    </InterfaceAsPlainText>
+                    <addData />
+                  </Method>
+                </data>
+                <data name="http://www.3s-software.com/plcopenxml/method" handleUnknown="implementation">
+                  <Method name="M_ReleaseMemory" ObjectId="1d9073a1-ff77-434e-8755-f5229c32fe72">
+                    <interface>
+                      <returnType>
+                        <BOOL />
+                      </returnType>
+                    </interface>
+                    <body>
+                      <ST>
+                        <xhtml xmlns="http://www.w3.org/1999/xhtml">IF pColorFactoy &lt;&gt; 0 THEN
+	__DELETE(pColorFactoy);
+	pColorFactoy := 0;
+END_IF
+
+IF pShapeFactory &lt;&gt; 0 THEN
+	__DELETE(pShapeFactory);
+	pShapeFactory := 0;
+END_IF</xhtml>
+                      </ST>
+                    </body>
+                    <InterfaceAsPlainText>
+                      <xhtml xmlns="http://www.w3.org/1999/xhtml">METHOD M_ReleaseMemory : BOOL
+VAR_INPUT
+END_VAR
+</xhtml>
+                    </InterfaceAsPlainText>
+                    <addData />
+                  </Method>
+                </data>
+                <data name="http://www.3s-software.com/plcopenxml/interfaceasplaintext" handleUnknown="implementation">
+                  <InterfaceAsPlainText>
+                    <xhtml xmlns="http://www.w3.org/1999/xhtml">FUNCTION_BLOCK FB_FactoryProducer
+VAR_INPUT
+END_VAR
+VAR_OUTPUT
+END_VAR
+VAR
+	pColorFactoy : POINTER TO FB_ColorCreator;
+	pShapeFactory : POINTER TO FB_ShapeCreator;
+END_VAR
+</xhtml>
+                  </InterfaceAsPlainText>
+                </data>
+                <data name="http://www.3s-software.com/plcopenxml/objectid" handleUnknown="discard">
+                  <ObjectId>0d12df5a-5750-4039-9b2e-51655fafb43a</ObjectId>
+                </data>
+              </addData>
+            </pou>
+          </data>
+          <data name="http://www.3s-software.com/plcopenxml/pou" handleUnknown="implementation">
+            <pou name="MAIN" pouType="program">
+              <interface>
+                <localVars>
+                  <variable name="fbFactoryProducer">
+                    <type>
+                      <derived name="FB_FactoryProducer" />
+                    </type>
+                  </variable>
+                  <variable name="fbFactory">
+                    <type>
+                      <derived name="REFERENCE TO FB_AbstractFactory" />
+                    </type>
+                  </variable>
+                  <variable name="iShape">
+                    <type>
+                      <derived name="I_Shape" />
+                    </type>
+                  </variable>
+                  <variable name="iColor">
+                    <type>
+                      <derived name="I_Color" />
+                    </type>
+                  </variable>
+                  <variable name="eShape">
+                    <type>
+                      <derived name="E_Shape" />
+                    </type>
+                    <initialValue>
+                      <simpleValue value="E_Shape.Star" />
+                    </initialValue>
+                  </variable>
+                  <variable name="eColor">
+                    <type>
+                      <derived name="E_Color" />
+                    </type>
+                    <initialValue>
+                      <simpleValue value="E_Color.Red" />
+                    </initialValue>
+                  </variable>
+                  <variable name="bStart1">
+                    <type>
+                      <BOOL />
+                    </type>
+                  </variable>
+                  <variable name="bStart2">
+                    <type>
+                      <BOOL />
+                    </type>
+                  </variable>
+                </localVars>
+              </interface>
+              <body>
+                <ST>
+                  <xhtml xmlns="http://www.w3.org/1999/xhtml">IF bStart1 THEN
+	//Draw
+	fbFactory REF= fbFactoryProducer.M_GetFactory(eFactory := E_Factory.Shape);
+	
+	IF __ISVALIDREF(fbFactory) THEN
+		iShape := fbFactory.M_GetShapeObject(eShape:=eShape);
+	END_IF
+	
+	IF iShape &lt;&gt; 0 THEN
+		iShape.M_Draw();
+	END_IF
+	
+	//Fill
+	fbFactory REF= fbFactoryProducer.M_GetFactory(eFactory := E_Factory.Color);
+	
+	IF __ISVALIDREF(fbFactory) THEN
+		iColor := fbFactory.M_GetColorObject(eColor:=eColor);
+	END_IF
+	
+	IF iColor &lt;&gt; 0 THEN
+		iColor.M_Fill();
+	END_IF
+	
+	//Release Memory
+	fbFactoryProducer.M_ReleaseMemory();
+	
+	bStart1 := FALSE;
+END_IF
+
+//Alternatively, you can chain the methods and get the same result: 
+IF bStart2 THEN
+	fbFactoryProducer.M_GetFactory(eFactory := E_Factory.Shape).M_GetShapeObject(eShape:=eShape).M_Draw();
+	fbFactoryProducer.M_GetFactory(eFactory := E_Factory.Color).M_GetColorObject(eColor:=eColor).M_Fill();
+	
+	//Release Memory
+	fbFactoryProducer.M_ReleaseMemory();
+	bStart2 := FALSE;
+END_IF</xhtml>
+                </ST>
+              </body>
+              <addData>
+                <data name="http://www.3s-software.com/plcopenxml/interfaceasplaintext" handleUnknown="implementation">
+                  <InterfaceAsPlainText>
+                    <xhtml xmlns="http://www.w3.org/1999/xhtml">PROGRAM MAIN
+VAR
+	fbFactoryProducer : FB_FactoryProducer;
+	fbFactory : REFERENCE TO FB_AbstractFactory;
+	
+	iShape : I_Shape;
+	iColor : I_Color;
+	
+	eShape : E_Shape := E_Shape.Star;
+	eColor : E_Color := E_Color.Red;
+	
+	bStart1: BOOL;	
+	bStart2: BOOL;	
+END_VAR
+</xhtml>
+                  </InterfaceAsPlainText>
+                </data>
+                <data name="http://www.3s-software.com/plcopenxml/objectid" handleUnknown="discard">
+                  <ObjectId>f3894233-01d0-4f10-bb9f-a3d2750638b3</ObjectId>
+                </data>
+              </addData>
+            </pou>
+          </data>
+          <data name="http://www.3s-software.com/plcopenxml/pou" handleUnknown="implementation">
+            <pou name="FB_Circle" pouType="functionBlock">
+              <interface>
+                <addData>
+                  <data name="http://www.3s-software.com/plcopenxml/pouinheritance" handleUnknown="implementation">
+                    <Inheritance>
+                      <Implements>I_Shape</Implements>
+                    </Inheritance>
+                  </data>
+                  <data name="http://www.3s-software.com/plcopenxml/attributes" handleUnknown="implementation">
+                    <Attributes>
+                      <Attribute Name="enable_dynamic_creation" Value="" />
+                    </Attributes>
+                  </data>
+                </addData>
+              </interface>
+              <body>
+                <ST>
+                  <xhtml xmlns="http://www.w3.org/1999/xhtml" />
+                </ST>
+              </body>
+              <addData>
+                <data name="http://www.3s-software.com/plcopenxml/method" handleUnknown="implementation">
+                  <Method name="M_Draw" ObjectId="044589cf-a28d-4843-8cb7-7b2a21d9fe15">
+                    <interface>
+                      <returnType>
+                        <BOOL />
+                      </returnType>
+                    </interface>
+                    <body>
+                      <ST>
+                        <xhtml xmlns="http://www.w3.org/1999/xhtml">ADSLOGSTR(ADSLOG_MSGTYPE_HINT, 'Draw circle', '');
+M_Draw := TRUE;</xhtml>
+                      </ST>
+                    </body>
+                    <InterfaceAsPlainText>
+                      <xhtml xmlns="http://www.w3.org/1999/xhtml">METHOD M_Draw : BOOL
+</xhtml>
+                    </InterfaceAsPlainText>
+                    <addData />
+                  </Method>
+                </data>
+                <data name="http://www.3s-software.com/plcopenxml/interfaceasplaintext" handleUnknown="implementation">
+                  <InterfaceAsPlainText>
+                    <xhtml xmlns="http://www.w3.org/1999/xhtml">{attribute 'enable_dynamic_creation'}
+FUNCTION_BLOCK FB_Circle IMPLEMENTS I_Shape
+VAR_INPUT
+END_VAR
+VAR_OUTPUT
+END_VAR
+VAR
+END_VAR
+</xhtml>
+                  </InterfaceAsPlainText>
+                </data>
+                <data name="http://www.3s-software.com/plcopenxml/objectid" handleUnknown="discard">
+                  <ObjectId>70c684be-2704-4e9b-a90c-672e6148f4c7</ObjectId>
+                </data>
+              </addData>
+            </pou>
+          </data>
+          <data name="http://www.3s-software.com/plcopenxml/pou" handleUnknown="implementation">
+            <pou name="FB_CustomShape" pouType="functionBlock">
+              <interface>
+                <addData>
+                  <data name="http://www.3s-software.com/plcopenxml/pouinheritance" handleUnknown="implementation">
+                    <Inheritance>
+                      <Implements>I_Shape</Implements>
+                    </Inheritance>
+                  </data>
+                  <data name="http://www.3s-software.com/plcopenxml/attributes" handleUnknown="implementation">
+                    <Attributes>
+                      <Attribute Name="enable_dynamic_creation" Value="" />
+                    </Attributes>
+                  </data>
+                </addData>
+              </interface>
+              <body>
+                <ST>
+                  <xhtml xmlns="http://www.w3.org/1999/xhtml" />
+                </ST>
+              </body>
+              <addData>
+                <data name="http://www.3s-software.com/plcopenxml/method" handleUnknown="implementation">
+                  <Method name="M_Draw" ObjectId="a0e3dd52-118d-42e7-be5e-48a7edbf7fa7">
+                    <interface>
+                      <returnType>
+                        <BOOL />
+                      </returnType>
+                    </interface>
+                    <body>
+                      <ST>
+                        <xhtml xmlns="http://www.w3.org/1999/xhtml">ADSLOGSTR(ADSLOG_MSGTYPE_HINT, 'Draw custom shape', '');
+M_Draw := TRUE;</xhtml>
+                      </ST>
+                    </body>
+                    <InterfaceAsPlainText>
+                      <xhtml xmlns="http://www.w3.org/1999/xhtml">{warning 'Agregar implementación de método'}
+METHOD M_Draw : BOOL
+</xhtml>
+                    </InterfaceAsPlainText>
+                    <addData />
+                  </Method>
+                </data>
+                <data name="http://www.3s-software.com/plcopenxml/interfaceasplaintext" handleUnknown="implementation">
+                  <InterfaceAsPlainText>
+                    <xhtml xmlns="http://www.w3.org/1999/xhtml">{attribute 'enable_dynamic_creation'} 
+FUNCTION_BLOCK FB_CustomShape IMPLEMENTS I_Shape
+VAR_INPUT
+END_VAR
+VAR_OUTPUT
+END_VAR
+VAR
+END_VAR
+</xhtml>
+                  </InterfaceAsPlainText>
+                </data>
+                <data name="http://www.3s-software.com/plcopenxml/objectid" handleUnknown="discard">
+                  <ObjectId>9823fe51-9228-44bf-a909-c6ad8131a916</ObjectId>
+                </data>
+              </addData>
+            </pou>
+          </data>
+          <data name="http://www.3s-software.com/plcopenxml/pou" handleUnknown="implementation">
+            <pou name="FB_Rectangle" pouType="functionBlock">
+              <interface>
+                <addData>
+                  <data name="http://www.3s-software.com/plcopenxml/pouinheritance" handleUnknown="implementation">
+                    <Inheritance>
+                      <Implements>I_Shape</Implements>
+                    </Inheritance>
+                  </data>
+                  <data name="http://www.3s-software.com/plcopenxml/attributes" handleUnknown="implementation">
+                    <Attributes>
+                      <Attribute Name="enable_dynamic_creation" Value="" />
+                    </Attributes>
+                  </data>
+                </addData>
+              </interface>
+              <body>
+                <ST>
+                  <xhtml xmlns="http://www.w3.org/1999/xhtml" />
+                </ST>
+              </body>
+              <addData>
+                <data name="http://www.3s-software.com/plcopenxml/method" handleUnknown="implementation">
+                  <Method name="M_Draw" ObjectId="ec842efb-c8f6-4974-9e40-a4c273786c13">
+                    <interface>
+                      <returnType>
+                        <BOOL />
+                      </returnType>
+                    </interface>
+                    <body>
+                      <ST>
+                        <xhtml xmlns="http://www.w3.org/1999/xhtml">ADSLOGSTR(ADSLOG_MSGTYPE_HINT, 'Draw rectangle', '');
+M_Draw := TRUE;</xhtml>
+                      </ST>
+                    </body>
+                    <InterfaceAsPlainText>
+                      <xhtml xmlns="http://www.w3.org/1999/xhtml">{warning 'Agregar implementación de método'}
+METHOD M_Draw : BOOL
+</xhtml>
+                    </InterfaceAsPlainText>
+                    <addData />
+                  </Method>
+                </data>
+                <data name="http://www.3s-software.com/plcopenxml/interfaceasplaintext" handleUnknown="implementation">
+                  <InterfaceAsPlainText>
+                    <xhtml xmlns="http://www.w3.org/1999/xhtml">{attribute 'enable_dynamic_creation'}
+FUNCTION_BLOCK FB_Rectangle IMPLEMENTS I_Shape
+VAR_INPUT
+END_VAR
+VAR_OUTPUT
+END_VAR
+VAR
+END_VAR
+</xhtml>
+                  </InterfaceAsPlainText>
+                </data>
+                <data name="http://www.3s-software.com/plcopenxml/objectid" handleUnknown="discard">
+                  <ObjectId>445b7b73-b8a3-41c9-aafa-30d40380f080</ObjectId>
+                </data>
+              </addData>
+            </pou>
+          </data>
+          <data name="http://www.3s-software.com/plcopenxml/pou" handleUnknown="implementation">
+            <pou name="FB_Square" pouType="functionBlock">
+              <interface>
+                <addData>
+                  <data name="http://www.3s-software.com/plcopenxml/pouinheritance" handleUnknown="implementation">
+                    <Inheritance>
+                      <Implements>I_Shape</Implements>
+                    </Inheritance>
+                  </data>
+                  <data name="http://www.3s-software.com/plcopenxml/attributes" handleUnknown="implementation">
+                    <Attributes>
+                      <Attribute Name="enable_dynamic_creation" Value="" />
+                    </Attributes>
+                  </data>
+                </addData>
+              </interface>
+              <body>
+                <ST>
+                  <xhtml xmlns="http://www.w3.org/1999/xhtml" />
+                </ST>
+              </body>
+              <addData>
+                <data name="http://www.3s-software.com/plcopenxml/method" handleUnknown="implementation">
+                  <Method name="M_Draw" ObjectId="8bd783ba-81e6-4d94-ae17-758252a12dd1">
+                    <interface>
+                      <returnType>
+                        <BOOL />
+                      </returnType>
+                    </interface>
+                    <body>
+                      <ST>
+                        <xhtml xmlns="http://www.w3.org/1999/xhtml">ADSLOGSTR(ADSLOG_MSGTYPE_HINT, 'Square', '');
+M_Draw := TRUE;</xhtml>
+                      </ST>
+                    </body>
+                    <InterfaceAsPlainText>
+                      <xhtml xmlns="http://www.w3.org/1999/xhtml">{warning 'Agregar implementación de método'}
+METHOD M_Draw : BOOL
+</xhtml>
+                    </InterfaceAsPlainText>
+                    <addData />
+                  </Method>
+                </data>
+                <data name="http://www.3s-software.com/plcopenxml/interfaceasplaintext" handleUnknown="implementation">
+                  <InterfaceAsPlainText>
+                    <xhtml xmlns="http://www.w3.org/1999/xhtml">{attribute 'enable_dynamic_creation'}
+FUNCTION_BLOCK FB_Square IMPLEMENTS I_Shape
+VAR_INPUT
+END_VAR
+VAR_OUTPUT
+END_VAR
+VAR
+END_VAR
+</xhtml>
+                  </InterfaceAsPlainText>
+                </data>
+                <data name="http://www.3s-software.com/plcopenxml/objectid" handleUnknown="discard">
+                  <ObjectId>d6fad671-714e-4cc4-b95e-591bcc0019ad</ObjectId>
+                </data>
+              </addData>
+            </pou>
+          </data>
+          <data name="http://www.3s-software.com/plcopenxml/pou" handleUnknown="implementation">
+            <pou name="FB_Star" pouType="functionBlock">
+              <interface>
+                <addData>
+                  <data name="http://www.3s-software.com/plcopenxml/pouinheritance" handleUnknown="implementation">
+                    <Inheritance>
+                      <Implements>I_Shape</Implements>
+                    </Inheritance>
+                  </data>
+                  <data name="http://www.3s-software.com/plcopenxml/attributes" handleUnknown="implementation">
+                    <Attributes>
+                      <Attribute Name="enable_dynamic_creation" Value="" />
+                    </Attributes>
+                  </data>
+                </addData>
+              </interface>
+              <body>
+                <ST>
+                  <xhtml xmlns="http://www.w3.org/1999/xhtml" />
+                </ST>
+              </body>
+              <addData>
+                <data name="http://www.3s-software.com/plcopenxml/method" handleUnknown="implementation">
+                  <Method name="M_Draw" ObjectId="c405f6d3-ba87-43ac-ad26-a605c9ee57e2">
+                    <interface>
+                      <returnType>
+                        <BOOL />
+                      </returnType>
+                    </interface>
+                    <body>
+                      <ST>
+                        <xhtml xmlns="http://www.w3.org/1999/xhtml">ADSLOGSTR(ADSLOG_MSGTYPE_HINT, 'Draw Star', '');
+M_Draw := TRUE;</xhtml>
+                      </ST>
+                    </body>
+                    <InterfaceAsPlainText>
+                      <xhtml xmlns="http://www.w3.org/1999/xhtml">{warning 'Agregar implementación de método'}
+METHOD M_Draw : BOOL
+</xhtml>
+                    </InterfaceAsPlainText>
+                    <addData />
+                  </Method>
+                </data>
+                <data name="http://www.3s-software.com/plcopenxml/interfaceasplaintext" handleUnknown="implementation">
+                  <InterfaceAsPlainText>
+                    <xhtml xmlns="http://www.w3.org/1999/xhtml">{attribute 'enable_dynamic_creation'}
+FUNCTION_BLOCK FB_Star IMPLEMENTS I_Shape
+VAR_INPUT
+END_VAR
+VAR_OUTPUT
+END_VAR
+VAR
+END_VAR
+</xhtml>
+                  </InterfaceAsPlainText>
+                </data>
+                <data name="http://www.3s-software.com/plcopenxml/objectid" handleUnknown="discard">
+                  <ObjectId>74937627-218e-4669-a3f9-dc86dc81936e</ObjectId>
+                </data>
+              </addData>
+            </pou>
+          </data>
+          <data name="http://www.3s-software.com/plcopenxml/pou" handleUnknown="implementation">
+            <pou name="FB_Triangle" pouType="functionBlock">
+              <interface>
+                <addData>
+                  <data name="http://www.3s-software.com/plcopenxml/pouinheritance" handleUnknown="implementation">
+                    <Inheritance>
+                      <Implements>I_Shape</Implements>
+                    </Inheritance>
+                  </data>
+                  <data name="http://www.3s-software.com/plcopenxml/attributes" handleUnknown="implementation">
+                    <Attributes>
+                      <Attribute Name="enable_dynamic_creation" Value="" />
+                    </Attributes>
+                  </data>
+                </addData>
+              </interface>
+              <body>
+                <ST>
+                  <xhtml xmlns="http://www.w3.org/1999/xhtml" />
+                </ST>
+              </body>
+              <addData>
+                <data name="http://www.3s-software.com/plcopenxml/method" handleUnknown="implementation">
+                  <Method name="M_Draw" ObjectId="59b30451-ae84-493f-bc26-21167bd506fd">
+                    <interface>
+                      <returnType>
+                        <BOOL />
+                      </returnType>
+                    </interface>
+                    <body>
+                      <ST>
+                        <xhtml xmlns="http://www.w3.org/1999/xhtml">ADSLOGSTR(ADSLOG_MSGTYPE_HINT, 'Draw Triangle', '');
+M_Draw := TRUE;</xhtml>
+                      </ST>
+                    </body>
+                    <InterfaceAsPlainText>
+                      <xhtml xmlns="http://www.w3.org/1999/xhtml">{warning 'Agregar implementación de método'}
+METHOD M_Draw : BOOL
+</xhtml>
+                    </InterfaceAsPlainText>
+                    <addData />
+                  </Method>
+                </data>
+                <data name="http://www.3s-software.com/plcopenxml/interfaceasplaintext" handleUnknown="implementation">
+                  <InterfaceAsPlainText>
+                    <xhtml xmlns="http://www.w3.org/1999/xhtml">{attribute 'enable_dynamic_creation'}
+FUNCTION_BLOCK FB_Triangle IMPLEMENTS I_Shape
+VAR_INPUT
+END_VAR
+VAR_OUTPUT
+END_VAR
+VAR
+END_VAR
+</xhtml>
+                  </InterfaceAsPlainText>
+                </data>
+                <data name="http://www.3s-software.com/plcopenxml/objectid" handleUnknown="discard">
+                  <ObjectId>288df42b-9348-477a-ab04-0b6c5376b7ca</ObjectId>
+                </data>
+              </addData>
+            </pou>
+          </data>
+          <data name="http://www.3s-software.com/plcopenxml/libraries" handleUnknown="implementation">
+            <Libraries>
+              <Library Name="#Tc2_Standard" Namespace="Tc2_Standard" HideWhenReferencedAsDependency="false" PublishSymbolsInContainer="false" SystemLibrary="false" LinkAllContent="false" DefaultResolution="Tc2_Standard, * (Beckhoff Automation GmbH)" />
+              <Library Name="#Tc2_System" Namespace="Tc2_System" HideWhenReferencedAsDependency="false" PublishSymbolsInContainer="false" SystemLibrary="false" LinkAllContent="false" DefaultResolution="Tc2_System, * (Beckhoff Automation GmbH)">
+                <Parameters>
+                  <Parameter Name="PARAM.TABLE_UPPER_BOUND" Value="15" />
+                  <Parameter Name="PARAM.STRING_LENGTH_EXP" Value="255" />
+                  <Parameter Name="PARAM.STRING_LENGTH_ADDRESS" Value="20" />
+                  <Parameter Name="PARAM.STRING_LENGTH_COMMENT" Value="255" />
+                  <Parameter Name="PARAM.STRING_LENGTH_OUTSTRING" Value="255" />
+                  <Parameter Name="PARAM.TABLE_SHOW_VALID_ITEMS" Value="FALSE" />
+                </Parameters>
+              </Library>
+              <Library Name="#Tc3_Module" Namespace="Tc3_Module" HideWhenReferencedAsDependency="false" PublishSymbolsInContainer="false" SystemLibrary="false" LinkAllContent="false" DefaultResolution="Tc3_Module, * (Beckhoff Automation GmbH)" />
+              <addData>
+                <data name="http://www.3s-software.com/plcopenxml/objectid" handleUnknown="discard">
+                  <ObjectId>2d0e8171-a78c-4d4a-bb64-38aa17b15799</ObjectId>
+                </data>
+              </addData>
+            </Libraries>
+          </data>
+          <data name="http://www.3s-software.com/plcopenxml/objectid" handleUnknown="discard">
+            <ObjectId>231c46fd-600c-4225-8da1-d9217a995163</ObjectId>
+          </data>
+        </addData>
+      </resource>
+    </data>
+    <data name="http://www.3s-software.com/plcopenxml/projectstructure" handleUnknown="discard">
+      <ProjectStructure>
+        <Object Name="Untitled1_1" ObjectId="231c46fd-600c-4225-8da1-d9217a995163">
+          <Object Name="Administrador de bibliotecas" ObjectId="2d0e8171-a78c-4d4a-bb64-38aa17b15799" />
+          <Folder Name="Abstract Factory">
+            <Object Name="FB_AbstractFactory" ObjectId="7b35da90-6f2d-440c-8e0a-c1cc878589e6">
+              <Object Name="M_GetColorObject" ObjectId="abc3931d-e852-4cd4-922d-47dd607a3800" />
+              <Object Name="M_GetShapeObject" ObjectId="6bb60273-72dc-4375-937e-760f79af1d76" />
+              <Object Name="M_ReleaseMemory" ObjectId="00a9ec82-33e2-42b7-be4b-78d65ff64f1e" />
+            </Object>
+          </Folder>
+          <Folder Name="Colors">
+            <Object Name="FB_Black" ObjectId="25133850-c5b4-4409-ae57-f1dbf04be7a4">
+              <Object Name="M_Fill" ObjectId="97774111-632e-441e-8ba9-2c360709bf52" />
+            </Object>
+            <Object Name="FB_Red" ObjectId="3af52522-8a45-41d6-940a-4988b9b31cf6">
+              <Object Name="M_Fill" ObjectId="69db6a5a-b341-4515-9fd5-68d949a4e314" />
+            </Object>
+            <Object Name="FB_Yellow" ObjectId="0f08c85f-8c65-4f2b-8312-1a34a6ee00f4">
+              <Object Name="M_Fill" ObjectId="6ad1cfcd-39e4-49fd-b1dc-eea5f3951bdf" />
+            </Object>
+          </Folder>
+          <Folder Name="Creator">
+            <Object Name="FB_ShapeCreator" ObjectId="24b74a5e-ed10-48ad-b0b2-ab244f770370">
+              <Object Name="FB_exit" ObjectId="ed323082-1a7f-4583-81a7-b24f724cca92" />
+              <Object Name="M_GetShapeObject" ObjectId="99b9d4dd-8640-4376-8d63-447532883747" />
+              <Object Name="M_ReleaseMemory" ObjectId="97eb114a-0ec8-4914-84bb-55fc5e92c667" />
+            </Object>
+            <Object Name="FB_ShapeCreatorEX" ObjectId="27b4edc3-f3ac-4ed7-8f03-939a64f7c01a">
+              <Object Name="M_GetShapeObject" ObjectId="2e6ad99e-f383-43ee-8211-69fea926c0b5" />
+            </Object>
+            <Object Name="FB_ColorCreator" ObjectId="640015f4-bf7e-4686-8039-a93211b72856">
+              <Object Name="FB_exit" ObjectId="d15df574-1582-4f38-8be2-5e77cae1395d" />
+              <Object Name="M_GetColorObject" ObjectId="413ea5be-751a-4cf9-bf54-eeac7348be59" />
+              <Object Name="M_ReleaseMemory" ObjectId="f8f074b1-ba57-48f8-b9ee-035dbb43d332" />
+            </Object>
+          </Folder>
+          <Folder Name="DUTs">
+            <Object Name="E_Color" ObjectId="f3e7cfd5-a5a2-43c5-bb14-5760c99b6686" />
+            <Object Name="E_Factory" ObjectId="e8225ab9-6d10-4e62-847c-87c982845f7e" />
+            <Object Name="E_Shape" ObjectId="11ea4c08-a4d8-4a5f-bb5c-00fd67836667" />
+          </Folder>
+          <Folder Name="Factory Producer">
+            <Object Name="FB_FactoryProducer" ObjectId="0d12df5a-5750-4039-9b2e-51655fafb43a">
+              <Object Name="FB_exit" ObjectId="912cb74f-1bb8-40f6-9934-b5b6bb6ddf0f" />
+              <Object Name="M_GetFactory" ObjectId="9ffd77b8-38b9-4d21-8973-e7b32d42f7f1" />
+              <Object Name="M_ReleaseMemory" ObjectId="1d9073a1-ff77-434e-8755-f5229c32fe72" />
+            </Object>
+          </Folder>
+          <Folder Name="Interfaces">
+            <Object Name="I_Color" ObjectId="5c158fde-0479-4e0d-8bed-0812c766e8db">
+              <Object Name="M_Fill" ObjectId="b5d0011c-4148-42c3-bb9e-200daf9bc97a" />
+            </Object>
+            <Object Name="I_Shape" ObjectId="7b3b1058-ac0f-43b4-b54c-0f6fc0841a42">
+              <Object Name="M_Draw" ObjectId="d305a8c0-7ee6-49fd-8238-eb0e99a1c35d" />
+            </Object>
+          </Folder>
+          <Object Name="PlcTask" ObjectId="09c639ea-15ff-479e-bc88-dce18a20a0a5" />
+          <Folder Name="POUs">
+            <Object Name="MAIN" ObjectId="f3894233-01d0-4f10-bb9f-a3d2750638b3" />
+          </Folder>
+          <Folder Name="Shapes">
+            <Object Name="FB_Circle" ObjectId="70c684be-2704-4e9b-a90c-672e6148f4c7">
+              <Object Name="M_Draw" ObjectId="044589cf-a28d-4843-8cb7-7b2a21d9fe15" />
+            </Object>
+            <Object Name="FB_CustomShape" ObjectId="9823fe51-9228-44bf-a909-c6ad8131a916">
+              <Object Name="M_Draw" ObjectId="a0e3dd52-118d-42e7-be5e-48a7edbf7fa7" />
+            </Object>
+            <Object Name="FB_Rectangle" ObjectId="445b7b73-b8a3-41c9-aafa-30d40380f080">
+              <Object Name="M_Draw" ObjectId="ec842efb-c8f6-4974-9e40-a4c273786c13" />
+            </Object>
+            <Object Name="FB_Square" ObjectId="d6fad671-714e-4cc4-b95e-591bcc0019ad">
+              <Object Name="M_Draw" ObjectId="8bd783ba-81e6-4d94-ae17-758252a12dd1" />
+            </Object>
+            <Object Name="FB_Star" ObjectId="74937627-218e-4669-a3f9-dc86dc81936e">
+              <Object Name="M_Draw" ObjectId="c405f6d3-ba87-43ac-ad26-a605c9ee57e2" />
+            </Object>
+            <Object Name="FB_Triangle" ObjectId="288df42b-9348-477a-ab04-0b6c5376b7ca">
+              <Object Name="M_Draw" ObjectId="59b30451-ae84-493f-bc26-21167bd506fd" />
+            </Object>
+          </Folder>
+        </Object>
+      </ProjectStructure>
+    </data>
+  </addData>
+</project>
