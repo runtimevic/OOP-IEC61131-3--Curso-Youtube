@@ -190,15 +190,30 @@ nav:
     - Patrones de Diseño:
        - Patrones de Diseño : Patrones de Diseño/_Patrones de Diseño.md
        - Patrones de Diseño Creacional:
-          - Patron Metodo de Fabrica: Patrones de Diseño/Factory Method Design Pattern.md
-          - Patron Fabrica Abstracta: Patrones de Diseño/The Abstract Factory Pattern.md
+          - Patron Factory Method: Patrones de Diseño/Creational/Factory Method Design Pattern.md
+          - Patron Abstract Factory: Patrones de Diseño/Creational/Abstract Factory Design Pattern.md
+          - Patron Builder: Patrones de Diseño/Creational/Builder Design Pattern.md
+          - Patron Prototype: Patrones de Diseño/Creational/Prototype Design Pattern.md
+          - Patron Singleton: Patrones de Diseño/Creational/Singleton Design Pattern.md
        - Patrones de Diseño Estructural:
-          - Patron Adaptador: Patrones de Diseño/Adapter Design Pattern.md
-          - Patron Decorador: Patrones de Diseño/Decorator Design Pattern.md
+          - Patron Adapter: Patrones de Diseño/Structural/Adapter Design Pattern.md
+          - Patron Bridge: Patrones de Diseño/Structural/Bridge Design Pattern.md
+          - Patron Composite: Patrones de Diseño/Structural/Composite Design Pattern.md
+          - Patron Decorator: Patrones de Diseño/Structural/Decorator Design Pattern.md
+          - Patron Facade: Patrones de Diseño/Structural/Facade Design Pattern.md
+          - Patron Flyweight: Patrones de Diseño/Structural/Flyweight Design Pattern.md
+          - Patron Proxy: Patrones de Diseño/Structural/Proxy Design Pattern.md
        - Patrones de Diseño de Comportamiento:
-          - Patron de Estrategia: Patrones de Diseño/Strategy pattern.md
-          - Patron Observador: Patrones de Diseño/Observer Design Pattern.md
-          - Patron Visitante: Patrones de Diseño/The Visitor Design Pattern.md
+          - Patron Chain of Responsibility: Patrones de Diseño/Behavioral/Chain of Responsibility Design Pattern.md
+          - Patron Command: Patrones de Diseño/Behavioral/Command Design Pattern.md
+          - Patron Iterator: Patrones de Diseño/Behavioral/Iterator Design Pattern.md
+          - Patron Mediator: Patrones de Diseño/Behavioral/Mediator Design Pattern.md
+          - Patron Memento: Patrones de Diseño/Behavioral/Memento Design Pattern.md
+          - Patron Observer: Patrones de Diseño/Behavioral/Observer Design Pattern.md
+          - Patron State: Patrones de Diseño/Behavioral/State Design Pattern.md
+          - Patron Strategy: Patrones de Diseño/Behavioral/Strategy Design Pattern.md
+          - Patron Template Method: Patrones de Diseño/Behavioral/Template Method Design Pattern.md
+          - Patron Visitor: Patrones de Diseño/Behavioral/Visitor Design Pattern.md  
     - Librerias : Librerias.md
     - CI/CD:
        - CI/CD - Integración y entrega continua: CI_CD/Integracion y entrega continua.md
