@@ -12,28 +12,28 @@
         <meta name="author" content="runtimevic">
       
       
-        <link rel="canonical" href="https://runtimevic.github.io/OOP-IEC61131-3--Curso-Youtube/es/Patrones%20de%20Dise%C3%B1o/The%20Visitor%20Design%20Pattern/">
+        <link rel="canonical" href="https://runtimevic.github.io/OOP-IEC61131-3--Curso-Youtube/es/Patrones%20de%20Dise%C3%B1o/Behavioral/State%20Design%20Pattern/">
       
       
         <link rel="prev" href="../Observer%20Design%20Pattern/">
       
       
-        <link rel="next" href="../../Librerias/">
+        <link rel="next" href="../Strategy%20Design%20Pattern/">
       
       
-      <link rel="icon" href="../../assets/images/favicon.png">
+      <link rel="icon" href="../../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.4.10">
     
     
       
-        <title>Patron Visitante - Programación Orientada a Objetos OOP IEC61131-3 Curso Youtube by Runtimevic</title>
+        <title>Patron State - Programación Orientada a Objetos OOP IEC61131-3 Curso Youtube by Runtimevic</title>
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.fad675c6.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.fad675c6.min.css">
       
         
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.356b1318.min.css">
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.356b1318.min.css">
       
       
   
@@ -93,7 +93,7 @@
       
     
     
-    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
   
@@ -131,11 +131,6 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
-        
-        <a href="#links-de-patrones-de-diseno" class="md-skip">
-          Saltar a contenido
-        </a>
-      
     </div>
     <div data-md-component="announce">
       
@@ -152,9 +147,9 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Cabecera">
-    <a href="../.." title="Programación Orientada a Objetos OOP IEC61131-3 Curso Youtube by Runtimevic" class="md-header__button md-logo" aria-label="Programación Orientada a Objetos OOP IEC61131-3 Curso Youtube by Runtimevic" data-md-component="logo">
+    <a href="../../.." title="Programación Orientada a Objetos OOP IEC61131-3 Curso Youtube by Runtimevic" class="md-header__button md-logo" aria-label="Programación Orientada a Objetos OOP IEC61131-3 Curso Youtube by Runtimevic" data-md-component="logo">
       
-  <img src="../../imagenes/oop_logg.webp" alt="logo">
+  <img src="../../../imagenes/oop_logg.webp" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -171,7 +166,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Patron Visitante
+              Patron State
             
           </span>
         </div>
@@ -319,9 +314,9 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navegación" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../.." title="Programación Orientada a Objetos OOP IEC61131-3 Curso Youtube by Runtimevic" class="md-nav__button md-logo" aria-label="Programación Orientada a Objetos OOP IEC61131-3 Curso Youtube by Runtimevic" data-md-component="logo">
+    <a href="../../.." title="Programación Orientada a Objetos OOP IEC61131-3 Curso Youtube by Runtimevic" class="md-nav__button md-logo" aria-label="Programación Orientada a Objetos OOP IEC61131-3 Curso Youtube by Runtimevic" data-md-component="logo">
       
-  <img src="../../imagenes/oop_logg.webp" alt="logo">
+  <img src="../../../imagenes/oop_logg.webp" alt="logo">
 
     </a>
     Programación Orientada a Objetos OOP IEC61131-3 Curso Youtube by Runtimevic
@@ -347,7 +342,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../requisitos/" class="md-nav__link">
+      <a href="../../../requisitos/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -366,7 +361,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../.." class="md-nav__link">
+      <a href="../../.." class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -385,7 +380,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../tipos%20de%20paradigmas/" class="md-nav__link">
+      <a href="../../../tipos%20de%20paradigmas/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -440,7 +435,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Conceptos%20Previos/Tipos%20de%20datos/" class="md-nav__link">
+      <a href="../../../Conceptos%20Previos/Tipos%20de%20datos/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -460,7 +455,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Conceptos%20Previos/Variable%20types%20and%20special%20variables/" class="md-nav__link">
+      <a href="../../../Conceptos%20Previos/Variable%20types%20and%20special%20variables/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -480,7 +475,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Conceptos%20Previos/modificadores%20de%20acceso/" class="md-nav__link">
+      <a href="../../../Conceptos%20Previos/modificadores%20de%20acceso/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -500,7 +495,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Conceptos%20Previos/Tabla%20de%20Modificadores%20de%20acceso/" class="md-nav__link">
+      <a href="../../../Conceptos%20Previos/Tabla%20de%20Modificadores%20de%20acceso/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -563,7 +558,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Clases%20y%20Objetos/clases%20y%20objetos/" class="md-nav__link">
+      <a href="../../../Clases%20y%20Objetos/clases%20y%20objetos/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -619,7 +614,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Clases%20y%20Objetos/Function%20Block/" class="md-nav__link">
+      <a href="../../../Clases%20y%20Objetos/Function%20Block/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -639,7 +634,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Clases%20y%20Objetos/Function%20Block%20Modificadores%20de%20acceso/" class="md-nav__link">
+      <a href="../../../Clases%20y%20Objetos/Function%20Block%20Modificadores%20de%20acceso/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -659,7 +654,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Clases%20y%20Objetos/Function%20Block%20Declaracion%20de%20variables/" class="md-nav__link">
+      <a href="../../../Clases%20y%20Objetos/Function%20Block%20Declaracion%20de%20variables/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -679,7 +674,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Clases%20y%20Objetos/Constructor%20y%20Destructor/" class="md-nav__link">
+      <a href="../../../Clases%20y%20Objetos/Constructor%20y%20Destructor/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -743,7 +738,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Clases%20y%20Objetos/metodo/" class="md-nav__link">
+      <a href="../../../Clases%20y%20Objetos/metodo/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -763,7 +758,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Clases%20y%20Objetos/Metodo%20Modificadores%20de%20acceso/" class="md-nav__link">
+      <a href="../../../Clases%20y%20Objetos/Metodo%20Modificadores%20de%20acceso/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -783,7 +778,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Clases%20y%20Objetos/Metodo%20Declaracion%20de%20variables/" class="md-nav__link">
+      <a href="../../../Clases%20y%20Objetos/Metodo%20Declaracion%20de%20variables/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -803,7 +798,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Clases%20y%20Objetos/Metodo%20Tipos%20de%20variables%20de%20retorno/" class="md-nav__link">
+      <a href="../../../Clases%20y%20Objetos/Metodo%20Tipos%20de%20variables%20de%20retorno/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -831,7 +826,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Clases%20y%20Objetos/propiedad/" class="md-nav__link">
+      <a href="../../../Clases%20y%20Objetos/propiedad/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -887,7 +882,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Clases%20y%20Objetos/Herencia/Herencia%20Bloque%20de%20Funcion/" class="md-nav__link">
+      <a href="../../../Clases%20y%20Objetos/Herencia/Herencia%20Bloque%20de%20Funcion/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -907,7 +902,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Clases%20y%20Objetos/Herencia/Herencia%20Estructura/" class="md-nav__link">
+      <a href="../../../Clases%20y%20Objetos/Herencia/Herencia%20Estructura/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -927,7 +922,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Clases%20y%20Objetos/Herencia/Herencia%20Interface/" class="md-nav__link">
+      <a href="../../../Clases%20y%20Objetos/Herencia/Herencia%20Interface/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -955,7 +950,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Clases%20y%20Objetos/THIS%20pointer/" class="md-nav__link">
+      <a href="../../../Clases%20y%20Objetos/THIS%20pointer/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -975,7 +970,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Clases%20y%20Objetos/SUPER%20pointer/" class="md-nav__link">
+      <a href="../../../Clases%20y%20Objetos/SUPER%20pointer/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -995,7 +990,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Clases%20y%20Objetos/interface/" class="md-nav__link">
+      <a href="../../../Clases%20y%20Objetos/interface/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1015,7 +1010,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Clases%20y%20Objetos/pointer%20and%20reference/" class="md-nav__link">
+      <a href="../../../Clases%20y%20Objetos/pointer%20and%20reference/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1035,7 +1030,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Clases%20y%20Objetos/Keyword_Abstract/" class="md-nav__link">
+      <a href="../../../Clases%20y%20Objetos/Keyword_Abstract/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1055,7 +1050,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Clases%20y%20Objetos/FB%20abstracto%20frente%20a%20interfaz/" class="md-nav__link">
+      <a href="../../../Clases%20y%20Objetos/FB%20abstracto%20frente%20a%20interfaz/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1075,7 +1070,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Clases%20y%20Objetos/Interfaz%20fluida/" class="md-nav__link">
+      <a href="../../../Clases%20y%20Objetos/Interfaz%20fluida/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1095,7 +1090,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Clases%20y%20Objetos/Interface%20vs%20Herencia/" class="md-nav__link">
+      <a href="../../../Clases%20y%20Objetos/Interface%20vs%20Herencia/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1115,7 +1110,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Clases%20y%20Objetos/Otros%20Operadores/" class="md-nav__link">
+      <a href="../../../Clases%20y%20Objetos/Otros%20Operadores/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1178,7 +1173,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Extended_Structured_Text/" class="md-nav__link">
+      <a href="../../../Extended_Structured_Text/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1241,7 +1236,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../principios/_principios%20OOP/" class="md-nav__link">
+      <a href="../../../principios/_principios%20OOP/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1261,7 +1256,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../principios/abstraccion/" class="md-nav__link">
+      <a href="../../../principios/abstraccion/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1281,7 +1276,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../principios/encapsulamiento/" class="md-nav__link">
+      <a href="../../../principios/encapsulamiento/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1301,7 +1296,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../principios/herencia/" class="md-nav__link">
+      <a href="../../../principios/herencia/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1321,7 +1316,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../principios/polimorfismo/" class="md-nav__link">
+      <a href="../../../principios/polimorfismo/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1384,7 +1379,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../solid/_SOLID/" class="md-nav__link">
+      <a href="../../../solid/_SOLID/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1404,7 +1399,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../solid/Principio%20de%20Responsabilidad%20Unica/" class="md-nav__link">
+      <a href="../../../solid/Principio%20de%20Responsabilidad%20Unica/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1424,7 +1419,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../solid/Principio%20de%20Abierto_Cerrado/" class="md-nav__link">
+      <a href="../../../solid/Principio%20de%20Abierto_Cerrado/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1444,7 +1439,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../solid/Principio%20de%20Sustitucion%20de%20Liskov/" class="md-nav__link">
+      <a href="../../../solid/Principio%20de%20Sustitucion%20de%20Liskov/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1464,7 +1459,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../solid/Principio%20de%20Segregacion%20de%20Interfaz/" class="md-nav__link">
+      <a href="../../../solid/Principio%20de%20Segregacion%20de%20Interfaz/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1484,7 +1479,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../solid/Principio%20de%20Inversion%20de%20Dependencia/" class="md-nav__link">
+      <a href="../../../solid/Principio%20de%20Inversion%20de%20Dependencia/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1547,7 +1542,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../UML/UML/" class="md-nav__link">
+      <a href="../../../UML/UML/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1567,7 +1562,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../UML/Class%20UML/" class="md-nav__link">
+      <a href="../../../UML/Class%20UML/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1587,7 +1582,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../UML/relaciones/" class="md-nav__link">
+      <a href="../../../UML/relaciones/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1607,7 +1602,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../UML/Statechart%20UML/" class="md-nav__link">
+      <a href="../../../UML/Statechart%20UML/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1634,7 +1629,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Tipos%20de%20Dise%C3%B1o%20para%20programacion%20de%20PLC/" class="md-nav__link">
+      <a href="../../../Tipos%20de%20Dise%C3%B1o%20para%20programacion%20de%20PLC/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1691,7 +1686,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../_Patrones%20de%20Dise%C3%B1o/" class="md-nav__link">
+      <a href="../../_Patrones%20de%20Dise%C3%B1o/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1747,11 +1742,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../Factory%20Method%20Design%20Pattern/" class="md-nav__link">
+      <a href="../../Creational/Factory%20Method%20Design%20Pattern/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Patron Metodo de Fabrica
+    Patron Factory Method
   </span>
   
 
@@ -1767,11 +1762,71 @@
   
   
     <li class="md-nav__item">
-      <a href="../The%20Abstract%20Factory%20Pattern/" class="md-nav__link">
+      <a href="../../Creational/Abstract%20Factory%20Design%20Pattern/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Patron Fabrica Abstracta
+    Patron Abstract Factory
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Creational/Builder%20Design%20Pattern/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Patron Builder
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Creational/Prototype%20Design%20Pattern/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Patron Prototype
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Creational/Singleton%20Design%20Pattern/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Patron Singleton
   </span>
   
 
@@ -1831,11 +1886,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../Adapter%20Design%20Pattern/" class="md-nav__link">
+      <a href="../../Structural/Adapter%20Design%20Pattern/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Patron Adaptador
+    Patron Adapter
   </span>
   
 
@@ -1851,11 +1906,111 @@
   
   
     <li class="md-nav__item">
-      <a href="../Decorator%20Design%20Pattern/" class="md-nav__link">
+      <a href="../../Structural/Bridge%20Design%20Pattern/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Patron Decorador
+    Patron Bridge
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Structural/Composite%20Design%20Pattern/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Patron Composite
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Structural/Decorator%20Design%20Pattern/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Patron Decorator
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Structural/Facade%20Design%20Pattern/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Patron Facade
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Structural/Flyweight%20Design%20Pattern/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Patron Flyweight
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Structural/Proxy%20Design%20Pattern/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Patron Proxy
   </span>
   
 
@@ -1917,11 +2072,91 @@
   
   
     <li class="md-nav__item">
-      <a href="../Strategy%20pattern/" class="md-nav__link">
+      <a href="../Chain%20of%20Responsibility%20Design%20Pattern/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Patron de Estrategia
+    Patron Chain of Responsibility
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Command%20Design%20Pattern/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Patron Command
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Iterator%20Design%20Pattern/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Patron Iterator
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Mediator%20Design%20Pattern/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Patron Mediator
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Memento%20Design%20Pattern/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Patron Memento
   </span>
   
 
@@ -1941,7 +2176,7 @@
         
   
   <span class="md-ellipsis">
-    Patron Observador
+    Patron Observer
   </span>
   
 
@@ -1964,53 +2199,76 @@
       
       
       
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    Patron Visitante
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
-    Patron Visitante
+    Patron State
   </span>
   
 
       </a>
       
-        
+    </li>
+  
 
-<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+              
+            
+              
+                
   
   
   
+    <li class="md-nav__item">
+      <a href="../Strategy%20Design%20Pattern/" class="md-nav__link">
+        
   
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Tabla de contenidos
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#links-de-patrones-de-diseno" class="md-nav__link">
-    <span class="md-ellipsis">
-      Links de Patrones de Diseño:
-    </span>
-  </a>
+  <span class="md-ellipsis">
+    Patron Strategy
+  </span>
   
-</li>
-      
-    </ul>
+
+      </a>
+    </li>
   
-</nav>
-      
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Template%20Method%20Design%20Pattern/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Patron Template Method
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Visitor%20Design%20Pattern/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Patron Visitor
+  </span>
+  
+
+      </a>
     </li>
   
 
@@ -2037,7 +2295,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Librerias/" class="md-nav__link">
+      <a href="../../../Librerias/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2092,7 +2350,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../CI_CD/Integracion%20y%20entrega%20continua/" class="md-nav__link">
+      <a href="../../../CI_CD/Integracion%20y%20entrega%20continua/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2112,7 +2370,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../CI_CD/Git/" class="md-nav__link">
+      <a href="../../../CI_CD/Git/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2168,7 +2426,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../TDD/Test%20Driven%20Development/" class="md-nav__link">
+      <a href="../../../TDD/Test%20Driven%20Development/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2188,7 +2446,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../TDD/Unit%20Test/" class="md-nav__link">
+      <a href="../../../TDD/Unit%20Test/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2208,7 +2466,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../TDD/Integration%20Test/" class="md-nav__link">
+      <a href="../../../TDD/Integration%20Test/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2272,7 +2530,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../CI_CD/Simulacion/" class="md-nav__link">
+      <a href="../../../CI_CD/Simulacion/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2307,7 +2565,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../links/" class="md-nav__link">
+      <a href="../../../links/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2338,23 +2596,6 @@
   
   
   
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Tabla de contenidos
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#links-de-patrones-de-diseno" class="md-nav__link">
-    <span class="md-ellipsis">
-      Links de Patrones de Diseño:
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
 </nav>
                   </div>
                 </div>
@@ -2363,30 +2604,26 @@
           
           
             <div class="md-content" data-md-component="content">
-              <article class="md-content__inner md-typeset"><a class="md-content__button md-icon" download href="../../pdf/combined.pdf" title="PDF Export"><svg style="height: 1.2rem; width: 1.2rem;" viewBox="0 0 384 512" xmlns="http://www.w3.org/2000/svg"><path d="M224 136V0H24C10.7 0 0 10.7 0 24v464c0 13.3 10.7 24 24 24h336c13.3 0 24-10.7 24-24V160H248c-13.2 0-24-10.8-24-24zm76.45 211.36l-96.42 95.7c-6.65 6.61-17.39 6.61-24.04 0l-96.42-95.7C73.42 337.29 80.54 320 94.82 320H160v-80c0-8.84 7.16-16 16-16h32c8.84 0 16 7.16 16 16v80h65.18c14.28 0 21.4 17.29 11.27 27.36zM377 105L279.1 7c-4.5-4.5-10.6-7-17-7H256v128h128v-6.1c0-6.3-2.5-12.4-7-16.9z"></path></svg></a>
+              <article class="md-content__inner md-typeset"><a class="md-content__button md-icon" download href="../../../pdf/combined.pdf" title="PDF Export"><svg style="height: 1.2rem; width: 1.2rem;" viewBox="0 0 384 512" xmlns="http://www.w3.org/2000/svg"><path d="M224 136V0H24C10.7 0 0 10.7 0 24v464c0 13.3 10.7 24 24 24h336c13.3 0 24-10.7 24-24V160H248c-13.2 0-24-10.8-24-24zm76.45 211.36l-96.42 95.7c-6.65 6.61-17.39 6.61-24.04 0l-96.42-95.7C73.42 337.29 80.54 320 94.82 320H160v-80c0-8.84 7.16-16 16-16h32c8.84 0 16 7.16 16 16v80h65.18c14.28 0 21.4 17.29 11.27 27.36zM377 105L279.1 7c-4.5-4.5-10.6-7-17-7H256v128h128v-6.1c0-6.3-2.5-12.4-7-16.9z"></path></svg></a>
                 
     
                   
 
 
-  <h1>Patron Visitante</h1>
+  <h1>Patron State</h1>
 
-<hr />
-<h3 id="links-de-patrones-de-diseno"><span style="color:grey">Links de Patrones de Diseño:</span></h3>
-<ul>
-<li>🔗<a href="https://beckhoff-au.teachable.com/courses/coding-bytes-twincat-3/lectures/46078048">Design Patterns - The Visitor Pattern</a></li>
-</ul>
+
 
   <hr>
 <div class="md-source-file">
   <small>
     
       Última actualización:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">November 19, 2023 19:08:27</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">November 22, 2023 12:38:19</span>
       
         <br>
         Creado:
-        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">November 19, 2023 19:08:27</span>
+        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">November 22, 2023 12:38:19</span>
       
     
   </small>
@@ -2463,7 +2700,7 @@
       <nav class="md-footer__inner md-grid" aria-label="Pie" >
         
           
-          <a href="../Observer%20Design%20Pattern/" class="md-footer__link md-footer__link--prev" aria-label="Anterior: Patron Observador">
+          <a href="../Observer%20Design%20Pattern/" class="md-footer__link md-footer__link--prev" aria-label="Anterior: Patron Observer">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
@@ -2473,20 +2710,20 @@
                 Anterior
               </span>
               <div class="md-ellipsis">
-                Patron Observador
+                Patron Observer
               </div>
             </div>
           </a>
         
         
           
-          <a href="../../Librerias/" class="md-footer__link md-footer__link--next" aria-label="Siguiente: Librerias">
+          <a href="../Strategy%20Design%20Pattern/" class="md-footer__link md-footer__link--next" aria-label="Siguiente: Patron Strategy">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Siguiente
               </span>
               <div class="md-ellipsis">
-                Librerias
+                Patron Strategy
               </div>
             </div>
             <div class="md-footer__button md-icon">
@@ -2650,10 +2887,10 @@
       </div>
       <script>var consent=__md_get("__consent");if(consent)for(var input of document.forms.consent.elements)input.name&&(input.checked=consent[input.name]||!1);else"file:"!==location.protocol&&setTimeout(function(){document.querySelector("[data-md-component=consent]").hidden=!1},250);var action,form=document.forms.consent;for(action of["submit","reset"])form.addEventListener(action,function(e){if(e.preventDefault(),"reset"===e.type)for(var n of document.forms.consent.elements)n.name&&(n.checked=!1);__md_set("__consent",Object.fromEntries(Array.from(new FormData(form).keys()).map(function(e){return[e,!0]}))),location.hash="",location.reload()})</script>
     
-    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.footer"], "search": "../../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}, "version": {"provider": "mike"}}</script>
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.footer"], "search": "../../../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}, "version": {"provider": "mike"}}</script>
     
     
-      <script src="../../assets/javascripts/bundle.6c14ae12.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.6c14ae12.min.js"></script>
       
     
   </body>
