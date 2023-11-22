@@ -5,12 +5,12 @@ Estados de patrón de método Factory/Factory que definen una interfaz o clase a
 
 El método de fábrica también se conoce como Constructor Virtual.
 
-El diagrama de clases UML del método de fábrica es el siguiente: 
+El diagrama de clases UML del método de fábrica es el siguiente:
 
-![Factory Method Design Pattern0](../imagenes/Design_Pattern__Creational_Factory_Method_0.JPG)
+![Factory Method Design Pattern0](../../imagenes/Design_Pattern__Creational_Factory_Method_0.JPG)
 
 Implementación de ejemplo practico en TwinCAT 3:
-![Factory Method Design Pattern1](../imagenes/Design_Pattern__Creational_Factory_Method.JPG)
+![Factory Method Design Pattern1](../../imagenes/Design_Pattern__Creational_Factory_Method.JPG)
 
 ***
 ### <span style="color:grey">Links de Patrones de Diseño Método de Fábrica:</span>

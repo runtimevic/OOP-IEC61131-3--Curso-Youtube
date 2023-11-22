@@ -4,10 +4,10 @@
 - Una fábrica de objetos relacionados se crea a través de una interfaz utilizando el patrón de fábrica abstracto sin necesidad de declarar explícitamente las clases de los objetos. Según el patrón Factory, cada fábrica producida puede entregar objetos.
 
 El diagrama de clases UML de la fábrica abstracta es el siguiente:
-![Abstract Factory Design Pattern0](../imagenes/Design_Pattern__Creational_Factory_Abstract_0.JPG)
+![Abstract Factory Design Pattern0](../../imagenes/Design_Pattern__Creational_Factory_Abstract_0.JPG)
 
 Implementación de ejemplo practico en TwinCAT 3:
-![Factory Abstract Design Pattern1](../imagenes/Design_Pattern__Creational_Factory_Abstract.JPG)
+![Factory Abstract Design Pattern1](../../imagenes/Design_Pattern__Creational_Factory_Abstract.JPG)
 ***
 ### <span style="color:grey">Links de Patrones de Diseño Fábrica Abstracta:</span>
 - 🔗 [iec-61131-6-abstract-factory-english,stefanhenneken.net](https://stefanhenneken.net/2014/11/16/iec-61131-6-abstract-factory-english/)
