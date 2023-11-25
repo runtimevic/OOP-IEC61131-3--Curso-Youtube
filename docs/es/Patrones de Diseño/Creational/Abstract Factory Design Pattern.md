@@ -17,4 +17,4 @@ Implementación de ejemplo practico en TwinCAT 3:
 - 🔗 [refactoring.guru,abstract-factory](https://refactoring.guru/design-patterns/abstract-factory)
 ***
 ### <span style="color:grey">Link al Video de Youtube_36:</span>
-- 🔗 [Factoy Abstract Design Pattern Youtube]()
+- 🔗 [Factoy Abstract Design Pattern Youtube](https://youtu.be/YKSCzbzmOMU)

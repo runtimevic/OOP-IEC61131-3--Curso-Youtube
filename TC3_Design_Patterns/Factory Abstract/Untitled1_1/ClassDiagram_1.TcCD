@@ -31,7 +31,7 @@
                   <v n="AttributeConstraint">""</v>
                   <v n="AttributeReturnType">"POINTER TO FB_ColorCreator"</v>
                   <v n="AttributeParent">{0d12df5a-5750-4039-9b2e-51655fafb43a}</v>
-                  <v n="AttributeObjectGuid">{c94ebec8-bf60-46be-b4ad-0812aafd6eaf}</v>
+                  <v n="AttributeObjectGuid">{8f818583-d110-4b02-bf03-f91dd3bd5de5}</v>
                   <v n="AttributeStereotype">""</v>
                 </o>
                 <o>
@@ -45,7 +45,7 @@
                   <v n="AttributeConstraint">""</v>
                   <v n="AttributeReturnType">"POINTER TO FB_ShapeCreator"</v>
                   <v n="AttributeParent">{0d12df5a-5750-4039-9b2e-51655fafb43a}</v>
-                  <v n="AttributeObjectGuid">{c51bf8dc-4db1-4ec3-bd00-1b424c1d57f9}</v>
+                  <v n="AttributeObjectGuid">{a962b5eb-a17d-4736-a84f-ec2828a1499d}</v>
                   <v n="AttributeStereotype">""</v>
                 </o>
               </l>
@@ -256,7 +256,7 @@
               <o n="ElementVisualisation" t="ClassElementVisualisation">
                 <v n="ShowAttributes">true</v>
                 <v n="ShowMethods">true</v>
-                <a n="DockingPopulation" cet="Int32">AAAAAAAAAAAAAAAAAQAAAA==</a>
+                <a n="DockingPopulation" cet="Int32">AAAAAAAAAAAAAAAAAAAAAA==</a>
                 <v n="ColumnIndex">0</v>
                 <v n="RowIndex">0</v>
                 <v n="RepresentedElement">27</v>
@@ -317,7 +317,7 @@
                   <v n="AttributeConstraint">""</v>
                   <v n="AttributeReturnType">"E_SHAPE"</v>
                   <v n="AttributeParent">{17effacf-6277-44cc-bc0d-125f0acc75c2}</v>
-                  <v n="AttributeObjectGuid">{e616677c-9dad-42aa-9b23-3f5796db5298}</v>
+                  <v n="AttributeObjectGuid">{96273759-10e1-4160-a8db-0be7cdf07e51}</v>
                   <v n="AttributeStereotype">""</v>
                 </o>
                 <o>
@@ -331,7 +331,7 @@
                   <v n="AttributeConstraint">""</v>
                   <v n="AttributeReturnType">"E_SHAPE"</v>
                   <v n="AttributeParent">{17effacf-6277-44cc-bc0d-125f0acc75c2}</v>
-                  <v n="AttributeObjectGuid">{2541973f-5513-417b-91ec-a6f45afab409}</v>
+                  <v n="AttributeObjectGuid">{cbd6dd29-544d-4939-a98c-5649af19bb96}</v>
                   <v n="AttributeStereotype">""</v>
                 </o>
                 <o>
@@ -345,7 +345,7 @@
                   <v n="AttributeConstraint">""</v>
                   <v n="AttributeReturnType">"E_SHAPE"</v>
                   <v n="AttributeParent">{17effacf-6277-44cc-bc0d-125f0acc75c2}</v>
-                  <v n="AttributeObjectGuid">{eb05d9c1-64f3-49b8-ad0f-31e3d8a64ba9}</v>
+                  <v n="AttributeObjectGuid">{be29ee42-edc2-41e3-9484-f62fd7733be0}</v>
                   <v n="AttributeStereotype">""</v>
                 </o>
                 <o>
@@ -359,7 +359,7 @@
                   <v n="AttributeConstraint">""</v>
                   <v n="AttributeReturnType">"E_SHAPE"</v>
                   <v n="AttributeParent">{17effacf-6277-44cc-bc0d-125f0acc75c2}</v>
-                  <v n="AttributeObjectGuid">{9199f369-179f-4569-a44d-dea4fb607fd0}</v>
+                  <v n="AttributeObjectGuid">{7db61947-7554-40b6-b018-f84923bd5aae}</v>
                   <v n="AttributeStereotype">""</v>
                 </o>
                 <o>
@@ -373,7 +373,7 @@
                   <v n="AttributeConstraint">""</v>
                   <v n="AttributeReturnType">"E_SHAPE"</v>
                   <v n="AttributeParent">{17effacf-6277-44cc-bc0d-125f0acc75c2}</v>
-                  <v n="AttributeObjectGuid">{1a171640-b753-457a-a1d8-2ac64040de3e}</v>
+                  <v n="AttributeObjectGuid">{5a83127e-bcef-4181-8b7b-5df22891bf91}</v>
                   <v n="AttributeStereotype">""</v>
                 </o>
                 <o>
@@ -387,7 +387,7 @@
                   <v n="AttributeConstraint">""</v>
                   <v n="AttributeReturnType">"E_SHAPE"</v>
                   <v n="AttributeParent">{17effacf-6277-44cc-bc0d-125f0acc75c2}</v>
-                  <v n="AttributeObjectGuid">{4f237362-1db7-426a-8813-275572d53e50}</v>
+                  <v n="AttributeObjectGuid">{5bf2022e-406f-4405-8a1b-5c370d695616}</v>
                   <v n="AttributeStereotype">""</v>
                 </o>
                 <o>
@@ -401,7 +401,7 @@
                   <v n="AttributeConstraint">""</v>
                   <v n="AttributeReturnType">"E_SHAPE"</v>
                   <v n="AttributeParent">{17effacf-6277-44cc-bc0d-125f0acc75c2}</v>
-                  <v n="AttributeObjectGuid">{ca23110a-0772-4c1a-a28e-a2217950858c}</v>
+                  <v n="AttributeObjectGuid">{391ad83c-3886-47ba-b8b7-29125329fb32}</v>
                   <v n="AttributeStereotype">""</v>
                 </o>
                 <o>
@@ -415,7 +415,7 @@
                   <v n="AttributeConstraint">""</v>
                   <v n="AttributeReturnType">"E_SHAPE"</v>
                   <v n="AttributeParent">{17effacf-6277-44cc-bc0d-125f0acc75c2}</v>
-                  <v n="AttributeObjectGuid">{e4a3c564-8969-4aec-9151-7e5ee71fc693}</v>
+                  <v n="AttributeObjectGuid">{0b185b53-6620-469c-934e-6ca42d00c61c}</v>
                   <v n="AttributeStereotype">""</v>
                 </o>
               </l>
@@ -721,7 +721,7 @@
               <o n="ElementVisualisation" t="ClassElementVisualisation">
                 <v n="ShowAttributes">true</v>
                 <v n="ShowMethods">true</v>
-                <a n="DockingPopulation" cet="Int32">AQAAAAAAAAAAAAAAAAAAAA==</a>
+                <a n="DockingPopulation" cet="Int32">AAAAAAAAAAAAAAAAAAAAAA==</a>
                 <v n="ColumnIndex">0</v>
                 <v n="RowIndex">0</v>
                 <v n="RepresentedElement">26</v>
@@ -1407,7 +1407,7 @@
                   <v n="AttributeConstraint">""</v>
                   <v n="AttributeReturnType">"POINTER TO FB_CustomShape"</v>
                   <v n="AttributeParent">{93f27fe8-d1f0-42c5-bf70-f6fa273e98d5}</v>
-                  <v n="AttributeObjectGuid">{f006cd64-81d5-45ba-b881-e976ffd8c849}</v>
+                  <v n="AttributeObjectGuid">{e20d6277-de01-4f43-8f9b-b5b2a3f83a5b}</v>
                   <v n="AttributeStereotype">""</v>
                 </o>
               </l>
@@ -1434,7 +1434,7 @@
               <o n="ElementVisualisation" t="ClassElementVisualisation">
                 <v n="ShowAttributes">true</v>
                 <v n="ShowMethods">true</v>
-                <a n="DockingPopulation" cet="Int32">AAAAAAEAAAAAAAAAAAAAAA==</a>
+                <a n="DockingPopulation" cet="Int32">AAAAAAAAAAAAAAAAAAAAAA==</a>
                 <v n="ColumnIndex">0</v>
                 <v n="RowIndex">0</v>
                 <v n="RepresentedElement">29</v>
@@ -1507,7 +1507,7 @@
               <o n="ElementVisualisation" t="ClassElementVisualisation">
                 <v n="ShowAttributes">true</v>
                 <v n="ShowMethods">true</v>
-                <a n="DockingPopulation" cet="Int32">AQAAAAAAAAABAAAAAAAAAA==</a>
+                <a n="DockingPopulation" cet="Int32">AQAAAAAAAAAAAAAAAAAAAA==</a>
                 <v n="ColumnIndex">0</v>
                 <v n="RowIndex">0</v>
                 <v n="RepresentedElement">30</v>
@@ -1568,7 +1568,7 @@
                   <v n="AttributeConstraint">""</v>
                   <v n="AttributeReturnType">"E_FACTORY"</v>
                   <v n="AttributeParent">{e8225ab9-6d10-4e62-847c-87c982845f7e}</v>
-                  <v n="AttributeObjectGuid">{d9335e89-ed00-4616-af49-ba1efcedc888}</v>
+                  <v n="AttributeObjectGuid">{d8932d5c-3b86-401a-b4ba-7008599655ad}</v>
                   <v n="AttributeStereotype">""</v>
                 </o>
                 <o>
@@ -1582,7 +1582,7 @@
                   <v n="AttributeConstraint">""</v>
                   <v n="AttributeReturnType">"E_FACTORY"</v>
                   <v n="AttributeParent">{e8225ab9-6d10-4e62-847c-87c982845f7e}</v>
-                  <v n="AttributeObjectGuid">{0f12eb1c-6ea3-4f29-a9b7-5590f842338a}</v>
+                  <v n="AttributeObjectGuid">{86a51ab1-d60a-47f7-9842-1c7fd400347f}</v>
                   <v n="AttributeStereotype">""</v>
                 </o>
                 <o>
@@ -1596,7 +1596,7 @@
                   <v n="AttributeConstraint">""</v>
                   <v n="AttributeReturnType">"E_FACTORY"</v>
                   <v n="AttributeParent">{e8225ab9-6d10-4e62-847c-87c982845f7e}</v>
-                  <v n="AttributeObjectGuid">{6376fa0f-9e9a-4f6d-a9c9-02930a026c86}</v>
+                  <v n="AttributeObjectGuid">{bf90b068-1851-4265-8331-ee3be1d44297}</v>
                   <v n="AttributeStereotype">""</v>
                 </o>
                 <o>
@@ -1610,7 +1610,7 @@
                   <v n="AttributeConstraint">""</v>
                   <v n="AttributeReturnType">"E_FACTORY"</v>
                   <v n="AttributeParent">{e8225ab9-6d10-4e62-847c-87c982845f7e}</v>
-                  <v n="AttributeObjectGuid">{359590e1-a29d-47e7-9e9f-5a1a5d8f8203}</v>
+                  <v n="AttributeObjectGuid">{b1e3ad35-a8e2-424a-bc56-cad7e0a6d5cb}</v>
                   <v n="AttributeStereotype">""</v>
                 </o>
               </l>
@@ -1629,8 +1629,8 @@
                 <v n="RowIndex">5</v>
                 <v n="RepresentedElement">19</v>
                 <v n="IsElementVisible">true</v>
-                <v n="TopPosition">370</v>
-                <v n="LeftPosition">1990</v>
+                <v n="TopPosition">410</v>
+                <v n="LeftPosition">2050</v>
                 <v n="WidthValue">117</v>
                 <v n="MinWidthValue">0</v>
                 <v n="Height">161</v>
@@ -1664,7 +1664,7 @@
               <v n="UMLPosition">-1L</v>
               <v n="IsModified">false</v>
               <v n="ARGBElementColor">0</v>
-              <v n="ZOrder">34U</v>
+              <v n="ZOrder">72U</v>
             </o>
             <v>f3894233-01d0-4f10-bb9f-a3d2750638b3</v>
             <o>
@@ -1685,7 +1685,7 @@
                   <v n="AttributeConstraint">""</v>
                   <v n="AttributeReturnType">"FB_FactoryProducer"</v>
                   <v n="AttributeParent">{f3894233-01d0-4f10-bb9f-a3d2750638b3}</v>
-                  <v n="AttributeObjectGuid">{f58dfe31-428f-4fc0-9de1-c7ab39a0ed86}</v>
+                  <v n="AttributeObjectGuid">{7d73f8d9-4c35-45d8-9f66-4c100d73a385}</v>
                   <v n="AttributeStereotype">""</v>
                 </o>
                 <o>
@@ -1699,7 +1699,7 @@
                   <v n="AttributeConstraint">""</v>
                   <v n="AttributeReturnType">"REFERENCE TO FB_AbstractFactory"</v>
                   <v n="AttributeParent">{f3894233-01d0-4f10-bb9f-a3d2750638b3}</v>
-                  <v n="AttributeObjectGuid">{9ead5928-fd34-4f45-b587-b87dcaeda50b}</v>
+                  <v n="AttributeObjectGuid">{eaf7e4fe-8f04-4bc7-8511-8bcb27ddb1ca}</v>
                   <v n="AttributeStereotype">""</v>
                 </o>
                 <o>
@@ -1713,7 +1713,7 @@
                   <v n="AttributeConstraint">""</v>
                   <v n="AttributeReturnType">"I_Shape"</v>
                   <v n="AttributeParent">{f3894233-01d0-4f10-bb9f-a3d2750638b3}</v>
-                  <v n="AttributeObjectGuid">{42dc5d6a-8ee1-41a2-bbbf-c3951212cd45}</v>
+                  <v n="AttributeObjectGuid">{acc75be4-953c-4512-ba7f-00817d5af24a}</v>
                   <v n="AttributeStereotype">""</v>
                 </o>
                 <o>
@@ -1727,7 +1727,7 @@
                   <v n="AttributeConstraint">""</v>
                   <v n="AttributeReturnType">"I_Color"</v>
                   <v n="AttributeParent">{f3894233-01d0-4f10-bb9f-a3d2750638b3}</v>
-                  <v n="AttributeObjectGuid">{9fdcf29f-48fb-49e5-a23a-90d6ed0ae23a}</v>
+                  <v n="AttributeObjectGuid">{2edf5362-b335-4a7f-b5e5-83ad467b87d3}</v>
                   <v n="AttributeStereotype">""</v>
                 </o>
                 <o>
@@ -1741,7 +1741,7 @@
                   <v n="AttributeConstraint">""</v>
                   <v n="AttributeReturnType">"E_Shape"</v>
                   <v n="AttributeParent">{f3894233-01d0-4f10-bb9f-a3d2750638b3}</v>
-                  <v n="AttributeObjectGuid">{5f6989ee-9455-442a-968e-99175a35250c}</v>
+                  <v n="AttributeObjectGuid">{ed210042-fe07-4356-8ffd-7a39526547f5}</v>
                   <v n="AttributeStereotype">""</v>
                 </o>
                 <o>
@@ -1755,7 +1755,7 @@
                   <v n="AttributeConstraint">""</v>
                   <v n="AttributeReturnType">"E_Color"</v>
                   <v n="AttributeParent">{f3894233-01d0-4f10-bb9f-a3d2750638b3}</v>
-                  <v n="AttributeObjectGuid">{2c4f2316-aee0-43fd-8b73-e3da9631b796}</v>
+                  <v n="AttributeObjectGuid">{15b69ba4-a56b-42f3-8d51-f018c611a5f5}</v>
                   <v n="AttributeStereotype">""</v>
                 </o>
                 <o>
@@ -1769,7 +1769,7 @@
                   <v n="AttributeConstraint">""</v>
                   <v n="AttributeReturnType">"BOOL"</v>
                   <v n="AttributeParent">{f3894233-01d0-4f10-bb9f-a3d2750638b3}</v>
-                  <v n="AttributeObjectGuid">{8a021a23-bd85-4afd-9411-1ca680ff098e}</v>
+                  <v n="AttributeObjectGuid">{f15f3f4d-a098-4dd7-b97a-aa98e360c670}</v>
                   <v n="AttributeStereotype">""</v>
                 </o>
                 <o>
@@ -1783,7 +1783,7 @@
                   <v n="AttributeConstraint">""</v>
                   <v n="AttributeReturnType">"BOOL"</v>
                   <v n="AttributeParent">{f3894233-01d0-4f10-bb9f-a3d2750638b3}</v>
-                  <v n="AttributeObjectGuid">{ea938670-5054-4703-8ea8-2273ed2fe1d2}</v>
+                  <v n="AttributeObjectGuid">{37c966d3-4a13-4aad-8f23-9d950bdf5caf}</v>
                   <v n="AttributeStereotype">""</v>
                 </o>
               </l>
@@ -1858,7 +1858,7 @@
                   <v n="AttributeConstraint">""</v>
                   <v n="AttributeReturnType">"E_COLOR"</v>
                   <v n="AttributeParent">{f3e7cfd5-a5a2-43c5-bb14-5760c99b6686}</v>
-                  <v n="AttributeObjectGuid">{ff8b4311-7be0-4325-b7de-7e112fe255f7}</v>
+                  <v n="AttributeObjectGuid">{a09cac53-72e6-459d-8a35-48f003137058}</v>
                   <v n="AttributeStereotype">""</v>
                 </o>
                 <o>
@@ -1872,7 +1872,7 @@
                   <v n="AttributeConstraint">""</v>
                   <v n="AttributeReturnType">"E_COLOR"</v>
                   <v n="AttributeParent">{f3e7cfd5-a5a2-43c5-bb14-5760c99b6686}</v>
-                  <v n="AttributeObjectGuid">{f31e04ad-5782-426f-9b1c-af873accdc7b}</v>
+                  <v n="AttributeObjectGuid">{ddbf7912-c4ad-4f1c-902f-3f025d21b614}</v>
                   <v n="AttributeStereotype">""</v>
                 </o>
                 <o>
@@ -1886,7 +1886,7 @@
                   <v n="AttributeConstraint">""</v>
                   <v n="AttributeReturnType">"E_COLOR"</v>
                   <v n="AttributeParent">{f3e7cfd5-a5a2-43c5-bb14-5760c99b6686}</v>
-                  <v n="AttributeObjectGuid">{be9777e4-4227-461e-9571-17cf3e69e23d}</v>
+                  <v n="AttributeObjectGuid">{af789853-f4a3-4c4e-a1a9-145562c156ae}</v>
                   <v n="AttributeStereotype">""</v>
                 </o>
                 <o>
@@ -1900,7 +1900,7 @@
                   <v n="AttributeConstraint">""</v>
                   <v n="AttributeReturnType">"E_COLOR"</v>
                   <v n="AttributeParent">{f3e7cfd5-a5a2-43c5-bb14-5760c99b6686}</v>
-                  <v n="AttributeObjectGuid">{173870e8-5919-4c5f-aa2b-5249ceddfe7b}</v>
+                  <v n="AttributeObjectGuid">{c6f86029-d363-4d9b-b984-498da4ece3cd}</v>
                   <v n="AttributeStereotype">""</v>
                 </o>
                 <o>
@@ -1914,7 +1914,7 @@
                   <v n="AttributeConstraint">""</v>
                   <v n="AttributeReturnType">"E_COLOR"</v>
                   <v n="AttributeParent">{f3e7cfd5-a5a2-43c5-bb14-5760c99b6686}</v>
-                  <v n="AttributeObjectGuid">{210b839c-70c8-45ba-b684-e89b4114b897}</v>
+                  <v n="AttributeObjectGuid">{c699ca22-68b7-4059-9b25-15bf7916e8ba}</v>
                   <v n="AttributeStereotype">""</v>
                 </o>
               </l>
@@ -3086,12 +3086,12 @@
                 </o>
                 <o n="EndAnchor" t="UMLAnchorPoint">
                   <v n="AnchorID">3</v>
-                  <v n="AnchorLeftPosition">675</v>
+                  <v n="AnchorLeftPosition">665</v>
                   <v n="AnchorTopPosition">571</v>
                   <v n="AnchorRelationID">{6a659a5b-a43a-430d-85f9-877ba3db7474}</v>
                   <v n="StartAnchor">false</v>
                   <v n="EndAnchor">true</v>
-                  <v n="AnchorDockedState" t="Docked">Bottom</v>
+                  <v n="AnchorDockedState" t="Docked">NotDocked</v>
                 </o>
                 <v n="NextAnchorID">3</v>
                 <d n="AnchorPoints" t="Hashtable" ckt="Int32" cvt="UMLAnchorPoint">
@@ -3108,7 +3108,7 @@
                   <v>2</v>
                   <o>
                     <v n="AnchorID">2</v>
-                    <v n="AnchorLeftPosition">675</v>
+                    <v n="AnchorLeftPosition">665</v>
                     <v n="AnchorTopPosition">682</v>
                     <v n="AnchorRelationID">{6a659a5b-a43a-430d-85f9-877ba3db7474}</v>
                     <v n="StartAnchor">false</v>
@@ -3137,7 +3137,7 @@
               <v n="EndElementRoleName">""</v>
               <v n="UserCreated">false</v>
               <v n="GeneratedByCode">true</v>
-              <v n="AllowRoutingOptimisation">true</v>
+              <v n="AllowRoutingOptimisation">false</v>
               <d n="flagTexts" t="Hashtable" />
               <v n="Position">-1L</v>
               <v n="PositionCounter">1L</v>
@@ -3395,11 +3395,11 @@
                 <o n="StartAnchor" t="UMLAnchorPoint">
                   <v n="AnchorID">0</v>
                   <v n="AnchorLeftPosition">473</v>
-                  <v n="AnchorTopPosition">1025</v>
+                  <v n="AnchorTopPosition">1065</v>
                   <v n="AnchorRelationID">{8a8f9117-8a23-402d-9c9b-d445fcd3277b}</v>
                   <v n="StartAnchor">true</v>
                   <v n="EndAnchor">false</v>
-                  <v n="AnchorDockedState" t="Docked">Right</v>
+                  <v n="AnchorDockedState" t="Docked">NotDocked</v>
                 </o>
                 <o n="EndAnchor" t="UMLAnchorPoint">
                   <v n="AnchorID">3</v>
@@ -3416,7 +3416,7 @@
                   <o>
                     <v n="AnchorID">1</v>
                     <v n="AnchorLeftPosition">544</v>
-                    <v n="AnchorTopPosition">1025</v>
+                    <v n="AnchorTopPosition">1065</v>
                     <v n="AnchorRelationID">{8a8f9117-8a23-402d-9c9b-d445fcd3277b}</v>
                     <v n="StartAnchor">false</v>
                     <v n="EndAnchor">false</v>
@@ -3454,7 +3454,7 @@
               <v n="EndElementRoleName">"pCustomShape"</v>
               <v n="UserCreated">false</v>
               <v n="GeneratedByCode">true</v>
-              <v n="AllowRoutingOptimisation">true</v>
+              <v n="AllowRoutingOptimisation">false</v>
               <d n="flagTexts" t="Hashtable" />
               <v n="Position">-1L</v>
               <v n="PositionCounter">1L</v>
@@ -3711,28 +3711,28 @@
                 </d>
                 <o n="StartAnchor" t="UMLAnchorPoint">
                   <v n="AnchorID">0</v>
-                  <v n="AnchorLeftPosition">625</v>
+                  <v n="AnchorLeftPosition">655</v>
                   <v n="AnchorTopPosition">1045</v>
                   <v n="AnchorRelationID">{b01ac536-2893-4f7c-a82b-67eedee64833}</v>
                   <v n="StartAnchor">true</v>
                   <v n="EndAnchor">false</v>
-                  <v n="AnchorDockedState" t="Docked">Top</v>
+                  <v n="AnchorDockedState" t="Docked">NotDocked</v>
                 </o>
                 <o n="EndAnchor" t="UMLAnchorPoint">
-                  <v n="AnchorID">4</v>
-                  <v n="AnchorLeftPosition">829</v>
-                  <v n="AnchorTopPosition">565</v>
+                  <v n="AnchorID">3</v>
+                  <v n="AnchorLeftPosition">675</v>
+                  <v n="AnchorTopPosition">571</v>
                   <v n="AnchorRelationID">{b01ac536-2893-4f7c-a82b-67eedee64833}</v>
                   <v n="StartAnchor">false</v>
                   <v n="EndAnchor">true</v>
                   <v n="AnchorDockedState" t="Docked">NotDocked</v>
                 </o>
-                <v n="NextAnchorID">3</v>
+                <v n="NextAnchorID">2</v>
                 <d n="AnchorPoints" t="Hashtable" ckt="Int32" cvt="UMLAnchorPoint">
                   <v>1</v>
                   <o>
                     <v n="AnchorID">1</v>
-                    <v n="AnchorLeftPosition">625</v>
+                    <v n="AnchorLeftPosition">655</v>
                     <v n="AnchorTopPosition">825</v>
                     <v n="AnchorRelationID">{b01ac536-2893-4f7c-a82b-67eedee64833}</v>
                     <v n="StartAnchor">false</v>
@@ -3742,18 +3742,8 @@
                   <v>2</v>
                   <o>
                     <v n="AnchorID">2</v>
-                    <v n="AnchorLeftPosition">995</v>
+                    <v n="AnchorLeftPosition">675</v>
                     <v n="AnchorTopPosition">825</v>
-                    <v n="AnchorRelationID">{b01ac536-2893-4f7c-a82b-67eedee64833}</v>
-                    <v n="StartAnchor">false</v>
-                    <v n="EndAnchor">false</v>
-                    <v n="AnchorDockedState" t="Docked">NotDocked</v>
-                  </o>
-                  <v>3</v>
-                  <o>
-                    <v n="AnchorID">3</v>
-                    <v n="AnchorLeftPosition">995</v>
-                    <v n="AnchorTopPosition">565</v>
                     <v n="AnchorRelationID">{b01ac536-2893-4f7c-a82b-67eedee64833}</v>
                     <v n="StartAnchor">false</v>
                     <v n="EndAnchor">false</v>
