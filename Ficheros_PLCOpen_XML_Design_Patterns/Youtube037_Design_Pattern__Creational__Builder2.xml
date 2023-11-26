@@ -1,0 +1,1245 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<project xmlns="http://www.plcopen.org/xml/tc6_0200">
+  <fileHeader companyName="Beckhoff Automation GmbH" productName="TwinCAT PLC Control" productVersion="3.5.13.21" creationDateTime="2023-11-26T20:30:02.4001913" />
+  <contentHeader name="Builder2" modificationDateTime="2023-11-26T20:30:02.4001913">
+    <coordinateInfo>
+      <fbd>
+        <scaling x="1" y="1" />
+      </fbd>
+      <ld>
+        <scaling x="1" y="1" />
+      </ld>
+      <sfc>
+        <scaling x="1" y="1" />
+      </sfc>
+    </coordinateInfo>
+    <addData>
+      <data name="http://www.3s-software.com/plcopenxml/projectinformation" handleUnknown="implementation">
+        <ProjectInformation />
+      </data>
+    </addData>
+  </contentHeader>
+  <types>
+    <dataTypes />
+    <pous />
+  </types>
+  <instances>
+    <configurations />
+  </instances>
+  <addData>
+    <data name="http://www.3s-software.com/plcopenxml/application" handleUnknown="implementation">
+      <resource name="Builder2">
+        <task name="PlcTask" interval="PT0S" priority="20">
+          <pouInstance name="MAIN" typeName="">
+            <documentation>
+              <xhtml xmlns="http://www.w3.org/1999/xhtml" />
+            </documentation>
+          </pouInstance>
+          <addData>
+            <data name="http://www.3s-software.com/plcopenxml/tasksettings" handleUnknown="implementation">
+              <TaskSettings KindOfTask="Cyclic" Interval="10000" IntervalUnit="us">
+                <Watchdog Enabled="false" TimeUnit="ms" />
+              </TaskSettings>
+            </data>
+            <data name="http://www.3s-software.com/plcopenxml/objectid" handleUnknown="discard">
+              <ObjectId>7da77c7f-c436-46eb-a35a-38b6041093a3</ObjectId>
+            </data>
+          </addData>
+        </task>
+        <addData>
+          <data name="http://www.3s-software.com/plcopenxml/interface" handleUnknown="implementation">
+            <Interface name="ITF_Builder" ObjectId="ec08f9f6-3522-4911-95de-eedfe32aab78">
+              <Methods>
+                <Method name="Set_Main_Part" ObjectId="9971832a-9fdd-43b0-ac60-9c6531e1c9f9">
+                  <interface>
+                    <inputVars>
+                      <variable name="mainPart">
+                        <type>
+                          <string />
+                        </type>
+                        <documentation>
+                          <xhtml xmlns="http://www.w3.org/1999/xhtml">Illustrative value (object because it is a TRING) to be set as a product part</xhtml>
+                        </documentation>
+                      </variable>
+                    </inputVars>
+                    <documentation>
+                      <xhtml xmlns="http://www.w3.org/1999/xhtml">Illustrative method of the pattern to set the main part</xhtml>
+                    </documentation>
+                  </interface>
+                  <InterfaceAsPlainText>
+                    <xhtml xmlns="http://www.w3.org/1999/xhtml">///Illustrative method of the pattern to set the main part
+METHOD Set_Main_Part
+VAR_INPUT
+	///Illustrative value (object because it is a TRING) to be set as a product part
+	mainPart: STRING;
+END_VAR
+</xhtml>
+                  </InterfaceAsPlainText>
+                  <addData />
+                </Method>
+                <Method name="Set_Part1" ObjectId="49ccd5c4-3a86-4ab7-9a21-d8897aa5f3de">
+                  <interface>
+                    <inputVars>
+                      <variable name="part1">
+                        <type>
+                          <string />
+                        </type>
+                        <documentation>
+                          <xhtml xmlns="http://www.w3.org/1999/xhtml">Illustrative value (object because it is a TRING) to be set as a product part</xhtml>
+                        </documentation>
+                      </variable>
+                    </inputVars>
+                    <documentation>
+                      <xhtml xmlns="http://www.w3.org/1999/xhtml">Illustrative method of the pattern to set the part1</xhtml>
+                    </documentation>
+                  </interface>
+                  <InterfaceAsPlainText>
+                    <xhtml xmlns="http://www.w3.org/1999/xhtml">///Illustrative method of the pattern to set the part1
+METHOD Set_Part1
+VAR_INPUT
+	///Illustrative value (object because it is a TRING) to be set as a product part
+	part1: STRING;
+END_VAR
+</xhtml>
+                  </InterfaceAsPlainText>
+                  <addData />
+                </Method>
+                <Method name="Set_Part2" ObjectId="a4e945fd-c8fe-40e0-a6d8-13a132374aa9">
+                  <interface>
+                    <inputVars>
+                      <variable name="part2">
+                        <type>
+                          <string />
+                        </type>
+                        <documentation>
+                          <xhtml xmlns="http://www.w3.org/1999/xhtml">Illustrative value (object because it is a TRING) to be set as a product part</xhtml>
+                        </documentation>
+                      </variable>
+                    </inputVars>
+                    <documentation>
+                      <xhtml xmlns="http://www.w3.org/1999/xhtml">Illustrative method of the pattern to set the part2</xhtml>
+                    </documentation>
+                  </interface>
+                  <InterfaceAsPlainText>
+                    <xhtml xmlns="http://www.w3.org/1999/xhtml">///Illustrative method of the pattern to set the part2
+METHOD Set_Part2
+VAR_INPUT
+	///Illustrative value (object because it is a TRING) to be set as a product part
+	part2: STRING;
+END_VAR
+</xhtml>
+                  </InterfaceAsPlainText>
+                  <addData />
+                </Method>
+                <Method name="Set_Part3" ObjectId="0aef4919-875a-401d-b019-51aa37f29609">
+                  <interface>
+                    <inputVars>
+                      <variable name="part3">
+                        <type>
+                          <string />
+                        </type>
+                        <documentation>
+                          <xhtml xmlns="http://www.w3.org/1999/xhtml">Illustrative value (object because it is a TRING) to be set as a product part</xhtml>
+                        </documentation>
+                      </variable>
+                    </inputVars>
+                    <documentation>
+                      <xhtml xmlns="http://www.w3.org/1999/xhtml">Illustrative method of the pattern to set the part3</xhtml>
+                    </documentation>
+                  </interface>
+                  <InterfaceAsPlainText>
+                    <xhtml xmlns="http://www.w3.org/1999/xhtml">///Illustrative method of the pattern to set the part3
+METHOD Set_Part3
+VAR_INPUT
+	///Illustrative value (object because it is a TRING) to be set as a product part
+	part3: STRING;
+END_VAR
+</xhtml>
+                  </InterfaceAsPlainText>
+                  <addData />
+                </Method>
+              </Methods>
+              <InterfaceAsPlainText>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">///Builder interface to declare all needed parts to be built
+INTERFACE ITF_Builder
+</xhtml>
+              </InterfaceAsPlainText>
+              <documentation>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">Builder interface to declare all needed parts to be built</xhtml>
+              </documentation>
+              <addData />
+            </Interface>
+          </data>
+          <data name="http://www.3s-software.com/plcopenxml/pou" handleUnknown="implementation">
+            <pou name="ConcreteBuilder" pouType="functionBlock">
+              <interface>
+                <localVars>
+                  <variable name="localProduct">
+                    <type>
+                      <derived name="Product" />
+                    </type>
+                    <documentation>
+                      <xhtml xmlns="http://www.w3.org/1999/xhtml">Holds an internal reference to how the final product shoud be so the builder class can build it on the fly 
+ without any help from other classes exepting the Director class that is going to be passing the special
+specifications to the builder.</xhtml>
+                    </documentation>
+                  </variable>
+                </localVars>
+                <addData>
+                  <data name="http://www.3s-software.com/plcopenxml/pouinheritance" handleUnknown="implementation">
+                    <Inheritance>
+                      <Implements>ITF_Builder</Implements>
+                    </Inheritance>
+                  </data>
+                </addData>
+                <documentation>
+                  <xhtml xmlns="http://www.w3.org/1999/xhtml">This is the concrete builder class, reponsible for building the final product object</xhtml>
+                </documentation>
+              </interface>
+              <body>
+                <ST>
+                  <xhtml xmlns="http://www.w3.org/1999/xhtml" />
+                </ST>
+              </body>
+              <addData>
+                <data name="http://www.3s-software.com/plcopenxml/method" handleUnknown="implementation">
+                  <Method name="Get_Main_Part" ObjectId="a7b4817e-4059-4441-b5ea-99050ad3deda">
+                    <interface>
+                      <returnType>
+                        <string />
+                      </returnType>
+                      <documentation>
+                        <xhtml xmlns="http://www.w3.org/1999/xhtml">Illustrative method of the pattern to get the main part</xhtml>
+                      </documentation>
+                    </interface>
+                    <body>
+                      <ST>
+                        <xhtml xmlns="http://www.w3.org/1999/xhtml">//Returns the object stored in the built product THIS^.localProduct.mainPart
+Get_Main_Part := THIS^.localProduct.mainPart;</xhtml>
+                      </ST>
+                    </body>
+                    <InterfaceAsPlainText>
+                      <xhtml xmlns="http://www.w3.org/1999/xhtml">///Illustrative method of the pattern to get the main part
+METHOD Get_Main_Part : STRING
+</xhtml>
+                    </InterfaceAsPlainText>
+                    <addData />
+                  </Method>
+                </data>
+                <data name="http://www.3s-software.com/plcopenxml/method" handleUnknown="implementation">
+                  <Method name="Get_Part1" ObjectId="475580d1-fc09-4782-bfdc-56737e53ac8a">
+                    <interface>
+                      <returnType>
+                        <string />
+                      </returnType>
+                      <documentation>
+                        <xhtml xmlns="http://www.w3.org/1999/xhtml">Illustrative method of the pattern to get the part1</xhtml>
+                      </documentation>
+                    </interface>
+                    <body>
+                      <ST>
+                        <xhtml xmlns="http://www.w3.org/1999/xhtml">//Returns the object stored in the built product THIS^.localProduct.part1
+Get_Part1 := THIS^.localProduct.part1;</xhtml>
+                      </ST>
+                    </body>
+                    <InterfaceAsPlainText>
+                      <xhtml xmlns="http://www.w3.org/1999/xhtml">///Illustrative method of the pattern to get the part1
+METHOD Get_Part1 : STRING
+</xhtml>
+                    </InterfaceAsPlainText>
+                    <addData />
+                  </Method>
+                </data>
+                <data name="http://www.3s-software.com/plcopenxml/method" handleUnknown="implementation">
+                  <Method name="Get_Part2" ObjectId="802439ad-a3dc-4fcf-8b03-be95a1a168e7">
+                    <interface>
+                      <returnType>
+                        <string />
+                      </returnType>
+                      <documentation>
+                        <xhtml xmlns="http://www.w3.org/1999/xhtml">Illustrative method of the pattern to get the part2</xhtml>
+                      </documentation>
+                    </interface>
+                    <body>
+                      <ST>
+                        <xhtml xmlns="http://www.w3.org/1999/xhtml">//Returns the object stored in the built product THIS^.localProduct.part2
+Get_Part2 := THIS^.localProduct.part2;</xhtml>
+                      </ST>
+                    </body>
+                    <InterfaceAsPlainText>
+                      <xhtml xmlns="http://www.w3.org/1999/xhtml">///Illustrative method of the pattern to get the part2
+METHOD Get_Part2 : STRING
+</xhtml>
+                    </InterfaceAsPlainText>
+                    <addData />
+                  </Method>
+                </data>
+                <data name="http://www.3s-software.com/plcopenxml/method" handleUnknown="implementation">
+                  <Method name="Get_Part3" ObjectId="189c8af7-6801-42a6-8c61-e2ff78106ff6">
+                    <interface>
+                      <returnType>
+                        <string />
+                      </returnType>
+                      <documentation>
+                        <xhtml xmlns="http://www.w3.org/1999/xhtml">Illustrative method of the pattern to get the part3</xhtml>
+                      </documentation>
+                    </interface>
+                    <body>
+                      <ST>
+                        <xhtml xmlns="http://www.w3.org/1999/xhtml">//Returns the object stored in the built product THIS^.localProduct.part3
+Get_Part3 := THIS^.localProduct.part3;</xhtml>
+                      </ST>
+                    </body>
+                    <InterfaceAsPlainText>
+                      <xhtml xmlns="http://www.w3.org/1999/xhtml">///Illustrative method of the pattern to get the part3
+METHOD Get_Part3 : STRING
+</xhtml>
+                    </InterfaceAsPlainText>
+                    <addData />
+                  </Method>
+                </data>
+                <data name="http://www.3s-software.com/plcopenxml/method" handleUnknown="implementation">
+                  <Method name="Get_Result" ObjectId="b03bece5-c379-4e9e-b2b7-3fe7be11c319">
+                    <interface>
+                      <returnType>
+                        <derived name="Product" />
+                      </returnType>
+                      <documentation>
+                        <xhtml xmlns="http://www.w3.org/1999/xhtml">Illustrative method of the pattern</xhtml>
+                      </documentation>
+                    </interface>
+                    <body>
+                      <ST>
+                        <xhtml xmlns="http://www.w3.org/1999/xhtml">//The concrete builder, after it builts the final object of class product, returns the 
+// final product object 
+Get_Result := THIS^.localProduct;</xhtml>
+                      </ST>
+                    </body>
+                    <InterfaceAsPlainText>
+                      <xhtml xmlns="http://www.w3.org/1999/xhtml">///Illustrative method of the pattern
+METHOD Get_Result : Product
+</xhtml>
+                    </InterfaceAsPlainText>
+                    <addData />
+                  </Method>
+                </data>
+                <data name="http://www.3s-software.com/plcopenxml/method" handleUnknown="implementation">
+                  <Method name="Set_Main_Part" ObjectId="7094ac7a-4ca1-4f78-a3bf-caae5ef4e0dd">
+                    <interface>
+                      <inputVars>
+                        <variable name="mainPart">
+                          <type>
+                            <string />
+                          </type>
+                          <documentation>
+                            <xhtml xmlns="http://www.w3.org/1999/xhtml">Illustrative value (object because it is a TRING) to be set as a product part</xhtml>
+                          </documentation>
+                        </variable>
+                      </inputVars>
+                      <documentation>
+                        <xhtml xmlns="http://www.w3.org/1999/xhtml">Illustrative method of the pattern to set the main part</xhtml>
+                      </documentation>
+                    </interface>
+                    <body>
+                      <ST>
+                        <xhtml xmlns="http://www.w3.org/1999/xhtml">//Sets the passed value to its corresponding field. 
+//We can say that the the final product is in process of being built.
+//So this is a step into building the final product done by the builder.
+THIS^.localProduct.mainPart := mainPart;
+
+</xhtml>
+                      </ST>
+                    </body>
+                    <InterfaceAsPlainText>
+                      <xhtml xmlns="http://www.w3.org/1999/xhtml">///Illustrative method of the pattern to set the main part
+METHOD Set_Main_Part
+VAR_INPUT
+	///Illustrative value (object because it is a TRING) to be set as a product part
+	mainPart: STRING;
+END_VAR
+</xhtml>
+                    </InterfaceAsPlainText>
+                    <addData />
+                  </Method>
+                </data>
+                <data name="http://www.3s-software.com/plcopenxml/method" handleUnknown="implementation">
+                  <Method name="Set_Part1" ObjectId="03afb789-ef3e-44e4-a921-0073da632c62">
+                    <interface>
+                      <inputVars>
+                        <variable name="part1">
+                          <type>
+                            <string />
+                          </type>
+                          <documentation>
+                            <xhtml xmlns="http://www.w3.org/1999/xhtml">Illustrative value (object because it is a TRING) to be set as a product part</xhtml>
+                          </documentation>
+                        </variable>
+                      </inputVars>
+                      <documentation>
+                        <xhtml xmlns="http://www.w3.org/1999/xhtml">Illustrative method of the pattern to set the part1</xhtml>
+                      </documentation>
+                    </interface>
+                    <body>
+                      <ST>
+                        <xhtml xmlns="http://www.w3.org/1999/xhtml">//Sets the passed value to its corresponding field. 
+//We can say that the the final product is in process of being built.
+//So this is a step into building the final product done by the builder.
+THIS^.localProduct.part1 := part1;</xhtml>
+                      </ST>
+                    </body>
+                    <InterfaceAsPlainText>
+                      <xhtml xmlns="http://www.w3.org/1999/xhtml">///Illustrative method of the pattern to set the part1
+METHOD Set_Part1
+VAR_INPUT
+	///Illustrative value (object because it is a TRING) to be set as a product part
+	part1: STRING;
+END_VAR
+</xhtml>
+                    </InterfaceAsPlainText>
+                    <addData />
+                  </Method>
+                </data>
+                <data name="http://www.3s-software.com/plcopenxml/method" handleUnknown="implementation">
+                  <Method name="Set_Part2" ObjectId="a0c0f61b-613f-4783-a731-2af43e62953a">
+                    <interface>
+                      <inputVars>
+                        <variable name="part2">
+                          <type>
+                            <string />
+                          </type>
+                          <documentation>
+                            <xhtml xmlns="http://www.w3.org/1999/xhtml">Illustrative value (object because it is a TRING) to be set as a product part</xhtml>
+                          </documentation>
+                        </variable>
+                      </inputVars>
+                      <documentation>
+                        <xhtml xmlns="http://www.w3.org/1999/xhtml">Illustrative method of the pattern to set the part2</xhtml>
+                      </documentation>
+                    </interface>
+                    <body>
+                      <ST>
+                        <xhtml xmlns="http://www.w3.org/1999/xhtml">//Sets the passed value to its corresponding field. 
+//We can say that the the final product is in process of being built.
+//So this is a step into building the final product done by the builder.
+THIS^.localProduct.part2 := part2;</xhtml>
+                      </ST>
+                    </body>
+                    <InterfaceAsPlainText>
+                      <xhtml xmlns="http://www.w3.org/1999/xhtml">///Illustrative method of the pattern to set the part2
+METHOD Set_Part2
+VAR_INPUT
+	///Illustrative value (object because it is a TRING) to be set as a product part
+	part2: STRING;
+END_VAR
+</xhtml>
+                    </InterfaceAsPlainText>
+                    <addData />
+                  </Method>
+                </data>
+                <data name="http://www.3s-software.com/plcopenxml/method" handleUnknown="implementation">
+                  <Method name="Set_Part3" ObjectId="43c417f2-62b7-4d7e-89df-2862c7409347">
+                    <interface>
+                      <inputVars>
+                        <variable name="part3">
+                          <type>
+                            <string />
+                          </type>
+                          <documentation>
+                            <xhtml xmlns="http://www.w3.org/1999/xhtml">Illustrative value (object because it is a TRING) to be set as a product part</xhtml>
+                          </documentation>
+                        </variable>
+                      </inputVars>
+                      <documentation>
+                        <xhtml xmlns="http://www.w3.org/1999/xhtml">Illustrative method of the pattern to set the part3</xhtml>
+                      </documentation>
+                    </interface>
+                    <body>
+                      <ST>
+                        <xhtml xmlns="http://www.w3.org/1999/xhtml">//Sets the passed value to its corresponding field. 
+//We can say that the the final product is in process of being built.
+//So this is a step into building the final product done by the builder.
+THIS^.localProduct.part3 := part3;  </xhtml>
+                      </ST>
+                    </body>
+                    <InterfaceAsPlainText>
+                      <xhtml xmlns="http://www.w3.org/1999/xhtml">///Illustrative method of the pattern to set the part3
+METHOD Set_Part3
+VAR_INPUT
+	///Illustrative value (object because it is a TRING) to be set as a product part
+	part3: STRING;
+END_VAR
+</xhtml>
+                    </InterfaceAsPlainText>
+                    <addData />
+                  </Method>
+                </data>
+                <data name="http://www.3s-software.com/plcopenxml/interfaceasplaintext" handleUnknown="implementation">
+                  <InterfaceAsPlainText>
+                    <xhtml xmlns="http://www.w3.org/1999/xhtml">///This is the concrete builder class, reponsible for building the final product object
+FUNCTION_BLOCK ConcreteBuilder IMPLEMENTS ITF_Builder
+VAR
+	///Holds an internal reference to how the final product shoud be so the builder class can build it on the fly 
+	/// without any help from other classes exepting the Director class that is going to be passing the special
+	///specifications to the builder.
+	localProduct: Product;
+END_VAR
+</xhtml>
+                  </InterfaceAsPlainText>
+                </data>
+                <data name="http://www.3s-software.com/plcopenxml/objectid" handleUnknown="discard">
+                  <ObjectId>57001512-b379-4132-90b7-d2b34d8d495f</ObjectId>
+                </data>
+              </addData>
+            </pou>
+          </data>
+          <data name="http://www.3s-software.com/plcopenxml/pou" handleUnknown="implementation">
+            <pou name="Director" pouType="functionBlock">
+              <interface>
+                <inputVars>
+                  <variable name="spected">
+                    <type>
+                      <array>
+                        <dimension lower="1" upper="4" />
+                        <baseType>
+                          <string />
+                        </baseType>
+                      </array>
+                    </type>
+                    <documentation>
+                      <xhtml xmlns="http://www.w3.org/1999/xhtml">This variable is sent by the client as the specifications of the final product to be built.</xhtml>
+                    </documentation>
+                  </variable>
+                </inputVars>
+                <localVars>
+                  <variable name="concreteBuilder">
+                    <type>
+                      <derived name="ConcreteBuilder" />
+                    </type>
+                    <documentation>
+                      <xhtml xmlns="http://www.w3.org/1999/xhtml">Holds a reference to the concrete builder object to send the specifications of the final product to it.</xhtml>
+                    </documentation>
+                  </variable>
+                  <variable name="specifications">
+                    <type>
+                      <array>
+                        <dimension lower="1" upper="4" />
+                        <baseType>
+                          <string />
+                        </baseType>
+                      </array>
+                    </type>
+                    <documentation>
+                      <xhtml xmlns="http://www.w3.org/1999/xhtml">Stores the specifications, sent by the client, of the final product to be built.</xhtml>
+                    </documentation>
+                  </variable>
+                </localVars>
+                <documentation>
+                  <xhtml xmlns="http://www.w3.org/1999/xhtml">The director class is responsible to delegate the construction of the final product object 
+ to a concrete builder object.</xhtml>
+                </documentation>
+              </interface>
+              <body>
+                <ST>
+                  <xhtml xmlns="http://www.w3.org/1999/xhtml">//This dynamic constructor changes the previous specifications of the final product to be built
+THIS^.specifications := THIS^.spected;</xhtml>
+                </ST>
+              </body>
+              <addData>
+                <data name="http://www.3s-software.com/plcopenxml/method" handleUnknown="implementation">
+                  <Method name="Construct" ObjectId="a3ecce91-5951-4c72-b21c-72a46f498ccf">
+                    <interface>
+                      <returnType>
+                        <derived name="Product" />
+                      </returnType>
+                      <documentation>
+                        <xhtml xmlns="http://www.w3.org/1999/xhtml">This method is going to be called by the client when a new Product object must be built</xhtml>
+                      </documentation>
+                    </interface>
+                    <body>
+                      <ST>
+                        <xhtml xmlns="http://www.w3.org/1999/xhtml">//The Director tells its concreteBuilder instance to build the final product step by step passing the specifications stored in the 
+// array THIS^.specifications[1..4]
+
+//Step 1 "Main Part"
+THIS^.concreteBuilder.Set_Main_Part(THIS^.specifications[1]);
+//Step 2 "Part 1"
+THIS^.concreteBuilder.Set_Part1(THIS^.specifications[2]);
+//Step 3 "Part 2"
+THIS^.concreteBuilder.Set_Part2(THIS^.specifications[3]);
+//Step 4 "Part 3"
+THIS^.concreteBuilder.Set_Part3(THIS^.specifications[4]);
+
+//Finally the concreteBuilder instance in the Director object delivers the final result as a Product object
+Construct := THIS^.concreteBuilder.Get_Result();</xhtml>
+                      </ST>
+                    </body>
+                    <InterfaceAsPlainText>
+                      <xhtml xmlns="http://www.w3.org/1999/xhtml">///This method is going to be called by the client when a new Product object must be built
+METHOD Construct : Product
+</xhtml>
+                    </InterfaceAsPlainText>
+                    <addData />
+                  </Method>
+                </data>
+                <data name="http://www.3s-software.com/plcopenxml/method" handleUnknown="implementation">
+                  <Method name="fb_init" ObjectId="8269a1e4-211d-4498-aaf1-1b13eba924f1">
+                    <interface>
+                      <inputVars>
+                        <variable name="bInitRetains">
+                          <type>
+                            <BOOL />
+                          </type>
+                          <documentation>
+                            <xhtml xmlns="http://www.w3.org/1999/xhtml"> TRUE: the Retain-variables are initialized (reset warm / reset cold)</xhtml>
+                          </documentation>
+                        </variable>
+                        <variable name="bInCopyCode">
+                          <type>
+                            <BOOL />
+                          </type>
+                          <documentation>
+                            <xhtml xmlns="http://www.w3.org/1999/xhtml"> TRUE  the instance will be copied to the copy-code afterward (online change)</xhtml>
+                          </documentation>
+                        </variable>
+                        <variable name="concreteBuilder">
+                          <type>
+                            <derived name="ConcreteBuilder" />
+                          </type>
+                          <documentation>
+                            <xhtml xmlns="http://www.w3.org/1999/xhtml">Reference to the builder that is going to be building the final product object.</xhtml>
+                          </documentation>
+                        </variable>
+                        <variable name="specifications">
+                          <type>
+                            <array>
+                              <dimension lower="1" upper="4" />
+                              <baseType>
+                                <string />
+                              </baseType>
+                            </array>
+                          </type>
+                          <documentation>
+                            <xhtml xmlns="http://www.w3.org/1999/xhtml">Specifications, sent by the client, to be built on the final product object</xhtml>
+                          </documentation>
+                        </variable>
+                      </inputVars>
+                      <documentation>
+                        <xhtml xmlns="http://www.w3.org/1999/xhtml">This constructor is called at instanciation to store the inital specifications of the product to be built and 
+ the reference to the builder object.</xhtml>
+                      </documentation>
+                    </interface>
+                    <body>
+                      <ST>
+                        <xhtml xmlns="http://www.w3.org/1999/xhtml">//Stores the reference to which builder will be building the final product object in its own field THIS^.concreteBuilder
+THIS^.concreteBuilder := concreteBuilder;
+
+//Stores the specifications to build the final product object in its own field THIS^.specifications.
+THIS^.specifications := specifications;</xhtml>
+                      </ST>
+                    </body>
+                    <InterfaceAsPlainText>
+                      <xhtml xmlns="http://www.w3.org/1999/xhtml">///This constructor is called at instanciation to store the inital specifications of the product to be built and 
+/// the reference to the builder object.
+METHOD fb_init
+VAR_INPUT
+	/// TRUE: the Retain-variables are initialized (reset warm / reset cold)
+	bInitRetains: BOOL;
+	/// TRUE  the instance will be copied to the copy-code afterward (online change)
+	bInCopyCode: BOOL;
+	///Reference to the builder that is going to be building the final product object.
+	concreteBuilder: ConcreteBuilder;
+	///Specifications, sent by the client, to be built on the final product object
+	specifications: ARRAY[1..4] OF STRING;
+END_VAR
+</xhtml>
+                    </InterfaceAsPlainText>
+                    <addData />
+                  </Method>
+                </data>
+                <data name="http://www.3s-software.com/plcopenxml/interfaceasplaintext" handleUnknown="implementation">
+                  <InterfaceAsPlainText>
+                    <xhtml xmlns="http://www.w3.org/1999/xhtml">///The director class is responsible to delegate the construction of the final product object 
+/// to a concrete builder object.
+FUNCTION_BLOCK Director
+VAR_INPUT
+	///This variable is sent by the client as the specifications of the final product to be built.
+	spected: ARRAY[1..4] OF STRING;
+END_VAR
+VAR
+	///Holds a reference to the concrete builder object to send the specifications of the final product to it.
+	concreteBuilder: ConcreteBuilder;
+	///Stores the specifications, sent by the client, of the final product to be built.
+	specifications: ARRAY[1..4] OF STRING;
+END_VAR
+</xhtml>
+                  </InterfaceAsPlainText>
+                </data>
+                <data name="http://www.3s-software.com/plcopenxml/objectid" handleUnknown="discard">
+                  <ObjectId>60936e0a-7d72-4dde-818a-2656b969da4d</ObjectId>
+                </data>
+              </addData>
+            </pou>
+          </data>
+          <data name="http://www.3s-software.com/plcopenxml/pou" handleUnknown="implementation">
+            <pou name="Product" pouType="functionBlock">
+              <interface>
+                <inputVars>
+                  <variable name="mainPart">
+                    <type>
+                      <string />
+                    </type>
+                    <documentation>
+                      <xhtml xmlns="http://www.w3.org/1999/xhtml">List of possible parts to be build in a final Product object</xhtml>
+                    </documentation>
+                  </variable>
+                  <variable name="part1">
+                    <type>
+                      <string />
+                    </type>
+                  </variable>
+                  <variable name="part2">
+                    <type>
+                      <string />
+                    </type>
+                  </variable>
+                  <variable name="part3">
+                    <type>
+                      <string />
+                    </type>
+                  </variable>
+                </inputVars>
+                <addData>
+                  <data name="http://www.3s-software.com/plcopenxml/attributes" handleUnknown="implementation">
+                    <Attributes>
+                      <Attribute Name="enable_dynamic_creation" Value="" />
+                    </Attributes>
+                  </data>
+                </addData>
+                <documentation>
+                  <xhtml xmlns="http://www.w3.org/1999/xhtml">The class Product is just a plain blueprint of the components of the object to be built.
+The final Product may ot may not contain the all the Parts listed on the Product declaration
+ rather only the parts in the specifications sent by the client.</xhtml>
+                </documentation>
+              </interface>
+              <body>
+                <ST>
+                  <xhtml xmlns="http://www.w3.org/1999/xhtml" />
+                </ST>
+              </body>
+              <addData>
+                <data name="http://www.3s-software.com/plcopenxml/method" handleUnknown="implementation">
+                  <Method name="toString" ObjectId="6caa2992-f39b-49cf-917c-ac32cffab965">
+                    <interface>
+                      <returnType>
+                        <string />
+                      </returnType>
+                      <localVars>
+                        <variable name="tempString">
+                          <type>
+                            <string />
+                          </type>
+                          <documentation>
+                            <xhtml xmlns="http://www.w3.org/1999/xhtml">Local variable to join together and store the pieces of String</xhtml>
+                          </documentation>
+                        </variable>
+                      </localVars>
+                      <documentation>
+                        <xhtml xmlns="http://www.w3.org/1999/xhtml">Method to be used in the visualization element for an easier String handling</xhtml>
+                      </documentation>
+                    </interface>
+                    <body>
+                      <ST>
+                        <xhtml xmlns="http://www.w3.org/1999/xhtml">//tempString joins together "Main Part" and "Part 1" of the Product object
+tempString := CONCAT(THIS^.mainPart , THIS^.part1);
+//tempString joins together its current value and "Part 2" of the Product object
+tempString := CONCAT(tempString , THIS^.part2);
+//tempString joins together its current value and "Part 3" of the Product object
+tempString := CONCAT(tempString , THIS^.part3);
+//The final result is sent as the output of this method
+toString := tempString;</xhtml>
+                      </ST>
+                    </body>
+                    <InterfaceAsPlainText>
+                      <xhtml xmlns="http://www.w3.org/1999/xhtml">///Method to be used in the visualization element for an easier String handling
+METHOD toString : STRING
+VAR
+	///Local variable to join together and store the pieces of String
+	tempString: STRING;
+END_VAR
+</xhtml>
+                    </InterfaceAsPlainText>
+                    <addData />
+                  </Method>
+                </data>
+                <data name="http://www.3s-software.com/plcopenxml/interfaceasplaintext" handleUnknown="implementation">
+                  <InterfaceAsPlainText>
+                    <xhtml xmlns="http://www.w3.org/1999/xhtml">///The class Product is just a plain blueprint of the components of the object to be built.
+///The final Product may ot may not contain the all the Parts listed on the Product declaration
+/// rather only the parts in the specifications sent by the client.
+{attribute 'enable_dynamic_creation' := ''}
+FUNCTION_BLOCK Product
+VAR_INPUT
+	///List of possible parts to be build in a final Product object
+	mainPart: STRING;
+	part1: STRING;
+	part2: STRING;
+	part3: STRING;
+END_VAR
+</xhtml>
+                  </InterfaceAsPlainText>
+                </data>
+                <data name="http://www.3s-software.com/plcopenxml/objectid" handleUnknown="discard">
+                  <ObjectId>4a46e5f6-684f-4ae6-bb41-07238e530749</ObjectId>
+                </data>
+              </addData>
+            </pou>
+          </data>
+          <data name="http://www.3s-software.com/plcopenxml/pou" handleUnknown="implementation">
+            <pou name="MAIN" pouType="program">
+              <interface>
+                <localVars>
+                  <variable name="arrayChassis">
+                    <type>
+                      <array>
+                        <dimension lower="1" upper="3" />
+                        <baseType>
+                          <string />
+                        </baseType>
+                      </array>
+                    </type>
+                    <initialValue>
+                      <arrayValue>
+                        <value>
+                          <simpleValue value="'Red Chassis '" />
+                        </value>
+                        <value>
+                          <simpleValue value="'Black Chassis '" />
+                        </value>
+                        <value>
+                          <simpleValue value="'White Chassis '" />
+                        </value>
+                      </arrayValue>
+                    </initialValue>
+                    <documentation>
+                      <xhtml xmlns="http://www.w3.org/1999/xhtml">Arrays with the different specifications for the Client to choose</xhtml>
+                    </documentation>
+                  </variable>
+                  <variable name="arrayCarType">
+                    <type>
+                      <array>
+                        <dimension lower="1" upper="3" />
+                        <baseType>
+                          <string />
+                        </baseType>
+                      </array>
+                    </type>
+                    <initialValue>
+                      <arrayValue>
+                        <value>
+                          <simpleValue value="'Sedan '" />
+                        </value>
+                        <value>
+                          <simpleValue value="'Hatchback '" />
+                        </value>
+                        <value>
+                          <simpleValue value="'Sport '" />
+                        </value>
+                      </arrayValue>
+                    </initialValue>
+                  </variable>
+                  <variable name="arrayMotor">
+                    <type>
+                      <array>
+                        <dimension lower="1" upper="3" />
+                        <baseType>
+                          <string />
+                        </baseType>
+                      </array>
+                    </type>
+                    <initialValue>
+                      <arrayValue>
+                        <value>
+                          <simpleValue value="'Motor 1.4cc '" />
+                        </value>
+                        <value>
+                          <simpleValue value="'Motor 2.0cc '" />
+                        </value>
+                        <value>
+                          <simpleValue value="'Motor 2.5cc '" />
+                        </value>
+                      </arrayValue>
+                    </initialValue>
+                  </variable>
+                  <variable name="arrayTires">
+                    <type>
+                      <array>
+                        <dimension lower="1" upper="3" />
+                        <baseType>
+                          <string />
+                        </baseType>
+                      </array>
+                    </type>
+                    <initialValue>
+                      <arrayValue>
+                        <value>
+                          <simpleValue value="'Aluminium tires '" />
+                        </value>
+                        <value>
+                          <simpleValue value="'Chrome plated tires '" />
+                        </value>
+                        <value>
+                          <simpleValue value="'Ligth aluminium tires '" />
+                        </value>
+                      </arrayValue>
+                    </initialValue>
+                  </variable>
+                  <variable name="tempArray">
+                    <type>
+                      <array>
+                        <dimension lower="1" upper="4" />
+                        <baseType>
+                          <string />
+                        </baseType>
+                      </array>
+                    </type>
+                    <documentation>
+                      <xhtml xmlns="http://www.w3.org/1999/xhtml">Temporary array to have a reference to the clients choice</xhtml>
+                    </documentation>
+                  </variable>
+                  <variable name="bChassis">
+                    <type>
+                      <BOOL />
+                    </type>
+                    <initialValue>
+                      <simpleValue value="FALSE" />
+                    </initialValue>
+                    <documentation>
+                      <xhtml xmlns="http://www.w3.org/1999/xhtml">Boolean and integer values to receive data from the tables in the visualization element
+The boolean value validates if the client has chosen a valid option</xhtml>
+                    </documentation>
+                  </variable>
+                  <variable name="iChassis">
+                    <type>
+                      <INT />
+                    </type>
+                    <initialValue>
+                      <simpleValue value="0" />
+                    </initialValue>
+                    <documentation>
+                      <xhtml xmlns="http://www.w3.org/1999/xhtml">The integer value hold the reference to the array of specifications</xhtml>
+                    </documentation>
+                  </variable>
+                  <variable name="bCarType">
+                    <type>
+                      <BOOL />
+                    </type>
+                    <initialValue>
+                      <simpleValue value="FALSE" />
+                    </initialValue>
+                    <documentation>
+                      <xhtml xmlns="http://www.w3.org/1999/xhtml">Boolean and integer values to receive data from the tables in the visualization element
+The boolean value validates if the client has chosen a valid option</xhtml>
+                    </documentation>
+                  </variable>
+                  <variable name="iCarType">
+                    <type>
+                      <INT />
+                    </type>
+                    <initialValue>
+                      <simpleValue value="0" />
+                    </initialValue>
+                    <documentation>
+                      <xhtml xmlns="http://www.w3.org/1999/xhtml">The integer value hold the reference to the array of specifications</xhtml>
+                    </documentation>
+                  </variable>
+                  <variable name="bMotor">
+                    <type>
+                      <BOOL />
+                    </type>
+                    <initialValue>
+                      <simpleValue value="FALSE" />
+                    </initialValue>
+                    <documentation>
+                      <xhtml xmlns="http://www.w3.org/1999/xhtml">Boolean and integer values to receive data from the tables in the visualization element
+The boolean value validates if the client has chosen a valid option</xhtml>
+                    </documentation>
+                  </variable>
+                  <variable name="iMotor">
+                    <type>
+                      <INT />
+                    </type>
+                    <initialValue>
+                      <simpleValue value="0" />
+                    </initialValue>
+                    <documentation>
+                      <xhtml xmlns="http://www.w3.org/1999/xhtml">The integer value hold the reference to the array of specifications</xhtml>
+                    </documentation>
+                  </variable>
+                  <variable name="bTires">
+                    <type>
+                      <BOOL />
+                    </type>
+                    <initialValue>
+                      <simpleValue value="FALSE" />
+                    </initialValue>
+                    <documentation>
+                      <xhtml xmlns="http://www.w3.org/1999/xhtml">Boolean and integer values to receive data from the tables in the visualization element
+The boolean value validates if the client has chosen a valid option</xhtml>
+                    </documentation>
+                  </variable>
+                  <variable name="iTires">
+                    <type>
+                      <INT />
+                    </type>
+                    <initialValue>
+                      <simpleValue value="0" />
+                    </initialValue>
+                    <documentation>
+                      <xhtml xmlns="http://www.w3.org/1999/xhtml">The integer value hold the reference to the array of specifications</xhtml>
+                    </documentation>
+                  </variable>
+                  <variable name="bRequest">
+                    <type>
+                      <BOOL />
+                    </type>
+                    <initialValue>
+                      <simpleValue value="FALSE" />
+                    </initialValue>
+                    <documentation>
+                      <xhtml xmlns="http://www.w3.org/1999/xhtml">Boolean value to verify and respond to a client's request</xhtml>
+                    </documentation>
+                  </variable>
+                  <variable name="sMessageLog">
+                    <type>
+                      <string />
+                    </type>
+                    <initialValue>
+                      <simpleValue value="'Waiting for your request'" />
+                    </initialValue>
+                    <documentation>
+                      <xhtml xmlns="http://www.w3.org/1999/xhtml">String variable to interact and respond to the client in the visualization element</xhtml>
+                    </documentation>
+                  </variable>
+                  <variable name="prod">
+                    <type>
+                      <pointer>
+                        <baseType>
+                          <derived name="Product" />
+                        </baseType>
+                      </pointer>
+                    </type>
+                    <documentation>
+                      <xhtml xmlns="http://www.w3.org/1999/xhtml">A pointer to Poduct to dynamically create and delete product objects at the clients requests</xhtml>
+                    </documentation>
+                  </variable>
+                  <variable name="aConcreteBuilder">
+                    <type>
+                      <derived name="ConcreteBuilder" />
+                    </type>
+                    <documentation>
+                      <xhtml xmlns="http://www.w3.org/1999/xhtml">A ConcreteBuilder instance to be passed to the Director and build the final Product objects</xhtml>
+                    </documentation>
+                  </variable>
+                  <variable name="aDirector">
+                    <type>
+                      <derived name="Director" />
+                    </type>
+                    <addData>
+                      <data name="http://www.3s-software.com/plcopenxml/inputassignments" handleUnknown="implementation">
+                        <InputAssignments>
+                          <InputAssignment>
+                            <Name>concreteBuilder</Name>
+                            <Value>aConcreteBuilder</Value>
+                          </InputAssignment>
+                          <InputAssignment>
+                            <Name>specifications</Name>
+                            <Value>tempArray</Value>
+                          </InputAssignment>
+                        </InputAssignments>
+                      </data>
+                      <data name="http://www.3s-software.com/plcopenxml/attributes" handleUnknown="implementation">
+                        <Attributes>
+                          <Attribute Name="old_input_assignments" Value="" />
+                        </Attributes>
+                      </data>
+                    </addData>
+                    <documentation>
+                      <xhtml xmlns="http://www.w3.org/1999/xhtml">A Director instance that is instanciated with a ConcreteBuilder instance and the first specifications.
+ later on in the program these specifications of the ConcreteBuilder instance will be changed dynamically</xhtml>
+                    </documentation>
+                  </variable>
+                </localVars>
+              </interface>
+              <body>
+                <ST>
+                  <xhtml xmlns="http://www.w3.org/1999/xhtml">//The visualization element has 4 coloums in which the client must select an option from each coloum.
+//Once the client has made its choice, He can then procede to validate its request.
+//The bottom rectangle will handle all possible responses from the application to the client.
+
+//If the client makes a request in the visualization element
+IF bRequest
+	THEN
+	//We verify that the cliet has chosen all the required parts(All in this case)
+	IF bChassis AND bCarType AND bMotor AND bTires
+		THEN
+		//If the client has sent a valir request, the builder notifies the client about the received request
+		sMessageLog := 'Your red car is being built';
+		//A new product object is created on demand
+		prod := __NEW(Product);
+		//The tempArray is modified to the special characteristics demanded from the client on the visualization element
+		tempArray[1] := arrayChassis[iChassis];
+		tempArray[2] := arrayCarType[iCarType];
+		tempArray[3] := arrayMotor[iMotor];
+		tempArray[4] := arrayTires[iTires];
+
+		//The Director object receives the specifications for the new Product to be built
+		aDirector(spected := tempArray);
+		//The Product object request the construction to the Director.
+		prod^ := aDirector.Construct();
+		//The Builder's response after the Director object has handled the proper request
+		sMessageLog := CONCAT( 'Your car has been built. It has: ', prod^.toString());
+		//Once this reques has been handled, the request flag is set to FALSE
+		bRequest := FALSE;
+		//Once this reques has been handled, the Product object is deleted to free memory
+		__DELETE(prod);
+		
+		//If the client did not choose all the required parts
+		ELSE
+			
+		//The Builder responds
+		sMessageLog := 'You need to select all the parts for your car';
+		//Once this reques has been handled, the reques flag is set to FALSE
+		bRequest := FALSE;
+		
+	END_IF
+
+END_IF
+</xhtml>
+                </ST>
+              </body>
+              <addData>
+                <data name="http://www.3s-software.com/plcopenxml/interfaceasplaintext" handleUnknown="implementation">
+                  <InterfaceAsPlainText>
+                    <xhtml xmlns="http://www.w3.org/1999/xhtml">PROGRAM MAIN
+VAR
+	///Arrays with the different specifications for the Client to choose
+	arrayChassis: ARRAY[1..3] OF STRING := ['Red Chassis ', 'Black Chassis ', 'White Chassis '];
+	arrayCarType: ARRAY[1..3] OF STRING := ['Sedan ', 'Hatchback ', 'Sport '];
+	arrayMotor: ARRAY[1..3] OF STRING := ['Motor 1.4cc ', 'Motor 2.0cc ', 'Motor 2.5cc '];
+	arrayTires: ARRAY[1..3] OF STRING := ['Aluminium tires ', 'Chrome plated tires ', 'Ligth aluminium tires '];
+	///Temporary array to have a reference to the clients choice
+	tempArray: ARRAY[1..4] OF STRING;
+	///Boolean and integer values to receive data from the tables in the visualization element
+	///The boolean value validates if the client has chosen a valid option
+	bChassis: BOOL := FALSE;
+	///The integer value hold the reference to the array of specifications
+	iChassis: INT := 0;
+	///Boolean and integer values to receive data from the tables in the visualization element
+	///The boolean value validates if the client has chosen a valid option
+	bCarType: BOOL := FALSE;
+	///The integer value hold the reference to the array of specifications
+	iCarType: INT := 0;
+	///Boolean and integer values to receive data from the tables in the visualization element
+	///The boolean value validates if the client has chosen a valid option
+	bMotor: BOOL := FALSE;
+	///The integer value hold the reference to the array of specifications
+	iMotor: INT := 0;
+	///Boolean and integer values to receive data from the tables in the visualization element
+	///The boolean value validates if the client has chosen a valid option
+	bTires: BOOL := FALSE;
+	///The integer value hold the reference to the array of specifications
+	iTires: INT := 0;
+	///Boolean value to verify and respond to a client's request
+	bRequest: BOOL := FALSE;
+	///String variable to interact and respond to the client in the visualization element
+	sMessageLog: STRING := 'Waiting for your request';
+	///A pointer to Poduct to dynamically create and delete product objects at the clients requests
+	prod: POINTER TO Product;
+	///A ConcreteBuilder instance to be passed to the Director and build the final Product objects
+	aConcreteBuilder: ConcreteBuilder;
+	///A Director instance that is instanciated with a ConcreteBuilder instance and the first specifications.
+	/// later on in the program these specifications of the ConcreteBuilder instance will be changed dynamically
+	{attribute 'old_input_assignments' := ''}
+	aDirector: Director(concreteBuilder := aConcreteBuilder, specifications := tempArray);	
+END_VAR
+</xhtml>
+                  </InterfaceAsPlainText>
+                </data>
+                <data name="http://www.3s-software.com/plcopenxml/objectid" handleUnknown="discard">
+                  <ObjectId>10798435-1903-4f9e-a949-2e7c2ff1c848</ObjectId>
+                </data>
+              </addData>
+            </pou>
+          </data>
+          <data name="http://www.3s-software.com/plcopenxml/libraries" handleUnknown="implementation">
+            <Libraries>
+              <Library Name="#Tc2_Standard" Namespace="Tc2_Standard" HideWhenReferencedAsDependency="false" PublishSymbolsInContainer="false" SystemLibrary="false" LinkAllContent="false" DefaultResolution="Tc2_Standard, * (Beckhoff Automation GmbH)" />
+              <Library Name="#Tc2_System" Namespace="Tc2_System" HideWhenReferencedAsDependency="false" PublishSymbolsInContainer="false" SystemLibrary="false" LinkAllContent="false" DefaultResolution="Tc2_System, * (Beckhoff Automation GmbH)">
+                <Parameters>
+                  <Parameter Name="PARAM.TABLE_UPPER_BOUND" Value="15" />
+                  <Parameter Name="PARAM.STRING_LENGTH_EXP" Value="255" />
+                  <Parameter Name="PARAM.STRING_LENGTH_ADDRESS" Value="20" />
+                  <Parameter Name="PARAM.STRING_LENGTH_COMMENT" Value="255" />
+                  <Parameter Name="PARAM.STRING_LENGTH_OUTSTRING" Value="255" />
+                  <Parameter Name="PARAM.TABLE_SHOW_VALID_ITEMS" Value="FALSE" />
+                </Parameters>
+              </Library>
+              <Library Name="#Tc3_Module" Namespace="Tc3_Module" HideWhenReferencedAsDependency="false" PublishSymbolsInContainer="false" SystemLibrary="false" LinkAllContent="false" DefaultResolution="Tc3_Module, * (Beckhoff Automation GmbH)" />
+              <Library Name="VisuSymbols, 3.5.10.0 (System)" Namespace="VisuSymbols" HideWhenReferencedAsDependency="false" PublishSymbolsInContainer="false" SystemLibrary="false" LinkAllContent="false" />
+              <Library Name="#System_VisuElemMeter" Namespace="VisuElemMeter" HideWhenReferencedAsDependency="false" PublishSymbolsInContainer="false" SystemLibrary="true" LinkAllContent="false" DefaultResolution="VisuElemMeter, 3.5.13.0 (System)" ResolverGuid="2717eb6a-dd07-4c66-8d8d-cacebd7b18ae" />
+              <Library Name="#System_VisuElems" Namespace="VisuElems" HideWhenReferencedAsDependency="false" PublishSymbolsInContainer="false" SystemLibrary="true" LinkAllContent="false" DefaultResolution="VisuElems, 3.5.13.40 (System)" ResolverGuid="2717eb6a-dd07-4c66-8d8d-cacebd7b18ae" />
+              <Library Name="#System_VisuElemsSpecialControls" Namespace="VisuElemsSpecialControls" HideWhenReferencedAsDependency="false" PublishSymbolsInContainer="false" SystemLibrary="true" LinkAllContent="false" DefaultResolution="VisuElemsSpecialControls, 3.5.13.0 (System)" ResolverGuid="2717eb6a-dd07-4c66-8d8d-cacebd7b18ae" />
+              <Library Name="#System_VisuElemsWinControls" Namespace="VisuElemsWinControls" HideWhenReferencedAsDependency="false" PublishSymbolsInContainer="false" SystemLibrary="true" LinkAllContent="false" DefaultResolution="VisuElemsWinControls, 3.5.13.20 (System)" ResolverGuid="2717eb6a-dd07-4c66-8d8d-cacebd7b18ae" />
+              <Library Name="#System_VisuElemTextEditor" Namespace="VisuElemTextEditor" HideWhenReferencedAsDependency="false" PublishSymbolsInContainer="false" SystemLibrary="true" LinkAllContent="false" DefaultResolution="VisuElemTextEditor, 3.5.13.0 (System)" ResolverGuid="2717eb6a-dd07-4c66-8d8d-cacebd7b18ae" />
+              <Library Name="#System_VisuNativeControl" Namespace="VisuNativeControl" HideWhenReferencedAsDependency="false" PublishSymbolsInContainer="false" SystemLibrary="true" LinkAllContent="false" DefaultResolution="VisuNativeControl, 3.5.13.0 (System)" ResolverGuid="2717eb6a-dd07-4c66-8d8d-cacebd7b18ae" />
+              <Library Name="#system_visuinputs" Namespace="visuinputs" HideWhenReferencedAsDependency="false" PublishSymbolsInContainer="false" SystemLibrary="true" LinkAllContent="false" DefaultResolution="visuinputs, 3.5.13.0 (system)" ResolverGuid="2717eb6a-dd07-4c66-8d8d-cacebd7b18ae" />
+              <addData>
+                <data name="http://www.3s-software.com/plcopenxml/objectid" handleUnknown="discard">
+                  <ObjectId>6d1ba674-4717-4dbd-82d9-17d8471d2e8b</ObjectId>
+                </data>
+              </addData>
+            </Libraries>
+          </data>
+          <data name="http://www.3s-software.com/plcopenxml/objectid" handleUnknown="discard">
+            <ObjectId>b666ebed-1002-40f3-ab0e-67259888d750</ObjectId>
+          </data>
+        </addData>
+      </resource>
+    </data>
+    <data name="http://www.3s-software.com/plcopenxml/projectstructure" handleUnknown="discard">
+      <ProjectStructure>
+        <Object Name="Builder2" ObjectId="b666ebed-1002-40f3-ab0e-67259888d750">
+          <Object Name="Library Manager" ObjectId="6d1ba674-4717-4dbd-82d9-17d8471d2e8b" />
+          <Object Name="ConcreteBuilder" ObjectId="57001512-b379-4132-90b7-d2b34d8d495f">
+            <Object Name="Get_Main_Part" ObjectId="a7b4817e-4059-4441-b5ea-99050ad3deda" />
+            <Object Name="Get_Part1" ObjectId="475580d1-fc09-4782-bfdc-56737e53ac8a" />
+            <Object Name="Get_Part2" ObjectId="802439ad-a3dc-4fcf-8b03-be95a1a168e7" />
+            <Object Name="Get_Part3" ObjectId="189c8af7-6801-42a6-8c61-e2ff78106ff6" />
+            <Object Name="Get_Result" ObjectId="b03bece5-c379-4e9e-b2b7-3fe7be11c319" />
+            <Object Name="Set_Main_Part" ObjectId="7094ac7a-4ca1-4f78-a3bf-caae5ef4e0dd" />
+            <Object Name="Set_Part1" ObjectId="03afb789-ef3e-44e4-a921-0073da632c62" />
+            <Object Name="Set_Part2" ObjectId="a0c0f61b-613f-4783-a731-2af43e62953a" />
+            <Object Name="Set_Part3" ObjectId="43c417f2-62b7-4d7e-89df-2862c7409347" />
+          </Object>
+          <Object Name="Director" ObjectId="60936e0a-7d72-4dde-818a-2656b969da4d">
+            <Object Name="Construct" ObjectId="a3ecce91-5951-4c72-b21c-72a46f498ccf" />
+            <Object Name="fb_init" ObjectId="8269a1e4-211d-4498-aaf1-1b13eba924f1" />
+          </Object>
+          <Object Name="ITF_Builder" ObjectId="ec08f9f6-3522-4911-95de-eedfe32aab78">
+            <Object Name="Set_Main_Part" ObjectId="9971832a-9fdd-43b0-ac60-9c6531e1c9f9" />
+            <Object Name="Set_Part1" ObjectId="49ccd5c4-3a86-4ab7-9a21-d8897aa5f3de" />
+            <Object Name="Set_Part2" ObjectId="a4e945fd-c8fe-40e0-a6d8-13a132374aa9" />
+            <Object Name="Set_Part3" ObjectId="0aef4919-875a-401d-b019-51aa37f29609" />
+          </Object>
+          <Object Name="PlcTask" ObjectId="7da77c7f-c436-46eb-a35a-38b6041093a3" />
+          <Folder Name="POUs">
+            <Object Name="MAIN" ObjectId="10798435-1903-4f9e-a949-2e7c2ff1c848" />
+          </Folder>
+          <Object Name="Product" ObjectId="4a46e5f6-684f-4ae6-bb41-07238e530749">
+            <Object Name="toString" ObjectId="6caa2992-f39b-49cf-917c-ac32cffab965" />
+          </Object>
+        </Object>
+      </ProjectStructure>
+    </data>
+  </addData>
+</project>
