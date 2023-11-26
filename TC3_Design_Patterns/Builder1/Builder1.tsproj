@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <TcSmProject xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.beckhoff.com/schemas/2012/07/TcSmProject" TcSmVersion="1.0" TcVersion="3.1.4024.35">
-	<Project ProjectGUID="{6C8F4EB4-8438-45C6-9DD7-0A17A3EFEB19}" Target64Bit="true" ShowHideConfigurations="#x3c7">
+	<Project ProjectGUID="{65C350B9-E611-43A8-BAE0-1695A0E88E10}" Target64Bit="true" ShowHideConfigurations="#x3c7">
 		<System>
 			<Settings MaxCpus="8" NonWinCpus="2">
 				<Cpu CpuId="6"/>
@@ -12,9 +12,9 @@
 			</Tasks>
 		</System>
 		<Plc>
-			<Project GUID="{D391FBAB-246B-43DD-B43D-417621E09086}" Name="Factory_Method" PrjFilePath="Factory_Method\Factory_Method.plcproj" TmcFilePath="Factory_Method\Factory_Method.tmc" ReloadTmc="true" AmsPort="851" FileArchiveSettings="#x000e" SymbolicMapping="true">
-				<Instance Id="#x08502000" TcSmClass="TComPlcObjDef" KeepUnrestoredLinks="2" TmcPath="Untitled1\Untitled1.tmc" TmcHash="{65873C21-6365-1506-0DBA-3C2D0C9E4097}">
-					<Name>Factory_Method Instance</Name>
+			<Project GUID="{31578B3B-8D10-4FDE-80ED-A344E0826C3B}" Name="Builder1" PrjFilePath="Builder1\Builder1.plcproj" TmcFilePath="Builder1\Builder1.tmc" ReloadTmc="true" AmsPort="851" FileArchiveSettings="#x000e" SymbolicMapping="true">
+				<Instance Id="#x08502000" TcSmClass="TComPlcObjDef" KeepUnrestoredLinks="2" TmcPath="Builder1\Builder1.tmc" TmcHash="{AE19665E-D3A3-7E55-0B2B-CE991C8BDEBC}">
+					<Name>Builder1 Instance</Name>
 					<CLSID ClassFactory="TcPlc30">{08500001-0000-0000-F000-000000000064}</CLSID>
 					<Contexts>
 						<Context>
