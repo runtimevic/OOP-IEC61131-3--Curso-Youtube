@@ -15,6 +15,7 @@ Implementación de ejemplo practico en TwinCAT 3:
 ***
 ### <span style="color:grey">Links de Patrones de Diseño Método de Fábrica:</span>
 - 🔗 [refactoring.guru, factory-method](https://refactoring.guru/design-patterns/factory-method)
+
 - 🔗 [twincontrols.com, Factory Method Design Pattern](https://www.twincontrols.com/community/twincat-knowledgebase/factory-method-design-pattern/)
 ***
 ### <span style="color:grey">Link al Video de Youtube_35:</span>

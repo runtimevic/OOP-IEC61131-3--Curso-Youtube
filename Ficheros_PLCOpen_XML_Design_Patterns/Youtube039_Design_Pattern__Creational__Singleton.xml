@@ -1,0 +1,666 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<project xmlns="http://www.plcopen.org/xml/tc6_0200">
+  <fileHeader companyName="Beckhoff Automation GmbH" productName="TwinCAT PLC Control" productVersion="3.5.13.21" creationDateTime="2023-11-27T11:42:44.1814912" />
+  <contentHeader name="Singleton1" modificationDateTime="2023-11-27T11:42:44.1880684">
+    <coordinateInfo>
+      <fbd>
+        <scaling x="1" y="1" />
+      </fbd>
+      <ld>
+        <scaling x="1" y="1" />
+      </ld>
+      <sfc>
+        <scaling x="1" y="1" />
+      </sfc>
+    </coordinateInfo>
+    <addData>
+      <data name="http://www.3s-software.com/plcopenxml/projectinformation" handleUnknown="implementation">
+        <ProjectInformation />
+      </data>
+    </addData>
+  </contentHeader>
+  <types>
+    <dataTypes />
+    <pous />
+  </types>
+  <instances>
+    <configurations />
+  </instances>
+  <addData>
+    <data name="http://www.3s-software.com/plcopenxml/application" handleUnknown="implementation">
+      <resource name="Singleton1">
+        <task name="PlcTask" interval="PT0S" priority="20">
+          <pouInstance name="MAIN" typeName="">
+            <documentation>
+              <xhtml xmlns="http://www.w3.org/1999/xhtml" />
+            </documentation>
+          </pouInstance>
+          <addData>
+            <data name="http://www.3s-software.com/plcopenxml/tasksettings" handleUnknown="implementation">
+              <TaskSettings KindOfTask="Cyclic" Interval="10000" IntervalUnit="us">
+                <Watchdog Enabled="false" TimeUnit="ms" />
+              </TaskSettings>
+            </data>
+            <data name="http://www.3s-software.com/plcopenxml/objectid" handleUnknown="discard">
+              <ObjectId>6719d18c-6e67-4a32-b09c-ec248de5221a</ObjectId>
+            </data>
+          </addData>
+        </task>
+        <addData>
+          <data name="http://www.3s-software.com/plcopenxml/datatype" handleUnknown="implementation">
+            <dataType name="E_Color">
+              <baseType>
+                <enum>
+                  <values>
+                    <value name="NoColor" value="0" />
+                    <value name="Blue" />
+                    <value name="Green" />
+                    <value name="Yellow" />
+                  </values>
+                </enum>
+              </baseType>
+              <addData>
+                <data name="http://www.3s-software.com/plcopenxml/attributes" handleUnknown="implementation">
+                  <Attributes>
+                    <Attribute Name="qualified_only" Value="" />
+                    <Attribute Name="strict" Value="" />
+                  </Attributes>
+                </data>
+                <data name="http://www.3s-software.com/plcopenxml/interfaceasplaintext" handleUnknown="implementation">
+                  <InterfaceAsPlainText>
+                    <xhtml xmlns="http://www.w3.org/1999/xhtml">{attribute 'qualified_only'}
+{attribute 'strict'}
+TYPE E_Color :
+(
+	NoColor := 0,
+	Blue,
+	Green,
+	Yellow
+	
+);
+END_TYPE
+</xhtml>
+                  </InterfaceAsPlainText>
+                </data>
+                <data name="http://www.3s-software.com/plcopenxml/objectid" handleUnknown="discard">
+                  <ObjectId>187cab3c-9d5d-4b15-87e5-3aa7745b6b59</ObjectId>
+                </data>
+              </addData>
+            </dataType>
+          </data>
+          <data name="http://www.3s-software.com/plcopenxml/interface" handleUnknown="implementation">
+            <Interface name="Proxy_Interface" ObjectId="c09f41ed-8388-4fa5-846b-482111779151">
+              <Methods>
+                <Method name="Set_Background" ObjectId="0b61ddc6-a83a-488f-9e3c-0f6b2e254ece">
+                  <interface>
+                    <inputVars>
+                      <variable name="newBackground">
+                        <type>
+                          <DWORD />
+                        </type>
+                        <documentation>
+                          <xhtml xmlns="http://www.w3.org/1999/xhtml">HEX value to be set as background color</xhtml>
+                        </documentation>
+                      </variable>
+                    </inputVars>
+                    <documentation>
+                      <xhtml xmlns="http://www.w3.org/1999/xhtml">Illustrative method of the pattern</xhtml>
+                    </documentation>
+                  </interface>
+                  <InterfaceAsPlainText>
+                    <xhtml xmlns="http://www.w3.org/1999/xhtml">///Illustrative method of the pattern
+METHOD Set_Background
+VAR_INPUT
+	///HEX value to be set as background color
+	newBackground: DWORD;
+END_VAR
+</xhtml>
+                  </InterfaceAsPlainText>
+                  <addData />
+                </Method>
+              </Methods>
+              <InterfaceAsPlainText>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">INTERFACE Proxy_Interface
+</xhtml>
+              </InterfaceAsPlainText>
+              <addData />
+            </Interface>
+          </data>
+          <data name="http://www.3s-software.com/plcopenxml/pou" handleUnknown="implementation">
+            <pou name="MAIN" pouType="program">
+              <interface />
+              <body>
+                <ST>
+                  <xhtml xmlns="http://www.w3.org/1999/xhtml">PLC_PRG();</xhtml>
+                </ST>
+              </body>
+              <addData>
+                <data name="http://www.3s-software.com/plcopenxml/interfaceasplaintext" handleUnknown="implementation">
+                  <InterfaceAsPlainText>
+                    <xhtml xmlns="http://www.w3.org/1999/xhtml">PROGRAM MAIN
+VAR
+END_VAR
+</xhtml>
+                  </InterfaceAsPlainText>
+                </data>
+                <data name="http://www.3s-software.com/plcopenxml/objectid" handleUnknown="discard">
+                  <ObjectId>dd2bc031-e22f-479e-9dc1-3d0d549dcdeb</ObjectId>
+                </data>
+              </addData>
+            </pou>
+          </data>
+          <data name="http://www.3s-software.com/plcopenxml/pou" handleUnknown="implementation">
+            <pou name="PLC_PRG" pouType="program">
+              <interface>
+                <localVars>
+                  <variable name="dwBlue">
+                    <type>
+                      <DWORD />
+                    </type>
+                    <initialValue>
+                      <simpleValue value="16#FF0000FF" />
+                    </initialValue>
+                    <documentation>
+                      <xhtml xmlns="http://www.w3.org/1999/xhtml">Blue, highly opaque</xhtml>
+                    </documentation>
+                  </variable>
+                  <variable name="dwGreen">
+                    <type>
+                      <DWORD />
+                    </type>
+                    <initialValue>
+                      <simpleValue value="16#FF00FF00" />
+                    </initialValue>
+                    <documentation>
+                      <xhtml xmlns="http://www.w3.org/1999/xhtml">Green, highly opaque</xhtml>
+                    </documentation>
+                  </variable>
+                  <variable name="dwYellow">
+                    <type>
+                      <DWORD />
+                    </type>
+                    <initialValue>
+                      <simpleValue value="16#FFFFFF00" />
+                    </initialValue>
+                    <documentation>
+                      <xhtml xmlns="http://www.w3.org/1999/xhtml">Yellow, highly opaque</xhtml>
+                    </documentation>
+                  </variable>
+                  <variable name="instance1">
+                    <type>
+                      <derived name="ProxyToSingleton" />
+                    </type>
+                    <documentation>
+                      <xhtml xmlns="http://www.w3.org/1999/xhtml">Creates 3 instances of the ProxyToSingleton class</xhtml>
+                    </documentation>
+                  </variable>
+                  <variable name="instance2">
+                    <type>
+                      <derived name="ProxyToSingleton" />
+                    </type>
+                  </variable>
+                  <variable name="instance3">
+                    <type>
+                      <derived name="ProxyToSingleton" />
+                    </type>
+                  </variable>
+                  <variable name="eInstance1">
+                    <type>
+                      <derived name="E_Color" />
+                    </type>
+                  </variable>
+                  <variable name="eInstance2">
+                    <type>
+                      <derived name="E_Color" />
+                    </type>
+                  </variable>
+                  <variable name="eInstance3">
+                    <type>
+                      <derived name="E_Color" />
+                    </type>
+                  </variable>
+                </localVars>
+              </interface>
+              <body>
+                <ST>
+                  <xhtml xmlns="http://www.w3.org/1999/xhtml">//The PLC_PRG handles the instanciation of the possible background colours and the ProxyToSingleton instances in order to be used by the Visualization element.
+//The viasualization element (The client) handles the request for background change on the RealSingleton object through the ProxyToSinlgeton instances.
+//These request are first processed by the ProxyToSingleton object and then passed to the one and only RealSingleton instance.
+//The default background colour of the RealSingleton object is 'Blue' 
+
+CASE eInstance1 OF
+	E_Color.Blue:
+		instance1.Set_Background(dwBlue);
+		eInstance1:=E_Color.NoColor;
+	E_Color.Green:
+		instance1.Set_Background(dwGreen);
+		eInstance1:=E_Color.NoColor;
+	E_Color.Yellow:
+		instance1.Set_Background(dwYellow);
+		eInstance1:=E_Color.NoColor;
+END_CASE
+
+CASE eInstance2 OF
+	E_Color.Blue:
+		instance2.Set_Background(dwBlue);
+		eInstance2:=E_Color.NoColor;	
+	E_Color.Green:
+		instance2.Set_Background(dwGreen);
+		eInstance2:=E_Color.NoColor;	
+	E_Color.Yellow:
+		instance2.Set_Background(dwYellow);
+		eInstance2:=E_Color.NoColor;	
+END_CASE
+
+CASE eInstance3 OF
+	E_Color.Blue:
+		instance3.Set_Background(dwBlue);
+		eInstance3:=E_Color.NoColor;	
+	E_Color.Green:
+		instance3.Set_Background(dwGreen);
+		eInstance3:=E_Color.NoColor;	
+	E_Color.Yellow:
+		instance3.Set_Background(dwYellow);
+		eInstance3:=E_Color.NoColor;	
+END_CASE</xhtml>
+                </ST>
+              </body>
+              <addData>
+                <data name="http://www.3s-software.com/plcopenxml/interfaceasplaintext" handleUnknown="implementation">
+                  <InterfaceAsPlainText>
+                    <xhtml xmlns="http://www.w3.org/1999/xhtml">PROGRAM PLC_PRG
+VAR
+	///Blue, highly opaque
+	dwBlue: DWORD := 16#FF0000FF;
+	///Green, highly opaque
+	dwGreen: DWORD := 16#FF00FF00;
+	///Yellow, highly opaque
+	dwYellow: DWORD := 16#FFFFFF00;
+	///Creates 3 instances of the ProxyToSingleton class
+	instance1: ProxyToSingleton;
+	instance2: ProxyToSingleton;
+	instance3: ProxyToSingleton;
+	
+	eInstance1 : E_Color;
+	eInstance2 : E_Color;
+	eInstance3 : E_Color;
+	
+END_VAR
+</xhtml>
+                  </InterfaceAsPlainText>
+                </data>
+                <data name="http://www.3s-software.com/plcopenxml/objectid" handleUnknown="discard">
+                  <ObjectId>ee8f0b82-eb89-4497-8659-92c0e02b251d</ObjectId>
+                </data>
+              </addData>
+            </pou>
+          </data>
+          <data name="http://www.3s-software.com/plcopenxml/pou" handleUnknown="implementation">
+            <pou name="RealSingleton" pouType="functionBlock">
+              <interface>
+                <localVars>
+                  <variable name="backgroundColour">
+                    <type>
+                      <DWORD />
+                    </type>
+                    <documentation>
+                      <xhtml xmlns="http://www.w3.org/1999/xhtml">Illustrative field of the pattern to store the HEX value for the background colour</xhtml>
+                    </documentation>
+                  </variable>
+                </localVars>
+                <addData>
+                  <data name="http://www.3s-software.com/plcopenxml/pouinheritance" handleUnknown="implementation">
+                    <Inheritance>
+                      <Implements>Proxy_Interface</Implements>
+                    </Inheritance>
+                  </data>
+                  <data name="http://www.3s-software.com/plcopenxml/attributes" handleUnknown="implementation">
+                    <Attributes>
+                      <Attribute Name="enable_dynamic_creation" Value="" />
+                    </Attributes>
+                  </data>
+                </addData>
+                <documentation>
+                  <xhtml xmlns="http://www.w3.org/1999/xhtml">This class is called RealSingleton because it works as singleton.  
+As long as we only instanciate ProxyToSingleton objects, this class will work as a Singleton class should work.
+The global access point to this class is the field .realSingleton^ in every ProxyToSingleton object.</xhtml>
+                </documentation>
+              </interface>
+              <body>
+                <ST>
+                  <xhtml xmlns="http://www.w3.org/1999/xhtml" />
+                </ST>
+              </body>
+              <addData>
+                <data name="http://www.3s-software.com/plcopenxml/method" handleUnknown="implementation">
+                  <Method name="fb_init" ObjectId="0c763367-d442-4046-a44f-c91f95391b46">
+                    <interface>
+                      <inputVars>
+                        <variable name="bInitRetains">
+                          <type>
+                            <BOOL />
+                          </type>
+                          <documentation>
+                            <xhtml xmlns="http://www.w3.org/1999/xhtml"> TRUE: the Retain-variables are initialized (reset warm / reset cold)</xhtml>
+                          </documentation>
+                        </variable>
+                        <variable name="bInCopyCode">
+                          <type>
+                            <BOOL />
+                          </type>
+                          <documentation>
+                            <xhtml xmlns="http://www.w3.org/1999/xhtml"> TRUE  the instance will be copied to the copy-code afterward (online change)</xhtml>
+                          </documentation>
+                        </variable>
+                      </inputVars>
+                    </interface>
+                    <body>
+                      <ST>
+                        <xhtml xmlns="http://www.w3.org/1999/xhtml">//The default valur for the background is set
+THIS^.Set_Background(PLC_PRG.dwBlue);
+</xhtml>
+                      </ST>
+                    </body>
+                    <InterfaceAsPlainText>
+                      <xhtml xmlns="http://www.w3.org/1999/xhtml">METHOD fb_init
+VAR_INPUT
+	/// TRUE: the Retain-variables are initialized (reset warm / reset cold)
+	bInitRetains: BOOL;
+	/// TRUE  the instance will be copied to the copy-code afterward (online change)
+	bInCopyCode: BOOL;
+END_VAR
+</xhtml>
+                    </InterfaceAsPlainText>
+                    <addData />
+                  </Method>
+                </data>
+                <data name="http://www.3s-software.com/plcopenxml/method" handleUnknown="implementation">
+                  <Method name="Set_Background" ObjectId="b54156f8-45dd-49da-875b-271f7909a23e">
+                    <interface>
+                      <inputVars>
+                        <variable name="newBackground">
+                          <type>
+                            <DWORD />
+                          </type>
+                          <documentation>
+                            <xhtml xmlns="http://www.w3.org/1999/xhtml">HEX value to be set as background color</xhtml>
+                          </documentation>
+                        </variable>
+                      </inputVars>
+                      <documentation>
+                        <xhtml xmlns="http://www.w3.org/1999/xhtml">Illustrative method of the pattern</xhtml>
+                      </documentation>
+                    </interface>
+                    <body>
+                      <ST>
+                        <xhtml xmlns="http://www.w3.org/1999/xhtml">//Writes the backgroundColour field to the passed newBackground value
+THIS^.backgroundColour := newBackground;</xhtml>
+                      </ST>
+                    </body>
+                    <InterfaceAsPlainText>
+                      <xhtml xmlns="http://www.w3.org/1999/xhtml">///Illustrative method of the pattern
+METHOD Set_Background
+VAR_INPUT
+	///HEX value to be set as background color
+	newBackground: DWORD;
+END_VAR
+</xhtml>
+                    </InterfaceAsPlainText>
+                    <addData />
+                  </Method>
+                </data>
+                <data name="http://www.3s-software.com/plcopenxml/interfaceasplaintext" handleUnknown="implementation">
+                  <InterfaceAsPlainText>
+                    <xhtml xmlns="http://www.w3.org/1999/xhtml">///This class is called RealSingleton because it works as singleton.  
+///As long as we only instanciate ProxyToSingleton objects, this class will work as a Singleton class should work.
+///The global access point to this class is the field .realSingleton^ in every ProxyToSingleton object.
+{attribute 'enable_dynamic_creation' := ''}
+FUNCTION_BLOCK RealSingleton IMPLEMENTS Proxy_Interface
+VAR
+	///Illustrative field of the pattern to store the HEX value for the background colour
+	backgroundColour: DWORD;
+END_VAR
+</xhtml>
+                  </InterfaceAsPlainText>
+                </data>
+                <data name="http://www.3s-software.com/plcopenxml/objectid" handleUnknown="discard">
+                  <ObjectId>63f62198-a68d-4704-95f1-a4bf90c1e139</ObjectId>
+                </data>
+              </addData>
+            </pou>
+          </data>
+          <data name="http://www.3s-software.com/plcopenxml/pou" handleUnknown="implementation">
+            <pou name="ProxyToSingleton" pouType="functionBlock">
+              <interface>
+                <globalVars>
+                  <variable name="bFirstInstance">
+                    <type>
+                      <BOOL />
+                    </type>
+                    <initialValue>
+                      <simpleValue value="FALSE" />
+                    </initialValue>
+                    <documentation>
+                      <xhtml xmlns="http://www.w3.org/1999/xhtml">Boolean value to check if there is already a Singleton instance</xhtml>
+                    </documentation>
+                  </variable>
+                  <variable name="realSingleton">
+                    <type>
+                      <pointer>
+                        <baseType>
+                          <derived name="RealSingleton" />
+                        </baseType>
+                      </pointer>
+                    </type>
+                    <documentation>
+                      <xhtml xmlns="http://www.w3.org/1999/xhtml">Pointer to the first and only instance of the Singleton class</xhtml>
+                    </documentation>
+                  </variable>
+                </globalVars>
+                <addData>
+                  <data name="http://www.3s-software.com/plcopenxml/pouinheritance" handleUnknown="implementation">
+                    <Inheritance>
+                      <Implements>Proxy_Interface</Implements>
+                    </Inheritance>
+                  </data>
+                  <data name="http://www.3s-software.com/plcopenxml/attributes" handleUnknown="implementation">
+                    <Attributes>
+                      <Attribute Name="enable_dynamic_creation" Value="" />
+                    </Attributes>
+                  </data>
+                </addData>
+                <documentation>
+                  <xhtml xmlns="http://www.w3.org/1999/xhtml">This class is called ProxyToSingleton because it works as a Proxy of the Singleton class. It handles the creation and instanciation of the 
+ RealSingleton class. Something like the proper static method GetInstance(); in any singleton pattern.
+So the ProxyToSingleton class has a static Singleton object as a field and whenever we instanciate a 
+ ProxyToSingleton object we will have the RealSingleton object as its static field .realSingleton^</xhtml>
+                </documentation>
+              </interface>
+              <body>
+                <ST>
+                  <xhtml xmlns="http://www.w3.org/1999/xhtml" />
+                </ST>
+              </body>
+              <addData>
+                <data name="http://www.3s-software.com/plcopenxml/method" handleUnknown="implementation">
+                  <Method name="fb_init" ObjectId="978af0dd-6855-457a-b863-ec8254bd9626">
+                    <interface>
+                      <inputVars>
+                        <variable name="bInitRetains">
+                          <type>
+                            <BOOL />
+                          </type>
+                          <documentation>
+                            <xhtml xmlns="http://www.w3.org/1999/xhtml"> TRUE: the Retain-variables are initialized (reset warm / reset cold)</xhtml>
+                          </documentation>
+                        </variable>
+                        <variable name="bInCopyCode">
+                          <type>
+                            <BOOL />
+                          </type>
+                          <documentation>
+                            <xhtml xmlns="http://www.w3.org/1999/xhtml"> TRUE  the instance will be copied to the copy-code afterward (online change)</xhtml>
+                          </documentation>
+                        </variable>
+                      </inputVars>
+                    </interface>
+                    <body>
+                      <ST>
+                        <xhtml xmlns="http://www.w3.org/1999/xhtml">//THIS FUNCTION WORKS AS THE CONSTRUCTOR OF THE ProxyToSingleton CLASS
+// It handles the creation of the only RealSingleton object. It uses the concept of lazy instanciation.
+
+//If the static property .bFirstInstance is TRUE
+IF THIS^.bFirstInstance = TRUE
+	
+THEN
+		//There is already a Singleton object.
+		//So we don't have to do anything, this new ProxyToSingleton object will already have the address of the 
+		// RealSingleton object in its pointer .realSingleton
+	
+	ELSE	//If the static property .bFirstInstance is FALSE
+	
+		//There is not a Singleton object so the ProxyToSingleton object calling the constructor 
+		// should create the RealSingleton object in its pointer field .realSingleton 
+		//Then we change the status of the static variable bFirstInstance to TRUE and avoid overwriting the realSingleton address.
+		//If the Singleton object is destroyed, .bFirstInstance should be set to FALSE again.
+		THIS^.bFirstInstance := TRUE;
+		
+		//Reference the value of the first RealSingleton instance to the FakeSingleton object to save 
+		// the address of the real Singleton instance.
+		THIS^.realSingleton := __NEW(RealSingleton);
+END_IF</xhtml>
+                      </ST>
+                    </body>
+                    <InterfaceAsPlainText>
+                      <xhtml xmlns="http://www.w3.org/1999/xhtml">METHOD fb_init
+VAR_INPUT
+	/// TRUE: the Retain-variables are initialized (reset warm / reset cold)
+	bInitRetains: BOOL;
+	/// TRUE  the instance will be copied to the copy-code afterward (online change)
+	bInCopyCode: BOOL;
+END_VAR
+</xhtml>
+                    </InterfaceAsPlainText>
+                    <addData />
+                  </Method>
+                </data>
+                <data name="http://www.3s-software.com/plcopenxml/method" handleUnknown="implementation">
+                  <Method name="Set_Background" ObjectId="be9791f6-6f7a-4fa7-a3fa-ac0ad133b2bb">
+                    <interface>
+                      <inputVars>
+                        <variable name="newBackground">
+                          <type>
+                            <DWORD />
+                          </type>
+                          <documentation>
+                            <xhtml xmlns="http://www.w3.org/1999/xhtml">HEX value to be set as background color</xhtml>
+                          </documentation>
+                        </variable>
+                      </inputVars>
+                      <documentation>
+                        <xhtml xmlns="http://www.w3.org/1999/xhtml">Illustrative method of the pattern</xhtml>
+                      </documentation>
+                    </interface>
+                    <body>
+                      <ST>
+                        <xhtml xmlns="http://www.w3.org/1999/xhtml">//The ProxyToSingleton object handles the request and send the appropiate reques to the one and only RealSingleton instance
+THIS^.realSingleton^.Set_Background(newBackground);
+</xhtml>
+                      </ST>
+                    </body>
+                    <InterfaceAsPlainText>
+                      <xhtml xmlns="http://www.w3.org/1999/xhtml">///Illustrative method of the pattern
+METHOD Set_Background
+VAR_INPUT
+	///HEX value to be set as background color
+	newBackground: DWORD;
+END_VAR
+</xhtml>
+                    </InterfaceAsPlainText>
+                    <addData />
+                  </Method>
+                </data>
+                <data name="http://www.3s-software.com/plcopenxml/interfaceasplaintext" handleUnknown="implementation">
+                  <InterfaceAsPlainText>
+                    <xhtml xmlns="http://www.w3.org/1999/xhtml">///This class is called ProxyToSingleton because it works as a Proxy of the Singleton class. It handles the creation and instanciation of the 
+/// RealSingleton class. Something like the proper static method GetInstance(); in any singleton pattern.
+///So the ProxyToSingleton class has a static Singleton object as a field and whenever we instanciate a 
+/// ProxyToSingleton object we will have the RealSingleton object as its static field .realSingleton^
+{attribute 'enable_dynamic_creation' := ''}
+FUNCTION_BLOCK ProxyToSingleton IMPLEMENTS Proxy_Interface
+VAR_STAT
+	///Boolean value to check if there is already a Singleton instance
+	bFirstInstance: BOOL := FALSE;
+	///Pointer to the first and only instance of the Singleton class
+	realSingleton: POINTER TO RealSingleton;
+END_VAR
+</xhtml>
+                  </InterfaceAsPlainText>
+                </data>
+                <data name="http://www.3s-software.com/plcopenxml/objectid" handleUnknown="discard">
+                  <ObjectId>000d93eb-557f-4d99-bea8-b5334451eb1a</ObjectId>
+                </data>
+              </addData>
+            </pou>
+          </data>
+          <data name="http://www.3s-software.com/plcopenxml/libraries" handleUnknown="implementation">
+            <Libraries>
+              <Library Name="#Tc2_Standard" Namespace="Tc2_Standard" HideWhenReferencedAsDependency="false" PublishSymbolsInContainer="false" SystemLibrary="false" LinkAllContent="false" DefaultResolution="Tc2_Standard, * (Beckhoff Automation GmbH)" />
+              <Library Name="#Tc2_System" Namespace="Tc2_System" HideWhenReferencedAsDependency="false" PublishSymbolsInContainer="false" SystemLibrary="false" LinkAllContent="false" DefaultResolution="Tc2_System, * (Beckhoff Automation GmbH)">
+                <Parameters>
+                  <Parameter Name="PARAM.TABLE_UPPER_BOUND" Value="15" />
+                  <Parameter Name="PARAM.STRING_LENGTH_EXP" Value="255" />
+                  <Parameter Name="PARAM.STRING_LENGTH_ADDRESS" Value="20" />
+                  <Parameter Name="PARAM.STRING_LENGTH_COMMENT" Value="255" />
+                  <Parameter Name="PARAM.STRING_LENGTH_OUTSTRING" Value="255" />
+                  <Parameter Name="PARAM.TABLE_SHOW_VALID_ITEMS" Value="FALSE" />
+                </Parameters>
+              </Library>
+              <Library Name="#Tc3_Module" Namespace="Tc3_Module" HideWhenReferencedAsDependency="false" PublishSymbolsInContainer="false" SystemLibrary="false" LinkAllContent="false" DefaultResolution="Tc3_Module, * (Beckhoff Automation GmbH)" />
+              <Library Name="VisuSymbols, 3.5.10.0 (System)" Namespace="VisuSymbols" HideWhenReferencedAsDependency="false" PublishSymbolsInContainer="false" SystemLibrary="false" LinkAllContent="false" />
+              <Library Name="#System_VisuElemMeter" Namespace="VisuElemMeter" HideWhenReferencedAsDependency="false" PublishSymbolsInContainer="false" SystemLibrary="true" LinkAllContent="false" DefaultResolution="VisuElemMeter, 3.5.13.0 (System)" ResolverGuid="2717eb6a-dd07-4c66-8d8d-cacebd7b18ae" />
+              <Library Name="#System_VisuElems" Namespace="VisuElems" HideWhenReferencedAsDependency="false" PublishSymbolsInContainer="false" SystemLibrary="true" LinkAllContent="false" DefaultResolution="VisuElems, 3.5.13.40 (System)" ResolverGuid="2717eb6a-dd07-4c66-8d8d-cacebd7b18ae" />
+              <Library Name="#System_VisuElemsSpecialControls" Namespace="VisuElemsSpecialControls" HideWhenReferencedAsDependency="false" PublishSymbolsInContainer="false" SystemLibrary="true" LinkAllContent="false" DefaultResolution="VisuElemsSpecialControls, 3.5.13.0 (System)" ResolverGuid="2717eb6a-dd07-4c66-8d8d-cacebd7b18ae" />
+              <Library Name="#System_VisuElemsWinControls" Namespace="VisuElemsWinControls" HideWhenReferencedAsDependency="false" PublishSymbolsInContainer="false" SystemLibrary="true" LinkAllContent="false" DefaultResolution="VisuElemsWinControls, 3.5.13.20 (System)" ResolverGuid="2717eb6a-dd07-4c66-8d8d-cacebd7b18ae" />
+              <Library Name="#System_VisuElemTextEditor" Namespace="VisuElemTextEditor" HideWhenReferencedAsDependency="false" PublishSymbolsInContainer="false" SystemLibrary="true" LinkAllContent="false" DefaultResolution="VisuElemTextEditor, 3.5.13.0 (System)" ResolverGuid="2717eb6a-dd07-4c66-8d8d-cacebd7b18ae" />
+              <Library Name="#System_VisuNativeControl" Namespace="VisuNativeControl" HideWhenReferencedAsDependency="false" PublishSymbolsInContainer="false" SystemLibrary="true" LinkAllContent="false" DefaultResolution="VisuNativeControl, 3.5.13.0 (System)" ResolverGuid="2717eb6a-dd07-4c66-8d8d-cacebd7b18ae" />
+              <Library Name="#system_visuinputs" Namespace="visuinputs" HideWhenReferencedAsDependency="false" PublishSymbolsInContainer="false" SystemLibrary="true" LinkAllContent="false" DefaultResolution="visuinputs, 3.5.13.0 (system)" ResolverGuid="2717eb6a-dd07-4c66-8d8d-cacebd7b18ae" />
+              <addData>
+                <data name="http://www.3s-software.com/plcopenxml/objectid" handleUnknown="discard">
+                  <ObjectId>2f24f499-efa6-4efb-bc3f-d7d7a5b41914</ObjectId>
+                </data>
+              </addData>
+            </Libraries>
+          </data>
+          <data name="http://www.3s-software.com/plcopenxml/objectid" handleUnknown="discard">
+            <ObjectId>d5c46f95-63d4-4881-9198-ea49231ab957</ObjectId>
+          </data>
+        </addData>
+      </resource>
+    </data>
+    <data name="http://www.3s-software.com/plcopenxml/projectstructure" handleUnknown="discard">
+      <ProjectStructure>
+        <Object Name="Singleton1" ObjectId="d5c46f95-63d4-4881-9198-ea49231ab957">
+          <Object Name="Library Manager" ObjectId="2f24f499-efa6-4efb-bc3f-d7d7a5b41914" />
+          <Object Name="PlcTask" ObjectId="6719d18c-6e67-4a32-b09c-ec248de5221a" />
+          <Folder Name="POUs">
+            <Object Name="MAIN" ObjectId="dd2bc031-e22f-479e-9dc1-3d0d549dcdeb" />
+          </Folder>
+          <Object Name="PLC_PRG" ObjectId="ee8f0b82-eb89-4497-8659-92c0e02b251d" />
+          <Object Name="RealSingleton" ObjectId="63f62198-a68d-4704-95f1-a4bf90c1e139">
+            <Object Name="fb_init" ObjectId="0c763367-d442-4046-a44f-c91f95391b46" />
+            <Object Name="Set_Background" ObjectId="b54156f8-45dd-49da-875b-271f7909a23e" />
+          </Object>
+          <Object Name="ProxyToSingleton" ObjectId="000d93eb-557f-4d99-bea8-b5334451eb1a">
+            <Object Name="fb_init" ObjectId="978af0dd-6855-457a-b863-ec8254bd9626" />
+            <Object Name="Set_Background" ObjectId="be9791f6-6f7a-4fa7-a3fa-ac0ad133b2bb" />
+          </Object>
+          <Object Name="Proxy_Interface" ObjectId="c09f41ed-8388-4fa5-846b-482111779151">
+            <Object Name="Set_Background" ObjectId="0b61ddc6-a83a-488f-9e3c-0f6b2e254ece" />
+          </Object>
+          <Object Name="E_Color" ObjectId="187cab3c-9d5d-4b15-87e5-3aa7745b6b59" />
+        </Object>
+      </ProjectStructure>
+    </data>
+  </addData>
+</project>

@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.12">
+  <POU Name="ProxyToSingleton" Id="{000d93eb-557f-4d99-bea8-b5334451eb1a}" SpecialFunc="None">
+    <Declaration><![CDATA[///This class is called ProxyToSingleton because it works as a Proxy of the Singleton class. It handles the creation and instanciation of the 
+/// RealSingleton class. Something like the proper static method GetInstance(); in any singleton pattern.
+///So the ProxyToSingleton class has a static Singleton object as a field and whenever we instanciate a 
+/// ProxyToSingleton object we will have the RealSingleton object as its static field .realSingleton^
+{attribute 'enable_dynamic_creation' := ''}
+FUNCTION_BLOCK ProxyToSingleton IMPLEMENTS Proxy_Interface
+VAR_STAT
+	///Boolean value to check if there is already a Singleton instance
+	bFirstInstance: BOOL := FALSE;
+	///Pointer to the first and only instance of the Singleton class
+	realSingleton: POINTER TO RealSingleton;
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[]]></ST>
+    </Implementation>
+    <Method Name="fb_init" Id="{978af0dd-6855-457a-b863-ec8254bd9626}">
+      <Declaration><![CDATA[METHOD fb_init
+VAR_INPUT
+	/// TRUE: the Retain-variables are initialized (reset warm / reset cold)
+	bInitRetains: BOOL;
+	/// TRUE  the instance will be copied to the copy-code afterward (online change)
+	bInCopyCode: BOOL;
+END_VAR
+]]></Declaration>
+      <Implementation>
+        <ST><![CDATA[//THIS FUNCTION WORKS AS THE CONSTRUCTOR OF THE ProxyToSingleton CLASS
+// It handles the creation of the only RealSingleton object. It uses the concept of lazy instanciation.
+
+//If the static property .bFirstInstance is TRUE
+IF THIS^.bFirstInstance = TRUE
+	
+THEN
+		//There is already a Singleton object.
+		//So we don't have to do anything, this new ProxyToSingleton object will already have the address of the 
+		// RealSingleton object in its pointer .realSingleton
+	
+	ELSE	//If the static property .bFirstInstance is FALSE
+	
+		//There is not a Singleton object so the ProxyToSingleton object calling the constructor 
+		// should create the RealSingleton object in its pointer field .realSingleton 
+		//Then we change the status of the static variable bFirstInstance to TRUE and avoid overwriting the realSingleton address.
+		//If the Singleton object is destroyed, .bFirstInstance should be set to FALSE again.
+		THIS^.bFirstInstance := TRUE;
+		
+		//Reference the value of the first RealSingleton instance to the FakeSingleton object to save 
+		// the address of the real Singleton instance.
+		THIS^.realSingleton := __NEW(RealSingleton);
+END_IF]]></ST>
+      </Implementation>
+    </Method>
+    <Method Name="Set_Background" Id="{be9791f6-6f7a-4fa7-a3fa-ac0ad133b2bb}">
+      <Declaration><![CDATA[///Illustrative method of the pattern
+METHOD Set_Background
+VAR_INPUT
+	///HEX value to be set as background color
+	newBackground: DWORD;
+END_VAR
+]]></Declaration>
+      <Implementation>
+        <ST><![CDATA[//The ProxyToSingleton object handles the request and send the appropiate reques to the one and only RealSingleton instance
+THIS^.realSingleton^.Set_Background(newBackground);
+]]></ST>
+      </Implementation>
+    </Method>
+  </POU>
+</TcPlcObject>
