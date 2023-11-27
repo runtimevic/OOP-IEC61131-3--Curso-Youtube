@@ -131,6 +131,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#links-de-patrones-de-diseno-singleton" class="md-skip">
+          Saltar a contenido
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -1894,6 +1899,17 @@
       
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Patron Singleton
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -1903,6 +1919,41 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#links-de-patrones-de-diseno-singleton" class="md-nav__link">
+    <span class="md-ellipsis">
+      Links de Patrones de Diseño Singleton:
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#link-al-video-de-youtube_39" class="md-nav__link">
+    <span class="md-ellipsis">
+      Link al Video de Youtube_39:
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -2689,6 +2740,32 @@
   
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#links-de-patrones-de-diseno-singleton" class="md-nav__link">
+    <span class="md-ellipsis">
+      Links de Patrones de Diseño Singleton:
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#link-al-video-de-youtube_39" class="md-nav__link">
+    <span class="md-ellipsis">
+      Link al Video de Youtube_39:
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -2705,18 +2782,48 @@
 
   <h1>Patron Singleton</h1>
 
-
+<ul>
+<li>👉<a href="https://refactoring.guru/design-patterns/singleton">**Singleton</a> es un patrón de diseño creacional que le permite garantizar que una clase tenga solo una instancia, al tiempo que proporciona un punto de acceso global a esta instancia.</li>
+</ul>
+<p>El diagrama de clases UML del Patrón Creacional Singleton es el siguiente:
+<img alt="Design_Pattern__Creational_Singleton" src="../../../imagenes/Design_Pattern_Creational_Singleton.png" /></p>
+<ul>
+<li>
+<p>La clase Singleton declara el método estático getInstance que devuelve la misma instancia de su propia clase.</p>
+</li>
+<li>
+<p>El constructor de Singleton debe estar oculto en el código del cliente. Llamar al getInstance método debería ser la única forma de obtener el objeto Singleton.</p>
+</li>
+</ul>
+<hr />
+<p>Implementación de Singleton ejemplo practico en TwinCAT 3:
+<img alt="Design_Pattern__Creational_Singleton1" src="../../../imagenes/Design_Pattern__Creational_Singleton1.JPG" /></p>
+<hr />
+<h3 id="links-de-patrones-de-diseno-singleton"><span style="color:grey">Links de Patrones de Diseño Singleton:</span></h3>
+<ul>
+<li>
+<p>🔗 <a href="https://github.com/Aliazzzz/Applied-Design-Patterns-in-CODESYS-V3">github.com,Aliazzzz,Applied-Design-Patterns-in-CODESYS-V3</a></p>
+</li>
+<li>
+<p>🔗 <a href="https://refactoring.guru/design-patterns/singleton">refactoring.guru, singleton</a></p>
+</li>
+</ul>
+<hr />
+<h3 id="link-al-video-de-youtube_39"><span style="color:grey">Link al Video de Youtube_39:</span></h3>
+<ul>
+<li>🔗 <a href="">Singleton Design Pattern Youtube</a></li>
+</ul>
 
   <hr>
 <div class="md-source-file">
   <small>
     
       Última actualización:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">November 26, 2023 19:37:15</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">November 27, 2023 10:44:14</span>
       
         <br>
         Creado:
-        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">November 26, 2023 19:37:15</span>
+        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">November 27, 2023 10:44:14</span>
       
     
   </small>
