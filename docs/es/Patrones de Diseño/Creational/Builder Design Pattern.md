@@ -13,6 +13,8 @@ Implementación 2 de Builder ejemplo practico en TwinCAT 3:
 ### <span style="color:grey">Links de Patrones de Diseño Método de Fábrica:</span>
 - 🔗 [github.com,Aliazzzz,Applied-Design-Patterns-in-CODESYS-V3](https://github.com/Aliazzzz/Applied-Design-Patterns-in-CODESYS-V3)
 
+- 🔗 [0w8States/PLC-Design-Patterns](https://github.com/0w8States/PLC-Design-Patterns)
+
 - 🔗 [refactoring.guru, builder](https://refactoring.guru/design-patterns/builder)
 ***
 ### <span style="color:grey">Link al Video de Youtube_37:</span>

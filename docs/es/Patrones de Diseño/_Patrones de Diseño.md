@@ -152,6 +152,7 @@ Por ejemplo, imagine que tiene un sistema de archivos, donde los archivos y los 
 - 🔗 [sourcemaking.com/design_patterns](https://sourcemaking.com/design_patterns)
 - 🔗 [Coding Together ES, Patrones de Diseño](https://www.youtube.com/playlist?list=PLAjsCEoMYsgVOD6YfwISbIo9XCDrLGxYC)
 - 🔗 [medium.com, design-patterns](https://medium.com/@lucas.and227/design-patterns-in-c-f3a86cd3e57a)
+- 🔗 [8 Design Patterns EVERY Developer Should Know](https://www.youtube.com/watch?v=tAuRQs_d9F8)
 ***
 ### <span style="color:grey">Link al Video de Youtube_34:</span>
 - 🔗 [034 - OOP IEC 61131-3 PLC -- Patrones de Diseño - Introducción](https://youtu.be/vjWoPhHb6K0)

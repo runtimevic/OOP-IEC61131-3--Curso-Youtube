@@ -121,7 +121,6 @@ markdown_extensions:
   - admonition
   - pymdownx.details
   - pymdownx.superfences
-  - admonition
   - pymdownx.inlinehilite
   - pymdownx.snippets
   - pymdownx.superfences:
@@ -224,5 +223,6 @@ nav:
           - Pruebas Integracion: TDD/Integration Test.md
        - Simulacion:
           - Simulacion: CI_CD/Simulacion.md
-    - Links OOP: links.md          
+    - Links OOP: links.md
+    - test_mkdocs: test_mkdocs.md       
  
