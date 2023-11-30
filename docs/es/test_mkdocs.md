@@ -1,4 +1,4 @@
-- https://squidfunk.github.io/mkdocs-material/reference/admonitions/
+- [admonitions](https://squidfunk.github.io/mkdocs-material/reference/admonitions/)
 
 ***
 !!! info inline end "Lorem ipsum"
