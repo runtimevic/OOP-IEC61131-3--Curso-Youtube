@@ -4,11 +4,12 @@
     <Declaration><![CDATA[///This is the concrete builder class, reponsible for building the final product object
 FUNCTION_BLOCK ConcreteBuilder IMPLEMENTS ITF_Builder
 VAR
-	///Holds an internal reference to how the final product shoud be so the builder class can build it on the fly 
-	/// without any help from other classes exepting the Director class that is going to be passing the special
-	///specifications to the builder.
+	///Holds an internal reference to how the final product shoud be so the builder class can build it on the fly /// Contiene una referencia interna sobre cómo debe ser el producto final para que la clase constructora pueda construirlo sobre la marcha.
+	/// without any help from other classes exepting the Director class that is going to be passing the special /// sin ninguna ayuda de otras clases excepto la clase Director que va a pasar el especial
+	///specifications to the builder.///especificaciones para el constructor.
 	localProduct: Product;
 	///Stores the specifications, sent by the client, of the final product to be built.
+	///Almacena las especificaciones, enviadas por el cliente, del producto final a construir.
 	specifications: ARRAY[1..4] OF STRING;
 END_VAR
 ]]></Declaration>

@@ -10,7 +10,7 @@ Implementación 1 de Builder ejemplo practico en TwinCAT 3:
 Implementación 2 de Builder ejemplo practico en TwinCAT 3:
 ![Design_Pattern__Creational_Builder2](../../imagenes/Design_Pattern__Creational_Builder2.JPG)
 ***
-### <span style="color:grey">Links de Patrones de Diseño Método de Fábrica:</span>
+### <span style="color:grey">Links de Patrones de Diseño Builder:</span>
 - 🔗 [github.com,Aliazzzz,Applied-Design-Patterns-in-CODESYS-V3](https://github.com/Aliazzzz/Applied-Design-Patterns-in-CODESYS-V3)
 
 - 🔗 [0w8States/PLC-Design-Patterns](https://github.com/0w8States/PLC-Design-Patterns)
@@ -18,4 +18,4 @@ Implementación 2 de Builder ejemplo practico en TwinCAT 3:
 - 🔗 [refactoring.guru, builder](https://refactoring.guru/design-patterns/builder)
 ***
 ### <span style="color:grey">Link al Video de Youtube_37:</span>
-- 🔗 [Builder Design Pattern Youtube]()
+- 🔗 [Builder Design Pattern Youtube](https://youtu.be/lYHHAKN07-s)

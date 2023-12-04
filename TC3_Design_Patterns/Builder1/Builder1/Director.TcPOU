@@ -7,17 +7,20 @@
 FUNCTION_BLOCK Director
 VAR_INPUT
 	///Reference to the builder that is going to be building the final product object.
+	///Referencia al constructor que construirá el objeto del producto final.
 	{attribute 'old_input_assignments' := ''}
 	inputConcreteBuilder: ConcreteBuilder(specs := inputConcreteBuilder.specifications);
 END_VAR
 VAR
 	///Holds a reference to the concrete builder object to send the specifications of the final product to it.
+	/// Contiene una referencia al objeto constructor concreto para enviarle las especificaciones del producto final
 	{attribute 'old_input_assignments' := ''}
 	concreteBuilder: ConcreteBuilder(specs := THIS^.concreteBuilder.specifications);
 END_VAR
 ]]></Declaration>
     <Implementation>
       <ST><![CDATA[//Stores the reference to which builder will be building the final product object in its own field THIS^.concreteBuilder
+//Almacena la referencia a qué constructor construirá el objeto del producto final en su propio campo THIS^.concreteBuilder
 THIS^.concreteBuilder := inputConcreteBuilder;]]></ST>
     </Implementation>
     <Method Name="Construct" Id="{d97b768c-51f3-48ff-9224-56991961062d}">
@@ -38,6 +41,7 @@ THIS^.concreteBuilder.Set_Part2(THIS^.concreteBuilder.specifications[3]);
 THIS^.concreteBuilder.Set_Part3(THIS^.concreteBuilder.specifications[4]);
 
 //Finally the concreteBuilder instance in the Director object delivers the final result as a Product object
+//Finalmente, la instancia de concreteBuilder en el objeto Director entrega el resultado final como un objeto Producto
 Construct := THIS^.concreteBuilder.Get_Result();]]></ST>
       </Implementation>
     </Method>

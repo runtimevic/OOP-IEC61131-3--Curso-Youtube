@@ -31,7 +31,7 @@
                   <v n="AttributeConstraint">""</v>
                   <v n="AttributeReturnType">"ARRAY [1..3] OF STRING"</v>
                   <v n="AttributeParent">{10798435-1903-4f9e-a949-2e7c2ff1c848}</v>
-                  <v n="AttributeObjectGuid">{15f2e27e-c7f3-4109-867d-6acd09126f74}</v>
+                  <v n="AttributeObjectGuid">{d40fccfc-63c6-4508-aac5-67cfa6d77b55}</v>
                   <v n="AttributeStereotype">""</v>
                 </o>
                 <o>
@@ -45,7 +45,7 @@
                   <v n="AttributeConstraint">""</v>
                   <v n="AttributeReturnType">"ARRAY [1..3] OF STRING"</v>
                   <v n="AttributeParent">{10798435-1903-4f9e-a949-2e7c2ff1c848}</v>
-                  <v n="AttributeObjectGuid">{7b6013d3-3251-4f40-a5d3-ba08683c6730}</v>
+                  <v n="AttributeObjectGuid">{40cf4202-7bb0-4e7a-b7bf-1e07226d013b}</v>
                   <v n="AttributeStereotype">""</v>
                 </o>
                 <o>
@@ -59,7 +59,7 @@
                   <v n="AttributeConstraint">""</v>
                   <v n="AttributeReturnType">"ARRAY [1..3] OF STRING"</v>
                   <v n="AttributeParent">{10798435-1903-4f9e-a949-2e7c2ff1c848}</v>
-                  <v n="AttributeObjectGuid">{5c5ddea7-c7e8-4bd2-a90a-3688cf25e0cb}</v>
+                  <v n="AttributeObjectGuid">{57215467-740f-4092-8111-98e0d4da4b0f}</v>
                   <v n="AttributeStereotype">""</v>
                 </o>
                 <o>
@@ -73,7 +73,7 @@
                   <v n="AttributeConstraint">""</v>
                   <v n="AttributeReturnType">"ARRAY [1..3] OF STRING"</v>
                   <v n="AttributeParent">{10798435-1903-4f9e-a949-2e7c2ff1c848}</v>
-                  <v n="AttributeObjectGuid">{e04e40c0-0897-44c8-9063-1c0a3bf6310a}</v>
+                  <v n="AttributeObjectGuid">{039cfc6a-af38-41a4-bd67-de41c1e9840b}</v>
                   <v n="AttributeStereotype">""</v>
                 </o>
                 <o>
@@ -87,7 +87,7 @@
                   <v n="AttributeConstraint">""</v>
                   <v n="AttributeReturnType">"ARRAY [1..4] OF STRING"</v>
                   <v n="AttributeParent">{10798435-1903-4f9e-a949-2e7c2ff1c848}</v>
-                  <v n="AttributeObjectGuid">{3541c41f-67e7-482e-a799-57fa7ce8bf07}</v>
+                  <v n="AttributeObjectGuid">{2090a3a8-fa47-46e8-89d0-1e4a3cf9d2c1}</v>
                   <v n="AttributeStereotype">""</v>
                 </o>
                 <o>
@@ -101,7 +101,7 @@
                   <v n="AttributeConstraint">""</v>
                   <v n="AttributeReturnType">"BOOL"</v>
                   <v n="AttributeParent">{10798435-1903-4f9e-a949-2e7c2ff1c848}</v>
-                  <v n="AttributeObjectGuid">{ed98d5a2-821b-4389-9ae0-e9e66c0304a2}</v>
+                  <v n="AttributeObjectGuid">{f365478f-de77-4bed-a51e-34b5f15fef76}</v>
                   <v n="AttributeStereotype">""</v>
                 </o>
                 <o>
@@ -115,7 +115,7 @@
                   <v n="AttributeConstraint">""</v>
                   <v n="AttributeReturnType">"INT"</v>
                   <v n="AttributeParent">{10798435-1903-4f9e-a949-2e7c2ff1c848}</v>
-                  <v n="AttributeObjectGuid">{92a288fc-170c-4cbe-96f9-985d5bba5da9}</v>
+                  <v n="AttributeObjectGuid">{c72772d2-efb3-4753-8bd0-98004129e7fa}</v>
                   <v n="AttributeStereotype">""</v>
                 </o>
                 <o>
@@ -129,7 +129,7 @@
                   <v n="AttributeConstraint">""</v>
                   <v n="AttributeReturnType">"BOOL"</v>
                   <v n="AttributeParent">{10798435-1903-4f9e-a949-2e7c2ff1c848}</v>
-                  <v n="AttributeObjectGuid">{763e08c5-c908-425b-9a5e-0bd6f154cc12}</v>
+                  <v n="AttributeObjectGuid">{c783e50f-1c20-404d-a71d-867ada1e3bfb}</v>
                   <v n="AttributeStereotype">""</v>
                 </o>
                 <o>
@@ -143,7 +143,7 @@
                   <v n="AttributeConstraint">""</v>
                   <v n="AttributeReturnType">"INT"</v>
                   <v n="AttributeParent">{10798435-1903-4f9e-a949-2e7c2ff1c848}</v>
-                  <v n="AttributeObjectGuid">{c33f0965-15b5-49f2-ac58-f75be1e06a11}</v>
+                  <v n="AttributeObjectGuid">{a90c11d4-caaf-454e-8b0f-85f163c4f991}</v>
                   <v n="AttributeStereotype">""</v>
                 </o>
                 <o>
@@ -157,7 +157,7 @@
                   <v n="AttributeConstraint">""</v>
                   <v n="AttributeReturnType">"BOOL"</v>
                   <v n="AttributeParent">{10798435-1903-4f9e-a949-2e7c2ff1c848}</v>
-                  <v n="AttributeObjectGuid">{9d0c9833-4241-4866-95da-a7520a5b58ed}</v>
+                  <v n="AttributeObjectGuid">{ba905f0e-3db1-4fca-8ab7-6109549344f9}</v>
                   <v n="AttributeStereotype">""</v>
                 </o>
                 <o>
@@ -171,7 +171,7 @@
                   <v n="AttributeConstraint">""</v>
                   <v n="AttributeReturnType">"INT"</v>
                   <v n="AttributeParent">{10798435-1903-4f9e-a949-2e7c2ff1c848}</v>
-                  <v n="AttributeObjectGuid">{3d4231d6-4f6d-41fb-8c72-f2e88b7fbf57}</v>
+                  <v n="AttributeObjectGuid">{7de0fccd-df23-4e83-bf92-902410933013}</v>
                   <v n="AttributeStereotype">""</v>
                 </o>
                 <o>
@@ -185,7 +185,7 @@
                   <v n="AttributeConstraint">""</v>
                   <v n="AttributeReturnType">"BOOL"</v>
                   <v n="AttributeParent">{10798435-1903-4f9e-a949-2e7c2ff1c848}</v>
-                  <v n="AttributeObjectGuid">{b8ef4d10-a045-4e3e-85f2-5d95ad1b1619}</v>
+                  <v n="AttributeObjectGuid">{992b713d-2f2c-4bc9-b63c-cf9d5af16560}</v>
                   <v n="AttributeStereotype">""</v>
                 </o>
                 <o>
@@ -199,7 +199,7 @@
                   <v n="AttributeConstraint">""</v>
                   <v n="AttributeReturnType">"INT"</v>
                   <v n="AttributeParent">{10798435-1903-4f9e-a949-2e7c2ff1c848}</v>
-                  <v n="AttributeObjectGuid">{209eccdf-8c9b-41c9-825c-98e17d38b114}</v>
+                  <v n="AttributeObjectGuid">{b5937957-d08b-42ec-a58b-a9d70a471c57}</v>
                   <v n="AttributeStereotype">""</v>
                 </o>
                 <o>
@@ -213,7 +213,7 @@
                   <v n="AttributeConstraint">""</v>
                   <v n="AttributeReturnType">"BOOL"</v>
                   <v n="AttributeParent">{10798435-1903-4f9e-a949-2e7c2ff1c848}</v>
-                  <v n="AttributeObjectGuid">{6e6f54cb-2d9a-453d-b4c6-b6d7782a698e}</v>
+                  <v n="AttributeObjectGuid">{74094cb1-e70b-433a-aa1e-773ff5938eaf}</v>
                   <v n="AttributeStereotype">""</v>
                 </o>
                 <o>
@@ -225,9 +225,9 @@
                   <v n="bIsMethod">false</v>
                   <v n="AttribtueName">"sMessageLog"</v>
                   <v n="AttributeConstraint">""</v>
-                  <v n="AttributeReturnType">"STRING"</v>
+                  <v n="AttributeReturnType">"STRING(500)"</v>
                   <v n="AttributeParent">{10798435-1903-4f9e-a949-2e7c2ff1c848}</v>
-                  <v n="AttributeObjectGuid">{eafa6d11-d0e9-4bc3-960f-7dc31a143336}</v>
+                  <v n="AttributeObjectGuid">{185f384e-c11a-4c98-bc5f-ff45fb323dcd}</v>
                   <v n="AttributeStereotype">""</v>
                 </o>
                 <o>
@@ -241,7 +241,7 @@
                   <v n="AttributeConstraint">""</v>
                   <v n="AttributeReturnType">"POINTER TO Product"</v>
                   <v n="AttributeParent">{10798435-1903-4f9e-a949-2e7c2ff1c848}</v>
-                  <v n="AttributeObjectGuid">{4705813a-04c9-4e5a-9f34-9bc6e329b17e}</v>
+                  <v n="AttributeObjectGuid">{41277ccf-b1eb-469d-98a8-6a6ab2eacfe2}</v>
                   <v n="AttributeStereotype">""</v>
                 </o>
                 <o>
@@ -255,7 +255,7 @@
                   <v n="AttributeConstraint">""</v>
                   <v n="AttributeReturnType">"ConcreteBuilder"</v>
                   <v n="AttributeParent">{10798435-1903-4f9e-a949-2e7c2ff1c848}</v>
-                  <v n="AttributeObjectGuid">{bdad86f9-f8f5-4cb9-9593-66498039ac86}</v>
+                  <v n="AttributeObjectGuid">{60061be9-7ca0-4e81-861e-310f3e38693a}</v>
                   <v n="AttributeStereotype">""</v>
                 </o>
                 <o>
@@ -269,7 +269,7 @@
                   <v n="AttributeConstraint">""</v>
                   <v n="AttributeReturnType">"Director"</v>
                   <v n="AttributeParent">{10798435-1903-4f9e-a949-2e7c2ff1c848}</v>
-                  <v n="AttributeObjectGuid">{79a4d27f-1647-47ad-97d2-80155f49c396}</v>
+                  <v n="AttributeObjectGuid">{d022512d-424d-47b4-9d80-01dfd76514f1}</v>
                   <v n="AttributeStereotype">""</v>
                 </o>
               </l>
@@ -344,7 +344,7 @@
                   <v n="AttributeConstraint">""</v>
                   <v n="AttributeReturnType">"STRING"</v>
                   <v n="AttributeParent">{4a46e5f6-684f-4ae6-bb41-07238e530749}</v>
-                  <v n="AttributeObjectGuid">{ebe58d26-2ea0-4a90-b952-0fbd1492a2c6}</v>
+                  <v n="AttributeObjectGuid">{40b74d98-f212-42d2-bb5d-0ebf8dab02a9}</v>
                   <v n="AttributeStereotype">""</v>
                 </o>
                 <o>
@@ -358,7 +358,7 @@
                   <v n="AttributeConstraint">""</v>
                   <v n="AttributeReturnType">"STRING"</v>
                   <v n="AttributeParent">{4a46e5f6-684f-4ae6-bb41-07238e530749}</v>
-                  <v n="AttributeObjectGuid">{11f227ad-ea49-4329-854b-730d171518ac}</v>
+                  <v n="AttributeObjectGuid">{78e00904-7ef2-4c93-8477-8f4925a0e24b}</v>
                   <v n="AttributeStereotype">""</v>
                 </o>
                 <o>
@@ -372,7 +372,7 @@
                   <v n="AttributeConstraint">""</v>
                   <v n="AttributeReturnType">"STRING"</v>
                   <v n="AttributeParent">{4a46e5f6-684f-4ae6-bb41-07238e530749}</v>
-                  <v n="AttributeObjectGuid">{2b4f8b0c-ea89-4fd0-8a72-ae9948c5bcb2}</v>
+                  <v n="AttributeObjectGuid">{3fe4a5e8-fff7-4272-8d07-68472283eadc}</v>
                   <v n="AttributeStereotype">""</v>
                 </o>
                 <o>
@@ -386,7 +386,7 @@
                   <v n="AttributeConstraint">""</v>
                   <v n="AttributeReturnType">"STRING"</v>
                   <v n="AttributeParent">{4a46e5f6-684f-4ae6-bb41-07238e530749}</v>
-                  <v n="AttributeObjectGuid">{e2203672-8a07-4b75-a70d-d83dd96338ed}</v>
+                  <v n="AttributeObjectGuid">{f9435b0a-75bd-4e22-8719-a1a708f21796}</v>
                   <v n="AttributeStereotype">""</v>
                 </o>
               </l>
@@ -474,7 +474,7 @@
                   <v n="AttributeConstraint">""</v>
                   <v n="AttributeReturnType">"Product"</v>
                   <v n="AttributeParent">{57001512-b379-4132-90b7-d2b34d8d495f}</v>
-                  <v n="AttributeObjectGuid">{9222ace0-3e61-40ea-a81e-4e6f6fd86871}</v>
+                  <v n="AttributeObjectGuid">{7fd289c4-de8b-4d83-98d8-b6d2993d7d8e}</v>
                   <v n="AttributeStereotype">""</v>
                 </o>
               </l>
@@ -686,7 +686,7 @@
                   <v n="AttributeConstraint">""</v>
                   <v n="AttributeReturnType">"ConcreteBuilder"</v>
                   <v n="AttributeParent">{60936e0a-7d72-4dde-818a-2656b969da4d}</v>
-                  <v n="AttributeObjectGuid">{41b8dcf9-b407-4267-a816-f0bdf06b4b23}</v>
+                  <v n="AttributeObjectGuid">{9f6627bc-296a-4ee7-8749-4d77a2212996}</v>
                   <v n="AttributeStereotype">""</v>
                 </o>
                 <o>
@@ -700,7 +700,7 @@
                   <v n="AttributeConstraint">""</v>
                   <v n="AttributeReturnType">"ARRAY [1..4] OF STRING"</v>
                   <v n="AttributeParent">{60936e0a-7d72-4dde-818a-2656b969da4d}</v>
-                  <v n="AttributeObjectGuid">{7c0a116a-6238-44f2-a9a3-b0fcb0ede801}</v>
+                  <v n="AttributeObjectGuid">{cd7e8d48-f3d0-4f4b-a116-13bc07f7f87f}</v>
                   <v n="AttributeStereotype">""</v>
                 </o>
                 <o>
@@ -714,7 +714,7 @@
                   <v n="AttributeConstraint">""</v>
                   <v n="AttributeReturnType">"ARRAY [1..4] OF STRING"</v>
                   <v n="AttributeParent">{60936e0a-7d72-4dde-818a-2656b969da4d}</v>
-                  <v n="AttributeObjectGuid">{cab403e2-ed47-417c-80e9-faef78324572}</v>
+                  <v n="AttributeObjectGuid">{b7eb29a5-9f9a-4d93-8e5e-a2aee44e8f9f}</v>
                   <v n="AttributeStereotype">""</v>
                 </o>
               </l>
@@ -1542,7 +1542,7 @@
           </o>
           <v n="IsFastStateDiagram">false</v>
           <l n="StereoTypeProfile" t="ArrayList" />
-          <v n="RelationRoleID">12</v>
+          <v n="RelationRoleID">18</v>
           <d n="PositionSerialization" t="Hashtable" />
         </o>
       </Data>

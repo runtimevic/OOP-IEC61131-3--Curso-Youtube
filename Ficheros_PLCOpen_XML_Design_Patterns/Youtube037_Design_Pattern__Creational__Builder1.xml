@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <project xmlns="http://www.plcopen.org/xml/tc6_0200">
-  <fileHeader companyName="Beckhoff Automation GmbH" productName="TwinCAT PLC Control" productVersion="3.5.13.21" creationDateTime="2023-11-26T20:29:44.8119296" />
-  <contentHeader name="Builder1" modificationDateTime="2023-11-26T20:29:44.8165596">
+  <fileHeader companyName="Beckhoff Automation GmbH" productName="TwinCAT PLC Control" productVersion="3.5.13.21" creationDateTime="2023-12-04T13:03:45.3100449" />
+  <contentHeader name="Builder1" modificationDateTime="2023-12-04T13:03:45.3159009">
     <coordinateInfo>
       <fbd>
         <scaling x="1" y="1" />
@@ -179,9 +179,9 @@ INTERFACE ITF_Builder
                       <derived name="Product" />
                     </type>
                     <documentation>
-                      <xhtml xmlns="http://www.w3.org/1999/xhtml">Holds an internal reference to how the final product shoud be so the builder class can build it on the fly 
- without any help from other classes exepting the Director class that is going to be passing the special
-specifications to the builder.</xhtml>
+                      <xhtml xmlns="http://www.w3.org/1999/xhtml">Holds an internal reference to how the final product shoud be so the builder class can build it on the fly /// Contiene una referencia interna sobre cómo debe ser el producto final para que la clase constructora pueda construirlo sobre la marcha.
+ without any help from other classes exepting the Director class that is going to be passing the special /// sin ninguna ayuda de otras clases excepto la clase Director que va a pasar el especial
+specifications to the builder.///especificaciones para el constructor.</xhtml>
                     </documentation>
                   </variable>
                   <variable name="specifications">
@@ -194,7 +194,8 @@ specifications to the builder.</xhtml>
                       </array>
                     </type>
                     <documentation>
-                      <xhtml xmlns="http://www.w3.org/1999/xhtml">Stores the specifications, sent by the client, of the final product to be built.</xhtml>
+                      <xhtml xmlns="http://www.w3.org/1999/xhtml">Stores the specifications, sent by the client, of the final product to be built.
+Almacena las especificaciones, enviadas por el cliente, del producto final a construir.</xhtml>
                     </documentation>
                   </variable>
                 </localVars>
@@ -551,11 +552,12 @@ END_VAR
                     <xhtml xmlns="http://www.w3.org/1999/xhtml">///This is the concrete builder class, reponsible for building the final product object
 FUNCTION_BLOCK ConcreteBuilder IMPLEMENTS ITF_Builder
 VAR
-	///Holds an internal reference to how the final product shoud be so the builder class can build it on the fly 
-	/// without any help from other classes exepting the Director class that is going to be passing the special
-	///specifications to the builder.
+	///Holds an internal reference to how the final product shoud be so the builder class can build it on the fly /// Contiene una referencia interna sobre cómo debe ser el producto final para que la clase constructora pueda construirlo sobre la marcha.
+	/// without any help from other classes exepting the Director class that is going to be passing the special /// sin ninguna ayuda de otras clases excepto la clase Director que va a pasar el especial
+	///specifications to the builder.///especificaciones para el constructor.
 	localProduct: Product;
 	///Stores the specifications, sent by the client, of the final product to be built.
+	///Almacena las especificaciones, enviadas por el cliente, del producto final a construir.
 	specifications: ARRAY[1..4] OF STRING;
 END_VAR
 </xhtml>
@@ -591,7 +593,8 @@ END_VAR
                       </data>
                     </addData>
                     <documentation>
-                      <xhtml xmlns="http://www.w3.org/1999/xhtml">Reference to the builder that is going to be building the final product object.</xhtml>
+                      <xhtml xmlns="http://www.w3.org/1999/xhtml">Reference to the builder that is going to be building the final product object.
+Referencia al constructor que construirá el objeto del producto final.</xhtml>
                     </documentation>
                   </variable>
                 </inputVars>
@@ -616,7 +619,8 @@ END_VAR
                       </data>
                     </addData>
                     <documentation>
-                      <xhtml xmlns="http://www.w3.org/1999/xhtml">Holds a reference to the concrete builder object to send the specifications of the final product to it.</xhtml>
+                      <xhtml xmlns="http://www.w3.org/1999/xhtml">Holds a reference to the concrete builder object to send the specifications of the final product to it.
+ Contiene una referencia al objeto constructor concreto para enviarle las especificaciones del producto final</xhtml>
                     </documentation>
                   </variable>
                 </localVars>
@@ -635,6 +639,7 @@ END_VAR
               <body>
                 <ST>
                   <xhtml xmlns="http://www.w3.org/1999/xhtml">//Stores the reference to which builder will be building the final product object in its own field THIS^.concreteBuilder
+//Almacena la referencia a qué constructor construirá el objeto del producto final en su propio campo THIS^.concreteBuilder
 THIS^.concreteBuilder := inputConcreteBuilder;</xhtml>
                 </ST>
               </body>
@@ -664,6 +669,7 @@ THIS^.concreteBuilder.Set_Part2(THIS^.concreteBuilder.specifications[3]);
 THIS^.concreteBuilder.Set_Part3(THIS^.concreteBuilder.specifications[4]);
 
 //Finally the concreteBuilder instance in the Director object delivers the final result as a Product object
+//Finalmente, la instancia de concreteBuilder en el objeto Director entrega el resultado final como un objeto Producto
 Construct := THIS^.concreteBuilder.Get_Result();</xhtml>
                       </ST>
                     </body>
@@ -795,11 +801,13 @@ END_VAR
 FUNCTION_BLOCK Director
 VAR_INPUT
 	///Reference to the builder that is going to be building the final product object.
+	///Referencia al constructor que construirá el objeto del producto final.
 	{attribute 'old_input_assignments' := ''}
 	inputConcreteBuilder: ConcreteBuilder(specs := inputConcreteBuilder.specifications);
 END_VAR
 VAR
 	///Holds a reference to the concrete builder object to send the specifications of the final product to it.
+	/// Contiene una referencia al objeto constructor concreto para enviarle las especificaciones del producto final
 	{attribute 'old_input_assignments' := ''}
 	concreteBuilder: ConcreteBuilder(specs := THIS^.concreteBuilder.specifications);
 END_VAR
@@ -1067,7 +1075,7 @@ END_VAR
                   </variable>
                   <variable name="sMessageLog">
                     <type>
-                      <string />
+                      <string length="500" />
                     </type>
                     <initialValue>
                       <simpleValue value="'Waiting for your request'" />
@@ -1233,7 +1241,7 @@ IF bRequest
 		1:	sMessageLog := 'Your red car is being built';
 			//A new product object is created on demand
 			prod := __NEW(Product);
-			//The directo object receives the ConcreteBuilder object to be used based on the clients choice
+			//The director object receives the ConcreteBuilder object to be used based on the clients choice
 			aDirector(inputConcreteBuilder := concreteBuilder1);
 			//The Product object request the construction to the Director.
 			prod^ := aDirector.Construct();
@@ -1248,7 +1256,7 @@ IF bRequest
 		2:	sMessageLog := 'Your black car is being built';
 			//A new product object is created on demand
 			prod := __NEW(Product);
-			//The directo object receives the ConcreteBuilder object to be used based on the clients choice
+			//The director object receives the ConcreteBuilder object to be used based on the clients choice
 			aDirector(inputConcreteBuilder := concreteBuilder2);
 			//The Product object request the construction to the Director.
 			prod^ := aDirector.Construct();
@@ -1263,7 +1271,7 @@ IF bRequest
 		3: sMessageLog := 'Your white car is being built';
 			//A new product object is created on demand
 			prod := __NEW(Product);
-			//The directo object receives the ConcreteBuilder object to be used based on the clients choice
+			//The director object receives the ConcreteBuilder object to be used based on the clients choice
 			aDirector(inputConcreteBuilder := concreteBuilder3);
 			//The Product object request the construction to the Director.
 			prod^ := aDirector.Construct();
@@ -1296,7 +1304,7 @@ VAR
 	///Special array for the visualization element
 	tableArray: ARRAY[1..4, 1..3] OF STRING := ['Red Chassis', 'Black Chassis', 'White Chassis', 'Sedan', 'Hatchback', 'Sport', 'Motor 1.4cc', 'Motor 2.0cc', 'Motor 2.5cc', 'Aluminium tires', 'Chrome plated tires', 'Ligth aluminium tires'];
 	///String variable to interact and respond to the client in the visualization element
-	sMessageLog: STRING := 'Waiting for your request';
+	sMessageLog: STRING(500) := 'Waiting for your request';
 	///Boolean value to react to a clients request
 	bRequest: BOOL := FALSE;
 	///Boolean and integer values to receive data from the tables in the visualization element
@@ -1331,6 +1339,13 @@ END_VAR
           </data>
           <data name="http://www.3s-software.com/plcopenxml/libraries" handleUnknown="implementation">
             <Libraries>
+              <Library Name="#System_VisuElemMeter" Namespace="VisuElemMeter" HideWhenReferencedAsDependency="false" PublishSymbolsInContainer="false" SystemLibrary="true" LinkAllContent="false" DefaultResolution="VisuElemMeter, 3.5.13.0 (System)" ResolverGuid="2717eb6a-dd07-4c66-8d8d-cacebd7b18ae" />
+              <Library Name="#System_VisuElems" Namespace="VisuElems" HideWhenReferencedAsDependency="false" PublishSymbolsInContainer="false" SystemLibrary="true" LinkAllContent="false" DefaultResolution="VisuElems, 3.5.13.40 (System)" ResolverGuid="2717eb6a-dd07-4c66-8d8d-cacebd7b18ae" />
+              <Library Name="#System_VisuElemsSpecialControls" Namespace="VisuElemsSpecialControls" HideWhenReferencedAsDependency="false" PublishSymbolsInContainer="false" SystemLibrary="true" LinkAllContent="false" DefaultResolution="VisuElemsSpecialControls, 3.5.13.0 (System)" ResolverGuid="2717eb6a-dd07-4c66-8d8d-cacebd7b18ae" />
+              <Library Name="#System_VisuElemsWinControls" Namespace="VisuElemsWinControls" HideWhenReferencedAsDependency="false" PublishSymbolsInContainer="false" SystemLibrary="true" LinkAllContent="false" DefaultResolution="VisuElemsWinControls, 3.5.13.20 (System)" ResolverGuid="2717eb6a-dd07-4c66-8d8d-cacebd7b18ae" />
+              <Library Name="#System_VisuElemTextEditor" Namespace="VisuElemTextEditor" HideWhenReferencedAsDependency="false" PublishSymbolsInContainer="false" SystemLibrary="true" LinkAllContent="false" DefaultResolution="VisuElemTextEditor, 3.5.13.0 (System)" ResolverGuid="2717eb6a-dd07-4c66-8d8d-cacebd7b18ae" />
+              <Library Name="#system_visuinputs" Namespace="visuinputs" HideWhenReferencedAsDependency="false" PublishSymbolsInContainer="false" SystemLibrary="true" LinkAllContent="false" DefaultResolution="visuinputs, 3.5.13.0 (system)" ResolverGuid="2717eb6a-dd07-4c66-8d8d-cacebd7b18ae" />
+              <Library Name="#System_VisuNativeControl" Namespace="VisuNativeControl" HideWhenReferencedAsDependency="false" PublishSymbolsInContainer="false" SystemLibrary="true" LinkAllContent="false" DefaultResolution="VisuNativeControl, 3.5.13.0 (System)" ResolverGuid="2717eb6a-dd07-4c66-8d8d-cacebd7b18ae" />
               <Library Name="#Tc2_Standard" Namespace="Tc2_Standard" HideWhenReferencedAsDependency="false" PublishSymbolsInContainer="false" SystemLibrary="false" LinkAllContent="false" DefaultResolution="Tc2_Standard, * (Beckhoff Automation GmbH)" />
               <Library Name="#Tc2_System" Namespace="Tc2_System" HideWhenReferencedAsDependency="false" PublishSymbolsInContainer="false" SystemLibrary="false" LinkAllContent="false" DefaultResolution="Tc2_System, * (Beckhoff Automation GmbH)">
                 <Parameters>
@@ -1344,13 +1359,6 @@ END_VAR
               </Library>
               <Library Name="#Tc3_Module" Namespace="Tc3_Module" HideWhenReferencedAsDependency="false" PublishSymbolsInContainer="false" SystemLibrary="false" LinkAllContent="false" DefaultResolution="Tc3_Module, * (Beckhoff Automation GmbH)" />
               <Library Name="VisuSymbols, 3.5.10.0 (System)" Namespace="VisuSymbols" HideWhenReferencedAsDependency="false" PublishSymbolsInContainer="false" SystemLibrary="false" LinkAllContent="false" />
-              <Library Name="#System_VisuElemMeter" Namespace="VisuElemMeter" HideWhenReferencedAsDependency="false" PublishSymbolsInContainer="false" SystemLibrary="true" LinkAllContent="false" DefaultResolution="VisuElemMeter, 3.5.13.0 (System)" ResolverGuid="2717eb6a-dd07-4c66-8d8d-cacebd7b18ae" />
-              <Library Name="#System_VisuElems" Namespace="VisuElems" HideWhenReferencedAsDependency="false" PublishSymbolsInContainer="false" SystemLibrary="true" LinkAllContent="false" DefaultResolution="VisuElems, 3.5.13.40 (System)" ResolverGuid="2717eb6a-dd07-4c66-8d8d-cacebd7b18ae" />
-              <Library Name="#System_VisuElemsSpecialControls" Namespace="VisuElemsSpecialControls" HideWhenReferencedAsDependency="false" PublishSymbolsInContainer="false" SystemLibrary="true" LinkAllContent="false" DefaultResolution="VisuElemsSpecialControls, 3.5.13.0 (System)" ResolverGuid="2717eb6a-dd07-4c66-8d8d-cacebd7b18ae" />
-              <Library Name="#System_VisuElemsWinControls" Namespace="VisuElemsWinControls" HideWhenReferencedAsDependency="false" PublishSymbolsInContainer="false" SystemLibrary="true" LinkAllContent="false" DefaultResolution="VisuElemsWinControls, 3.5.13.20 (System)" ResolverGuid="2717eb6a-dd07-4c66-8d8d-cacebd7b18ae" />
-              <Library Name="#System_VisuElemTextEditor" Namespace="VisuElemTextEditor" HideWhenReferencedAsDependency="false" PublishSymbolsInContainer="false" SystemLibrary="true" LinkAllContent="false" DefaultResolution="VisuElemTextEditor, 3.5.13.0 (System)" ResolverGuid="2717eb6a-dd07-4c66-8d8d-cacebd7b18ae" />
-              <Library Name="#System_VisuNativeControl" Namespace="VisuNativeControl" HideWhenReferencedAsDependency="false" PublishSymbolsInContainer="false" SystemLibrary="true" LinkAllContent="false" DefaultResolution="VisuNativeControl, 3.5.13.0 (System)" ResolverGuid="2717eb6a-dd07-4c66-8d8d-cacebd7b18ae" />
-              <Library Name="#system_visuinputs" Namespace="visuinputs" HideWhenReferencedAsDependency="false" PublishSymbolsInContainer="false" SystemLibrary="true" LinkAllContent="false" DefaultResolution="visuinputs, 3.5.13.0 (system)" ResolverGuid="2717eb6a-dd07-4c66-8d8d-cacebd7b18ae" />
               <addData>
                 <data name="http://www.3s-software.com/plcopenxml/objectid" handleUnknown="discard">
                   <ObjectId>2e53fbfe-8451-4f05-9061-5d660db86c6d</ObjectId>
@@ -1367,7 +1375,7 @@ END_VAR
     <data name="http://www.3s-software.com/plcopenxml/projectstructure" handleUnknown="discard">
       <ProjectStructure>
         <Object Name="Builder1" ObjectId="03a7b99f-6507-4aca-a444-439205226ff4">
-          <Object Name="Library Manager" ObjectId="2e53fbfe-8451-4f05-9061-5d660db86c6d" />
+          <Object Name="Administrador de bibliotecas" ObjectId="2e53fbfe-8451-4f05-9061-5d660db86c6d" />
           <Object Name="ConcreteBuilder" ObjectId="b8460dc0-86aa-4ac1-b552-70b1eb5e82d2">
             <Object Name="fb_init" ObjectId="285337ea-f8ae-468f-a35e-d4c54afa691a" />
             <Object Name="Get_Main_Part" ObjectId="0fcd98b9-6591-41a6-9227-07f56dc4fb36" />

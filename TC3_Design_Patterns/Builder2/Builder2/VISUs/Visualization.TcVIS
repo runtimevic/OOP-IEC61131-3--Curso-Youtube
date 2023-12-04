@@ -427,7 +427,7 @@ The bottom rectangle will handle all posible responses from the application to t
                 <v n="VisualElementIdentifier">"GenElemInst_7"</v>
                 <n n="VisualElementOfflinePaintCommands" />
                 <n n="VisualElementFrameInformation" />
-                <d n="VisualElementInputActions" t="Hashtable" ckt="String" cvt="IInputAction[]">
+                <d n="VisualElementInputActions" t="Hashtable" ckt="String" cvt="ToggleVarInputAction[]">
                   <v>OnMouseClick</v>
                   <a cet="ToggleVarInputAction">
                     <o>
@@ -539,7 +539,7 @@ The bottom rectangle will handle all posible responses from the application to t
                     </o>
                     <o>
                       <v n="Id">2422045748L</v>
-                      <v n="Value">947</v>
+                      <v n="Value">944</v>
                     </o>
                     <o>
                       <v n="Id">2134141914L</v>
@@ -700,7 +700,7 @@ The bottom rectangle will handle all posible responses from the application to t
                     </o>
                     <o>
                       <v n="Id">2422045748L</v>
-                      <v n="Value">948</v>
+                      <v n="Value">945</v>
                     </o>
                     <o>
                       <v n="Id">2134141914L</v>
@@ -3667,7 +3667,6 @@ The bottom rectangle will handle all posible responses from the application to t
         <Type n="Guid">System.Guid</Type>
         <Type n="Hashtable">System.Collections.Hashtable</Type>
         <Type n="HotkeyConfiguration">{6b108d46-58af-4e41-a3f4-174d8f160cc4}</Type>
-        <Type n="IInputAction[]">_3S.CoDeSys.VisualElem.IInputAction[], VisualElem, Version=3.5.13.0, Culture=neutral, PublicKeyToken=null</Type>
         <Type n="Int16">System.Int16</Type>
         <Type n="Int32">System.Int32</Type>
         <Type n="Int64">System.Int64</Type>
@@ -3678,6 +3677,7 @@ The bottom rectangle will handle all posible responses from the application to t
         <Type n="TextDocument">{f3878285-8e4f-490b-bb1b-9acbb7eb04db}</Type>
         <Type n="TextLine">{a5de0b0b-1cb5-4913-ac21-9d70293ec00d}</Type>
         <Type n="ToggleVarInputAction">{9dcc475d-e53e-4dd3-abd9-995bf52d466f}</Type>
+        <Type n="ToggleVarInputAction[]">_3S.CoDeSys.VisualElem.ToggleVarInputAction[], VisualElem.plugin, Version=3.5.13.32, Culture=neutral, PublicKeyToken=null</Type>
         <Type n="TypeClass">{16f7aa24-038f-444e-9d81-b001bc091d35}</Type>
         <Type n="TypeNodeAttributes2">{c1464dbe-c10d-4717-be8f-63efe8638434}</Type>
         <Type n="TypeNodeType">{b12a9636-e818-4598-ae0d-fb6a2446102c}</Type>

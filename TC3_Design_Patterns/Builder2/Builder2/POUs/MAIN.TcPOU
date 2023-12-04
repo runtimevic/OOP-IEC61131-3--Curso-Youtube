@@ -33,7 +33,7 @@ VAR
 	///Boolean value to verify and respond to a client's request
 	bRequest: BOOL := FALSE;
 	///String variable to interact and respond to the client in the visualization element
-	sMessageLog: STRING := 'Waiting for your request';
+	sMessageLog: STRING(500) := 'Waiting for your request';
 	///A pointer to Poduct to dynamically create and delete product objects at the clients requests
 	prod: POINTER TO Product;
 	///A ConcreteBuilder instance to be passed to the Director and build the final Product objects

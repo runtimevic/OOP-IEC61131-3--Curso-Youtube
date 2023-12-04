@@ -2,10 +2,10 @@
 
 Hola,
 Seguimos con el curso de 👩‍💻 OOP IEC 61131-3 PLC 👨‍💻,
-ya esta disponible el Video numero 36 de Youtube:
-en este video veremos: Patrones de Diseño (Design Patterns)- Factory Abstract.
+ya esta disponible el Video numero 37 de Youtube:
+en este video veremos: Patrones de Diseño (Design Patterns) - Builder.
 
-👉 https://youtu.be/YKSCzbzmOMU
+👉 https://youtu.be/lYHHAKN07-s
 
 🐙 Repositorio de GitHub:
 - 👉 https://github.com/runtimevic/OOP-IEC61131-3--Curso-Youtube
@@ -54,7 +54,7 @@ Lista de Videos del Curso OOP Programación Orientada a Objetos IEC61131-3 PLC:
 - 034 - https://youtu.be/vjWoPhHb6K0
 - 035 - https://youtu.be/jDiO6LqCqzo
 - 036 - https://youtu.be/YKSCzbzmOMU
-- 037 -
+- 037 - https://youtu.be/lYHHAKN07-s
 - 038 -
 - 039 -
 

@@ -10,7 +10,7 @@ VAR
 	///Special array for the visualization element
 	tableArray: ARRAY[1..4, 1..3] OF STRING := ['Red Chassis', 'Black Chassis', 'White Chassis', 'Sedan', 'Hatchback', 'Sport', 'Motor 1.4cc', 'Motor 2.0cc', 'Motor 2.5cc', 'Aluminium tires', 'Chrome plated tires', 'Ligth aluminium tires'];
 	///String variable to interact and respond to the client in the visualization element
-	sMessageLog: STRING := 'Waiting for your request';
+	sMessageLog: STRING(500) := 'Waiting for your request';
 	///Boolean value to react to a clients request
 	bRequest: BOOL := FALSE;
 	///Boolean and integer values to receive data from the tables in the visualization element
@@ -55,7 +55,7 @@ IF bRequest
 		1:	sMessageLog := 'Your red car is being built';
 			//A new product object is created on demand
 			prod := __NEW(Product);
-			//The directo object receives the ConcreteBuilder object to be used based on the clients choice
+			//The director object receives the ConcreteBuilder object to be used based on the clients choice
 			aDirector(inputConcreteBuilder := concreteBuilder1);
 			//The Product object request the construction to the Director.
 			prod^ := aDirector.Construct();
@@ -70,7 +70,7 @@ IF bRequest
 		2:	sMessageLog := 'Your black car is being built';
 			//A new product object is created on demand
 			prod := __NEW(Product);
-			//The directo object receives the ConcreteBuilder object to be used based on the clients choice
+			//The director object receives the ConcreteBuilder object to be used based on the clients choice
 			aDirector(inputConcreteBuilder := concreteBuilder2);
 			//The Product object request the construction to the Director.
 			prod^ := aDirector.Construct();
@@ -85,7 +85,7 @@ IF bRequest
 		3: sMessageLog := 'Your white car is being built';
 			//A new product object is created on demand
 			prod := __NEW(Product);
-			//The directo object receives the ConcreteBuilder object to be used based on the clients choice
+			//The director object receives the ConcreteBuilder object to be used based on the clients choice
 			aDirector(inputConcreteBuilder := concreteBuilder3);
 			//The Product object request the construction to the Director.
 			prod^ := aDirector.Construct();
