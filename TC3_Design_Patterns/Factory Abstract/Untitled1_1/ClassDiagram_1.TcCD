@@ -31,7 +31,7 @@
                   <v n="AttributeConstraint">""</v>
                   <v n="AttributeReturnType">"POINTER TO FB_ColorCreator"</v>
                   <v n="AttributeParent">{0d12df5a-5750-4039-9b2e-51655fafb43a}</v>
-                  <v n="AttributeObjectGuid">{8f818583-d110-4b02-bf03-f91dd3bd5de5}</v>
+                  <v n="AttributeObjectGuid">{5fd91b72-8b19-4f2e-ba84-7d7992972113}</v>
                   <v n="AttributeStereotype">""</v>
                 </o>
                 <o>
@@ -45,7 +45,7 @@
                   <v n="AttributeConstraint">""</v>
                   <v n="AttributeReturnType">"POINTER TO FB_ShapeCreator"</v>
                   <v n="AttributeParent">{0d12df5a-5750-4039-9b2e-51655fafb43a}</v>
-                  <v n="AttributeObjectGuid">{a962b5eb-a17d-4736-a84f-ec2828a1499d}</v>
+                  <v n="AttributeObjectGuid">{401005f8-0452-4e8f-bd71-3ef0160c3d4d}</v>
                   <v n="AttributeStereotype">""</v>
                 </o>
               </l>
@@ -317,7 +317,7 @@
                   <v n="AttributeConstraint">""</v>
                   <v n="AttributeReturnType">"E_SHAPE"</v>
                   <v n="AttributeParent">{17effacf-6277-44cc-bc0d-125f0acc75c2}</v>
-                  <v n="AttributeObjectGuid">{96273759-10e1-4160-a8db-0be7cdf07e51}</v>
+                  <v n="AttributeObjectGuid">{fb74f764-7183-41b1-b67e-fa6cada1c3f8}</v>
                   <v n="AttributeStereotype">""</v>
                 </o>
                 <o>
@@ -331,7 +331,7 @@
                   <v n="AttributeConstraint">""</v>
                   <v n="AttributeReturnType">"E_SHAPE"</v>
                   <v n="AttributeParent">{17effacf-6277-44cc-bc0d-125f0acc75c2}</v>
-                  <v n="AttributeObjectGuid">{cbd6dd29-544d-4939-a98c-5649af19bb96}</v>
+                  <v n="AttributeObjectGuid">{6efcaa7e-66f9-44c3-a564-14b0876099c1}</v>
                   <v n="AttributeStereotype">""</v>
                 </o>
                 <o>
@@ -345,7 +345,7 @@
                   <v n="AttributeConstraint">""</v>
                   <v n="AttributeReturnType">"E_SHAPE"</v>
                   <v n="AttributeParent">{17effacf-6277-44cc-bc0d-125f0acc75c2}</v>
-                  <v n="AttributeObjectGuid">{be29ee42-edc2-41e3-9484-f62fd7733be0}</v>
+                  <v n="AttributeObjectGuid">{ff62eee8-158f-4ec5-ad3f-2a2f5ac73ff9}</v>
                   <v n="AttributeStereotype">""</v>
                 </o>
                 <o>
@@ -359,7 +359,7 @@
                   <v n="AttributeConstraint">""</v>
                   <v n="AttributeReturnType">"E_SHAPE"</v>
                   <v n="AttributeParent">{17effacf-6277-44cc-bc0d-125f0acc75c2}</v>
-                  <v n="AttributeObjectGuid">{7db61947-7554-40b6-b018-f84923bd5aae}</v>
+                  <v n="AttributeObjectGuid">{52db7845-d8cd-4955-8ae9-1dd6078f0d02}</v>
                   <v n="AttributeStereotype">""</v>
                 </o>
                 <o>
@@ -373,7 +373,7 @@
                   <v n="AttributeConstraint">""</v>
                   <v n="AttributeReturnType">"E_SHAPE"</v>
                   <v n="AttributeParent">{17effacf-6277-44cc-bc0d-125f0acc75c2}</v>
-                  <v n="AttributeObjectGuid">{5a83127e-bcef-4181-8b7b-5df22891bf91}</v>
+                  <v n="AttributeObjectGuid">{421a6c9b-725a-4f78-9778-1ba26169cf78}</v>
                   <v n="AttributeStereotype">""</v>
                 </o>
                 <o>
@@ -387,7 +387,7 @@
                   <v n="AttributeConstraint">""</v>
                   <v n="AttributeReturnType">"E_SHAPE"</v>
                   <v n="AttributeParent">{17effacf-6277-44cc-bc0d-125f0acc75c2}</v>
-                  <v n="AttributeObjectGuid">{5bf2022e-406f-4405-8a1b-5c370d695616}</v>
+                  <v n="AttributeObjectGuid">{10042d25-2418-4a64-9d25-2fbbc664c839}</v>
                   <v n="AttributeStereotype">""</v>
                 </o>
                 <o>
@@ -401,7 +401,7 @@
                   <v n="AttributeConstraint">""</v>
                   <v n="AttributeReturnType">"E_SHAPE"</v>
                   <v n="AttributeParent">{17effacf-6277-44cc-bc0d-125f0acc75c2}</v>
-                  <v n="AttributeObjectGuid">{391ad83c-3886-47ba-b8b7-29125329fb32}</v>
+                  <v n="AttributeObjectGuid">{dc145b8f-7b64-4362-aefe-94b9ea8bb28b}</v>
                   <v n="AttributeStereotype">""</v>
                 </o>
                 <o>
@@ -415,7 +415,7 @@
                   <v n="AttributeConstraint">""</v>
                   <v n="AttributeReturnType">"E_SHAPE"</v>
                   <v n="AttributeParent">{17effacf-6277-44cc-bc0d-125f0acc75c2}</v>
-                  <v n="AttributeObjectGuid">{0b185b53-6620-469c-934e-6ca42d00c61c}</v>
+                  <v n="AttributeObjectGuid">{9ee53e74-addb-4c77-b15c-ef78ab8cce6d}</v>
                   <v n="AttributeStereotype">""</v>
                 </o>
               </l>
@@ -1407,7 +1407,7 @@
                   <v n="AttributeConstraint">""</v>
                   <v n="AttributeReturnType">"POINTER TO FB_CustomShape"</v>
                   <v n="AttributeParent">{93f27fe8-d1f0-42c5-bf70-f6fa273e98d5}</v>
-                  <v n="AttributeObjectGuid">{e20d6277-de01-4f43-8f9b-b5b2a3f83a5b}</v>
+                  <v n="AttributeObjectGuid">{592f7a3c-bdab-46ec-94d6-540b257abe5d}</v>
                   <v n="AttributeStereotype">""</v>
                 </o>
               </l>
@@ -1568,7 +1568,7 @@
                   <v n="AttributeConstraint">""</v>
                   <v n="AttributeReturnType">"E_FACTORY"</v>
                   <v n="AttributeParent">{e8225ab9-6d10-4e62-847c-87c982845f7e}</v>
-                  <v n="AttributeObjectGuid">{d8932d5c-3b86-401a-b4ba-7008599655ad}</v>
+                  <v n="AttributeObjectGuid">{a987416f-b821-4161-b4d3-bf5339d1011a}</v>
                   <v n="AttributeStereotype">""</v>
                 </o>
                 <o>
@@ -1582,7 +1582,7 @@
                   <v n="AttributeConstraint">""</v>
                   <v n="AttributeReturnType">"E_FACTORY"</v>
                   <v n="AttributeParent">{e8225ab9-6d10-4e62-847c-87c982845f7e}</v>
-                  <v n="AttributeObjectGuid">{86a51ab1-d60a-47f7-9842-1c7fd400347f}</v>
+                  <v n="AttributeObjectGuid">{edbf14c7-d972-471b-b243-85c5ab326d42}</v>
                   <v n="AttributeStereotype">""</v>
                 </o>
                 <o>
@@ -1596,7 +1596,7 @@
                   <v n="AttributeConstraint">""</v>
                   <v n="AttributeReturnType">"E_FACTORY"</v>
                   <v n="AttributeParent">{e8225ab9-6d10-4e62-847c-87c982845f7e}</v>
-                  <v n="AttributeObjectGuid">{bf90b068-1851-4265-8331-ee3be1d44297}</v>
+                  <v n="AttributeObjectGuid">{998c2eaf-c27d-4cdb-9449-a3fe33f17df1}</v>
                   <v n="AttributeStereotype">""</v>
                 </o>
                 <o>
@@ -1610,7 +1610,7 @@
                   <v n="AttributeConstraint">""</v>
                   <v n="AttributeReturnType">"E_FACTORY"</v>
                   <v n="AttributeParent">{e8225ab9-6d10-4e62-847c-87c982845f7e}</v>
-                  <v n="AttributeObjectGuid">{b1e3ad35-a8e2-424a-bc56-cad7e0a6d5cb}</v>
+                  <v n="AttributeObjectGuid">{c5f5d837-1c38-4dff-b9e5-5571d0b065f1}</v>
                   <v n="AttributeStereotype">""</v>
                 </o>
               </l>
@@ -1685,7 +1685,7 @@
                   <v n="AttributeConstraint">""</v>
                   <v n="AttributeReturnType">"FB_FactoryProducer"</v>
                   <v n="AttributeParent">{f3894233-01d0-4f10-bb9f-a3d2750638b3}</v>
-                  <v n="AttributeObjectGuid">{7d73f8d9-4c35-45d8-9f66-4c100d73a385}</v>
+                  <v n="AttributeObjectGuid">{e60c7560-47dd-455b-9219-e1c9c7373487}</v>
                   <v n="AttributeStereotype">""</v>
                 </o>
                 <o>
@@ -1699,7 +1699,7 @@
                   <v n="AttributeConstraint">""</v>
                   <v n="AttributeReturnType">"REFERENCE TO FB_AbstractFactory"</v>
                   <v n="AttributeParent">{f3894233-01d0-4f10-bb9f-a3d2750638b3}</v>
-                  <v n="AttributeObjectGuid">{eaf7e4fe-8f04-4bc7-8511-8bcb27ddb1ca}</v>
+                  <v n="AttributeObjectGuid">{80d00b16-7c3e-4f39-8e88-7625d418a7cd}</v>
                   <v n="AttributeStereotype">""</v>
                 </o>
                 <o>
@@ -1713,7 +1713,7 @@
                   <v n="AttributeConstraint">""</v>
                   <v n="AttributeReturnType">"I_Shape"</v>
                   <v n="AttributeParent">{f3894233-01d0-4f10-bb9f-a3d2750638b3}</v>
-                  <v n="AttributeObjectGuid">{acc75be4-953c-4512-ba7f-00817d5af24a}</v>
+                  <v n="AttributeObjectGuid">{19b51fbc-5c15-4350-86cb-26e16c92a6f9}</v>
                   <v n="AttributeStereotype">""</v>
                 </o>
                 <o>
@@ -1727,7 +1727,7 @@
                   <v n="AttributeConstraint">""</v>
                   <v n="AttributeReturnType">"I_Color"</v>
                   <v n="AttributeParent">{f3894233-01d0-4f10-bb9f-a3d2750638b3}</v>
-                  <v n="AttributeObjectGuid">{2edf5362-b335-4a7f-b5e5-83ad467b87d3}</v>
+                  <v n="AttributeObjectGuid">{7d328d3c-6f40-41e7-b901-29d0d372b8ab}</v>
                   <v n="AttributeStereotype">""</v>
                 </o>
                 <o>
@@ -1741,7 +1741,7 @@
                   <v n="AttributeConstraint">""</v>
                   <v n="AttributeReturnType">"E_Shape"</v>
                   <v n="AttributeParent">{f3894233-01d0-4f10-bb9f-a3d2750638b3}</v>
-                  <v n="AttributeObjectGuid">{ed210042-fe07-4356-8ffd-7a39526547f5}</v>
+                  <v n="AttributeObjectGuid">{ed94b7ad-14ea-49b0-8278-3a58af17cc7e}</v>
                   <v n="AttributeStereotype">""</v>
                 </o>
                 <o>
@@ -1755,7 +1755,7 @@
                   <v n="AttributeConstraint">""</v>
                   <v n="AttributeReturnType">"E_Color"</v>
                   <v n="AttributeParent">{f3894233-01d0-4f10-bb9f-a3d2750638b3}</v>
-                  <v n="AttributeObjectGuid">{15b69ba4-a56b-42f3-8d51-f018c611a5f5}</v>
+                  <v n="AttributeObjectGuid">{47f37baf-47e6-447c-8fff-79a83166454c}</v>
                   <v n="AttributeStereotype">""</v>
                 </o>
                 <o>
@@ -1769,7 +1769,7 @@
                   <v n="AttributeConstraint">""</v>
                   <v n="AttributeReturnType">"BOOL"</v>
                   <v n="AttributeParent">{f3894233-01d0-4f10-bb9f-a3d2750638b3}</v>
-                  <v n="AttributeObjectGuid">{f15f3f4d-a098-4dd7-b97a-aa98e360c670}</v>
+                  <v n="AttributeObjectGuid">{ad69924a-361f-4db4-b367-93c15d6b53fe}</v>
                   <v n="AttributeStereotype">""</v>
                 </o>
                 <o>
@@ -1783,7 +1783,7 @@
                   <v n="AttributeConstraint">""</v>
                   <v n="AttributeReturnType">"BOOL"</v>
                   <v n="AttributeParent">{f3894233-01d0-4f10-bb9f-a3d2750638b3}</v>
-                  <v n="AttributeObjectGuid">{37c966d3-4a13-4aad-8f23-9d950bdf5caf}</v>
+                  <v n="AttributeObjectGuid">{4aa954e1-5c63-4215-a128-0a9dae7db113}</v>
                   <v n="AttributeStereotype">""</v>
                 </o>
               </l>
@@ -1858,7 +1858,7 @@
                   <v n="AttributeConstraint">""</v>
                   <v n="AttributeReturnType">"E_COLOR"</v>
                   <v n="AttributeParent">{f3e7cfd5-a5a2-43c5-bb14-5760c99b6686}</v>
-                  <v n="AttributeObjectGuid">{a09cac53-72e6-459d-8a35-48f003137058}</v>
+                  <v n="AttributeObjectGuid">{b4636136-186b-4655-99ef-94900951e10e}</v>
                   <v n="AttributeStereotype">""</v>
                 </o>
                 <o>
@@ -1872,7 +1872,7 @@
                   <v n="AttributeConstraint">""</v>
                   <v n="AttributeReturnType">"E_COLOR"</v>
                   <v n="AttributeParent">{f3e7cfd5-a5a2-43c5-bb14-5760c99b6686}</v>
-                  <v n="AttributeObjectGuid">{ddbf7912-c4ad-4f1c-902f-3f025d21b614}</v>
+                  <v n="AttributeObjectGuid">{7740c4e6-7300-4d76-a3a5-7335a5db9c56}</v>
                   <v n="AttributeStereotype">""</v>
                 </o>
                 <o>
@@ -1886,7 +1886,7 @@
                   <v n="AttributeConstraint">""</v>
                   <v n="AttributeReturnType">"E_COLOR"</v>
                   <v n="AttributeParent">{f3e7cfd5-a5a2-43c5-bb14-5760c99b6686}</v>
-                  <v n="AttributeObjectGuid">{af789853-f4a3-4c4e-a1a9-145562c156ae}</v>
+                  <v n="AttributeObjectGuid">{87b6abe9-d9db-479a-b521-06f2b7d982a0}</v>
                   <v n="AttributeStereotype">""</v>
                 </o>
                 <o>
@@ -1900,7 +1900,7 @@
                   <v n="AttributeConstraint">""</v>
                   <v n="AttributeReturnType">"E_COLOR"</v>
                   <v n="AttributeParent">{f3e7cfd5-a5a2-43c5-bb14-5760c99b6686}</v>
-                  <v n="AttributeObjectGuid">{c6f86029-d363-4d9b-b984-498da4ece3cd}</v>
+                  <v n="AttributeObjectGuid">{9b8a0dda-d4c3-40fa-b16c-403217228327}</v>
                   <v n="AttributeStereotype">""</v>
                 </o>
                 <o>
@@ -1914,7 +1914,7 @@
                   <v n="AttributeConstraint">""</v>
                   <v n="AttributeReturnType">"E_COLOR"</v>
                   <v n="AttributeParent">{f3e7cfd5-a5a2-43c5-bb14-5760c99b6686}</v>
-                  <v n="AttributeObjectGuid">{c699ca22-68b7-4059-9b25-15bf7916e8ba}</v>
+                  <v n="AttributeObjectGuid">{daebecbd-a962-4423-9f92-fea71ac1baf4}</v>
                   <v n="AttributeStereotype">""</v>
                 </o>
               </l>

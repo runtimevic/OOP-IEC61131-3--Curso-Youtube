@@ -13,7 +13,7 @@
 		</System>
 		<Plc>
 			<Project GUID="{BEEDADD0-F1C8-4681-B422-0493FA23541E}" Name="Builder2" PrjFilePath="Builder2\Builder2.plcproj" TmcFilePath="Builder2\Builder2.tmc" ReloadTmc="true" AmsPort="851" FileArchiveSettings="#x000e" SymbolicMapping="true">
-				<Instance Id="#x08502000" TcSmClass="TComPlcObjDef" KeepUnrestoredLinks="2" TmcPath="Builder2\Builder2.tmc" TmcHash="{0880A0AB-FA46-AEBD-F788-368DB71232A5}">
+				<Instance Id="#x08502000" TcSmClass="TComPlcObjDef" KeepUnrestoredLinks="2" TmcPath="Builder2\Builder2.tmc" TmcHash="{02449B0C-5BBA-5980-050E-AF04CC1E67CE}">
 					<Name>Builder2 Instance</Name>
 					<CLSID ClassFactory="TcPlc30">{08500001-0000-0000-F000-000000000064}</CLSID>
 					<Contexts>

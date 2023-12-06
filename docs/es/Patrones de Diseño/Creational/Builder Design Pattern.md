@@ -4,10 +4,10 @@
 El diagrama de clases UML del Patrón Creacional Builder es el siguiente:
 ![Design_Pattern__Creational_Builder](../../imagenes/Design_Pattern_Creational_Builder.png)
 ***
-Implementación 1 de Builder ejemplo practico en TwinCAT 3:
+Implementación 1 del Patrón de Diseño Creacional Builder, ejemplo practico en TwinCAT 3:
 ![Design_Pattern__Creational_Builder1](../../imagenes/Design_Pattern__Creational_Builder1.JPG)
 ***
-Implementación 2 de Builder ejemplo practico en TwinCAT 3:
+Implementación 2 de Patrón de Diseño Creacional Builder, ejemplo practico en TwinCAT 3:
 ![Design_Pattern__Creational_Builder2](../../imagenes/Design_Pattern__Creational_Builder2.JPG)
 ***
 ### <span style="color:grey">Links de Patrones de Diseño Builder:</span>

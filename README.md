@@ -61,3 +61,5 @@
     - 🔗 [038 - OOP IEC 61131-3 PLC -- Patrones de Diseño - Creacional - Prototipo]()
     - 🔗 [039 - OOP IEC 61131-3 PLC -- Patrones de Diseño - Creacional - Único]()
     - 🔗 [040 - OOP IEC 61131-3 PLC -- Patrones de Diseño -]()
+    - 🔗 [041 - OOP IEC 61131-3 PLC -- Patrones de Diseño -]()
+    - 🔗 [042 - OOP IEC 61131-3 PLC -- Patrones de Diseño -]()
