@@ -20,6 +20,9 @@
     <Compile Include="Circle.TcPOU">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="Class Diagram_3.TcCD">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="ITF_Shape.TcIO">
       <SubType>Code</SubType>
     </Compile>

@@ -10,6 +10,7 @@ VAR
     clonedCircle: ITF_Shape;
 	
 	bRequest : BOOL;
+
 END_VAR
 ]]></Declaration>
     <Implementation>
@@ -19,20 +20,21 @@ END_VAR
 
 
 IF bRequest THEN
-//	originalRectangle.width := 10;
-//	originalRectangle.height := 5;
-//	originalRectangle.Draw();
-//	clonedRectangle := originalRectangle.clone();
-//	clonedRectangle.Draw();
+	
+	originalRectangle.width := 10;
+	originalRectangle.height := 5;
+	originalRectangle.Draw();
+	clonedRectangle := originalRectangle.clone();
+	clonedRectangle.Draw();
 	
 	originalCircle.radius := 7;
-//	originalCircle.Draw();
-//	clonedCircle := originalCircle.clone();
-//	clonedCircle.Draw();
+	originalCircle.Draw();
+	clonedCircle := originalCircle.clone();
+	clonedCircle.Draw();
 		
 	bRequest := FALSE;
 	
-	ADSLOGSTR(msgCtrlMask :=ADSLOG_MSGTYPE_HINT, msgFmtStr :='Draw Rectangle with: ');
+
 END_IF]]></ST>
     </Implementation>
   </POU>

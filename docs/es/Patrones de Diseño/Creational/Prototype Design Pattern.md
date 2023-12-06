@@ -5,7 +5,7 @@ El diagrama de clases UML del Patrón Creacional Prototipo es el siguiente:
 ![Design_Pattern__Creational_Prototype](../../imagenes/Design_Pattern_Creational_Prototype.png)
 ***
 Implementación del patrón de Diseño Creacional Prototipo, ejemplo practico en TwinCAT 3:
-![Design_Pattern__Creational_Prototype1](../../imagenes/Design_Pattern__Creational_Prototype1.JPG)
+![Design_Pattern__Creational_Prototype1](../../imagenes/Design_Pattern__Creational_Prototype.JPG)
 
 ***
 ### <span style="color:grey">Links de Patrones de Diseño Prototipo:</span>
