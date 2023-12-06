@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <project xmlns="http://www.plcopen.org/xml/tc6_0200">
-  <fileHeader companyName="Beckhoff Automation GmbH" productName="TwinCAT PLC Control" productVersion="3.5.13.21" creationDateTime="2023-12-06T16:09:30.7727106" />
-  <contentHeader name="Prototype" modificationDateTime="2023-12-06T16:09:30.7795414">
+  <fileHeader companyName="Beckhoff Automation GmbH" productName="TwinCAT PLC Control" productVersion="3.5.13.21" creationDateTime="2023-12-06T21:18:08.5456594" />
+  <contentHeader name="Prototype" modificationDateTime="2023-12-06T21:18:08.5515158">
     <coordinateInfo>
       <fbd>
         <scaling x="1" y="1" />
@@ -365,6 +365,11 @@ END_VAR
                       <BOOL />
                     </type>
                   </variable>
+                  <variable name="counter">
+                    <type>
+                      <INT />
+                    </type>
+                  </variable>
                 </localVars>
               </interface>
               <body>
@@ -388,8 +393,8 @@ IF bRequest THEN
 	clonedCircle.Draw();
 		
 	bRequest := FALSE;
-	
-
+	counter := counter + 1;
+	ADSLOGSTR(msgCtrlMask :=ADSLOG_MSGTYPE_HINT, msgFmtStr :='test: %s', strArg := TO_STRING(counter));
 END_IF</xhtml>
                 </ST>
               </body>
@@ -405,6 +410,7 @@ VAR
     clonedCircle: ITF_Shape;
 	
 	bRequest : BOOL;
+	counter: INT;
 
 END_VAR
 </xhtml>

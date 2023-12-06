@@ -10,6 +10,7 @@ VAR
     clonedCircle: ITF_Shape;
 	
 	bRequest : BOOL;
+	counter: INT;
 
 END_VAR
 ]]></Declaration>
@@ -33,8 +34,8 @@ IF bRequest THEN
 	clonedCircle.Draw();
 		
 	bRequest := FALSE;
-	
-
+	counter := counter + 1;
+	ADSLOGSTR(msgCtrlMask :=ADSLOG_MSGTYPE_HINT, msgFmtStr :='test: %s', strArg := TO_STRING(counter));
 END_IF]]></ST>
     </Implementation>
   </POU>
