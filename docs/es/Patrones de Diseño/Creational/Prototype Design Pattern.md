@@ -15,6 +15,8 @@ Implementación del patrón de Diseño Creacional Prototipo, ejemplo practico en
 
 - 🔗 [refactoring.guru, prototype](https://refactoring.guru/design-patterns/prototype)
 
+- 🔗 [Aprende los principales patrones de diseño con .NET y C#. Patron Prototype](https://www.youtube.com/watch?v=5-abb_iV3ac)
+
 ***
 ### <span style="color:grey">Link al Video de Youtube_38:</span>
 - 🔗 [Prototype Design Pattern Youtube]()

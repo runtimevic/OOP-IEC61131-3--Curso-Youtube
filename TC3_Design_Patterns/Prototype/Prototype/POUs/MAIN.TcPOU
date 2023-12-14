@@ -19,6 +19,9 @@ END_VAR
 
 // Recuerda que el patrón Prototipo permite crear nuevos objetos clonando un objeto existente, evitando así la necesidad de crear nuevas instancias desde cero.
 
+// porque salen varios mensajes:
+// https://github.com/tcunit/TcUnit/issues/92
+// solución temporal : Unload project...
 
 IF bRequest THEN
 	
