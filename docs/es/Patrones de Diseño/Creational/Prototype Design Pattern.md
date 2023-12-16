@@ -23,4 +23,4 @@ Implementación del patrón de Diseño Creacional Prototipo, ejemplo practico en
 
 ***
 ### <span style="color:grey">Link al Video de Youtube_38:</span>
-- 🔗 [Prototype Design Pattern Youtube]()
+- 🔗 [Prototype Design Pattern Youtube](https://youtu.be/SPrTKD648ng)
