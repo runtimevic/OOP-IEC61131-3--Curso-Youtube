@@ -59,7 +59,7 @@
     - 🔗 [036 - OOP IEC 61131-3 PLC -- Patrones de Diseño - Creacional - Fábrica Abstracta](https://youtu.be/YKSCzbzmOMU)
     - 🔗 [037 - OOP IEC 61131-3 PLC -- Patrones de Diseño - Creacional - Constructor](https://youtu.be/lYHHAKN07-s)
     - 🔗 [038 - OOP IEC 61131-3 PLC -- Patrones de Diseño - Creacional - Prototipo](https://youtu.be/SPrTKD648ng)
-    - 🔗 [039 - OOP IEC 61131-3 PLC -- Patrones de Diseño - Creacional - Único]()
+    - 🔗 [039 - OOP IEC 61131-3 PLC -- Patrones de Diseño - Creacional - Único](https://youtu.be/Y0SI90RvwPc)
     - 🔗 [040 - OOP IEC 61131-3 PLC -- Patrones de Diseño -]()
     - 🔗 [041 - OOP IEC 61131-3 PLC -- Patrones de Diseño -]()
     - 🔗 [042 - OOP IEC 61131-3 PLC -- Patrones de Diseño -]()

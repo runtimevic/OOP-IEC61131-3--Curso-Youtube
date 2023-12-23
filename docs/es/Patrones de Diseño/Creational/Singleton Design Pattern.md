@@ -28,4 +28,4 @@ Implementación de Singleton ejemplo practico en TwinCAT 3:
 - 🔗 [www.youtube.com, Patrones de diseño: Singleton](https://www.youtube.com/watch?v=cNoxcc0ca4I)
 ***
 ### <span style="color:grey">Link al Video de Youtube_39:</span>
-- 🔗 [Singleton Design Pattern Youtube]()
+- 🔗 [Singleton Design Pattern Youtube](https://youtu.be/Y0SI90RvwPc)

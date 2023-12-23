@@ -2,10 +2,10 @@
 
 Hola,
 Seguimos con el curso de 👩‍💻 OOP IEC 61131-3 PLC 👨‍💻,
-ya esta disponible el Video numero 38 de Youtube:
-en este video veremos: Patrones de Diseño (Design Patterns) - Prototype.
+ya esta disponible el Video numero 39 de Youtube:
+en este video veremos: Patrones de Diseño (Design Patterns) - Singleton.
 
-👉 https://youtu.be/SPrTKD648ng
+👉 https://youtu.be/Y0SI90RvwPc
 
 🐙 Repositorio de GitHub:
 - 👉 https://github.com/runtimevic/OOP-IEC61131-3--Curso-Youtube
@@ -56,7 +56,8 @@ Lista de Videos del Curso OOP Programación Orientada a Objetos IEC61131-3 PLC:
 - 036 - https://youtu.be/YKSCzbzmOMU
 - 037 - https://youtu.be/lYHHAKN07-s
 - 038 - https://youtu.be/SPrTKD648ng
-- 039 -
+- 039 - https://youtu.be/Y0SI90RvwPc
+- 040 -
 
 Se busca colaborador para la traducción de la documentación al idioma que desee... 👀
 
