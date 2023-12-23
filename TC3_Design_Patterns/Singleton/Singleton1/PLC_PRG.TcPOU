@@ -21,10 +21,18 @@ VAR
 END_VAR
 ]]></Declaration>
     <Implementation>
-      <ST><![CDATA[//The PLC_PRG handles the instanciation of the possible background colours and the ProxyToSingleton instances in order to be used by the Visualization element.
+      <ST><![CDATA[//*************************************************************************************************************************************************************
+//The PLC_PRG handles the instanciation of the possible background colours and the ProxyToSingleton instances in order to be used by the Visualization element.
 //The viasualization element (The client) handles the request for background change on the RealSingleton object through the ProxyToSinlgeton instances.
 //These request are first processed by the ProxyToSingleton object and then passed to the one and only RealSingleton instance.
 //The default background colour of the RealSingleton object is 'Blue' 
+//*************************************************************************************************************************************************************
+// spanish
+//PLC_PRG maneja la instanciación de los posibles colores de fondo y las instancias de ProxyToSingleton para ser utilizados por el elemento de visualización.
+//El elemento de visualización (el cliente) maneja la solicitud de cambio de fondo en el objeto RealSingleton a través de las instancias de ProxyToSinlgeton.
+//Estas solicitudes son procesadas primero por el objeto ProxyToSingleton y luego pasadas a la única instancia de RealSingleton.
+//El color de fondo predeterminado del objeto RealSingleton es 'Azul'
+//*************************************************************************************************************************************************************
 
 CASE eInstance1 OF
 	E_Color.Blue:

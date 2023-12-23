@@ -1110,7 +1110,7 @@ backgroundColor"</v>
                 <v n="VisualElementIdentifier">"GenElemInst_12"</v>
                 <n n="VisualElementOfflinePaintCommands" />
                 <n n="VisualElementFrameInformation" />
-                <d n="VisualElementInputActions" t="Hashtable" ckt="String" cvt="IInputAction[]">
+                <d n="VisualElementInputActions" t="Hashtable" ckt="String" cvt="STSnippetInputAction[]">
                   <v>OnMouseClick</v>
                   <a cet="STSnippetInputAction">
                     <o>
@@ -1283,7 +1283,7 @@ PLC_PRG.eInstance1 := E_Color.Blue;"</v>
                 <v n="VisualElementIdentifier">"GenElemInst_14"</v>
                 <n n="VisualElementOfflinePaintCommands" />
                 <n n="VisualElementFrameInformation" />
-                <d n="VisualElementInputActions" t="Hashtable" ckt="String" cvt="IInputAction[]">
+                <d n="VisualElementInputActions" t="Hashtable" ckt="String" cvt="STSnippetInputAction[]">
                   <v>OnMouseClick</v>
                   <a cet="STSnippetInputAction">
                     <o>
@@ -1456,7 +1456,7 @@ PLC_PRG.eInstance1 := E_Color.Yellow;"</v>
                 <v n="VisualElementIdentifier">"GenElemInst_16"</v>
                 <n n="VisualElementOfflinePaintCommands" />
                 <n n="VisualElementFrameInformation" />
-                <d n="VisualElementInputActions" t="Hashtable" ckt="String" cvt="IInputAction[]">
+                <d n="VisualElementInputActions" t="Hashtable" ckt="String" cvt="STSnippetInputAction[]">
                   <v>OnMouseClick</v>
                   <a cet="STSnippetInputAction">
                     <o>
@@ -1629,7 +1629,7 @@ PLC_PRG.eInstance1 := E_Color.Green;"</v>
                 <v n="VisualElementIdentifier">"GenElemInst_18"</v>
                 <n n="VisualElementOfflinePaintCommands" />
                 <n n="VisualElementFrameInformation" />
-                <d n="VisualElementInputActions" t="Hashtable" ckt="String" cvt="IInputAction[]">
+                <d n="VisualElementInputActions" t="Hashtable" ckt="String" cvt="STSnippetInputAction[]">
                   <v>OnMouseClick</v>
                   <a cet="STSnippetInputAction">
                     <o>
@@ -1802,7 +1802,7 @@ PLC_PRG.eInstance2 := E_Color.Blue;"</v>
                 <v n="VisualElementIdentifier">"GenElemInst_20"</v>
                 <n n="VisualElementOfflinePaintCommands" />
                 <n n="VisualElementFrameInformation" />
-                <d n="VisualElementInputActions" t="Hashtable" ckt="String" cvt="IInputAction[]">
+                <d n="VisualElementInputActions" t="Hashtable" ckt="String" cvt="STSnippetInputAction[]">
                   <v>OnMouseClick</v>
                   <a cet="STSnippetInputAction">
                     <o>
@@ -1975,7 +1975,7 @@ PLC_PRG.eInstance2 := E_Color.Yellow;"</v>
                 <v n="VisualElementIdentifier">"GenElemInst_22"</v>
                 <n n="VisualElementOfflinePaintCommands" />
                 <n n="VisualElementFrameInformation" />
-                <d n="VisualElementInputActions" t="Hashtable" ckt="String" cvt="IInputAction[]">
+                <d n="VisualElementInputActions" t="Hashtable" ckt="String" cvt="STSnippetInputAction[]">
                   <v>OnMouseClick</v>
                   <a cet="STSnippetInputAction">
                     <o>
@@ -2148,7 +2148,7 @@ PLC_PRG.eInstance2 := E_Color.Green;"</v>
                 <v n="VisualElementIdentifier">"GenElemInst_24"</v>
                 <n n="VisualElementOfflinePaintCommands" />
                 <n n="VisualElementFrameInformation" />
-                <d n="VisualElementInputActions" t="Hashtable" ckt="String" cvt="IInputAction[]">
+                <d n="VisualElementInputActions" t="Hashtable" ckt="String" cvt="STSnippetInputAction[]">
                   <v>OnMouseClick</v>
                   <a cet="STSnippetInputAction">
                     <o>
@@ -2321,7 +2321,7 @@ PLC_PRG.eInstance3 := E_Color.Blue;"</v>
                 <v n="VisualElementIdentifier">"GenElemInst_26"</v>
                 <n n="VisualElementOfflinePaintCommands" />
                 <n n="VisualElementFrameInformation" />
-                <d n="VisualElementInputActions" t="Hashtable" ckt="String" cvt="IInputAction[]">
+                <d n="VisualElementInputActions" t="Hashtable" ckt="String" cvt="STSnippetInputAction[]">
                   <v>OnMouseClick</v>
                   <a cet="STSnippetInputAction">
                     <o>
@@ -2494,7 +2494,7 @@ PLC_PRG.eInstance3 := E_Color.Yellow;"</v>
                 <v n="VisualElementIdentifier">"GenElemInst_28"</v>
                 <n n="VisualElementOfflinePaintCommands" />
                 <n n="VisualElementFrameInformation" />
-                <d n="VisualElementInputActions" t="Hashtable" ckt="String" cvt="IInputAction[]">
+                <d n="VisualElementInputActions" t="Hashtable" ckt="String" cvt="STSnippetInputAction[]">
                   <v>OnMouseClick</v>
                   <a cet="STSnippetInputAction">
                     <o>
@@ -3105,7 +3105,7 @@ PLC_PRG.eInstance3 := E_Color.Green;"</v>
                     </o>
                     <o>
                       <v n="Id">2134141914L</v>
-                      <v n="Value">138</v>
+                      <v n="Value">281</v>
                     </o>
                     <o>
                       <v n="Id">3729828405L</v>
@@ -3136,10 +3136,18 @@ PLC_PRG.eInstance3 := E_Color.Green;"</v>
                     </o>
                     <o>
                       <v n="Id">390574330L</v>
-                      <v n="Value">"//The PLC_PRG handles the instanciation of the possible background colours and the ProxyToSingleton instances in order to be used by the Visualization element.
+                      <v n="Value">"// ***********************************************************************************************************************************
+//The PLC_PRG handles the instanciation of the possible background colours and the ProxyToSingleton instances in order to be used by the Visualization element.
 //The visualization element (The client) handles the request for background change on the RealSingleton object through the ProxyToSinlgeton instances.
 //These request are first processed by the ProxyToSingleton object and then passed to the one and only RealSingleton instance.
-//The default background colour of the RealSingleton object is 'Blue' "</v>
+//The default background colour of the RealSingleton object is 'Blue' 
+// ***********************************************************************************************************************************
+// spanish
+//PLC_PRG maneja la instanciación de los posibles colores de fondo y las instancias de ProxyToSingleton para ser utilizados por el elemento de visualización.
+//El elemento de visualización (el cliente) maneja la solicitud de cambio de fondo en el objeto RealSingleton a través de las instancias de ProxyToSinlgeton.
+//Estas solicitudes son procesadas primero por el objeto ProxyToSingleton y luego pasadas a la única instancia de RealSingleton.
+//El color de fondo predeterminado del objeto RealSingleton es 'Azul'
+// ***********************************************************************************************************************************"</v>
                     </o>
                     <o>
                       <v n="Id">2477733581L</v>
@@ -3151,7 +3159,7 @@ PLC_PRG.eInstance3 := E_Color.Green;"</v>
                     </o>
                     <o>
                       <v n="Id">823443203L</v>
-                      <v n="Value">"622"</v>
+                      <v n="Value">"715"</v>
                     </o>
                   </l>
                 </o>
@@ -3356,12 +3364,12 @@ PLC_PRG.eInstance3 := E_Color.Green;"</v>
               <v>0</v>
               <o>
                 <v n="Width">1562</v>
-                <v n="Height">713</v>
+                <v n="Height">856</v>
               </o>
               <v>1</v>
               <o>
                 <v n="Width">1563</v>
-                <v n="Height">714</v>
+                <v n="Height">857</v>
               </o>
             </d2>
             <v n="Version">1</v>
@@ -3381,7 +3389,6 @@ PLC_PRG.eInstance3 := E_Color.Green;"</v>
         <Type n="Guid">System.Guid</Type>
         <Type n="Hashtable">System.Collections.Hashtable</Type>
         <Type n="HotkeyConfiguration">{6b108d46-58af-4e41-a3f4-174d8f160cc4}</Type>
-        <Type n="IInputAction[]">_3S.CoDeSys.VisualElem.IInputAction[], VisualElem, Version=3.5.13.0, Culture=neutral, PublicKeyToken=null</Type>
         <Type n="Int16">System.Int16</Type>
         <Type n="Int32">System.Int32</Type>
         <Type n="Int64">System.Int64</Type>
@@ -3389,6 +3396,7 @@ PLC_PRG.eInstance3 := E_Color.Green;"</v>
         <Type n="NamedStyleFont">{9e842eb2-1463-4af2-b605-4fbb17044f94}</Type>
         <Type n="String">System.String</Type>
         <Type n="STSnippetInputAction">{6302d3fe-6ea5-4c42-819a-a9734a133b3d}</Type>
+        <Type n="STSnippetInputAction[]">_3S.CoDeSys.VisualElem.STSnippetInputAction[], VisualElem.plugin, Version=3.5.13.32, Culture=neutral, PublicKeyToken=null</Type>
         <Type n="TextDocument">{f3878285-8e4f-490b-bb1b-9acbb7eb04db}</Type>
         <Type n="TextLine">{a5de0b0b-1cb5-4913-ac21-9d70293ec00d}</Type>
         <Type n="UInt16">System.UInt16</Type>

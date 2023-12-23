@@ -14,6 +14,8 @@ Implementación de Singleton ejemplo practico en TwinCAT 3:
 - 🔗 [github.com,Aliazzzz,Applied-Design-Patterns-in-CODESYS-V3](https://github.com/Aliazzzz/Applied-Design-Patterns-in-CODESYS-V3)
 
 - 🔗 [refactoring.guru, singleton](https://refactoring.guru/design-patterns/singleton)
+
+- 🔗 [Aprende los principales patrones de diseño con .NET y C#. Patron Singleton](https://www.youtube.com/watch?v=n5CuGw0IvXo&t=47s)
 ***
 ### <span style="color:grey">Link al Video de Youtube_39:</span>
 - 🔗 [Singleton Design Pattern Youtube]()

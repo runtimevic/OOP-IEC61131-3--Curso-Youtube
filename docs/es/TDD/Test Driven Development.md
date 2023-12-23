@@ -32,11 +32,12 @@ Vamos a ver una lista de todas las implementaciones que he encontrado para conse
 
 -
 ***
-### <span style="color:grey">Links Desarrollo Guiado por Pruebas:</span>
+### <span style="color:grey">Links TDD Desarrollo Guiado por Pruebas:</span>
 
 - 🔗 [www.nimblework.com, desarrollo-dirigido-por-pruebas-tdd](https://www.nimblework.com/es/agile/desarrollo-dirigido-por-pruebas-tdd/)
 - 🔗 [leanpub.com/tdd-ebook/read](https://leanpub.com/tdd-ebook/read)
 - 🔗 [Pruebas unitarias y Test-Driven Development | Ejemplo desde cero](https://www.youtube.com/watch?v=YuRdaR6wwWU)
--  🔗 [programacionymas.com, tipos-de-testing-en-desarrollo-de-software](https://programacionymas.com/blog/tipos-de-testing-en-desarrollo-de-software)
+- 🔗 [programacionymas.com, tipos-de-testing-en-desarrollo-de-software](https://programacionymas.com/blog/tipos-de-testing-en-desarrollo-de-software)
+- 🔗 [DevTalles PodCast - 145: ¿Qué es y para qué sirve un TDD o Test Driven Development?](https://www.youtube.com/watch?v=rVIVozzP_mI)
 ***
 ### <span style="color:grey">Link al Video de Youtube_NNN:</span>
