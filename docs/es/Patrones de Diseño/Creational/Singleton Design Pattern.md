@@ -6,6 +6,8 @@ El diagrama de clases UML del Patrón Creacional Singleton es el siguiente:
 - La clase Singleton declara el método estático getInstance que devuelve la misma instancia de su propia clase.
 
 - El constructor de Singleton debe estar oculto en el código del cliente. Llamar al getInstance método debería ser la única forma de obtener el objeto Singleton.
+
+- Esto es útil cuando solo se necesita una instancia de una clase para coordinar acciones en todo el programa. En resumen, es una forma de controlar la creación de objetos.
 ***
 Implementación de Singleton ejemplo practico en TwinCAT 3:
 ![Design_Pattern__Creational_Singleton1](../../imagenes/Design_Pattern__Creational_Singleton1.JPG)
