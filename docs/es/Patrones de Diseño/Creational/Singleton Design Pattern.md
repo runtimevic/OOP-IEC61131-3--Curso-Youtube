@@ -1,4 +1,4 @@
-- 👉[**Singleton**](https://refactoring.guru/design-patterns/singleton) es un patrón de diseño creacional que le permite garantizar que una clase tenga solo una instancia, al tiempo que proporciona un punto de acceso global a esta instancia.
+- 👉[**Singleton**](https://refactoring.guru/design-patterns/singleton) es un patrón de diseño creacional que le permite garantizar que una clase tenga solo una instancia, al tiempo que proporciona un punto de acceso global a esta instancia desde cualquier parte del programa.
 
 El diagrama de clases UML del Patrón Creacional Singleton es el siguiente:
 ![Design_Pattern__Creational_Singleton](../../imagenes/Design_Pattern_Creational_Singleton.png)
