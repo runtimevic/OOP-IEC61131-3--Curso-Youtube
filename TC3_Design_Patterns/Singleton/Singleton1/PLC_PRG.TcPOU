@@ -8,7 +8,7 @@ VAR
 	///Green, highly opaque
 	dwGreen: DWORD := 16#FF00FF00;
 	///Yellow, highly opaque
-	dwYellow: DWORD := 16#FFFFFF00;
+	dwYellow: DWORD := 16#FFFFFFF0;
 	///Creates 3 instances of the ProxyToSingleton class
 	instance1: ProxyToSingleton;
 	instance2: ProxyToSingleton;

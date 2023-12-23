@@ -13,7 +13,7 @@
 		</System>
 		<Plc>
 			<Project GUID="{5C208C78-EA9B-49DF-815A-84CCC5A87312}" Name="Singleton1" PrjFilePath="Singleton1\Singleton1.plcproj" TmcFilePath="Singleton1\Singleton1.tmc" ReloadTmc="true" AmsPort="851" FileArchiveSettings="#x000e" SymbolicMapping="true">
-				<Instance Id="#x08502000" TcSmClass="TComPlcObjDef" KeepUnrestoredLinks="2" TmcPath="Singleton1\Singleton1.tmc" TmcHash="{01D7AA6C-54F9-1046-63D4-C4FA9CDD3D10}">
+				<Instance Id="#x08502000" TcSmClass="TComPlcObjDef" KeepUnrestoredLinks="2" TmcPath="Singleton1\Singleton1.tmc" TmcHash="{D0A3E674-0ED8-E3E1-7528-DC0974D8B9DE}">
 					<Name>Singleton1 Instance</Name>
 					<CLSID ClassFactory="TcPlc30">{08500001-0000-0000-F000-000000000064}</CLSID>
 					<Contexts>

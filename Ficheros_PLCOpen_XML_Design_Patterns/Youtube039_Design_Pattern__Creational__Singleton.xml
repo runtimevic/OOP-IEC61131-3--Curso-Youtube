@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <project xmlns="http://www.plcopen.org/xml/tc6_0200">
-  <fileHeader companyName="Beckhoff Automation GmbH" productName="TwinCAT PLC Control" productVersion="3.5.13.21" creationDateTime="2023-12-23T12:40:08.3527674" />
-  <contentHeader name="Singleton1" modificationDateTime="2023-12-23T12:40:08.3605762">
+  <fileHeader companyName="Beckhoff Automation GmbH" productName="TwinCAT PLC Control" productVersion="3.5.13.21" creationDateTime="2023-12-23T20:16:12.238558" />
+  <contentHeader name="Singleton1" modificationDateTime="2023-12-23T20:16:12.2453905">
     <coordinateInfo>
       <fbd>
         <scaling x="1" y="1" />
@@ -157,7 +157,7 @@ END_VAR
                       <DWORD />
                     </type>
                     <initialValue>
-                      <simpleValue value="16#FFFFFF00" />
+                      <simpleValue value="16#FFFFFFF0" />
                     </initialValue>
                     <documentation>
                       <xhtml xmlns="http://www.w3.org/1999/xhtml">Yellow, highly opaque</xhtml>
@@ -260,7 +260,7 @@ VAR
 	///Green, highly opaque
 	dwGreen: DWORD := 16#FF00FF00;
 	///Yellow, highly opaque
-	dwYellow: DWORD := 16#FFFFFF00;
+	dwYellow: DWORD := 16#FFFFFFF0;
 	///Creates 3 instances of the ProxyToSingleton class
 	instance1: ProxyToSingleton;
 	instance2: ProxyToSingleton;
