@@ -15,11 +15,13 @@ Implementación de Singleton ejemplo practico en TwinCAT 3:
 
 - 🔗 [refactoring.guru, singleton](https://refactoring.guru/design-patterns/singleton)
 
-- 🔗 [Aprende los principales patrones de diseño con .NET y C#. Patron Singleton](https://www.youtube.com/watch?v=n5CuGw0IvXo&t=47s)
+- 🔗 [www.youtube.com, Aprende los principales patrones de diseño con .NET y C#. Patron Singleton](https://www.youtube.com/watch?v=n5CuGw0IvXo&t=47s)
 
-- 🔗 [SINGLETON | PATRONES de DISEÑO](https://www.youtube.com/watch?v=GGq6s7xhHzY)
+- 🔗 [www.youtube.com, SINGLETON | PATRONES de DISEÑO](https://www.youtube.com/watch?v=GGq6s7xhHzY)
 
-- 🔗 [▷ PATRÓN SINGLETON | Aprende qué es y cómo se utiliza 👨‍💻 este Patrón de diseño](https://www.youtube.com/watch?v=Z7Z-PJEIEsc)
+- 🔗 [www.youtube.com, ▷ PATRÓN SINGLETON | Aprende qué es y cómo se utiliza 👨‍💻 este Patrón de diseño](https://www.youtube.com/watch?v=Z7Z-PJEIEsc)
+
+- 🔗 [www.youtube.com, Patrones de diseño: Singleton](https://www.youtube.com/watch?v=cNoxcc0ca4I)
 ***
 ### <span style="color:grey">Link al Video de Youtube_39:</span>
 - 🔗 [Singleton Design Pattern Youtube]()
