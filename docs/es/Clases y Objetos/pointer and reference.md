@@ -453,6 +453,8 @@ En este caso el acceso está limitado al propio array, con el puntero se puede a
 - 🔗 [Ninja Monkeys Tutorials, 21. TwinCAT 3: Pointer and References](https://www.youtube.com/watch?v=av0Lpw5KdjE)
 
 - 🔗 [Tutorial #26: Zeiger (Pointer) in CoDeSys](https://www.youtube.com/watch?v=xccZTZLvinQ)
+
+- 🔗 [www.hemelix.com, structured-text-memory-management](https://www.hemelix.com/plc/structured-text-memory-management/)
 ***
 ### <span style="color:grey">Link al Video de Youtube 011:</span>
 - 🔗 [011 - OOP IEC 61131-3 PLC -- Puntero vs Referencia](https://youtu.be/AnJZmwQWaYQ)

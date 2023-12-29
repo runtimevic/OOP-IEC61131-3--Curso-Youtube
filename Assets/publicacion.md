@@ -65,8 +65,6 @@ Se busca colaborador para la traducción de la documentación al idioma que dese
 
 - [libro disponible en ingles: tambien esta disponible en amazon](https://www.amazon.es/Use-SOLID-principles-61131-3-Object-Oriented/dp/3757892224/ref=sr_1_2?__mk_es_ES=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=259YTE8GIY65K&keywords=SOLID+IEC+61131-3&qid=1699097833&sprefix=solid+iec+61131-3%2Caps%2C88&sr=8-2)
 
-- [pongo el link del libro que enseño en el video 015, version en aleman:](https://www.bod.de/buchshop/anwendung-der-solid-prinzipien-mit-der-iec-61131-3-stefan-henneken-9783734746857)
-
 - 👉 [Ayudame siendo Patrocinador](https://github.com/sponsors/runtimevic)
 
 
