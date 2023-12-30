@@ -8,4 +8,4 @@
 - 🔗 [github.com/0w8States/PLC-Design-Patterns/Behavioral_Patterns/Chain_of_Responsibility](https://github.com/0w8States/PLC-Design-Patterns/tree/master/Behavioral_Patterns/Chain_of_Responsibility)
 ***
 ### <span style="color:grey">Link al Video de Youtube_40:</span>
-- 🔗 [040 - OOP IEC 61131-3 PLC -- Patrones de Diseño - Comportamiento - Cadena de responsabilidad]()
+- 🔗 [040 - OOP IEC 61131-3 PLC -- Patrones de Diseño - Comportamiento - Cadena de Responsabilidad](https://youtu.be/YD1G_62glm4)
