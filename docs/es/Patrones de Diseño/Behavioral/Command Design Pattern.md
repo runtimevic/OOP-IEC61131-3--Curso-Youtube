@@ -4,7 +4,11 @@
 
 - 🔗 [refactoring.guru/design-patterns/command](https://refactoring.guru/es/design-patterns/command)
 
+- 🔗 [stefanhenneken.wordpress.com/iec-61131-3-the-command-pattern](https://stefanhenneken.wordpress.com/2016/12/07/iec-61131-3-the-command-pattern/)
+
 - 🔗 [github.com/Aliazzzz/Applied-Design-Patterns-in-CODESYS-V3/Command](https://github.com/Aliazzzz/Applied-Design-Patterns-in-CODESYS-V3/tree/master/The%20-Command-%20Pattern)
+
+- 🔗 [redrockcontrols/OOP in TwinCAT3 – Command Pattern](https://www.redrockcontrols.co.uk/?p=118)
 
 - 🔗 [github.com/0w8States/PLC-Design-Patterns/Behavioral_Patterns/Command](https://github.com/0w8States/PLC-Design-Patterns/tree/master/Behavioral_Patterns/Command)
 

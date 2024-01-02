@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4020.3">
+  <POU Name="FB_SwitchPanel" Id="{9abbb49d-d336-4b0a-b698-5f678185a4a5}" SpecialFunc="None">
+    <Declaration><![CDATA[FUNCTION_BLOCK PUBLIC FB_SwitchPanel
+VAR_INPUT
+	arrSwitch		: ARRAY[1..8] OF BOOL;
+END_VAR
+VAR
+	aiCommand		: ARRAY[1..8] OF I_Command;	
+	arrRtrig		: ARRAY[1..8] OF R_TRIG;
+	nIndex			: INT;
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[FOR nIndex := 1 TO 8 DO
+	arrRtrig[nIndex](CLK := arrSwitch[nIndex]);
+	IF arrRtrig[nIndex].Q THEN
+		IF (aiCommand[nIndex] <> 0) THEN
+			aiCommand[nIndex].Execute();
+		END_IF
+	END_IF
+END_FOR
+]]></ST>
+    </Implementation>
+    <Method Name="FB_init" Id="{56c8ab17-65c5-4bcd-8c73-eee970483707}">
+      <Declaration><![CDATA[METHOD FB_init : BOOL
+VAR_INPUT
+	bInitRetains : BOOL; // if TRUE, the retain variables are initialized (warm start / cold start)
+	bInCopyCode : BOOL;  // if TRUE, the instance afterwards gets moved into the copy code (online change)
+END_VAR
+VAR
+	nIndex : INT;
+END_VAR
+]]></Declaration>
+      <Implementation>
+        <ST><![CDATA[FOR nIndex := 1 TO 8 DO
+	aiCommand[nIndex] := 0;
+END_FOR
+
+
+]]></ST>
+      </Implementation>
+    </Method>
+    <Method Name="SetCommand" Id="{5e733fee-2f2b-45df-8ae4-699cd10bf4b9}">
+      <Declaration><![CDATA[METHOD PUBLIC SetCommand : BOOL
+VAR_INPUT
+	nPosition		: INT;
+	iCommand		: I_Command;
+END_VAR
+]]></Declaration>
+      <Implementation>
+        <ST><![CDATA[IF ((nPosition >= 1) AND (nPosition <= 8) AND (iCommand <> 0)) THEN
+	THIS^.aiCommand[nPosition] := iCommand;
+END_IF
+]]></ST>
+      </Implementation>
+    </Method>
+  </POU>
+</TcPlcObject>

@@ -1,0 +1,1955 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<project xmlns="http://www.plcopen.org/xml/tc6_0200">
+  <fileHeader companyName="Beckhoff Automation GmbH" productName="TwinCAT PLC Control" productVersion="3.5.13.21" creationDateTime="2024-01-02T12:18:40.4528513" />
+  <contentHeader name="Sample01" modificationDateTime="2024-01-02T12:18:40.4528513">
+    <coordinateInfo>
+      <fbd>
+        <scaling x="1" y="1" />
+      </fbd>
+      <ld>
+        <scaling x="1" y="1" />
+      </ld>
+      <sfc>
+        <scaling x="1" y="1" />
+      </sfc>
+    </coordinateInfo>
+    <addData>
+      <data name="http://www.3s-software.com/plcopenxml/projectinformation" handleUnknown="implementation">
+        <ProjectInformation />
+      </data>
+    </addData>
+  </contentHeader>
+  <types>
+    <dataTypes />
+    <pous />
+  </types>
+  <instances>
+    <configurations />
+  </instances>
+  <addData>
+    <data name="http://www.3s-software.com/plcopenxml/application" handleUnknown="implementation">
+      <resource name="Sample01">
+        <task name="PlcTask" interval="PT0S" priority="20">
+          <pouInstance name="MAIN" typeName="">
+            <documentation>
+              <xhtml xmlns="http://www.w3.org/1999/xhtml" />
+            </documentation>
+          </pouInstance>
+          <addData>
+            <data name="http://www.3s-software.com/plcopenxml/tasksettings" handleUnknown="implementation">
+              <TaskSettings KindOfTask="Cyclic" Interval="10000" IntervalUnit="us">
+                <Watchdog Enabled="false" TimeUnit="ms" />
+              </TaskSettings>
+            </data>
+            <data name="http://www.3s-software.com/plcopenxml/objectid" handleUnknown="discard">
+              <ObjectId>c19a864c-0c47-41c9-b8f3-c055984d2585</ObjectId>
+            </data>
+          </addData>
+        </task>
+        <addData>
+          <data name="http://www.3s-software.com/plcopenxml/interface" handleUnknown="implementation">
+            <Interface name="I_Command" ObjectId="b9552517-79a2-47e4-9ea4-093312b610dd">
+              <Methods>
+                <Method name="Execute" ObjectId="8f5c6cfd-bac1-4bb2-8501-7a4064075c03">
+                  <interface />
+                  <InterfaceAsPlainText>
+                    <xhtml xmlns="http://www.w3.org/1999/xhtml">METHOD Execute
+</xhtml>
+                  </InterfaceAsPlainText>
+                  <addData />
+                </Method>
+              </Methods>
+              <InterfaceAsPlainText>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">INTERFACE I_Command
+</xhtml>
+              </InterfaceAsPlainText>
+              <addData />
+            </Interface>
+          </data>
+          <data name="http://www.3s-software.com/plcopenxml/pou" handleUnknown="implementation">
+            <pou name="MAIN" pouType="program">
+              <interface>
+                <localVars>
+                  <variable name="fbSwitchPanel">
+                    <type>
+                      <derived name="FB_SwitchPanel" />
+                    </type>
+                    <documentation>
+                      <xhtml xmlns="http://www.w3.org/1999/xhtml"> Invoker</xhtml>
+                    </documentation>
+                  </variable>
+                  <variable name="fbSocket">
+                    <type>
+                      <derived name="FB_Socket" />
+                    </type>
+                    <documentation>
+                      <xhtml xmlns="http://www.w3.org/1999/xhtml"> Receiver</xhtml>
+                    </documentation>
+                  </variable>
+                  <variable name="refSocket">
+                    <type>
+                      <derived name="REFERENCE TO FB_Socket" />
+                    </type>
+                    <initialValue>
+                      <simpleValue value="fbSocket" />
+                    </initialValue>
+                  </variable>
+                  <variable name="fbLamp">
+                    <type>
+                      <derived name="FB_Lamp" />
+                    </type>
+                  </variable>
+                  <variable name="refLamp">
+                    <type>
+                      <derived name="REFERENCE TO FB_Lamp" />
+                    </type>
+                    <initialValue>
+                      <simpleValue value="fbLamp" />
+                    </initialValue>
+                  </variable>
+                  <variable name="fbAirConditioning">
+                    <type>
+                      <derived name="FB_AirConditioning" />
+                    </type>
+                  </variable>
+                  <variable name="refAirConditioning">
+                    <type>
+                      <derived name="REFERENCE TO FB_AirConditioning" />
+                    </type>
+                    <initialValue>
+                      <simpleValue value="fbAirConditioning" />
+                    </initialValue>
+                  </variable>
+                  <variable name="fbCDPlayer">
+                    <type>
+                      <derived name="FB_CDPlayer" />
+                    </type>
+                  </variable>
+                  <variable name="refCDPlayer">
+                    <type>
+                      <derived name="REFERENCE TO FB_CDPlayer" />
+                    </type>
+                    <initialValue>
+                      <simpleValue value="fbCDPlayer" />
+                    </initialValue>
+                  </variable>
+                  <variable name="fbSocketOnCommand">
+                    <type>
+                      <derived name="FB_SocketOnCommand" />
+                    </type>
+                    <addData>
+                      <data name="http://www.3s-software.com/plcopenxml/inputassignments" handleUnknown="implementation">
+                        <InputAssignments>
+                          <InputAssignment>
+                            <Value>refSocket</Value>
+                          </InputAssignment>
+                        </InputAssignments>
+                      </data>
+                      <data name="http://www.3s-software.com/plcopenxml/attributes" handleUnknown="implementation">
+                        <Attributes>
+                          <Attribute Name="old_input_assignments" Value="" />
+                        </Attributes>
+                      </data>
+                    </addData>
+                    <documentation>
+                      <xhtml xmlns="http://www.w3.org/1999/xhtml"> Commands</xhtml>
+                    </documentation>
+                  </variable>
+                  <variable name="fbSocketOffCommand">
+                    <type>
+                      <derived name="FB_SocketOffCommand" />
+                    </type>
+                    <addData>
+                      <data name="http://www.3s-software.com/plcopenxml/inputassignments" handleUnknown="implementation">
+                        <InputAssignments>
+                          <InputAssignment>
+                            <Value>refSocket</Value>
+                          </InputAssignment>
+                        </InputAssignments>
+                      </data>
+                      <data name="http://www.3s-software.com/plcopenxml/attributes" handleUnknown="implementation">
+                        <Attributes>
+                          <Attribute Name="old_input_assignments" Value="" />
+                        </Attributes>
+                      </data>
+                    </addData>
+                  </variable>
+                  <variable name="fbLampSetLevel100Command">
+                    <type>
+                      <derived name="FB_LampSetLevelCommand" />
+                    </type>
+                    <addData>
+                      <data name="http://www.3s-software.com/plcopenxml/inputassignments" handleUnknown="implementation">
+                        <InputAssignments>
+                          <InputAssignment>
+                            <Value>refLamp</Value>
+                          </InputAssignment>
+                          <InputAssignment>
+                            <Value>100</Value>
+                          </InputAssignment>
+                        </InputAssignments>
+                      </data>
+                      <data name="http://www.3s-software.com/plcopenxml/attributes" handleUnknown="implementation">
+                        <Attributes>
+                          <Attribute Name="old_input_assignments" Value="" />
+                        </Attributes>
+                      </data>
+                    </addData>
+                  </variable>
+                  <variable name="fbLampSetLevel0Command">
+                    <type>
+                      <derived name="FB_LampSetLevelCommand" />
+                    </type>
+                    <addData>
+                      <data name="http://www.3s-software.com/plcopenxml/inputassignments" handleUnknown="implementation">
+                        <InputAssignments>
+                          <InputAssignment>
+                            <Value>refLamp</Value>
+                          </InputAssignment>
+                          <InputAssignment>
+                            <Value>0</Value>
+                          </InputAssignment>
+                        </InputAssignments>
+                      </data>
+                      <data name="http://www.3s-software.com/plcopenxml/attributes" handleUnknown="implementation">
+                        <Attributes>
+                          <Attribute Name="old_input_assignments" Value="" />
+                        </Attributes>
+                      </data>
+                    </addData>
+                  </variable>
+                  <variable name="fbAirConComfortCommand">
+                    <type>
+                      <derived name="FB_AirConComfortCommand" />
+                    </type>
+                    <addData>
+                      <data name="http://www.3s-software.com/plcopenxml/inputassignments" handleUnknown="implementation">
+                        <InputAssignments>
+                          <InputAssignment>
+                            <Value>refAirConditioning</Value>
+                          </InputAssignment>
+                        </InputAssignments>
+                      </data>
+                      <data name="http://www.3s-software.com/plcopenxml/attributes" handleUnknown="implementation">
+                        <Attributes>
+                          <Attribute Name="old_input_assignments" Value="" />
+                        </Attributes>
+                      </data>
+                    </addData>
+                  </variable>
+                  <variable name="fbAirConStandbyCommand">
+                    <type>
+                      <derived name="FB_AirConStandbyCommand" />
+                    </type>
+                    <addData>
+                      <data name="http://www.3s-software.com/plcopenxml/inputassignments" handleUnknown="implementation">
+                        <InputAssignments>
+                          <InputAssignment>
+                            <Value>refAirConditioning</Value>
+                          </InputAssignment>
+                        </InputAssignments>
+                      </data>
+                      <data name="http://www.3s-software.com/plcopenxml/attributes" handleUnknown="implementation">
+                        <Attributes>
+                          <Attribute Name="old_input_assignments" Value="" />
+                        </Attributes>
+                      </data>
+                    </addData>
+                  </variable>
+                  <variable name="fbMusicPlayCommand">
+                    <type>
+                      <derived name="FB_MusicPlayCommand" />
+                    </type>
+                    <addData>
+                      <data name="http://www.3s-software.com/plcopenxml/inputassignments" handleUnknown="implementation">
+                        <InputAssignments>
+                          <InputAssignment>
+                            <Value>refCDPlayer</Value>
+                          </InputAssignment>
+                        </InputAssignments>
+                      </data>
+                      <data name="http://www.3s-software.com/plcopenxml/attributes" handleUnknown="implementation">
+                        <Attributes>
+                          <Attribute Name="old_input_assignments" Value="" />
+                        </Attributes>
+                      </data>
+                    </addData>
+                  </variable>
+                  <variable name="fbMusicStopCommand">
+                    <type>
+                      <derived name="FB_MusicStopCommand" />
+                    </type>
+                    <addData>
+                      <data name="http://www.3s-software.com/plcopenxml/inputassignments" handleUnknown="implementation">
+                        <InputAssignments>
+                          <InputAssignment>
+                            <Value>refCDPlayer</Value>
+                          </InputAssignment>
+                        </InputAssignments>
+                      </data>
+                      <data name="http://www.3s-software.com/plcopenxml/attributes" handleUnknown="implementation">
+                        <Attributes>
+                          <Attribute Name="old_input_assignments" Value="" />
+                        </Attributes>
+                      </data>
+                    </addData>
+                  </variable>
+                  <variable name="bInit">
+                    <type>
+                      <BOOL />
+                    </type>
+                  </variable>
+                </localVars>
+              </interface>
+              <body>
+                <ST>
+                  <xhtml xmlns="http://www.w3.org/1999/xhtml">IF (NOT bInit) THEN
+	fbSwitchPanel.SetCommand(1, fbSocketOnCommand);
+	fbSwitchPanel.SetCommand(2, fbSocketOffCommand);
+	fbSwitchPanel.SetCommand(3, fbLampSetLevel100Command);
+	fbSwitchPanel.SetCommand(4, fbLampSetLevel0Command);
+	fbSwitchPanel.SetCommand(5, fbAirConComfortCommand);
+	fbSwitchPanel.SetCommand(6, fbAirConStandbyCommand);
+	fbSwitchPanel.SetCommand(7, fbMusicPlayCommand);
+	fbSwitchPanel.SetCommand(8, fbMusicStopCommand);
+	bInit := TRUE;
+ELSE
+	fbSwitchPanel();	
+END_IF
+</xhtml>
+                </ST>
+              </body>
+              <addData>
+                <data name="http://www.3s-software.com/plcopenxml/interfaceasplaintext" handleUnknown="implementation">
+                  <InterfaceAsPlainText>
+                    <xhtml xmlns="http://www.w3.org/1999/xhtml">PROGRAM MAIN
+VAR
+	// Invoker
+	fbSwitchPanel				: FB_SwitchPanel;
+	
+	// Receiver
+	fbSocket					: FB_Socket;
+	refSocket					: REFERENCE TO FB_Socket := fbSocket;	
+	fbLamp						: FB_Lamp;
+	refLamp						: REFERENCE TO FB_Lamp := fbLamp;	
+	fbAirConditioning			: FB_AirConditioning;
+	refAirConditioning			: REFERENCE TO FB_AirConditioning := fbAirConditioning;
+	fbCDPlayer					: FB_CDPlayer;
+	refCDPlayer					: REFERENCE TO FB_CDPlayer := fbCDPlayer;
+
+	// Commands
+	fbSocketOnCommand			: FB_SocketOnCommand(refSocket);
+	fbSocketOffCommand			: FB_SocketOffCommand(refSocket);
+	fbLampSetLevel100Command	: FB_LampSetLevelCommand(refLamp, 100);
+	fbLampSetLevel0Command		: FB_LampSetLevelCommand(refLamp, 0);
+	fbAirConComfortCommand		: FB_AirConComfortCommand(refAirConditioning);
+	fbAirConStandbyCommand		: FB_AirConStandbyCommand(refAirConditioning);	
+	fbMusicPlayCommand			: FB_MusicPlayCommand(refCDPlayer);
+	fbMusicStopCommand			: FB_MusicStopCommand(refCDPlayer);
+	
+	bInit						: BOOL;
+END_VAR
+</xhtml>
+                  </InterfaceAsPlainText>
+                </data>
+                <data name="http://www.3s-software.com/plcopenxml/objectid" handleUnknown="discard">
+                  <ObjectId>ef33b4c1-c95d-4cf8-b9bf-7d346bd93484</ObjectId>
+                </data>
+              </addData>
+            </pou>
+          </data>
+          <data name="http://www.3s-software.com/plcopenxml/pou" handleUnknown="implementation">
+            <pou name="FB_AirConComfortCommand" pouType="functionBlock">
+              <interface>
+                <localVars>
+                  <variable name="refAirConditioning">
+                    <type>
+                      <derived name="REFERENCE TO FB_AirConditioning" />
+                    </type>
+                  </variable>
+                </localVars>
+                <addData>
+                  <data name="http://www.3s-software.com/plcopenxml/pouinheritance" handleUnknown="implementation">
+                    <Inheritance>
+                      <Implements>I_Command</Implements>
+                    </Inheritance>
+                  </data>
+                </addData>
+              </interface>
+              <body>
+                <ST>
+                  <xhtml xmlns="http://www.w3.org/1999/xhtml" />
+                </ST>
+              </body>
+              <addData>
+                <data name="http://www.3s-software.com/plcopenxml/method" handleUnknown="implementation">
+                  <Method name="Execute" ObjectId="0530f813-4259-4fee-8d29-4203989fd02f">
+                    <interface />
+                    <body>
+                      <ST>
+                        <xhtml xmlns="http://www.w3.org/1999/xhtml">IF (__ISVALIDREF(THIS^.refAirConditioning)) THEN
+	THIS^.refAirConditioning.Activate();
+	THIS^.refAirConditioning.SetTemperature(20.0);
+END_IF
+</xhtml>
+                      </ST>
+                    </body>
+                    <InterfaceAsPlainText>
+                      <xhtml xmlns="http://www.w3.org/1999/xhtml">METHOD Execute
+</xhtml>
+                    </InterfaceAsPlainText>
+                    <addData />
+                  </Method>
+                </data>
+                <data name="http://www.3s-software.com/plcopenxml/method" handleUnknown="implementation">
+                  <Method name="FB_init" ObjectId="4d0f061f-23e5-4b59-87d0-78ae1b8327c5">
+                    <interface>
+                      <returnType>
+                        <BOOL />
+                      </returnType>
+                      <inputVars>
+                        <variable name="bInitRetains">
+                          <type>
+                            <BOOL />
+                          </type>
+                          <documentation>
+                            <xhtml xmlns="http://www.w3.org/1999/xhtml"> if TRUE, the retain variables are initialized (warm start / cold start)</xhtml>
+                          </documentation>
+                        </variable>
+                        <variable name="bInCopyCode">
+                          <type>
+                            <BOOL />
+                          </type>
+                          <documentation>
+                            <xhtml xmlns="http://www.w3.org/1999/xhtml"> if TRUE, the instance afterwards gets moved into the copy code (online change)</xhtml>
+                          </documentation>
+                        </variable>
+                        <variable name="refAirConditioning">
+                          <type>
+                            <derived name="REFERENCE TO FB_AirConditioning" />
+                          </type>
+                        </variable>
+                      </inputVars>
+                    </interface>
+                    <body>
+                      <ST>
+                        <xhtml xmlns="http://www.w3.org/1999/xhtml">IF (__ISVALIDREF(refAirConditioning)) THEN
+	THIS^.refAirConditioning REF= refAirConditioning;
+ELSE
+	THIS^.refAirConditioning REF= 0;
+END_IF
+</xhtml>
+                      </ST>
+                    </body>
+                    <InterfaceAsPlainText>
+                      <xhtml xmlns="http://www.w3.org/1999/xhtml">METHOD FB_init : BOOL
+VAR_INPUT
+	bInitRetains : BOOL; // if TRUE, the retain variables are initialized (warm start / cold start)
+	bInCopyCode : BOOL;  // if TRUE, the instance afterwards gets moved into the copy code (online change)
+	refAirConditioning : REFERENCE TO FB_AirConditioning;
+END_VAR
+</xhtml>
+                    </InterfaceAsPlainText>
+                    <addData />
+                  </Method>
+                </data>
+                <data name="http://www.3s-software.com/plcopenxml/interfaceasplaintext" handleUnknown="implementation">
+                  <InterfaceAsPlainText>
+                    <xhtml xmlns="http://www.w3.org/1999/xhtml">FUNCTION_BLOCK PUBLIC FB_AirConComfortCommand IMPLEMENTS I_Command
+VAR
+	refAirConditioning : REFERENCE TO FB_AirConditioning;
+END_VAR
+</xhtml>
+                  </InterfaceAsPlainText>
+                </data>
+                <data name="http://www.3s-software.com/plcopenxml/objectid" handleUnknown="discard">
+                  <ObjectId>fa70c319-e680-4f43-bf75-6b04781fe123</ObjectId>
+                </data>
+              </addData>
+            </pou>
+          </data>
+          <data name="http://www.3s-software.com/plcopenxml/pou" handleUnknown="implementation">
+            <pou name="FB_AirConStandbyCommand" pouType="functionBlock">
+              <interface>
+                <localVars>
+                  <variable name="refAirConditioning">
+                    <type>
+                      <derived name="REFERENCE TO FB_AirConditioning" />
+                    </type>
+                  </variable>
+                </localVars>
+                <addData>
+                  <data name="http://www.3s-software.com/plcopenxml/pouinheritance" handleUnknown="implementation">
+                    <Inheritance>
+                      <Implements>I_Command</Implements>
+                    </Inheritance>
+                  </data>
+                </addData>
+              </interface>
+              <body>
+                <ST>
+                  <xhtml xmlns="http://www.w3.org/1999/xhtml" />
+                </ST>
+              </body>
+              <addData>
+                <data name="http://www.3s-software.com/plcopenxml/method" handleUnknown="implementation">
+                  <Method name="Execute" ObjectId="d1a57a41-923d-4899-a12a-5f60b748e094">
+                    <interface />
+                    <body>
+                      <ST>
+                        <xhtml xmlns="http://www.w3.org/1999/xhtml">IF (__ISVALIDREF(THIS^.refAirConditioning)) THEN
+	THIS^.refAirConditioning.Activate();
+	THIS^.refAirConditioning.SetTemperature(17.5);
+END_IF
+	</xhtml>
+                      </ST>
+                    </body>
+                    <InterfaceAsPlainText>
+                      <xhtml xmlns="http://www.w3.org/1999/xhtml">METHOD Execute
+</xhtml>
+                    </InterfaceAsPlainText>
+                    <addData />
+                  </Method>
+                </data>
+                <data name="http://www.3s-software.com/plcopenxml/method" handleUnknown="implementation">
+                  <Method name="FB_init" ObjectId="5ab6a421-b67d-4b28-93a1-ff3e7801386d">
+                    <interface>
+                      <returnType>
+                        <BOOL />
+                      </returnType>
+                      <inputVars>
+                        <variable name="bInitRetains">
+                          <type>
+                            <BOOL />
+                          </type>
+                          <documentation>
+                            <xhtml xmlns="http://www.w3.org/1999/xhtml"> if TRUE, the retain variables are initialized (warm start / cold start)</xhtml>
+                          </documentation>
+                        </variable>
+                        <variable name="bInCopyCode">
+                          <type>
+                            <BOOL />
+                          </type>
+                          <documentation>
+                            <xhtml xmlns="http://www.w3.org/1999/xhtml"> if TRUE, the instance afterwards gets moved into the copy code (online change)</xhtml>
+                          </documentation>
+                        </variable>
+                        <variable name="refAirConditioning">
+                          <type>
+                            <derived name="REFERENCE TO FB_AirConditioning" />
+                          </type>
+                        </variable>
+                      </inputVars>
+                    </interface>
+                    <body>
+                      <ST>
+                        <xhtml xmlns="http://www.w3.org/1999/xhtml">IF (__ISVALIDREF(refAirConditioning)) THEN
+	THIS^.refAirConditioning REF= refAirConditioning;
+ELSE
+	THIS^.refAirConditioning REF= 0;
+END_IF</xhtml>
+                      </ST>
+                    </body>
+                    <InterfaceAsPlainText>
+                      <xhtml xmlns="http://www.w3.org/1999/xhtml">METHOD FB_init : BOOL
+VAR_INPUT
+	bInitRetains : BOOL; // if TRUE, the retain variables are initialized (warm start / cold start)
+	bInCopyCode : BOOL;  // if TRUE, the instance afterwards gets moved into the copy code (online change)
+	refAirConditioning : REFERENCE TO FB_AirConditioning;
+END_VAR
+</xhtml>
+                    </InterfaceAsPlainText>
+                    <addData />
+                  </Method>
+                </data>
+                <data name="http://www.3s-software.com/plcopenxml/interfaceasplaintext" handleUnknown="implementation">
+                  <InterfaceAsPlainText>
+                    <xhtml xmlns="http://www.w3.org/1999/xhtml">FUNCTION_BLOCK PUBLIC FB_AirConStandbyCommand IMPLEMENTS I_Command
+VAR
+	refAirConditioning : REFERENCE TO FB_AirConditioning;
+END_VAR
+</xhtml>
+                  </InterfaceAsPlainText>
+                </data>
+                <data name="http://www.3s-software.com/plcopenxml/objectid" handleUnknown="discard">
+                  <ObjectId>5d054d10-9e4a-4a41-a47c-aefd8da996a4</ObjectId>
+                </data>
+              </addData>
+            </pou>
+          </data>
+          <data name="http://www.3s-software.com/plcopenxml/pou" handleUnknown="implementation">
+            <pou name="FB_LampSetLevelCommand" pouType="functionBlock">
+              <interface>
+                <localVars>
+                  <variable name="refLamp">
+                    <type>
+                      <derived name="REFERENCE TO FB_Lamp" />
+                    </type>
+                  </variable>
+                  <variable name="byNewLevel">
+                    <type>
+                      <BYTE />
+                    </type>
+                  </variable>
+                </localVars>
+                <addData>
+                  <data name="http://www.3s-software.com/plcopenxml/pouinheritance" handleUnknown="implementation">
+                    <Inheritance>
+                      <Implements>I_Command</Implements>
+                    </Inheritance>
+                  </data>
+                </addData>
+              </interface>
+              <body>
+                <ST>
+                  <xhtml xmlns="http://www.w3.org/1999/xhtml" />
+                </ST>
+              </body>
+              <addData>
+                <data name="http://www.3s-software.com/plcopenxml/method" handleUnknown="implementation">
+                  <Method name="Execute" ObjectId="d3314861-d094-46fb-bd7f-18bce7e27134">
+                    <interface />
+                    <body>
+                      <ST>
+                        <xhtml xmlns="http://www.w3.org/1999/xhtml">IF (__ISVALIDREF(THIS^.refLamp)) THEN
+	THIS^.refLamp.SetLevel(THIS^.byNewLevel);
+END_IF</xhtml>
+                      </ST>
+                    </body>
+                    <InterfaceAsPlainText>
+                      <xhtml xmlns="http://www.w3.org/1999/xhtml">METHOD Execute
+</xhtml>
+                    </InterfaceAsPlainText>
+                    <addData />
+                  </Method>
+                </data>
+                <data name="http://www.3s-software.com/plcopenxml/method" handleUnknown="implementation">
+                  <Method name="FB_init" ObjectId="70db96a3-729e-4e7f-bbee-0bb72b3ab88e">
+                    <interface>
+                      <returnType>
+                        <BOOL />
+                      </returnType>
+                      <inputVars>
+                        <variable name="bInitRetains">
+                          <type>
+                            <BOOL />
+                          </type>
+                          <documentation>
+                            <xhtml xmlns="http://www.w3.org/1999/xhtml"> if TRUE, the retain variables are initialized (warm start / cold start)</xhtml>
+                          </documentation>
+                        </variable>
+                        <variable name="bInCopyCode">
+                          <type>
+                            <BOOL />
+                          </type>
+                          <documentation>
+                            <xhtml xmlns="http://www.w3.org/1999/xhtml"> if TRUE, the instance afterwards gets moved into the copy code (online change)</xhtml>
+                          </documentation>
+                        </variable>
+                        <variable name="refLamp">
+                          <type>
+                            <derived name="REFERENCE TO FB_Lamp" />
+                          </type>
+                        </variable>
+                        <variable name="byNewLevel">
+                          <type>
+                            <BYTE />
+                          </type>
+                        </variable>
+                      </inputVars>
+                    </interface>
+                    <body>
+                      <ST>
+                        <xhtml xmlns="http://www.w3.org/1999/xhtml">IF (__ISVALIDREF(refLamp)) THEN
+	THIS^.refLamp REF= refLamp;
+ELSE
+	THIS^.refLamp REF= 0;
+END_IF
+THIS^.byNewLevel := byNewLevel;</xhtml>
+                      </ST>
+                    </body>
+                    <InterfaceAsPlainText>
+                      <xhtml xmlns="http://www.w3.org/1999/xhtml">METHOD FB_init : BOOL
+VAR_INPUT
+	bInitRetains : BOOL; // if TRUE, the retain variables are initialized (warm start / cold start)
+	bInCopyCode : BOOL;  // if TRUE, the instance afterwards gets moved into the copy code (online change)
+	refLamp : REFERENCE TO FB_Lamp;
+	byNewLevel : BYTE;
+END_VAR
+</xhtml>
+                    </InterfaceAsPlainText>
+                    <addData />
+                  </Method>
+                </data>
+                <data name="http://www.3s-software.com/plcopenxml/interfaceasplaintext" handleUnknown="implementation">
+                  <InterfaceAsPlainText>
+                    <xhtml xmlns="http://www.w3.org/1999/xhtml">FUNCTION_BLOCK PUBLIC FB_LampSetLevelCommand IMPLEMENTS I_Command
+VAR
+	refLamp		: REFERENCE TO FB_Lamp;
+	byNewLevel	: BYTE;
+END_VAR
+
+</xhtml>
+                  </InterfaceAsPlainText>
+                </data>
+                <data name="http://www.3s-software.com/plcopenxml/objectid" handleUnknown="discard">
+                  <ObjectId>9f6e262f-5575-454c-8f85-b9e06af108eb</ObjectId>
+                </data>
+              </addData>
+            </pou>
+          </data>
+          <data name="http://www.3s-software.com/plcopenxml/pou" handleUnknown="implementation">
+            <pou name="FB_MusicPlayCommand" pouType="functionBlock">
+              <interface>
+                <localVars>
+                  <variable name="refCDPlayer">
+                    <type>
+                      <derived name="REFERENCE TO FB_CDPlayer" />
+                    </type>
+                  </variable>
+                </localVars>
+                <addData>
+                  <data name="http://www.3s-software.com/plcopenxml/pouinheritance" handleUnknown="implementation">
+                    <Inheritance>
+                      <Implements>I_Command</Implements>
+                    </Inheritance>
+                  </data>
+                </addData>
+              </interface>
+              <body>
+                <ST>
+                  <xhtml xmlns="http://www.w3.org/1999/xhtml" />
+                </ST>
+              </body>
+              <addData>
+                <data name="http://www.3s-software.com/plcopenxml/method" handleUnknown="implementation">
+                  <Method name="Execute" ObjectId="1e3196d6-937f-40cc-beb7-c27b776095f5">
+                    <interface />
+                    <body>
+                      <ST>
+                        <xhtml xmlns="http://www.w3.org/1999/xhtml">IF (__ISVALIDREF(THIS^.refCDPlayer)) THEN
+	THIS^.refCDPlayer.SetVolume(40);
+	THIS^.refCDPlayer.SetTrack(1);
+	THIS^.refCDPlayer.Start();
+END_IF
+</xhtml>
+                      </ST>
+                    </body>
+                    <InterfaceAsPlainText>
+                      <xhtml xmlns="http://www.w3.org/1999/xhtml">METHOD Execute
+</xhtml>
+                    </InterfaceAsPlainText>
+                    <addData />
+                  </Method>
+                </data>
+                <data name="http://www.3s-software.com/plcopenxml/method" handleUnknown="implementation">
+                  <Method name="FB_init" ObjectId="4d51c6d5-7d44-4836-8364-0806c83c0c3c">
+                    <interface>
+                      <returnType>
+                        <BOOL />
+                      </returnType>
+                      <inputVars>
+                        <variable name="bInitRetains">
+                          <type>
+                            <BOOL />
+                          </type>
+                          <documentation>
+                            <xhtml xmlns="http://www.w3.org/1999/xhtml"> if TRUE, the retain variables are initialized (warm start / cold start)</xhtml>
+                          </documentation>
+                        </variable>
+                        <variable name="bInCopyCode">
+                          <type>
+                            <BOOL />
+                          </type>
+                          <documentation>
+                            <xhtml xmlns="http://www.w3.org/1999/xhtml"> if TRUE, the instance afterwards gets moved into the copy code (online change)</xhtml>
+                          </documentation>
+                        </variable>
+                        <variable name="refCDPlayer">
+                          <type>
+                            <derived name="REFERENCE TO FB_CDPlayer" />
+                          </type>
+                        </variable>
+                      </inputVars>
+                    </interface>
+                    <body>
+                      <ST>
+                        <xhtml xmlns="http://www.w3.org/1999/xhtml">IF (__ISVALIDREF(refCDPlayer)) THEN
+	THIS^.refCDPlayer REF= refCDPlayer;
+ELSE
+	THIS^.refCDPlayer REF= 0;
+END_IF</xhtml>
+                      </ST>
+                    </body>
+                    <InterfaceAsPlainText>
+                      <xhtml xmlns="http://www.w3.org/1999/xhtml">METHOD FB_init : BOOL
+VAR_INPUT
+	bInitRetains : BOOL; // if TRUE, the retain variables are initialized (warm start / cold start)
+	bInCopyCode : BOOL;  // if TRUE, the instance afterwards gets moved into the copy code (online change)
+	refCDPlayer : REFERENCE TO FB_CDPlayer;
+END_VAR
+</xhtml>
+                    </InterfaceAsPlainText>
+                    <addData />
+                  </Method>
+                </data>
+                <data name="http://www.3s-software.com/plcopenxml/interfaceasplaintext" handleUnknown="implementation">
+                  <InterfaceAsPlainText>
+                    <xhtml xmlns="http://www.w3.org/1999/xhtml">FUNCTION_BLOCK PUBLIC FB_MusicPlayCommand IMPLEMENTS I_Command
+VAR
+	refCDPlayer : REFERENCE TO FB_CDPlayer;
+END_VAR
+</xhtml>
+                  </InterfaceAsPlainText>
+                </data>
+                <data name="http://www.3s-software.com/plcopenxml/objectid" handleUnknown="discard">
+                  <ObjectId>9af7a132-dfd1-40f6-9e03-6c734bb23364</ObjectId>
+                </data>
+              </addData>
+            </pou>
+          </data>
+          <data name="http://www.3s-software.com/plcopenxml/pou" handleUnknown="implementation">
+            <pou name="FB_MusicStopCommand" pouType="functionBlock">
+              <interface>
+                <localVars>
+                  <variable name="refCDPlayer">
+                    <type>
+                      <derived name="REFERENCE TO FB_CDPlayer" />
+                    </type>
+                  </variable>
+                </localVars>
+                <addData>
+                  <data name="http://www.3s-software.com/plcopenxml/pouinheritance" handleUnknown="implementation">
+                    <Inheritance>
+                      <Implements>I_Command</Implements>
+                    </Inheritance>
+                  </data>
+                </addData>
+              </interface>
+              <body>
+                <ST>
+                  <xhtml xmlns="http://www.w3.org/1999/xhtml" />
+                </ST>
+              </body>
+              <addData>
+                <data name="http://www.3s-software.com/plcopenxml/method" handleUnknown="implementation">
+                  <Method name="Execute" ObjectId="86d54cc1-f415-4974-832c-25dca3ebebfb">
+                    <interface />
+                    <body>
+                      <ST>
+                        <xhtml xmlns="http://www.w3.org/1999/xhtml">IF (__ISVALIDREF(THIS^.refCDPlayer)) THEN
+	THIS^.refCDPlayer.Stop();
+END_IF
+</xhtml>
+                      </ST>
+                    </body>
+                    <InterfaceAsPlainText>
+                      <xhtml xmlns="http://www.w3.org/1999/xhtml">METHOD Execute
+</xhtml>
+                    </InterfaceAsPlainText>
+                    <addData />
+                  </Method>
+                </data>
+                <data name="http://www.3s-software.com/plcopenxml/method" handleUnknown="implementation">
+                  <Method name="FB_init" ObjectId="15f8b24f-95fe-4769-b3bd-5a189cb73ec8">
+                    <interface>
+                      <returnType>
+                        <BOOL />
+                      </returnType>
+                      <inputVars>
+                        <variable name="bInitRetains">
+                          <type>
+                            <BOOL />
+                          </type>
+                          <documentation>
+                            <xhtml xmlns="http://www.w3.org/1999/xhtml"> if TRUE, the retain variables are initialized (warm start / cold start)</xhtml>
+                          </documentation>
+                        </variable>
+                        <variable name="bInCopyCode">
+                          <type>
+                            <BOOL />
+                          </type>
+                          <documentation>
+                            <xhtml xmlns="http://www.w3.org/1999/xhtml"> if TRUE, the instance afterwards gets moved into the copy code (online change)</xhtml>
+                          </documentation>
+                        </variable>
+                        <variable name="refCDPlayer">
+                          <type>
+                            <derived name="REFERENCE TO FB_CDPlayer" />
+                          </type>
+                        </variable>
+                      </inputVars>
+                    </interface>
+                    <body>
+                      <ST>
+                        <xhtml xmlns="http://www.w3.org/1999/xhtml">IF (__ISVALIDREF(refCDPlayer)) THEN
+	THIS^.refCDPlayer REF= refCDPlayer;
+ELSE
+	THIS^.refCDPlayer REF= 0;
+END_IF</xhtml>
+                      </ST>
+                    </body>
+                    <InterfaceAsPlainText>
+                      <xhtml xmlns="http://www.w3.org/1999/xhtml">METHOD FB_init : BOOL
+VAR_INPUT
+	bInitRetains : BOOL; // if TRUE, the retain variables are initialized (warm start / cold start)
+	bInCopyCode : BOOL;  // if TRUE, the instance afterwards gets moved into the copy code (online change)
+	refCDPlayer : REFERENCE TO FB_CDPlayer;
+END_VAR
+</xhtml>
+                    </InterfaceAsPlainText>
+                    <addData />
+                  </Method>
+                </data>
+                <data name="http://www.3s-software.com/plcopenxml/interfaceasplaintext" handleUnknown="implementation">
+                  <InterfaceAsPlainText>
+                    <xhtml xmlns="http://www.w3.org/1999/xhtml">FUNCTION_BLOCK PUBLIC FB_MusicStopCommand IMPLEMENTS I_Command
+VAR
+	refCDPlayer : REFERENCE TO FB_CDPlayer;
+END_VAR
+</xhtml>
+                  </InterfaceAsPlainText>
+                </data>
+                <data name="http://www.3s-software.com/plcopenxml/objectid" handleUnknown="discard">
+                  <ObjectId>8cf03a18-b11f-47a4-bd12-bfcb0a33580c</ObjectId>
+                </data>
+              </addData>
+            </pou>
+          </data>
+          <data name="http://www.3s-software.com/plcopenxml/pou" handleUnknown="implementation">
+            <pou name="FB_SocketOffCommand" pouType="functionBlock">
+              <interface>
+                <localVars>
+                  <variable name="refSocket">
+                    <type>
+                      <derived name="REFERENCE TO FB_Socket" />
+                    </type>
+                  </variable>
+                </localVars>
+                <addData>
+                  <data name="http://www.3s-software.com/plcopenxml/pouinheritance" handleUnknown="implementation">
+                    <Inheritance>
+                      <Implements>I_Command</Implements>
+                    </Inheritance>
+                  </data>
+                </addData>
+              </interface>
+              <body>
+                <ST>
+                  <xhtml xmlns="http://www.w3.org/1999/xhtml" />
+                </ST>
+              </body>
+              <addData>
+                <data name="http://www.3s-software.com/plcopenxml/method" handleUnknown="implementation">
+                  <Method name="Execute" ObjectId="abdd543b-040e-4f45-9997-6d6adc357d75">
+                    <interface />
+                    <body>
+                      <ST>
+                        <xhtml xmlns="http://www.w3.org/1999/xhtml">IF (__ISVALIDREF(THIS^.refSocket)) THEN
+	THIS^.refSocket.Off();
+END_IF</xhtml>
+                      </ST>
+                    </body>
+                    <InterfaceAsPlainText>
+                      <xhtml xmlns="http://www.w3.org/1999/xhtml">METHOD Execute
+</xhtml>
+                    </InterfaceAsPlainText>
+                    <addData />
+                  </Method>
+                </data>
+                <data name="http://www.3s-software.com/plcopenxml/method" handleUnknown="implementation">
+                  <Method name="FB_init" ObjectId="21ca7cda-0654-496a-bab5-b731a714ee27">
+                    <interface>
+                      <returnType>
+                        <BOOL />
+                      </returnType>
+                      <inputVars>
+                        <variable name="bInitRetains">
+                          <type>
+                            <BOOL />
+                          </type>
+                          <documentation>
+                            <xhtml xmlns="http://www.w3.org/1999/xhtml"> if TRUE, the retain variables are initialized (warm start / cold start)</xhtml>
+                          </documentation>
+                        </variable>
+                        <variable name="bInCopyCode">
+                          <type>
+                            <BOOL />
+                          </type>
+                          <documentation>
+                            <xhtml xmlns="http://www.w3.org/1999/xhtml"> if TRUE, the instance afterwards gets moved into the copy code (online change)</xhtml>
+                          </documentation>
+                        </variable>
+                        <variable name="refNewSocket">
+                          <type>
+                            <derived name="REFERENCE TO FB_Socket" />
+                          </type>
+                        </variable>
+                      </inputVars>
+                    </interface>
+                    <body>
+                      <ST>
+                        <xhtml xmlns="http://www.w3.org/1999/xhtml">IF (__ISVALIDREF(refNewSocket)) THEN
+	THIS^.refSocket REF= refNewSocket;
+ELSE
+	THIS^.refSocket REF= 0;
+END_IF
+</xhtml>
+                      </ST>
+                    </body>
+                    <InterfaceAsPlainText>
+                      <xhtml xmlns="http://www.w3.org/1999/xhtml">METHOD FB_init : BOOL
+VAR_INPUT
+	bInitRetains : BOOL; // if TRUE, the retain variables are initialized (warm start / cold start)
+	bInCopyCode : BOOL;  // if TRUE, the instance afterwards gets moved into the copy code (online change)
+	refNewSocket : REFERENCE TO FB_Socket;
+END_VAR
+</xhtml>
+                    </InterfaceAsPlainText>
+                    <addData />
+                  </Method>
+                </data>
+                <data name="http://www.3s-software.com/plcopenxml/interfaceasplaintext" handleUnknown="implementation">
+                  <InterfaceAsPlainText>
+                    <xhtml xmlns="http://www.w3.org/1999/xhtml">FUNCTION_BLOCK PUBLIC FB_SocketOffCommand IMPLEMENTS I_Command
+VAR
+	refSocket : REFERENCE TO FB_Socket;
+END_VAR
+</xhtml>
+                  </InterfaceAsPlainText>
+                </data>
+                <data name="http://www.3s-software.com/plcopenxml/objectid" handleUnknown="discard">
+                  <ObjectId>cd7850d2-cbb1-40d9-9176-4eb71b5e71df</ObjectId>
+                </data>
+              </addData>
+            </pou>
+          </data>
+          <data name="http://www.3s-software.com/plcopenxml/pou" handleUnknown="implementation">
+            <pou name="FB_SocketOnCommand" pouType="functionBlock">
+              <interface>
+                <localVars>
+                  <variable name="refSocket">
+                    <type>
+                      <derived name="REFERENCE TO FB_Socket" />
+                    </type>
+                  </variable>
+                </localVars>
+                <addData>
+                  <data name="http://www.3s-software.com/plcopenxml/pouinheritance" handleUnknown="implementation">
+                    <Inheritance>
+                      <Implements>I_Command</Implements>
+                    </Inheritance>
+                  </data>
+                </addData>
+              </interface>
+              <body>
+                <ST>
+                  <xhtml xmlns="http://www.w3.org/1999/xhtml" />
+                </ST>
+              </body>
+              <addData>
+                <data name="http://www.3s-software.com/plcopenxml/method" handleUnknown="implementation">
+                  <Method name="Execute" ObjectId="00744c42-2535-4c07-9d72-9dfd58f4279b">
+                    <interface />
+                    <body>
+                      <ST>
+                        <xhtml xmlns="http://www.w3.org/1999/xhtml">IF (__ISVALIDREF(THIS^.refSocket)) THEN
+	THIS^.refSocket.On();
+END_IF
+</xhtml>
+                      </ST>
+                    </body>
+                    <InterfaceAsPlainText>
+                      <xhtml xmlns="http://www.w3.org/1999/xhtml">METHOD Execute
+</xhtml>
+                    </InterfaceAsPlainText>
+                    <addData />
+                  </Method>
+                </data>
+                <data name="http://www.3s-software.com/plcopenxml/method" handleUnknown="implementation">
+                  <Method name="FB_init" ObjectId="b23704c1-7621-4b32-8be0-30a679a8c783">
+                    <interface>
+                      <returnType>
+                        <BOOL />
+                      </returnType>
+                      <inputVars>
+                        <variable name="bInitRetains">
+                          <type>
+                            <BOOL />
+                          </type>
+                          <documentation>
+                            <xhtml xmlns="http://www.w3.org/1999/xhtml"> if TRUE, the retain variables are initialized (warm start / cold start)</xhtml>
+                          </documentation>
+                        </variable>
+                        <variable name="bInCopyCode">
+                          <type>
+                            <BOOL />
+                          </type>
+                          <documentation>
+                            <xhtml xmlns="http://www.w3.org/1999/xhtml"> if TRUE, the instance afterwards gets moved into the copy code (online change)</xhtml>
+                          </documentation>
+                        </variable>
+                        <variable name="refNewSocket">
+                          <type>
+                            <derived name="REFERENCE TO FB_Socket" />
+                          </type>
+                        </variable>
+                      </inputVars>
+                    </interface>
+                    <body>
+                      <ST>
+                        <xhtml xmlns="http://www.w3.org/1999/xhtml">IF (__ISVALIDREF(refNewSocket)) THEN
+	THIS^.refSocket REF= refNewSocket;
+ELSE
+	THIS^.refSocket REF= 0;
+END_IF</xhtml>
+                      </ST>
+                    </body>
+                    <InterfaceAsPlainText>
+                      <xhtml xmlns="http://www.w3.org/1999/xhtml">METHOD FB_init : BOOL
+VAR_INPUT
+	bInitRetains : BOOL; // if TRUE, the retain variables are initialized (warm start / cold start)
+	bInCopyCode : BOOL;  // if TRUE, the instance afterwards gets moved into the copy code (online change)
+	refNewSocket : REFERENCE TO FB_Socket;
+END_VAR
+</xhtml>
+                    </InterfaceAsPlainText>
+                    <addData />
+                  </Method>
+                </data>
+                <data name="http://www.3s-software.com/plcopenxml/interfaceasplaintext" handleUnknown="implementation">
+                  <InterfaceAsPlainText>
+                    <xhtml xmlns="http://www.w3.org/1999/xhtml">FUNCTION_BLOCK PUBLIC FB_SocketOnCommand IMPLEMENTS I_Command
+VAR
+	refSocket : REFERENCE TO FB_Socket;
+END_VAR
+</xhtml>
+                  </InterfaceAsPlainText>
+                </data>
+                <data name="http://www.3s-software.com/plcopenxml/objectid" handleUnknown="discard">
+                  <ObjectId>eb2e5cd4-b6f9-41c2-bfb5-fea646599ebe</ObjectId>
+                </data>
+              </addData>
+            </pou>
+          </data>
+          <data name="http://www.3s-software.com/plcopenxml/pou" handleUnknown="implementation">
+            <pou name="FB_SwitchPanel" pouType="functionBlock">
+              <interface>
+                <inputVars>
+                  <variable name="arrSwitch">
+                    <type>
+                      <array>
+                        <dimension lower="1" upper="8" />
+                        <baseType>
+                          <BOOL />
+                        </baseType>
+                      </array>
+                    </type>
+                  </variable>
+                </inputVars>
+                <localVars>
+                  <variable name="aiCommand">
+                    <type>
+                      <array>
+                        <dimension lower="1" upper="8" />
+                        <baseType>
+                          <derived name="I_Command" />
+                        </baseType>
+                      </array>
+                    </type>
+                  </variable>
+                  <variable name="arrRtrig">
+                    <type>
+                      <array>
+                        <dimension lower="1" upper="8" />
+                        <baseType>
+                          <derived name="R_TRIG" />
+                        </baseType>
+                      </array>
+                    </type>
+                  </variable>
+                  <variable name="nIndex">
+                    <type>
+                      <INT />
+                    </type>
+                  </variable>
+                </localVars>
+              </interface>
+              <body>
+                <ST>
+                  <xhtml xmlns="http://www.w3.org/1999/xhtml">FOR nIndex := 1 TO 8 DO
+	arrRtrig[nIndex](CLK := arrSwitch[nIndex]);
+	IF arrRtrig[nIndex].Q THEN
+		IF (aiCommand[nIndex] &lt;&gt; 0) THEN
+			aiCommand[nIndex].Execute();
+		END_IF
+	END_IF
+END_FOR
+</xhtml>
+                </ST>
+              </body>
+              <addData>
+                <data name="http://www.3s-software.com/plcopenxml/method" handleUnknown="implementation">
+                  <Method name="FB_init" ObjectId="56c8ab17-65c5-4bcd-8c73-eee970483707">
+                    <interface>
+                      <returnType>
+                        <BOOL />
+                      </returnType>
+                      <inputVars>
+                        <variable name="bInitRetains">
+                          <type>
+                            <BOOL />
+                          </type>
+                          <documentation>
+                            <xhtml xmlns="http://www.w3.org/1999/xhtml"> if TRUE, the retain variables are initialized (warm start / cold start)</xhtml>
+                          </documentation>
+                        </variable>
+                        <variable name="bInCopyCode">
+                          <type>
+                            <BOOL />
+                          </type>
+                          <documentation>
+                            <xhtml xmlns="http://www.w3.org/1999/xhtml"> if TRUE, the instance afterwards gets moved into the copy code (online change)</xhtml>
+                          </documentation>
+                        </variable>
+                      </inputVars>
+                      <localVars>
+                        <variable name="nIndex">
+                          <type>
+                            <INT />
+                          </type>
+                        </variable>
+                      </localVars>
+                    </interface>
+                    <body>
+                      <ST>
+                        <xhtml xmlns="http://www.w3.org/1999/xhtml">FOR nIndex := 1 TO 8 DO
+	aiCommand[nIndex] := 0;
+END_FOR
+
+
+</xhtml>
+                      </ST>
+                    </body>
+                    <InterfaceAsPlainText>
+                      <xhtml xmlns="http://www.w3.org/1999/xhtml">METHOD FB_init : BOOL
+VAR_INPUT
+	bInitRetains : BOOL; // if TRUE, the retain variables are initialized (warm start / cold start)
+	bInCopyCode : BOOL;  // if TRUE, the instance afterwards gets moved into the copy code (online change)
+END_VAR
+VAR
+	nIndex : INT;
+END_VAR
+</xhtml>
+                    </InterfaceAsPlainText>
+                    <addData />
+                  </Method>
+                </data>
+                <data name="http://www.3s-software.com/plcopenxml/method" handleUnknown="implementation">
+                  <Method name="SetCommand" ObjectId="5e733fee-2f2b-45df-8ae4-699cd10bf4b9">
+                    <interface>
+                      <returnType>
+                        <BOOL />
+                      </returnType>
+                      <inputVars>
+                        <variable name="nPosition">
+                          <type>
+                            <INT />
+                          </type>
+                        </variable>
+                        <variable name="iCommand">
+                          <type>
+                            <derived name="I_Command" />
+                          </type>
+                        </variable>
+                      </inputVars>
+                    </interface>
+                    <body>
+                      <ST>
+                        <xhtml xmlns="http://www.w3.org/1999/xhtml">IF ((nPosition &gt;= 1) AND (nPosition &lt;= 8) AND (iCommand &lt;&gt; 0)) THEN
+	THIS^.aiCommand[nPosition] := iCommand;
+END_IF
+</xhtml>
+                      </ST>
+                    </body>
+                    <InterfaceAsPlainText>
+                      <xhtml xmlns="http://www.w3.org/1999/xhtml">METHOD PUBLIC SetCommand : BOOL
+VAR_INPUT
+	nPosition		: INT;
+	iCommand		: I_Command;
+END_VAR
+</xhtml>
+                    </InterfaceAsPlainText>
+                    <addData />
+                  </Method>
+                </data>
+                <data name="http://www.3s-software.com/plcopenxml/interfaceasplaintext" handleUnknown="implementation">
+                  <InterfaceAsPlainText>
+                    <xhtml xmlns="http://www.w3.org/1999/xhtml">FUNCTION_BLOCK PUBLIC FB_SwitchPanel
+VAR_INPUT
+	arrSwitch		: ARRAY[1..8] OF BOOL;
+END_VAR
+VAR
+	aiCommand		: ARRAY[1..8] OF I_Command;	
+	arrRtrig		: ARRAY[1..8] OF R_TRIG;
+	nIndex			: INT;
+END_VAR
+</xhtml>
+                  </InterfaceAsPlainText>
+                </data>
+                <data name="http://www.3s-software.com/plcopenxml/objectid" handleUnknown="discard">
+                  <ObjectId>9abbb49d-d336-4b0a-b698-5f678185a4a5</ObjectId>
+                </data>
+              </addData>
+            </pou>
+          </data>
+          <data name="http://www.3s-software.com/plcopenxml/pou" handleUnknown="implementation">
+            <pou name="FB_AirConditioning" pouType="functionBlock">
+              <interface>
+                <outputVars>
+                  <variable name="bActive">
+                    <type>
+                      <BOOL />
+                    </type>
+                  </variable>
+                  <variable name="lrTemperature">
+                    <type>
+                      <LREAL />
+                    </type>
+                  </variable>
+                </outputVars>
+              </interface>
+              <body>
+                <ST>
+                  <xhtml xmlns="http://www.w3.org/1999/xhtml" />
+                </ST>
+              </body>
+              <addData>
+                <data name="http://www.3s-software.com/plcopenxml/method" handleUnknown="implementation">
+                  <Method name="Activate" ObjectId="1a2fec03-c5e2-49d2-a4a1-00216e328eda">
+                    <interface />
+                    <body>
+                      <ST>
+                        <xhtml xmlns="http://www.w3.org/1999/xhtml">bActive := TRUE;
+
+</xhtml>
+                      </ST>
+                    </body>
+                    <InterfaceAsPlainText>
+                      <xhtml xmlns="http://www.w3.org/1999/xhtml">METHOD PUBLIC Activate
+</xhtml>
+                    </InterfaceAsPlainText>
+                    <addData />
+                  </Method>
+                </data>
+                <data name="http://www.3s-software.com/plcopenxml/method" handleUnknown="implementation">
+                  <Method name="Deactivate" ObjectId="9c23aefa-366b-4734-af31-3dbe5cc4e27e">
+                    <interface />
+                    <body>
+                      <ST>
+                        <xhtml xmlns="http://www.w3.org/1999/xhtml">bActive := false;</xhtml>
+                      </ST>
+                    </body>
+                    <InterfaceAsPlainText>
+                      <xhtml xmlns="http://www.w3.org/1999/xhtml">METHOD PUBLIC Deactivate
+</xhtml>
+                    </InterfaceAsPlainText>
+                    <addData />
+                  </Method>
+                </data>
+                <data name="http://www.3s-software.com/plcopenxml/method" handleUnknown="implementation">
+                  <Method name="SetTemperature" ObjectId="89d40da5-935c-42f7-aa47-6dc360b9ad3a">
+                    <interface>
+                      <returnType>
+                        <BOOL />
+                      </returnType>
+                      <inputVars>
+                        <variable name="lrNewTemperature">
+                          <type>
+                            <LREAL />
+                          </type>
+                        </variable>
+                      </inputVars>
+                    </interface>
+                    <body>
+                      <ST>
+                        <xhtml xmlns="http://www.w3.org/1999/xhtml">lrTemperature := lrNewTemperature;
+</xhtml>
+                      </ST>
+                    </body>
+                    <InterfaceAsPlainText>
+                      <xhtml xmlns="http://www.w3.org/1999/xhtml">METHOD PUBLIC SetTemperature : BOOL
+VAR_INPUT
+	lrNewTemperature	: LREAL;
+END_VAR
+</xhtml>
+                    </InterfaceAsPlainText>
+                    <addData />
+                  </Method>
+                </data>
+                <data name="http://www.3s-software.com/plcopenxml/property" handleUnknown="implementation">
+                  <Property name="Activated" ObjectId="0e2a419a-f906-4720-bd72-d3033aca54fb">
+                    <interface>
+                      <returnType>
+                        <BOOL />
+                      </returnType>
+                    </interface>
+                    <GetAccessor>
+                      <interface />
+                      <body>
+                        <ST>
+                          <xhtml xmlns="http://www.w3.org/1999/xhtml">Activated := bActive;</xhtml>
+                        </ST>
+                      </body>
+                      <InterfaceAsPlainText>
+                        <xhtml xmlns="http://www.w3.org/1999/xhtml">VAR
+END_VAR
+</xhtml>
+                      </InterfaceAsPlainText>
+                      <addData />
+                    </GetAccessor>
+                    <InterfaceAsPlainText>
+                      <xhtml xmlns="http://www.w3.org/1999/xhtml">PROPERTY PUBLIC Activated : BOOL</xhtml>
+                    </InterfaceAsPlainText>
+                    <addData />
+                  </Property>
+                </data>
+                <data name="http://www.3s-software.com/plcopenxml/property" handleUnknown="implementation">
+                  <Property name="Temperature" ObjectId="047500d1-4fdb-469e-adee-34ed6faba710">
+                    <interface>
+                      <returnType>
+                        <LREAL />
+                      </returnType>
+                    </interface>
+                    <GetAccessor>
+                      <interface />
+                      <body>
+                        <ST>
+                          <xhtml xmlns="http://www.w3.org/1999/xhtml">Temperature := lrTemperature;</xhtml>
+                        </ST>
+                      </body>
+                      <InterfaceAsPlainText>
+                        <xhtml xmlns="http://www.w3.org/1999/xhtml">VAR
+END_VAR
+</xhtml>
+                      </InterfaceAsPlainText>
+                      <addData />
+                    </GetAccessor>
+                    <InterfaceAsPlainText>
+                      <xhtml xmlns="http://www.w3.org/1999/xhtml">PROPERTY PUBLIC Temperature : LREAL</xhtml>
+                    </InterfaceAsPlainText>
+                    <addData />
+                  </Property>
+                </data>
+                <data name="http://www.3s-software.com/plcopenxml/interfaceasplaintext" handleUnknown="implementation">
+                  <InterfaceAsPlainText>
+                    <xhtml xmlns="http://www.w3.org/1999/xhtml">FUNCTION_BLOCK PUBLIC FB_AirConditioning
+VAR_OUTPUT
+	bActive			: BOOL;
+	lrTemperature	: LREAL;
+END_VAR
+</xhtml>
+                  </InterfaceAsPlainText>
+                </data>
+                <data name="http://www.3s-software.com/plcopenxml/objectid" handleUnknown="discard">
+                  <ObjectId>9d3aa5fb-75f3-46fa-8e76-d674e59fa53c</ObjectId>
+                </data>
+              </addData>
+            </pou>
+          </data>
+          <data name="http://www.3s-software.com/plcopenxml/pou" handleUnknown="implementation">
+            <pou name="FB_CDPlayer" pouType="functionBlock">
+              <interface>
+                <outputVars>
+                  <variable name="bPlayerActive">
+                    <type>
+                      <BOOL />
+                    </type>
+                  </variable>
+                  <variable name="byVolume">
+                    <type>
+                      <BYTE />
+                    </type>
+                  </variable>
+                  <variable name="byTrack">
+                    <type>
+                      <UINT />
+                    </type>
+                  </variable>
+                </outputVars>
+              </interface>
+              <body>
+                <ST>
+                  <xhtml xmlns="http://www.w3.org/1999/xhtml" />
+                </ST>
+              </body>
+              <addData>
+                <data name="http://www.3s-software.com/plcopenxml/method" handleUnknown="implementation">
+                  <Method name="SetTrack" ObjectId="4e5634f0-9545-430f-86b8-452bc4855175">
+                    <interface>
+                      <returnType>
+                        <BOOL />
+                      </returnType>
+                      <inputVars>
+                        <variable name="byNewTrack">
+                          <type>
+                            <UINT />
+                          </type>
+                        </variable>
+                      </inputVars>
+                    </interface>
+                    <body>
+                      <ST>
+                        <xhtml xmlns="http://www.w3.org/1999/xhtml">byTrack := byNewTrack;</xhtml>
+                      </ST>
+                    </body>
+                    <InterfaceAsPlainText>
+                      <xhtml xmlns="http://www.w3.org/1999/xhtml">METHOD PUBLIC SetTrack : BOOL
+VAR_INPUT
+	byNewTrack			: UINT;
+END_VAR
+</xhtml>
+                    </InterfaceAsPlainText>
+                    <addData />
+                  </Method>
+                </data>
+                <data name="http://www.3s-software.com/plcopenxml/method" handleUnknown="implementation">
+                  <Method name="SetVolume" ObjectId="eccc8046-24a1-4940-82a7-bde5c3e6c0ab">
+                    <interface>
+                      <returnType>
+                        <BOOL />
+                      </returnType>
+                      <inputVars>
+                        <variable name="byNewVolume">
+                          <type>
+                            <BYTE />
+                          </type>
+                        </variable>
+                      </inputVars>
+                    </interface>
+                    <body>
+                      <ST>
+                        <xhtml xmlns="http://www.w3.org/1999/xhtml">byVolume := byNewVolume;</xhtml>
+                      </ST>
+                    </body>
+                    <InterfaceAsPlainText>
+                      <xhtml xmlns="http://www.w3.org/1999/xhtml">METHOD PUBLIC SetVolume : BOOL
+VAR_INPUT
+	byNewVolume 		: BYTE;
+END_VAR
+</xhtml>
+                    </InterfaceAsPlainText>
+                    <addData />
+                  </Method>
+                </data>
+                <data name="http://www.3s-software.com/plcopenxml/method" handleUnknown="implementation">
+                  <Method name="Start" ObjectId="bdc89d87-e6d0-409f-9392-70820315cfad">
+                    <interface />
+                    <body>
+                      <ST>
+                        <xhtml xmlns="http://www.w3.org/1999/xhtml">bPlayerActive := true;</xhtml>
+                      </ST>
+                    </body>
+                    <InterfaceAsPlainText>
+                      <xhtml xmlns="http://www.w3.org/1999/xhtml">METHOD PUBLIC Start
+</xhtml>
+                    </InterfaceAsPlainText>
+                    <addData />
+                  </Method>
+                </data>
+                <data name="http://www.3s-software.com/plcopenxml/method" handleUnknown="implementation">
+                  <Method name="Stop" ObjectId="e998b74b-1a66-4831-b792-c8f260a073f3">
+                    <interface />
+                    <body>
+                      <ST>
+                        <xhtml xmlns="http://www.w3.org/1999/xhtml">bPlayerActive := FALSE;</xhtml>
+                      </ST>
+                    </body>
+                    <InterfaceAsPlainText>
+                      <xhtml xmlns="http://www.w3.org/1999/xhtml">METHOD PUBLIC Stop
+</xhtml>
+                    </InterfaceAsPlainText>
+                    <addData />
+                  </Method>
+                </data>
+                <data name="http://www.3s-software.com/plcopenxml/property" handleUnknown="implementation">
+                  <Property name="PlayerActive" ObjectId="5747ae8d-4a33-4113-9fd7-8425111c955f">
+                    <interface>
+                      <returnType>
+                        <BOOL />
+                      </returnType>
+                    </interface>
+                    <GetAccessor>
+                      <interface />
+                      <body>
+                        <ST>
+                          <xhtml xmlns="http://www.w3.org/1999/xhtml">PlayerActive := bPlayerActive;</xhtml>
+                        </ST>
+                      </body>
+                      <InterfaceAsPlainText>
+                        <xhtml xmlns="http://www.w3.org/1999/xhtml">VAR
+END_VAR
+</xhtml>
+                      </InterfaceAsPlainText>
+                      <addData />
+                    </GetAccessor>
+                    <InterfaceAsPlainText>
+                      <xhtml xmlns="http://www.w3.org/1999/xhtml">PROPERTY PUBLIC PlayerActive : BOOL</xhtml>
+                    </InterfaceAsPlainText>
+                    <addData />
+                  </Property>
+                </data>
+                <data name="http://www.3s-software.com/plcopenxml/property" handleUnknown="implementation">
+                  <Property name="Track" ObjectId="b0a7ebff-501f-4cac-8dfd-fc0417cc4c86">
+                    <interface>
+                      <returnType>
+                        <UINT />
+                      </returnType>
+                    </interface>
+                    <GetAccessor>
+                      <interface />
+                      <body>
+                        <ST>
+                          <xhtml xmlns="http://www.w3.org/1999/xhtml">Track := byTrack;</xhtml>
+                        </ST>
+                      </body>
+                      <InterfaceAsPlainText>
+                        <xhtml xmlns="http://www.w3.org/1999/xhtml">VAR
+END_VAR
+</xhtml>
+                      </InterfaceAsPlainText>
+                      <addData />
+                    </GetAccessor>
+                    <InterfaceAsPlainText>
+                      <xhtml xmlns="http://www.w3.org/1999/xhtml">PROPERTY PUBLIC Track : UINT</xhtml>
+                    </InterfaceAsPlainText>
+                    <addData />
+                  </Property>
+                </data>
+                <data name="http://www.3s-software.com/plcopenxml/property" handleUnknown="implementation">
+                  <Property name="Volume" ObjectId="ce5fac73-4811-427f-aabd-cccf1f8f19c1">
+                    <interface>
+                      <returnType>
+                        <BYTE />
+                      </returnType>
+                    </interface>
+                    <GetAccessor>
+                      <interface />
+                      <body>
+                        <ST>
+                          <xhtml xmlns="http://www.w3.org/1999/xhtml">Volume := byVolume;</xhtml>
+                        </ST>
+                      </body>
+                      <InterfaceAsPlainText>
+                        <xhtml xmlns="http://www.w3.org/1999/xhtml">VAR
+END_VAR
+</xhtml>
+                      </InterfaceAsPlainText>
+                      <addData />
+                    </GetAccessor>
+                    <InterfaceAsPlainText>
+                      <xhtml xmlns="http://www.w3.org/1999/xhtml">PROPERTY PUBLIC Volume : BYTE</xhtml>
+                    </InterfaceAsPlainText>
+                    <addData />
+                  </Property>
+                </data>
+                <data name="http://www.3s-software.com/plcopenxml/interfaceasplaintext" handleUnknown="implementation">
+                  <InterfaceAsPlainText>
+                    <xhtml xmlns="http://www.w3.org/1999/xhtml">FUNCTION_BLOCK PUBLIC FB_CDPlayer
+VAR_OUTPUT
+	bPlayerActive		: BOOL;
+	byVolume			: BYTE;
+	byTrack				: UINT;
+END_VAR
+</xhtml>
+                  </InterfaceAsPlainText>
+                </data>
+                <data name="http://www.3s-software.com/plcopenxml/objectid" handleUnknown="discard">
+                  <ObjectId>e5938590-1890-43a0-ba86-32547ab377e2</ObjectId>
+                </data>
+              </addData>
+            </pou>
+          </data>
+          <data name="http://www.3s-software.com/plcopenxml/pou" handleUnknown="implementation">
+            <pou name="FB_Lamp" pouType="functionBlock">
+              <interface>
+                <outputVars>
+                  <variable name="byLevel">
+                    <type>
+                      <BYTE />
+                    </type>
+                  </variable>
+                </outputVars>
+              </interface>
+              <body>
+                <ST>
+                  <xhtml xmlns="http://www.w3.org/1999/xhtml" />
+                </ST>
+              </body>
+              <addData>
+                <data name="http://www.3s-software.com/plcopenxml/method" handleUnknown="implementation">
+                  <Method name="SetLevel" ObjectId="97c2b33b-5c80-46f7-8f00-32f4f1bdd6a5">
+                    <interface>
+                      <returnType>
+                        <BOOL />
+                      </returnType>
+                      <inputVars>
+                        <variable name="byNewLevel">
+                          <type>
+                            <BYTE />
+                          </type>
+                        </variable>
+                      </inputVars>
+                    </interface>
+                    <body>
+                      <ST>
+                        <xhtml xmlns="http://www.w3.org/1999/xhtml">byLevel := byNewLevel;</xhtml>
+                      </ST>
+                    </body>
+                    <InterfaceAsPlainText>
+                      <xhtml xmlns="http://www.w3.org/1999/xhtml">METHOD PUBLIC SetLevel : BOOL
+VAR_INPUT
+	byNewLevel			: BYTE;
+END_VAR
+</xhtml>
+                    </InterfaceAsPlainText>
+                    <addData />
+                  </Method>
+                </data>
+                <data name="http://www.3s-software.com/plcopenxml/property" handleUnknown="implementation">
+                  <Property name="Level" ObjectId="14dcd475-0945-4468-8762-cbfbbeb1403d">
+                    <interface>
+                      <returnType>
+                        <BYTE />
+                      </returnType>
+                    </interface>
+                    <GetAccessor>
+                      <interface />
+                      <body>
+                        <ST>
+                          <xhtml xmlns="http://www.w3.org/1999/xhtml">Level := byLevel;</xhtml>
+                        </ST>
+                      </body>
+                      <InterfaceAsPlainText>
+                        <xhtml xmlns="http://www.w3.org/1999/xhtml">VAR
+END_VAR
+</xhtml>
+                      </InterfaceAsPlainText>
+                      <addData />
+                    </GetAccessor>
+                    <InterfaceAsPlainText>
+                      <xhtml xmlns="http://www.w3.org/1999/xhtml">PROPERTY PUBLIC Level : BYTE</xhtml>
+                    </InterfaceAsPlainText>
+                    <addData />
+                  </Property>
+                </data>
+                <data name="http://www.3s-software.com/plcopenxml/interfaceasplaintext" handleUnknown="implementation">
+                  <InterfaceAsPlainText>
+                    <xhtml xmlns="http://www.w3.org/1999/xhtml">FUNCTION_BLOCK PUBLIC FB_Lamp
+VAR_OUTPUT
+	byLevel			: BYTE;
+END_VAR
+</xhtml>
+                  </InterfaceAsPlainText>
+                </data>
+                <data name="http://www.3s-software.com/plcopenxml/objectid" handleUnknown="discard">
+                  <ObjectId>c9363aa1-33e3-41da-adea-7faeb59d6855</ObjectId>
+                </data>
+              </addData>
+            </pou>
+          </data>
+          <data name="http://www.3s-software.com/plcopenxml/pou" handleUnknown="implementation">
+            <pou name="FB_Socket" pouType="functionBlock">
+              <interface>
+                <outputVars>
+                  <variable name="bActive">
+                    <type>
+                      <BOOL />
+                    </type>
+                  </variable>
+                </outputVars>
+              </interface>
+              <body>
+                <ST>
+                  <xhtml xmlns="http://www.w3.org/1999/xhtml" />
+                </ST>
+              </body>
+              <addData>
+                <data name="http://www.3s-software.com/plcopenxml/method" handleUnknown="implementation">
+                  <Method name="Off" ObjectId="54f23483-66d0-4707-9581-54558ff84187">
+                    <interface />
+                    <body>
+                      <ST>
+                        <xhtml xmlns="http://www.w3.org/1999/xhtml">bActive := false;</xhtml>
+                      </ST>
+                    </body>
+                    <InterfaceAsPlainText>
+                      <xhtml xmlns="http://www.w3.org/1999/xhtml">METHOD PUBLIC Off
+</xhtml>
+                    </InterfaceAsPlainText>
+                    <addData />
+                  </Method>
+                </data>
+                <data name="http://www.3s-software.com/plcopenxml/method" handleUnknown="implementation">
+                  <Method name="On" ObjectId="ea9cd1d9-8590-4b0b-b6ec-c19fb0ca1b1d">
+                    <interface />
+                    <body>
+                      <ST>
+                        <xhtml xmlns="http://www.w3.org/1999/xhtml">bActive := true;</xhtml>
+                      </ST>
+                    </body>
+                    <InterfaceAsPlainText>
+                      <xhtml xmlns="http://www.w3.org/1999/xhtml">METHOD PUBLIC On
+</xhtml>
+                    </InterfaceAsPlainText>
+                    <addData />
+                  </Method>
+                </data>
+                <data name="http://www.3s-software.com/plcopenxml/property" handleUnknown="implementation">
+                  <Property name="Active" ObjectId="d6e4d23d-1261-40c6-80cc-51499451df21">
+                    <interface>
+                      <returnType>
+                        <BOOL />
+                      </returnType>
+                    </interface>
+                    <GetAccessor>
+                      <interface />
+                      <body>
+                        <ST>
+                          <xhtml xmlns="http://www.w3.org/1999/xhtml">Active := bActive;</xhtml>
+                        </ST>
+                      </body>
+                      <InterfaceAsPlainText>
+                        <xhtml xmlns="http://www.w3.org/1999/xhtml">VAR
+END_VAR
+</xhtml>
+                      </InterfaceAsPlainText>
+                      <addData />
+                    </GetAccessor>
+                    <InterfaceAsPlainText>
+                      <xhtml xmlns="http://www.w3.org/1999/xhtml">PROPERTY PUBLIC Active : BOOL</xhtml>
+                    </InterfaceAsPlainText>
+                    <addData />
+                  </Property>
+                </data>
+                <data name="http://www.3s-software.com/plcopenxml/interfaceasplaintext" handleUnknown="implementation">
+                  <InterfaceAsPlainText>
+                    <xhtml xmlns="http://www.w3.org/1999/xhtml">FUNCTION_BLOCK PUBLIC FB_Socket
+VAR_OUTPUT
+	bActive		: BOOL;
+END_VAR
+</xhtml>
+                  </InterfaceAsPlainText>
+                </data>
+                <data name="http://www.3s-software.com/plcopenxml/objectid" handleUnknown="discard">
+                  <ObjectId>55e66dc1-05c3-43f8-9bc8-5075ca0cd865</ObjectId>
+                </data>
+              </addData>
+            </pou>
+          </data>
+          <data name="http://www.3s-software.com/plcopenxml/libraries" handleUnknown="implementation">
+            <Libraries>
+              <Library Name="#Tc2_Standard" Namespace="Tc2_Standard" HideWhenReferencedAsDependency="false" PublishSymbolsInContainer="false" SystemLibrary="false" LinkAllContent="false" DefaultResolution="Tc2_Standard, * (Beckhoff Automation GmbH)" />
+              <Library Name="#Tc2_System" Namespace="Tc2_System" HideWhenReferencedAsDependency="false" PublishSymbolsInContainer="false" SystemLibrary="false" LinkAllContent="false" DefaultResolution="Tc2_System, * (Beckhoff Automation GmbH)">
+                <Parameters>
+                  <Parameter Name="PARAM.TABLE_UPPER_BOUND" Value="15" />
+                  <Parameter Name="PARAM.STRING_LENGTH_EXP" Value="255" />
+                  <Parameter Name="PARAM.STRING_LENGTH_ADDRESS" Value="20" />
+                  <Parameter Name="PARAM.STRING_LENGTH_COMMENT" Value="255" />
+                  <Parameter Name="PARAM.STRING_LENGTH_OUTSTRING" Value="255" />
+                  <Parameter Name="PARAM.TABLE_SHOW_VALID_ITEMS" Value="FALSE" />
+                </Parameters>
+              </Library>
+              <Library Name="#Tc3_Module" Namespace="Tc3_Module" HideWhenReferencedAsDependency="false" PublishSymbolsInContainer="false" SystemLibrary="false" LinkAllContent="false" DefaultResolution="Tc3_Module, * (Beckhoff Automation GmbH)" />
+              <addData>
+                <data name="http://www.3s-software.com/plcopenxml/objectid" handleUnknown="discard">
+                  <ObjectId>9447e122-f9e2-4cc4-80dd-e006b3d59135</ObjectId>
+                </data>
+              </addData>
+            </Libraries>
+          </data>
+          <data name="http://www.3s-software.com/plcopenxml/objectid" handleUnknown="discard">
+            <ObjectId>70d9fa36-c37c-4ac9-8ed2-dad4dff96f28</ObjectId>
+          </data>
+        </addData>
+      </resource>
+    </data>
+    <data name="http://www.3s-software.com/plcopenxml/projectstructure" handleUnknown="discard">
+      <ProjectStructure>
+        <Object Name="Sample01" ObjectId="70d9fa36-c37c-4ac9-8ed2-dad4dff96f28">
+          <Object Name="Library Manager" ObjectId="9447e122-f9e2-4cc4-80dd-e006b3d59135" />
+          <Object Name="PlcTask" ObjectId="c19a864c-0c47-41c9-b8f3-c055984d2585" />
+          <Folder Name="POUs">
+            <Folder Name="Commands">
+              <Object Name="FB_AirConComfortCommand" ObjectId="fa70c319-e680-4f43-bf75-6b04781fe123">
+                <Object Name="Execute" ObjectId="0530f813-4259-4fee-8d29-4203989fd02f" />
+                <Object Name="FB_init" ObjectId="4d0f061f-23e5-4b59-87d0-78ae1b8327c5" />
+              </Object>
+              <Object Name="FB_AirConStandbyCommand" ObjectId="5d054d10-9e4a-4a41-a47c-aefd8da996a4">
+                <Object Name="Execute" ObjectId="d1a57a41-923d-4899-a12a-5f60b748e094" />
+                <Object Name="FB_init" ObjectId="5ab6a421-b67d-4b28-93a1-ff3e7801386d" />
+              </Object>
+              <Object Name="FB_LampSetLevelCommand" ObjectId="9f6e262f-5575-454c-8f85-b9e06af108eb">
+                <Object Name="Execute" ObjectId="d3314861-d094-46fb-bd7f-18bce7e27134" />
+                <Object Name="FB_init" ObjectId="70db96a3-729e-4e7f-bbee-0bb72b3ab88e" />
+              </Object>
+              <Object Name="FB_MusicPlayCommand" ObjectId="9af7a132-dfd1-40f6-9e03-6c734bb23364">
+                <Object Name="Execute" ObjectId="1e3196d6-937f-40cc-beb7-c27b776095f5" />
+                <Object Name="FB_init" ObjectId="4d51c6d5-7d44-4836-8364-0806c83c0c3c" />
+              </Object>
+              <Object Name="FB_MusicStopCommand" ObjectId="8cf03a18-b11f-47a4-bd12-bfcb0a33580c">
+                <Object Name="Execute" ObjectId="86d54cc1-f415-4974-832c-25dca3ebebfb" />
+                <Object Name="FB_init" ObjectId="15f8b24f-95fe-4769-b3bd-5a189cb73ec8" />
+              </Object>
+              <Object Name="FB_SocketOffCommand" ObjectId="cd7850d2-cbb1-40d9-9176-4eb71b5e71df">
+                <Object Name="Execute" ObjectId="abdd543b-040e-4f45-9997-6d6adc357d75" />
+                <Object Name="FB_init" ObjectId="21ca7cda-0654-496a-bab5-b731a714ee27" />
+              </Object>
+              <Object Name="FB_SocketOnCommand" ObjectId="eb2e5cd4-b6f9-41c2-bfb5-fea646599ebe">
+                <Object Name="Execute" ObjectId="00744c42-2535-4c07-9d72-9dfd58f4279b" />
+                <Object Name="FB_init" ObjectId="b23704c1-7621-4b32-8be0-30a679a8c783" />
+              </Object>
+              <Object Name="I_Command" ObjectId="b9552517-79a2-47e4-9ea4-093312b610dd">
+                <Object Name="Execute" ObjectId="8f5c6cfd-bac1-4bb2-8501-7a4064075c03" />
+              </Object>
+            </Folder>
+            <Folder Name="Invoker">
+              <Object Name="FB_SwitchPanel" ObjectId="9abbb49d-d336-4b0a-b698-5f678185a4a5">
+                <Object Name="FB_init" ObjectId="56c8ab17-65c5-4bcd-8c73-eee970483707" />
+                <Object Name="SetCommand" ObjectId="5e733fee-2f2b-45df-8ae4-699cd10bf4b9" />
+              </Object>
+            </Folder>
+            <Object Name="MAIN" ObjectId="ef33b4c1-c95d-4cf8-b9bf-7d346bd93484" />
+            <Folder Name="Receiver">
+              <Object Name="FB_AirConditioning" ObjectId="9d3aa5fb-75f3-46fa-8e76-d674e59fa53c">
+                <Object Name="Activate" ObjectId="1a2fec03-c5e2-49d2-a4a1-00216e328eda" />
+                <Object Name="Activated" ObjectId="0e2a419a-f906-4720-bd72-d3033aca54fb" />
+                <Object Name="Deactivate" ObjectId="9c23aefa-366b-4734-af31-3dbe5cc4e27e" />
+                <Object Name="SetTemperature" ObjectId="89d40da5-935c-42f7-aa47-6dc360b9ad3a" />
+                <Object Name="Temperature" ObjectId="047500d1-4fdb-469e-adee-34ed6faba710" />
+              </Object>
+              <Object Name="FB_CDPlayer" ObjectId="e5938590-1890-43a0-ba86-32547ab377e2">
+                <Object Name="PlayerActive" ObjectId="5747ae8d-4a33-4113-9fd7-8425111c955f" />
+                <Object Name="SetTrack" ObjectId="4e5634f0-9545-430f-86b8-452bc4855175" />
+                <Object Name="SetVolume" ObjectId="eccc8046-24a1-4940-82a7-bde5c3e6c0ab" />
+                <Object Name="Start" ObjectId="bdc89d87-e6d0-409f-9392-70820315cfad" />
+                <Object Name="Stop" ObjectId="e998b74b-1a66-4831-b792-c8f260a073f3" />
+                <Object Name="Track" ObjectId="b0a7ebff-501f-4cac-8dfd-fc0417cc4c86" />
+                <Object Name="Volume" ObjectId="ce5fac73-4811-427f-aabd-cccf1f8f19c1" />
+              </Object>
+              <Object Name="FB_Lamp" ObjectId="c9363aa1-33e3-41da-adea-7faeb59d6855">
+                <Object Name="Level" ObjectId="14dcd475-0945-4468-8762-cbfbbeb1403d" />
+                <Object Name="SetLevel" ObjectId="97c2b33b-5c80-46f7-8f00-32f4f1bdd6a5" />
+              </Object>
+              <Object Name="FB_Socket" ObjectId="55e66dc1-05c3-43f8-9bc8-5075ca0cd865">
+                <Object Name="Active" ObjectId="d6e4d23d-1261-40c6-80cc-51499451df21" />
+                <Object Name="Off" ObjectId="54f23483-66d0-4707-9581-54558ff84187" />
+                <Object Name="On" ObjectId="ea9cd1d9-8590-4b0b-b6ec-c19fb0ca1b1d" />
+              </Object>
+            </Folder>
+          </Folder>
+        </Object>
+      </ProjectStructure>
+    </data>
+  </addData>
+</project>

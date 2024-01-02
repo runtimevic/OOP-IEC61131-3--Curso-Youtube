@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4020.3">
+  <POU Name="FB_MusicStopCommand" Id="{8cf03a18-b11f-47a4-bd12-bfcb0a33580c}" SpecialFunc="None">
+    <Declaration><![CDATA[FUNCTION_BLOCK PUBLIC FB_MusicStopCommand IMPLEMENTS I_Command
+VAR
+	refCDPlayer : REFERENCE TO FB_CDPlayer;
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[]]></ST>
+    </Implementation>
+    <Method Name="Execute" Id="{86d54cc1-f415-4974-832c-25dca3ebebfb}">
+      <Declaration><![CDATA[METHOD Execute
+]]></Declaration>
+      <Implementation>
+        <ST><![CDATA[IF (__ISVALIDREF(THIS^.refCDPlayer)) THEN
+	THIS^.refCDPlayer.Stop();
+END_IF
+]]></ST>
+      </Implementation>
+    </Method>
+    <Method Name="FB_init" Id="{15f8b24f-95fe-4769-b3bd-5a189cb73ec8}">
+      <Declaration><![CDATA[METHOD FB_init : BOOL
+VAR_INPUT
+	bInitRetains : BOOL; // if TRUE, the retain variables are initialized (warm start / cold start)
+	bInCopyCode : BOOL;  // if TRUE, the instance afterwards gets moved into the copy code (online change)
+	refCDPlayer : REFERENCE TO FB_CDPlayer;
+END_VAR
+]]></Declaration>
+      <Implementation>
+        <ST><![CDATA[IF (__ISVALIDREF(refCDPlayer)) THEN
+	THIS^.refCDPlayer REF= refCDPlayer;
+ELSE
+	THIS^.refCDPlayer REF= 0;
+END_IF]]></ST>
+      </Implementation>
+    </Method>
+  </POU>
+</TcPlcObject>

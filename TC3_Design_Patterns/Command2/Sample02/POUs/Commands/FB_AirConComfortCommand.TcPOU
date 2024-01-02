@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4020.3">
+  <POU Name="FB_AirConComfortCommand" Id="{fa70c319-e680-4f43-bf75-6b04781fe123}" SpecialFunc="None">
+    <Declaration><![CDATA[FUNCTION_BLOCK PUBLIC FB_AirConComfortCommand IMPLEMENTS I_Command
+VAR
+	refAirConditioning : REFERENCE TO FB_AirConditioning;
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[]]></ST>
+    </Implementation>
+    <Method Name="Execute" Id="{0530f813-4259-4fee-8d29-4203989fd02f}">
+      <Declaration><![CDATA[METHOD Execute
+]]></Declaration>
+      <Implementation>
+        <ST><![CDATA[IF (__ISVALIDREF(THIS^.refAirConditioning)) THEN
+	THIS^.refAirConditioning.Activate();
+	THIS^.refAirConditioning.SetTemperature(20.0);
+END_IF
+]]></ST>
+      </Implementation>
+    </Method>
+    <Method Name="FB_init" Id="{4d0f061f-23e5-4b59-87d0-78ae1b8327c5}">
+      <Declaration><![CDATA[METHOD FB_init : BOOL
+VAR_INPUT
+	bInitRetains : BOOL; // if TRUE, the retain variables are initialized (warm start / cold start)
+	bInCopyCode : BOOL;  // if TRUE, the instance afterwards gets moved into the copy code (online change)
+	refAirConditioning : REFERENCE TO FB_AirConditioning;
+END_VAR
+]]></Declaration>
+      <Implementation>
+        <ST><![CDATA[IF (__ISVALIDREF(refAirConditioning)) THEN
+	THIS^.refAirConditioning REF= refAirConditioning;
+ELSE
+	THIS^.refAirConditioning REF= 0;
+END_IF
+]]></ST>
+      </Implementation>
+    </Method>
+  </POU>
+</TcPlcObject>

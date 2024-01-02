@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4020.6">
+  <POU Name="FB_RoomOffCommand" Id="{ae4bc417-246e-4606-96d3-1dea8addf4d6}" SpecialFunc="None">
+    <Declaration><![CDATA[FUNCTION_BLOCK PUBLIC FB_RoomOffCommand IMPLEMENTS I_Command
+VAR
+	aiCommand : ARRAY[1..4] OF I_Command;
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[]]></ST>
+    </Implementation>
+    <Method Name="Execute" Id="{b4d18541-5632-4a53-958b-414f4ca0b679}">
+      <Declaration><![CDATA[METHOD Execute
+VAR
+	nIndex		: INT;
+END_VAR
+]]></Declaration>
+      <Implementation>
+        <ST><![CDATA[FOR nIndex := 1 TO 4 DO
+	IF (THIS^.aiCommand[nIndex] <> 0) THEN
+		THIS^.aiCommand[nIndex].Execute();
+	END_IF
+END_FOR
+]]></ST>
+      </Implementation>
+    </Method>
+    <Method Name="FB_init" Id="{7c7dba42-540b-403f-9467-650e8b5cf58b}">
+      <Declaration><![CDATA[METHOD FB_init : BOOL
+VAR_INPUT
+	bInitRetains : BOOL; // if TRUE, the retain variables are initialized (warm start / cold start)
+	bInCopyCode : BOOL;  // if TRUE, the instance afterwards gets moved into the copy code (online change)
+	iCommand01 : I_Command;
+	iCommand02 : I_Command;
+	iCommand03 : I_Command;
+	iCommand04 : I_Command;
+END_VAR
+]]></Declaration>
+      <Implementation>
+        <ST><![CDATA[THIS^.aiCommand[1] := 0;
+THIS^.aiCommand[2] := 0;
+THIS^.aiCommand[3] := 0;
+THIS^.aiCommand[4] := 0;
+IF (iCommand01 <> 0) THEN
+	THIS^.aiCommand[1] := iCommand01;
+END_IF
+IF (iCommand02 <> 0) THEN
+	THIS^.aiCommand[2] := iCommand02;
+END_IF
+IF (iCommand03 <> 0) THEN
+	THIS^.aiCommand[3] := iCommand03;
+END_IF
+IF (iCommand04 <> 0) THEN
+	THIS^.aiCommand[4] := iCommand04;
+END_IF
+
+]]></ST>
+      </Implementation>
+    </Method>
+  </POU>
+</TcPlcObject>

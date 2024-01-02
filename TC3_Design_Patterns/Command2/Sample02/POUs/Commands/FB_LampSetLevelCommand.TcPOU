@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4020.3">
+  <POU Name="FB_LampSetLevelCommand" Id="{9f6e262f-5575-454c-8f85-b9e06af108eb}" SpecialFunc="None">
+    <Declaration><![CDATA[FUNCTION_BLOCK PUBLIC FB_LampSetLevelCommand IMPLEMENTS I_Command
+VAR
+	refLamp		: REFERENCE TO FB_Lamp;
+	byNewLevel	: BYTE;
+END_VAR
+
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[]]></ST>
+    </Implementation>
+    <Method Name="Execute" Id="{d3314861-d094-46fb-bd7f-18bce7e27134}">
+      <Declaration><![CDATA[METHOD Execute
+]]></Declaration>
+      <Implementation>
+        <ST><![CDATA[IF (__ISVALIDREF(THIS^.refLamp)) THEN
+	THIS^.refLamp.SetLevel(THIS^.byNewLevel);
+END_IF]]></ST>
+      </Implementation>
+    </Method>
+    <Method Name="FB_init" Id="{70db96a3-729e-4e7f-bbee-0bb72b3ab88e}">
+      <Declaration><![CDATA[METHOD FB_init : BOOL
+VAR_INPUT
+	bInitRetains : BOOL; // if TRUE, the retain variables are initialized (warm start / cold start)
+	bInCopyCode : BOOL;  // if TRUE, the instance afterwards gets moved into the copy code (online change)
+	refLamp : REFERENCE TO FB_Lamp;
+	byNewLevel : BYTE;
+END_VAR
+]]></Declaration>
+      <Implementation>
+        <ST><![CDATA[IF (__ISVALIDREF(refLamp)) THEN
+	THIS^.refLamp REF= refLamp;
+ELSE
+	THIS^.refLamp REF= 0;
+END_IF
+THIS^.byNewLevel := byNewLevel;]]></ST>
+      </Implementation>
+    </Method>
+  </POU>
+</TcPlcObject>
