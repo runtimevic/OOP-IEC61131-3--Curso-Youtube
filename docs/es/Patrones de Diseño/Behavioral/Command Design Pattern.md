@@ -43,4 +43,4 @@ La idea central del patrón de comando es desacoplar el invocador y el receptor 
 
 ***
 ### <span style="color:grey">Link al Video de Youtube_41:</span>
-- 🔗 [041 - OOP IEC 61131-3 PLC -- Patrones de Diseño - Comportamiento - Comando]()
+- 🔗 [041 - OOP IEC 61131-3 PLC -- Patrones de Diseño - Comportamiento - Comando](https://youtu.be/5y8DbyKCN_g)

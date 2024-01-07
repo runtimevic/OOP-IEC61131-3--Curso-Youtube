@@ -3,9 +3,9 @@
 Hola,
 Seguimos con el curso de 👩‍💻 OOP IEC 61131-3 PLC 👨‍💻,
 ya esta disponible el Video numero 40 de Youtube:
-en este video veremos: Patrones de Diseño (Design Patterns) - Chain of Responsability.
+en este video veremos: Patrones de Diseño (Design Patterns) - Command.
 
-👉 https://youtu.be/YD1G_62glm4
+👉 https://youtu.be/5y8DbyKCN_g
 
 🐙 Repositorio de GitHub:
 - 👉 https://github.com/runtimevic/OOP-IEC61131-3--Curso-Youtube
@@ -58,7 +58,7 @@ Lista de Videos del Curso OOP Programación Orientada a Objetos IEC61131-3 PLC:
 - 038 - https://youtu.be/SPrTKD648ng
 - 039 - https://youtu.be/Y0SI90RvwPc
 - 040 - https://youtu.be/YD1G_62glm4
-- 041 -
+- 041 - https://youtu.be/5y8DbyKCN_g
 - 042 - 
 
 Se busca colaborador para la traducción de la documentación al idioma que desee... 👀
