@@ -81,7 +81,7 @@ Los principios SOLID no son reglas o leyes que deban seguirse estrictamente. Son
 
 - 🔗 [Principios de programación SOLID (#Shorts)](https://www.youtube.com/playlist?list=PLTd5ehIj0goPxe8LLVhxZBiOygPk8Aqp8)
 
-- 🔗 [stefanhenneken.net, IEC 61131-3: The Principles KISS, DRY, LoD and YAGNI](https://stefanhenneken.net/2023/12/17/iec-61131-3-the-principles-kiss-dry-lod-and-yagni/#more-2625)
+- 🔗 [stefanhenneken.net, IEC 61131-3: The Principles KISS, DRY, LoD and YAGNI](https://stefanhenneken.net/2023/12/17/iec-61131-3-the-principles-kiss-dry-lod-and-yagni/)
 
 - 🔗 ["Clean" Code, Horrible Performance](https://www.youtube.com/watch?v=tD5NrevFtbU)
 

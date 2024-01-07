@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.9">
-  <POU Name="MAIN" Id="{ef33b4c1-c95d-4cf8-b9bf-7d346bd93484}" SpecialFunc="None">
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.12">
+  <POU Name="MAIN" Id="{3a75e61e-fd60-434a-bbda-881b04f7f156}" SpecialFunc="None">
     <Declaration><![CDATA[PROGRAM MAIN
 VAR
 	// Invoker
@@ -47,9 +47,5 @@ END_IF
 
 ]]></ST>
     </Implementation>
-    <LineIds Name="MAIN">
-      <LineId Id="3" Count="14" />
-      <LineId Id="2" Count="0" />
-    </LineIds>
   </POU>
 </TcPlcObject>

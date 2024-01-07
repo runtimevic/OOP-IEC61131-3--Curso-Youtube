@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4020.3">
-  <POU Name="FB_CDPlayer" Id="{e5938590-1890-43a0-ba86-32547ab377e2}" SpecialFunc="None">
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.12">
+  <POU Name="FB_CDPlayer" Id="{975ed8e9-3af1-4279-b627-2f78a5e22f31}" SpecialFunc="None">
     <Declaration><![CDATA[FUNCTION_BLOCK PUBLIC FB_CDPlayer
 VAR_OUTPUT
 	bPlayerActive		: BOOL;
@@ -11,9 +11,9 @@ END_VAR
     <Implementation>
       <ST><![CDATA[]]></ST>
     </Implementation>
-    <Property Name="PlayerActive" Id="{5747ae8d-4a33-4113-9fd7-8425111c955f}">
+    <Property Name="PlayerActive" Id="{89a8320d-2c2a-4969-8513-48c9da23b9bb}">
       <Declaration><![CDATA[PROPERTY PUBLIC PlayerActive : BOOL]]></Declaration>
-      <Get Name="Get" Id="{22b85649-b7cf-4b58-b014-46b33f3f2cea}">
+      <Get Name="Get" Id="{9f2f34f2-8536-4ba3-91b1-a53eb563c446}">
         <Declaration><![CDATA[VAR
 END_VAR
 ]]></Declaration>
@@ -22,7 +22,7 @@ END_VAR
         </Implementation>
       </Get>
     </Property>
-    <Method Name="SetTrack" Id="{4e5634f0-9545-430f-86b8-452bc4855175}">
+    <Method Name="SetTrack" Id="{fc45370b-dcfa-4679-85eb-f1ebc5cc3022}">
       <Declaration><![CDATA[METHOD PUBLIC SetTrack : BOOL
 VAR_INPUT
 	byNewTrack			: UINT;
@@ -32,7 +32,7 @@ END_VAR
         <ST><![CDATA[byTrack := byNewTrack;]]></ST>
       </Implementation>
     </Method>
-    <Method Name="SetVolume" Id="{eccc8046-24a1-4940-82a7-bde5c3e6c0ab}">
+    <Method Name="SetVolume" Id="{917003ad-1bf9-45b3-b736-aa1645ff6b31}">
       <Declaration><![CDATA[METHOD PUBLIC SetVolume : BOOL
 VAR_INPUT
 	byNewVolume 		: BYTE;
@@ -42,23 +42,23 @@ END_VAR
         <ST><![CDATA[byVolume := byNewVolume;]]></ST>
       </Implementation>
     </Method>
-    <Method Name="Start" Id="{bdc89d87-e6d0-409f-9392-70820315cfad}">
+    <Method Name="Start" Id="{f6759067-a5da-449d-ac1f-9c213b49a59d}">
       <Declaration><![CDATA[METHOD PUBLIC Start
 ]]></Declaration>
       <Implementation>
         <ST><![CDATA[bPlayerActive := true;]]></ST>
       </Implementation>
     </Method>
-    <Method Name="Stop" Id="{e998b74b-1a66-4831-b792-c8f260a073f3}">
+    <Method Name="Stop" Id="{6cbf4766-8187-43c7-85c2-268cbd6641c9}">
       <Declaration><![CDATA[METHOD PUBLIC Stop
 ]]></Declaration>
       <Implementation>
         <ST><![CDATA[bPlayerActive := FALSE;]]></ST>
       </Implementation>
     </Method>
-    <Property Name="Track" Id="{b0a7ebff-501f-4cac-8dfd-fc0417cc4c86}">
+    <Property Name="Track" Id="{90c89200-0d47-46e2-a033-9de67666835e}">
       <Declaration><![CDATA[PROPERTY PUBLIC Track : UINT]]></Declaration>
-      <Get Name="Get" Id="{ab8c61dd-0b4c-42b1-9ad5-ddc83fc36787}">
+      <Get Name="Get" Id="{ea7c787c-449c-485c-b732-7e4669935168}">
         <Declaration><![CDATA[VAR
 END_VAR
 ]]></Declaration>
@@ -67,9 +67,9 @@ END_VAR
         </Implementation>
       </Get>
     </Property>
-    <Property Name="Volume" Id="{ce5fac73-4811-427f-aabd-cccf1f8f19c1}">
+    <Property Name="Volume" Id="{e74acf61-129a-4aa7-a347-54a516a55ce7}">
       <Declaration><![CDATA[PROPERTY PUBLIC Volume : BYTE]]></Declaration>
-      <Get Name="Get" Id="{4e7aa514-d712-4467-8f60-745f5909e0e6}">
+      <Get Name="Get" Id="{391a6304-17dc-4e49-a6a4-0e828afced5e}">
         <Declaration><![CDATA[VAR
 END_VAR
 ]]></Declaration>

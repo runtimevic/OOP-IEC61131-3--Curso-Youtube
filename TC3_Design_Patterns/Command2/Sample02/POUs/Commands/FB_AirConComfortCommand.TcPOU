@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4020.3">
-  <POU Name="FB_AirConComfortCommand" Id="{fa70c319-e680-4f43-bf75-6b04781fe123}" SpecialFunc="None">
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.12">
+  <POU Name="FB_AirConComfortCommand" Id="{00077904-e3e1-4935-8970-a95d5a9de915}" SpecialFunc="None">
     <Declaration><![CDATA[FUNCTION_BLOCK PUBLIC FB_AirConComfortCommand IMPLEMENTS I_Command
 VAR
 	refAirConditioning : REFERENCE TO FB_AirConditioning;
@@ -9,7 +9,7 @@ END_VAR
     <Implementation>
       <ST><![CDATA[]]></ST>
     </Implementation>
-    <Method Name="Execute" Id="{0530f813-4259-4fee-8d29-4203989fd02f}">
+    <Method Name="Execute" Id="{a57f8a00-c1a2-4722-a9da-0cccf07d9ad8}">
       <Declaration><![CDATA[METHOD Execute
 ]]></Declaration>
       <Implementation>
@@ -20,7 +20,7 @@ END_IF
 ]]></ST>
       </Implementation>
     </Method>
-    <Method Name="FB_init" Id="{4d0f061f-23e5-4b59-87d0-78ae1b8327c5}">
+    <Method Name="FB_init" Id="{36e1f83d-9f25-43a1-be24-18c79e1ea78f}">
       <Declaration><![CDATA[METHOD FB_init : BOOL
 VAR_INPUT
 	bInitRetains : BOOL; // if TRUE, the retain variables are initialized (warm start / cold start)

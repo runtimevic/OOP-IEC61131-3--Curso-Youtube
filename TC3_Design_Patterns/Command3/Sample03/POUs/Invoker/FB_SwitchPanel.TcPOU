@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4020.3">
-  <POU Name="FB_SwitchPanel" Id="{9abbb49d-d336-4b0a-b698-5f678185a4a5}" SpecialFunc="None">
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.12">
+  <POU Name="FB_SwitchPanel" Id="{7aecb1a3-2ade-4883-b473-1461c4d83654}" SpecialFunc="None">
     <Declaration><![CDATA[FUNCTION_BLOCK PUBLIC FB_SwitchPanel
 VAR_INPUT
 	bUndo			: BOOL;
@@ -33,7 +33,7 @@ IF fbRtrigUndo.Q THEN
 END_IF
 ]]></ST>
     </Implementation>
-    <Method Name="FB_init" Id="{56c8ab17-65c5-4bcd-8c73-eee970483707}">
+    <Method Name="FB_init" Id="{ff2cd640-78dc-4c8e-9539-ab15228cb668}">
       <Declaration><![CDATA[METHOD FB_init : BOOL
 VAR_INPUT
 	bInitRetains : BOOL; // if TRUE, the retain variables are initialized (warm start / cold start)
@@ -51,7 +51,7 @@ iLastCommand := 0;
 ]]></ST>
       </Implementation>
     </Method>
-    <Method Name="SetCommand" Id="{5e733fee-2f2b-45df-8ae4-699cd10bf4b9}">
+    <Method Name="SetCommand" Id="{43ca7f46-3a10-46e1-9eb8-83b3aa17811c}">
       <Declaration><![CDATA[METHOD PUBLIC SetCommand : BOOL
 VAR_INPUT
 	nPosition		: INT;

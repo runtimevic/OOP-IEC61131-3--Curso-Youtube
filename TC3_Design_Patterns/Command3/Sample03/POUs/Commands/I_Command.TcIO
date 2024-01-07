@@ -1,9 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4020.3">
-  <Itf Name="I_Command" Id="{b9552517-79a2-47e4-9ea4-093312b610dd}">
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.12">
+  <Itf Name="I_Command" Id="{ff270a9b-583f-46ae-8f38-e5f037961222}">
     <Declaration><![CDATA[INTERFACE I_Command
 ]]></Declaration>
-    <Method Name="Execute" Id="{8f5c6cfd-bac1-4bb2-8501-7a4064075c03}">
+    <Method Name="Execute" Id="{a5144599-2209-4576-a60e-fd84eed36244}">
       <Declaration><![CDATA[METHOD Execute
 ]]></Declaration>
     </Method>

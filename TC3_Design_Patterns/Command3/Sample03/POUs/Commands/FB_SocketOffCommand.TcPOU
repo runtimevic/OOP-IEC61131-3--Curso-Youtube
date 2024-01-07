@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4020.3">
-  <POU Name="FB_SocketOffCommand" Id="{cd7850d2-cbb1-40d9-9176-4eb71b5e71df}" SpecialFunc="None">
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.12">
+  <POU Name="FB_SocketOffCommand" Id="{59031cb0-1992-4ca7-b8f1-c9aabbb47879}" SpecialFunc="None">
     <Declaration><![CDATA[FUNCTION_BLOCK PUBLIC FB_SocketOffCommand IMPLEMENTS I_Command
 VAR
 	refSocket : REFERENCE TO FB_Socket;
@@ -9,7 +9,7 @@ END_VAR
     <Implementation>
       <ST><![CDATA[]]></ST>
     </Implementation>
-    <Method Name="Execute" Id="{abdd543b-040e-4f45-9997-6d6adc357d75}">
+    <Method Name="Execute" Id="{ebace1ea-7d38-4762-951b-29c07047bf80}">
       <Declaration><![CDATA[METHOD Execute]]></Declaration>
       <Implementation>
         <ST><![CDATA[IF (__ISVALIDREF(THIS^.refSocket)) THEN
@@ -17,7 +17,7 @@ END_VAR
 END_IF]]></ST>
       </Implementation>
     </Method>
-    <Method Name="FB_init" Id="{21ca7cda-0654-496a-bab5-b731a714ee27}">
+    <Method Name="FB_init" Id="{a7a2b0f7-3cdf-417a-bc3c-9eb3c2a4ac1e}">
       <Declaration><![CDATA[METHOD FB_init : BOOL
 VAR_INPUT
 	bInitRetains : BOOL; // if TRUE, the retain variables are initialized (warm start / cold start)

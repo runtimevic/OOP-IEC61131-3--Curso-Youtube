@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4020.3">
-  <POU Name="FB_MusicStopCommand" Id="{8cf03a18-b11f-47a4-bd12-bfcb0a33580c}" SpecialFunc="None">
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.12">
+  <POU Name="FB_MusicStopCommand" Id="{d97a7404-f451-45b1-af38-6b06d2dba130}" SpecialFunc="None">
     <Declaration><![CDATA[FUNCTION_BLOCK PUBLIC FB_MusicStopCommand IMPLEMENTS I_Command
 VAR
 	refCDPlayer : REFERENCE TO FB_CDPlayer;
@@ -9,7 +9,7 @@ END_VAR
     <Implementation>
       <ST><![CDATA[]]></ST>
     </Implementation>
-    <Method Name="Execute" Id="{86d54cc1-f415-4974-832c-25dca3ebebfb}">
+    <Method Name="Execute" Id="{92615b9c-b0d4-437f-a4a1-5d0405b59228}">
       <Declaration><![CDATA[METHOD Execute
 ]]></Declaration>
       <Implementation>
@@ -19,7 +19,7 @@ END_IF
 ]]></ST>
       </Implementation>
     </Method>
-    <Method Name="FB_init" Id="{15f8b24f-95fe-4769-b3bd-5a189cb73ec8}">
+    <Method Name="FB_init" Id="{a5043ac8-3a45-4876-9f54-89f30325816b}">
       <Declaration><![CDATA[METHOD FB_init : BOOL
 VAR_INPUT
 	bInitRetains : BOOL; // if TRUE, the retain variables are initialized (warm start / cold start)

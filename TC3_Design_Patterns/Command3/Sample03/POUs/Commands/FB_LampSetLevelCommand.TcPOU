@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4020.3">
-  <POU Name="FB_LampSetLevelCommand" Id="{9f6e262f-5575-454c-8f85-b9e06af108eb}" SpecialFunc="None">
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.12">
+  <POU Name="FB_LampSetLevelCommand" Id="{5b97f3ca-2f9f-4e49-81ae-53c6ac0d368f}" SpecialFunc="None">
     <Declaration><![CDATA[FUNCTION_BLOCK PUBLIC FB_LampSetLevelCommand IMPLEMENTS I_Command
 VAR
 	refLamp		: REFERENCE TO FB_Lamp;
@@ -12,7 +12,7 @@ END_VAR
     <Implementation>
       <ST><![CDATA[]]></ST>
     </Implementation>
-    <Method Name="Execute" Id="{d3314861-d094-46fb-bd7f-18bce7e27134}">
+    <Method Name="Execute" Id="{18667808-ac8f-41af-9ffb-1e947c3a774b}">
       <Declaration><![CDATA[METHOD Execute
 ]]></Declaration>
       <Implementation>
@@ -22,7 +22,7 @@ END_VAR
 END_IF]]></ST>
       </Implementation>
     </Method>
-    <Method Name="FB_init" Id="{70db96a3-729e-4e7f-bbee-0bb72b3ab88e}">
+    <Method Name="FB_init" Id="{9b60178e-bc45-4b1a-93d7-a00d87581eb6}">
       <Declaration><![CDATA[METHOD FB_init : BOOL
 VAR_INPUT
 	bInitRetains : BOOL; // if TRUE, the retain variables are initialized (warm start / cold start)

@@ -155,6 +155,8 @@ Por ejemplo, imagine que tiene un sistema de archivos, donde los archivos y los 
 - 🔗 [8 Design Patterns EVERY Developer Should Know](https://www.youtube.com/watch?v=tAuRQs_d9F8)
 - 🔗 [¿Qué son los PATRONES de DISEÑO?](https://www.youtube.com/watch?v=qHuI_IWUkfA)
 - 🔗 [Aprende los principales patrones de diseño con .NET y C#. Temario curso](https://www.youtube.com/watch?v=PuI7kAbPYFk)
+- 🔗 [Patrones de Diseño de Software](https://www.youtube.com/playlist?list=PLM-p96nOrGcbqbL_A29b0z3KUXdq2_fpn)
+- 🔗 [O que é Design Patterns (Padrões de Design)?](https://programadoresdepre.com.br/o-que-e-design-patterns-padroes-de-design/)
 ***
 ### <span style="color:grey">Link al Video de Youtube_34:</span>
 - 🔗 [034 - OOP IEC 61131-3 PLC -- Patrones de Diseño - Introducción](https://youtu.be/vjWoPhHb6K0)

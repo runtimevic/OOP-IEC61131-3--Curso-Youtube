@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4020.3">
-  <POU Name="FB_SocketOnCommand" Id="{eb2e5cd4-b6f9-41c2-bfb5-fea646599ebe}" SpecialFunc="None">
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.12">
+  <POU Name="FB_SocketOnCommand" Id="{d5085fc9-d634-4f09-9f9b-a6b3fe987d1f}" SpecialFunc="None">
     <Declaration><![CDATA[FUNCTION_BLOCK PUBLIC FB_SocketOnCommand IMPLEMENTS I_Command
 VAR
 	refSocket : REFERENCE TO FB_Socket;
@@ -9,7 +9,7 @@ END_VAR
     <Implementation>
       <ST><![CDATA[]]></ST>
     </Implementation>
-    <Method Name="Execute" Id="{00744c42-2535-4c07-9d72-9dfd58f4279b}">
+    <Method Name="Execute" Id="{a686336b-03f0-42bf-98de-80df3bd36370}">
       <Declaration><![CDATA[METHOD Execute
 ]]></Declaration>
       <Implementation>
@@ -19,7 +19,7 @@ END_IF
 ]]></ST>
       </Implementation>
     </Method>
-    <Method Name="FB_init" Id="{b23704c1-7621-4b32-8be0-30a679a8c783}">
+    <Method Name="FB_init" Id="{2f8b9352-32fb-4347-a361-5b64aad1f239}">
       <Declaration><![CDATA[METHOD FB_init : BOOL
 VAR_INPUT
 	bInitRetains : BOOL; // if TRUE, the retain variables are initialized (warm start / cold start)
