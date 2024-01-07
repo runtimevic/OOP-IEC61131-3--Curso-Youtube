@@ -129,7 +129,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#links-de-patron-de-diseno-comportamiento-command" class="md-skip">
+        <a href="#los-beneficios-resultantes-son-bastante-convincentes" class="md-skip">
           Saltar a contenido
         </a>
       
@@ -2213,6 +2213,24 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#los-beneficios-resultantes-son-bastante-convincentes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Los beneficios resultantes son bastante convincentes:
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#resumen" class="md-nav__link">
+    <span class="md-ellipsis">
+      Resumen:
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#links-de-patron-de-diseno-comportamiento-command" class="md-nav__link">
     <span class="md-ellipsis">
       Links de Patron de Diseño - Comportamiento - Command:
@@ -2747,6 +2765,24 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#los-beneficios-resultantes-son-bastante-convincentes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Los beneficios resultantes son bastante convincentes:
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#resumen" class="md-nav__link">
+    <span class="md-ellipsis">
+      Resumen:
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#links-de-patron-de-diseno-comportamiento-command" class="md-nav__link">
     <span class="md-ellipsis">
       Links de Patron de Diseño - Comportamiento - Command:
@@ -2783,6 +2819,32 @@
   <h1>Patron Command</h1>
 
 <p>👉<a href="https://refactoring.guru/es/design-patterns/command"><strong>Command</strong></a> es un patrón de diseño de comportamiento que convierte una solicitud en un objeto independiente que contiene toda la información sobre la solicitud. Esta transformación te permite parametrizar los métodos con diferentes solicitudes, retrasar o poner en cola la ejecución de una solicitud y soportar operaciones que no se pueden realizar.</p>
+<p>En el patrón de comando se definen tres capas:
+- <span style="color:orange"><em>Invocador</em> :</span> Los FB de esta capa activan el comando requerido. El invocador, no conoce el receptor del comando. Pero sabe cómo se inicia un comando.
+- <span style="color:orange"><em>Receptor</em> :</span> Estos son los FB que representan el correspondiente receptor de los comandos.
+- <span style="color:orange"><em>Comandos</em> :</span> Cada comando está representado por un FB. Este FB contiene una referencia al receptor. Además, estos comandos tienen un método para activar el comando. Si se llama a este método, el FB de comando sabe qué métodos deben ejecutarse en el receptor para lograr el efecto deseado.</p>
+<p>El patrón de comando
+Se puede ejecutar un comando en un bloque de funciones llamando a un método. El bloque de funciones A llama a un método del bloque de funciones B. Hasta aquí todo bien, pero ¿cómo se pueden intercambiar dichos comandos de manera flexible entre varios bloques de funciones? El patrón de comando proporciona un enfoque interesante.</p>
+<p>Definición del patrón de comando
+La solución al problema es introducir una capa de software. Esta capa encapsula cada comando (con un FB de comando) y contiene todas las llamadas a métodos relevantes para realizar una acción en el dispositivo. </p>
+<p>Un FB de comando encapsula una asignación al contener un conjunto de acciones para un determinado receptor. Para ello se combinan las acciones y la referencia del receptor en un FB. A través de cualquier método (por ejemplo, Execute() ), el comando FB garantiza que se ejecuten las acciones adecuadas en el receptor. El invocador no ve desde el exterior qué acciones son realmente estas. Solo sabe que cuando llama al método Invoke() , se realizan todos los pasos necesarios.</p>
+<h3 id="los-beneficios-resultantes-son-bastante-convincentes"><span style="color:grey">Los beneficios resultantes son bastante convincentes:</span></h3>
+<ul>
+<li>
+<p><span style="color:orange"><em>Desacoplamiento</em> :</span> El invocador y el receptor están desacoplados entre sí. Como consecuencia, se puede diseñar de forma genérica. El método SetCommand() ofrece la posibilidad de adaptar la asignación de las claves durante el tiempo de ejecución.</p>
+</li>
+<li>
+<p><span style="color:orange"><em>Ampliabilidad</em> :</span> Se puede agregar cualquier FB de comando. Incluso si se proporciona una biblioteca, un programador puede definir cualquier comando FB y usarlo, sin necesidad de adaptar la biblioteca. Dado que los FB de comando adicionales implementan la interfaz I_Command , pueden ser utilizados.</p>
+</li>
+</ul>
+<h3 id="resumen"><span style="color:grey">Resumen:</span></h3>
+<p>La idea central del patrón de comando es desacoplar el invocador y el receptor mediante objetos de comando.</p>
+<ul>
+<li>Un desarrollador puede agregar nuevos FB de comando sin adaptar el código del invocador.</li>
+<li>La asignación de comandos al invocador se puede realizar dinámicamente durante el tiempo de ejecución.</li>
+<li>Los FB de comando se pueden reutilizar en varios puntos. De este modo se evita la redundancia de código.</li>
+<li>Los comandos pueden volverse “inteligentes”. De esta forma, se pueden implementar comandos macro y comandos de deshacer.</li>
+</ul>
 <hr />
 <h3 id="links-de-patron-de-diseno-comportamiento-command"><span style="color:grey">Links de Patron de Diseño - Comportamiento - Command:</span></h3>
 <ul>
@@ -2829,7 +2891,7 @@
     <span class="md-icon" title="Última actualización">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">January 2, 2024 13:52:01</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">January 7, 2024 20:13:22</span>
   </span>
 
     
@@ -2839,7 +2901,7 @@
     <span class="md-icon" title="Creado">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14.47 15.08 11 13V7h1.5v5.25l3.08 1.83c-.41.28-.79.62-1.11 1m-1.39 4.84c-.36.05-.71.08-1.08.08-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8c0 .37-.03.72-.08 1.08.69.1 1.33.32 1.92.64.1-.56.16-1.13.16-1.72 0-5.5-4.5-10-10-10S2 6.5 2 12s4.47 10 10 10c.59 0 1.16-.06 1.72-.16-.32-.59-.54-1.23-.64-1.92M18 15v3h-3v2h3v3h2v-3h3v-2h-3v-3h-2Z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">January 2, 2024 13:52:01</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">January 7, 2024 20:13:22</span>
   </span>
 
     
