@@ -1,6 +1,7 @@
 👉[**Command**](https://refactoring.guru/es/design-patterns/command) es un patrón de diseño de comportamiento que convierte una solicitud en un objeto independiente que contiene toda la información sobre la solicitud. Esta transformación te permite parametrizar los métodos con diferentes solicitudes, retrasar o poner en cola la ejecución de una solicitud y soportar operaciones que no se pueden realizar.
 
 En el patrón de comando se definen tres capas:
+
 - <span style="color:orange">_Invocador_ :</span> Los FB de esta capa activan el comando requerido. El invocador, no conoce el receptor del comando. Pero sabe cómo se inicia un comando.
 - <span style="color:orange">_Receptor_ :</span> Estos son los FB que representan el correspondiente receptor de los comandos.
 - <span style="color:orange">_Comandos_ :</span> Cada comando está representado por un FB. Este FB contiene una referencia al receptor. Además, estos comandos tienen un método para activar el comando. Si se llama a este método, el FB de comando sabe qué métodos deben ejecutarse en el receptor para lograr el efecto deseado.
