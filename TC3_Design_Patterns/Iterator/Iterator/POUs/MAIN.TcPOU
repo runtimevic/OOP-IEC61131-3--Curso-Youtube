@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.12">
+  <POU Name="MAIN" Id="{e6f2f43d-3006-4b61-a734-eb841ad749f8}" SpecialFunc="None">
+    <Declaration><![CDATA[PROGRAM MAIN
+VAR
+    Notifications 	: NotificationCollection;
+	n				: Object;
+	iterator	  	: Iterator;
+
+	bInit			: BOOL;
+	bReset			: BOOL;
+	bExecute : BOOL;
+	nPosition : INT;
+	stext : STRING;
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[IF NOT bInit THEN
+	bInit := TRUE;
+	
+	Notifications.addItem(str := 'The');
+	Notifications.addItem(str := 'quick');
+	Notifications.addItem(str := 'brown');
+	Notifications.addItem(str := 'fox');
+	Notifications.addItem(str := 'jumps');
+	Notifications.addItem(str := 'over');
+	Notifications.addItem(str := 'the');
+	Notifications.addItem(str := 'lazy');
+	Notifications.addItem(str := 'dog');
+	
+	iterator := notifications.createIterator();	
+	n := Iterator.current();
+	
+	nPosition := Iterator.Position;
+	stext := CONCAT(TO_STRING(nPosition),n.getNotification()); 
+
+	F_VerboseLogger(stext);
+	//	F_VerboseLogger(n.getNotification());
+END_IF
+
+
+IF bExecute THEN
+	WHILE(Iterator.hasNext()) DO
+		n := Iterator.next();
+
+		nPosition := Iterator.Position;
+		stext := CONCAT(TO_STRING(nPosition),n.getNotification()); 
+		
+		F_VerboseLogger(stext);
+	//	F_VerboseLogger(n.getNotification());
+
+	END_WHILE
+END_IF
+bExecute := FALSE;
+
+IF bReset THEN
+	iterator.reset();
+	n := Iterator.current();
+	
+	nPosition := Iterator.Position;
+	stext := CONCAT(TO_STRING(nPosition),n.getNotification());
+ 
+	F_VerboseLogger(stext);
+	//	F_VerboseLogger(n.getNotification());
+	bReset := FALSE;
+END_IF
+
+]]></ST>
+    </Implementation>
+  </POU>
+</TcPlcObject>

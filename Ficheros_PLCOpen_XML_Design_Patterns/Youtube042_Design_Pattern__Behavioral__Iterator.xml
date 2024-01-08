@@ -1,0 +1,1046 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<project xmlns="http://www.plcopen.org/xml/tc6_0200">
+  <fileHeader companyName="Beckhoff Automation GmbH" productName="TwinCAT PLC Control" productVersion="3.5.13.21" creationDateTime="2024-01-08T11:37:40.0643674" />
+  <contentHeader name="PLC1" modificationDateTime="2024-01-08T11:37:40.0707717">
+    <coordinateInfo>
+      <fbd>
+        <scaling x="1" y="1" />
+      </fbd>
+      <ld>
+        <scaling x="1" y="1" />
+      </ld>
+      <sfc>
+        <scaling x="1" y="1" />
+      </sfc>
+    </coordinateInfo>
+    <addData>
+      <data name="http://www.3s-software.com/plcopenxml/projectinformation" handleUnknown="implementation">
+        <ProjectInformation />
+      </data>
+    </addData>
+  </contentHeader>
+  <types>
+    <dataTypes />
+    <pous />
+  </types>
+  <instances>
+    <configurations />
+  </instances>
+  <addData>
+    <data name="http://www.3s-software.com/plcopenxml/application" handleUnknown="implementation">
+      <resource name="PLC1">
+        <task name="PlcTask" interval="PT0S" priority="20">
+          <pouInstance name="MAIN" typeName="">
+            <documentation>
+              <xhtml xmlns="http://www.w3.org/1999/xhtml" />
+            </documentation>
+          </pouInstance>
+          <addData>
+            <data name="http://www.3s-software.com/plcopenxml/tasksettings" handleUnknown="implementation">
+              <TaskSettings KindOfTask="Cyclic" Interval="10000" IntervalUnit="us">
+                <Watchdog Enabled="false" TimeUnit="ms" />
+              </TaskSettings>
+            </data>
+            <data name="http://www.3s-software.com/plcopenxml/objectid" handleUnknown="discard">
+              <ObjectId>85df0de8-2bfe-41b2-9639-b198d05ccde6</ObjectId>
+            </data>
+          </addData>
+        </task>
+        <globalVars name="Param" constant="true">
+          <variable name="MAX_ITERABLE_ITEMS">
+            <type>
+              <INT />
+            </type>
+            <initialValue>
+              <simpleValue value="20" />
+            </initialValue>
+          </variable>
+          <addData>
+            <data name="http://www.3s-software.com/plcopenxml/attributes" handleUnknown="implementation">
+              <Attributes>
+                <Attribute Name="parameterlist" Value="" />
+                <Attribute Name="qualified_only" Value="" />
+              </Attributes>
+            </data>
+            <data name="http://www.3s-software.com/plcopenxml/buildproperties" handleUnknown="implementation">
+              <BuildProperties>
+                <LinkAlways>true</LinkAlways>
+              </BuildProperties>
+            </data>
+            <data name="http://www.3s-software.com/plcopenxml/interfaceasplaintext" handleUnknown="implementation">
+              <InterfaceAsPlainText>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">{attribute 'qualified_only'}
+VAR_GLOBAL CONSTANT
+	MAX_ITERABLE_ITEMS : INT := 20;
+END_VAR</xhtml>
+              </InterfaceAsPlainText>
+            </data>
+            <data name="http://www.3s-software.com/plcopenxml/objectid" handleUnknown="discard">
+              <ObjectId>49f545d5-17b0-4af8-862d-44b9479f2ec7</ObjectId>
+            </data>
+          </addData>
+        </globalVars>
+        <addData>
+          <data name="http://www.3s-software.com/plcopenxml/interface" handleUnknown="implementation">
+            <Interface name="Collection" ObjectId="6730e63c-3da3-432d-8c54-aa42ffee9239">
+              <Methods>
+                <Method name="createIterator" ObjectId="89d6281e-62b2-4f2a-8e6f-4afeed93e2c0">
+                  <interface>
+                    <returnType>
+                      <derived name="Iterator" />
+                    </returnType>
+                  </interface>
+                  <InterfaceAsPlainText>
+                    <xhtml xmlns="http://www.w3.org/1999/xhtml">METHOD createIterator : Iterator
+VAR_INPUT
+END_VAR
+</xhtml>
+                  </InterfaceAsPlainText>
+                  <addData />
+                </Method>
+              </Methods>
+              <InterfaceAsPlainText>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">INTERFACE Collection
+</xhtml>
+              </InterfaceAsPlainText>
+              <addData />
+            </Interface>
+          </data>
+          <data name="http://www.3s-software.com/plcopenxml/interface" handleUnknown="implementation">
+            <Interface name="Iterator" ObjectId="11e57a1b-5b87-41c6-8866-dab19c5cc778">
+              <Methods>
+                <Method name="current" ObjectId="d60b1888-45a1-4719-b843-c166d488b64a">
+                  <interface>
+                    <returnType>
+                      <derived name="Object" />
+                    </returnType>
+                  </interface>
+                  <InterfaceAsPlainText>
+                    <xhtml xmlns="http://www.w3.org/1999/xhtml">METHOD current : Object
+VAR_INPUT
+END_VAR
+</xhtml>
+                  </InterfaceAsPlainText>
+                  <addData />
+                </Method>
+                <Method name="hasNext" ObjectId="6e2d7f23-86d9-421b-a328-b7469453c32f">
+                  <interface>
+                    <returnType>
+                      <BOOL />
+                    </returnType>
+                  </interface>
+                  <InterfaceAsPlainText>
+                    <xhtml xmlns="http://www.w3.org/1999/xhtml">METHOD hasNext : BOOL
+VAR_INPUT
+END_VAR
+</xhtml>
+                  </InterfaceAsPlainText>
+                  <addData />
+                </Method>
+                <Method name="next" ObjectId="a0f9df8b-6678-45f8-a11d-40ecbf79b0f8">
+                  <interface>
+                    <returnType>
+                      <derived name="Object" />
+                    </returnType>
+                  </interface>
+                  <InterfaceAsPlainText>
+                    <xhtml xmlns="http://www.w3.org/1999/xhtml">METHOD next : Object
+VAR_INPUT
+END_VAR
+</xhtml>
+                  </InterfaceAsPlainText>
+                  <addData />
+                </Method>
+                <Method name="reset" ObjectId="3bba04f1-b69f-4a12-a25c-d55f8c90a503">
+                  <interface>
+                    <returnType>
+                      <BOOL />
+                    </returnType>
+                  </interface>
+                  <InterfaceAsPlainText>
+                    <xhtml xmlns="http://www.w3.org/1999/xhtml">METHOD reset : BOOL
+VAR_INPUT
+END_VAR
+</xhtml>
+                  </InterfaceAsPlainText>
+                  <addData />
+                </Method>
+              </Methods>
+              <Properties>
+                <Property name="Position" ObjectId="b2d58fb3-5dc1-4b10-b185-0b3038c26065">
+                  <interface>
+                    <returnType>
+                      <INT />
+                    </returnType>
+                  </interface>
+                  <GetAccessor>
+                    <InterfaceAsPlainText>
+                      <xhtml xmlns="http://www.w3.org/1999/xhtml" />
+                    </InterfaceAsPlainText>
+                  </GetAccessor>
+                  <InterfaceAsPlainText>
+                    <xhtml xmlns="http://www.w3.org/1999/xhtml">PROPERTY Position : INT</xhtml>
+                  </InterfaceAsPlainText>
+                  <addData />
+                </Property>
+              </Properties>
+              <InterfaceAsPlainText>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">INTERFACE Iterator
+</xhtml>
+              </InterfaceAsPlainText>
+              <addData />
+            </Interface>
+          </data>
+          <data name="http://www.3s-software.com/plcopenxml/interface" handleUnknown="implementation">
+            <Interface name="Object" ObjectId="0988eda9-9fad-447e-bc17-ba4b26c3e534">
+              <Methods>
+                <Method name="getNotification" ObjectId="947495b9-1c2e-4a6c-ad55-07922478da92">
+                  <interface>
+                    <returnType>
+                      <string />
+                    </returnType>
+                  </interface>
+                  <InterfaceAsPlainText>
+                    <xhtml xmlns="http://www.w3.org/1999/xhtml">METHOD getNotification : STRING
+VAR_INPUT
+END_VAR
+</xhtml>
+                  </InterfaceAsPlainText>
+                  <addData />
+                </Method>
+              </Methods>
+              <InterfaceAsPlainText>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">INTERFACE Object
+</xhtml>
+              </InterfaceAsPlainText>
+              <addData />
+            </Interface>
+          </data>
+          <data name="http://www.3s-software.com/plcopenxml/pou" handleUnknown="implementation">
+            <pou name="Notification" pouType="functionBlock">
+              <interface>
+                <localVars>
+                  <variable name="sNotification">
+                    <type>
+                      <string />
+                    </type>
+                  </variable>
+                </localVars>
+                <addData>
+                  <data name="http://www.3s-software.com/plcopenxml/pouinheritance" handleUnknown="implementation">
+                    <Inheritance>
+                      <Implements>Object</Implements>
+                    </Inheritance>
+                  </data>
+                  <data name="http://www.3s-software.com/plcopenxml/attributes" handleUnknown="implementation">
+                    <Attributes>
+                      <Attribute Name="enable_dynamic_creation" Value="" />
+                    </Attributes>
+                  </data>
+                </addData>
+              </interface>
+              <body>
+                <ST>
+                  <xhtml xmlns="http://www.w3.org/1999/xhtml" />
+                </ST>
+              </body>
+              <addData>
+                <data name="http://www.3s-software.com/plcopenxml/method" handleUnknown="implementation">
+                  <Method name="FB_init" ObjectId="ccd27d29-8515-4b75-9379-b5f629f9d933">
+                    <interface>
+                      <returnType>
+                        <BOOL />
+                      </returnType>
+                      <inputVars>
+                        <variable name="bInitRetains">
+                          <type>
+                            <BOOL />
+                          </type>
+                          <documentation>
+                            <xhtml xmlns="http://www.w3.org/1999/xhtml"> if TRUE, the retain variables are initialized (warm start / cold start)</xhtml>
+                          </documentation>
+                        </variable>
+                        <variable name="bInCopyCode">
+                          <type>
+                            <BOOL />
+                          </type>
+                          <documentation>
+                            <xhtml xmlns="http://www.w3.org/1999/xhtml"> if TRUE, the instance afterwards gets moved into the copy code (online change)</xhtml>
+                          </documentation>
+                        </variable>
+                        <variable name="sNotification">
+                          <type>
+                            <string />
+                          </type>
+                        </variable>
+                      </inputVars>
+                    </interface>
+                    <body>
+                      <ST>
+                        <xhtml xmlns="http://www.w3.org/1999/xhtml">THIS^.sNotification := sNotification;</xhtml>
+                      </ST>
+                    </body>
+                    <InterfaceAsPlainText>
+                      <xhtml xmlns="http://www.w3.org/1999/xhtml">METHOD FB_init : BOOL
+VAR_INPUT
+	bInitRetains : BOOL; // if TRUE, the retain variables are initialized (warm start / cold start)
+	bInCopyCode : BOOL;  // if TRUE, the instance afterwards gets moved into the copy code (online change)
+	sNotification : STRING;
+END_VAR
+</xhtml>
+                    </InterfaceAsPlainText>
+                    <addData />
+                  </Method>
+                </data>
+                <data name="http://www.3s-software.com/plcopenxml/method" handleUnknown="implementation">
+                  <Method name="getNotification" ObjectId="fa7571e4-c8c8-4de4-8b52-f7469a8bf617">
+                    <interface>
+                      <returnType>
+                        <string />
+                      </returnType>
+                    </interface>
+                    <body>
+                      <ST>
+                        <xhtml xmlns="http://www.w3.org/1999/xhtml">getNotification := THIS^.sNotification;</xhtml>
+                      </ST>
+                    </body>
+                    <InterfaceAsPlainText>
+                      <xhtml xmlns="http://www.w3.org/1999/xhtml">METHOD getNotification : STRING
+VAR_INPUT
+END_VAR
+</xhtml>
+                    </InterfaceAsPlainText>
+                    <addData />
+                  </Method>
+                </data>
+                <data name="http://www.3s-software.com/plcopenxml/interfaceasplaintext" handleUnknown="implementation">
+                  <InterfaceAsPlainText>
+                    <xhtml xmlns="http://www.w3.org/1999/xhtml">{attribute 'enable_dynamic_creation'}
+FUNCTION_BLOCK Notification IMPLEMENTS Object
+VAR
+	sNotification : STRING;
+END_VAR
+</xhtml>
+                  </InterfaceAsPlainText>
+                </data>
+                <data name="http://www.3s-software.com/plcopenxml/objectid" handleUnknown="discard">
+                  <ObjectId>eed2ee3d-6fd1-4636-bf5e-23c81a254f4a</ObjectId>
+                </data>
+              </addData>
+            </pou>
+          </data>
+          <data name="http://www.3s-software.com/plcopenxml/pou" handleUnknown="implementation">
+            <pou name="NotificationCollection" pouType="functionBlock">
+              <interface>
+                <localVars>
+                  <variable name="numberOfItems">
+                    <type>
+                      <INT />
+                    </type>
+                    <initialValue>
+                      <simpleValue value="0" />
+                    </initialValue>
+                  </variable>
+                  <variable name="pNotificationList">
+                    <type>
+                      <array>
+                        <dimension lower="0" upper="Param.MAX_ITERABLE_ITEMS" />
+                        <baseType>
+                          <pointer>
+                            <baseType>
+                              <derived name="Notification" />
+                            </baseType>
+                          </pointer>
+                        </baseType>
+                      </array>
+                    </type>
+                  </variable>
+                  <variable name="pNotificationIterator">
+                    <type>
+                      <pointer>
+                        <baseType>
+                          <derived name="NotificationIterator" />
+                        </baseType>
+                      </pointer>
+                    </type>
+                  </variable>
+                </localVars>
+                <addData>
+                  <data name="http://www.3s-software.com/plcopenxml/pouinheritance" handleUnknown="implementation">
+                    <Inheritance>
+                      <Implements>Collection</Implements>
+                    </Inheritance>
+                  </data>
+                </addData>
+              </interface>
+              <body>
+                <ST>
+                  <xhtml xmlns="http://www.w3.org/1999/xhtml" />
+                </ST>
+              </body>
+              <addData>
+                <data name="http://www.3s-software.com/plcopenxml/method" handleUnknown="implementation">
+                  <Method name="addItem" ObjectId="849580a8-5029-457b-81ec-32062fadb444">
+                    <interface>
+                      <inputVars>
+                        <variable name="str">
+                          <type>
+                            <string />
+                          </type>
+                        </variable>
+                      </inputVars>
+                    </interface>
+                    <body>
+                      <ST>
+                        <xhtml xmlns="http://www.w3.org/1999/xhtml">IF (THIS^.numberOfItems &gt;= Param.MAX_ITERABLE_ITEMS) THEN
+	ADSLOGSTR( msgCtrlMask := ADSLOG_MSGTYPE_ERROR, msgFmtStr := 'PLC Msg. : %s', strArg := 'System Full');
+ELSE
+	THIS^.pNotificationList[THIS^.numberOfItems] := __NEW(Notification(sNotification := str));
+	THIS^.numberOfItems := THIS^.numberOfItems + 1;
+END_IF</xhtml>
+                      </ST>
+                    </body>
+                    <InterfaceAsPlainText>
+                      <xhtml xmlns="http://www.w3.org/1999/xhtml">METHOD addItem
+VAR_INPUT
+	str : STRING;
+END_VAR
+</xhtml>
+                    </InterfaceAsPlainText>
+                    <addData />
+                  </Method>
+                </data>
+                <data name="http://www.3s-software.com/plcopenxml/method" handleUnknown="implementation">
+                  <Method name="createIterator" ObjectId="1217f06b-3955-47d7-8a5c-0fa572fc7931">
+                    <interface>
+                      <returnType>
+                        <derived name="Iterator" />
+                      </returnType>
+                    </interface>
+                    <body>
+                      <ST>
+                        <xhtml xmlns="http://www.w3.org/1999/xhtml">THIS^.pNotificationIterator := __NEW(NotificationIterator(pNotificationList := THIS^.pNotificationList));
+createIterator := THIS^.pNotificationIterator^;
+</xhtml>
+                      </ST>
+                    </body>
+                    <InterfaceAsPlainText>
+                      <xhtml xmlns="http://www.w3.org/1999/xhtml">METHOD createIterator : Iterator
+</xhtml>
+                    </InterfaceAsPlainText>
+                    <addData />
+                  </Method>
+                </data>
+                <data name="http://www.3s-software.com/plcopenxml/method" handleUnknown="implementation">
+                  <Method name="FB_exit" ObjectId="9ed9e0be-83a5-4a20-9cd8-116735871b38">
+                    <interface>
+                      <returnType>
+                        <BOOL />
+                      </returnType>
+                      <inputVars>
+                        <variable name="bInCopyCode">
+                          <type>
+                            <BOOL />
+                          </type>
+                          <documentation>
+                            <xhtml xmlns="http://www.w3.org/1999/xhtml"> if TRUE, the exit method is called for exiting an instance that is copied afterwards (online change).</xhtml>
+                          </documentation>
+                        </variable>
+                      </inputVars>
+                      <localVars>
+                        <variable name="i">
+                          <type>
+                            <INT />
+                          </type>
+                        </variable>
+                      </localVars>
+                    </interface>
+                    <body>
+                      <ST>
+                        <xhtml xmlns="http://www.w3.org/1999/xhtml">FOR i:=0 TO Param.MAX_ITERABLE_ITEMS DO
+	IF THIS^.pNotificationList[i] &lt;&gt; 0 THEN
+		__DELETE(THIS^.pNotificationList[i]);
+	END_IF
+END_FOR
+
+IF THIS^.pNotificationIterator &lt;&gt; 0 THEN
+	__DELETE(THIS^.pNotificationIterator);
+END_IF
+</xhtml>
+                      </ST>
+                    </body>
+                    <InterfaceAsPlainText>
+                      <xhtml xmlns="http://www.w3.org/1999/xhtml">METHOD FB_exit : BOOL
+VAR_INPUT
+	bInCopyCode : BOOL; // if TRUE, the exit method is called for exiting an instance that is copied afterwards (online change).
+END_VAR
+
+VAR
+	i: INT;
+END_VAR</xhtml>
+                    </InterfaceAsPlainText>
+                    <addData />
+                  </Method>
+                </data>
+                <data name="http://www.3s-software.com/plcopenxml/method" handleUnknown="implementation">
+                  <Method name="FB_init" ObjectId="bc95b514-aece-4f53-ae16-4ba63c2bc5fb">
+                    <interface>
+                      <returnType>
+                        <BOOL />
+                      </returnType>
+                      <inputVars>
+                        <variable name="bInitRetains">
+                          <type>
+                            <BOOL />
+                          </type>
+                          <documentation>
+                            <xhtml xmlns="http://www.w3.org/1999/xhtml"> if TRUE, the retain variables are initialized (warm start / cold start)</xhtml>
+                          </documentation>
+                        </variable>
+                        <variable name="bInCopyCode">
+                          <type>
+                            <BOOL />
+                          </type>
+                          <documentation>
+                            <xhtml xmlns="http://www.w3.org/1999/xhtml"> if TRUE, the instance afterwards gets moved into the copy code (online change)</xhtml>
+                          </documentation>
+                        </variable>
+                      </inputVars>
+                    </interface>
+                    <body>
+                      <ST>
+                        <xhtml xmlns="http://www.w3.org/1999/xhtml" />
+                      </ST>
+                    </body>
+                    <InterfaceAsPlainText>
+                      <xhtml xmlns="http://www.w3.org/1999/xhtml">METHOD FB_init : BOOL
+VAR_INPUT
+	bInitRetains : BOOL; // if TRUE, the retain variables are initialized (warm start / cold start)
+	bInCopyCode : BOOL;  // if TRUE, the instance afterwards gets moved into the copy code (online change)
+END_VAR
+</xhtml>
+                    </InterfaceAsPlainText>
+                    <addData />
+                  </Method>
+                </data>
+                <data name="http://www.3s-software.com/plcopenxml/interfaceasplaintext" handleUnknown="implementation">
+                  <InterfaceAsPlainText>
+                    <xhtml xmlns="http://www.w3.org/1999/xhtml">FUNCTION_BLOCK NotificationCollection IMPLEMENTS Collection
+VAR
+	numberOfItems 			: INT := 0;
+	pNotificationList 		: ARRAY[0..Param.MAX_ITERABLE_ITEMS] OF POINTER TO Notification;
+	pNotificationIterator 	: POINTER TO NotificationIterator;
+END_VAR
+</xhtml>
+                  </InterfaceAsPlainText>
+                </data>
+                <data name="http://www.3s-software.com/plcopenxml/objectid" handleUnknown="discard">
+                  <ObjectId>6cb89627-31bd-4642-8a55-4b368ad29f85</ObjectId>
+                </data>
+              </addData>
+            </pou>
+          </data>
+          <data name="http://www.3s-software.com/plcopenxml/pou" handleUnknown="implementation">
+            <pou name="NotificationIterator" pouType="functionBlock">
+              <interface>
+                <localVars>
+                  <variable name="pNotificationList">
+                    <type>
+                      <array>
+                        <dimension lower="0" upper="Param.MAX_ITERABLE_ITEMS" />
+                        <baseType>
+                          <pointer>
+                            <baseType>
+                              <derived name="Notification" />
+                            </baseType>
+                          </pointer>
+                        </baseType>
+                      </array>
+                    </type>
+                  </variable>
+                  <variable name="nPosition">
+                    <type>
+                      <INT />
+                    </type>
+                    <initialValue>
+                      <simpleValue value="0" />
+                    </initialValue>
+                    <documentation>
+                      <xhtml xmlns="http://www.w3.org/1999/xhtml">pNotification 		: POINTER TO Notification; </xhtml>
+                    </documentation>
+                  </variable>
+                </localVars>
+                <addData>
+                  <data name="http://www.3s-software.com/plcopenxml/pouinheritance" handleUnknown="implementation">
+                    <Inheritance>
+                      <Implements>Iterator</Implements>
+                    </Inheritance>
+                  </data>
+                  <data name="http://www.3s-software.com/plcopenxml/attributes" handleUnknown="implementation">
+                    <Attributes>
+                      <Attribute Name="enable_dynamic_creation" Value="" />
+                    </Attributes>
+                  </data>
+                </addData>
+              </interface>
+              <body>
+                <ST>
+                  <xhtml xmlns="http://www.w3.org/1999/xhtml" />
+                </ST>
+              </body>
+              <addData>
+                <data name="http://www.3s-software.com/plcopenxml/method" handleUnknown="implementation">
+                  <Method name="current" ObjectId="de0d8d4f-a88b-47fb-ae95-f156b60e189f">
+                    <interface>
+                      <returnType>
+                        <derived name="Object" />
+                      </returnType>
+                      <localVars>
+                        <variable name="pNotification">
+                          <type>
+                            <pointer>
+                              <baseType>
+                                <derived name="Notification" />
+                              </baseType>
+                            </pointer>
+                          </type>
+                        </variable>
+                      </localVars>
+                    </interface>
+                    <body>
+                      <ST>
+                        <xhtml xmlns="http://www.w3.org/1999/xhtml">pNotification := THIS^.pNotificationList[nPosition];
+current := pNotification^;</xhtml>
+                      </ST>
+                    </body>
+                    <InterfaceAsPlainText>
+                      <xhtml xmlns="http://www.w3.org/1999/xhtml">METHOD current : Object
+VAR
+	pNotification 		: POINTER TO Notification; 
+END_VAR
+</xhtml>
+                    </InterfaceAsPlainText>
+                    <addData />
+                  </Method>
+                </data>
+                <data name="http://www.3s-software.com/plcopenxml/method" handleUnknown="implementation">
+                  <Method name="FB_init" ObjectId="74440f01-e5bd-4487-8e42-8c49e9c9c386">
+                    <interface>
+                      <returnType>
+                        <BOOL />
+                      </returnType>
+                      <inputVars>
+                        <variable name="bInitRetains">
+                          <type>
+                            <BOOL />
+                          </type>
+                          <documentation>
+                            <xhtml xmlns="http://www.w3.org/1999/xhtml"> if TRUE, the retain variables are initialized (warm start / cold start)</xhtml>
+                          </documentation>
+                        </variable>
+                        <variable name="bInCopyCode">
+                          <type>
+                            <BOOL />
+                          </type>
+                          <documentation>
+                            <xhtml xmlns="http://www.w3.org/1999/xhtml"> if TRUE, the instance afterwards gets moved into the copy code (online change)</xhtml>
+                          </documentation>
+                        </variable>
+                        <variable name="pNotificationList">
+                          <type>
+                            <array>
+                              <dimension lower="0" upper="Param.MAX_ITERABLE_ITEMS" />
+                              <baseType>
+                                <pointer>
+                                  <baseType>
+                                    <derived name="Notification" />
+                                  </baseType>
+                                </pointer>
+                              </baseType>
+                            </array>
+                          </type>
+                        </variable>
+                      </inputVars>
+                    </interface>
+                    <body>
+                      <ST>
+                        <xhtml xmlns="http://www.w3.org/1999/xhtml">This^.pNotificationList := pNotificationList;</xhtml>
+                      </ST>
+                    </body>
+                    <InterfaceAsPlainText>
+                      <xhtml xmlns="http://www.w3.org/1999/xhtml">METHOD FB_init : BOOL
+VAR_INPUT
+	bInitRetains : BOOL; // if TRUE, the retain variables are initialized (warm start / cold start)
+	bInCopyCode : BOOL;  // if TRUE, the instance afterwards gets moved into the copy code (online change)
+	pNotificationList : ARRAY[0..Param.MAX_ITERABLE_ITEMS] OF POINTER TO Notification;
+END_VAR
+</xhtml>
+                    </InterfaceAsPlainText>
+                    <addData />
+                  </Method>
+                </data>
+                <data name="http://www.3s-software.com/plcopenxml/method" handleUnknown="implementation">
+                  <Method name="hasNext" ObjectId="0e325456-d50f-42ae-97c1-cc521b11fb76">
+                    <interface>
+                      <returnType>
+                        <BOOL />
+                      </returnType>
+                    </interface>
+                    <body>
+                      <ST>
+                        <xhtml xmlns="http://www.w3.org/1999/xhtml">IF (THIS^.pNotificationList[nPosition + 1] &lt;&gt; 16#0000) THEN
+	hasNext := TRUE;
+ELSE
+	hasNext := FALSE;	
+END_IF
+	</xhtml>
+                      </ST>
+                    </body>
+                    <InterfaceAsPlainText>
+                      <xhtml xmlns="http://www.w3.org/1999/xhtml">METHOD hasNext : BOOL
+</xhtml>
+                    </InterfaceAsPlainText>
+                    <addData />
+                  </Method>
+                </data>
+                <data name="http://www.3s-software.com/plcopenxml/method" handleUnknown="implementation">
+                  <Method name="next" ObjectId="fe8fab4f-1501-447a-926f-3896c3481b98">
+                    <interface>
+                      <returnType>
+                        <derived name="Object" />
+                      </returnType>
+                      <localVars>
+                        <variable name="pNotification">
+                          <type>
+                            <pointer>
+                              <baseType>
+                                <derived name="Notification" />
+                              </baseType>
+                            </pointer>
+                          </type>
+                        </variable>
+                      </localVars>
+                    </interface>
+                    <body>
+                      <ST>
+                        <xhtml xmlns="http://www.w3.org/1999/xhtml">THIS^.nPosition := THIS^.nPosition + 1;
+
+pNotification := THIS^.pNotificationList[nPosition];
+next := pNotification^;
+</xhtml>
+                      </ST>
+                    </body>
+                    <InterfaceAsPlainText>
+                      <xhtml xmlns="http://www.w3.org/1999/xhtml">METHOD next : Object
+VAR
+	pNotification 		: POINTER TO Notification; 
+END_VAR</xhtml>
+                    </InterfaceAsPlainText>
+                    <addData />
+                  </Method>
+                </data>
+                <data name="http://www.3s-software.com/plcopenxml/method" handleUnknown="implementation">
+                  <Method name="reset" ObjectId="339a6f97-1a8f-43f4-9ecf-7cf24e122f8f">
+                    <interface>
+                      <returnType>
+                        <BOOL />
+                      </returnType>
+                    </interface>
+                    <body>
+                      <ST>
+                        <xhtml xmlns="http://www.w3.org/1999/xhtml">reset := FALSE;
+
+THIS^.nPosition := 0;
+reset := TRUE;</xhtml>
+                      </ST>
+                    </body>
+                    <InterfaceAsPlainText>
+                      <xhtml xmlns="http://www.w3.org/1999/xhtml">METHOD reset : BOOL
+</xhtml>
+                    </InterfaceAsPlainText>
+                    <addData />
+                  </Method>
+                </data>
+                <data name="http://www.3s-software.com/plcopenxml/property" handleUnknown="implementation">
+                  <Property name="Position" ObjectId="1e16d1d3-ca17-451f-8512-cf2ae4cb9706">
+                    <interface>
+                      <returnType>
+                        <INT />
+                      </returnType>
+                    </interface>
+                    <GetAccessor>
+                      <interface />
+                      <body>
+                        <ST>
+                          <xhtml xmlns="http://www.w3.org/1999/xhtml">Position := nPosition;</xhtml>
+                        </ST>
+                      </body>
+                      <InterfaceAsPlainText>
+                        <xhtml xmlns="http://www.w3.org/1999/xhtml">VAR
+END_VAR
+</xhtml>
+                      </InterfaceAsPlainText>
+                      <addData />
+                    </GetAccessor>
+                    <InterfaceAsPlainText>
+                      <xhtml xmlns="http://www.w3.org/1999/xhtml">PROPERTY Position : INT</xhtml>
+                    </InterfaceAsPlainText>
+                    <addData />
+                  </Property>
+                </data>
+                <data name="http://www.3s-software.com/plcopenxml/interfaceasplaintext" handleUnknown="implementation">
+                  <InterfaceAsPlainText>
+                    <xhtml xmlns="http://www.w3.org/1999/xhtml">{attribute 'enable_dynamic_creation'}
+FUNCTION_BLOCK NotificationIterator IMPLEMENTS Iterator
+VAR
+	pNotificationList 	: ARRAY[0..Param.MAX_ITERABLE_ITEMS] OF POINTER TO Notification;
+	//pNotification 		: POINTER TO Notification; 
+	nPosition 			: INT := 0;
+END_VAR</xhtml>
+                  </InterfaceAsPlainText>
+                </data>
+                <data name="http://www.3s-software.com/plcopenxml/objectid" handleUnknown="discard">
+                  <ObjectId>d6413826-61c3-4c4f-a428-bb95e0e149a0</ObjectId>
+                </data>
+              </addData>
+            </pou>
+          </data>
+          <data name="http://www.3s-software.com/plcopenxml/pou" handleUnknown="implementation">
+            <pou name="F_VerboseLogger" pouType="function">
+              <interface>
+                <returnType>
+                  <BOOL />
+                </returnType>
+                <inputVars>
+                  <variable name="Message">
+                    <type>
+                      <string />
+                    </type>
+                  </variable>
+                </inputVars>
+              </interface>
+              <body>
+                <ST>
+                  <xhtml xmlns="http://www.w3.org/1999/xhtml">ADSLOGSTR( msgCtrlMask := ADSLOG_MSGTYPE_LOG, msgFmtStr := 'Verbose Msg. : %s', strArg := Message);</xhtml>
+                </ST>
+              </body>
+              <addData>
+                <data name="http://www.3s-software.com/plcopenxml/interfaceasplaintext" handleUnknown="implementation">
+                  <InterfaceAsPlainText>
+                    <xhtml xmlns="http://www.w3.org/1999/xhtml">FUNCTION F_VerboseLogger : BOOL
+VAR_INPUT
+	Message : STRING;
+END_VAR
+</xhtml>
+                  </InterfaceAsPlainText>
+                </data>
+                <data name="http://www.3s-software.com/plcopenxml/objectid" handleUnknown="discard">
+                  <ObjectId>cce0ef73-8c43-40aa-8ec6-b58911df9109</ObjectId>
+                </data>
+              </addData>
+            </pou>
+          </data>
+          <data name="http://www.3s-software.com/plcopenxml/pou" handleUnknown="implementation">
+            <pou name="MAIN" pouType="program">
+              <interface>
+                <localVars>
+                  <variable name="Notifications">
+                    <type>
+                      <derived name="NotificationCollection" />
+                    </type>
+                  </variable>
+                  <variable name="n">
+                    <type>
+                      <derived name="Object" />
+                    </type>
+                  </variable>
+                  <variable name="iterator">
+                    <type>
+                      <derived name="Iterator" />
+                    </type>
+                  </variable>
+                  <variable name="bInit">
+                    <type>
+                      <BOOL />
+                    </type>
+                  </variable>
+                  <variable name="bReset">
+                    <type>
+                      <BOOL />
+                    </type>
+                  </variable>
+                  <variable name="bExecute">
+                    <type>
+                      <BOOL />
+                    </type>
+                  </variable>
+                  <variable name="nPosition">
+                    <type>
+                      <INT />
+                    </type>
+                  </variable>
+                  <variable name="stext">
+                    <type>
+                      <string />
+                    </type>
+                  </variable>
+                </localVars>
+              </interface>
+              <body>
+                <ST>
+                  <xhtml xmlns="http://www.w3.org/1999/xhtml">IF NOT bInit THEN
+	bInit := TRUE;
+	
+	Notifications.addItem(str := 'The');
+	Notifications.addItem(str := 'quick');
+	Notifications.addItem(str := 'brown');
+	Notifications.addItem(str := 'fox');
+	Notifications.addItem(str := 'jumps');
+	Notifications.addItem(str := 'over');
+	Notifications.addItem(str := 'the');
+	Notifications.addItem(str := 'lazy');
+	Notifications.addItem(str := 'dog');
+	
+	iterator := notifications.createIterator();	
+	n := Iterator.current();
+	
+	nPosition := Iterator.Position;
+	stext := CONCAT(TO_STRING(nPosition),n.getNotification()); 
+
+	F_VerboseLogger(stext);
+	//	F_VerboseLogger(n.getNotification());
+END_IF
+
+
+IF bExecute THEN
+	WHILE(Iterator.hasNext()) DO
+		n := Iterator.next();
+
+		nPosition := Iterator.Position;
+		stext := CONCAT(TO_STRING(nPosition),n.getNotification()); 
+		
+		F_VerboseLogger(stext);
+	//	F_VerboseLogger(n.getNotification());
+
+	END_WHILE
+END_IF
+bExecute := FALSE;
+
+IF bReset THEN
+	iterator.reset();
+	n := Iterator.current();
+	
+	nPosition := Iterator.Position;
+	stext := CONCAT(TO_STRING(nPosition),n.getNotification());
+ 
+	F_VerboseLogger(stext);
+	//	F_VerboseLogger(n.getNotification());
+	bReset := FALSE;
+END_IF
+
+</xhtml>
+                </ST>
+              </body>
+              <addData>
+                <data name="http://www.3s-software.com/plcopenxml/interfaceasplaintext" handleUnknown="implementation">
+                  <InterfaceAsPlainText>
+                    <xhtml xmlns="http://www.w3.org/1999/xhtml">PROGRAM MAIN
+VAR
+    Notifications 	: NotificationCollection;
+	n				: Object;
+	iterator	  	: Iterator;
+
+	bInit			: BOOL;
+	bReset			: BOOL;
+	bExecute : BOOL;
+	nPosition : INT;
+	stext : STRING;
+END_VAR
+</xhtml>
+                  </InterfaceAsPlainText>
+                </data>
+                <data name="http://www.3s-software.com/plcopenxml/objectid" handleUnknown="discard">
+                  <ObjectId>e6f2f43d-3006-4b61-a734-eb841ad749f8</ObjectId>
+                </data>
+              </addData>
+            </pou>
+          </data>
+          <data name="http://www.3s-software.com/plcopenxml/libraries" handleUnknown="implementation">
+            <Libraries>
+              <Library Name="#Tc2_Standard" Namespace="Tc2_Standard" HideWhenReferencedAsDependency="false" PublishSymbolsInContainer="false" SystemLibrary="false" LinkAllContent="false" DefaultResolution="Tc2_Standard, * (Beckhoff Automation GmbH)" />
+              <Library Name="#Tc2_System" Namespace="Tc2_System" HideWhenReferencedAsDependency="false" PublishSymbolsInContainer="false" SystemLibrary="false" LinkAllContent="false" DefaultResolution="Tc2_System, * (Beckhoff Automation GmbH)">
+                <Parameters>
+                  <Parameter Name="PARAM.TABLE_UPPER_BOUND" Value="15" />
+                  <Parameter Name="PARAM.STRING_LENGTH_EXP" Value="255" />
+                  <Parameter Name="PARAM.STRING_LENGTH_ADDRESS" Value="20" />
+                  <Parameter Name="PARAM.STRING_LENGTH_COMMENT" Value="255" />
+                  <Parameter Name="PARAM.STRING_LENGTH_OUTSTRING" Value="255" />
+                  <Parameter Name="PARAM.TABLE_SHOW_VALID_ITEMS" Value="FALSE" />
+                </Parameters>
+              </Library>
+              <Library Name="#Tc3_Module" Namespace="Tc3_Module" HideWhenReferencedAsDependency="false" PublishSymbolsInContainer="false" SystemLibrary="false" LinkAllContent="false" DefaultResolution="Tc3_Module, * (Beckhoff Automation GmbH)" />
+              <addData>
+                <data name="http://www.3s-software.com/plcopenxml/objectid" handleUnknown="discard">
+                  <ObjectId>f454677a-fda6-4a3c-9cb9-e3857a3c1c4a</ObjectId>
+                </data>
+              </addData>
+            </Libraries>
+          </data>
+          <data name="http://www.3s-software.com/plcopenxml/objectid" handleUnknown="discard">
+            <ObjectId>a2e7dbc4-ab75-449a-9cf2-3c83129f5d18</ObjectId>
+          </data>
+        </addData>
+      </resource>
+    </data>
+    <data name="http://www.3s-software.com/plcopenxml/projectstructure" handleUnknown="discard">
+      <ProjectStructure>
+        <Object Name="PLC1" ObjectId="a2e7dbc4-ab75-449a-9cf2-3c83129f5d18">
+          <Object Name="Library Manager" ObjectId="f454677a-fda6-4a3c-9cb9-e3857a3c1c4a" />
+          <Folder Name="FBs">
+            <Object Name="Notification" ObjectId="eed2ee3d-6fd1-4636-bf5e-23c81a254f4a">
+              <Object Name="FB_init" ObjectId="ccd27d29-8515-4b75-9379-b5f629f9d933" />
+              <Object Name="getNotification" ObjectId="fa7571e4-c8c8-4de4-8b52-f7469a8bf617" />
+            </Object>
+            <Object Name="NotificationCollection" ObjectId="6cb89627-31bd-4642-8a55-4b368ad29f85">
+              <Object Name="addItem" ObjectId="849580a8-5029-457b-81ec-32062fadb444" />
+              <Object Name="createIterator" ObjectId="1217f06b-3955-47d7-8a5c-0fa572fc7931" />
+              <Object Name="FB_exit" ObjectId="9ed9e0be-83a5-4a20-9cd8-116735871b38" />
+              <Object Name="FB_init" ObjectId="bc95b514-aece-4f53-ae16-4ba63c2bc5fb" />
+            </Object>
+            <Object Name="NotificationIterator" ObjectId="d6413826-61c3-4c4f-a428-bb95e0e149a0">
+              <Object Name="current" ObjectId="de0d8d4f-a88b-47fb-ae95-f156b60e189f" />
+              <Object Name="FB_init" ObjectId="74440f01-e5bd-4487-8e42-8c49e9c9c386" />
+              <Object Name="hasNext" ObjectId="0e325456-d50f-42ae-97c1-cc521b11fb76" />
+              <Object Name="next" ObjectId="fe8fab4f-1501-447a-926f-3896c3481b98" />
+              <Object Name="Position" ObjectId="1e16d1d3-ca17-451f-8512-cf2ae4cb9706" />
+              <Object Name="reset" ObjectId="339a6f97-1a8f-43f4-9ecf-7cf24e122f8f" />
+            </Object>
+          </Folder>
+          <Folder Name="FUNs">
+            <Object Name="F_VerboseLogger" ObjectId="cce0ef73-8c43-40aa-8ec6-b58911df9109" />
+          </Folder>
+          <Folder Name="ITFs">
+            <Object Name="Collection" ObjectId="6730e63c-3da3-432d-8c54-aa42ffee9239">
+              <Object Name="createIterator" ObjectId="89d6281e-62b2-4f2a-8e6f-4afeed93e2c0" />
+            </Object>
+            <Object Name="Iterator" ObjectId="11e57a1b-5b87-41c6-8866-dab19c5cc778">
+              <Object Name="current" ObjectId="d60b1888-45a1-4719-b843-c166d488b64a" />
+              <Object Name="hasNext" ObjectId="6e2d7f23-86d9-421b-a328-b7469453c32f" />
+              <Object Name="next" ObjectId="a0f9df8b-6678-45f8-a11d-40ecbf79b0f8" />
+              <Object Name="Position" ObjectId="b2d58fb3-5dc1-4b10-b185-0b3038c26065" />
+              <Object Name="reset" ObjectId="3bba04f1-b69f-4a12-a25c-d55f8c90a503" />
+            </Object>
+            <Object Name="Object" ObjectId="0988eda9-9fad-447e-bc17-ba4b26c3e534">
+              <Object Name="getNotification" ObjectId="947495b9-1c2e-4a6c-ad55-07922478da92" />
+            </Object>
+          </Folder>
+          <Object Name="Param" ObjectId="49f545d5-17b0-4af8-862d-44b9479f2ec7" />
+          <Object Name="PlcTask" ObjectId="85df0de8-2bfe-41b2-9639-b198d05ccde6" />
+          <Folder Name="POUs">
+            <Object Name="MAIN" ObjectId="e6f2f43d-3006-4b61-a734-eb841ad749f8" />
+          </Folder>
+        </Object>
+      </ProjectStructure>
+    </data>
+  </addData>
+</project>
