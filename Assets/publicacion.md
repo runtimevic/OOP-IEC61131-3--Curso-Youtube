@@ -2,7 +2,7 @@
 
 Hola,
 Seguimos con el curso de 👩‍💻 OOP IEC 61131-3 PLC 👨‍💻,
-ya esta disponible el Video numero 40 de Youtube:
+ya esta disponible el Video numero 41 de Youtube:
 en este video veremos: Patrones de Diseño (Design Patterns) - Command.
 
 👉 https://youtu.be/5y8DbyKCN_g

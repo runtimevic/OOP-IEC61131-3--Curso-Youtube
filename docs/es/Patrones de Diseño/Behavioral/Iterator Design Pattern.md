@@ -7,4 +7,4 @@
 - 🔗 [github.com/0w8States/PLC-Design-Patterns/Behavioral_Patterns/Iterator](https://github.com/0w8States/PLC-Design-Patterns/tree/master/Behavioral_Patterns/Iterator)
 ***
 ### <span style="color:grey">Link al Video de Youtube_42:</span>
-- 🔗 [042 - OOP IEC 61131-3 PLC -- Patrones de Diseño - Comportamiento - iterador]()
+- 🔗 [042 - OOP IEC 61131-3 PLC -- Patrones de Diseño - Comportamiento - Iterador]()
