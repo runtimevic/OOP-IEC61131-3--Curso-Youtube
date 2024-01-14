@@ -2,10 +2,10 @@
 
 Hola,
 Seguimos con el curso de 👩‍💻 OOP IEC 61131-3 PLC 👨‍💻,
-ya esta disponible el Video numero 41 de Youtube:
-en este video veremos: Patrones de Diseño (Design Patterns) - Command.
+ya esta disponible el Video numero 42 de Youtube:
+en este video veremos: Patrones de Diseño (Design Patterns) - Iterator.
 
-👉 https://youtu.be/5y8DbyKCN_g
+👉 https://youtu.be/tMLr9EWJYU4
 
 🐙 Repositorio de GitHub:
 - 👉 https://github.com/runtimevic/OOP-IEC61131-3--Curso-Youtube
@@ -59,7 +59,8 @@ Lista de Videos del Curso OOP Programación Orientada a Objetos IEC61131-3 PLC:
 - 039 - https://youtu.be/Y0SI90RvwPc
 - 040 - https://youtu.be/YD1G_62glm4
 - 041 - https://youtu.be/5y8DbyKCN_g
-- 042 - 
+- 042 - https://youtu.be/tMLr9EWJYU4
+- 043 -
 
 Se busca colaborador para la traducción de la documentación al idioma que desee... 👀
 

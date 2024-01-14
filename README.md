@@ -72,7 +72,7 @@
     - 🔗 [049 - OOP IEC 61131-3 PLC -- Patrones de Diseño - Comportamiento - Visitante]()
     - 🔗 [050 - OOP IEC 61131-3 PLC -- Patrones de Diseño - Estructural - Cadena de Responsabilidad ](https://youtu.be/YD1G_62glm4)
     - 🔗 [051 - OOP IEC 61131-3 PLC -- Patrones de Diseño - Estructural - Comando](https://youtu.be/5y8DbyKCN_g)
-    - 🔗 [052 - OOP IEC 61131-3 PLC -- Patrones de Diseño - Estructural - Iterador]()
+    - 🔗 [052 - OOP IEC 61131-3 PLC -- Patrones de Diseño - Estructural - Iterador](https://youtu.be/tMLr9EWJYU4)
     - 🔗 [053 - OOP IEC 61131-3 PLC -- Patrones de Diseño - Estructural - Mediador]()
     - 🔗 [054 - OOP IEC 61131-3 PLC -- Patrones de Diseño - Estructural - Memento]()
     - 🔗 [055 - OOP IEC 61131-3 PLC -- Patrones de Diseño - Estructural - Observador]()
