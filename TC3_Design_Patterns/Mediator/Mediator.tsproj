@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <TcSmProject xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.beckhoff.com/schemas/2012/07/TcSmProject" TcSmVersion="1.0" TcVersion="3.1.4024.35">
-	<Project ProjectGUID="{3CF3DE00-89B1-4F9B-BBF5-0808F5AEDD44}" Target64Bit="true" ShowHideConfigurations="#x3c7">
+	<Project ProjectGUID="{9726DB98-B3CF-48BF-B5DB-4C3511F9FA54}" Target64Bit="true" ShowHideConfigurations="#x3c7">
 		<System>
 			<Settings MaxCpus="8" NonWinCpus="2">
 				<Cpu CpuId="6"/>
@@ -12,9 +12,9 @@
 			</Tasks>
 		</System>
 		<Plc>
-			<Project GUID="{5C208C78-EA9B-49DF-815A-84CCC5A87312}" Name="Singleton1" PrjFilePath="Singleton1\Singleton1.plcproj" TmcFilePath="Singleton1\Singleton1.tmc" ReloadTmc="true" AmsPort="851" FileArchiveSettings="#x000e" SymbolicMapping="true">
-				<Instance Id="#x08502000" TcSmClass="TComPlcObjDef" KeepUnrestoredLinks="2" TmcPath="Singleton1\Singleton1.tmc" TmcHash="{D0A3E674-0ED8-E3E1-7528-DC0974D8B9DE}">
-					<Name>Singleton1 Instance</Name>
+			<Project GUID="{38C14BD6-A931-4198-8966-889AC406E672}" Name="Mediator" PrjFilePath="Mediator\Mediator.plcproj" TmcFilePath="Mediator\Mediator.tmc" ReloadTmc="true" AmsPort="851" FileArchiveSettings="#x000e" SymbolicMapping="true">
+				<Instance Id="#x08502000" TcSmClass="TComPlcObjDef" KeepUnrestoredLinks="2" TmcPath="Mediator\Mediator.tmc" TmcHash="{3B168FC1-6DA6-E0B8-8DC9-46C3F8914776}">
+					<Name>Mediator Instance</Name>
 					<CLSID ClassFactory="TcPlc30">{08500001-0000-0000-F000-000000000064}</CLSID>
 					<Contexts>
 						<Context>
