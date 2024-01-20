@@ -2,10 +2,10 @@
 
 Hola,
 Seguimos con el curso de 👩‍💻 OOP IEC 61131-3 PLC 👨‍💻,
-ya esta disponible el Video numero 42 de Youtube:
-en este video veremos: Patrones de Diseño (Design Patterns) - Iterator.
+ya esta disponible el Video numero 43 de Youtube:
+en este video veremos: Patrones de Diseño (Design Patterns) - Mediator.
 
-👉 https://youtu.be/tMLr9EWJYU4
+👉 https://youtu.be/yMJe3wNaZMQ
 
 🐙 Repositorio de GitHub:
 - 👉 https://github.com/runtimevic/OOP-IEC61131-3--Curso-Youtube
@@ -60,13 +60,14 @@ Lista de Videos del Curso OOP Programación Orientada a Objetos IEC61131-3 PLC:
 - 040 - https://youtu.be/YD1G_62glm4
 - 041 - https://youtu.be/5y8DbyKCN_g
 - 042 - https://youtu.be/tMLr9EWJYU4
-- 043 -
+- 043 - https://youtu.be/yMJe3wNaZMQ
+- 044 -
 
 Se busca colaborador para la traducción de la documentación al idioma que desee... 👀
 
 - [libro disponible en ingles: Use of the SOLID principles with the IEC 61131-3](https://www.bod.de/buchshop/use-of-the-solid-principles-with-the-iec-61131-3-stefan-henneken-9783757892227)
 
-- [libro disponible en ingles: tambien esta disponible en amazon](https://www.amazon.es/Use-SOLID-principles-61131-3-Object-Oriented/dp/3757892224/ref=sr_1_2?__mk_es_ES=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=259YTE8GIY65K&keywords=SOLID+IEC+61131-3&qid=1699097833&sprefix=solid+iec+61131-3%2Caps%2C88&sr=8-2)
+- [libro disponible en ingles: también esta disponible en amazon](https://www.amazon.es/Use-SOLID-principles-61131-3-Object-Oriented/dp/3757892224/ref=sr_1_2?__mk_es_ES=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=259YTE8GIY65K&keywords=SOLID+IEC+61131-3&qid=1699097833&sprefix=solid+iec+61131-3%2Caps%2C88&sr=8-2)
 
 - 👉 [Ayudame siendo Patrocinador](https://github.com/sponsors/runtimevic)
 

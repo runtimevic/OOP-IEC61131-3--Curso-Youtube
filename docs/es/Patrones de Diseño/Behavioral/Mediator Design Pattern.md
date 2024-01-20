@@ -12,4 +12,4 @@
 - 🔗 [github.com/0w8States/PLC-Design-Patterns/Behavioral_Patterns/Mediator](https://github.com/0w8States/PLC-Design-Patterns/tree/master/Behavioral_Patterns/Mediator)
 ***
 ### <span style="color:grey">Link al Video de Youtube_43:</span>
-- 🔗 [043 - OOP IEC 61131-3 PLC -- Patrones de Diseño - Comportamiento - Mediador]()
+- 🔗 [043 - OOP IEC 61131-3 PLC -- Patrones de Diseño - Comportamiento - Mediador](https://youtu.be/yMJe3wNaZMQ)
