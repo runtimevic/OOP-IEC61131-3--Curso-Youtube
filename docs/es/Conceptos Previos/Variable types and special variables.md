@@ -105,7 +105,7 @@ El grado de retención de las variables RETAIN se incluye automáticamente en el
 ![TwinCAT_build_4026_var_generic_constant](../imagenes/TwinCAT_build_4026_var_generic_constant.JPG) 
 ***
 
-https://github.com/runtimevic/OOP-IEC61131-3--Curso-Youtube/issues/13
+- https://github.com/runtimevic/OOP-IEC61131-3--Curso-Youtube/issues/13
 ### VAR_INST:
 
 VAR_INST inside of a method call is the same as putting the variable in a VAR in the Function Block. Method variables are destroyed at the end of a method call, where as Function Block variables are destroyed only when the Function Block is destroyed.
@@ -113,6 +113,8 @@ VAR_INST inside of a method call is the same as putting the variable in a VAR in
 I personally do not use VAR_INST when doing OOP programming, as I feel that VAR in the body of the function block is easier to read and understand.
 
 ### VAR_STAT:
+
+- http://soup01.com/en/2022/02/19/beckhoffwhat-is-var_stat-and-how-to-use-it/
 
 Static variables. As we know, Function blocks (and Classes) instantiate and hold a collection of variable for themselves. As an example, we can have many TON function blocks which all run independent of each other as their variables are separate.
 
