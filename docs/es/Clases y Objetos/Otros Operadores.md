@@ -135,6 +135,51 @@ MyVarInfo := __VARINFO(nVar);
 
 - El bloque de funciones FB_IecCriticalSection ofrece la aplicación de secciones críticas como método Mutex alternativo.
 ***
+- https://github.com/runtimevic/OOP-IEC61131-3--Curso-Youtube/issues/13
+- Design Pattern Creational Protoype:
+
+Answering your question about __Delete and could we change the variable so it wouldn't live
+
+A pointer is just an address to an object. If I use __NEW on a function block, it will create that object in memory, and will then update your pointer to point to it.
+
+If you call __Delete on a pointer, it will find the object in memory and mark it for deletion. This deletion may not happen immediately, you have simply told the system you no longer want that object.
+
+The object does not live inside the pointer, a point is just a variable which holds the address of an object, which you can then use ^ to make the pointer appear to be the object it points to. (called dereferencing)
+
+As an example, if I were to do this...
+```
+myPointer := __NEW(Heater); // the heater object would be made, and the address of the heater object would go in myPointer
+myPointer := 0; // I have just reset the pointer.  The heater object **still exists** in memory.  I've just overwritten my only way to access it
+```
+So, the pointer is not the object, only a special variable which holds the address of an object and can also pretend to be the object by using the ^ to dereference it.
+
+The order of events should be..
+
+Create an object using __NEW
+Use an object
+Mark an an object for deletion once you are finished using __DELETE
+(at some point the system will delete the object, most of the time it happens between PLC cycles)
+The system will delete objects marked for deletion and we do not fully know (or care) when this will happen as we are already finished with it. This is a system level thing which is done for us.
+
+In your code you are doing the following
+
+Make the circle
+Delete the circle
+Use the circle <- Here you are using a circle which has already been marked for deletion. Here be danger.
+System removes the circle
+You can see the bug if you set a breakpoint in your code and single step through it. When single stepping through the code, you will see that they system has already removed your object before you have a chance to use it.
+
+Instead you should remove __DELETE from your clone method. Just return the new object as ITF_Shape as you are currently doing.
+
+You must then implement a way to delete the object. My suggestion is to make ITF_Shape have a .Dispose() method. This way, after you finish drawing the circle you can call .Dispose(). I.e. you mark it for deletion only after you have finished using it.
+
+The circle's dispose method should contain
+```
+METHOD Dispose
+
+__DELETE(THIS);
+```
+***
 ### <span style="color:grey">Links Otros Operadores:</span>
 - 🔗 [Further operators, infosys.beckhoff.com](https://infosys.beckhoff.com/english.php?content=../content/1033/tc3_plc_intro/3998094475.html&id=)
 - 🔗 [Others Operators, help.codesys.com](https://help.codesys.com/api-content/2/codesys/3.5.13.0/en/_cds_struct_reference_operators/#other-operators)

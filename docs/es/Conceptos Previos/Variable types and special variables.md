@@ -103,7 +103,20 @@ El grado de retención de las variables RETAIN se incluye automáticamente en el
     - [VAR_GENERIC CONSTANT](https://content.helpme-codesys.com/en/CODESYS%20Development%20System/_cds_vartypes_var_generic_constant.html#:~:text=A%20generic%20constant%20is%20a,function%20block%20instance%20is%20assigned.)
     - En la versión de TwinCAT build 4026: podremos declarar VAR_GENERIC CONSTANT ver imagen adjunta:
 ![TwinCAT_build_4026_var_generic_constant](../imagenes/TwinCAT_build_4026_var_generic_constant.JPG) 
+***
 
+https://github.com/runtimevic/OOP-IEC61131-3--Curso-Youtube/issues/13
+### VAR_INST:
+
+VAR_INST inside of a method call is the same as putting the variable in a VAR in the Function Block. Method variables are destroyed at the end of a method call, where as Function Block variables are destroyed only when the Function Block is destroyed.
+
+I personally do not use VAR_INST when doing OOP programming, as I feel that VAR in the body of the function block is easier to read and understand.
+
+### VAR_STAT:
+
+Static variables. As we know, Function blocks (and Classes) instantiate and hold a collection of variable for themselves. As an example, we can have many TON function blocks which all run independent of each other as their variables are separate.
+
+If you declare a variable as VAR_STAT, you make it static. At that point, all function blocks of the same type will share this variable. If one of the instantiated function blocks writes to it, all of the other function blocks of the same type will see this change. Its a common variable among instances. So. VAR is local, only accessible by the function block. VAR_STAT is common across all instances of a function block.
 ***
 ### <span style="color:grey">Links:</span>
 - 🔗 [Local Variables - VAR, infosys.beckhoff.com/](https://infosys.beckhoff.com/english.php?content=../content/1033/tc3_plc_intro/2528755083.html&id=)
