@@ -60,7 +60,7 @@
     - 🔗 [037 - OOP IEC 61131-3 PLC -- Patrones de Diseño - Creacional - Constructor](https://youtu.be/lYHHAKN07-s)
     - 🔗 [038 - OOP IEC 61131-3 PLC -- Patrones de Diseño - Creacional - Prototipo](https://youtu.be/SPrTKD648ng)
     - 🔗 [039 - OOP IEC 61131-3 PLC -- Patrones de Diseño - Creacional - Único](https://youtu.be/Y0SI90RvwPc)
-    - 🔗 [040 - OOP IEC 61131-3 PLC -- Patrones de Diseño - Estructural - Cadena de Responsabilidad ](https://youtu.be/YD1G_62glm4)
+    - 🔗 [040 - OOP IEC 61131-3 PLC -- Patrones de Diseño - Comportamiento - Cadena de Responsabilidad ](https://youtu.be/YD1G_62glm4)
     - 🔗 [041 - OOP IEC 61131-3 PLC -- Patrones de Diseño - Comportamiento - Comando](https://youtu.be/5y8DbyKCN_g)
     - 🔗 [042 - OOP IEC 61131-3 PLC -- Patrones de Diseño - Comportamiento - Iterador](https://youtu.be/tMLr9EWJYU4)
     - 🔗 [043 - OOP IEC 61131-3 PLC -- Patrones de Diseño - Comportamiento - Mediador](https://youtu.be/yMJe3wNaZMQ)
