@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<TcSmProject xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.beckhoff.com/schemas/2012/07/TcSmProject" TcSmVersion="1.0" TcVersion="3.1.4024.35">
+	<Project ProjectGUID="{2FFA72D0-03BE-4C9B-A2F7-5C0A1120D275}" Target64Bit="true" ShowHideConfigurations="#x3c7">
+		<System>
+			<Settings MaxCpus="8" NonWinCpus="2">
+				<Cpu CpuId="6"/>
+			</Settings>
+		</System>
+	</Project>
+</TcSmProject>

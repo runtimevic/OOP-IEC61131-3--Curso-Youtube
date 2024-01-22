@@ -18,3 +18,4 @@ Implementación de ejemplo practico en TwinCAT 3:
 ***
 ### <span style="color:grey">Link al Video de Youtube_36:</span>
 - 🔗 [Factoy Abstract Design Pattern Youtube](https://youtu.be/YKSCzbzmOMU)
+***

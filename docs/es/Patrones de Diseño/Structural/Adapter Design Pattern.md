@@ -1,4 +1,4 @@
-👉[**Adapter**](https://refactoring.guru/es/design-patterns/adapter)es un patrón de diseño estructural que permite la colaboración entre objetos con interfaces incompatibles.
+👉[**Adapter**](https://refactoring.guru/es/design-patterns/adapter) es un patrón de diseño estructural que permite la colaboración entre objetos con interfaces incompatibles.
 
 Un adaptador es un patrón para hacer que objetos incompatibles funcionen juntos. La idea es crear una capa intermedia que convierta la interfaz de un objeto en otro. Un nombre alternativo común para el adaptador es contenedor, wrapper (envoltorio)
 
@@ -24,4 +24,4 @@ Puede complicar la base del código.
 - 🔗 [Patrón de diseño Adapter en C#](https://www.youtube.com/watch?v=ZRysA46J8OE)
 ***
 ### <span style="color:grey">Link al Video de Youtube_xx:</span>
-- 🔗 []()
+- 🔗 [050 - OOP IEC 61131-3 PLC -- Patrones de Diseño - Estructural - Adaptador]()
