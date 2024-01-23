@@ -35,6 +35,7 @@ IF bRequest THEN
 	originalCircle.Draw();
 	clonedCircle := originalCircle.clone();
 	clonedCircle.Draw();
+	originalCircle.Dispose(); ////https://github.com/runtimevic/OOP-IEC61131-3--Curso-Youtube/issues/13
 		
 	bRequest := FALSE;
 	counter := counter + 1;

@@ -6,28 +6,40 @@ FUNCTION_BLOCK Circle IMPLEMENTS ITF_Shape
 VAR_INPUT
 	radius: INT;
 END_VAR
-VAR_OUTPUT
-END_VAR
 VAR
+	//https://github.com/runtimevic/OOP-IEC61131-3--Curso-Youtube/issues/13
+	pClone : POINTER TO Circle;	
 END_VAR
 ]]></Declaration>
     <Implementation>
       <ST><![CDATA[]]></ST>
     </Implementation>
     <Method Name="Clone" Id="{40bc29e0-bf78-4d5d-8f5d-1f786394c013}">
-      <Declaration><![CDATA[
-METHOD  Clone : ITF_Shape
-VAR_INPUT
-END_VAR
-VAR_STAT
- pClone : POINTER TO Circle;	
-END_VAR
+      <Declaration><![CDATA[METHOD  Clone : ITF_Shape
+//VAR_STAT
+//	//https://github.com/runtimevic/OOP-IEC61131-3--Curso-Youtube/issues/13
+//	pClone : POINTER TO Circle;	
+//END_VAR
 ]]></Declaration>
       <Implementation>
         <ST><![CDATA[pClone := __NEW(Circle);
 pClone^.radius := radius;
 Clone := pClone^;
-__DELETE(pClone);
+//https://github.com/runtimevic/OOP-IEC61131-3--Curso-Youtube/issues/13
+//__DELETE(pClone);
+]]></ST>
+      </Implementation>
+    </Method>
+    <Method Name="Dispose" Id="{f6593937-5a17-4be4-8456-004aa2b0361c}">
+      <Declaration><![CDATA[//https://github.com/runtimevic/OOP-IEC61131-3--Curso-Youtube/issues/13
+METHOD Dispose
+]]></Declaration>
+      <Implementation>
+        <ST><![CDATA[//https://github.com/runtimevic/OOP-IEC61131-3--Curso-Youtube/issues/13
+IF (pClone <> 0) THEN
+	__DELETE(pClone);	
+	pClone := 0;
+END_IF
 ]]></ST>
       </Implementation>
     </Method>
