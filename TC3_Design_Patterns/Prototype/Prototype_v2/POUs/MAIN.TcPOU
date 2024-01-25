@@ -25,15 +25,15 @@ END_VAR
 IF bRequest THEN
 	
 	// rectangle example 
-	originalRectangle.Width := 10;
-	originalRectangle.Height := 5;
+	originalRectangle.width := 10;
+	originalRectangle.height := 5;
 	originalRectangle.Draw();
 	clonedRectangle := originalRectangle.clone();
 	clonedRectangle.Draw();
 	clonedRectangle.Dispose(); 
 	
 	// circle example 
-	originalCircle.Radius := 7;
+	originalCircle.radius := 7;
 	originalCircle.Draw();
 	clonedCircle := originalCircle.clone();
 	clonedCircle.Draw();
