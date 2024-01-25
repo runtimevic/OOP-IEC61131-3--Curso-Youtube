@@ -1,0 +1,667 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<project xmlns="http://www.plcopen.org/xml/tc6_0200">
+  <fileHeader companyName="Beckhoff Automation GmbH" productName="TwinCAT PLC Control" productVersion="3.5.13.21" creationDateTime="2024-01-25T14:00:56.1741146" />
+  <contentHeader name="Ben_Harrison_Prototype" modificationDateTime="2024-01-25T14:00:56.1828941">
+    <coordinateInfo>
+      <fbd>
+        <scaling x="1" y="1" />
+      </fbd>
+      <ld>
+        <scaling x="1" y="1" />
+      </ld>
+      <sfc>
+        <scaling x="1" y="1" />
+      </sfc>
+    </coordinateInfo>
+    <addData>
+      <data name="http://www.3s-software.com/plcopenxml/projectinformation" handleUnknown="implementation">
+        <ProjectInformation />
+      </data>
+    </addData>
+  </contentHeader>
+  <types>
+    <dataTypes />
+    <pous />
+  </types>
+  <instances>
+    <configurations />
+  </instances>
+  <addData>
+    <data name="http://www.3s-software.com/plcopenxml/application" handleUnknown="implementation">
+      <resource name="Ben_Harrison_Prototype">
+        <task name="PlcTask" interval="PT0S" priority="20">
+          <pouInstance name="MAIN" typeName="">
+            <documentation>
+              <xhtml xmlns="http://www.w3.org/1999/xhtml" />
+            </documentation>
+          </pouInstance>
+          <addData>
+            <data name="http://www.3s-software.com/plcopenxml/tasksettings" handleUnknown="implementation">
+              <TaskSettings KindOfTask="Cyclic" Interval="10000" IntervalUnit="us">
+                <Watchdog Enabled="false" TimeUnit="ms" />
+              </TaskSettings>
+            </data>
+            <data name="http://www.3s-software.com/plcopenxml/objectid" handleUnknown="discard">
+              <ObjectId>789d612d-cc0d-483e-9120-fa45480be7c6</ObjectId>
+            </data>
+          </addData>
+        </task>
+        <addData>
+          <data name="http://www.3s-software.com/plcopenxml/interface" handleUnknown="implementation">
+            <Interface name="I_Disposable" ObjectId="2f7ea90b-3a9c-44d0-a95f-bfbb63cc1a95">
+              <Methods>
+                <Method name="Dispose" ObjectId="5a3a9860-dfbf-472d-bf18-0155c1e57262">
+                  <interface />
+                  <InterfaceAsPlainText>
+                    <xhtml xmlns="http://www.w3.org/1999/xhtml">METHOD Dispose
+VAR_INPUT
+END_VAR
+</xhtml>
+                  </InterfaceAsPlainText>
+                  <addData />
+                </Method>
+              </Methods>
+              <InterfaceAsPlainText>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">INTERFACE I_Disposable
+</xhtml>
+              </InterfaceAsPlainText>
+              <addData />
+            </Interface>
+          </data>
+          <data name="http://www.3s-software.com/plcopenxml/interface" handleUnknown="implementation">
+            <Interface name="I_DrawableShape" ObjectId="845d4f0e-7686-422c-bfa9-9f7d44dcc274">
+              <Methods>
+                <Method name="Clone" ObjectId="267796f6-e282-4810-b929-b9e4e73721a4">
+                  <interface>
+                    <returnType>
+                      <derived name="I_DrawableShape" />
+                    </returnType>
+                  </interface>
+                  <InterfaceAsPlainText>
+                    <xhtml xmlns="http://www.w3.org/1999/xhtml">METHOD Clone : I_DrawableShape
+VAR_INPUT
+END_VAR</xhtml>
+                  </InterfaceAsPlainText>
+                  <addData />
+                </Method>
+                <Method name="Draw" ObjectId="5fc940af-ada7-4e36-a96a-1e791eebb941">
+                  <interface />
+                  <InterfaceAsPlainText>
+                    <xhtml xmlns="http://www.w3.org/1999/xhtml">METHOD Draw
+VAR_INPUT
+END_VAR
+</xhtml>
+                  </InterfaceAsPlainText>
+                  <addData />
+                </Method>
+              </Methods>
+              <Inheritance>
+                <Extends>I_Disposable</Extends>
+              </Inheritance>
+              <InterfaceAsPlainText>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">INTERFACE I_DrawableShape EXTENDS I_Disposable
+</xhtml>
+              </InterfaceAsPlainText>
+              <addData />
+            </Interface>
+          </data>
+          <data name="http://www.3s-software.com/plcopenxml/pou" handleUnknown="implementation">
+            <pou name="Circle" pouType="functionBlock">
+              <interface>
+                <localVars>
+                  <variable name="_radius">
+                    <type>
+                      <INT />
+                    </type>
+                  </variable>
+                </localVars>
+                <addData>
+                  <data name="http://www.3s-software.com/plcopenxml/pouinheritance" handleUnknown="implementation">
+                    <Inheritance>
+                      <Extends>Disposable</Extends>
+                      <Implements>I_DrawableShape</Implements>
+                    </Inheritance>
+                  </data>
+                  <data name="http://www.3s-software.com/plcopenxml/attributes" handleUnknown="implementation">
+                    <Attributes>
+                      <Attribute Name="enable_dynamic_creation" Value="" />
+                    </Attributes>
+                  </data>
+                </addData>
+              </interface>
+              <body>
+                <ST>
+                  <xhtml xmlns="http://www.w3.org/1999/xhtml" />
+                </ST>
+              </body>
+              <addData>
+                <data name="http://www.3s-software.com/plcopenxml/method" handleUnknown="implementation">
+                  <Method name="Clone" ObjectId="40bc29e0-bf78-4d5d-8f5d-1f786394c013">
+                    <interface>
+                      <returnType>
+                        <derived name="I_DrawableShape" />
+                      </returnType>
+                      <localVars>
+                        <variable name="pCircle">
+                          <type>
+                            <pointer>
+                              <baseType>
+                                <derived name="Circle" />
+                              </baseType>
+                            </pointer>
+                          </type>
+                        </variable>
+                      </localVars>
+                    </interface>
+                    <body>
+                      <ST>
+                        <xhtml xmlns="http://www.w3.org/1999/xhtml">pCircle := __NEW(Circle);
+pCircle^.radius := radius;
+Clone := pCircle^;</xhtml>
+                      </ST>
+                    </body>
+                    <InterfaceAsPlainText>
+                      <xhtml xmlns="http://www.w3.org/1999/xhtml">METHOD Clone : I_DrawableShape
+VAR
+	pCircle : POINTER TO Circle;	
+END_VAR</xhtml>
+                    </InterfaceAsPlainText>
+                    <addData />
+                  </Method>
+                </data>
+                <data name="http://www.3s-software.com/plcopenxml/method" handleUnknown="implementation">
+                  <Method name="Draw" ObjectId="919be77b-1433-43bb-9e6d-ebea1c177f82">
+                    <interface>
+                      <localVars>
+                        <variable name="str">
+                          <type>
+                            <string />
+                          </type>
+                        </variable>
+                      </localVars>
+                    </interface>
+                    <body>
+                      <ST>
+                        <xhtml xmlns="http://www.w3.org/1999/xhtml">str := TO_STRING(radius);
+ADSLOGSTR(msgCtrlMask :=ADSLOG_MSGTYPE_HINT, msgFmtStr :='Draw circle with radius: %s', strArg := str);</xhtml>
+                      </ST>
+                    </body>
+                    <InterfaceAsPlainText>
+                      <xhtml xmlns="http://www.w3.org/1999/xhtml">
+METHOD Draw
+
+VAR
+	str : STRING;
+END_VAR
+</xhtml>
+                    </InterfaceAsPlainText>
+                    <addData />
+                  </Method>
+                </data>
+                <data name="http://www.3s-software.com/plcopenxml/property" handleUnknown="implementation">
+                  <Property name="Radius" ObjectId="a34de360-bafa-47b2-9b5a-87523dbf7965">
+                    <interface>
+                      <returnType>
+                        <INT />
+                      </returnType>
+                    </interface>
+                    <GetAccessor>
+                      <interface />
+                      <body>
+                        <ST>
+                          <xhtml xmlns="http://www.w3.org/1999/xhtml">Radius := _radius;</xhtml>
+                        </ST>
+                      </body>
+                      <InterfaceAsPlainText>
+                        <xhtml xmlns="http://www.w3.org/1999/xhtml">VAR
+END_VAR
+</xhtml>
+                      </InterfaceAsPlainText>
+                      <addData />
+                    </GetAccessor>
+                    <SetAccessor>
+                      <interface />
+                      <body>
+                        <ST>
+                          <xhtml xmlns="http://www.w3.org/1999/xhtml">_radius := Radius;</xhtml>
+                        </ST>
+                      </body>
+                      <InterfaceAsPlainText>
+                        <xhtml xmlns="http://www.w3.org/1999/xhtml">VAR
+END_VAR
+</xhtml>
+                      </InterfaceAsPlainText>
+                      <addData />
+                    </SetAccessor>
+                    <InterfaceAsPlainText>
+                      <xhtml xmlns="http://www.w3.org/1999/xhtml">PROPERTY Radius : INT</xhtml>
+                    </InterfaceAsPlainText>
+                    <addData />
+                  </Property>
+                </data>
+                <data name="http://www.3s-software.com/plcopenxml/interfaceasplaintext" handleUnknown="implementation">
+                  <InterfaceAsPlainText>
+                    <xhtml xmlns="http://www.w3.org/1999/xhtml">{attribute 'enable_dynamic_creation'}
+FUNCTION_BLOCK Circle EXTENDS Disposable IMPLEMENTS I_DrawableShape
+VAR
+	_radius: INT;
+END_VAR</xhtml>
+                  </InterfaceAsPlainText>
+                </data>
+                <data name="http://www.3s-software.com/plcopenxml/objectid" handleUnknown="discard">
+                  <ObjectId>7bf41376-fe79-4fc9-9b0f-cc0bfa7817da</ObjectId>
+                </data>
+              </addData>
+            </pou>
+          </data>
+          <data name="http://www.3s-software.com/plcopenxml/pou" handleUnknown="implementation">
+            <pou name="Disposable" pouType="functionBlock">
+              <interface />
+              <body>
+                <ST>
+                  <xhtml xmlns="http://www.w3.org/1999/xhtml" />
+                </ST>
+              </body>
+              <addData>
+                <data name="http://www.3s-software.com/plcopenxml/method" handleUnknown="implementation">
+                  <Method name="Dispose" ObjectId="afa659c0-7d26-4e8d-bb18-d763945e6dba">
+                    <interface />
+                    <body>
+                      <ST>
+                        <xhtml xmlns="http://www.w3.org/1999/xhtml">__DELETE(THIS);</xhtml>
+                      </ST>
+                    </body>
+                    <InterfaceAsPlainText>
+                      <xhtml xmlns="http://www.w3.org/1999/xhtml">METHOD PUBLIC Dispose
+VAR_INPUT
+END_VAR
+</xhtml>
+                    </InterfaceAsPlainText>
+                    <addData />
+                  </Method>
+                </data>
+                <data name="http://www.3s-software.com/plcopenxml/interfaceasplaintext" handleUnknown="implementation">
+                  <InterfaceAsPlainText>
+                    <xhtml xmlns="http://www.w3.org/1999/xhtml">FUNCTION_BLOCK Disposable
+VAR
+END_VAR
+</xhtml>
+                  </InterfaceAsPlainText>
+                </data>
+                <data name="http://www.3s-software.com/plcopenxml/objectid" handleUnknown="discard">
+                  <ObjectId>f04eeb6d-b72f-43c2-a91c-3e3fca534c46</ObjectId>
+                </data>
+              </addData>
+            </pou>
+          </data>
+          <data name="http://www.3s-software.com/plcopenxml/pou" handleUnknown="implementation">
+            <pou name="Rectangle" pouType="functionBlock">
+              <interface>
+                <localVars>
+                  <variable name="_width">
+                    <type>
+                      <INT />
+                    </type>
+                  </variable>
+                  <variable name="_height">
+                    <type>
+                      <INT />
+                    </type>
+                  </variable>
+                </localVars>
+                <addData>
+                  <data name="http://www.3s-software.com/plcopenxml/pouinheritance" handleUnknown="implementation">
+                    <Inheritance>
+                      <Extends>Disposable</Extends>
+                      <Implements>I_DrawableShape</Implements>
+                    </Inheritance>
+                  </data>
+                  <data name="http://www.3s-software.com/plcopenxml/attributes" handleUnknown="implementation">
+                    <Attributes>
+                      <Attribute Name="enable_dynamic_creation" Value="" />
+                    </Attributes>
+                  </data>
+                </addData>
+              </interface>
+              <body>
+                <ST>
+                  <xhtml xmlns="http://www.w3.org/1999/xhtml" />
+                </ST>
+              </body>
+              <addData>
+                <data name="http://www.3s-software.com/plcopenxml/method" handleUnknown="implementation">
+                  <Method name="Clone" ObjectId="d393242f-6ae7-4dca-af0b-60b70a6eaa0e">
+                    <interface>
+                      <returnType>
+                        <derived name="I_DrawableShape" />
+                      </returnType>
+                      <localVars>
+                        <variable name="pRectangle">
+                          <type>
+                            <pointer>
+                              <baseType>
+                                <derived name="Rectangle" />
+                              </baseType>
+                            </pointer>
+                          </type>
+                        </variable>
+                      </localVars>
+                    </interface>
+                    <body>
+                      <ST>
+                        <xhtml xmlns="http://www.w3.org/1999/xhtml">pRectangle := __NEW(Rectangle);
+pRectangle^.Width := Width;
+pRectangle^.Height := Height;
+Clone := pRectangle^;</xhtml>
+                      </ST>
+                    </body>
+                    <InterfaceAsPlainText>
+                      <xhtml xmlns="http://www.w3.org/1999/xhtml">METHOD Clone : I_DrawableShape
+VAR
+	pRectangle : POINTER TO Rectangle;
+END_VAR
+
+</xhtml>
+                    </InterfaceAsPlainText>
+                    <addData />
+                  </Method>
+                </data>
+                <data name="http://www.3s-software.com/plcopenxml/method" handleUnknown="implementation">
+                  <Method name="Draw" ObjectId="d8fa6ad4-ea28-4c15-ab4b-56aa068bd55b">
+                    <interface>
+                      <localVars>
+                        <variable name="str_width">
+                          <type>
+                            <string />
+                          </type>
+                        </variable>
+                        <variable name="str_height">
+                          <type>
+                            <string />
+                          </type>
+                        </variable>
+                        <variable name="str">
+                          <type>
+                            <string />
+                          </type>
+                        </variable>
+                      </localVars>
+                    </interface>
+                    <body>
+                      <ST>
+                        <xhtml xmlns="http://www.w3.org/1999/xhtml">str_width := CONCAT(STR1 := 'width: ', STR2 := TO_STRING(Width));
+str_height := CONCAT(STR1 := 'height: ', STR2 := TO_STRING(Height));
+str := CONCAT(STR1 := str_width, STR2 := str_height);
+ADSLOGSTR(msgCtrlMask := ADSLOG_MSGTYPE_HINT, msgFmtStr := 'Draw Rectangle with:  %s', strArg := str);</xhtml>
+                      </ST>
+                    </body>
+                    <InterfaceAsPlainText>
+                      <xhtml xmlns="http://www.w3.org/1999/xhtml">METHOD Draw
+VAR
+	str_width : STRING;
+	str_height : STRING;
+	str : STRING;
+END_VAR</xhtml>
+                    </InterfaceAsPlainText>
+                    <addData />
+                  </Method>
+                </data>
+                <data name="http://www.3s-software.com/plcopenxml/property" handleUnknown="implementation">
+                  <Property name="Height" ObjectId="ab99e11c-9a78-4285-bdf1-cf57d8eff6b0">
+                    <interface>
+                      <returnType>
+                        <INT />
+                      </returnType>
+                    </interface>
+                    <GetAccessor>
+                      <interface />
+                      <body>
+                        <ST>
+                          <xhtml xmlns="http://www.w3.org/1999/xhtml">Height := _height;</xhtml>
+                        </ST>
+                      </body>
+                      <InterfaceAsPlainText>
+                        <xhtml xmlns="http://www.w3.org/1999/xhtml">VAR
+END_VAR
+</xhtml>
+                      </InterfaceAsPlainText>
+                      <addData />
+                    </GetAccessor>
+                    <SetAccessor>
+                      <interface />
+                      <body>
+                        <ST>
+                          <xhtml xmlns="http://www.w3.org/1999/xhtml">_height := Height;</xhtml>
+                        </ST>
+                      </body>
+                      <InterfaceAsPlainText>
+                        <xhtml xmlns="http://www.w3.org/1999/xhtml">PUBLIC 
+VAR
+END_VAR
+</xhtml>
+                      </InterfaceAsPlainText>
+                      <addData />
+                    </SetAccessor>
+                    <InterfaceAsPlainText>
+                      <xhtml xmlns="http://www.w3.org/1999/xhtml">PROPERTY PUBLIC Height : INT</xhtml>
+                    </InterfaceAsPlainText>
+                    <addData />
+                  </Property>
+                </data>
+                <data name="http://www.3s-software.com/plcopenxml/property" handleUnknown="implementation">
+                  <Property name="Width" ObjectId="d396d12a-4ac7-4a07-8804-d7ad3f55cf54">
+                    <interface>
+                      <returnType>
+                        <INT />
+                      </returnType>
+                    </interface>
+                    <GetAccessor>
+                      <interface />
+                      <body>
+                        <ST>
+                          <xhtml xmlns="http://www.w3.org/1999/xhtml">Width := _width;</xhtml>
+                        </ST>
+                      </body>
+                      <InterfaceAsPlainText>
+                        <xhtml xmlns="http://www.w3.org/1999/xhtml">VAR
+END_VAR
+</xhtml>
+                      </InterfaceAsPlainText>
+                      <addData />
+                    </GetAccessor>
+                    <SetAccessor>
+                      <interface />
+                      <body>
+                        <ST>
+                          <xhtml xmlns="http://www.w3.org/1999/xhtml">_width := Width;</xhtml>
+                        </ST>
+                      </body>
+                      <InterfaceAsPlainText>
+                        <xhtml xmlns="http://www.w3.org/1999/xhtml">PUBLIC 
+VAR
+END_VAR
+</xhtml>
+                      </InterfaceAsPlainText>
+                      <addData />
+                    </SetAccessor>
+                    <InterfaceAsPlainText>
+                      <xhtml xmlns="http://www.w3.org/1999/xhtml">PROPERTY PUBLIC Width : INT</xhtml>
+                    </InterfaceAsPlainText>
+                    <addData />
+                  </Property>
+                </data>
+                <data name="http://www.3s-software.com/plcopenxml/interfaceasplaintext" handleUnknown="implementation">
+                  <InterfaceAsPlainText>
+                    <xhtml xmlns="http://www.w3.org/1999/xhtml">{attribute 'enable_dynamic_creation'}
+FUNCTION_BLOCK Rectangle EXTENDS Disposable IMPLEMENTS I_DrawableShape
+VAR
+	_width: INT;
+    _height: INT;
+END_VAR</xhtml>
+                  </InterfaceAsPlainText>
+                </data>
+                <data name="http://www.3s-software.com/plcopenxml/objectid" handleUnknown="discard">
+                  <ObjectId>5fab8419-38ec-4aa0-8ae7-fe6ce34dda2e</ObjectId>
+                </data>
+              </addData>
+            </pou>
+          </data>
+          <data name="http://www.3s-software.com/plcopenxml/pou" handleUnknown="implementation">
+            <pou name="MAIN" pouType="program">
+              <interface>
+                <localVars>
+                  <variable name="originalRectangle">
+                    <type>
+                      <derived name="Rectangle" />
+                    </type>
+                  </variable>
+                  <variable name="clonedRectangle">
+                    <type>
+                      <derived name="I_DrawableShape" />
+                    </type>
+                  </variable>
+                  <variable name="originalCircle">
+                    <type>
+                      <derived name="Circle" />
+                    </type>
+                  </variable>
+                  <variable name="clonedCircle">
+                    <type>
+                      <derived name="I_DrawableShape" />
+                    </type>
+                  </variable>
+                  <variable name="bRequest">
+                    <type>
+                      <BOOL />
+                    </type>
+                  </variable>
+                  <variable name="counter">
+                    <type>
+                      <INT />
+                    </type>
+                  </variable>
+                </localVars>
+              </interface>
+              <body>
+                <ST>
+                  <xhtml xmlns="http://www.w3.org/1999/xhtml">// https://refactoring.guru/design-patterns/prototype
+
+// Recuerda que el patrón Prototipo permite crear nuevos objetos clonando un objeto existente, evitando así la necesidad de crear nuevas instancias desde cero.
+
+// porque salen varios mensajes:
+// https://github.com/tcunit/TcUnit/issues/92
+// solución temporal : Unload project...
+IF bRequest THEN
+	
+	// rectangle example 
+	originalRectangle.Width := 10;
+	originalRectangle.Height := 5;
+	originalRectangle.Draw();
+	clonedRectangle := originalRectangle.clone();
+	clonedRectangle.Draw();
+	clonedRectangle.Dispose(); 
+	
+	// circle example 
+	originalCircle.Radius := 7;
+	originalCircle.Draw();
+	clonedCircle := originalCircle.clone();
+	clonedCircle.Draw();
+	clonedCircle.Dispose(); 
+	
+	// report request info
+	bRequest := FALSE;
+	counter := counter + 1;
+	ADSLOGSTR(msgCtrlMask :=ADSLOG_MSGTYPE_HINT, msgFmtStr :='test: %s', strArg := TO_STRING(counter));
+
+END_IF</xhtml>
+                </ST>
+              </body>
+              <addData>
+                <data name="http://www.3s-software.com/plcopenxml/interfaceasplaintext" handleUnknown="implementation">
+                  <InterfaceAsPlainText>
+                    <xhtml xmlns="http://www.w3.org/1999/xhtml">PROGRAM MAIN
+VAR
+    originalRectangle: Rectangle;
+    clonedRectangle: I_DrawableShape;
+	
+    originalCircle: Circle;
+    clonedCircle: I_DrawableShape;
+	
+	bRequest : BOOL;
+	counter: INT;
+
+END_VAR
+</xhtml>
+                  </InterfaceAsPlainText>
+                </data>
+                <data name="http://www.3s-software.com/plcopenxml/objectid" handleUnknown="discard">
+                  <ObjectId>6e781358-1f8a-4796-9164-36ac68c8106e</ObjectId>
+                </data>
+              </addData>
+            </pou>
+          </data>
+          <data name="http://www.3s-software.com/plcopenxml/libraries" handleUnknown="implementation">
+            <Libraries>
+              <Library Name="#Tc2_Standard" Namespace="Tc2_Standard" HideWhenReferencedAsDependency="false" PublishSymbolsInContainer="false" SystemLibrary="false" LinkAllContent="false" DefaultResolution="Tc2_Standard, * (Beckhoff Automation GmbH)" />
+              <Library Name="#Tc2_System" Namespace="Tc2_System" HideWhenReferencedAsDependency="false" PublishSymbolsInContainer="false" SystemLibrary="false" LinkAllContent="false" DefaultResolution="Tc2_System, * (Beckhoff Automation GmbH)">
+                <Parameters>
+                  <Parameter Name="PARAM.TABLE_UPPER_BOUND" Value="15" />
+                  <Parameter Name="PARAM.STRING_LENGTH_EXP" Value="255" />
+                  <Parameter Name="PARAM.STRING_LENGTH_ADDRESS" Value="20" />
+                  <Parameter Name="PARAM.STRING_LENGTH_COMMENT" Value="255" />
+                  <Parameter Name="PARAM.STRING_LENGTH_OUTSTRING" Value="255" />
+                  <Parameter Name="PARAM.TABLE_SHOW_VALID_ITEMS" Value="FALSE" />
+                </Parameters>
+              </Library>
+              <Library Name="#Tc3_Module" Namespace="Tc3_Module" HideWhenReferencedAsDependency="false" PublishSymbolsInContainer="false" SystemLibrary="false" LinkAllContent="false" DefaultResolution="Tc3_Module, * (Beckhoff Automation GmbH)" />
+              <addData>
+                <data name="http://www.3s-software.com/plcopenxml/objectid" handleUnknown="discard">
+                  <ObjectId>2002eda0-5104-4d17-87a8-7d1bb3095ec2</ObjectId>
+                </data>
+              </addData>
+            </Libraries>
+          </data>
+          <data name="http://www.3s-software.com/plcopenxml/objectid" handleUnknown="discard">
+            <ObjectId>bfeba918-65a7-4f4d-a967-26ed486495da</ObjectId>
+          </data>
+        </addData>
+      </resource>
+    </data>
+    <data name="http://www.3s-software.com/plcopenxml/projectstructure" handleUnknown="discard">
+      <ProjectStructure>
+        <Object Name="Ben_Harrison_Prototype" ObjectId="bfeba918-65a7-4f4d-a967-26ed486495da">
+          <Object Name="Library Manager" ObjectId="2002eda0-5104-4d17-87a8-7d1bb3095ec2" />
+          <Folder Name="Classes">
+            <Object Name="Circle" ObjectId="7bf41376-fe79-4fc9-9b0f-cc0bfa7817da">
+              <Object Name="Clone" ObjectId="40bc29e0-bf78-4d5d-8f5d-1f786394c013" />
+              <Object Name="Draw" ObjectId="919be77b-1433-43bb-9e6d-ebea1c177f82" />
+              <Object Name="Radius" ObjectId="a34de360-bafa-47b2-9b5a-87523dbf7965" />
+            </Object>
+            <Object Name="Disposable" ObjectId="f04eeb6d-b72f-43c2-a91c-3e3fca534c46">
+              <Object Name="Dispose" ObjectId="afa659c0-7d26-4e8d-bb18-d763945e6dba" />
+            </Object>
+            <Object Name="Rectangle" ObjectId="5fab8419-38ec-4aa0-8ae7-fe6ce34dda2e">
+              <Object Name="Clone" ObjectId="d393242f-6ae7-4dca-af0b-60b70a6eaa0e" />
+              <Object Name="Draw" ObjectId="d8fa6ad4-ea28-4c15-ab4b-56aa068bd55b" />
+              <Object Name="Height" ObjectId="ab99e11c-9a78-4285-bdf1-cf57d8eff6b0" />
+              <Object Name="Width" ObjectId="d396d12a-4ac7-4a07-8804-d7ad3f55cf54" />
+            </Object>
+          </Folder>
+          <Folder Name="Interfaces">
+            <Object Name="I_Disposable" ObjectId="2f7ea90b-3a9c-44d0-a95f-bfbb63cc1a95">
+              <Object Name="Dispose" ObjectId="5a3a9860-dfbf-472d-bf18-0155c1e57262" />
+            </Object>
+            <Object Name="I_DrawableShape" ObjectId="845d4f0e-7686-422c-bfa9-9f7d44dcc274">
+              <Object Name="Clone" ObjectId="267796f6-e282-4810-b929-b9e4e73721a4" />
+              <Object Name="Draw" ObjectId="5fc940af-ada7-4e36-a96a-1e791eebb941" />
+            </Object>
+          </Folder>
+          <Object Name="PlcTask" ObjectId="789d612d-cc0d-483e-9120-fa45480be7c6" />
+          <Folder Name="POUs">
+            <Object Name="MAIN" ObjectId="6e781358-1f8a-4796-9164-36ac68c8106e" />
+          </Folder>
+        </Object>
+      </ProjectStructure>
+    </data>
+  </addData>
+</project>

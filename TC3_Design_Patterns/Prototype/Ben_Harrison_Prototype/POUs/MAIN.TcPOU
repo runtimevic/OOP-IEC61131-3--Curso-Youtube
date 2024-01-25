@@ -4,10 +4,10 @@
     <Declaration><![CDATA[PROGRAM MAIN
 VAR
     originalRectangle: Rectangle;
-    clonedRectangle: ITF_Shape;
+    clonedRectangle: I_DrawableShape;
 	
     originalCircle: Circle;
-    clonedCircle: ITF_Shape;
+    clonedCircle: I_DrawableShape;
 	
 	bRequest : BOOL;
 	counter: INT;
@@ -22,24 +22,28 @@ END_VAR
 // porque salen varios mensajes:
 // https://github.com/tcunit/TcUnit/issues/92
 // solución temporal : Unload project...
-
 IF bRequest THEN
 	
-	originalRectangle.width := 10;
-	originalRectangle.height := 5;
+	// rectangle example 
+	originalRectangle.Width := 10;
+	originalRectangle.Height := 5;
 	originalRectangle.Draw();
 	clonedRectangle := originalRectangle.clone();
 	clonedRectangle.Draw();
+	clonedRectangle.Dispose(); 
 	
-	originalCircle.radius := 7;
+	// circle example 
+	originalCircle.Radius := 7;
 	originalCircle.Draw();
 	clonedCircle := originalCircle.clone();
 	clonedCircle.Draw();
-	originalCircle.Dispose(); ////https://github.com/runtimevic/OOP-IEC61131-3--Curso-Youtube/issues/13
-		
+	clonedCircle.Dispose(); 
+	
+	// report request info
 	bRequest := FALSE;
 	counter := counter + 1;
 	ADSLOGSTR(msgCtrlMask :=ADSLOG_MSGTYPE_HINT, msgFmtStr :='test: %s', strArg := TO_STRING(counter));
+
 END_IF]]></ST>
     </Implementation>
   </POU>
