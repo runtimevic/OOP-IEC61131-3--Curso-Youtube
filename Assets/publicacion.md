@@ -2,10 +2,10 @@
 
 Hola,
 Seguimos con el curso de 👩‍💻 OOP IEC 61131-3 PLC 👨‍💻,
-ya esta disponible el Video numero 43 de Youtube:
-en este video veremos: Patrones de Diseño (Design Patterns) - Mediator.
+ya esta disponible el Video numero 44 de Youtube:
+en este video veremos: Patrones de Diseño (Design Patterns) - Memento.
 
-👉 https://youtu.be/yMJe3wNaZMQ
+👉 https://youtu.be/TguSTA_t6_M
 
 🐙 Repositorio de GitHub:
 - 👉 https://github.com/runtimevic/OOP-IEC61131-3--Curso-Youtube
@@ -61,7 +61,8 @@ Lista de Videos del Curso OOP Programación Orientada a Objetos IEC61131-3 PLC:
 - 041 - https://youtu.be/5y8DbyKCN_g
 - 042 - https://youtu.be/tMLr9EWJYU4
 - 043 - https://youtu.be/yMJe3wNaZMQ
-- 044 -
+- 044 - https://youtu.be/TguSTA_t6_M
+- 045 -
 
 Se busca colaborador para la traducción de la documentación al idioma que desee... 👀
 

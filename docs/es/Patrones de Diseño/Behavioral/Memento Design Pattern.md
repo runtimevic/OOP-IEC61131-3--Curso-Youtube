@@ -11,4 +11,4 @@
 - 🔗 [github.com/0w8States/PLC-Design-Patterns/Behavioral_Patterns/Momento](https://github.com/0w8States/PLC-Design-Patterns/tree/master/Behavioral_Patterns/Momento)   
 ***
 ### <span style="color:grey">Link al Video de Youtube_44:</span>
-- 🔗 [044 - OOP IEC 61131-3 PLC -- Patrones de Diseño - Comportamiento - Recuerdo]()
+- 🔗 [044 - OOP IEC 61131-3 PLC -- Patrones de Diseño - Comportamiento - Recuerdo](https://youtu.be/TguSTA_t6_M)
