@@ -1,6 +1,6 @@
 👉[**Memento**](https://refactoring.guru/es/design-patterns/memento) es un patrón de diseño de comportamiento que te permite guardar y restaurar el estado previo de un objeto sin revelar los detalles de su implementación.
 ***
-### <span style="color:grey">Diagrama de Clases UML - Mediator:</span>
+### <span style="color:grey">Diagrama de Clases UML - Memento:</span>
 
 ![Design_Pattern_Behavioral_Mediator](../../imagenes/Design_Pattern_Behavioral_Memento.JPG)
 ***

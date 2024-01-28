@@ -1,5 +1,9 @@
 👉[**Observer**](https://refactoring.guru/es/design-patterns/observer) es un patrón de diseño de comportamiento que te permite definir un mecanismo de suscripción para notificar a varios objetos sobre cualquier evento que le suceda al objeto que están observando.
 ***
+### <span style="color:grey">Diagrama de Clases UML - Observer:</span>
+
+![Design_Pattern_Behavioral_Observer](../../imagenes/Design_Pattern_Behavioral_Observer.JPG)
+***
 ### <span style="color:grey">Links de Patron de Diseño - Comportamiento - Observer:</span>
 
 - 🔗 [refactoring.guru/design-patterns/observer](https://refactoring.guru/es/design-patterns/observer)

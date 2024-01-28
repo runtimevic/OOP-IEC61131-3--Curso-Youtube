@@ -1,73 +1,49 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <FileVersion>1.0.0.0</FileVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{5d4cb71f-6891-4650-9c32-de8a75dc2402}</ProjectGuid>
+    <ProjectGuid>{361daf55-9dd1-4ae6-97d3-b3a604540465}</ProjectGuid>
     <SubObjectsSortedByName>True</SubObjectsSortedByName>
-    <Name>Sample03</Name>
-    <ProgramVersion>3.1.4020.10</ProgramVersion>
-    <Application>{6a60ed16-5cb4-4e16-b934-2e2ee88f01b7}</Application>
-    <TypeSystem>{38700e6c-c22c-4aea-aae1-24b910fe23fc}</TypeSystem>
-    <Implicit_Task_Info>{8466fdbf-0039-4bed-8efd-3a22c2838c7d}</Implicit_Task_Info>
-    <Implicit_KindOfTask>{bd3956d3-3d4f-46aa-a916-859975feb08f}</Implicit_KindOfTask>
-    <Implicit_Jitter_Distribution>{c040fd8a-d833-4b7d-b361-16ab5acb3252}</Implicit_Jitter_Distribution>
-    <LibraryReferences>{01dc2edb-ade8-458e-9ba6-ea97385f462a}</LibraryReferences>
+    <Name>Observer</Name>
+    <ProgramVersion>3.1.4022.7</ProgramVersion>
+    <Application>{3daab093-eb9d-487a-ae1d-ae74eda2f658}</Application>
+    <TypeSystem>{7e2913bf-b93f-4526-b5cc-09854c5433ab}</TypeSystem>
+    <Implicit_Task_Info>{edc089e1-d175-47d5-912e-ace10b08065c}</Implicit_Task_Info>
+    <Implicit_KindOfTask>{12ced7d1-f869-49c5-a036-d5b516c7c148}</Implicit_KindOfTask>
+    <Implicit_Jitter_Distribution>{931c9cb9-acd2-46db-b3f3-c38eeb988148}</Implicit_Jitter_Distribution>
+    <LibraryReferences>{cd979659-8e4f-4d14-85b3-f1927cbaf2f6}</LibraryReferences>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="Class Diagram.TcCD">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="FBs\FB_Publisher.TcPOU">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="FBs\FB_Subscriber.TcPOU">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ITFs\I_Publisher.TcIO">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ITFs\I_Subscriber.TcIO">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Param.TcGVL">
+      <SubType>Code</SubType>
+      <LinkAlways>true</LinkAlways>
+    </Compile>
     <Compile Include="PlcTask.TcTTO">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="POUs\Class Diagram_7.TcCD">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="POUs\Commands\FB_AirConComfortCommand.TcPOU">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="POUs\Commands\FB_AirConStandbyCommand.TcPOU">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="POUs\Commands\FB_LampSetLevelCommand.TcPOU">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="POUs\Commands\FB_MusicPlayCommand.TcPOU">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="POUs\Commands\FB_MusicStopCommand.TcPOU">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="POUs\Commands\FB_SocketOffCommand.TcPOU">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="POUs\Commands\FB_SocketOnCommand.TcPOU">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="POUs\Commands\I_Command.TcIO">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="POUs\Invoker\FB_SwitchPanel.TcPOU">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="POUs\MAIN.TcPOU">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="POUs\Receiver\FB_AirConditioning.TcPOU">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="POUs\Receiver\FB_CDPlayer.TcPOU">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="POUs\Receiver\FB_Lamp.TcPOU">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="POUs\Receiver\FB_Socket.TcPOU">
-      <SubType>Code</SubType>
-    </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="POUs\Commands" />
-    <Folder Include="POUs\Invoker" />
-    <Folder Include="POUs\Receiver" />
+    <Folder Include="ITFs" />
+    <Folder Include="FBs" />
     <Folder Include="POUs" />
   </ItemGroup>
   <ItemGroup>
@@ -85,7 +61,7 @@
     </PlaceholderReference>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Sample03.tmc">
+    <None Include="Observer.tmc">
       <SubType>Content</SubType>
     </None>
   </ItemGroup>
