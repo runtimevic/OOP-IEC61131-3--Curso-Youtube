@@ -78,5 +78,6 @@
     - 🔗 [055 - OOP IEC 61131-3 PLC -- Patrones de Diseño - Estructural - Peso Ligero]()
     - 🔗 [056 - OOP IEC 61131-3 PLC -- Patrones de Diseño - Estructural - Proxy]()
     - 🔗 [057 - OOP IEC 61131-3 PLC --  ]()
+    - 🔗 [058 - OOP IEC 61131-3 PLC --  ]()
 
 ***
