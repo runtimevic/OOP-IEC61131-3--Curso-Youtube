@@ -18,6 +18,7 @@
 ### :man_student: 👉[Ficheros PLCOpen XML OOP](https://github.com/runtimevic/OOP-IEC61131-3--Curso-Youtube/tree/master/Ficheros_PLCOpen_XML)
 ### 📚 👉 [Proyecto TwinCAT Patrones de Diseño](https://github.com/runtimevic/OOP-IEC61131-3--Curso-Youtube/tree/master/TC3_Design_Patterns)
 ### 📚 👉 [Ficheros PLCOpen XML Patrones de Diseño](https://github.com/runtimevic/OOP-IEC61131-3--Curso-Youtube/tree/master/Ficheros_PLCOpen_XML_Design_Patterns)
+### 📚 👉 [Proyectos *.tpzip TwinCAT Patrones de Diseño](https://github.com/runtimevic/OOP-IEC61131-3--Curso-Youtube/tree/master/TC3_Design_Patterns_projects_tpzip)
 ***
 ### Lista de Videos de Youtube:
 - :link: [Lista Completa de Videos Curso:](https://youtube.com/playlist?list=PLEfi_hUmmSjFpfdJ6yw3B9yj7dWHYkHmQ)

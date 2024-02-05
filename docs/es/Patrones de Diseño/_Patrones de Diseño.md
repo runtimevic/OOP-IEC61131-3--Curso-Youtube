@@ -2,6 +2,7 @@
 El proyecto con todos los patrones de Diseño lo podremos encontrar en:
 ### 📚 👉 [Proyecto TwinCAT Patrones de Diseño](https://github.com/runtimevic/OOP-IEC61131-3--Curso-Youtube/tree/master/TC3_Design_Patterns)
 ### 📚 👉 [Ficheros PLCOpen XML Patrones de Diseño](https://github.com/runtimevic/OOP-IEC61131-3--Curso-Youtube/tree/master/Ficheros_PLCOpen_XML_Design_Patterns)
+### 📚 👉 [Proyectos *.tpzip TwinCAT Patrones de Diseño](https://github.com/runtimevic/OOP-IEC61131-3--Curso-Youtube/tree/master/TC3_Design_Patterns_projects_tpzip)
 
 Imagen de los patrones de Diseño:
 ![Designpatterns](../imagenes/DesignPatterns.PNG)
@@ -30,7 +31,8 @@ general en un contexto particular”.
 
 ![Patrones_de_Diseño_de_Comportamiento](../imagenes/Patrones_de_Diseno_de_Comportamiento.PNG)
 
-![Design_patterns](../imagenes/Design_patterns.jpg)
+![Desing_patterns1](../imagenes/Design_patterns1.jpg)
+![Design_patterns2](../imagenes/Design_patterns2.jpg)
 
 ![Design_patterns_15](../imagenes/OOP__Design_Patterns_15.PNG)
 
