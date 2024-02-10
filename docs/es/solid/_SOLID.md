@@ -85,6 +85,8 @@ Los principios SOLID no son reglas o leyes que deban seguirse estrictamente. Son
 
 - 🔗 ["Clean" Code, Horrible Performance](https://www.youtube.com/watch?v=tD5NrevFtbU)
 
+- 🔗 [The SOLID Principles in C#](https://medium.com/@lucas.and227/the-solid-principles-in-c-319755838805)
+
 ***
 ### <span style="color:grey">Link al Video de Youtube 023:</span>
 - 🔗 [023 - OOP IEC 61131-3 PLC -- SOLID](https://youtu.be/biuO9x512Zs)

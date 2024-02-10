@@ -9,4 +9,4 @@
 - 🔗 [github.com/0w8States/PLC-Design-Patterns/Behavioral_Patterns/State](https://github.com/0w8States/PLC-Design-Patterns/tree/master/Behavioral_Patterns/State)
 ***
 ### <span style="color:grey">Link al Video de Youtube_46:</span>
-- 🔗 [046 - OOP IEC 61131-3 PLC -- Patrones de Diseño - Comportamiento - Estado]()
+- 🔗 [046 - OOP IEC 61131-3 PLC -- Patrones de Diseño - Comportamiento - Estado](https://youtu.be/DT-xznz-sOQ)
