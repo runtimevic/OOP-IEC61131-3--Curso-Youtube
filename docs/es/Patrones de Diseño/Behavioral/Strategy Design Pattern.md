@@ -1,5 +1,9 @@
 👉[**Strategy**](https://refactoring.guru/es/design-patterns/strategy) es un patrón de diseño de comportamiento que te permite definir una familia de algoritmos, colocar cada uno de ellos en una clase separada y hacer sus objetos intercambiables.
 ***
+### <span style="color:grey">Diagrama de Clases UML - Strategy:</span>
+
+![Design_Pattern_Behavioral_Strategy](../../imagenes/Design_Pattern_Behavioral_Strategy.JPG)
+***
 ### <span style="color:grey">Links de Patron de Diseño - Comportamiento - Strategy:</span>
 
 - 🔗 [refactoring.guru/gn-patterns/strategy](https://refactoring.guru/es/design-patterns/strategy)

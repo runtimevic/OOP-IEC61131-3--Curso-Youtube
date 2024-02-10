@@ -1,4 +1,50 @@
 <?xml version="1.0"?>
 <TcSmProject xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.beckhoff.com/schemas/2012/07/TcSmProject" TcSmVersion="1.0" TcVersion="3.1.4024.35">
-	<Project ProjectGUID="{A0B9AAF4-31EC-4B1B-940B-926857B9884B}" Target64Bit="true" ShowHideConfigurations="#x3c7"/>
+	<Project ProjectGUID="{A0B9AAF4-31EC-4B1B-940B-926857B9884B}" Target64Bit="true" ShowHideConfigurations="#x3c7">
+		<System>
+			<Settings MaxCpus="8" NonWinCpus="2">
+				<Cpu CpuId="6"/>
+			</Settings>
+			<Tasks>
+				<Task Id="3" Priority="20" CycleTime="100000" AmsPort="350" AdtTasks="true">
+					<Name>PlcTask</Name>
+				</Task>
+			</Tasks>
+		</System>
+		<Plc>
+			<Project GUID="{E75B92A2-EFA9-430E-A579-A6390204646A}" Name="Strategy" PrjFilePath="Strategy\Strategy.plcproj" TmcFilePath="Strategy\Strategy.tmc" ReloadTmc="true" AmsPort="851" FileArchiveSettings="#x000e" SymbolicMapping="true">
+				<Instance Id="#x08502000" TcSmClass="TComPlcObjDef" KeepUnrestoredLinks="2" TmcPath="Strategy\Strategy.tmc" TmcHash="{22617C38-95FA-9E0E-EDA8-77C5AC24E712}">
+					<Name>Strategy Instance</Name>
+					<CLSID ClassFactory="TcPlc30">{08500001-0000-0000-F000-000000000064}</CLSID>
+					<Vars VarGrpType="1">
+						<Name>PlcTask Inputs</Name>
+						<Var>
+							<Name>MAIN.fbSensor1.rawValue</Name>
+							<Comment><![CDATA[ resistance measurement value of sensor]]></Comment>
+							<Type>REAL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.fbSensor2.rawValue</Name>
+							<Comment><![CDATA[ resistance measurement value of sensor]]></Comment>
+							<Type>REAL</Type>
+						</Var>
+					</Vars>
+					<Contexts>
+						<Context>
+							<Id NeedCalleeCall="true">0</Id>
+							<Name>PlcTask</Name>
+							<ManualConfig>
+								<OTCID>#x02010030</OTCID>
+							</ManualConfig>
+							<Priority>20</Priority>
+							<CycleTime>10000000</CycleTime>
+						</Context>
+					</Contexts>
+					<TaskPouOids>
+						<TaskPouOid Prio="20" OTCID="#x08502001"/>
+					</TaskPouOids>
+				</Instance>
+			</Project>
+		</Plc>
+	</Project>
 </TcSmProject>
