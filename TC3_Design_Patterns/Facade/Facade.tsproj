@@ -5,6 +5,33 @@
 			<Settings MaxCpus="8" NonWinCpus="2">
 				<Cpu CpuId="6"/>
 			</Settings>
+			<Tasks>
+				<Task Id="3" Priority="20" CycleTime="100000" AmsPort="350" AdtTasks="true">
+					<Name>PlcTask</Name>
+				</Task>
+			</Tasks>
 		</System>
+		<Plc>
+			<Project GUID="{4A0B5C48-1900-486E-A9F3-A191EC758CC2}" Name="Facade" PrjFilePath="Facade\Facade.plcproj" TmcFilePath="Facade\Facade.tmc" ReloadTmc="true" AmsPort="851" FileArchiveSettings="#x000e" SymbolicMapping="true">
+				<Instance Id="#x08502000" TcSmClass="TComPlcObjDef" KeepUnrestoredLinks="2" TmcPath="Facade\Facade.tmc" TmcHash="{597842DB-B4DA-6211-3C84-B97736877AF1}">
+					<Name>Facade Instance</Name>
+					<CLSID ClassFactory="TcPlc30">{08500001-0000-0000-F000-000000000064}</CLSID>
+					<Contexts>
+						<Context>
+							<Id NeedCalleeCall="true">0</Id>
+							<Name>PlcTask</Name>
+							<ManualConfig>
+								<OTCID>#x02010030</OTCID>
+							</ManualConfig>
+							<Priority>20</Priority>
+							<CycleTime>10000000</CycleTime>
+						</Context>
+					</Contexts>
+					<TaskPouOids>
+						<TaskPouOid Prio="20" OTCID="#x08502001"/>
+					</TaskPouOids>
+				</Instance>
+			</Project>
+		</Plc>
 	</Project>
 </TcSmProject>
