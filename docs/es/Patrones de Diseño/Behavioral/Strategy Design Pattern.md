@@ -15,4 +15,4 @@
 - 🔗 [github.com/0w8States/PLC-Design-Patterns/Behavioral_Patterns/Strategy](https://github.com/0w8States/PLC-Design-Patterns/tree/master/Behavioral_Patterns/Strategy)
 ***
 ### <span style="color:grey">Link al Video de Youtube_47:</span>
-- 🔗 [047 - OOP IEC 61131-3 PLC -- Patrones de Diseño - Comportamiento - Estrategia]()
+- 🔗 [047 - OOP IEC 61131-3 PLC -- Patrones de Diseño - Comportamiento - Estrategia](https://youtu.be/rrY0o899VHo)
