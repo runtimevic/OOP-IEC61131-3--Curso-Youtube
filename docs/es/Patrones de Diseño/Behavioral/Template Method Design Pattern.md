@@ -1,5 +1,9 @@
 👉[**Template Method**](https://refactoring.guru/es/design-patterns/template-method) es un patrón de diseño de comportamiento que define el esqueleto de un algoritmo en la superclase pero permite que las subclases sobrescriban pasos del algoritmo sin cambiar su estructura.
 ***
+### <span style="color:grey">Diagrama de Clases UML - Template Method:</span>
+
+![Design_Pattern_Behavioral_Template_Method](../../imagenes/Design_Pattern_Behavioral_Template_Method.JPG)
+***
 ### <span style="color:grey">Links de Patron de Diseño - Comportamiento - Template Method:</span>
 
 - 🔗 [refactoring.guru/design-patterns/template-method](https://refactoring.guru/es/design-patterns/template-method)
