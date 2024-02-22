@@ -1,65 +1,37 @@
-<?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <FileVersion>1.0.0.0</FileVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{90199a90-06d9-4d32-81e6-adf031ac89f7}</ProjectGuid>
+    <ProjectGuid>{795a1817-5a77-4574-9384-6082723e25b6}</ProjectGuid>
     <SubObjectsSortedByName>True</SubObjectsSortedByName>
     <DownloadApplicationInfo>true</DownloadApplicationInfo>
     <WriteProductVersion>true</WriteProductVersion>
     <GenerateTpy>false</GenerateTpy>
-    <Name>Untitled1_1</Name>
+    <Name>Flyweight</Name>
     <ProgramVersion>3.1.4023.0</ProgramVersion>
-    <Application>{231c46fd-600c-4225-8da1-d9217a995163}</Application>
-    <TypeSystem>{bfb3e72d-2b5c-49df-b132-2ebe7d69ee10}</TypeSystem>
-    <Implicit_Task_Info>{97b17750-1cb1-4c34-9554-73d2b5aa6e78}</Implicit_Task_Info>
-    <Implicit_KindOfTask>{87b6b74b-8541-45ba-8bd2-e1934d0ced22}</Implicit_KindOfTask>
-    <Implicit_Jitter_Distribution>{f720b125-33b9-45c2-a738-86cbdd0a1dfc}</Implicit_Jitter_Distribution>
-    <LibraryReferences>{2d0e8171-a78c-4d4a-bb64-38aa17b15799}</LibraryReferences>
-    <Released>false</Released>
+    <Application>{46c16edb-9e29-404f-9508-1d3513282eee}</Application>
+    <TypeSystem>{c64795f5-9715-47e5-9de5-568e9569437c}</TypeSystem>
+    <Implicit_Task_Info>{9a1ce05f-03b9-47fe-9bc6-029b046afa01}</Implicit_Task_Info>
+    <Implicit_KindOfTask>{a0baa23b-784b-4d46-a5df-22b7b5e13f1c}</Implicit_KindOfTask>
+    <Implicit_Jitter_Distribution>{e8864098-bf43-4ad3-832a-89a43f2e8231}</Implicit_Jitter_Distribution>
+    <LibraryReferences>{5813152e-b55e-4f5e-9dbd-555aebbcb1c6}</LibraryReferences>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="Abstract Factory\FB_AbstractFactory.TcPOU">
+    <Compile Include="Class Diagram.TcCD">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="ClassDiagram_1.TcCD">
+    <Compile Include="Classes\Car.TcPOU">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Colors\FB_Black.TcPOU">
+    <Compile Include="Classes\FlyweightFactory.TcPOU">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Colors\FB_Red.TcPOU">
+    <Compile Include="ITFs\I_Car.TcIO">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Colors\FB_Yellow.TcPOU">
+    <Compile Include="Param.TcGVL">
       <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="Creator\FB_ShapeCreator.TcPOU">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="Creator\FB_ShapeCreatorEX.TcPOU">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="Creator\FB_ColorCreator.TcPOU">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="DUTs\E_Color.TcDUT">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="DUTs\E_Factory.TcDUT">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="DUTs\E_Shape.TcDUT">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="Factory Producer\FB_FactoryProducer.TcPOU">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="Interfaces\I_Color.TcIO">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="Interfaces\I_Shape.TcIO">
-      <SubType>Code</SubType>
+      <LinkAlways>true</LinkAlways>
     </Compile>
     <Compile Include="PlcTask.TcTTO">
       <SubType>Code</SubType>
@@ -67,33 +39,10 @@
     <Compile Include="POUs\MAIN.TcPOU">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Shapes\FB_Circle.TcPOU">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="Shapes\FB_CustomShape.TcPOU">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="Shapes\FB_Rectangle.TcPOU">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="Shapes\FB_Square.TcPOU">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="Shapes\FB_Star.TcPOU">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="Shapes\FB_Triangle.TcPOU">
-      <SubType>Code</SubType>
-    </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Creator" />
-    <Folder Include="DUTs" />
-    <Folder Include="Interfaces" />
-    <Folder Include="Colors" />
-    <Folder Include="Abstract Factory" />
-    <Folder Include="Factory Producer" />
-    <Folder Include="Shapes" />
+    <Folder Include="ITFs" />
+    <Folder Include="Classes" />
     <Folder Include="POUs" />
   </ItemGroup>
   <ItemGroup>
@@ -111,12 +60,7 @@
     </PlaceholderReference>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Untitled1.tmc">
-      <SubType>Content</SubType>
-    </None>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Untitled1_1.tmc">
+    <None Include="Flyweight.tmc">
       <SubType>Content</SubType>
     </None>
   </ItemGroup>
@@ -155,12 +99,6 @@
               <d n="Values" t="Hashtable" />
             </o>
           </d>
-          <d n="Values" t="Hashtable" />
-        </o>
-        <v>{8F99A816-E488-41E4-9FA3-846536012284}</v>
-        <o>
-          <v n="Name">"{8F99A816-E488-41E4-9FA3-846536012284}"</v>
-          <d n="SubKeys" t="Hashtable" />
           <d n="Values" t="Hashtable" />
         </o>
         <v>{40450F57-0AA3-4216-96F3-5444ECB29763}</v>
