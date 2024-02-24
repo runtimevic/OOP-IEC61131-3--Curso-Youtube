@@ -5,6 +5,33 @@
 			<Settings MaxCpus="8" NonWinCpus="2">
 				<Cpu CpuId="6"/>
 			</Settings>
+			<Tasks>
+				<Task Id="3" Priority="20" CycleTime="100000" AmsPort="350" AdtTasks="true">
+					<Name>PlcTask</Name>
+				</Task>
+			</Tasks>
 		</System>
+		<Plc>
+			<Project GUID="{88EBE39C-6BD9-40DC-B875-8AF4B90C9A86}" Name="Visitor" PrjFilePath="Visitor\Visitor.plcproj" TmcFilePath="Visitor\Visitor.tmc" ReloadTmc="true" AmsPort="851" FileArchiveSettings="#x000e" SymbolicMapping="true">
+				<Instance Id="#x08502000" TcSmClass="TComPlcObjDef" KeepUnrestoredLinks="2" TmcPath="Visitor\Visitor.tmc" TmcHash="{05E32DDA-750F-CF0D-898F-886B7D0E0A56}">
+					<Name>Visitor Instance</Name>
+					<CLSID ClassFactory="TcPlc30">{08500001-0000-0000-F000-000000000064}</CLSID>
+					<Contexts>
+						<Context>
+							<Id NeedCalleeCall="true">0</Id>
+							<Name>PlcTask</Name>
+							<ManualConfig>
+								<OTCID>#x02010030</OTCID>
+							</ManualConfig>
+							<Priority>20</Priority>
+							<CycleTime>10000000</CycleTime>
+						</Context>
+					</Contexts>
+					<TaskPouOids>
+						<TaskPouOid Prio="20" OTCID="#x08502001"/>
+					</TaskPouOids>
+				</Instance>
+			</Project>
+		</Plc>
 	</Project>
 </TcSmProject>

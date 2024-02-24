@@ -1,5 +1,9 @@
 [**Visitor**](https://refactoring.guru/es/design-patterns/visitor) es un patrón de diseño de comportamiento que te permite separar algoritmos de los objetos sobre los que operan.
 ***
+### <span style="color:grey">Diagrama de Clases UML - Visitor:</span>
+
+![Design_Pattern_Behavioral_Visitor](../../imagenes/Design_Pattern_Behavioral_Visitor.JPG)
+***
 ### <span style="color:grey">Links de Patron de Diseño - Comportamiento - Visitor:</span>
 
 - 🔗[refactoring.guru/design-patterns/visitor](https://refactoring.guru/es/design-patterns/visitor)
