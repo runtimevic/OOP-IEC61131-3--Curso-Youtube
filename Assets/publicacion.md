@@ -2,10 +2,10 @@
 
 Hola,
 Seguimos con el curso de 👩‍💻 OOP IEC 61131-3 PLC 👨‍💻,
-ya esta disponible el Video numero 47 de Youtube:
-en este video veremos: Patrones de Diseño (Design Patterns) - Strategy.
+ya esta disponible el Video numero 48 de Youtube:
+en este video veremos: Patrones de Diseño (Design Patterns) - Template Method.
 
-👉 https://youtu.be/rrY0o899VHo
+👉 https://youtu.be/EQoxcF1BwlM
 
 🐙 Repositorio de GitHub:
 - 👉 https://github.com/runtimevic/OOP-IEC61131-3--Curso-Youtube
@@ -65,7 +65,8 @@ Lista de Videos del Curso OOP Programación Orientada a Objetos IEC61131-3 PLC:
 - 045 - https://youtu.be/Rnk51PA8Jus
 - 046 - https://youtu.be/DT-xznz-sOQ
 - 047 - https://youtu.be/rrY0o899VHo
-- 048 -
+- 048 - https://youtu.be/EQoxcF1BwlM
+- 049 -
 
 Se busca colaborador para la traducción de la documentación al idioma que desee... 👀
 

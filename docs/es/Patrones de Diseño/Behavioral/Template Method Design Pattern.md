@@ -11,4 +11,4 @@
 - 🔗 [github.com/0w8States/PLC-Design-Patterns/Behavioral_Patterns/Template_Method](https://github.com/0w8States/PLC-Design-Patterns/tree/master/Behavioral_Patterns/Template_Method)
 ***
 ### <span style="color:grey">Link al Video de Youtube_48:</span>
-- 🔗 [048 - OOP IEC 61131-3 PLC -- Patrones de Diseño - Comportamiento - Metodo de plantilla]()
+- 🔗 [048 - OOP IEC 61131-3 PLC -- Patrones de Diseño - Comportamiento - Metodo de plantilla](https://youtu.be/EQoxcF1BwlM)
