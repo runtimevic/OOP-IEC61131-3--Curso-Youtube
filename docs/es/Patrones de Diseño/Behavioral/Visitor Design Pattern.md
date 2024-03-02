@@ -13,4 +13,4 @@
 - 🔗[Design Patterns - The Visitor Pattern](https://beckhoff-au.teachable.com/courses/coding-bytes-twincat-3/lectures/46078048)
 ***
 ### <span style="color:grey">Link al Video de Youtube_49:</span>
-- 🔗 [049 - OOP IEC 61131-3 PLC -- Patrones de Diseño - Comportamiento - Visitante]()
+- 🔗 [049 - OOP IEC 61131-3 PLC -- Patrones de Diseño - Comportamiento - Visitante](https://youtu.be/T0gSaNuU_g0)
