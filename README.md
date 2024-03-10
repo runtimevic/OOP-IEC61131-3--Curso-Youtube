@@ -71,7 +71,7 @@
     - 🔗 [047 - OOP IEC 61131-3 PLC -- Patrones de Diseño - Comportamiento - Estrategia](https://youtu.be/rrY0o899VHo)
     - 🔗 [048 - OOP IEC 61131-3 PLC -- Patrones de Diseño - Comportamiento - Metodo de plantilla](https://youtu.be/EQoxcF1BwlM)
     - 🔗 [049 - OOP IEC 61131-3 PLC -- Patrones de Diseño - Comportamiento - Visitante](https://youtu.be/T0gSaNuU_g0)
-    - 🔗 [050 - OOP IEC 61131-3 PLC -- Patrones de Diseño - Estructural - Adaptador]()
+    - 🔗 [050 - OOP IEC 61131-3 PLC -- Patrones de Diseño - Estructural - Adaptador](https://youtu.be/mhNQNPOyDNk)
     - 🔗 [051 - OOP IEC 61131-3 PLC -- Patrones de Diseño - Estructural - Puente]()
     - 🔗 [052 - OOP IEC 61131-3 PLC -- Patrones de Diseño - Estructural - Compuesto]()
     - 🔗 [053 - OOP IEC 61131-3 PLC -- Patrones de Diseño - Estructural - Decorador]()
