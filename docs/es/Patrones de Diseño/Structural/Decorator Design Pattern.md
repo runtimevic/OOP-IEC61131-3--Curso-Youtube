@@ -16,5 +16,5 @@
 
 - 🔗 [🤩PATRONES de DISEÑO con Typescript - Decorator Pattern | PT 2.](https://www.youtube.com/watch?v=6FfqopVI9bo)
 ***
-### <span style="color:grey">Link al Video de Youtube_xx:</span>
+### <span style="color:grey">Link al Video de Youtube_53:</span>
 - 🔗 [053 - OOP IEC 61131-3 PLC -- Patrones de Diseño - Estructural - Decorador]()
