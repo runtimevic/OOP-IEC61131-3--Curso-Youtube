@@ -11,5 +11,5 @@
 - 🔗 [Bridge Pattern – Design Patterns (ep 11)](https://www.youtube.com/watch?v=F1YQ7YRjttI)
 ***
 ### <span style="color:grey">Link al Video de Youtube_51:</span>
-- 🔗 [051 - OOP IEC 61131-3 PLC -- Patrones de Diseño - Estructural - Puente]()
+- 🔗 [051 - OOP IEC 61131-3 PLC -- Patrones de Diseño - Estructural - Puente](https://youtu.be/dzARu7R4laQ)
 ***
