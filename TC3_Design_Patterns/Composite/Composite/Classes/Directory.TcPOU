@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.12">
+  <POU Name="Directory" Id="{00d5b3f4-cd2a-48d7-a009-09c4bd5e016b}" SpecialFunc="None">
+    <Declaration><![CDATA[FUNCTION_BLOCK Directory EXTENDS Component
+VAR
+	children 			: ARRAY [1..Param.NumberOfChildren] OF I_Component;
+	childCount			: INT := 0;
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[]]></ST>
+    </Implementation>
+    <Method Name="AddChild" Id="{742d5baf-9a6f-47dd-90fa-9711c41b74af}">
+      <Declaration><![CDATA[METHOD AddChild
+VAR_INPUT
+	Child : I_Component;
+END_VAR
+
+
+VAR
+	i: INT;
+END_VAR]]></Declaration>
+      <Implementation>
+        <ST><![CDATA[
+childCount := childCount + 1;
+children[childCount] := Child;]]></ST>
+      </Implementation>
+    </Method>
+    <Method Name="GetChildren" Id="{b3c695ad-4f4a-45f6-92b2-b17c793b03e6}">
+      <Declaration><![CDATA[METHOD GetChildren : ARRAY [1..Param.NumberOfChildren] OF I_Component;
+]]></Declaration>
+      <Implementation>
+        <ST><![CDATA[GetChildren := children;]]></ST>
+      </Implementation>
+    </Method>
+    <Property Name="GetSize" Id="{277022a1-2ddc-485d-b014-e9d2bb317b28}">
+      <Declaration><![CDATA[PROPERTY GetSize : INT]]></Declaration>
+      <Get Name="Get" Id="{8798b121-fcac-450f-975a-514d46ada92d}">
+        <Declaration><![CDATA[VAR
+	i : INT := 0;
+END_VAR
+]]></Declaration>
+        <Implementation>
+          <ST><![CDATA[FOR i := 1 TO childCount  DO	
+	GetSize := GetSize + children[i].GetSize;
+END_FOR]]></ST>
+        </Implementation>
+      </Get>
+    </Property>
+    <Method Name="ResetSize" Id="{95e8d98d-a920-4d8f-b1f5-89ba0cefb3ac}">
+      <Declaration><![CDATA[METHOD ResetSize
+]]></Declaration>
+      <Implementation>
+        <ST><![CDATA[childCount:= 0;]]></ST>
+      </Implementation>
+    </Method>
+  </POU>
+</TcPlcObject>
