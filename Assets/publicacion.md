@@ -2,10 +2,10 @@
 
 Hola,
 Seguimos con el curso de 👩‍💻 OOP IEC 61131-3 PLC 👨‍💻,
-ya esta disponible el Video numero 51 de Youtube:
-en este video veremos: Patrones de Diseño (Design Patterns) - Bridge.
+ya esta disponible el Video numero 52 de Youtube:
+en este video veremos: Patrones de Diseño (Design Patterns) - Composite.
 
-👉 https://youtu.be/dzARu7R4laQ
+👉 https://youtu.be/xQHbCdcauiI
 
 🐙 Repositorio de GitHub:
 - 👉 https://github.com/runtimevic/OOP-IEC61131-3--Curso-Youtube
@@ -69,6 +69,7 @@ Lista de Videos del Curso OOP Programación Orientada a Objetos IEC61131-3 PLC:
 - 049 - https://youtu.be/T0gSaNuU_g0
 - 050 - https://youtu.be/mhNQNPOyDNk
 - 051 - https://youtu.be/dzARu7R4laQ
+- 052 - https://youtu.be/xQHbCdcauiI
 
 Se busca colaborador para la traducción de la documentación al idioma que desee... 👀
 

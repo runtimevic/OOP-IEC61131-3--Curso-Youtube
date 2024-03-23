@@ -1,4 +1,4 @@
-👉[**Decorador**](https://refactoring.guru/es/design-patterns/decorator)es un patrón de diseño estructural que te permite añadir funcionalidades a objetos colocando estos objetos dentro de objetos encapsuladores especiales que contienen estas funcionalidades.
+👉[**Decorador**](https://refactoring.guru/es/design-patterns/decorator) es un patrón de diseño estructural que te permite añadir funcionalidades a objetos colocando estos objetos dentro de objetos encapsuladores especiales que contienen estas funcionalidades.
 ***
 ### <span style="color:grey">Diagrama de Clases UML - Decorator:</span>
 

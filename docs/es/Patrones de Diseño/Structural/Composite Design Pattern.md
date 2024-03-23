@@ -14,4 +14,4 @@
 - 🔗 [Composite Design Pattern – Simple or Complex? This is the question!](https://www.pentalog.com/blog/design-patterns/composite-design-pattern/)
 ***
 ### <span style="color:grey">Link al Video de Youtube_52:</span>
-- 🔗 [052 - OOP IEC 61131-3 PLC -- Patrones de Diseño - Estructural - Compuesto]()
+- 🔗 [052 - OOP IEC 61131-3 PLC -- Patrones de Diseño - Estructural - Compuesto](https://youtu.be/xQHbCdcauiI)
